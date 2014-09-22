@@ -1,0 +1,191 @@
+class
+ refid "com.company.assembleegameclient.objects:NPC"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "NPC")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "Character")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-TE")
+  iinit
+   refid "com.company.assembleegameclient.objects:NPC/iinit"
+   param QName(PackageNamespace(""), "XML")
+   body
+    maxstack 5
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(ProtectedNamespace("_-TE"), "generateNameBitmapData") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:NPC/_-TE:generateNameBitmapData"
+    param QName(PackageNamespace("com.company.ui"), "SimpleText")
+    returns QName(PackageNamespace("flash.display"), "BitmapData")
+    body
+     maxstack 13
+     localcount 6
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "props_")
+      getproperty         QName(PackageNamespace(""), "isEnemy_")
+      iftrue              L11
+
+      getlocal1
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "npcPassive_")
+      callpropvoid        QName(PackageNamespace(""), "_-gp"), 1
+
+      jump                L15
+
+L11:
+      getlocal1
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "npcEnemy_")
+      callpropvoid        QName(PackageNamespace(""), "_-gp"), 1
+
+L15:
+      findpropstrict      QName(PackageNamespace("flash.display"), "BitmapData")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "width")
+      pushbyte            20
+      add
+      pushbyte            64
+      pushtrue
+      pushbyte            0
+      constructprop       QName(PackageNamespace("flash.display"), "BitmapData"), 4
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal2
+
+      getlocal2
+      getlocal1
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:NPC"), "_-0Gb")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 2
+
+      getlocal2
+      getlocal2
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "rect")
+      getlex              QName(PackageNamespace("com.company.util"), "PointUtil")
+      getproperty         QName(PackageNamespace(""), "_-P5")
+      findpropstrict      QName(PackageNamespace("flash.filters"), "GlowFilter")
+      pushbyte            0
+      pushbyte            1
+      pushbyte            3
+      dup
+      pushbyte            2
+      pushbyte            1
+      constructprop       QName(PackageNamespace("flash.filters"), "GlowFilter"), 6
+      callpropvoid        QName(PackageNamespace(""), "applyFilter"), 4
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-ZB")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "numStars_")
+      callproperty        QName(PackageNamespace(""), "_-0Mr"), 1
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      setlocal3
+
+      getlocal2
+      getlocal3
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:NPC"), "_-I5")
+      callpropvoid        QName(PackageNamespace(""), "draw"), 2
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_-TE"), "getTexture") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:NPC/_-TE:getTexture"
+    param QName(PackageNamespace("com.company.assembleegameclient.map"), "_-0Dv")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("flash.display"), "BitmapData")
+    body
+     maxstack 11
+     localcount 17
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      getlocal2
+      callsuper           QName(ProtectedNamespace("_-iP"), "getTexture"), 2
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace(""), "_-di")
+      callproperty        QName(PackageNamespace(""), "_-di"), 0
+      iffalse             L16
+
+      getlex              QName(PackageNamespace("com.company.util"), "_-G")
+      getlocal3
+      pushdouble          0.4
+      callproperty        QName(PackageNamespace(""), "_-0Cm"), 2
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal3
+
+L16:
+      getlocal3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:NPC/cinit"
+  body
+   maxstack 15
+   localcount 5
+   initscopedepth 5
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:NPC"), "_-I5")
+    findpropstrict      QName(PackageNamespace("flash.geom"), "Matrix")
+    pushbyte            1
+    pushbyte            0
+    dup
+    pushbyte            1
+    pushbyte            2
+    pushbyte            4
+    constructprop       QName(PackageNamespace("flash.geom"), "Matrix"), 6
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:NPC"), "_-I5")
+
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:NPC"), "_-0Gb")
+    findpropstrict      QName(PackageNamespace("flash.geom"), "Matrix")
+    pushbyte            1
+    pushbyte            0
+    dup
+    pushbyte            1
+    pushbyte            20
+    pushbyte            0
+    constructprop       QName(PackageNamespace("flash.geom"), "Matrix"), 6
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:NPC"), "_-0Gb")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:NPC"), "_-I5") slotid 1 type QName(PackageNamespace("flash.geom"), "Matrix") end
+ trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:NPC"), "_-0Gb") slotid 2 type QName(PackageNamespace("flash.geom"), "Matrix") end
+end ; class

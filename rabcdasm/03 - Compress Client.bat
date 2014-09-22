@@ -1,0 +1,2 @@
+swflzmacompress client.swf
+pause
