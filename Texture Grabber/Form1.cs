@@ -12,18 +12,19 @@ namespace Texture_Grabber
         Search search;
         ListViewItem[] realItems;
         string PictureUrl = "realmofthemadgod";
+        int viewLimit = 2000;
 
         public Form1()
         {
             InitializeComponent();
 
             search = new Search(this);
-            realItems = new ListViewItem[200];
+            realItems = new ListViewItem[2000];
         }
 
         public bool HasItems()
         {
-            return listView1.Items.Count > 0;
+            return listViewTags.Items.Count > 0;
         }
 
         public bool FindItems(string name)
@@ -41,37 +42,37 @@ namespace Texture_Grabber
                     }
                 }
             }
-            listView1.Items.Clear();
-            listView1.Items.AddRange(lvi.ToArray());
+            listViewTags.Items.Clear();
+            listViewTags.Items.AddRange(lvi.ToArray());
             return ret;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            listView1.Clear();
+            listViewTags.Clear();
             WebClient wc = new WebClient();
-            string result = wc.DownloadString("http://" + PictureUrl + ".appspot.com/picture/list?num=200&tags=" + textBox1.Text);
+            string result = wc.DownloadString("http://" + PictureUrl + ".appspot.com/picture/list?num=" + viewLimit + "&tags=" + textBoxSearchTag.Text);
             XDocument xd = XDocument.Parse(result);
             List<Picture> pics = new List<Picture>();
             if (xd.Root.HasElements)
                 foreach (XElement x in xd.Root.Elements("Pic"))
                     pics.Add(Picture.FromXElement(x));
             foreach (var p in pics)
-                listView1.Items.Add(new ListViewItem()
+                listViewTags.Items.Add(new ListViewItem()
                 {
                     Text = p.Name,
                     Tag = new LVTag(p.ID, radioButton2.Checked)
                 });
-            listView1.Items.CopyTo(realItems, 0);
+            listViewTags.Items.CopyTo(realItems, 0);
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-                pictureBox1.Load("http://" + ((LVTag)listView1.SelectedItems[0].Tag).GetPicUrl() + ".appspot.com/picture/get?id=" + listView1.SelectedItems[0].Tag.ToString());
-                textBox2.Text = listView1.SelectedItems[0].Tag.ToString();
-                saveFileDialog1.FileName = listView1.SelectedItems[0].Text.ToString() + " - " + listView1.SelectedItems[0].Tag.ToString() + ".png";
+                pictureBoxItem.Load("http://" + ((LVTag)listViewTags.SelectedItems[0].Tag).GetPicUrl() + ".appspot.com/picture/get?id=" + listViewTags.SelectedItems[0].Tag.ToString());
+                textBoxStringTag.Text = listViewTags.SelectedItems[0].Tag.ToString();
+                saveFileDialog1.FileName = listViewTags.SelectedItems[0].Text.ToString() + " - " + listViewTags.SelectedItems[0].Tag.ToString() + ".png";
             }
             catch
             {
@@ -83,7 +84,7 @@ namespace Texture_Grabber
             try
             {
                 WebClient wc = new WebClient();
-                wc.DownloadFile("http://" + ((LVTag)listView1.SelectedItems[0].Tag).GetPicUrl() + ".appspot.com/picture/get?id=" + listView1.SelectedItems[0].Tag.ToString(), saveFileDialog1.FileName);
+                wc.DownloadFile("http://" + ((LVTag)listViewTags.SelectedItems[0].Tag).GetPicUrl() + ".appspot.com/picture/get?id=" + listViewTags.SelectedItems[0].Tag.ToString(), saveFileDialog1.FileName);
             }
             catch
             {
@@ -102,13 +103,13 @@ namespace Texture_Grabber
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if(radioButton1.Checked)
+            if (radioButtonProduction.Checked)
                 PictureUrl = "realmofthemadgod";
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            if(radioButton2.Checked)
+            if (radioButton2.Checked)
                 PictureUrl = "rotmgtesting";
         }
 
@@ -119,28 +120,28 @@ namespace Texture_Grabber
     }
     public class Picture
     {
-        public int ID;
+        public long ID;
         public string Name;
 
         public static Picture FromXElement(XElement x)
         {
             return new Picture()
             {
-                ID = Convert.ToInt32(x.Attribute("id").Value),
+                ID = Convert.ToInt64(x.Attribute("id").Value),
                 Name = x.Element("PicName").Value
             };
         }
     }
     public class LVTag
     {
-        public LVTag(int id, bool test)
+        public LVTag(long id, bool test)
         {
             Testing = test;
             ID = id;
         }
 
         public bool Testing;
-        public int ID;
+        public long ID;
 
         public override string ToString()
         {

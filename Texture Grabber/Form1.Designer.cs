@@ -28,56 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.listViewTags = new System.Windows.Forms.ListView();
+            this.buttonSearchTag = new System.Windows.Forms.Button();
+            this.textBoxSearchTag = new System.Windows.Forms.TextBox();
+            this.textBoxStringTag = new System.Windows.Forms.TextBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new Texture_Grabber.InterpolatedBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.labelSearchTag = new System.Windows.Forms.Label();
+            this.radioButtonProduction = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBoxItem = new Texture_Grabber.InterpolatedBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxItem)).BeginInit();
             this.SuspendLayout();
             // 
-            // listView1
+            // listViewTags
             // 
-            this.listView1.Location = new System.Drawing.Point(13, 67);
-            this.listView1.MultiSelect = false;
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(233, 173);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.List;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.listViewTags.Location = new System.Drawing.Point(12, 36);
+            this.listViewTags.MultiSelect = false;
+            this.listViewTags.Name = "listViewTags";
+            this.listViewTags.Size = new System.Drawing.Size(271, 199);
+            this.listViewTags.TabIndex = 0;
+            this.listViewTags.UseCompatibleStateImageBehavior = false;
+            this.listViewTags.View = System.Windows.Forms.View.List;
+            this.listViewTags.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
-            // button1
+            // buttonSearchTag
             // 
-            this.button1.Location = new System.Drawing.Point(94, 39);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(279, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonSearchTag.Location = new System.Drawing.Point(426, 5);
+            this.buttonSearchTag.Name = "buttonSearchTag";
+            this.buttonSearchTag.Size = new System.Drawing.Size(118, 27);
+            this.buttonSearchTag.TabIndex = 1;
+            this.buttonSearchTag.Text = "Search";
+            this.buttonSearchTag.UseVisualStyleBackColor = true;
+            this.buttonSearchTag.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // textBoxSearchTag
             // 
-            this.textBox1.Location = new System.Drawing.Point(74, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(318, 20);
-            this.textBox1.TabIndex = 2;
+            this.textBoxSearchTag.Location = new System.Drawing.Point(50, 7);
+            this.textBoxSearchTag.Name = "textBoxSearchTag";
+            this.textBoxSearchTag.Size = new System.Drawing.Size(370, 23);
+            this.textBoxSearchTag.TabIndex = 2;
             // 
-            // textBox2
+            // textBoxStringTag
             // 
-            this.textBox2.Location = new System.Drawing.Point(253, 220);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(219, 20);
-            this.textBox2.TabIndex = 4;
+            this.textBoxStringTag.Location = new System.Drawing.Point(289, 212);
+            this.textBoxStringTag.Name = "textBoxStringTag";
+            this.textBoxStringTag.ReadOnly = true;
+            this.textBoxStringTag.Size = new System.Drawing.Size(255, 23);
+            this.textBoxStringTag.TabIndex = 4;
             // 
             // saveFileDialog1
             // 
@@ -85,103 +82,75 @@
             this.saveFileDialog1.Filter = "PNG files|*.png|All files|*.*";
             this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
             // 
-            // label1
+            // labelSearchTag
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Tags:";
+            this.labelSearchTag.AutoSize = true;
+            this.labelSearchTag.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSearchTag.Location = new System.Drawing.Point(12, 10);
+            this.labelSearchTag.Name = "labelSearchTag";
+            this.labelSearchTag.Size = new System.Drawing.Size(32, 15);
+            this.labelSearchTag.TabIndex = 5;
+            this.labelSearchTag.Text = "Tag: ";
             // 
-            // label2
+            // radioButtonProduction
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(398, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Example:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(398, 26);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "rogue,cloak";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(397, 39);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "(No spaces)";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.pictureBox1.BackgroundImage = global::TextureGrabber.Properties.Resources.Transparent;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Interpolation = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox1.Location = new System.Drawing.Point(253, 69);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(219, 145);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(176, 246);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(62, 17);
-            this.radioButton1.TabIndex = 12;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Regular";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButtonProduction.AutoSize = true;
+            this.radioButtonProduction.Location = new System.Drawing.Point(12, 241);
+            this.radioButtonProduction.Name = "radioButtonProduction";
+            this.radioButtonProduction.Size = new System.Drawing.Size(80, 19);
+            this.radioButtonProduction.TabIndex = 12;
+            this.radioButtonProduction.TabStop = true;
+            this.radioButtonProduction.Text = "Production";
+            this.radioButtonProduction.UseVisualStyleBackColor = true;
+            this.radioButtonProduction.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(244, 246);
+            this.radioButton2.Location = new System.Drawing.Point(12, 266);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(60, 17);
+            this.radioButton2.Size = new System.Drawing.Size(63, 19);
             this.radioButton2.TabIndex = 13;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Testing";
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
+            // pictureBoxItem
+            // 
+            this.pictureBoxItem.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.pictureBoxItem.BackgroundImage = global::TextureGrabber.Properties.Resources.Transparent;
+            this.pictureBoxItem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxItem.Interpolation = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBoxItem.Location = new System.Drawing.Point(289, 37);
+            this.pictureBoxItem.Name = "pictureBoxItem";
+            this.pictureBoxItem.Size = new System.Drawing.Size(255, 167);
+            this.pictureBoxItem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxItem.TabIndex = 11;
+            this.pictureBoxItem.TabStop = false;
+            this.pictureBoxItem.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Form1
             // 
-            this.AcceptButton = this.button1;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AcceptButton = this.buttonSearchTag;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 270);
+            this.ClientSize = new System.Drawing.Size(553, 289);
             this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.radioButtonProduction);
+            this.Controls.Add(this.pictureBoxItem);
+            this.Controls.Add(this.labelSearchTag);
+            this.Controls.Add(this.textBoxStringTag);
+            this.Controls.Add(this.textBoxSearchTag);
+            this.Controls.Add(this.buttonSearchTag);
+            this.Controls.Add(this.listViewTags);
+            this.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.ShowIcon = false;
             this.Text = "Texture Grabber";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxItem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,17 +158,14 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ListView listViewTags;
+        private System.Windows.Forms.Button buttonSearchTag;
+        private System.Windows.Forms.TextBox textBoxSearchTag;
+        private System.Windows.Forms.TextBox textBoxStringTag;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private InterpolatedBox pictureBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label labelSearchTag;
+        private InterpolatedBox pictureBoxItem;
+        private System.Windows.Forms.RadioButton radioButtonProduction;
         private System.Windows.Forms.RadioButton radioButton2;
     }
 }
