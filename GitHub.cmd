@@ -4,3 +4,4 @@ git commit -m "Automatic Commit by BlackRayquaza"
 git remote add https://github.com/OpenRealms/EmptyRealms-RotMG.git
 git push -u origin master
 pause
+REM Cute :3
