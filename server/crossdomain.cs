@@ -1,7 +1,7 @@
 ﻿using System.Net;
 using System.Text;
 
-namespace server
+namespace Server
 {
     class crossdomain : IRequestHandler
     {

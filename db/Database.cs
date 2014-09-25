@@ -1,8 +1,8 @@
-﻿using Ionic.Zlib;
-using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using MySql.Data.MySqlClient;
+using Ionic.Zlib;
 using System.Xml.Linq;
 
 namespace db
@@ -75,7 +75,6 @@ AND characters.charId=death.chrId;";
             ret.Sort((a, b) => -Comparer<int>.Default.Compare(a.Date, b.Date));
             return ret.Take(10).ToList();
         }
-
         static string[] names = new string[] { 
             "Darq", "Deyst", "Drac", "Drol",
             "Eango", "Eashy", "Eati", "Eendi", "Ehoni",
@@ -87,7 +86,6 @@ AND characters.charId=death.chrId;";
             "Tal", "Tiar", "Uoro", "Urake", "Utanu",
             "Vorck", "Vorv", "Yangu", "Yimi", "Zhiar"
         };
-
         public static Account CreateGuestAccount(string uuid)
         {
             return new Account()
@@ -154,7 +152,6 @@ AND characters.charId=death.chrId;";
             ret.Guild.Name = GetGuildName(ret.Guild.Id);
             return ret;
         }
-
         public Account Register(string uuid, string password, bool isGuest)
         {
             var cmd = CreateQuery();
@@ -199,7 +196,6 @@ AND characters.charId=death.chrId;";
             cmd.Parameters.AddWithValue("@uuid", uuid);
             return (int)(long)cmd.ExecuteScalar() > 0;
         }
-
         public Account GetAccount(int id)
         {
             var cmd = CreateQuery();
@@ -235,7 +231,6 @@ AND characters.charId=death.chrId;";
             ret.Guild.Name = GetGuildName(ret.Guild.Id);
             return ret;
         }
-
         public Account GetAccount(string name)
         {
             var cmd = CreateQuery();
@@ -288,7 +283,6 @@ SELECT credits FROM stats WHERE accId=@accId;";
             cmd.Parameters.AddWithValue("@amount", amount);
             return (int)cmd.ExecuteScalar();
         }
-
         public int UpdateFame(Account acc, int amount)
         {
             var cmd = CreateQuery();
@@ -391,7 +385,6 @@ SELECT fame FROM stats WHERE accId=@accId;";
                 }
             }
         }
-
         public void SaveChest(Account acc, VaultChest chest)
         {
             var cmd = CreateQuery();
@@ -401,7 +394,6 @@ SELECT fame FROM stats WHERE accId=@accId;";
             cmd.Parameters.AddWithValue("@items", chest._Items);
             cmd.ExecuteNonQuery();
         }
-
         public VaultChest CreateChest(Account acc)
         {
             var cmd = CreateQuery();
@@ -687,7 +679,7 @@ VALUES(@accId, @chrId, @name, @objType, @tex1, @tex2, @items, @fame, @fameStats,
         {
             string players = string.Join(", ", participants.ToArray());
             var cmd = CreateQuery();
-            cmd.CommandText = "INSERT INTO arenaleaderboard(wave, players) VALUES(@wave, @players)";
+            cmd.CommandText = "INSERT INTO arenalb(wave, players) VALUES(@wave, @players)";
             cmd.Parameters.AddWithValue("@wave", wave);
             cmd.Parameters.AddWithValue("@players", players);
             try
@@ -703,7 +695,7 @@ VALUES(@accId, @chrId, @name, @objType, @tex1, @tex2, @items, @fame, @fameStats,
 
             var cmd = CreateQuery();
 
-            cmd.CommandText = "SELECT * FROM arenaleaderboard ORDER BY wave DESC LIMIT 10";
+            cmd.CommandText = "SELECT * FROM arenalb ORDER BY wave DESC LIMIT 10";
 
             using (var rdr = cmd.ExecuteReader())
             {
@@ -743,6 +735,7 @@ VALUES(@accId, @chrId, @name, @objType, @tex1, @tex2, @items, @fame, @fameStats,
             return guildrankings.ToArray();
         }
 
+
         public List<int> getLockeds(int accId)
         {
             var cmd = CreateQuery();
@@ -758,7 +751,6 @@ VALUES(@accId, @chrId, @name, @objType, @tex1, @tex2, @items, @fame, @fameStats,
             catch
             { return new List<int>(); }
         }
-
         public List<int> getIgnoreds(int accId)
         {
             var cmd = CreateQuery();
@@ -774,7 +766,6 @@ VALUES(@accId, @chrId, @name, @objType, @tex1, @tex2, @items, @fame, @fameStats,
             catch
             { return new List<int>(); }
         }
-
         public bool AddLock(int accId, int lockId)
         {
             var x = getLockeds(accId); x.Add(lockId);
@@ -787,7 +778,6 @@ VALUES(@accId, @chrId, @name, @objType, @tex1, @tex2, @items, @fame, @fameStats,
                 return false;
             return true;
         }
-
         public bool RemoveLock(int accId, int lockId)
         {
             var x = getLockeds(accId); x.Remove(lockId);
@@ -800,7 +790,6 @@ VALUES(@accId, @chrId, @name, @objType, @tex1, @tex2, @items, @fame, @fameStats,
                 return false;
             return true;
         }
-
         public bool AddIgnore(int accId, int ignoreId)
         {
             var x = getIgnoreds(accId); x.Add(ignoreId);

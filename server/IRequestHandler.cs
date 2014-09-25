@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Net;
 
-namespace server
+namespace Server
 {
     interface IRequestHandler
     {
@@ -30,7 +30,8 @@ namespace server
             { "/picture/list", new picture.list() },
             { "/guild/getBoard", new guild.getBoard() },
             { "/guild/setBoard", new guild.setBoard() },
-            { "/guild/listMembers", new guild.listMembers() }
+            { "/guild/listMembers", new guild.listMembers() },
+            { "/pet/getPet", new pet.getPet() }
         };
     }
 }

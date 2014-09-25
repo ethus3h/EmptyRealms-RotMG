@@ -56,7 +56,7 @@ namespace wServer.realm.entities
                         Item = this.Inventory[i] == null ? -1 : Inventory[i].ObjectType,
                         SlotType = this.SlotTypes[i],
                         Included = false,
-                        Tradeable = (Inventory[i] == null || i < 4) ? false : (!Inventory[i].Soulbound && !Inventory[i].Undead && !Inventory[i].SUndead)
+                        Tradeable = (Inventory[i] == null || i < 4) ? false : (!Inventory[i].Soulbound)
                     };
                 TradeItem[] your = new TradeItem[target.Inventory.Length];
                 for (int i = 0; i < target.Inventory.Length; i++)
@@ -65,7 +65,7 @@ namespace wServer.realm.entities
                         Item = target.Inventory[i] == null ? -1 : target.Inventory[i].ObjectType,
                         SlotType = target.SlotTypes[i],
                         Included = false,
-                        Tradeable = (target.Inventory[i] == null || i < 4) ? false : (!target.Inventory[i].Soulbound && !target.Inventory[i].Undead && !target.Inventory[i].SUndead)
+                        Tradeable = (target.Inventory[i] == null || i < 4) ? false : (!target.Inventory[i].Soulbound)
                     };
 
                 psr.SendPacket(new TradeStartPacket()

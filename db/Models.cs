@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Xml;
+using System.Text;
 using System.Xml.Serialization;
+using System.Xml;
+using System.Collections.Concurrent;
 
 [Serializable, XmlRoot()]
 public class Chars

@@ -4,7 +4,7 @@ using System.IO;
 using System.Net;
 using System.Web;
 
-namespace server.@char
+namespace Server.@char
 {
     class fame : IRequestHandler
     {

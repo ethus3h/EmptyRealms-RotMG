@@ -47,12 +47,12 @@ namespace wServer.realm.entities
                 con1.Inventory[pkt.Obj1.SlotId] = item2;
                 con2.Inventory[pkt.Obj2.SlotId] = item1;
 
-                if (publicbags.Contains(en1.ObjectType) && (item2.Soulbound || item2.Undead || item2.SUndead))
+                if (publicbags.Contains(en1.ObjectType) && (item2.Soulbound))
                 {
                     DropBag(item2);
                     con1.Inventory[pkt.Obj1.SlotId] = null;
                 }
-                if (publicbags.Contains(en2.ObjectType) && (item1.Soulbound || item1.Undead || item1.SUndead))
+                if (publicbags.Contains(en2.ObjectType) && (item1.Soulbound))
                 {
                     DropBag(item1);
                     con2.Inventory[pkt.Obj2.SlotId] = null;

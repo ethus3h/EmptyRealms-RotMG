@@ -3,7 +3,7 @@ using System.Net;
 using System.Text;
 using System.Web;
 
-namespace server.credits
+namespace Server.credits
 {
     class add : IRequestHandler
     {

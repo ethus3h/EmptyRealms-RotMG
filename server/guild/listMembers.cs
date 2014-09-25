@@ -6,7 +6,7 @@ using System.Net;
 using System.Text;
 using System.Web;
 
-namespace server.guild
+namespace Server.guild
 {
     class listMembers : IRequestHandler
     {

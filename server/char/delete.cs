@@ -5,7 +5,7 @@ using System.Net;
 using System.Text;
 using System.Web;
 
-namespace server.@char
+namespace Server.@char
 {
     class delete : IRequestHandler
     {

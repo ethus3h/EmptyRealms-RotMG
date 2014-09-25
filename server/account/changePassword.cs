@@ -5,7 +5,7 @@ using System.Net;
 using System.Text;
 using System.Web;
 
-namespace server.account
+namespace Server.account
 {
     class changePassword : IRequestHandler
     {

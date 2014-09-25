@@ -8,7 +8,7 @@ using System.Web;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace server.picture
+namespace Server.picture
 {
 
     class list : IRequestHandler

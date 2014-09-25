@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `emptyrealms` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE  IF NOT EXISTS `emptyrealms`
 USE `emptyrealms`;
 
 CREATE TABLE `accounts` (
@@ -18,6 +18,13 @@ CREATE TABLE `accounts` (
   `banned` tinyint(1) NOT NULL DEFAULT '0',
   `locked` varchar(512) NOT NULL,
   `ignored` varchar(512) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+CREATE TABLE `pets` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `accId` int(11) NOT NULL,
+  `feedPoints` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -57,7 +64,7 @@ CREATE TABLE `classstats` (
   `bestFame` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`accId`,`objType`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
+;
 CREATE TABLE `death` (
   `accId` int(11) NOT NULL,
   `chrId` int(11) NOT NULL,
@@ -90,7 +97,7 @@ CREATE TABLE `news` (
   `icon` varchar(16) NOT NULL DEFAULT 'info',
   `title` varchar(128) NOT NULL DEFAULT 'Default news title',
   `text` varchar(128) NOT NULL DEFAULT 'Default news text',
-  `link` varchar(256) NOT NULL DEFAULT 'http://openrealms.net/',
+  `link` varchar(256) NOT NULL DEFAULT 'http://mmoe.net/',
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
@@ -121,8 +128,9 @@ CREATE TABLE `clientnews` (
   PRIMARY KEY (`date`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-CREATE TABLE `arenaleaderboard` (
+CREATE TABLE `arenalb` (
   `wave` int(11) NOT NULL,
   `players` varchar(256) NOT NULL,
   PRIMARY KEY (`wave`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+

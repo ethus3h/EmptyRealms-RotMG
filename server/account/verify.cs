@@ -7,7 +7,7 @@ using System.Web;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace server.account
+namespace Server.account
 {
     class verify : IRequestHandler
     {

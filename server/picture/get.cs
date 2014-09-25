@@ -4,7 +4,7 @@ using System.Net;
 using System.Text;
 using System.Web;
 
-namespace server.picture
+namespace Server.picture
 {
     class get : IRequestHandler
     {

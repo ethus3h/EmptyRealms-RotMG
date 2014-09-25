@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.IO;
-using System.Xml;
 using System.Xml.Serialization;
+using System.Xml;
 
 [Serializable, XmlRoot("Fame"), XmlType(TypeName = "Fame")]
 public class FameStats
@@ -80,30 +83,30 @@ public class FameStats
         var dat = new Tuple<byte, int>[]
             {
                 new Tuple<byte, int>(0, Shots),
-                new Tuple<byte, int>(1, ShotsThatDamage),
-                new Tuple<byte, int>(2, SpecialAbilityUses),
-                new Tuple<byte, int>(3, TilesUncovered),
-                new Tuple<byte, int>(4, Teleports),
-                new Tuple<byte, int>(5, PotionsDrunk),
-                new Tuple<byte, int>(6, MonsterKills),
-                new Tuple<byte, int>(7, MonsterAssists),
-                new Tuple<byte, int>(8, GodKills),
-                new Tuple<byte, int>(9, GodAssists),
-                new Tuple<byte, int>(10, CubeKills),
-                new Tuple<byte, int>(11, OryxKills),
-                new Tuple<byte, int>(12, QuestsCompleted),
-                new Tuple<byte, int>(13, PirateCavesCompleted),
-                new Tuple<byte, int>(14, UndeadLairsCompleted),
-                new Tuple<byte, int>(15, AbyssOfDemonsCompleted),
-                new Tuple<byte, int>(16, SnakePitsCompleted),
-                new Tuple<byte, int>(17, SpiderDensCompleted),
-                new Tuple<byte, int>(18, SpriteWorldsCompleted),
-                new Tuple<byte, int>(19, LevelUpAssists),
-                new Tuple<byte, int>(20, MinutesActive),
-                new Tuple<byte, int>(21, TombsCompleted),
-                new Tuple<byte, int>(22, TrenchesCompleted),
-                new Tuple<byte, int>(23, JunglesCompleted),
-                new Tuple<byte, int>(24, ManorsCompleted),
+	            new Tuple<byte, int>(1, ShotsThatDamage),
+	            new Tuple<byte, int>(2, SpecialAbilityUses),
+	            new Tuple<byte, int>(3, TilesUncovered),
+	            new Tuple<byte, int>(4, Teleports),
+	            new Tuple<byte, int>(5, PotionsDrunk),
+	            new Tuple<byte, int>(6, MonsterKills),
+	            new Tuple<byte, int>(7, MonsterAssists),
+	            new Tuple<byte, int>(8, GodKills),
+	            new Tuple<byte, int>(9, GodAssists),
+	            new Tuple<byte, int>(10, CubeKills),
+	            new Tuple<byte, int>(11, OryxKills),
+	            new Tuple<byte, int>(12, QuestsCompleted),
+	            new Tuple<byte, int>(13, PirateCavesCompleted),
+	            new Tuple<byte, int>(14, UndeadLairsCompleted),
+	            new Tuple<byte, int>(15, AbyssOfDemonsCompleted),
+	            new Tuple<byte, int>(16, SnakePitsCompleted),
+	            new Tuple<byte, int>(17, SpiderDensCompleted),
+	            new Tuple<byte, int>(18, SpriteWorldsCompleted),
+	            new Tuple<byte, int>(19, LevelUpAssists),
+	            new Tuple<byte, int>(20, MinutesActive),
+	            new Tuple<byte, int>(21, TombsCompleted),
+	            new Tuple<byte, int>(22, TrenchesCompleted),
+	            new Tuple<byte, int>(23, JunglesCompleted),
+	            new Tuple<byte, int>(24, ManorsCompleted),
             };
 
         MemoryStream ret = new MemoryStream();
@@ -121,47 +124,27 @@ public class FameStats
     public int CalculateTotal(Account acc, Char chr, int baseFame, out bool firstBorn)
     {
         int bonus = 0;
-
-        #region Ancestor
-        if (chr.CharacterId < 2)
+        if (chr.CharacterId < 2)            //Ancestor
         {
             bonus += (int)(baseFame * 0.1) + 20;
         }
-        #endregion
-
-        #region Legacy Builder
-        // Legacy Builder
-        #endregion
-
-        #region Pacifist
-        if (ShotsThatDamage == 0)
+        //Legacy Builder???
+        if (ShotsThatDamage == 0)           //Pacifist
         {
             bonus += (int)(baseFame * 0.25);
         }
-        #endregion
-
-        #region Thirsty
-        if (PotionsDrunk == 0)
+        if (PotionsDrunk == 0)              //Thirsty
         {
             bonus += (int)(baseFame * 0.25);
         }
-        #endregion
-
-        #region Mundane
-        if (SpecialAbilityUses == 0)
+        if (SpecialAbilityUses == 0)        //Mundane
         {
             bonus += (int)(baseFame * 0.25);
         }
-        #endregion
-
-        #region Boots on the Ground
-        if (Teleports == 0)
+        if (Teleports == 0)                 //Boots on the Ground
         {
             bonus += (int)(baseFame * 0.25);
         }
-        #endregion
-
-        #region Tunnel Rat
         if (PirateCavesCompleted > 0 &&
             UndeadLairsCompleted > 0 &&
             AbyssOfDemonsCompleted > 0 &&
@@ -171,114 +154,70 @@ public class FameStats
             TombsCompleted > 0 &&
             TrenchesCompleted > 0 &&
             JunglesCompleted > 0 &&
-            ManorsCompleted > 0)
+            ManorsCompleted > 0)            //Tunnel Rat
         {
             bonus += (int)(baseFame * 0.1);
         }
-        #endregion
-
-        #region Enemy of the Gods
-        if ((double)GodKills / (GodKills + MonsterKills) > 0.1)
+        if ((double)GodKills / (GodKills + MonsterKills) > 0.1)   //Enemy of the Gods
         {
             bonus += (int)(baseFame * 0.1);
         }
-        #endregion
-
-        #region Slayer of the Gods
-        if ((double)GodKills / (GodKills + MonsterKills) > 0.5)
+        if ((double)GodKills / (GodKills + MonsterKills) > 0.5)   //Slayer of the Gods
         {
             bonus += (int)(baseFame * 0.1);
         }
-        #endregion
-
-        #region Oryx Slayer
-        if (OryxKills > 0)
+        if (OryxKills > 0)                  //Oryx Slayer
         {
             bonus += (int)(baseFame * 0.1);
         }
-        #endregion
-
-        #region Accurate
-        if ((double)ShotsThatDamage / Shots > 0.25)
+        if ((double)ShotsThatDamage / Shots > 0.25)     //Accurate
         {
             bonus += (int)(baseFame * 0.1);
         }
-        #endregion
-
-        #region Sharpshooter
-        if ((double)ShotsThatDamage / Shots > 0.5)
+        if ((double)ShotsThatDamage / Shots > 0.5)      //Sharpshooter
         {
             bonus += (int)(baseFame * 0.1);
         }
-        #endregion
-
-        #region Sniper
-        if ((double)ShotsThatDamage / Shots > 0.75)
+        if ((double)ShotsThatDamage / Shots > 0.75)     //Sniper
         {
             bonus += (int)(baseFame * 0.1);
         }
-        #endregion
-
-        #region Explorer
-        if (TilesUncovered > 1000000)
+        if (TilesUncovered > 1000000)       //Explorer
         {
             bonus += (int)(baseFame * 0.05);
         }
-        #endregion
-
-        #region Cartographer
-        if (TilesUncovered > 4000000)
+        if (TilesUncovered > 4000000)       //Cartographer
         {
             bonus += (int)(baseFame * 0.05);
         }
-        #endregion
-
-        #region Team Player
-        if (LevelUpAssists > 100)
+        if (LevelUpAssists > 100)           //Team Player
         {
             bonus += (int)(baseFame * 0.1);
         }
-        #endregion
-
-        #region Leader of Men
-        if (LevelUpAssists > 1000)
+        if (LevelUpAssists > 1000)          //Leader of Men
         {
             bonus += (int)(baseFame * 0.1);
         }
-        #endregion
-
-        #region Doer of Deeds
-        if (QuestsCompleted > 1000)
+        if (QuestsCompleted > 1000)         //Doer of Deeds
         {
             bonus += (int)(baseFame * 0.1);
         }
-        #endregion
-
-        #region Friends of the Cubes
-        if (CubeKills == 0)
+        if (CubeKills == 0)                 //Friend of the Cubes
         {
             bonus += (int)(baseFame * 0.1);
         }
-        #endregion
-
-        #region Well Equipped
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 4; i++)         //Well Equipped
         {
             if (chr.Equipment[i] == -1) continue;
             var b = XmlDatas.ItemDescs[chr.Equipment[i]].FameBonus;
             if (b > 0)
                 bonus += baseFame * b / 100;
         }
-        #endregion
-
-        #region First Born
-        if (baseFame + bonus > acc.Stats.BestCharFame)
+        if (baseFame + bonus > acc.Stats.BestCharFame)   //First Born
         {
             bonus += (int)(baseFame * 0.1);
             firstBorn = true;
         }
-        #endregion
-
         else
             firstBorn = false;
 

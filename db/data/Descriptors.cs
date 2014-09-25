@@ -1,7 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Xml.Serialization;
+using System.Xml;
 using System.Xml.Linq;
+using System.Globalization;
+using System.Net;
 
 [Flags]
 public enum ConditionEffects

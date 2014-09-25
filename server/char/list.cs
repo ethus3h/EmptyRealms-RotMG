@@ -8,7 +8,7 @@ using System.Web;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace server.@char
+namespace Server.@char
 {
     class list : IRequestHandler
     {

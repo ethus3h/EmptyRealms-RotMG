@@ -8,7 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
 
-namespace server.account
+namespace Server.account
 {
     class register : IRequestHandler
     {

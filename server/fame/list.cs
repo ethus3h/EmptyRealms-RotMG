@@ -6,7 +6,7 @@ using System.Text;
 using System.Web;
 using System.Xml;
 
-namespace server.fame
+namespace Server.fame
 {
     class list : IRequestHandler
     {
