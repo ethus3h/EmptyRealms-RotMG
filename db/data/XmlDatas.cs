@@ -1,12 +1,8 @@
-﻿using System;
+﻿using db.data;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml;
-using System.Xml.Linq;
 using System.IO;
-using System.Net;
-using db.data;
+using System.Xml.Linq;
 
 public class XmlDatas
 {

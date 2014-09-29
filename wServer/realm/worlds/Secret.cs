@@ -7,7 +7,7 @@
             Name = "?????";
             Background = 0;
             AllowTeleport = false;
-            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.secret.wmap"));            
+            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.wmap.secret.wmap"));            
         }
 
         public override World GetInstance(ClientProcessor psr)

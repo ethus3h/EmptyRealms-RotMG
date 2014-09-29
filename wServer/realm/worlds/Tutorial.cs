@@ -9,7 +9,7 @@
             Background = 0;
             if (!(IsLimbo = isLimbo))
             {
-                base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.tutorial.wmap"));
+                base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.wmap.tutorial.wmap"));
             }
         }
 

@@ -7,7 +7,7 @@
             Name = "Undead Lair";
             Background = 0;
             AllowTeleport = false;
-            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.UDL.wmap"));            
+            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.wmap.UDL.wmap"));            
         }
 
         public override World GetInstance(ClientProcessor psr)

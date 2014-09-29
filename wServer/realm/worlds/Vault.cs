@@ -16,7 +16,7 @@ namespace wServer.realm.worlds
             Background = 2;
             if (!(IsLimbo = isLimbo))
             {
-                base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.vault.wmap"));
+                base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.wmap.vault.wmap"));
                 Init(psr);
             }
         }

@@ -25,9 +25,10 @@ namespace wServer
 
         static void Main(string[] args)
         {
+            const int gameserverport = 2050;
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
             svrSkt = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            svrSkt.Bind(new IPEndPoint(IPAddress.Any, 2050));
+            svrSkt.Bind(new IPEndPoint(IPAddress.Any, gameserverport));
             svrSkt.Listen(0xff);
             svrSkt.BeginAccept(Listen, null);
             Console.CancelKeyPress += (sender, e) =>
@@ -44,7 +45,9 @@ namespace wServer
                 Environment.Exit(0);
             };
             
-            Console.WriteLine("Listening at port 2050...");
+            Console.WriteLine("Starting Game Server on port {0}.", gameserverport);
+            Thread.Sleep(5000);
+            Console.WriteLine("Successfully started Game Server.");
 
             HostPolicyServer();
 

@@ -7,7 +7,7 @@
             Name = "Beachzone";
             Background = 0;
             AllowTeleport = true;
-            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.bz.wmap"));
+            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.wmap.bz.wmap"));
         }
 
         public override World GetInstance(ClientProcessor psr)

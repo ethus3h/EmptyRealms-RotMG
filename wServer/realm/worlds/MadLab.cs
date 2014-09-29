@@ -7,7 +7,7 @@
             Name = "Mad Lab";
             Background = 0;
             AllowTeleport = true;
-            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.madlab.wmap"));
+            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.wmap.madlab.wmap"));
         }
 
         public override World GetInstance(ClientProcessor psr)

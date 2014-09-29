@@ -39,7 +39,7 @@ namespace wServer.realm.worlds
             AllowTeleport = true;
             Random r = new Random();
             InitWaveEnemies();
-            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.battlearena"+r.Next(1,4 +1).ToString()+".wmap"));
+            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.wmap.battlearena" + r.Next(1, 4 + 1).ToString() + ".wmap"));
         }
 
         public override World GetInstance(ClientProcessor psr)

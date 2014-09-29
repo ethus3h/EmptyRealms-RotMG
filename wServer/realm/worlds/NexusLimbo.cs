@@ -7,7 +7,7 @@
             Id = NEXUS_LIMBO;
             Name = "Nexus Tutorial";
             Background = 0;
-            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.nexusLimbo.wmap"));
+            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.wmap.nexusLimbo.wmap"));
         }
     }
 }

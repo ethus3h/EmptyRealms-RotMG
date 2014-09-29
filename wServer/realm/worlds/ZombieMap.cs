@@ -29,7 +29,7 @@ namespace wServer.realm.worlds
             AllowTeleport = false;
             Random r = new Random();
             InitWaveEnemies();
-            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.zombies.wmap"));
+            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.wmap.zombies.wmap"));
         }
 
         public override World GetInstance(ClientProcessor psr)

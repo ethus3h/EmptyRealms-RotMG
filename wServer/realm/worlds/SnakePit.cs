@@ -7,7 +7,7 @@
             Name = "Snake Pit";
             Background = 0;
             AllowTeleport = true;
-            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.snakepit.wmap"));
+            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.wmap.snakepit.wmap"));
         }
 
         public override World GetInstance(ClientProcessor psr)

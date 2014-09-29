@@ -16,7 +16,7 @@ namespace wServer.realm.worlds
         {
             Name = name;
             Background = 0;
-            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.world" + mapId + ".wmap"));
+            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.wmap.world" + mapId + ".wmap"));
             SetPieces.ApplySetPieces(this);
             if (oryxPresent)
             {

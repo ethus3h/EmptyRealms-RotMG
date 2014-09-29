@@ -7,7 +7,7 @@
             Name = "Sprite World";
             Background = 1;
             AllowTeleport = false;
-            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.sprite.wmap"));
+            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.wmap.sprite.wmap"));
         }
 
         public override World GetInstance(ClientProcessor psr)

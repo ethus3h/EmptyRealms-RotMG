@@ -8,7 +8,7 @@
             Name = "Market";
             Background = 0;
             AllowTeleport = true;
-            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.MarketMap.wmap"));
+            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.wmap.MarketMap.wmap"));
         }
 
         public override World GetInstance(ClientProcessor psr)

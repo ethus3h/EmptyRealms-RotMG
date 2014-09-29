@@ -14,19 +14,19 @@
             switch (this.Level())
             {
                 case 0:
-                    base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.ghall0.wmap"));
+                    base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.wmap.ghall0.wmap"));
                     break;
                 case 1:
-                    base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.ghall1.wmap"));
+                    base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.wmap.ghall1.wmap"));
                     break;
                 case 2:
-                    base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.ghall2.wmap"));
+                    base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.wmap.ghall2.wmap"));
                     break;
                 case 3:
-                    base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.ghall3.wmap"));
+                    base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.wmap.ghall3.wmap"));
                     break;
             }
-            //base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.guildhall0old.wmap"));            
+            //base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.wmap.guildhall0old.wmap"));            
         }
 
         public override World GetInstance(ClientProcessor psr)

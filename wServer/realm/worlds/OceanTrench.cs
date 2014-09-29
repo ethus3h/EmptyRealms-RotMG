@@ -7,7 +7,7 @@
             Name = "Ocean Trench";
             Background = 0;
             AllowTeleport = true;
-            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.oceantrench.wmap"));            
+            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.wmap.oceantrench.wmap"));            
         }
 
         public override World GetInstance(ClientProcessor psr)

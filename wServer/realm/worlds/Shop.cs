@@ -12,7 +12,7 @@
                 ExtraVar = extra;
             else
                 ExtraVar = "Default";
-            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.shop.wmap"));            
+            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.wmap.shop.wmap"));            
         }
 
         public override World GetInstance(ClientProcessor psr)

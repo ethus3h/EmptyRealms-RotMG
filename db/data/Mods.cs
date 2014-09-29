@@ -1,14 +1,5 @@
 ﻿using System;
-using System.Reflection;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml;
-using System.Xml.Linq;
 using System.IO;
-using System.Net;
-using Microsoft.CSharp;
-using System.CodeDom.Compiler;
 
 namespace db.data
 {

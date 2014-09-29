@@ -17,12 +17,12 @@ namespace Server
 
         public XmlDatas GameData { get; private set; }
 
-        const int port = 8887;
+        const int dataserverport = 8887;
 
         static void Main(string[] args)
         {
             listener = new HttpListener();
-            listener.Prefixes.Add("http://*:" + port + "/");
+            listener.Prefixes.Add("http://*:" + dataserverport + "/");
             listener.Start();
 
             listen = new Thread(ListenerCallback);
@@ -40,7 +40,9 @@ namespace Server
                     Thread.Sleep(100);
                 Environment.Exit(0);
             };
-            Console.WriteLine("Listening at port " + port + "...");
+            Console.WriteLine("Starting Data Server on port {0}.", dataserverport);
+            Thread.Sleep(5000);
+            Console.WriteLine("Successfully started Data Server.");
             XmlDatas.behaviors = false;
             XmlDatas.DoSomething();
             Thread.CurrentThread.Join();

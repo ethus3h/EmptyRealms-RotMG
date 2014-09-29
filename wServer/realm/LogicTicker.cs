@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Threading;
 
@@ -50,8 +51,24 @@ namespace wServer.realm
                 if (times > 3)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("LAGGED!| time:" + times + " dt:" + dt + " count:" + count + " time:" + b + " tps:" + count / (b / 1000.0));
+                    Console.WriteLine("[INFO] Game Server lagged!");
+                    Console.WriteLine(@"[INFO] Times: " + times + 
+                        " \n[INFO] DT: " + dt +
+                        " \n[INFO] Count: " + count +
+                        " \n[INFO] Time: " + b +
+                        " \n[INFO] TPS: " + count / (b / 1000.0) +
+                        " \n[INFO] End of INFO\n");
                     Console.ForegroundColor = ConsoleColor.White;
+
+                    var _directory = @"logs";
+                    if (!Directory.Exists(_directory))
+                    {
+                        Directory.CreateDirectory(_directory);
+                    }
+                    using (var writer = new StreamWriter(@"logs\LAGGED.log", true))
+                    {
+                        writer.WriteLine("[{0}] Times: {1}, DT: {2}, Count: {3}, Time: {4}, TPS: {5}", System.DateTime.Now, times, dt, count, b , count / (b / 1000.0));
+                    }
                 }
 
                 t.tickTimes = b;
