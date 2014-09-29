@@ -2107,10 +2107,11 @@ L27:
     iftrue              L41
 
     findproperty        QName(PrivateNamespace("*", "_-F1:_-3V#0"), "_-FD")
+    pushstring          "Day"
     pushstring          "Week"
     pushstring          "Month"
     pushstring          "All Time"
-    newarray            3
+    newarray            4
     initproperty        QName(PrivateNamespace("*", "_-F1:_-3V#0"), "_-FD")
 
     getlocal2
@@ -2125,13 +2126,15 @@ L40:
 
 L41:
     findproperty        QName(PrivateNamespace("*", "_-F1:_-3V#0"), "_-QJ")
+    pushstring          "Day"
+    pushstring          "day"
     pushstring          "Week"
     pushstring          "week"
     pushstring          "Month"
     pushstring          "month"
     pushstring          "All Time"
     pushstring          "all"
-    newobject           3
+    newobject           4
     initproperty        QName(PrivateNamespace("*", "_-F1:_-3V#0"), "_-QJ")
 
 L50:

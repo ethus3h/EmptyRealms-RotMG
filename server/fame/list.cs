@@ -35,6 +35,8 @@ namespace Server.fame
             string span = "";
             switch (query["timespan"])
             {
+                case "day":
+                    span = "(time >= DATE_SUB(NOW(), INTERVAL 1 DAY))"; break;
                 case "week":
                     span = "(time >= DATE_SUB(NOW(), INTERVAL 1 WEEK))"; break;
                 case "month":
