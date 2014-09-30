@@ -58,7 +58,7 @@ namespace wServer.realm
                         " \n[INFO] Time: " + b +
                         " \n[INFO] TPS: " + count / (b / 1000.0) +
                         " \n[INFO] End of INFO\n");
-                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.ResetColor();
 
                     var _directory = @"logs";
                     if (!Directory.Exists(_directory))

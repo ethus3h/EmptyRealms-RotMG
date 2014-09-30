@@ -35,7 +35,8 @@ namespace wServer
         public void BeginProcess()
         {
             dest = new TcpClient();
-            dest.Connect("ec2-54-244-123-81.us-west-2.compute.amazonaws.com", 2050);
+            dest.Connect("localhost", 2050);
+            //dest.Connect("ec2-54-244-123-81.us-west-2.compute.amazonaws.com", 2050);
 
             cliWkr = new Thread(ProcessCli);
             cliWkr.Start();
