@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-xS")
   iinit
-   refid "_-Rv:_-sc/iinit"
+   refid "_-Rv:_-sc/instance/init"
    param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
    param QName(PackageNamespace("com.company.assembleegameclient.objects"), "Container")
    body
@@ -51,7 +51,7 @@ class
   trait slot QName(PackageNamespace(""), "_-e9") type QName(PackageNamespace("com.company.assembleegameclient.ui"), "Inventory") end
   trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
    method
-    refid "_-Rv:_-sc/draw"
+    refid "_-Rv:_-sc/instance/draw"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -77,7 +77,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-Rv:_-sc/cinit"
+  refid "_-Rv:_-sc/class/init"
   body
    maxstack 7
    localcount 3
@@ -89,7 +89,7 @@ class
 
     findproperty        QName(PrivateNamespace("*", "_-Rv:_-sc"), "_-hP")
     findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
-    getproperty         Multiname("Vector", [PrivateNamespace("*", "_-Rv:_-sc"), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "_-Rv:_-sc/cinit"), PackageNamespace(""), PackageNamespace("_-Rv"), PackageInternalNs("_-Rv"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-xS"), StaticProtectedNs("_-xS"), StaticProtectedNs("_-90"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+    getproperty         Multiname("Vector", [PrivateNamespace("*", "_-Rv:_-sc"), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "_-Rv:_-sc/class/init"), PackageNamespace(""), PackageNamespace("_-Rv"), PackageInternalNs("_-Rv"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-xS"), StaticProtectedNs("_-xS"), StaticProtectedNs("_-90"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
     getlex              QName(PackageNamespace(""), "int")
     applytype           1
     pushbyte            8

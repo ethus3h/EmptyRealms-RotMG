@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-C1")
   iinit
-   refid "_-092:_-0HI/iinit"
+   refid "_-092:_-0HI/instance/init"
    param QName(PackageNamespace(""), "Array")
    body
     maxstack 5
@@ -30,16 +30,16 @@ class
      newarray            0
      coerce              QName(PackageNamespace(""), "Array")
 L12:
-     initproperty        QName(PrivateNamespace("*", "_-092:_-0HI"), "_-Z1")
+     initproperty        QName(PrivateNamespace("*", "_-092:_-0HI/instance"), "_-Z1")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-092:_-0HI"), "_-Z1") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("*", "_-092:_-0HI/instance"), "_-Z1") type QName(PackageNamespace(""), "Array") end
   trait method QName(ProtectedNamespace("_-C1"), "matchesOrDescribesMismatch") flag OVERRIDE
    method
-    refid "_-092:_-0HI/_-C1:matchesOrDescribesMismatch"
+    refid "_-092:_-0HI/instance/_-C1:matchesOrDescribesMismatch"
     param QName(PackageNamespace(""), "Object")
     param QName(PackageNamespace("_-qj"), "Description")
     returns QName(PackageNamespace(""), "Boolean")
@@ -60,7 +60,7 @@ L12:
       setlocal            4
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-092:_-0HI"), "_-Z1")
+      getproperty         QName(PrivateNamespace("*", "_-092:_-0HI/instance"), "_-Z1")
       coerce_a
       setlocal            5
 
@@ -105,7 +105,7 @@ L32:
   end ; trait
   trait method QName(PackageNamespace(""), "describeTo") flag OVERRIDE
    method
-    refid "_-092:_-0HI/describeTo"
+    refid "_-092:_-0HI/instance/describeTo"
     param QName(PackageNamespace("_-qj"), "Description")
     returns QName(PackageNamespace(""), "void")
     body
@@ -122,7 +122,7 @@ L32:
       pushstring          " and "
       pushstring          ")"
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-092:_-0HI"), "_-Z1")
+      getproperty         QName(PrivateNamespace("*", "_-092:_-0HI/instance"), "_-Z1")
       callpropvoid        QName(Namespace("_-08T"), "_-05o"), 4
 
       returnvoid
@@ -132,7 +132,7 @@ L32:
   end ; trait
  end ; instance
  cinit
-  refid "_-092:_-0HI/cinit"
+  refid "_-092:_-0HI/class/init"
   body
    maxstack 3
    localcount 1

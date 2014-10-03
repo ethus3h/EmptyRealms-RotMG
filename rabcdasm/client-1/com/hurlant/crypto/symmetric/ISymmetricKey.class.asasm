@@ -4,17 +4,17 @@ class
   flag SEALED
   flag INTERFACE
   iinit
-   refid "com.hurlant.crypto.symmetric:ISymmetricKey/iinit"
+   refid "com.hurlant.crypto.symmetric:ISymmetricKey/instance/init"
   end ; method
   trait method QName(Namespace("_-Of"), "getBlockSize")
    method
-    refid "com.hurlant.crypto.symmetric:ISymmetricKey/_-Of:getBlockSize"
+    refid "com.hurlant.crypto.symmetric:ISymmetricKey/instance/_-Of:getBlockSize"
     returns QName(PackageNamespace(""), "uint")
    end ; method
   end ; trait
   trait method QName(Namespace("_-Of"), "encrypt")
    method
-    refid "com.hurlant.crypto.symmetric:ISymmetricKey/_-Of:encrypt"
+    refid "com.hurlant.crypto.symmetric:ISymmetricKey/instance/_-Of:encrypt"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     param QName(PackageNamespace(""), "uint")
     returns QName(PackageNamespace(""), "void")
@@ -24,7 +24,7 @@ class
   end ; trait
   trait method QName(Namespace("_-Of"), "decrypt")
    method
-    refid "com.hurlant.crypto.symmetric:ISymmetricKey/_-Of:decrypt"
+    refid "com.hurlant.crypto.symmetric:ISymmetricKey/instance/_-Of:decrypt"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     param QName(PackageNamespace(""), "uint")
     returns QName(PackageNamespace(""), "void")
@@ -34,19 +34,19 @@ class
   end ; trait
   trait method QName(Namespace("_-Of"), "dispose")
    method
-    refid "com.hurlant.crypto.symmetric:ISymmetricKey/_-Of:dispose"
+    refid "com.hurlant.crypto.symmetric:ISymmetricKey/instance/_-Of:dispose"
     returns QName(PackageNamespace(""), "void")
    end ; method
   end ; trait
   trait method QName(Namespace("_-Of"), "toString")
    method
-    refid "com.hurlant.crypto.symmetric:ISymmetricKey/_-Of:toString"
+    refid "com.hurlant.crypto.symmetric:ISymmetricKey/instance/_-Of:toString"
     returns QName(PackageNamespace(""), "String")
    end ; method
   end ; trait
  end ; instance
  cinit
-  refid "com.hurlant.crypto.symmetric:ISymmetricKey/cinit"
+  refid "com.hurlant.crypto.symmetric:ISymmetricKey/class/init"
   body
    maxstack 0
    localcount 1

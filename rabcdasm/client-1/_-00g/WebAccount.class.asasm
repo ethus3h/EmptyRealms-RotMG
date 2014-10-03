@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-G5")
   iinit
-   refid "_-00g:WebAccount/iinit"
+   refid "_-00g:WebAccount/instance/init"
    body
     maxstack 6
     localcount 4
@@ -25,7 +25,7 @@ L4:
      pushstring          "rotmg.UrlLib.getParam"
      pushstring          "entrypt"
      callproperty        QName(PackageNamespace(""), "call"), 2
-     initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "_-8U")
+     initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount"), "_-8U")
 
 L10:
      jump                L22
@@ -52,12 +52,12 @@ L22:
     try from L4 to L10 target L11 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "error") end
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "guid_") type QName(PackageNamespace(""), "String") value Null() end
-  trait slot QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "password_") type QName(PackageNamespace(""), "String") value Null() end
-  trait slot QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "_-8U") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(PrivateNamespace("*", "_-00g:WebAccount"), "guid_") type QName(PackageNamespace(""), "String") value Null() end
+  trait slot QName(PrivateNamespace("*", "_-00g:WebAccount"), "password_") type QName(PackageNamespace(""), "String") value Null() end
+  trait slot QName(PrivateNamespace("*", "_-00g:WebAccount"), "_-8U") type QName(PackageNamespace(""), "String") value Utf8("") end
   trait method QName(PackageNamespace(""), "guid") flag OVERRIDE
    method
-    refid "_-00g:WebAccount/guid"
+    refid "_-00g:WebAccount/instance/guid"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -69,7 +69,7 @@ L22:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "guid_")
+      getproperty         QName(PrivateNamespace("*", "_-00g:WebAccount"), "guid_")
       returnvalue
      end ; code
     end ; body
@@ -77,7 +77,7 @@ L22:
   end ; trait
   trait method QName(PackageNamespace(""), "password") flag OVERRIDE
    method
-    refid "_-00g:WebAccount/password"
+    refid "_-00g:WebAccount/instance/password"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 4
@@ -89,7 +89,7 @@ L22:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "password_")
+      getproperty         QName(PrivateNamespace("*", "_-00g:WebAccount"), "password_")
       pushnull
       ifne                L8
 
@@ -98,7 +98,7 @@ L22:
 
 L8:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "password_")
+      getproperty         QName(PrivateNamespace("*", "_-00g:WebAccount"), "password_")
       coerce_s
 L11:
       returnvalue
@@ -108,7 +108,7 @@ L11:
   end ; trait
   trait method QName(PackageNamespace(""), "credentials") flag OVERRIDE
    method
-    refid "_-00g:WebAccount/credentials"
+    refid "_-00g:WebAccount/instance/credentials"
     returns QName(PackageNamespace(""), "Object")
     body
      maxstack 6
@@ -133,7 +133,7 @@ L11:
   end ; trait
   trait method QName(PackageNamespace(""), "isRegistered") flag OVERRIDE
    method
-    refid "_-00g:WebAccount/isRegistered"
+    refid "_-00g:WebAccount/instance/isRegistered"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 4
@@ -156,7 +156,7 @@ L11:
   end ; trait
   trait method QName(ProtectedNamespace("_-G5"), "internalLoad") flag OVERRIDE
    method
-    refid "_-00g:WebAccount/_-G5:internalLoad"
+    refid "_-00g:WebAccount/instance/_-G5:internalLoad"
     param QName(PackageNamespace("flash.display"), "Stage")
     param QName(PackageNamespace(""), "Function")
     returns QName(PackageNamespace(""), "void")
@@ -175,11 +175,11 @@ L11:
 
       getlocal0
       pushnull
-      initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "guid_")
+      initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount"), "guid_")
 
       getlocal0
       pushnull
-      initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "password_")
+      initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount"), "password_")
 
 L11:
       getlex              QName(PackageNamespace("flash.net"), "SharedObject")
@@ -199,8 +199,8 @@ L11:
       getlocal3
       getproperty         QName(PackageNamespace(""), "data")
       pushstring          "GUID"
-      getproperty         MultinameL([PrivateNamespace("*", "_-00g:WebAccount#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-00g:WebAccount#1"), PackageNamespace("_-00g"), PackageInternalNs("_-00g"), ProtectedNamespace("_-G5"), StaticProtectedNs("_-G5"), StaticProtectedNs("_-iT")])
-      initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "guid_")
+      getproperty         MultinameL([PrivateNamespace("*", "_-00g:WebAccount"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-00g:WebAccount/instance"), PackageNamespace("_-00g"), PackageInternalNs("_-00g"), ProtectedNamespace("_-G5"), StaticProtectedNs("_-G5"), StaticProtectedNs("_-iT")])
+      initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount"), "guid_")
 
 L28:
       getlocal3
@@ -213,8 +213,8 @@ L28:
       getlocal3
       getproperty         QName(PackageNamespace(""), "data")
       pushstring          "Password"
-      getproperty         MultinameL([PrivateNamespace("*", "_-00g:WebAccount#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-00g:WebAccount#1"), PackageNamespace("_-00g"), PackageInternalNs("_-00g"), ProtectedNamespace("_-G5"), StaticProtectedNs("_-G5"), StaticProtectedNs("_-iT")])
-      initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "password_")
+      getproperty         MultinameL([PrivateNamespace("*", "_-00g:WebAccount"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-00g:WebAccount/instance"), PackageNamespace("_-00g"), PackageInternalNs("_-00g"), ProtectedNamespace("_-G5"), StaticProtectedNs("_-G5"), StaticProtectedNs("_-iT")])
+      initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount"), "password_")
 
 L39:
       jump                L51
@@ -237,7 +237,7 @@ L40:
       kill                4
 L51:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "guid_")
+      getproperty         QName(PrivateNamespace("*", "_-00g:WebAccount"), "guid_")
       pushnull
       ifne                L61
 
@@ -261,7 +261,7 @@ L61:
   end ; trait
   trait method QName(PackageNamespace(""), "modify") flag OVERRIDE
    method
-    refid "_-00g:WebAccount/modify"
+    refid "_-00g:WebAccount/instance/modify"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
@@ -281,11 +281,11 @@ L61:
 
       getlocal0
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "guid_")
+      initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount"), "guid_")
 
       getlocal0
       getlocal2
-      initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "password_")
+      initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount"), "password_")
 
 L11:
       getlex              QName(PackageNamespace("flash.net"), "SharedObject")
@@ -299,15 +299,15 @@ L11:
       getproperty         QName(PackageNamespace(""), "data")
       pushstring          "GUID"
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "guid_")
-      setproperty         MultinameL([PrivateNamespace("*", "_-00g:WebAccount#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-00g:WebAccount#1"), PackageNamespace("_-00g"), PackageInternalNs("_-00g"), ProtectedNamespace("_-G5"), StaticProtectedNs("_-G5"), StaticProtectedNs("_-iT")])
+      getproperty         QName(PrivateNamespace("*", "_-00g:WebAccount"), "guid_")
+      setproperty         MultinameL([PrivateNamespace("*", "_-00g:WebAccount"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-00g:WebAccount/instance"), PackageNamespace("_-00g"), PackageInternalNs("_-00g"), ProtectedNamespace("_-G5"), StaticProtectedNs("_-G5"), StaticProtectedNs("_-iT")])
 
       getlocal            4
       getproperty         QName(PackageNamespace(""), "data")
       pushstring          "Password"
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "password_")
-      setproperty         MultinameL([PrivateNamespace("*", "_-00g:WebAccount#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-00g:WebAccount#1"), PackageNamespace("_-00g"), PackageInternalNs("_-00g"), ProtectedNamespace("_-G5"), StaticProtectedNs("_-G5"), StaticProtectedNs("_-iT")])
+      getproperty         QName(PrivateNamespace("*", "_-00g:WebAccount"), "password_")
+      setproperty         MultinameL([PrivateNamespace("*", "_-00g:WebAccount"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-00g:WebAccount/instance"), PackageNamespace("_-00g"), PackageInternalNs("_-00g"), ProtectedNamespace("_-G5"), StaticProtectedNs("_-G5"), StaticProtectedNs("_-iT")])
 
       getlocal            4
       callpropvoid        QName(PackageNamespace(""), "flush"), 0
@@ -340,7 +340,7 @@ L43:
   end ; trait
   trait method QName(PackageNamespace(""), "clear") flag OVERRIDE
    method
-    refid "_-00g:WebAccount/clear"
+    refid "_-00g:WebAccount/instance/clear"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 6
@@ -365,7 +365,7 @@ L43:
       getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
       getproperty         QName(PackageNamespace(""), "data_")
       newobject           0
-      setproperty         Multiname("charIdUseMap", [PrivateNamespace("*", "_-00g:WebAccount#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-00g:WebAccount#1"), PackageNamespace("_-00g"), PackageInternalNs("_-00g"), ProtectedNamespace("_-G5"), StaticProtectedNs("_-G5"), StaticProtectedNs("_-iT")])
+      setproperty         Multiname("charIdUseMap", [PrivateNamespace("*", "_-00g:WebAccount"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-00g:WebAccount/instance"), PackageNamespace("_-00g"), PackageInternalNs("_-00g"), ProtectedNamespace("_-G5"), StaticProtectedNs("_-G5"), StaticProtectedNs("_-iT")])
 
       getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
       callpropvoid        QName(PackageNamespace(""), "save"), 0
@@ -377,7 +377,7 @@ L43:
   end ; trait
   trait method QName(PackageNamespace(""), "reportIntStat") flag OVERRIDE
    method
-    refid "_-00g:WebAccount/reportIntStat"
+    refid "_-00g:WebAccount/instance/reportIntStat"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace(""), "void")
@@ -397,7 +397,7 @@ L43:
   end ; trait
   trait method QName(PackageNamespace(""), "newAccountText") flag OVERRIDE
    method
-    refid "_-00g:WebAccount/newAccountText"
+    refid "_-00g:WebAccount/instance/newAccountText"
     returns QName(PackageNamespace("_-qN"), "_-9j")
     body
      maxstack 3
@@ -417,7 +417,7 @@ L43:
   end ; trait
   trait method QName(PackageNamespace(""), "newAccountManagement") flag OVERRIDE
    method
-    refid "_-00g:WebAccount/newAccountManagement"
+    refid "_-00g:WebAccount/instance/newAccountManagement"
     returns QName(PackageNamespace("flash.display"), "Sprite")
     body
      maxstack 4
@@ -438,7 +438,7 @@ L43:
   end ; trait
   trait method QName(PackageNamespace(""), "showInGameRegister") flag OVERRIDE
    method
-    refid "_-00g:WebAccount/showInGameRegister"
+    refid "_-00g:WebAccount/instance/showInGameRegister"
     param QName(PackageNamespace("flash.display"), "Stage")
     returns QName(PackageNamespace(""), "void")
     body
@@ -466,7 +466,7 @@ L43:
   end ; trait
   trait method QName(PackageNamespace(""), "cacheOffers") flag OVERRIDE
    method
-    refid "_-00g:WebAccount/cacheOffers"
+    refid "_-00g:WebAccount/instance/cacheOffers"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 5
@@ -489,7 +489,7 @@ L43:
   end ; trait
   trait method QName(PackageNamespace(""), "showMoneyManagement") flag OVERRIDE
    method
-    refid "_-00g:WebAccount/showMoneyManagement"
+    refid "_-00g:WebAccount/instance/showMoneyManagement"
     param QName(PackageNamespace("flash.display"), "Stage")
     returns QName(PackageNamespace(""), "void")
     body
@@ -528,7 +528,7 @@ L13:
   end ; trait
   trait method QName(PackageNamespace(""), "gameNetworkUserId") flag OVERRIDE
    method
-    refid "_-00g:WebAccount/gameNetworkUserId"
+    refid "_-00g:WebAccount/instance/gameNetworkUserId"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -539,7 +539,7 @@ L13:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "_-oF")
+      getlex              QName(PrivateNamespace("*", "_-00g:WebAccount"), "_-oF")
       returnvalue
      end ; code
     end ; body
@@ -547,7 +547,7 @@ L13:
   end ; trait
   trait method QName(PackageNamespace(""), "gameNetwork") flag OVERRIDE
    method
-    refid "_-00g:WebAccount/gameNetwork"
+    refid "_-00g:WebAccount/instance/gameNetwork"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -566,7 +566,7 @@ L13:
   end ; trait
   trait method QName(PackageNamespace(""), "playPlatform") flag OVERRIDE
    method
-    refid "_-00g:WebAccount/playPlatform"
+    refid "_-00g:WebAccount/instance/playPlatform"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -577,7 +577,7 @@ L13:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "_-03R")
+      getlex              QName(PrivateNamespace("*", "_-00g:WebAccount"), "_-03R")
       returnvalue
      end ; code
     end ; body
@@ -585,7 +585,7 @@ L13:
   end ; trait
   trait method QName(PackageNamespace(""), "entrytag") flag OVERRIDE
    method
-    refid "_-00g:WebAccount/entrytag"
+    refid "_-00g:WebAccount/instance/entrytag"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -597,7 +597,7 @@ L13:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "_-8U")
+      getproperty         QName(PrivateNamespace("*", "_-00g:WebAccount"), "_-8U")
       returnvalue
      end ; code
     end ; body
@@ -605,7 +605,7 @@ L13:
   end ; trait
  end ; instance
  cinit
-  refid "_-00g:WebAccount/cinit"
+  refid "_-00g:WebAccount/class/init"
   body
    maxstack 4
    localcount 3
@@ -619,19 +619,19 @@ L13:
     pushstring          "rotmg"
     initproperty        QName(PackageNamespace(""), "_-000")
 
-    findproperty        QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "_-oF")
+    findproperty        QName(PrivateNamespace("*", "_-00g:WebAccount"), "_-oF")
     pushstring          ""
-    initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "_-oF")
+    initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount"), "_-oF")
 
-    findproperty        QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "_-03R")
+    findproperty        QName(PrivateNamespace("*", "_-00g:WebAccount"), "_-03R")
     pushstring          "rotmg"
-    initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "_-03R")
+    initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount"), "_-03R")
 
     returnvoid
    end ; code
   end ; body
  end ; method
  trait const QName(PackageNamespace(""), "_-000") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("rotmg") end
- trait const QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "_-oF") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("") end
- trait const QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "_-03R") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("rotmg") end
+ trait const QName(PrivateNamespace("*", "_-00g:WebAccount"), "_-oF") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("") end
+ trait const QName(PrivateNamespace("*", "_-00g:WebAccount"), "_-03R") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("rotmg") end
 end ; class

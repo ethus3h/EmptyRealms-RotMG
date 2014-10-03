@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("mx.resources:ResourceManager")
   iinit
-   refid "mx.resources:ResourceManager/iinit"
+   refid "mx.resources:ResourceManager/instance/init"
    body
     maxstack 1
     localcount 1
@@ -25,7 +25,7 @@ class
   end ; method
  end ; instance
  cinit
-  refid "mx.resources:ResourceManager/cinit"
+  refid "mx.resources:ResourceManager/class/init"
   body
    maxstack 2
    localcount 1
@@ -44,11 +44,11 @@ class
   end ; body
  end ; method
  trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.6.0.23201") end
- trait slot QName(PrivateNamespace("*", "mx.resources:ResourceManager"), "implClassDependency") slotid 2 type QName(PackageNamespace("mx.resources"), "ResourceManagerImpl") end
- trait slot QName(PrivateNamespace("*", "mx.resources:ResourceManager"), "instance") slotid 3 type QName(PackageNamespace("mx.resources"), "IResourceManager") end
+ trait slot QName(PrivateNamespace("*", "mx.resources:ResourceManager/class/getInstance"), "implClassDependency") slotid 2 type QName(PackageNamespace("mx.resources"), "ResourceManagerImpl") end
+ trait slot QName(PrivateNamespace("*", "mx.resources:ResourceManager/class/getInstance"), "instance") slotid 3 type QName(PackageNamespace("mx.resources"), "IResourceManager") end
  trait method QName(PackageNamespace(""), "getInstance") flag FINAL dispid 3
   method
-   refid "mx.resources:ResourceManager/getInstance"
+   refid "mx.resources:ResourceManager/class/getInstance"
    returns QName(PackageNamespace("mx.resources"), "IResourceManager")
    flag NEED_ACTIVATION
    body
@@ -66,7 +66,7 @@ class
 
      pushscope
 
-     getlex              QName(PrivateNamespace("*", "mx.resources:ResourceManager"), "instance")
+     getlex              QName(PrivateNamespace("*", "mx.resources:ResourceManager/class/getInstance"), "instance")
      iftrue              L45
 
      getlex              QName(PackageNamespace("mx.core"), "Singleton")
@@ -84,13 +84,13 @@ class
      callpropvoid        QName(PackageNamespace(""), "registerClass"), 2
 
 L20:
-     findproperty        QName(PrivateNamespace("*", "mx.resources:ResourceManager"), "instance")
+     findproperty        QName(PrivateNamespace("*", "mx.resources:ResourceManager/class/getInstance"), "instance")
      findpropstrict      QName(PackageNamespace("mx.resources"), "IResourceManager")
      getlex              QName(PackageNamespace("mx.core"), "Singleton")
      pushstring          "mx.resources::IResourceManager"
      callproperty        QName(PackageNamespace(""), "getInstance"), 1
      callproperty        QName(PackageNamespace("mx.resources"), "IResourceManager"), 1
-     setproperty         QName(PrivateNamespace("*", "mx.resources:ResourceManager"), "instance")
+     setproperty         QName(PrivateNamespace("*", "mx.resources:ResourceManager/class/getInstance"), "instance")
 
 L27:
      jump                L45
@@ -112,15 +112,15 @@ L28:
      swap
      setslot             1
 
-     findproperty        QName(PrivateNamespace("*", "mx.resources:ResourceManager"), "instance")
+     findproperty        QName(PrivateNamespace("*", "mx.resources:ResourceManager/class/getInstance"), "instance")
      findpropstrict      QName(PackageNamespace("mx.resources"), "ResourceManagerImpl")
      constructprop       QName(PackageNamespace("mx.resources"), "ResourceManagerImpl"), 0
-     setproperty         QName(PrivateNamespace("*", "mx.resources:ResourceManager"), "instance")
+     setproperty         QName(PrivateNamespace("*", "mx.resources:ResourceManager/class/getInstance"), "instance")
 
      popscope
      kill                2
 L45:
-     getlex              QName(PrivateNamespace("*", "mx.resources:ResourceManager"), "instance")
+     getlex              QName(PrivateNamespace("*", "mx.resources:ResourceManager/class/getInstance"), "instance")
      returnvalue
     end ; code
     try from L20 to L27 target L28 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end

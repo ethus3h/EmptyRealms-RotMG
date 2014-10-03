@@ -7,7 +7,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("com.google.analytics.v4:Bridge")
   iinit
-   refid "com.google.analytics.v4:Bridge/iinit"
+   refid "com.google.analytics.v4:Bridge/instance/init"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration")
    param QName(PackageNamespace("com.google.analytics.external"), "JavascriptProxy")
@@ -77,6 +77,7 @@ class
      getlocal            4
      constructprop       QName(PackageNamespace(""), "Error"), 1
      throw
+
 L46:
      getlex              QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_hasGATracker")
      iftrue              L75
@@ -168,6 +169,7 @@ L91:
      getlocal            6
      constructprop       QName(PackageNamespace(""), "Error"), 1
      throw
+
 L113:
      returnvoid
     end ; code
@@ -175,7 +177,7 @@ L113:
   end ; method
   trait method QName(PackageNamespace(""), "link")
    method
-    refid "com.google.analytics.v4:Bridge/link"
+    refid "com.google.analytics.v4:Bridge/instance/link"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
@@ -215,7 +217,7 @@ L113:
   end ; trait
   trait method QName(PackageNamespace(""), "addOrganic")
    method
-    refid "com.google.analytics.v4:Bridge/addOrganic"
+    refid "com.google.analytics.v4:Bridge/instance/addOrganic"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
@@ -252,7 +254,7 @@ L113:
   end ; trait
   trait method QName(PackageNamespace(""), "setAllowLinker")
    method
-    refid "com.google.analytics.v4:Bridge/setAllowLinker"
+    refid "com.google.analytics.v4:Bridge/instance/setAllowLinker"
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
     body
@@ -284,7 +286,7 @@ L113:
   end ; trait
   trait method QName(PackageNamespace(""), "getLinkerUrl")
    method
-    refid "com.google.analytics.v4:Bridge/getLinkerUrl"
+    refid "com.google.analytics.v4:Bridge/instance/getLinkerUrl"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "String")
@@ -324,7 +326,7 @@ L113:
   end ; trait
   trait method QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_linkTrackingObject")
    method
-    refid "com.google.analytics.v4:Bridge/_linkTrackingObject"
+    refid "com.google.analytics.v4:Bridge/instance/com.google.analytics.v4:Bridge/_linkTrackingObject"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -349,7 +351,7 @@ L113:
   end ; trait
   trait method QName(PackageNamespace(""), "setClientInfo")
    method
-    refid "com.google.analytics.v4:Bridge/setClientInfo"
+    refid "com.google.analytics.v4:Bridge/instance/setClientInfo"
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
     body
@@ -381,7 +383,7 @@ L113:
   end ; trait
   trait method QName(PackageNamespace(""), "trackTrans")
    method
-    refid "com.google.analytics.v4:Bridge/trackTrans"
+    refid "com.google.analytics.v4:Bridge/instance/trackTrans"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -407,7 +409,7 @@ L113:
   end ; trait
   trait method QName(PackageNamespace(""), "trackEvent")
    method
-    refid "com.google.analytics.v4:Bridge/trackEvent"
+    refid "com.google.analytics.v4:Bridge/instance/trackEvent"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
@@ -574,7 +576,7 @@ L109:
   end ; trait
   trait method QName(PackageNamespace(""), "setCookieTimeout")
    method
-    refid "com.google.analytics.v4:Bridge/setCookieTimeout"
+    refid "com.google.analytics.v4:Bridge/instance/setCookieTimeout"
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace(""), "void")
     body
@@ -606,7 +608,7 @@ L109:
   end ; trait
   trait method QName(PackageNamespace(""), "trackPageview")
    method
-    refid "com.google.analytics.v4:Bridge/trackPageview"
+    refid "com.google.analytics.v4:Bridge/instance/trackPageview"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     flag HAS_OPTIONAL
@@ -640,7 +642,7 @@ L109:
   end ; trait
   trait method QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_checkValidTrackingObject")
    method
-    refid "com.google.analytics.v4:Bridge/_checkValidTrackingObject"
+    refid "com.google.analytics.v4:Bridge/instance/com.google.analytics.v4:Bridge/_checkValidTrackingObject"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "Boolean")
     body
@@ -663,7 +665,7 @@ L109:
   end ; trait
   trait method QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_checkGAJS")
    method
-    refid "com.google.analytics.v4:Bridge/_checkGAJS"
+    refid "com.google.analytics.v4:Bridge/instance/com.google.analytics.v4:Bridge/_checkGAJS"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 2
@@ -684,7 +686,7 @@ L109:
   end ; trait
   trait method QName(PackageNamespace(""), "linkByPost")
    method
-    refid "com.google.analytics.v4:Bridge/linkByPost"
+    refid "com.google.analytics.v4:Bridge/instance/linkByPost"
     param QName(PackageNamespace(""), "Object")
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
@@ -718,7 +720,7 @@ L109:
   end ; trait
   trait method QName(PackageNamespace(""), "getClientInfo")
    method
-    refid "com.google.analytics.v4:Bridge/getClientInfo"
+    refid "com.google.analytics.v4:Bridge/instance/getClientInfo"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 2
@@ -743,7 +745,7 @@ L109:
   end ; trait
   trait method QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_call")
    method
-    refid "com.google.analytics.v4:Bridge/_call"
+    refid "com.google.analytics.v4:Bridge/instance/com.google.analytics.v4:Bridge/_call"
     param QName(PackageNamespace(""), "String")
     flag NEED_REST
     body
@@ -781,7 +783,7 @@ L109:
   end ; trait
   trait method QName(PackageNamespace(""), "hasGAJS")
    method
-    refid "com.google.analytics.v4:Bridge/hasGAJS"
+    refid "com.google.analytics.v4:Bridge/instance/hasGAJS"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 1
@@ -801,7 +803,7 @@ L109:
   end ; trait
   trait method QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_checkTrackingObject")
    method
-    refid "com.google.analytics.v4:Bridge/_checkTrackingObject"
+    refid "com.google.analytics.v4:Bridge/instance/com.google.analytics.v4:Bridge/_checkTrackingObject"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "Boolean")
     body
@@ -843,7 +845,7 @@ L21:
   end ; trait
   trait method QName(PackageNamespace(""), "resetSession")
    method
-    refid "com.google.analytics.v4:Bridge/resetSession"
+    refid "com.google.analytics.v4:Bridge/instance/resetSession"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -865,7 +867,7 @@ L21:
   end ; trait
   trait method QName(PackageNamespace(""), "getDetectTitle")
    method
-    refid "com.google.analytics.v4:Bridge/getDetectTitle"
+    refid "com.google.analytics.v4:Bridge/instance/getDetectTitle"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 2
@@ -890,7 +892,7 @@ L21:
   end ; trait
   trait method QName(PackageNamespace(""), "setCampNameKey")
    method
-    refid "com.google.analytics.v4:Bridge/setCampNameKey"
+    refid "com.google.analytics.v4:Bridge/instance/setCampNameKey"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -922,7 +924,7 @@ L21:
   end ; trait
   trait method QName(PackageNamespace(""), "setDetectFlash")
    method
-    refid "com.google.analytics.v4:Bridge/setDetectFlash"
+    refid "com.google.analytics.v4:Bridge/instance/setDetectFlash"
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
     body
@@ -955,7 +957,7 @@ L21:
   trait slot QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_debug") type QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration") end
   trait method QName(PackageNamespace(""), "createEventTracker")
    method
-    refid "com.google.analytics.v4:Bridge/createEventTracker"
+    refid "com.google.analytics.v4:Bridge/instance/createEventTracker"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace("com.google.analytics.core"), "EventTracker")
     body
@@ -986,7 +988,7 @@ L21:
   end ; trait
   trait method QName(PackageNamespace(""), "addItem")
    method
-    refid "com.google.analytics.v4:Bridge/addItem"
+    refid "com.google.analytics.v4:Bridge/instance/addItem"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
@@ -1036,7 +1038,7 @@ L21:
   end ; trait
   trait method QName(PackageNamespace(""), "clearIgnoredOrganic")
    method
-    refid "com.google.analytics.v4:Bridge/clearIgnoredOrganic"
+    refid "com.google.analytics.v4:Bridge/instance/clearIgnoredOrganic"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -1062,7 +1064,7 @@ L21:
   end ; trait
   trait method QName(PackageNamespace(""), "setVar")
    method
-    refid "com.google.analytics.v4:Bridge/setVar"
+    refid "com.google.analytics.v4:Bridge/instance/setVar"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1095,7 +1097,7 @@ L21:
   trait slot QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_proxy") type QName(PackageNamespace("com.google.analytics.external"), "JavascriptProxy") end
   trait method QName(PackageNamespace(""), "setDomainName")
    method
-    refid "com.google.analytics.v4:Bridge/setDomainName"
+    refid "com.google.analytics.v4:Bridge/instance/setDomainName"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1128,7 +1130,7 @@ L21:
   trait slot QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_jsContainer") type QName(PackageNamespace(""), "String") value Utf8("_GATracker") end
   trait method QName(PackageNamespace(""), "hasTrackingAccount")
    method
-    refid "com.google.analytics.v4:Bridge/hasTrackingAccount"
+    refid "com.google.analytics.v4:Bridge/instance/hasTrackingAccount"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "Boolean")
     body
@@ -1161,7 +1163,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "setCampSourceKey")
    method
-    refid "com.google.analytics.v4:Bridge/setCampSourceKey"
+    refid "com.google.analytics.v4:Bridge/instance/setCampSourceKey"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1194,7 +1196,7 @@ L10:
   trait slot QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_hasGATracker") type QName(PackageNamespace(""), "Boolean") value False() end
   trait method QName(PackageNamespace(""), "addTrans")
    method
-    refid "com.google.analytics.v4:Bridge/addTrans"
+    refid "com.google.analytics.v4:Bridge/instance/addTrans"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "Number")
@@ -1250,7 +1252,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "setCampContentKey")
    method
-    refid "com.google.analytics.v4:Bridge/setCampContentKey"
+    refid "com.google.analytics.v4:Bridge/instance/setCampContentKey"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1282,7 +1284,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "setLocalServerMode")
    method
-    refid "com.google.analytics.v4:Bridge/setLocalServerMode"
+    refid "com.google.analytics.v4:Bridge/instance/setLocalServerMode"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -1308,7 +1310,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "getLocalGifPath")
    method
-    refid "com.google.analytics.v4:Bridge/getLocalGifPath"
+    refid "com.google.analytics.v4:Bridge/instance/getLocalGifPath"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 2
@@ -1333,7 +1335,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "clearIgnoredRef")
    method
-    refid "com.google.analytics.v4:Bridge/clearIgnoredRef"
+    refid "com.google.analytics.v4:Bridge/instance/clearIgnoredRef"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -1359,7 +1361,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "setAllowAnchor")
    method
-    refid "com.google.analytics.v4:Bridge/setAllowAnchor"
+    refid "com.google.analytics.v4:Bridge/instance/setAllowAnchor"
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1391,7 +1393,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "setLocalGifPath")
    method
-    refid "com.google.analytics.v4:Bridge/setLocalGifPath"
+    refid "com.google.analytics.v4:Bridge/instance/setLocalGifPath"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1423,7 +1425,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "getVersion")
    method
-    refid "com.google.analytics.v4:Bridge/getVersion"
+    refid "com.google.analytics.v4:Bridge/instance/getVersion"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 2
@@ -1448,7 +1450,7 @@ L10:
   end ; trait
   trait method QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_injectTrackingObject")
    method
-    refid "com.google.analytics.v4:Bridge/_injectTrackingObject"
+    refid "com.google.analytics.v4:Bridge/instance/com.google.analytics.v4:Bridge/_injectTrackingObject"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -1474,7 +1476,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "setCookiePath")
    method
-    refid "com.google.analytics.v4:Bridge/setCookiePath"
+    refid "com.google.analytics.v4:Bridge/instance/setCookiePath"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1506,7 +1508,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "setSampleRate")
    method
-    refid "com.google.analytics.v4:Bridge/setSampleRate"
+    refid "com.google.analytics.v4:Bridge/instance/setSampleRate"
     param QName(PackageNamespace(""), "Number")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1538,7 +1540,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "setAllowHash")
    method
-    refid "com.google.analytics.v4:Bridge/setAllowHash"
+    refid "com.google.analytics.v4:Bridge/instance/setAllowHash"
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1570,7 +1572,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "addIgnoredOrganic")
    method
-    refid "com.google.analytics.v4:Bridge/addIgnoredOrganic"
+    refid "com.google.analytics.v4:Bridge/instance/addIgnoredOrganic"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1602,7 +1604,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "setCampNOKey")
    method
-    refid "com.google.analytics.v4:Bridge/setCampNOKey"
+    refid "com.google.analytics.v4:Bridge/instance/setCampNOKey"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1634,7 +1636,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "cookiePathCopy")
    method
-    refid "com.google.analytics.v4:Bridge/cookiePathCopy"
+    refid "com.google.analytics.v4:Bridge/instance/cookiePathCopy"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1666,7 +1668,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "setLocalRemoteServerMode")
    method
-    refid "com.google.analytics.v4:Bridge/setLocalRemoteServerMode"
+    refid "com.google.analytics.v4:Bridge/instance/setLocalRemoteServerMode"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -1692,7 +1694,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "getServiceMode")
    method
-    refid "com.google.analytics.v4:Bridge/getServiceMode"
+    refid "com.google.analytics.v4:Bridge/instance/getServiceMode"
     returns QName(PackageNamespace("com.google.analytics.core"), "ServerOperationMode")
     body
      maxstack 2
@@ -1717,7 +1719,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "setDetectTitle")
    method
-    refid "com.google.analytics.v4:Bridge/setDetectTitle"
+    refid "com.google.analytics.v4:Bridge/instance/setDetectTitle"
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1749,7 +1751,7 @@ L10:
   end ; trait
   trait method QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_createTrackingObject")
    method
-    refid "com.google.analytics.v4:Bridge/_createTrackingObject"
+    refid "com.google.analytics.v4:Bridge/instance/com.google.analytics.v4:Bridge/_createTrackingObject"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1773,7 +1775,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "setCampaignTrack")
    method
-    refid "com.google.analytics.v4:Bridge/setCampaignTrack"
+    refid "com.google.analytics.v4:Bridge/instance/setCampaignTrack"
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1805,7 +1807,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "clearOrganic")
    method
-    refid "com.google.analytics.v4:Bridge/clearOrganic"
+    refid "com.google.analytics.v4:Bridge/instance/clearOrganic"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -1831,7 +1833,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "setCampTermKey")
    method
-    refid "com.google.analytics.v4:Bridge/setCampTermKey"
+    refid "com.google.analytics.v4:Bridge/instance/setCampTermKey"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1863,7 +1865,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "getDetectFlash")
    method
-    refid "com.google.analytics.v4:Bridge/getDetectFlash"
+    refid "com.google.analytics.v4:Bridge/instance/getDetectFlash"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 2
@@ -1888,7 +1890,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "setCampMediumKey")
    method
-    refid "com.google.analytics.v4:Bridge/setCampMediumKey"
+    refid "com.google.analytics.v4:Bridge/instance/setCampMediumKey"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1920,7 +1922,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "addIgnoredRef")
    method
-    refid "com.google.analytics.v4:Bridge/addIgnoredRef"
+    refid "com.google.analytics.v4:Bridge/instance/addIgnoredRef"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1953,7 +1955,7 @@ L10:
   trait slot QName(PrivateNamespace("*", "com.google.analytics.v4:Bridge"), "_account") type QName(PackageNamespace(""), "String") end
   trait method QName(PackageNamespace(""), "setSessionTimeout")
    method
-    refid "com.google.analytics.v4:Bridge/setSessionTimeout"
+    refid "com.google.analytics.v4:Bridge/instance/setSessionTimeout"
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1985,7 +1987,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "setRemoteServerMode")
    method
-    refid "com.google.analytics.v4:Bridge/setRemoteServerMode"
+    refid "com.google.analytics.v4:Bridge/instance/setRemoteServerMode"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -2011,7 +2013,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "getAccount")
    method
-    refid "com.google.analytics.v4:Bridge/getAccount"
+    refid "com.google.analytics.v4:Bridge/instance/getAccount"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 2
@@ -2036,7 +2038,7 @@ L10:
   end ; trait
  end ; instance
  cinit
-  refid "com.google.analytics.v4:Bridge/cinit"
+  refid "com.google.analytics.v4:Bridge/class/init"
   body
    maxstack 3
    localcount 1

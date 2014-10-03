@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-0AD")
   iinit
-   refid "com.hurlant.util:Base64/iinit"
+   refid "com.hurlant.util:Base64/instance/init"
    body
     maxstack 2
     localcount 1
@@ -28,7 +28,7 @@ class
   end ; method
  end ; instance
  cinit
-  refid "com.hurlant.util:Base64/cinit"
+  refid "com.hurlant.util:Base64/class/init"
   body
    maxstack 2
    localcount 1
@@ -38,9 +38,9 @@ class
     getlocal0
     pushscope
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.util:Base64#0"), "BASE64_CHARS")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), "BASE64_CHARS")
     pushstring          "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.util:Base64#0"), "BASE64_CHARS")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), "BASE64_CHARS")
 
     findproperty        QName(PackageNamespace(""), "version")
     pushstring          "1.0.0"
@@ -50,11 +50,11 @@ class
    end ; code
   end ; body
  end ; method
- trait const QName(PrivateNamespace("*", "com.hurlant.util:Base64#0"), "BASE64_CHARS") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), "BASE64_CHARS") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=") end
  trait const QName(PackageNamespace(""), "version") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("1.0.0") end
  trait method QName(PackageNamespace(""), "encode") flag FINAL dispid 3
   method
-   refid "com.hurlant.util:Base64/encode"
+   refid "com.hurlant.util:Base64/class/encode"
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace(""), "String")
    body
@@ -85,7 +85,7 @@ class
  end ; trait
  trait method QName(PackageNamespace(""), "encodeByteArray") flag FINAL dispid 4
   method
-   refid "com.hurlant.util:Base64/encodeByteArray"
+   refid "com.hurlant.util:Base64/class/encodeByteArray"
    param QName(PackageNamespace("flash.utils"), "ByteArray")
    returns QName(PackageNamespace(""), "String")
    body
@@ -147,7 +147,7 @@ L34:
      getlocal            5
      getlocal1
      callproperty        QName(PackageNamespace(""), "readUnsignedByte"), 0
-     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
 
      getlocal            5
      increment
@@ -173,55 +173,55 @@ L54:
      pushbyte            0
      getlocal3
      pushbyte            0
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
      pushshort           252
      bitand
      pushbyte            2
      rshift
-     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
 
      getlocal            4
      pushbyte            1
      getlocal3
      pushbyte            0
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
      pushbyte            3
      bitand
      pushbyte            4
      lshift
      getlocal3
      pushbyte            1
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
      pushbyte            4
      rshift
      bitor
-     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
 
      getlocal            4
      pushbyte            2
      getlocal3
      pushbyte            1
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
      pushbyte            15
      bitand
      pushbyte            2
      lshift
      getlocal3
      pushbyte            2
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
      pushbyte            6
      rshift
      bitor
-     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
 
      getlocal            4
      pushbyte            3
      getlocal3
      pushbyte            2
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
      pushbyte            63
      bitand
-     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
 
      getlocal3
      getproperty         QName(PackageNamespace(""), "length")
@@ -237,7 +237,7 @@ L110:
      pushbyte            1
      add
      pushbyte            64
-     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
 
      getlocal            6
      increment
@@ -258,10 +258,10 @@ L121:
 L128:
      label
      getlocal2
-     getlex              QName(PrivateNamespace("*", "com.hurlant.util:Base64#0"), "BASE64_CHARS")
+     getlex              QName(PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), "BASE64_CHARS")
      getlocal            4
      getlocal            7
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
      add
      coerce_s
@@ -292,7 +292,7 @@ L146:
  end ; trait
  trait method QName(PackageNamespace(""), "decode") flag FINAL dispid 5
   method
-   refid "com.hurlant.util:Base64/decode"
+   refid "com.hurlant.util:Base64/class/decode"
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace(""), "String")
    body
@@ -321,7 +321,7 @@ L146:
  end ; trait
  trait method QName(PackageNamespace(""), "decodeToByteArray") flag FINAL dispid 6
   method
-   refid "com.hurlant.util:Base64/decodeToByteArray"
+   refid "com.hurlant.util:Base64/class/decodeToByteArray"
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace("flash.utils"), "ByteArray")
    body
@@ -376,14 +376,14 @@ L31:
      label
      getlocal3
      getlocal            6
-     getlex              QName(PrivateNamespace("*", "com.hurlant.util:Base64#0"), "BASE64_CHARS")
+     getlex              QName(PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), "BASE64_CHARS")
      getlocal1
      getlocal            5
      getlocal            6
      add
      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
-     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
 
      getlocal            6
      increment
@@ -411,52 +411,52 @@ L58:
      pushbyte            0
      getlocal3
      pushbyte            0
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
      pushbyte            2
      lshift
      getlocal3
      pushbyte            1
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
      pushbyte            48
      bitand
      pushbyte            4
      rshift
      add
-     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
 
      getlocal            4
      pushbyte            1
      getlocal3
      pushbyte            1
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
      pushbyte            15
      bitand
      pushbyte            4
      lshift
      getlocal3
      pushbyte            2
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
      pushbyte            60
      bitand
      pushbyte            2
      rshift
      add
-     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
 
      getlocal            4
      pushbyte            2
      getlocal3
      pushbyte            2
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
      pushbyte            3
      bitand
      pushbyte            6
      lshift
      getlocal3
      pushbyte            3
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
      add
-     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
 
      pushbyte            0
      convert_u
@@ -470,7 +470,7 @@ L111:
      getlocal            7
      pushbyte            1
      add
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
      pushbyte            64
      ifne                L120
 
@@ -480,7 +480,7 @@ L120:
      getlocal2
      getlocal            4
      getlocal            7
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
      callpropvoid        QName(PackageNamespace(""), "writeByte"), 1
 
      getlocal            7
@@ -519,7 +519,7 @@ L138:
  end ; trait
  trait method QName(PackageNamespace(""), "decodeToByteArrayB") flag FINAL dispid 7
   method
-   refid "com.hurlant.util:Base64/decodeToByteArrayB"
+   refid "com.hurlant.util:Base64/class/decodeToByteArrayB"
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace("flash.utils"), "ByteArray")
    body
@@ -574,14 +574,14 @@ L31:
      label
      getlocal3
      getlocal            6
-     getlex              QName(PrivateNamespace("*", "com.hurlant.util:Base64#0"), "BASE64_CHARS")
+     getlex              QName(PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), "BASE64_CHARS")
      getlocal1
      getlocal            5
      getlocal            6
      add
      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
-     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
 
      jump                L58
 
@@ -594,19 +594,19 @@ L43:
 
      getlocal3
      getlocal            6
-     getlex              QName(PrivateNamespace("*", "com.hurlant.util:Base64#0"), "BASE64_CHARS")
+     getlex              QName(PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), "BASE64_CHARS")
      getlocal1
      getlocal            5
      getlocal            6
      add
      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
-     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
 
 L58:
      getlocal3
      getlocal            6
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
      pushbyte            0
      lessthan
      dup
@@ -646,52 +646,52 @@ L87:
      pushbyte            0
      getlocal3
      pushbyte            0
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
      pushbyte            2
      lshift
      getlocal3
      pushbyte            1
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
      pushbyte            48
      bitand
      pushbyte            4
      rshift
      add
-     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
 
      getlocal            4
      pushbyte            1
      getlocal3
      pushbyte            1
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
      pushbyte            15
      bitand
      pushbyte            4
      lshift
      getlocal3
      pushbyte            2
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
      pushbyte            60
      bitand
      pushbyte            2
      rshift
      add
-     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
 
      getlocal            4
      pushbyte            2
      getlocal3
      pushbyte            2
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
      pushbyte            3
      bitand
      pushbyte            6
      lshift
      getlocal3
      pushbyte            3
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
      add
-     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
 
      pushbyte            0
      convert_u
@@ -705,7 +705,7 @@ L140:
      getlocal            7
      pushbyte            1
      add
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
      pushbyte            64
      ifne                L149
 
@@ -715,7 +715,7 @@ L149:
      getlocal2
      getlocal            4
      getlocal            7
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Base64/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.util:Base64/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0AD"), StaticProtectedNs("_-0AD")])
      callpropvoid        QName(PackageNamespace(""), "writeByte"), 1
 
      getlocal            7

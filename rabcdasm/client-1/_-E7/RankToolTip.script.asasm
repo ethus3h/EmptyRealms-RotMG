@@ -1,6 +1,6 @@
 script ; 317
  sinit
-  refid "_-E7:RankToolTip.sinit"
+  refid "_-E7:RankToolTip/init"
   body
    maxstack 2
    localcount 1
@@ -43,7 +43,7 @@ script ; 317
     popscope
     initproperty        QName(PackageNamespace("_-E7"), "RankToolTip")
 
-    findpropstrict      Multiname("LegendLine", [PrivateNamespace("*", "_-E7:RankToolTip#1")])
+    findpropstrict      Multiname("LegendLine", [PrivateNamespace("*", "_-E7:RankToolTip")])
     getlex              QName(PackageNamespace(""), "Object")
     pushscope
 
@@ -70,7 +70,7 @@ script ; 317
     popscope
     popscope
     popscope
-    initproperty        QName(PrivateNamespace("*", "_-E7:RankToolTip#1"), "LegendLine")
+    initproperty        QName(PrivateNamespace("*", "_-E7:RankToolTip"), "LegendLine")
 
     returnvoid
    end ; code
@@ -79,7 +79,7 @@ script ; 317
  trait class QName(PackageNamespace("_-E7"), "RankToolTip")
   #include "RankToolTip.class.asasm"
  end ; trait
- trait class QName(PrivateNamespace("*", "_-E7:RankToolTip#1"), "LegendLine")
+ trait class QName(PrivateNamespace("*", "_-E7:RankToolTip"), "LegendLine")
   #include "RankToolTip/LegendLine.class.asasm"
  end ; trait
 end ; script

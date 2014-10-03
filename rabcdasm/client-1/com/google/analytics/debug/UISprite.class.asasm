@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("com.google.analytics.debug:UISprite")
   iinit
-   refid "com.google.analytics.debug:UISprite/iinit"
+   refid "com.google.analytics.debug:UISprite/instance/init"
    param QName(PackageNamespace("flash.display"), "DisplayObject")
    flag HAS_OPTIONAL
    optional Null()
@@ -43,13 +43,13 @@ class
      findpropstrict      QName(PackageNamespace(""), "addEventListener")
      getlex              QName(PackageNamespace("flash.events"), "Event")
      getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
-     getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_onAddedToStage")
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite/instance"), "_onAddedToStage")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
      findpropstrict      QName(PackageNamespace(""), "addEventListener")
      getlex              QName(PackageNamespace("flash.events"), "Event")
      getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
-     getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_onRemovedFromStage")
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite/instance"), "_onRemovedFromStage")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
      returnvoid
@@ -58,7 +58,7 @@ class
   end ; method
   trait getter QName(PackageNamespace(""), "forcedHeight")
    method
-    refid "com.google.analytics.debug:UISprite/forcedHeight/getter"
+    refid "com.google.analytics.debug:UISprite/instance/forcedHeight/getter"
     returns QName(PackageNamespace(""), "uint")
     body
      maxstack 1
@@ -69,10 +69,10 @@ class
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_forcedHeight")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite/instance"), "_forcedHeight")
       iffalse             L6
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_forcedHeight")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite/instance"), "_forcedHeight")
       returnvalue
 
 L6:
@@ -82,9 +82,9 @@ L6:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_onAddedToStage")
+  trait method QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite/instance"), "_onAddedToStage")
    method
-    refid "com.google.analytics.debug:UISprite/_onAddedToStage"
+    refid "com.google.analytics.debug:UISprite/instance/com.google.analytics.debug:UISprite/instance/_onAddedToStage"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -109,7 +109,7 @@ L6:
   end ; trait
   trait method QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "dispose")
    method
-    refid "com.google.analytics.debug:UISprite:dispose"
+    refid "com.google.analytics.debug:UISprite/instance/com.google.analytics.debug:UISprite:dispose"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -158,7 +158,7 @@ L20:
   end ; trait
   trait setter QName(PackageNamespace(""), "forcedHeight")
    method
-    refid "com.google.analytics.debug:UISprite/forcedHeight/setter"
+    refid "com.google.analytics.debug:UISprite/instance/forcedHeight/setter"
     param QName(PackageNamespace(""), "uint")
     returns QName(PackageNamespace(""), "void")
     body
@@ -170,9 +170,9 @@ L20:
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_forcedHeight")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite/instance"), "_forcedHeight")
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_forcedHeight")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite/instance"), "_forcedHeight")
 
       returnvoid
      end ; code
@@ -181,7 +181,7 @@ L20:
   end ; trait
   trait setter QName(PackageNamespace(""), "forcedWidth")
    method
-    refid "com.google.analytics.debug:UISprite/forcedWidth/setter"
+    refid "com.google.analytics.debug:UISprite/instance/forcedWidth/setter"
     param QName(PackageNamespace(""), "uint")
     returns QName(PackageNamespace(""), "void")
     body
@@ -193,9 +193,9 @@ L20:
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_forcedWidth")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite/instance"), "_forcedWidth")
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_forcedWidth")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite/instance"), "_forcedWidth")
 
       returnvoid
      end ; code
@@ -204,7 +204,7 @@ L20:
   end ; trait
   trait method QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "layout")
    method
-    refid "com.google.analytics.debug:UISprite:layout"
+    refid "com.google.analytics.debug:UISprite/instance/com.google.analytics.debug:UISprite:layout"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 1
@@ -222,7 +222,7 @@ L20:
   end ; trait
   trait getter QName(PackageNamespace(""), "forcedWidth")
    method
-    refid "com.google.analytics.debug:UISprite/forcedWidth/getter"
+    refid "com.google.analytics.debug:UISprite/instance/forcedWidth/getter"
     returns QName(PackageNamespace(""), "uint")
     body
      maxstack 1
@@ -233,10 +233,10 @@ L20:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_forcedWidth")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite/instance"), "_forcedWidth")
       iffalse             L6
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_forcedWidth")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite/instance"), "_forcedWidth")
       returnvalue
 
 L6:
@@ -246,10 +246,10 @@ L6:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_forcedWidth") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite/instance"), "_forcedWidth") type QName(PackageNamespace(""), "uint") end
   trait method QName(PackageNamespace(""), "alignTo")
    method
-    refid "com.google.analytics.debug:UISprite/alignTo"
+    refid "com.google.analytics.debug:UISprite/instance/alignTo"
     param QName(PackageNamespace("com.google.analytics.debug"), "Align")
     param QName(PackageNamespace("flash.display"), "DisplayObject")
     returns QName(PackageNamespace(""), "void")
@@ -735,9 +735,9 @@ L345:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_onRemovedFromStage")
+  trait method QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite/instance"), "_onRemovedFromStage")
    method
-    refid "com.google.analytics.debug:UISprite/_onRemovedFromStage"
+    refid "com.google.analytics.debug:UISprite/instance/com.google.analytics.debug:UISprite/instance/_onRemovedFromStage"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -752,13 +752,13 @@ L345:
       findpropstrict      QName(PackageNamespace(""), "removeEventListener")
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_onAddedToStage")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite/instance"), "_onAddedToStage")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
       findpropstrict      QName(PackageNamespace(""), "removeEventListener")
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_onRemovedFromStage")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite/instance"), "_onRemovedFromStage")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
       findpropstrict      QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "dispose")
@@ -771,7 +771,7 @@ L345:
   end ; trait
   trait method QName(PackageNamespace(""), "resize")
    method
-    refid "com.google.analytics.debug:UISprite/resize"
+    refid "com.google.analytics.debug:UISprite/instance/resize"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 3
@@ -802,7 +802,7 @@ L10:
   trait slot QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "alignTarget") type QName(PackageNamespace("flash.display"), "DisplayObject") end
   trait method QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "onResize")
    method
-    refid "com.google.analytics.debug:UISprite:onResize"
+    refid "com.google.analytics.debug:UISprite/instance/com.google.analytics.debug:UISprite:onResize"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -824,10 +824,10 @@ L10:
   end ; trait
   trait slot QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "listenResize") type QName(PackageNamespace(""), "Boolean") end
   trait slot QName(PackageNamespace(""), "alignement") type QName(PackageNamespace("com.google.analytics.debug"), "Align") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite"), "_forcedHeight") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:UISprite/instance"), "_forcedHeight") type QName(PackageNamespace(""), "uint") end
  end ; instance
  cinit
-  refid "com.google.analytics.debug:UISprite/cinit"
+  refid "com.google.analytics.debug:UISprite/class/init"
   body
    maxstack 1
    localcount 1

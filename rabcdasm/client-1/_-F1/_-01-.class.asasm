@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-9t")
   iinit
-   refid "_-F1:_-01-/iinit"
+   refid "_-F1:_-01-/instance/init"
    body
     maxstack 4
     localcount 3
@@ -34,16 +34,16 @@ class
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-F1:_-01-"), "_-045") type QName(PackageNamespace("_-F1"), "_-Ho") end
-  trait slot QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Sw") type QName(PackageNamespace("com.company.ui"), "SimpleText") end
-  trait slot QName(PrivateNamespace("*", "_-F1:_-01-"), "_-dL") type QName(PackageNamespace("flash.display"), "Shape") end
-  trait slot QName(PrivateNamespace("*", "_-F1:_-01-"), "_-cc") type QName(PackageNamespace("flash.display"), "Sprite") end
-  trait slot QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Id") type QName(PackageNamespace("_-F1"), "_-0ML") end
-  trait slot QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Ek") type QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-0KB") end
+  trait slot QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-045") type QName(PackageNamespace("_-F1"), "_-Ho") end
+  trait slot QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Sw") type QName(PackageNamespace("com.company.ui"), "SimpleText") end
+  trait slot QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-dL") type QName(PackageNamespace("flash.display"), "Shape") end
+  trait slot QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-cc") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Id") type QName(PackageNamespace("_-F1"), "_-0ML") end
+  trait slot QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Ek") type QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-0KB") end
   trait slot QName(PackageNamespace(""), "_-4s") type QName(PackageNamespace("_-sp"), "_-aJ") end
-  trait method QName(PrivateNamespace("*", "_-F1:_-01-"), "_-AE")
+  trait method QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-AE")
    method
-    refid "_-F1:_-01-/_-AE"
+    refid "_-F1:_-01-/instance/_-F1:_-01-/instance/_-AE"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -56,13 +56,13 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Id")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Id")
       pushbyte            8
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Ek")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Ek")
       callproperty        QName(PackageNamespace(""), "_-QD"), 0
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Id")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Id")
       getproperty         QName(PackageNamespace(""), "height")
       pushshort           400
       subtract
@@ -77,7 +77,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "initialize") flag OVERRIDE
    method
-    refid "_-F1:_-01-/initialize"
+    refid "_-F1:_-01-/instance/initialize"
     param QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0KR")
     returns QName(PackageNamespace(""), "void")
     body
@@ -101,24 +101,24 @@ class
       dup
       pushstring          "Myriad Pro"
       constructprop       QName(PackageNamespace("com.company.ui"), "SimpleText"), 6
-      initproperty        QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Sw")
+      initproperty        QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Sw")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Sw")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Sw")
       pushtrue
       callpropvoid        QName(PackageNamespace(""), "_-8Y"), 1
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Sw")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Sw")
       pushstring          "Select Server"
       setproperty         QName(PackageNamespace(""), "text")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Sw")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Sw")
       callpropvoid        QName(PackageNamespace(""), "updateMetrics"), 0
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Sw")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Sw")
       findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
       pushbyte            0
       dup
@@ -131,42 +131,42 @@ class
       setproperty         QName(PackageNamespace(""), "filters")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Sw")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Sw")
       pushbyte            18
       setproperty         QName(PackageNamespace(""), "x")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Sw")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Sw")
       pushbyte            72
       setproperty         QName(PackageNamespace(""), "y")
 
       findpropstrict      QName(PackageNamespace(""), "addChild")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Sw")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Sw")
       callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
       getlocal0
       findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
       constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
-      initproperty        QName(PrivateNamespace("*", "_-F1:_-01-"), "_-dL")
+      initproperty        QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-dL")
 
       findpropstrict      QName(PackageNamespace(""), "addChild")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-dL")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-dL")
       callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
       getlocal0
       findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
       constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
-      initproperty        QName(PrivateNamespace("*", "_-F1:_-01-"), "_-cc")
+      initproperty        QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-cc")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-cc")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-cc")
       pushbyte            4
       setproperty         QName(PackageNamespace(""), "x")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-cc")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-cc")
       pushbyte            100
       setproperty         QName(PackageNamespace(""), "y")
 
@@ -193,18 +193,18 @@ class
       callpropvoid        QName(PackageNamespace(""), "endFill"), 0
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-cc")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-cc")
       getlocal2
       callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-cc")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-cc")
       getlocal2
       setproperty         QName(PackageNamespace(""), "mask")
 
       findpropstrict      QName(PackageNamespace(""), "addChild")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-cc")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-cc")
       callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
       getlocal0
@@ -212,29 +212,29 @@ class
       getlocal1
       getproperty         QName(PackageNamespace(""), "servers_")
       constructprop       QName(PackageNamespace("_-F1"), "_-0ML"), 1
-      initproperty        QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Id")
+      initproperty        QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Id")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Id")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Id")
       pushbyte            8
       setproperty         QName(PackageNamespace(""), "y")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Id")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Id")
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "COMPLETE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-FH")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-FH")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-cc")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-cc")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Id")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Id")
       callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Id")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Id")
       getproperty         QName(PackageNamespace(""), "height")
       pushshort           400
       ifngt               L165
@@ -244,13 +244,13 @@ class
       pushbyte            16
       pushshort           400
       constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-0KB"), 2
-      initproperty        QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Ek")
+      initproperty        QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Ek")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Ek")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Ek")
       pushshort           800
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Ek")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Ek")
       getproperty         QName(PackageNamespace(""), "width")
       subtract
       pushbyte            4
@@ -258,29 +258,29 @@ class
       setproperty         QName(PackageNamespace(""), "x")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Ek")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Ek")
       pushbyte            104
       setproperty         QName(PackageNamespace(""), "y")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Ek")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Ek")
       pushshort           400
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Id")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Id")
       getproperty         QName(PackageNamespace(""), "height")
       callpropvoid        QName(PackageNamespace(""), "_-fA"), 2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Ek")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Ek")
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "CHANGE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-AE")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-AE")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       findpropstrict      QName(PackageNamespace(""), "addChild")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-Ek")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-Ek")
       callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
 L165:
@@ -295,23 +295,23 @@ L165:
       pushbyte            36
       pushfalse
       constructprop       QName(PackageNamespace("_-F1"), "_-Ho"), 3
-      initproperty        QName(PrivateNamespace("*", "_-F1:_-01-"), "_-045")
+      initproperty        QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-045")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-045")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-045")
       getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
       getproperty         QName(PackageNamespace(""), "CLICK")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-FH")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-FH")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       findpropstrict      QName(PackageNamespace(""), "addChild")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-045")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-045")
       callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-dL")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-dL")
       getproperty         QName(PackageNamespace(""), "graphics")
       coerce              QName(PackageNamespace("flash.display"), "Graphics")
       setlocal3
@@ -339,13 +339,13 @@ L165:
       callpropvoid        QName(PackageNamespace(""), "lineStyle"), 0
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-045")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-045")
       getlex              QName(PackageNamespace(""), "stage")
       getproperty         QName(PackageNamespace(""), "stageWidth")
       pushbyte            2
       divide
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-045")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-045")
       getproperty         QName(PackageNamespace(""), "width")
       pushbyte            2
       divide
@@ -353,7 +353,7 @@ L165:
       setproperty         QName(PackageNamespace(""), "x")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-"), "_-045")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-045")
       pushshort           524
       setproperty         QName(PackageNamespace(""), "y")
 
@@ -367,9 +367,9 @@ L165:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-F1:_-01-"), "_-FH")
+  trait method QName(PrivateNamespace("*", "_-F1:_-01-/instance"), "_-FH")
    method
-    refid "_-F1:_-01-/_-FH"
+    refid "_-F1:_-01-/instance/_-F1:_-01-/instance/_-FH"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -392,7 +392,7 @@ L165:
   end ; trait
  end ; instance
  cinit
-  refid "_-F1:_-01-/cinit"
+  refid "_-F1:_-01-/class/init"
   body
    maxstack 3
    localcount 1

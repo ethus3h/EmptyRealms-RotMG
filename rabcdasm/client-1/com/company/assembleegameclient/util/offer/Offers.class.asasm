@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-01K")
   iinit
-   refid "com.company.assembleegameclient.util.offer:Offers/iinit"
+   refid "com.company.assembleegameclient.util.offer:Offers/instance/init"
    param QName(PackageNamespace(""), "XML")
    body
     maxstack 2
@@ -22,17 +22,17 @@ class
 
      getlocal0
      getlocal1
-     getproperty         Multiname("Tok", [PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
+     getproperty         Multiname("Tok", [PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers/instance"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
      initproperty        QName(PackageNamespace(""), "tok")
 
      getlocal0
      getlocal1
-     getproperty         Multiname("Exp", [PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
+     getproperty         Multiname("Exp", [PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers/instance"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
      initproperty        QName(PackageNamespace(""), "exp")
 
      getlocal0
      getlocal1
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), "makeOffers"), 1
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), "makeOffers"), 1
 
      returnvoid
     end ; code
@@ -41,9 +41,9 @@ class
   trait slot QName(PackageNamespace(""), "tok") type QName(PackageNamespace(""), "String") end
   trait slot QName(PackageNamespace(""), "exp") type QName(PackageNamespace(""), "String") end
   trait slot QName(PackageNamespace(""), "offerList") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("com.company.assembleegameclient.util.offer"), "Offer")>) end
-  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), "makeOffers")
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), "makeOffers")
    method
-    refid "com.company.assembleegameclient.util.offer:Offers/makeOffers"
+    refid "com.company.assembleegameclient.util.offer:Offers/instance/com.company.assembleegameclient.util.offer:Offers/makeOffers"
     param QName(PackageNamespace(""), "XML")
     returns QName(PackageNamespace(""), "void")
     body
@@ -57,28 +57,28 @@ class
 
       getlocal0
       getlocal1
-      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), "makeOfferList"), 1
+      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), "makeOfferList"), 1
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), "sortOfferList"), 0
+      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), "sortOfferList"), 0
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), "defineBonuses"), 0
+      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), "defineBonuses"), 0
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), "defineMostPopularTagline"), 0
+      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), "defineMostPopularTagline"), 0
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), "defineBestDealTagline"), 0
+      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), "defineBestDealTagline"), 0
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), "makeOfferList")
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), "makeOfferList")
    method
-    refid "com.company.assembleegameclient.util.offer:Offers/makeOfferList"
+    refid "com.company.assembleegameclient.util.offer:Offers/instance/com.company.assembleegameclient.util.offer:Offers/makeOfferList"
     param QName(PackageNamespace(""), "XML")
     returns QName(PackageNamespace(""), "void")
     body
@@ -96,7 +96,7 @@ class
 
       getlocal0
       findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
-      getproperty         Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K"), PackageNamespace("__AS3__.vec")])
+      getproperty         Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers/instance"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K"), PackageNamespace("__AS3__.vec")])
       getlex              QName(PackageNamespace("com.company.assembleegameclient.util.offer"), "Offer")
       applytype           1
       pushbyte            0
@@ -107,7 +107,7 @@ class
       setlocal3
 
       getlocal1
-      getproperty         Multiname("Offer", [PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
+      getproperty         Multiname("Offer", [PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers/instance"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
       coerce_a
       setlocal            4
 
@@ -125,7 +125,7 @@ L20:
       getproperty         QName(PackageNamespace(""), "offerList")
       getlocal0
       getlocal2
-      callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), "makeOffer"), 1
+      callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), "makeOffer"), 1
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
 L32:
@@ -139,9 +139,9 @@ L32:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), "makeOffer")
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), "makeOffer")
    method
-    refid "com.company.assembleegameclient.util.offer:Offers/makeOffer"
+    refid "com.company.assembleegameclient.util.offer:Offers/instance/com.company.assembleegameclient.util.offer:Offers/makeOffer"
     param QName(PackageNamespace(""), "XML")
     returns QName(PackageNamespace("com.company.assembleegameclient.util.offer"), "Offer")
     body
@@ -154,41 +154,41 @@ L32:
       pushscope
 
       getlocal1
-      getproperty         Multiname("Id", [PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
+      getproperty         Multiname("Id", [PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers/instance"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
       coerce_s
       setlocal2
 
       findpropstrict      QName(PackageNamespace(""), "Number")
       getlocal1
-      getproperty         Multiname("Price", [PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
+      getproperty         Multiname("Price", [PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers/instance"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
       callproperty        QName(PackageNamespace(""), "Number"), 1
       convert_d
       setlocal3
 
       findpropstrict      QName(PackageNamespace(""), "int")
       getlocal1
-      getproperty         Multiname("RealmGold", [PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
+      getproperty         Multiname("RealmGold", [PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers/instance"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
       callproperty        QName(PackageNamespace(""), "int"), 1
       convert_i
       setlocal            4
 
       getlocal1
-      getproperty         Multiname("CheckoutJWT", [PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
+      getproperty         Multiname("CheckoutJWT", [PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers/instance"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
       coerce_s
       setlocal            5
 
       getlocal1
-      getproperty         Multiname("Data", [PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
+      getproperty         Multiname("Data", [PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers/instance"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
       coerce_s
       setlocal            6
 
       getlocal1
       pushstring          "Currency"
-      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")]), 1
+      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers/instance"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")]), 1
       iffalse             L34
 
       getlocal1
-      getproperty         Multiname("Currency", [PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
+      getproperty         Multiname("Currency", [PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers/instance"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
       coerce_s
       jump                L36
 
@@ -212,9 +212,9 @@ L36:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), "sortOfferList")
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), "sortOfferList")
    method
-    refid "com.company.assembleegameclient.util.offer:Offers/sortOfferList"
+    refid "com.company.assembleegameclient.util.offer:Offers/instance/com.company.assembleegameclient.util.offer:Offers/sortOfferList"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -228,7 +228,7 @@ L36:
       getlocal0
       getproperty         QName(PackageNamespace(""), "offerList")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), "sortOffers")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), "sortOffers")
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "sort"), 1
 
       returnvoid
@@ -236,9 +236,9 @@ L36:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), "defineBonuses")
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), "defineBonuses")
    method
-    refid "com.company.assembleegameclient.util.offer:Offers/defineBonuses"
+    refid "com.company.assembleegameclient.util.offer:Offers/instance/com.company.assembleegameclient.util.offer:Offers/defineBonuses"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 3
@@ -264,7 +264,7 @@ L36:
       getlocal0
       getproperty         QName(PackageNamespace(""), "offerList")
       pushbyte            0
-      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers/instance"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
       getproperty         QName(PackageNamespace(""), "realmGold_")
       convert_i
       setlocal1
@@ -272,7 +272,7 @@ L36:
       getlocal0
       getproperty         QName(PackageNamespace(""), "offerList")
       pushbyte            0
-      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers/instance"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
       getproperty         QName(PackageNamespace(""), "price_")
       convert_i
       setlocal2
@@ -293,7 +293,7 @@ L32:
       getlocal0
       getproperty         QName(PackageNamespace(""), "offerList")
       getlocal            4
-      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers/instance"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
       getproperty         QName(PackageNamespace(""), "realmGold_")
       convert_i
       setlocal            5
@@ -301,7 +301,7 @@ L32:
       getlocal0
       getproperty         QName(PackageNamespace(""), "offerList")
       getlocal            4
-      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers/instance"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
       getproperty         QName(PackageNamespace(""), "price_")
       convert_i
       dup
@@ -321,7 +321,7 @@ L32:
       getlocal0
       getproperty         QName(PackageNamespace(""), "offerList")
       getlocal            4
-      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers/instance"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
       getlocal            8
       getlocal            6
       divide
@@ -340,9 +340,9 @@ L66:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), "sortOffers")
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), "sortOffers")
    method
-    refid "com.company.assembleegameclient.util.offer:Offers/sortOffers"
+    refid "com.company.assembleegameclient.util.offer:Offers/instance/com.company.assembleegameclient.util.offer:Offers/sortOffers"
     param QName(PackageNamespace("com.company.assembleegameclient.util.offer"), "Offer")
     param QName(PackageNamespace("com.company.assembleegameclient.util.offer"), "Offer")
     returns QName(PackageNamespace(""), "int")
@@ -365,9 +365,9 @@ L66:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), "defineMostPopularTagline")
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), "defineMostPopularTagline")
    method
-    refid "com.company.assembleegameclient.util.offer:Offers/defineMostPopularTagline"
+    refid "com.company.assembleegameclient.util.offer:Offers/instance/com.company.assembleegameclient.util.offer:Offers/defineMostPopularTagline"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -406,7 +406,7 @@ L12:
       ifne                L25
 
       getlocal1
-      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), "MOST_POPULAR")
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), "MOST_POPULAR")
       setproperty         QName(PackageNamespace(""), "tagline")
 
 L25:
@@ -420,9 +420,9 @@ L25:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), "defineBestDealTagline")
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), "defineBestDealTagline")
    method
-    refid "com.company.assembleegameclient.util.offer:Offers/defineBestDealTagline"
+    refid "com.company.assembleegameclient.util.offer:Offers/instance/com.company.assembleegameclient.util.offer:Offers/defineBestDealTagline"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 3
@@ -439,8 +439,8 @@ L25:
       getproperty         QName(PackageNamespace(""), "offerList")
       getproperty         QName(PackageNamespace(""), "length")
       decrement
-      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
-      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), "BEST_DEAL")
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers/instance"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util.offer"), PackageInternalNs("com.company.assembleegameclient.util.offer"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01K"), StaticProtectedNs("_-01K")])
+      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), "BEST_DEAL")
       setproperty         QName(PackageNamespace(""), "tagline")
 
       returnvoid
@@ -450,7 +450,7 @@ L25:
   end ; trait
  end ; instance
  cinit
-  refid "com.company.assembleegameclient.util.offer:Offers/cinit"
+  refid "com.company.assembleegameclient.util.offer:Offers/class/init"
   body
    maxstack 2
    localcount 1
@@ -460,18 +460,18 @@ L25:
     getlocal0
     pushscope
 
-    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), "BEST_DEAL")
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), "BEST_DEAL")
     pushstring          "(Best deal)"
-    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), "BEST_DEAL")
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), "BEST_DEAL")
 
-    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), "MOST_POPULAR")
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), "MOST_POPULAR")
     pushstring          "(Most popular)"
-    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), "MOST_POPULAR")
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), "MOST_POPULAR")
 
     returnvoid
    end ; code
   end ; body
  end ; method
- trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), "BEST_DEAL") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("(Best deal)") end
- trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers#0"), "MOST_POPULAR") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("(Most popular)") end
+ trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), "BEST_DEAL") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("(Best deal)") end
+ trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.util.offer:Offers"), "MOST_POPULAR") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("(Most popular)") end
 end ; class

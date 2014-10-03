@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-Lg")
   iinit
-   refid "_-4X:_-03L/iinit"
+   refid "_-4X:_-03L/instance/init"
    param QName(PackageNamespace("_-sp"), "_-aJ")
    flag NEED_REST
    body
@@ -23,21 +23,21 @@ class
 
      getlocal0
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "_-4X:_-03L"), "_-xA")
+     initproperty        QName(PrivateNamespace("*", "_-4X:_-03L/instance"), "_-xA")
 
      getlocal0
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "_-4X:_-03L"), "_-5g")
+     initproperty        QName(PrivateNamespace("*", "_-4X:_-03L/instance"), "_-5g")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-4X:_-03L"), "_-xA") type QName(PackageNamespace("_-sp"), "_-aJ") end
-  trait slot QName(PrivateNamespace("*", "_-4X:_-03L"), "_-5g") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("*", "_-4X:_-03L/instance"), "_-xA") type QName(PackageNamespace("_-sp"), "_-aJ") end
+  trait slot QName(PrivateNamespace("*", "_-4X:_-03L/instance"), "_-5g") type QName(PackageNamespace(""), "Array") end
   trait method QName(ProtectedNamespace("_-Lg"), "startTask") flag OVERRIDE
    method
-    refid "_-4X:_-03L/_-Lg:startTask"
+    refid "_-4X:_-03L/instance/_-Lg:startTask"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 5
@@ -49,11 +49,11 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-03L"), "_-xA")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-03L/instance"), "_-xA")
       getproperty         QName(PackageNamespace(""), "dispatch")
       pushnull
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-03L"), "_-5g")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-03L/instance"), "_-5g")
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "apply"), 2
 
       findpropstrict      QName(ProtectedNamespace("_-01A"), "_-Ct")
@@ -67,7 +67,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-4X:_-03L/cinit"
+  refid "_-4X:_-03L/class/init"
   body
    maxstack 3
    localcount 1

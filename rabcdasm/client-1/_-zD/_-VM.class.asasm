@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-ku")
   iinit
-   refid "_-zD:_-VM/iinit"
+   refid "_-zD:_-VM/instance/init"
    body
     maxstack 3
     localcount 3
@@ -49,7 +49,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "initialize") flag OVERRIDE
    method
-    refid "_-zD:_-VM/initialize"
+    refid "_-zD:_-VM/instance/initialize"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -64,14 +64,14 @@ class
       getproperty         QName(PackageNamespace(""), "view")
       getproperty         QName(PackageNamespace(""), "tooltip")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-zD:_-VM"), "_-YY")
+      getproperty         QName(PrivateNamespace("*", "_-zD:_-VM/instance"), "_-YY")
       callpropvoid        QName(PackageNamespace(""), "add"), 1
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "view")
       getproperty         QName(PackageNamespace(""), "_-03I")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-zD:_-VM"), "_-CR")
+      getproperty         QName(PrivateNamespace("*", "_-zD:_-VM/instance"), "_-CR")
       callpropvoid        QName(PackageNamespace(""), "add"), 1
 
       returnvoid
@@ -81,7 +81,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "destroy") flag OVERRIDE
    method
-    refid "_-zD:_-VM/destroy"
+    refid "_-zD:_-VM/instance/destroy"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -96,14 +96,14 @@ class
       getproperty         QName(PackageNamespace(""), "view")
       getproperty         QName(PackageNamespace(""), "tooltip")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-zD:_-VM"), "_-YY")
+      getproperty         QName(PrivateNamespace("*", "_-zD:_-VM/instance"), "_-YY")
       callpropvoid        QName(PackageNamespace(""), "remove"), 1
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "view")
       getproperty         QName(PackageNamespace(""), "_-03I")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-zD:_-VM"), "_-CR")
+      getproperty         QName(PrivateNamespace("*", "_-zD:_-VM/instance"), "_-CR")
       callpropvoid        QName(PackageNamespace(""), "remove"), 1
 
       getlocal0
@@ -119,9 +119,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-zD:_-VM"), "_-YY")
+  trait method QName(PrivateNamespace("*", "_-zD:_-VM/instance"), "_-YY")
    method
-    refid "_-zD:_-VM/_-YY"
+    refid "_-zD:_-VM/instance/_-zD:_-VM/instance/_-YY"
     param QName(PackageNamespace("_-E7"), "for ")
     returns QName(PackageNamespace(""), "void")
     body
@@ -143,9 +143,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-zD:_-VM"), "_-CR")
+  trait method QName(PrivateNamespace("*", "_-zD:_-VM/instance"), "_-CR")
    method
-    refid "_-zD:_-VM/_-CR"
+    refid "_-zD:_-VM/instance/_-zD:_-VM/instance/_-CR"
     param QName(PackageNamespace(""), "Class")
     returns QName(PackageNamespace(""), "void")
     body
@@ -184,7 +184,7 @@ L7:
   end ; trait
  end ; instance
  cinit
-  refid "_-zD:_-VM/cinit"
+  refid "_-zD:_-VM/class/init"
   body
    maxstack 3
    localcount 1

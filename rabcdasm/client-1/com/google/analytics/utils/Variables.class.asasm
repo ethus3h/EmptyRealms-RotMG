@@ -5,7 +5,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("com.google.analytics.utils:Variables")
   iinit
-   refid "com.google.analytics.utils:Variables/iinit"
+   refid "com.google.analytics.utils:Variables/instance/init"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "Array")
    param QName(PackageNamespace(""), "Array")
@@ -64,9 +64,9 @@ L25:
   trait slot QName(PackageNamespace(""), "post") type QName(PackageNamespace(""), "Array") end
   trait slot QName(PackageNamespace(""), "URIencode") type QName(PackageNamespace(""), "Boolean") end
   trait slot QName(PackageNamespace(""), "pre") type QName(PackageNamespace(""), "Array") end
-  trait method QName(PrivateNamespace("*", "com.google.analytics.utils:Variables#0"), "_join")
+  trait method QName(PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#0"), "_join")
    method
-    refid "com.google.analytics.utils:Variables/_join"
+    refid "com.google.analytics.utils:Variables/instance/com.google.analytics.utils:Variables/instance/_join"
     param QName(PackageNamespace("com.google.analytics.utils"), "Variables")
     returns QName(PackageNamespace(""), "void")
     body
@@ -109,8 +109,8 @@ L14:
       getlocal2
       getlocal1
       getlocal2
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
-      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
 
 L26:
       hasnext2            4, 3
@@ -125,7 +125,7 @@ L26:
   end ; trait
   trait method QName(PackageNamespace(""), "join")
    method
-    refid "com.google.analytics.utils:Variables/join"
+    refid "com.google.analytics.utils:Variables/instance/join"
     returns QName(PackageNamespace(""), "void")
     flag NEED_REST
     body
@@ -151,7 +151,7 @@ L9:
       label
       getlocal1
       getlocal3
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
       getlex              QName(PackageNamespace("com.google.analytics.utils"), "Variables")
       istypelate
       iftrue              L17
@@ -159,11 +159,11 @@ L9:
       jump                L22
 
 L17:
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.utils:Variables#0"), "_join")
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#0"), "_join")
       getlocal1
       getlocal3
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.utils:Variables#0"), "_join"), 1
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#0"), "_join"), 1
 
 L22:
       inclocal_i          3
@@ -179,7 +179,7 @@ L23:
   end ; trait
   trait method QName(PackageNamespace(""), "toString")
    method
-    refid "com.google.analytics.utils:Variables/toString"
+    refid "com.google.analytics.utils:Variables/instance/toString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 4
@@ -239,7 +239,7 @@ L30:
 
       getlocal0
       getlocal3
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
       coerce_s
       setlocal2
 
@@ -291,7 +291,7 @@ L72:
       label
       getlex              QName(PackageNamespace(""), "pre")
       getlocal            5
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
       coerce_s
       setlocal            7
 
@@ -304,7 +304,7 @@ L81:
       label
       getlocal1
       getlocal            6
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
       coerce_s
       dup
       setlocal            4
@@ -320,7 +320,7 @@ L81:
       pushbyte            1
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
       pushbyte            0
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "unshift"), 1
 
 L100:
@@ -356,7 +356,7 @@ L119:
       label
       getlex              QName(PackageNamespace(""), "post")
       getlocal            5
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
       coerce_s
       setlocal            8
 
@@ -369,7 +369,7 @@ L128:
       label
       getlocal1
       getlocal            6
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
       coerce_s
       dup
       setlocal            4
@@ -385,7 +385,7 @@ L128:
       pushbyte            1
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
       pushbyte            0
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
 L147:
@@ -414,7 +414,7 @@ L157:
   end ; trait
   trait method QName(PackageNamespace(""), "decode")
    method
-    refid "com.google.analytics.utils:Variables/decode"
+    refid "com.google.analytics.utils:Variables/instance/decode"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -498,7 +498,7 @@ L51:
       label
       getlocal2
       getlocal            7
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
       coerce_s
       setlocal3
 
@@ -516,14 +516,14 @@ L51:
       setlocal            6
 
       pushbyte            0
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
       coerce_s
       setlocal            4
 
       findpropstrict      QName(PackageNamespace(""), "decodeURI")
       getlocal            6
       pushbyte            1
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
       callproperty        QName(PackageNamespace(""), "decodeURI"), 1
       coerce_s
       setlocal            5
@@ -531,7 +531,7 @@ L51:
       getlocal0
       getlocal            4
       getlocal            5
-      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
 
 L83:
       inclocal_i          7
@@ -548,7 +548,7 @@ L84:
   end ; trait
   trait method QName(PackageNamespace(""), "toURLVariables")
    method
-    refid "com.google.analytics.utils:Variables/toURLVariables"
+    refid "com.google.analytics.utils:Variables/instance/toURLVariables"
     returns QName(PackageNamespace("flash.net"), "URLVariables")
     body
      maxstack 4
@@ -589,8 +589,8 @@ L15:
       getlocal2
       getlocal0
       getlocal2
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
-      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#0"), PrivateNamespace("*", "com.google.analytics.utils:Variables/instance#1"), PackageNamespace(""), PackageNamespace("com.google.analytics.utils"), PackageInternalNs("com.google.analytics.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.utils:Variables"), StaticProtectedNs("com.google.analytics.utils:Variables"), StaticProtectedNs("Object")])
 
 L27:
       hasnext2            4, 3
@@ -607,7 +607,7 @@ L27:
   trait slot QName(PackageNamespace(""), "sort") type QName(PackageNamespace(""), "Boolean") value True() end
  end ; instance
  cinit
-  refid "com.google.analytics.utils:Variables/cinit"
+  refid "com.google.analytics.utils:Variables/class/init"
   body
    maxstack 1
    localcount 1

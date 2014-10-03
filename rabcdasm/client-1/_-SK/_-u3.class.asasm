@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-cD")
   iinit
-   refid "_-SK:_-u3/iinit"
+   refid "_-SK:_-u3/instance/init"
    param QName(PackageNamespace("flash.events"), "IEventDispatcher")
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "Class")
@@ -36,10 +36,10 @@ class
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-SK:_-u3#0"), "_-I") type QName(PackageNamespace(""), "Function") value Null() end
+  trait slot QName(PrivateNamespace("*", "_-SK:_-u3/instance#0"), "_-I") type QName(PackageNamespace(""), "Function") value Null() end
   trait getter QName(ProtectedNamespace("_-cD"), "_-oS")
    method
-    refid "_-SK:_-u3/_-cD:_-oS/getter"
+    refid "_-SK:_-u3/instance/_-cD:_-oS/getter"
     returns QName(PackageNamespace(""), "Function")
     body
      maxstack 3
@@ -51,7 +51,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-SK:_-u3#0"), "_-I")
+      getproperty         QName(PrivateNamespace("*", "_-SK:_-u3/instance#0"), "_-I")
       returnvalue
      end ; code
     end ; body
@@ -59,7 +59,7 @@ class
   end ; trait
   trait getter QName(PackageNamespace(""), "eventClass") flag OVERRIDE
    method
-    refid "_-SK:_-u3/eventClass/getter"
+    refid "_-SK:_-u3/instance/eventClass/getter"
     returns QName(PackageNamespace(""), "Class")
     body
      maxstack 3
@@ -78,7 +78,7 @@ class
   end ; trait
   trait setter QName(PackageNamespace(""), "eventClass") flag OVERRIDE
    method
-    refid "_-SK:_-u3/eventClass/setter"
+    refid "_-SK:_-u3/instance/eventClass/setter"
     param QName(PackageNamespace(""), "Class")
     returns QName(PackageNamespace(""), "void")
     body
@@ -101,7 +101,7 @@ class
   end ; trait
   trait setter QName(PackageNamespace(""), "valueClasses") flag OVERRIDE
    method
-    refid "_-SK:_-u3/valueClasses/setter"
+    refid "_-SK:_-u3/instance/valueClasses/setter"
     param QName(PackageNamespace(""), "Array")
     returns QName(PackageNamespace(""), "void")
     body
@@ -139,7 +139,7 @@ L17:
       label
       getlex              QName(ProtectedNamespace("_-0LH"), "_-wU")
       getlocal2
-      getproperty         MultinameL([PrivateNamespace("*", "_-SK:_-u3#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-SK:_-u3#1"), PackageNamespace("_-SK"), PackageInternalNs("_-SK"), ProtectedNamespace("_-cD"), StaticProtectedNs("_-cD"), StaticProtectedNs("_-076"), StaticProtectedNs("_-0-A"), StaticProtectedNs("_-0LH")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-SK:_-u3/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-SK:_-u3/instance#1"), PackageNamespace("_-SK"), PackageInternalNs("_-SK"), ProtectedNamespace("_-cD"), StaticProtectedNs("_-cD"), StaticProtectedNs("_-076"), StaticProtectedNs("_-0-A"), StaticProtectedNs("_-0LH")])
       getlex              QName(PackageNamespace(""), "Class")
       istypelate
       iftrue              L46
@@ -154,18 +154,19 @@ L17:
       add
       getlex              QName(ProtectedNamespace("_-0LH"), "_-wU")
       getlocal2
-      getproperty         MultinameL([PrivateNamespace("*", "_-SK:_-u3#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-SK:_-u3#1"), PackageNamespace("_-SK"), PackageInternalNs("_-SK"), ProtectedNamespace("_-cD"), StaticProtectedNs("_-cD"), StaticProtectedNs("_-076"), StaticProtectedNs("_-0-A"), StaticProtectedNs("_-0LH")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-SK:_-u3/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-SK:_-u3/instance#1"), PackageNamespace("_-SK"), PackageInternalNs("_-SK"), ProtectedNamespace("_-cD"), StaticProtectedNs("_-cD"), StaticProtectedNs("_-076"), StaticProtectedNs("_-0-A"), StaticProtectedNs("_-0LH")])
       add
       pushstring          ">."
       add
       findpropstrict      QName(PackageNamespace("flash.utils"), "getQualifiedClassName")
       getlex              QName(ProtectedNamespace("_-0LH"), "_-wU")
       getlocal2
-      getproperty         MultinameL([PrivateNamespace("*", "_-SK:_-u3#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-SK:_-u3#1"), PackageNamespace("_-SK"), PackageInternalNs("_-SK"), ProtectedNamespace("_-cD"), StaticProtectedNs("_-cD"), StaticProtectedNs("_-076"), StaticProtectedNs("_-0-A"), StaticProtectedNs("_-0LH")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-SK:_-u3/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-SK:_-u3/instance#1"), PackageNamespace("_-SK"), PackageInternalNs("_-SK"), ProtectedNamespace("_-cD"), StaticProtectedNs("_-cD"), StaticProtectedNs("_-076"), StaticProtectedNs("_-0-A"), StaticProtectedNs("_-0LH")])
       callproperty        QName(PackageNamespace("flash.utils"), "getQualifiedClassName"), 1
       add
       constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
       throw
+
 L46:
       getlocal2
       dup
@@ -181,7 +182,7 @@ L46:
   end ; trait
   trait method QName(PackageNamespace(""), "mapTo")
    method
-    refid "_-SK:_-u3/mapTo"
+    refid "_-SK:_-u3/instance/mapTo"
     returns QName(PackageNamespace("_-SK"), "_-u3")
     flag NEED_ACTIVATION
     flag NEED_REST
@@ -216,7 +217,7 @@ L46:
       getscopeobject      1
       getslot             1
       pushbyte            0
-      getproperty         MultinameL([PrivateNamespace("*", "_-SK:_-u3#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-SK:_-u3#1"), PackageNamespace("_-SK"), PackageInternalNs("_-SK"), ProtectedNamespace("_-cD"), StaticProtectedNs("_-cD"), StaticProtectedNs("_-076"), StaticProtectedNs("_-0-A"), StaticProtectedNs("_-0LH")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-SK:_-u3/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-SK:_-u3/instance#1"), PackageNamespace("_-SK"), PackageInternalNs("_-SK"), ProtectedNamespace("_-cD"), StaticProtectedNs("_-cD"), StaticProtectedNs("_-076"), StaticProtectedNs("_-0-A"), StaticProtectedNs("_-0LH")])
       getlex              QName(PackageNamespace(""), "Function")
       istypelate
 L23:
@@ -226,13 +227,13 @@ L23:
       getscopeobject      1
       getslot             1
       pushbyte            0
-      getproperty         MultinameL([PrivateNamespace("*", "_-SK:_-u3#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-SK:_-u3#1"), PackageNamespace("_-SK"), PackageInternalNs("_-SK"), ProtectedNamespace("_-cD"), StaticProtectedNs("_-cD"), StaticProtectedNs("_-076"), StaticProtectedNs("_-0-A"), StaticProtectedNs("_-0LH")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-SK:_-u3/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-SK:_-u3/instance#1"), PackageNamespace("_-SK"), PackageInternalNs("_-SK"), ProtectedNamespace("_-cD"), StaticProtectedNs("_-cD"), StaticProtectedNs("_-076"), StaticProtectedNs("_-0-A"), StaticProtectedNs("_-0LH")])
       getlex              QName(PackageNamespace(""), "Function")
       astypelate
-      initproperty        QName(PrivateNamespace("*", "_-SK:_-u3#0"), "_-I")
+      initproperty        QName(PrivateNamespace("*", "_-SK:_-u3/instance#0"), "_-I")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-SK:_-u3#0"), "_-I")
+      getproperty         QName(PrivateNamespace("*", "_-SK:_-u3/instance#0"), "_-I")
       getproperty         QName(PackageNamespace(""), "length")
       pushbyte            1
       ifngt               L47
@@ -240,20 +241,21 @@ L23:
       findpropstrict      QName(PackageNamespace(""), "ArgumentError")
       pushstring          "Mapping function has "
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-SK:_-u3#0"), "_-I")
+      getproperty         QName(PrivateNamespace("*", "_-SK:_-u3/instance#0"), "_-I")
       getproperty         QName(PackageNamespace(""), "length")
       add
       pushstring          " arguments but it needs zero or one of type Event"
       add
       constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
       throw
+
 L47:
       jump                L51
 
 L48:
       getlocal0
-      newfunction         "_-SK:_-u3/mapTo/inline_method"
-      initproperty        QName(PrivateNamespace("*", "_-SK:_-u3#0"), "_-I")
+      newfunction         "_-SK:_-u3/instance/mapTo/inline_method"
+      initproperty        QName(PrivateNamespace("*", "_-SK:_-u3/instance#0"), "_-I")
 
 L51:
       getlocal0
@@ -265,7 +267,7 @@ L51:
   end ; trait
   trait method QName(ProtectedNamespace("_-cD"), "_-0o")
    method
-    refid "_-SK:_-u3/_-cD:_-0o"
+    refid "_-SK:_-u3/instance/_-cD:_-0o"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "Object")
     body
@@ -280,7 +282,7 @@ L51:
       getlocal0
       getproperty         QName(ProtectedNamespace("_-cD"), "_-oS")
       pushnull
-      ifeq                L21
+      ifeq                L24
 
       getlocal0
       getproperty         QName(ProtectedNamespace("_-cD"), "_-oS")
@@ -300,18 +302,20 @@ L17:
       callproperty        QName(ProtectedNamespace("_-cD"), "_-oS"), 0
       returnvalue
 
-      jump                L27
-
-L21:
+      ; 0x10
+      ; 0x0E
+      ; 0x00
+      ; 0x00
+L24:
       getlex              QName(PackageNamespace(""), "valueClasses")
       getproperty         QName(PackageNamespace(""), "length")
       pushbyte            0
-      ifne                L27
+      ifne                L30
 
       newarray            0
       returnvalue
 
-L27:
+L30:
       findpropstrict      QName(PackageNamespace(""), "ArgumentError")
       pushstring          "There are valueClasses set to be dispatched <"
       getlex              QName(PackageNamespace(""), "valueClasses")
@@ -326,7 +330,7 @@ L27:
   end ; trait
   trait method QName(PackageNamespace(""), "dispatchEvent") flag OVERRIDE
    method
-    refid "_-SK:_-u3/dispatchEvent"
+    refid "_-SK:_-u3/instance/dispatchEvent"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "Boolean")
     body
@@ -384,13 +388,13 @@ L34:
       label
       getlocal            4
       getlocal            7
-      getproperty         MultinameL([PrivateNamespace("*", "_-SK:_-u3#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-SK:_-u3#1"), PackageNamespace("_-SK"), PackageInternalNs("_-SK"), ProtectedNamespace("_-cD"), StaticProtectedNs("_-cD"), StaticProtectedNs("_-076"), StaticProtectedNs("_-0-A"), StaticProtectedNs("_-0LH")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-SK:_-u3/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-SK:_-u3/instance#1"), PackageNamespace("_-SK"), PackageInternalNs("_-SK"), ProtectedNamespace("_-cD"), StaticProtectedNs("_-cD"), StaticProtectedNs("_-076"), StaticProtectedNs("_-0-A"), StaticProtectedNs("_-0LH")])
       coerce              QName(PackageNamespace(""), "Object")
       setlocal            5
 
       getlex              QName(PackageNamespace(""), "valueClasses")
       getlocal            7
-      getproperty         MultinameL([PrivateNamespace("*", "_-SK:_-u3#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-SK:_-u3#1"), PackageNamespace("_-SK"), PackageInternalNs("_-SK"), ProtectedNamespace("_-cD"), StaticProtectedNs("_-cD"), StaticProtectedNs("_-076"), StaticProtectedNs("_-0-A"), StaticProtectedNs("_-0LH")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-SK:_-u3/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-SK:_-u3/instance#1"), PackageNamespace("_-SK"), PackageInternalNs("_-SK"), ProtectedNamespace("_-cD"), StaticProtectedNs("_-cD"), StaticProtectedNs("_-076"), StaticProtectedNs("_-0-A"), StaticProtectedNs("_-0LH")])
       coerce              QName(PackageNamespace(""), "Class")
       setlocal            6
 
@@ -422,6 +426,7 @@ L56:
       add
       constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
       throw
+
 L68:
       inclocal_i          7
 L69:
@@ -440,11 +445,12 @@ L73:
       pushstring          "Expected more than one value."
       constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
       throw
+
 L80:
       getlocal2
       getlex              QName(PackageNamespace(""), "valueClasses")
       pushbyte            0
-      getproperty         MultinameL([PrivateNamespace("*", "_-SK:_-u3#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-SK:_-u3#1"), PackageNamespace("_-SK"), PackageInternalNs("_-SK"), ProtectedNamespace("_-cD"), StaticProtectedNs("_-cD"), StaticProtectedNs("_-076"), StaticProtectedNs("_-0-A"), StaticProtectedNs("_-0LH")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-SK:_-u3/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-SK:_-u3/instance#1"), PackageNamespace("_-SK"), PackageInternalNs("_-SK"), ProtectedNamespace("_-cD"), StaticProtectedNs("_-cD"), StaticProtectedNs("_-076"), StaticProtectedNs("_-0-A"), StaticProtectedNs("_-0LH")])
       istypelate
       iftrue              L102
 
@@ -458,12 +464,13 @@ L80:
       add
       getlex              QName(PackageNamespace(""), "valueClasses")
       pushbyte            0
-      getproperty         MultinameL([PrivateNamespace("*", "_-SK:_-u3#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-SK:_-u3#1"), PackageNamespace("_-SK"), PackageInternalNs("_-SK"), ProtectedNamespace("_-cD"), StaticProtectedNs("_-cD"), StaticProtectedNs("_-076"), StaticProtectedNs("_-0-A"), StaticProtectedNs("_-0LH")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-SK:_-u3/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-SK:_-u3/instance#1"), PackageNamespace("_-SK"), PackageInternalNs("_-SK"), ProtectedNamespace("_-cD"), StaticProtectedNs("_-cD"), StaticProtectedNs("_-076"), StaticProtectedNs("_-0-A"), StaticProtectedNs("_-0LH")])
       add
       pushstring          "."
       add
       constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
       throw
+
 L102:
       getlocal0
       getlocal1
@@ -475,7 +482,7 @@ L102:
   end ; trait
   trait method QName(ProtectedNamespace("_-cD"), "onNativeEvent") flag OVERRIDE
    method
-    refid "_-SK:_-u3/_-cD:onNativeEvent"
+    refid "_-SK:_-u3/instance/_-cD:onNativeEvent"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -516,7 +523,7 @@ L102:
       pop
       getlex              QName(PackageNamespace(""), "valueClasses")
       pushbyte            0
-      getproperty         MultinameL([PrivateNamespace("*", "_-SK:_-u3#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-SK:_-u3#1"), PackageNamespace("_-SK"), PackageInternalNs("_-SK"), ProtectedNamespace("_-cD"), StaticProtectedNs("_-cD"), StaticProtectedNs("_-076"), StaticProtectedNs("_-0-A"), StaticProtectedNs("_-0LH")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-SK:_-u3/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-SK:_-u3/instance#1"), PackageNamespace("_-SK"), PackageInternalNs("_-SK"), ProtectedNamespace("_-cD"), StaticProtectedNs("_-cD"), StaticProtectedNs("_-076"), StaticProtectedNs("_-0-A"), StaticProtectedNs("_-0LH")])
       getlex              QName(PackageNamespace(""), "Array")
       equals
 L29:
@@ -600,7 +607,7 @@ L76:
   end ; trait
  end ; instance
  cinit
-  refid "_-SK:_-u3/cinit"
+  refid "_-SK:_-u3/class/init"
   body
    maxstack 3
    localcount 1

@@ -8,7 +8,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-WX")
   iinit
-   refid "com.hurlant.crypto.symmetric:ECBMode/iinit"
+   refid "com.hurlant.crypto.symmetric:ECBMode/instance/init"
    param QName(PackageNamespace("com.hurlant.crypto.symmetric"), "ISymmetricKey")
    param QName(PackageNamespace("com.hurlant.crypto.symmetric"), "IPad")
    flag HAS_OPTIONAL
@@ -27,7 +27,7 @@ class
 
      getlocal0
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "key")
+     initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode/instance"), "key")
 
      getlocal2
      pushnull
@@ -51,17 +51,17 @@ L17:
 L21:
      getlocal0
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "padding")
+     initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode/instance"), "padding")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "key") type QName(PackageNamespace("com.hurlant.crypto.symmetric"), "ISymmetricKey") end
-  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "padding") type QName(PackageNamespace("com.hurlant.crypto.symmetric"), "IPad") end
+  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode/instance"), "key") type QName(PackageNamespace("com.hurlant.crypto.symmetric"), "ISymmetricKey") end
+  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode/instance"), "padding") type QName(PackageNamespace("com.hurlant.crypto.symmetric"), "IPad") end
   trait method QName(PackageNamespace(""), "getBlockSize")
    method
-    refid "com.hurlant.crypto.symmetric:ECBMode/getBlockSize"
+    refid "com.hurlant.crypto.symmetric:ECBMode/instance/getBlockSize"
     returns QName(PackageNamespace(""), "uint")
     body
      maxstack 1
@@ -73,7 +73,7 @@ L21:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "key")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode/instance"), "key")
       callproperty        QName(Namespace("_-Of"), "getBlockSize"), 0
       returnvalue
      end ; code
@@ -82,7 +82,7 @@ L21:
   end ; trait
   trait method QName(PackageNamespace(""), "encrypt")
    method
-    refid "com.hurlant.crypto.symmetric:ECBMode/encrypt"
+    refid "com.hurlant.crypto.symmetric:ECBMode/instance/encrypt"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     returns QName(PackageNamespace(""), "void")
     body
@@ -95,7 +95,7 @@ L21:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "padding")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode/instance"), "padding")
       getlocal1
       callpropvoid        QName(Namespace("_-8G"), "pad"), 1
 
@@ -104,7 +104,7 @@ L21:
       setproperty         QName(PackageNamespace(""), "position")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "key")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode/instance"), "key")
       callproperty        QName(Namespace("_-Of"), "getBlockSize"), 0
       convert_u
       setlocal2
@@ -138,7 +138,7 @@ L26:
       callpropvoid        QName(PackageNamespace(""), "readBytes"), 3
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "key")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode/instance"), "key")
       getlocal3
       callpropvoid        QName(Namespace("_-Of"), "encrypt"), 1
 
@@ -173,7 +173,7 @@ L47:
   end ; trait
   trait method QName(PackageNamespace(""), "decrypt")
    method
-    refid "com.hurlant.crypto.symmetric:ECBMode/decrypt"
+    refid "com.hurlant.crypto.symmetric:ECBMode/instance/decrypt"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     returns QName(PackageNamespace(""), "void")
     body
@@ -190,7 +190,7 @@ L47:
       setproperty         QName(PackageNamespace(""), "position")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "key")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode/instance"), "key")
       callproperty        QName(Namespace("_-Of"), "getBlockSize"), 0
       convert_u
       setlocal2
@@ -208,6 +208,7 @@ L47:
       add
       constructprop       QName(PackageNamespace(""), "Error"), 1
       throw
+
 L22:
       findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
       constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
@@ -238,7 +239,7 @@ L34:
       callpropvoid        QName(PackageNamespace(""), "readBytes"), 3
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "key")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode/instance"), "key")
       getlocal3
       callpropvoid        QName(Namespace("_-Of"), "decrypt"), 1
 
@@ -259,7 +260,7 @@ L55:
       iflt                L34
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "padding")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode/instance"), "padding")
       getlocal            4
       callpropvoid        QName(Namespace("_-8G"), "unpad"), 1
 
@@ -278,7 +279,7 @@ L55:
   end ; trait
   trait method QName(PackageNamespace(""), "dispose")
    method
-    refid "com.hurlant.crypto.symmetric:ECBMode/dispose"
+    refid "com.hurlant.crypto.symmetric:ECBMode/instance/dispose"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -290,16 +291,16 @@ L55:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "key")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode/instance"), "key")
       callpropvoid        QName(Namespace("_-Of"), "dispose"), 0
 
       getlocal0
       pushnull
-      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "key")
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode/instance"), "key")
 
       getlocal0
       pushnull
-      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "padding")
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode/instance"), "padding")
 
       getlex              QName(PackageNamespace("com.hurlant.util"), "Memory")
       callpropvoid        QName(PackageNamespace(""), "gc"), 0
@@ -311,7 +312,7 @@ L55:
   end ; trait
   trait method QName(PackageNamespace(""), "toString")
    method
-    refid "com.hurlant.crypto.symmetric:ECBMode/toString"
+    refid "com.hurlant.crypto.symmetric:ECBMode/instance/toString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 2
@@ -323,7 +324,7 @@ L55:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode"), "key")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:ECBMode/instance"), "key")
       callproperty        QName(Namespace("_-Of"), "toString"), 0
       pushstring          "-ecb"
       add
@@ -334,7 +335,7 @@ L55:
   end ; trait
  end ; instance
  cinit
-  refid "com.hurlant.crypto.symmetric:ECBMode/cinit"
+  refid "com.hurlant.crypto.symmetric:ECBMode/class/init"
   body
    maxstack 1
    localcount 1

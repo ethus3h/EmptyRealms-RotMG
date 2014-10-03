@@ -7,7 +7,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-AM")
   iinit
-   refid "com.company.assembleegameclient.objects:GuildMerchant/iinit"
+   refid "com.company.assembleegameclient.objects:GuildMerchant/instance/init"
    param QName(PackageNamespace(""), "XML")
    body
     maxstack 5
@@ -25,7 +25,7 @@ class
      findproperty        QName(PackageNamespace(""), "price_")
      findpropstrict      QName(PackageNamespace(""), "int")
      getlocal1
-     getproperty         Multiname("Price", [PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-AM"), StaticProtectedNs("_-AM"), StaticProtectedNs("_-VP"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
+     getproperty         Multiname("Price", [PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant/instance#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-AM"), StaticProtectedNs("_-AM"), StaticProtectedNs("_-VP"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
      callproperty        QName(PackageNamespace(""), "int"), 1
      initproperty        QName(PackageNamespace(""), "price_")
 
@@ -36,7 +36,7 @@ class
 
      getlocal0
      getlocal1
-     getproperty         Multiname("Description", [PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-AM"), StaticProtectedNs("_-AM"), StaticProtectedNs("_-VP"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
+     getproperty         Multiname("Description", [PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant/instance#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-AM"), StaticProtectedNs("_-AM"), StaticProtectedNs("_-VP"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
      initproperty        QName(PackageNamespace(""), "description_")
 
      findproperty        QName(PackageNamespace(""), "_-0FS")
@@ -51,7 +51,7 @@ class
   trait slot QName(PackageNamespace(""), "description_") type QName(PackageNamespace(""), "String") end
   trait method QName(PackageNamespace(""), "soldObjectName") flag OVERRIDE
    method
-    refid "com.company.assembleegameclient.objects:GuildMerchant/soldObjectName"
+    refid "com.company.assembleegameclient.objects:GuildMerchant/instance/soldObjectName"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 4
@@ -65,7 +65,7 @@ class
       getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
       getproperty         QName(PackageNamespace(""), "_-0DN")
       getlex              QName(PackageNamespace(""), "objectType_")
-      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-AM"), StaticProtectedNs("_-AM"), StaticProtectedNs("_-VP"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant/instance#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-AM"), StaticProtectedNs("_-AM"), StaticProtectedNs("_-VP"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
       returnvalue
      end ; code
     end ; body
@@ -73,7 +73,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "soldObjectInternalName") flag OVERRIDE
    method
-    refid "com.company.assembleegameclient.objects:GuildMerchant/soldObjectInternalName"
+    refid "com.company.assembleegameclient.objects:GuildMerchant/instance/soldObjectInternalName"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 4
@@ -87,13 +87,13 @@ class
       getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
       getproperty         QName(PackageNamespace(""), "_-QF")
       getlex              QName(PackageNamespace(""), "objectType_")
-      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-AM"), StaticProtectedNs("_-AM"), StaticProtectedNs("_-VP"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant/instance#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-AM"), StaticProtectedNs("_-AM"), StaticProtectedNs("_-VP"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
       coerce              QName(PackageNamespace(""), "XML")
       setlocal1
 
       getlocal1
-      getproperty         MultinameA("id", [PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-AM"), StaticProtectedNs("_-AM"), StaticProtectedNs("_-VP"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
-      callproperty        Multiname("toString", [PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-AM"), StaticProtectedNs("_-AM"), StaticProtectedNs("_-VP"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")]), 0
+      getproperty         MultinameA("id", [PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant/instance#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-AM"), StaticProtectedNs("_-AM"), StaticProtectedNs("_-VP"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
+      callproperty        Multiname("toString", [PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant/instance#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-AM"), StaticProtectedNs("_-AM"), StaticProtectedNs("_-VP"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")]), 0
       returnvalue
      end ; code
     end ; body
@@ -101,7 +101,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "getTooltip") flag OVERRIDE
    method
-    refid "com.company.assembleegameclient.objects:GuildMerchant/getTooltip"
+    refid "com.company.assembleegameclient.objects:GuildMerchant/instance/getTooltip"
     returns QName(PackageNamespace("_-E7"), "for ")
     body
      maxstack 8
@@ -132,7 +132,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "getIcon") flag OVERRIDE
    method
-    refid "com.company.assembleegameclient.objects:GuildMerchant/getIcon"
+    refid "com.company.assembleegameclient.objects:GuildMerchant/instance/getIcon"
     returns QName(PackageNamespace("flash.display"), "BitmapData")
     body
      maxstack 6
@@ -155,7 +155,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "com.company.assembleegameclient.objects:GuildMerchant/cinit"
+  refid "com.company.assembleegameclient.objects:GuildMerchant/class/init"
   body
    maxstack 3
    localcount 1

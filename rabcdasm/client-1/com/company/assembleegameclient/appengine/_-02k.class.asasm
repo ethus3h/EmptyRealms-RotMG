@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-4G")
   iinit
-   refid "com.company.assembleegameclient.appengine:_-02k/iinit"
+   refid "com.company.assembleegameclient.appengine:_-02k/instance/init"
    body
     maxstack 3
     localcount 3
@@ -25,7 +25,7 @@ class
   end ; method
  end ; instance
  cinit
-  refid "com.company.assembleegameclient.appengine:_-02k/cinit"
+  refid "com.company.assembleegameclient.appengine:_-02k/class/init"
   body
    maxstack 5
    localcount 3
@@ -35,33 +35,33 @@ class
     getlocal0
     pushscope
 
-    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k"), "_-s8")
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k/class"), "_-s8")
     pushbyte            5
     pushbyte            60
     multiply
     pushshort           1000
     multiply
-    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k"), "_-s8")
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k/class"), "_-s8")
 
-    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k"), "_-0FF")
-    getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k"), "_-s8")
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k/class"), "_-0FF")
+    getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k/class"), "_-s8")
     negate
-    setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k"), "_-0FF")
+    setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k/class"), "_-0FF")
 
-    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k"), "_-n-")
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k/class"), "_-n-")
     pushnull
-    setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k"), "_-n-")
+    setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k/class"), "_-n-")
 
     returnvoid
    end ; code
   end ; body
  end ; method
- trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k"), "_-s8") slotid 1 type QName(PackageNamespace(""), "int") value Double(300000) end
- trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k"), "_-0FF") slotid 2 type QName(PackageNamespace(""), "int") end
- trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k"), "_-n-") slotid 3 type QName(PackageNamespace(""), "String") value Null() end
+ trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k/class"), "_-s8") slotid 1 type QName(PackageNamespace(""), "int") value Double(300000) end
+ trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k/class"), "_-0FF") slotid 2 type QName(PackageNamespace(""), "int") end
+ trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k/class"), "_-n-") slotid 3 type QName(PackageNamespace(""), "String") value Null() end
  trait method QName(PackageNamespace(""), "_-Ut") flag FINAL dispid 3
   method
-   refid "com.company.assembleegameclient.appengine:_-02k/_-Ut"
+   refid "com.company.assembleegameclient.appengine:_-02k/class/_-Ut"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "Function")
    returns QName(PackageNamespace(""), "void")
@@ -86,7 +86,7 @@ class
      setlocal            4
 
      getlocal3
-     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k"), "_-n-")
+     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k/class"), "_-n-")
      equals
      not
      dup
@@ -94,20 +94,20 @@ class
 
      pop
      getlocal            4
-     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k"), "_-0FF")
+     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k/class"), "_-0FF")
      subtract
-     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k"), "_-s8")
+     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k/class"), "_-s8")
      greaterthan
 L23:
      iffalse             L30
 
-     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k"), "_-n-")
+     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k/class"), "_-n-")
      getlocal3
-     setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k"), "_-n-")
+     setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k/class"), "_-n-")
 
-     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k"), "_-0FF")
+     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k/class"), "_-0FF")
      getlocal            4
-     setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k"), "_-0FF")
+     setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k/class"), "_-0FF")
 
 L30:
      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0Bu")
@@ -137,7 +137,7 @@ L47:
      setlocal            6
 
      pushstring          "time"
-     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k"), "_-0FF")
+     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-02k/class"), "_-0FF")
      pushstring          "game_net_user_id"
      getlocal            6
      callproperty        QName(PackageNamespace(""), "gameNetworkUserId"), 0

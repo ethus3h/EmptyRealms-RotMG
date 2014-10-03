@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("com.google.analytics.data:UTMX")
   iinit
-   refid "com.google.analytics.data:UTMX/iinit"
+   refid "com.google.analytics.data:UTMX/instance/init"
    body
     maxstack 5
     localcount 1
@@ -24,9 +24,9 @@ class
      pushbyte            0
      constructsuper      4
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMX"), "_value")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMX/instance"), "_value")
      pushstring          "-"
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMX"), "_value")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMX/instance"), "_value")
 
      returnvoid
     end ; code
@@ -34,7 +34,7 @@ class
   end ; method
   trait getter QName(PackageNamespace(""), "value")
    method
-    refid "com.google.analytics.data:UTMX/value/getter"
+    refid "com.google.analytics.data:UTMX/instance/value/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -45,16 +45,16 @@ class
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.data:UTMX"), "_value")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.data:UTMX/instance"), "_value")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.data:UTMX"), "_value") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.data:UTMX/instance"), "_value") type QName(PackageNamespace(""), "String") end
   trait setter QName(PackageNamespace(""), "value")
    method
-    refid "com.google.analytics.data:UTMX/value/setter"
+    refid "com.google.analytics.data:UTMX/instance/value/setter"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -66,9 +66,9 @@ class
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMX"), "_value")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMX/instance"), "_value")
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMX"), "_value")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMX/instance"), "_value")
 
       returnvoid
      end ; code
@@ -77,7 +77,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "com.google.analytics.data:UTMX/cinit"
+  refid "com.google.analytics.data:UTMX/class/init"
   body
    maxstack 1
    localcount 1

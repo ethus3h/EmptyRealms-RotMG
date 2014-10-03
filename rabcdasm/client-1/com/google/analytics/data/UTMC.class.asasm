@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("com.google.analytics.data:UTMC")
   iinit
-   refid "com.google.analytics.data:UTMC/iinit"
+   refid "com.google.analytics.data:UTMC/instance/init"
    param QName(PackageNamespace(""), "Number")
    flag HAS_OPTIONAL
    optional Double(nan)
@@ -34,10 +34,10 @@ class
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.data:UTMC"), "_domainHash") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.data:UTMC/instance/domainHash"), "_domainHash") type QName(PackageNamespace(""), "Number") end
   trait getter QName(PackageNamespace(""), "domainHash")
    method
-    refid "com.google.analytics.data:UTMC/domainHash/getter"
+    refid "com.google.analytics.data:UTMC/instance/domainHash/getter"
     returns QName(PackageNamespace(""), "Number")
     body
      maxstack 1
@@ -48,7 +48,7 @@ class
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.data:UTMC"), "_domainHash")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.data:UTMC/instance/domainHash"), "_domainHash")
       returnvalue
      end ; code
     end ; body
@@ -56,7 +56,7 @@ class
   end ; trait
   trait setter QName(PackageNamespace(""), "domainHash")
    method
-    refid "com.google.analytics.data:UTMC/domainHash/setter"
+    refid "com.google.analytics.data:UTMC/instance/domainHash/setter"
     param QName(PackageNamespace(""), "Number")
     returns QName(PackageNamespace(""), "void")
     body
@@ -68,9 +68,9 @@ class
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMC"), "_domainHash")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMC/instance/domainHash"), "_domainHash")
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMC"), "_domainHash")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMC/instance/domainHash"), "_domainHash")
 
       findpropstrict      QName(ProtectedNamespace("com.google.analytics.data:UTMCookie"), "update")
       callpropvoid        QName(ProtectedNamespace("com.google.analytics.data:UTMCookie"), "update"), 0
@@ -82,7 +82,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "com.google.analytics.data:UTMC/cinit"
+  refid "com.google.analytics.data:UTMC/class/init"
   body
    maxstack 1
    localcount 1

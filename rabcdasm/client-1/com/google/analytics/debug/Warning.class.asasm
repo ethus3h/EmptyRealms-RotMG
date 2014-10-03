@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("com.google.analytics.debug:Warning")
   iinit
-   refid "com.google.analytics.debug:Warning/iinit"
+   refid "com.google.analytics.debug:Warning/instance/init"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "uint")
    flag HAS_OPTIONAL
@@ -39,17 +39,17 @@ class
      pushbyte            0
      ifngt               L33
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Warning"), "_timer")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Warning/instance/init"), "_timer")
      findpropstrict      QName(PackageNamespace("flash.utils"), "Timer")
      getlocal2
      pushbyte            1
      constructprop       QName(PackageNamespace("flash.utils"), "Timer"), 2
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Warning"), "_timer")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Warning/instance/init"), "_timer")
 
-     getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Warning"), "_timer")
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Warning/instance/init"), "_timer")
      callpropvoid        QName(PackageNamespace(""), "start"), 0
 
-     getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Warning"), "_timer")
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Warning/instance/init"), "_timer")
      getlex              QName(PackageNamespace("flash.events"), "TimerEvent")
      getproperty         QName(PackageNamespace(""), "TIMER_COMPLETE")
      getlex              QName(PackageNamespace(""), "onComplete")
@@ -65,7 +65,7 @@ L33:
   end ; method
   trait method QName(PackageNamespace(""), "close")
    method
-    refid "com.google.analytics.debug:Warning/close"
+    refid "com.google.analytics.debug:Warning/instance/close"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -92,7 +92,7 @@ L8:
   end ; trait
   trait method QName(PackageNamespace(""), "onLink") flag OVERRIDE
    method
-    refid "com.google.analytics.debug:Warning/onLink"
+    refid "com.google.analytics.debug:Warning/instance/onLink"
     param QName(PackageNamespace("flash.events"), "TextEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -141,10 +141,10 @@ L20:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Warning"), "_timer") type QName(PackageNamespace("flash.utils"), "Timer") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Warning/instance/init"), "_timer") type QName(PackageNamespace("flash.utils"), "Timer") end
   trait method QName(PackageNamespace(""), "onComplete")
    method
-    refid "com.google.analytics.debug:Warning/onComplete"
+    refid "com.google.analytics.debug:Warning/instance/onComplete"
     param QName(PackageNamespace("flash.events"), "TimerEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -166,7 +166,7 @@ L20:
   end ; trait
  end ; instance
  cinit
-  refid "com.google.analytics.debug:Warning/cinit"
+  refid "com.google.analytics.debug:Warning/class/init"
   body
    maxstack 1
    localcount 1

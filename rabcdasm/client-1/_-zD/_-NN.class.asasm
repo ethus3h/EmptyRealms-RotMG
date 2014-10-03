@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-ng")
   iinit
-   refid "_-zD:_-NN/iinit"
+   refid "_-zD:_-NN/instance/init"
    body
     maxstack 3
     localcount 3
@@ -37,7 +37,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "initialize") flag OVERRIDE
    method
-    refid "_-zD:_-NN/initialize"
+    refid "_-zD:_-NN/instance/initialize"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -52,7 +52,7 @@ class
       getproperty         QName(PackageNamespace(""), "view")
       getproperty         QName(PackageNamespace(""), "_-4s")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-zD:_-NN"), "_-GP")
+      getproperty         QName(PrivateNamespace("*", "_-zD:_-NN/instance"), "_-GP")
       callpropvoid        QName(PackageNamespace(""), "add"), 1
 
       getlocal0
@@ -69,7 +69,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "destroy") flag OVERRIDE
    method
-    refid "_-zD:_-NN/destroy"
+    refid "_-zD:_-NN/instance/destroy"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -84,7 +84,7 @@ class
       getproperty         QName(PackageNamespace(""), "view")
       getproperty         QName(PackageNamespace(""), "_-4s")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-zD:_-NN"), "_-GP")
+      getproperty         QName(PrivateNamespace("*", "_-zD:_-NN/instance"), "_-GP")
       callpropvoid        QName(PackageNamespace(""), "remove"), 1
 
       returnvoid
@@ -92,9 +92,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-zD:_-NN"), "_-GP")
+  trait method QName(PrivateNamespace("*", "_-zD:_-NN/instance"), "_-GP")
    method
-    refid "_-zD:_-NN/_-GP"
+    refid "_-zD:_-NN/instance/_-zD:_-NN/instance/_-GP"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -118,7 +118,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-zD:_-NN/cinit"
+  refid "_-zD:_-NN/class/init"
   body
    maxstack 3
    localcount 1

@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-ou")
   iinit
-   refid "com.company.util:Random/iinit"
+   refid "com.company.util:Random/instance/init"
    param QName(PackageNamespace(""), "uint")
    flag HAS_OPTIONAL
    optional Integer(1)
@@ -33,7 +33,7 @@ class
   trait slot QName(PackageNamespace(""), "seed") type QName(PackageNamespace(""), "uint") end
   trait method QName(PackageNamespace(""), "_-ds")
    method
-    refid "com.company.util:Random/_-ds"
+    refid "com.company.util:Random/instance/_-ds"
     returns QName(PackageNamespace(""), "uint")
     body
      maxstack 3
@@ -45,7 +45,7 @@ class
       pushscope
 
       getlocal0
-      callproperty        QName(PrivateNamespace("*", "com.company.util:Random"), "_-ML"), 0
+      callproperty        QName(PrivateNamespace("*", "com.company.util:Random/instance"), "_-ML"), 0
       returnvalue
      end ; code
     end ; body
@@ -53,7 +53,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "_-Jt")
    method
-    refid "com.company.util:Random/_-Jt"
+    refid "com.company.util:Random/instance/_-Jt"
     returns QName(PackageNamespace(""), "Number")
     body
      maxstack 4
@@ -65,7 +65,7 @@ class
       pushscope
 
       getlocal0
-      callproperty        QName(PrivateNamespace("*", "com.company.util:Random"), "_-ML"), 0
+      callproperty        QName(PrivateNamespace("*", "com.company.util:Random/instance"), "_-ML"), 0
       pushint             2147483647
       divide
       returnvalue
@@ -75,7 +75,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "_-9D")
    method
-    refid "com.company.util:Random/_-9D"
+    refid "com.company.util:Random/instance/_-9D"
     param QName(PackageNamespace(""), "Number")
     param QName(PackageNamespace(""), "Number")
     returns QName(PackageNamespace(""), "Number")
@@ -92,14 +92,14 @@ class
       pushscope
 
       getlocal0
-      callproperty        QName(PrivateNamespace("*", "com.company.util:Random"), "_-ML"), 0
+      callproperty        QName(PrivateNamespace("*", "com.company.util:Random/instance"), "_-ML"), 0
       pushint             2147483647
       divide
       convert_d
       setlocal3
 
       getlocal0
-      callproperty        QName(PrivateNamespace("*", "com.company.util:Random"), "_-ML"), 0
+      callproperty        QName(PrivateNamespace("*", "com.company.util:Random/instance"), "_-ML"), 0
       pushint             2147483647
       divide
       convert_d
@@ -136,7 +136,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "_-0MK")
    method
-    refid "com.company.util:Random/_-0MK"
+    refid "com.company.util:Random/instance/_-0MK"
     param QName(PackageNamespace(""), "uint")
     param QName(PackageNamespace(""), "uint")
     returns QName(PackageNamespace(""), "uint")
@@ -160,7 +160,7 @@ class
 L8:
       getlocal1
       getlocal0
-      callproperty        QName(PrivateNamespace("*", "com.company.util:Random"), "_-ML"), 0
+      callproperty        QName(PrivateNamespace("*", "com.company.util:Random/instance"), "_-ML"), 0
       getlocal2
       getlocal1
       subtract
@@ -175,7 +175,7 @@ L17:
   end ; trait
   trait method QName(PackageNamespace(""), "_-0E0")
    method
-    refid "com.company.util:Random/_-0E0"
+    refid "com.company.util:Random/instance/_-0E0"
     param QName(PackageNamespace(""), "Number")
     param QName(PackageNamespace(""), "Number")
     returns QName(PackageNamespace(""), "Number")
@@ -201,9 +201,9 @@ L17:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.company.util:Random"), "_-ML")
+  trait method QName(PrivateNamespace("*", "com.company.util:Random/instance"), "_-ML")
    method
-    refid "com.company.util:Random/_-ML"
+    refid "com.company.util:Random/instance/com.company.util:Random/instance/_-ML"
     returns QName(PackageNamespace(""), "uint")
     body
      maxstack 5
@@ -285,7 +285,7 @@ L48:
   end ; trait
  end ; instance
  cinit
-  refid "com.company.util:Random/cinit"
+  refid "com.company.util:Random/class/init"
   body
    maxstack 3
    localcount 1
@@ -301,7 +301,7 @@ L48:
  end ; method
  trait method QName(PackageNamespace(""), "_-6Z") flag FINAL dispid 3
   method
-   refid "com.company.util:Random/_-6Z"
+   refid "com.company.util:Random/class/_-6Z"
    returns QName(PackageNamespace(""), "uint")
    body
     maxstack 6

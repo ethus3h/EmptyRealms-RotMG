@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-1P")
   iinit
-   refid "_-0Jk:_-0Jf/iinit"
+   refid "_-0Jk:_-0Jf/instance/init"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "Boolean")
@@ -25,15 +25,15 @@ class
 
      getlocal0
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "_-0Jk:_-0Jf"), "_-Te")
+     initproperty        QName(PrivateNamespace("*", "_-0Jk:_-0Jf/instance"), "_-Te")
 
      getlocal0
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "_-0Jk:_-0Jf"), "_-08c")
+     initproperty        QName(PrivateNamespace("*", "_-0Jk:_-0Jf/instance"), "_-08c")
 
      getlocal0
      getlocal3
-     initproperty        QName(PrivateNamespace("*", "_-0Jk:_-0Jf"), "_-KW")
+     initproperty        QName(PrivateNamespace("*", "_-0Jk:_-0Jf/instance"), "_-KW")
 
      getlocal0
      getlocal            4
@@ -43,12 +43,12 @@ class
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-0Jk:_-0Jf"), "_-Te") type QName(PackageNamespace(""), "String") end
-  trait slot QName(PrivateNamespace("*", "_-0Jk:_-0Jf"), "_-08c") type QName(PackageNamespace(""), "String") end
-  trait slot QName(PrivateNamespace("*", "_-0Jk:_-0Jf"), "_-KW") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "_-0Jk:_-0Jf/instance"), "_-Te") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "_-0Jk:_-0Jf/instance"), "_-08c") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "_-0Jk:_-0Jf/instance"), "_-KW") type QName(PackageNamespace(""), "Boolean") end
   trait method QName(PackageNamespace(""), "applyInjection") flag OVERRIDE
    method
-    refid "_-0Jk:_-0Jf/applyInjection"
+    refid "_-0Jk:_-0Jf/instance/applyInjection"
     param QName(PackageNamespace(""), "Object")
     param QName(PackageNamespace(""), "Class")
     param QName(PackageNamespace("_-eZ"), "_-08b")
@@ -71,7 +71,7 @@ class
       getproperty         RTQName("_-LE")
       getlocal            5
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0Jk:_-0Jf"), "_-08c")
+      getproperty         QName(PrivateNamespace("*", "_-0Jk:_-0Jf/instance"), "_-08c")
       call                1
       kill                5
       coerce              QName(PackageNamespace("_-Y3"), "_-5d")
@@ -81,7 +81,7 @@ class
       iftrue              L45
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0Jk:_-0Jf"), "_-KW")
+      getproperty         QName(PrivateNamespace("*", "_-0Jk:_-0Jf/instance"), "_-KW")
       iffalse             L21
 
       returnvoid
@@ -90,7 +90,7 @@ L21:
       findpropstrict      QName(PackageNamespace("_-MQ"), "_-Bh")
       pushstring          "Injector is missing a mapping to handle injection into property \""
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0Jk:_-0Jf"), "_-Te")
+      getproperty         QName(PrivateNamespace("*", "_-0Jk:_-0Jf/instance"), "_-Te")
       add
       pushstring          "\" of object \""
       add
@@ -105,22 +105,23 @@ L21:
       pushstring          "\". Target dependency: \""
       add
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0Jk:_-0Jf"), "_-08c")
+      getproperty         QName(PrivateNamespace("*", "_-0Jk:_-0Jf/instance"), "_-08c")
       add
       pushstring          "\""
       add
       constructprop       QName(PackageNamespace("_-MQ"), "_-Bh"), 1
       throw
+
 L45:
       getlocal1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0Jk:_-0Jf"), "_-Te")
+      getproperty         QName(PrivateNamespace("*", "_-0Jk:_-0Jf/instance"), "_-Te")
       getlocal            4
       getlocal2
       getlocal3
       getlex              QName(PackageNamespace(""), "injectParameters")
       callproperty        QName(Namespace("_-yV"), "apply"), 3
-      setproperty         MultinameL([PrivateNamespace("*", "_-0Jk:_-0Jf"), PackageNamespace(""), PrivateNamespace("*", "_-0Jk:_-0Jf/applyInjection"), PackageNamespace("_-0Jk"), PackageInternalNs("_-0Jk"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1P"), StaticProtectedNs("_-1P"), StaticProtectedNs("_-0IO")])
+      setproperty         MultinameL([PrivateNamespace("*", "_-0Jk:_-0Jf/instance"), PackageNamespace(""), PrivateNamespace("*", "_-0Jk:_-0Jf/instance/applyInjection"), PackageNamespace("_-0Jk"), PackageInternalNs("_-0Jk"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1P"), StaticProtectedNs("_-1P"), StaticProtectedNs("_-0IO")])
 
       returnvoid
      end ; code
@@ -129,7 +130,7 @@ L45:
   end ; trait
  end ; instance
  cinit
-  refid "_-0Jk:_-0Jf/cinit"
+  refid "_-0Jk:_-0Jf/class/init"
   body
    maxstack 3
    localcount 1

@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("mx.formatters:DateBase")
   iinit
-   refid "mx.formatters:DateBase/iinit"
+   refid "mx.formatters:DateBase/instance/init"
    body
     maxstack 1
     localcount 1
@@ -25,7 +25,7 @@ class
   end ; method
  end ; instance
  cinit
-  refid "mx.formatters:DateBase/cinit"
+  refid "mx.formatters:DateBase/class/init"
   body
    maxstack 2
    localcount 1
@@ -39,20 +39,20 @@ class
     pushstring          "4.6.0.23201"
     initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
 
-    findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "initialized")
+    findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "initialized")
     pushfalse
-    setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "initialized")
+    setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "initialized")
 
     returnvoid
    end ; code
   end ; body
  end ; method
  trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.6.0.23201") end
- trait slot QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "initialized") slotid 2 type QName(PackageNamespace(""), "Boolean") value False() end
- trait slot QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_resourceManager") slotid 3 type QName(PackageNamespace("mx.resources"), "IResourceManager") end
- trait getter QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "resourceManager") flag FINAL dispid 3
+ trait slot QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "initialized") slotid 2 type QName(PackageNamespace(""), "Boolean") value False() end
+ trait slot QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_resourceManager") slotid 3 type QName(PackageNamespace("mx.resources"), "IResourceManager") end
+ trait getter QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "resourceManager") flag FINAL dispid 3
   method
-   refid "mx.formatters:DateBase/resourceManager/getter"
+   refid "mx.formatters:DateBase/class/mx.formatters:DateBase/class/resourceManager/getter"
    returns QName(PackageNamespace("mx.resources"), "IResourceManager")
    body
     maxstack 2
@@ -63,26 +63,26 @@ class
      getlocal0
      pushscope
 
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_resourceManager")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_resourceManager")
      iftrue              L8
 
-     findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_resourceManager")
+     findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_resourceManager")
      getlex              QName(PackageNamespace("mx.resources"), "ResourceManager")
      callproperty        QName(PackageNamespace(""), "getInstance"), 0
-     setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_resourceManager")
+     setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_resourceManager")
 
 L8:
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_resourceManager")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_resourceManager")
      returnvalue
     end ; code
    end ; body
   end ; method
  end ; trait
- trait slot QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_dayNamesLong") slotid 4 type QName(PackageNamespace(""), "Array") end
- trait slot QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "dayNamesLongOverride") slotid 5 type QName(PackageNamespace(""), "Array") end
+ trait slot QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_dayNamesLong") slotid 4 type QName(PackageNamespace(""), "Array") end
+ trait slot QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "dayNamesLongOverride") slotid 5 type QName(PackageNamespace(""), "Array") end
  trait getter QName(PackageNamespace(""), "dayNamesLong") flag FINAL dispid 4
   method
-   refid "mx.formatters:DateBase/dayNamesLong/getter"
+   refid "mx.formatters:DateBase/class/dayNamesLong/getter"
    returns QName(PackageNamespace(""), "Array")
    body
     maxstack 1
@@ -93,10 +93,10 @@ L8:
      getlocal0
      pushscope
 
-     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "initialize")
-     callpropvoid        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "initialize"), 0
+     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "initialize")
+     callpropvoid        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "initialize"), 0
 
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_dayNamesLong")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_dayNamesLong")
      returnvalue
     end ; code
    end ; body
@@ -104,7 +104,7 @@ L8:
  end ; trait
  trait setter QName(PackageNamespace(""), "dayNamesLong") flag FINAL dispid 5
   method
-   refid "mx.formatters:DateBase/dayNamesLong/setter"
+   refid "mx.formatters:DateBase/class/dayNamesLong/setter"
    param QName(PackageNamespace(""), "Array")
    returns QName(PackageNamespace(""), "void")
    body
@@ -116,11 +116,11 @@ L8:
      getlocal0
      pushscope
 
-     findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "dayNamesLongOverride")
+     findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "dayNamesLongOverride")
      getlocal1
-     setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "dayNamesLongOverride")
+     setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "dayNamesLongOverride")
 
-     findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_dayNamesLong")
+     findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_dayNamesLong")
      getlocal1
      pushnull
      ifeq                L12
@@ -130,24 +130,24 @@ L8:
      jump                L17
 
 L12:
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "resourceManager")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "resourceManager")
      pushstring          "SharedResources"
      pushstring          "dayNames"
      callproperty        QName(Namespace("mx.resources:IResourceManager"), "getStringArray"), 2
      coerce              QName(PackageNamespace(""), "Array")
 L17:
-     setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_dayNamesLong")
+     setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_dayNamesLong")
 
      returnvoid
     end ; code
    end ; body
   end ; method
  end ; trait
- trait slot QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_dayNamesShort") slotid 6 type QName(PackageNamespace(""), "Array") end
- trait slot QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "dayNamesShortOverride") slotid 7 type QName(PackageNamespace(""), "Array") end
+ trait slot QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_dayNamesShort") slotid 6 type QName(PackageNamespace(""), "Array") end
+ trait slot QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "dayNamesShortOverride") slotid 7 type QName(PackageNamespace(""), "Array") end
  trait getter QName(PackageNamespace(""), "dayNamesShort") flag FINAL dispid 6
   method
-   refid "mx.formatters:DateBase/dayNamesShort/getter"
+   refid "mx.formatters:DateBase/class/dayNamesShort/getter"
    returns QName(PackageNamespace(""), "Array")
    body
     maxstack 1
@@ -158,10 +158,10 @@ L17:
      getlocal0
      pushscope
 
-     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "initialize")
-     callpropvoid        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "initialize"), 0
+     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "initialize")
+     callpropvoid        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "initialize"), 0
 
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_dayNamesShort")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_dayNamesShort")
      returnvalue
     end ; code
    end ; body
@@ -169,7 +169,7 @@ L17:
  end ; trait
  trait setter QName(PackageNamespace(""), "dayNamesShort") flag FINAL dispid 7
   method
-   refid "mx.formatters:DateBase/dayNamesShort/setter"
+   refid "mx.formatters:DateBase/class/dayNamesShort/setter"
    param QName(PackageNamespace(""), "Array")
    returns QName(PackageNamespace(""), "void")
    body
@@ -181,11 +181,11 @@ L17:
      getlocal0
      pushscope
 
-     findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "dayNamesShortOverride")
+     findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "dayNamesShortOverride")
      getlocal1
-     setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "dayNamesShortOverride")
+     setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "dayNamesShortOverride")
 
-     findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_dayNamesShort")
+     findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_dayNamesShort")
      getlocal1
      pushnull
      ifeq                L12
@@ -195,13 +195,13 @@ L17:
      jump                L17
 
 L12:
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "resourceManager")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "resourceManager")
      pushstring          "formatters"
      pushstring          "dayNamesShort"
      callproperty        QName(Namespace("mx.resources:IResourceManager"), "getStringArray"), 2
      coerce              QName(PackageNamespace(""), "Array")
 L17:
-     setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_dayNamesShort")
+     setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_dayNamesShort")
 
      returnvoid
     end ; code
@@ -210,7 +210,7 @@ L17:
  end ; trait
  trait getter QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "defaultStringKey") flag FINAL dispid 8
   method
-   refid "mx.formatters:DateBase/http://www.adobe.com/2006/flex/mx/internal:defaultStringKey/getter"
+   refid "mx.formatters:DateBase/class/http://www.adobe.com/2006/flex/mx/internal:defaultStringKey/getter"
    returns QName(PackageNamespace(""), "Array")
    body
     maxstack 2
@@ -221,8 +221,8 @@ L17:
      getlocal0
      pushscope
 
-     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "initialize")
-     callpropvoid        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "initialize"), 0
+     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "initialize")
+     callpropvoid        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "initialize"), 0
 
      getlex              QName(PackageNamespace(""), "monthNamesLong")
      getlex              QName(PackageNamespace(""), "timeOfDay")
@@ -232,11 +232,11 @@ L17:
    end ; body
   end ; method
  end ; trait
- trait slot QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_monthNamesLong") slotid 8 type QName(PackageNamespace(""), "Array") end
- trait slot QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "monthNamesLongOverride") slotid 9 type QName(PackageNamespace(""), "Array") end
+ trait slot QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_monthNamesLong") slotid 8 type QName(PackageNamespace(""), "Array") end
+ trait slot QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "monthNamesLongOverride") slotid 9 type QName(PackageNamespace(""), "Array") end
  trait getter QName(PackageNamespace(""), "monthNamesLong") flag FINAL dispid 9
   method
-   refid "mx.formatters:DateBase/monthNamesLong/getter"
+   refid "mx.formatters:DateBase/class/monthNamesLong/getter"
    returns QName(PackageNamespace(""), "Array")
    body
     maxstack 1
@@ -247,10 +247,10 @@ L17:
      getlocal0
      pushscope
 
-     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "initialize")
-     callpropvoid        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "initialize"), 0
+     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "initialize")
+     callpropvoid        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "initialize"), 0
 
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_monthNamesLong")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_monthNamesLong")
      returnvalue
     end ; code
    end ; body
@@ -258,7 +258,7 @@ L17:
  end ; trait
  trait setter QName(PackageNamespace(""), "monthNamesLong") flag FINAL dispid 10
   method
-   refid "mx.formatters:DateBase/monthNamesLong/setter"
+   refid "mx.formatters:DateBase/class/monthNamesLong/setter"
    param QName(PackageNamespace(""), "Array")
    returns QName(PackageNamespace(""), "void")
    body
@@ -280,11 +280,11 @@ L17:
      pushbyte            0
      setlocal            4
 
-     findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "monthNamesLongOverride")
+     findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "monthNamesLongOverride")
      getlocal1
-     setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "monthNamesLongOverride")
+     setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "monthNamesLongOverride")
 
-     findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_monthNamesLong")
+     findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_monthNamesLong")
      getlocal1
      pushnull
      ifeq                L19
@@ -294,19 +294,19 @@ L17:
      jump                L24
 
 L19:
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "resourceManager")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "resourceManager")
      pushstring          "SharedResources"
      pushstring          "monthNames"
      callproperty        QName(Namespace("mx.resources:IResourceManager"), "getStringArray"), 2
      coerce              QName(PackageNamespace(""), "Array")
 L24:
-     setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_monthNamesLong")
+     setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_monthNamesLong")
 
      getlocal1
      pushnull
      ifne                L62
 
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "resourceManager")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "resourceManager")
      pushstring          "SharedResources"
      pushstring          "monthSymbol"
      callproperty        QName(Namespace("mx.resources:IResourceManager"), "getString"), 2
@@ -317,10 +317,10 @@ L24:
      pushstring          " "
      ifeq                L62
 
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_monthNamesLong")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_monthNamesLong")
      iffalse             L43
 
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_monthNamesLong")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_monthNamesLong")
      getproperty         QName(PackageNamespace(""), "length")
      convert_i
      jump                L44
@@ -338,14 +338,14 @@ L44:
 
 L49:
      label
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_monthNamesLong")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_monthNamesLong")
      getlocal            4
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_monthNamesLong")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_monthNamesLong")
      getlocal            4
-     getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:DateBase#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
+     getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:DateBase/class#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase/class#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
      getlocal2
      add
-     setproperty         MultinameL([PrivateNamespace("*", "mx.formatters:DateBase#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
+     setproperty         MultinameL([PrivateNamespace("*", "mx.formatters:DateBase/class#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase/class#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
 
      inclocal_i          4
 L59:
@@ -359,11 +359,11 @@ L62:
    end ; body
   end ; method
  end ; trait
- trait slot QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_monthNamesShort") slotid 10 type QName(PackageNamespace(""), "Array") end
- trait slot QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "monthNamesShortOverride") slotid 11 type QName(PackageNamespace(""), "Array") end
+ trait slot QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_monthNamesShort") slotid 10 type QName(PackageNamespace(""), "Array") end
+ trait slot QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "monthNamesShortOverride") slotid 11 type QName(PackageNamespace(""), "Array") end
  trait getter QName(PackageNamespace(""), "monthNamesShort") flag FINAL dispid 11
   method
-   refid "mx.formatters:DateBase/monthNamesShort/getter"
+   refid "mx.formatters:DateBase/class/monthNamesShort/getter"
    returns QName(PackageNamespace(""), "Array")
    body
     maxstack 1
@@ -374,10 +374,10 @@ L62:
      getlocal0
      pushscope
 
-     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "initialize")
-     callpropvoid        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "initialize"), 0
+     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "initialize")
+     callpropvoid        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "initialize"), 0
 
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_monthNamesShort")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_monthNamesShort")
      returnvalue
     end ; code
    end ; body
@@ -385,7 +385,7 @@ L62:
  end ; trait
  trait setter QName(PackageNamespace(""), "monthNamesShort") flag FINAL dispid 12
   method
-   refid "mx.formatters:DateBase/monthNamesShort/setter"
+   refid "mx.formatters:DateBase/class/monthNamesShort/setter"
    param QName(PackageNamespace(""), "Array")
    returns QName(PackageNamespace(""), "void")
    body
@@ -407,11 +407,11 @@ L62:
      pushbyte            0
      setlocal            4
 
-     findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "monthNamesShortOverride")
+     findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "monthNamesShortOverride")
      getlocal1
-     setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "monthNamesShortOverride")
+     setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "monthNamesShortOverride")
 
-     findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_monthNamesShort")
+     findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_monthNamesShort")
      getlocal1
      pushnull
      ifeq                L19
@@ -421,19 +421,19 @@ L62:
      jump                L24
 
 L19:
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "resourceManager")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "resourceManager")
      pushstring          "formatters"
      pushstring          "monthNamesShort"
      callproperty        QName(Namespace("mx.resources:IResourceManager"), "getStringArray"), 2
      coerce              QName(PackageNamespace(""), "Array")
 L24:
-     setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_monthNamesShort")
+     setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_monthNamesShort")
 
      getlocal1
      pushnull
      ifne                L62
 
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "resourceManager")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "resourceManager")
      pushstring          "SharedResources"
      pushstring          "monthSymbol"
      callproperty        QName(Namespace("mx.resources:IResourceManager"), "getString"), 2
@@ -444,10 +444,10 @@ L24:
      pushstring          " "
      ifeq                L62
 
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_monthNamesShort")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_monthNamesShort")
      iffalse             L43
 
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_monthNamesShort")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_monthNamesShort")
      getproperty         QName(PackageNamespace(""), "length")
      convert_i
      jump                L44
@@ -465,14 +465,14 @@ L44:
 
 L49:
      label
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_monthNamesShort")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_monthNamesShort")
      getlocal            4
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_monthNamesShort")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_monthNamesShort")
      getlocal            4
-     getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:DateBase#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
+     getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:DateBase/class#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase/class#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
      getlocal2
      add
-     setproperty         MultinameL([PrivateNamespace("*", "mx.formatters:DateBase#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
+     setproperty         MultinameL([PrivateNamespace("*", "mx.formatters:DateBase/class#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase/class#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
 
      inclocal_i          4
 L59:
@@ -486,11 +486,11 @@ L62:
    end ; body
   end ; method
  end ; trait
- trait slot QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_timeOfDay") slotid 12 type QName(PackageNamespace(""), "Array") end
- trait slot QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "timeOfDayOverride") slotid 13 type QName(PackageNamespace(""), "Array") end
+ trait slot QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_timeOfDay") slotid 12 type QName(PackageNamespace(""), "Array") end
+ trait slot QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "timeOfDayOverride") slotid 13 type QName(PackageNamespace(""), "Array") end
  trait getter QName(PackageNamespace(""), "timeOfDay") flag FINAL dispid 13
   method
-   refid "mx.formatters:DateBase/timeOfDay/getter"
+   refid "mx.formatters:DateBase/class/timeOfDay/getter"
    returns QName(PackageNamespace(""), "Array")
    body
     maxstack 1
@@ -501,10 +501,10 @@ L62:
      getlocal0
      pushscope
 
-     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "initialize")
-     callpropvoid        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "initialize"), 0
+     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "initialize")
+     callpropvoid        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "initialize"), 0
 
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_timeOfDay")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_timeOfDay")
      returnvalue
     end ; code
    end ; body
@@ -512,7 +512,7 @@ L62:
  end ; trait
  trait setter QName(PackageNamespace(""), "timeOfDay") flag FINAL dispid 14
   method
-   refid "mx.formatters:DateBase/timeOfDay/setter"
+   refid "mx.formatters:DateBase/class/timeOfDay/setter"
    param QName(PackageNamespace(""), "Array")
    returns QName(PackageNamespace(""), "void")
    body
@@ -524,25 +524,25 @@ L62:
      getlocal0
      pushscope
 
-     findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "timeOfDayOverride")
+     findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "timeOfDayOverride")
      getlocal1
-     setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "timeOfDayOverride")
+     setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "timeOfDayOverride")
 
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "resourceManager")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "resourceManager")
      pushstring          "formatters"
      pushstring          "am"
      callproperty        QName(Namespace("mx.resources:IResourceManager"), "getString"), 2
      coerce_s
      setlocal2
 
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "resourceManager")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "resourceManager")
      pushstring          "formatters"
      pushstring          "pm"
      callproperty        QName(Namespace("mx.resources:IResourceManager"), "getString"), 2
      coerce_s
      setlocal3
 
-     findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_timeOfDay")
+     findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_timeOfDay")
      getlocal1
      pushnull
      ifeq                L24
@@ -557,16 +557,16 @@ L24:
      newarray            2
      coerce              QName(PackageNamespace(""), "Array")
 L28:
-     setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "_timeOfDay")
+     setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "_timeOfDay")
 
      returnvoid
     end ; code
    end ; body
   end ; method
  end ; trait
- trait method QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "initialize") flag FINAL dispid 15
+ trait method QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "initialize") flag FINAL dispid 15
   method
-   refid "mx.formatters:DateBase/initialize"
+   refid "mx.formatters:DateBase/class/mx.formatters:DateBase/class/initialize"
    returns QName(PackageNamespace(""), "void")
    body
     maxstack 6
@@ -577,24 +577,24 @@ L28:
      getlocal0
      pushscope
 
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "initialized")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "initialized")
      iftrue              L17
 
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "resourceManager")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "resourceManager")
      getlex              QName(PackageNamespace("flash.events"), "Event")
      getproperty         QName(PackageNamespace(""), "CHANGE")
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "static_resourceManager_changeHandler")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "static_resourceManager_changeHandler")
      pushfalse
      pushbyte            0
      pushtrue
      callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "addEventListener"), 5
 
-     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "static_resourcesChanged")
-     callpropvoid        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "static_resourcesChanged"), 0
+     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "static_resourcesChanged")
+     callpropvoid        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "static_resourcesChanged"), 0
 
-     findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "initialized")
+     findproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "initialized")
      pushtrue
-     setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "initialized")
+     setproperty         QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "initialized")
 
 L17:
      returnvoid
@@ -602,9 +602,9 @@ L17:
    end ; body
   end ; method
  end ; trait
- trait method QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "static_resourcesChanged") flag FINAL dispid 16
+ trait method QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "static_resourcesChanged") flag FINAL dispid 16
   method
-   refid "mx.formatters:DateBase/static_resourcesChanged"
+   refid "mx.formatters:DateBase/class/mx.formatters:DateBase/class/static_resourcesChanged"
    returns QName(PackageNamespace(""), "void")
    body
     maxstack 2
@@ -616,23 +616,23 @@ L17:
      pushscope
 
      findproperty        QName(PackageNamespace(""), "dayNamesLong")
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "dayNamesLongOverride")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "dayNamesLongOverride")
      setproperty         QName(PackageNamespace(""), "dayNamesLong")
 
      findproperty        QName(PackageNamespace(""), "dayNamesShort")
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "dayNamesShortOverride")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "dayNamesShortOverride")
      setproperty         QName(PackageNamespace(""), "dayNamesShort")
 
      findproperty        QName(PackageNamespace(""), "monthNamesLong")
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "monthNamesLongOverride")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "monthNamesLongOverride")
      setproperty         QName(PackageNamespace(""), "monthNamesLong")
 
      findproperty        QName(PackageNamespace(""), "monthNamesShort")
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "monthNamesShortOverride")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "monthNamesShortOverride")
      setproperty         QName(PackageNamespace(""), "monthNamesShort")
 
      findproperty        QName(PackageNamespace(""), "timeOfDay")
-     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "timeOfDayOverride")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "timeOfDayOverride")
      setproperty         QName(PackageNamespace(""), "timeOfDay")
 
      returnvoid
@@ -642,7 +642,7 @@ L17:
  end ; trait
  trait method QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "extractTokenDate") flag FINAL dispid 17
   method
-   refid "mx.formatters:DateBase/http://www.adobe.com/2006/flex/mx/internal:extractTokenDate"
+   refid "mx.formatters:DateBase/class/http://www.adobe.com/2006/flex/mx/internal:extractTokenDate"
    param QName(PackageNamespace(""), "Date")
    param QName(PackageNamespace(""), "Object")
    returns QName(PackageNamespace(""), "String")
@@ -677,19 +677,19 @@ L17:
      pushbyte            0
      setlocal            11
 
-     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "initialize")
-     callpropvoid        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "initialize"), 0
+     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "initialize")
+     callpropvoid        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "initialize"), 0
 
      pushstring          ""
      setlocal3
 
      findpropstrict      QName(PackageNamespace(""), "int")
      getlocal2
-     getproperty         Multiname("end", [PrivateNamespace("*", "mx.formatters:DateBase#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
+     getproperty         Multiname("end", [PrivateNamespace("*", "mx.formatters:DateBase/class#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase/class#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
      callproperty        QName(PackageNamespace(""), "int"), 1
      findpropstrict      QName(PackageNamespace(""), "int")
      getlocal2
-     getproperty         Multiname("begin", [PrivateNamespace("*", "mx.formatters:DateBase#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
+     getproperty         Multiname("begin", [PrivateNamespace("*", "mx.formatters:DateBase/class#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase/class#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
      callproperty        QName(PackageNamespace(""), "int"), 1
      subtract
      convert_i
@@ -719,12 +719,12 @@ L46:
      pushbyte            4
      ifngt               L56
 
-     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "setValue")
+     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "setValue")
      findpropstrict      QName(PackageNamespace(""), "Number")
      getlocal            7
      callproperty        QName(PackageNamespace(""), "Number"), 1
      getlocal            4
-     callproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "setValue"), 2
+     callproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "setValue"), 2
      returnvalue
 
 L56:
@@ -746,10 +746,10 @@ L58:
 
      inclocal_i          8
      getlocal3
-     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "setValue")
+     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "setValue")
      getlocal            8
      getlocal            4
-     callproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "setValue"), 2
+     callproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "setValue"), 2
      add
      coerce_s
      setlocal3
@@ -764,13 +764,13 @@ L79:
 
      getlex              QName(PackageNamespace(""), "monthNamesShort")
      getlocal            8
-     getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:DateBase#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
+     getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:DateBase/class#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase/class#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
      returnvalue
 
 L86:
      getlex              QName(PackageNamespace(""), "monthNamesLong")
      getlocal            8
-     getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:DateBase#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
+     getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:DateBase/class#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase/class#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
      returnvalue
 
 L90:
@@ -783,10 +783,10 @@ L90:
      setlocal            5
 
      getlocal3
-     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "setValue")
+     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "setValue")
      getlocal            5
      getlocal            4
-     callproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "setValue"), 2
+     callproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "setValue"), 2
      add
      coerce_s
      setlocal3
@@ -808,10 +808,10 @@ L107:
      ifnlt               L127
 
      getlocal3
-     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "setValue")
+     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "setValue")
      getlocal            5
      getlocal            4
-     callproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "setValue"), 2
+     callproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "setValue"), 2
      add
      coerce_s
      setlocal3
@@ -826,13 +826,13 @@ L127:
 
      getlex              QName(PackageNamespace(""), "dayNamesShort")
      getlocal            5
-     getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:DateBase#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
+     getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:DateBase/class#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase/class#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
      returnvalue
 
 L134:
      getlex              QName(PackageNamespace(""), "dayNamesLong")
      getlocal            5
-     getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:DateBase#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
+     getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:DateBase/class#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase/class#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
      returnvalue
 
 L138:
@@ -850,13 +850,13 @@ L138:
 
      getlex              QName(PackageNamespace(""), "timeOfDay")
      pushbyte            0
-     getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:DateBase#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
+     getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:DateBase/class#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase/class#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
      returnvalue
 
 L152:
      getlex              QName(PackageNamespace(""), "timeOfDay")
      pushbyte            1
-     getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:DateBase#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
+     getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:DateBase/class#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase/class#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
      returnvalue
 
 L156:
@@ -877,10 +877,10 @@ L156:
 
 L168:
      getlocal3
-     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "setValue")
+     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "setValue")
      getlocal            6
      getlocal            4
-     callproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "setValue"), 2
+     callproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "setValue"), 2
      add
      coerce_s
      setlocal3
@@ -898,10 +898,10 @@ L178:
      setlocal            6
 
      getlocal3
-     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "setValue")
+     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "setValue")
      getlocal            6
      getlocal            4
-     callproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "setValue"), 2
+     callproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "setValue"), 2
      add
      coerce_s
      setlocal3
@@ -930,10 +930,10 @@ L195:
 
 L210:
      getlocal3
-     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "setValue")
+     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "setValue")
      getlocal            6
      getlocal            4
-     callproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "setValue"), 2
+     callproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "setValue"), 2
      add
      coerce_s
      setlocal3
@@ -972,10 +972,10 @@ L233:
 
 L241:
      getlocal3
-     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "setValue")
+     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "setValue")
      getlocal            6
      getlocal            4
-     callproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "setValue"), 2
+     callproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "setValue"), 2
      add
      coerce_s
      setlocal3
@@ -993,10 +993,10 @@ L251:
      setlocal            9
 
      getlocal3
-     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "setValue")
+     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "setValue")
      getlocal            9
      getlocal            4
-     callproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "setValue"), 2
+     callproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "setValue"), 2
      add
      coerce_s
      setlocal3
@@ -1014,10 +1014,10 @@ L268:
      setlocal            10
 
      getlocal3
-     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "setValue")
+     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "setValue")
      getlocal            10
      getlocal            4
-     callproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "setValue"), 2
+     callproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "setValue"), 2
      add
      coerce_s
      setlocal3
@@ -1035,10 +1035,10 @@ L285:
      setlocal            11
 
      getlocal3
-     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "setValue")
+     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "setValue")
      getlocal            11
      getlocal            4
-     callproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "setValue"), 2
+     callproperty        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "setValue"), 2
      add
      coerce_s
      setlocal3
@@ -1052,7 +1052,7 @@ L302:
 
 L304:
      getlocal2
-     getproperty         Multiname("token", [PrivateNamespace("*", "mx.formatters:DateBase#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
+     getproperty         Multiname("token", [PrivateNamespace("*", "mx.formatters:DateBase/class#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase/class#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
      setlocal            12
 
      pushstring          "Y"
@@ -1163,9 +1163,9 @@ L370:
    end ; body
   end ; method
  end ; trait
- trait method QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "setValue") flag FINAL dispid 18
+ trait method QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "setValue") flag FINAL dispid 18
   method
-   refid "mx.formatters:DateBase/setValue"
+   refid "mx.formatters:DateBase/class/mx.formatters:DateBase/class/setValue"
    param QName(PackageNamespace(""), "Object")
    param QName(PackageNamespace(""), "int")
    returns QName(PackageNamespace(""), "String")
@@ -1188,8 +1188,8 @@ L370:
      setlocal3
 
      getlocal1
-     callproperty        Multiname("toString", [PrivateNamespace("*", "mx.formatters:DateBase#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")]), 0
-     getproperty         Multiname("length", [PrivateNamespace("*", "mx.formatters:DateBase#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
+     callproperty        Multiname("toString", [PrivateNamespace("*", "mx.formatters:DateBase/class#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase/class#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")]), 0
+     getproperty         Multiname("length", [PrivateNamespace("*", "mx.formatters:DateBase/class#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase/class#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")])
      convert_i
      dup
      setlocal            4
@@ -1224,7 +1224,7 @@ L30:
 L33:
      getlocal3
      getlocal1
-     callproperty        Multiname("toString", [PrivateNamespace("*", "mx.formatters:DateBase#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")]), 0
+     callproperty        Multiname("toString", [PrivateNamespace("*", "mx.formatters:DateBase/class#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.formatters:DateBase/class#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateBase"), StaticProtectedNs("mx.formatters:DateBase")]), 0
      add
      coerce_s
      setlocal3
@@ -1235,9 +1235,9 @@ L33:
    end ; body
   end ; method
  end ; trait
- trait method QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "static_resourceManager_changeHandler") flag FINAL dispid 19
+ trait method QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "static_resourceManager_changeHandler") flag FINAL dispid 19
   method
-   refid "mx.formatters:DateBase/static_resourceManager_changeHandler"
+   refid "mx.formatters:DateBase/class/mx.formatters:DateBase/class/static_resourceManager_changeHandler"
    param QName(PackageNamespace("flash.events"), "Event")
    returns QName(PackageNamespace(""), "void")
    body
@@ -1249,8 +1249,8 @@ L33:
      getlocal0
      pushscope
 
-     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "static_resourcesChanged")
-     callpropvoid        QName(PrivateNamespace("*", "mx.formatters:DateBase#0"), "static_resourcesChanged"), 0
+     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "static_resourcesChanged")
+     callpropvoid        QName(PrivateNamespace("*", "mx.formatters:DateBase/class#0"), "static_resourcesChanged"), 0
 
      returnvoid
     end ; code

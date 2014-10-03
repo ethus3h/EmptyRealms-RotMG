@@ -7,7 +7,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-q4")
   iinit
-   refid "com.hurlant.crypto.symmetric:OFBMode/iinit"
+   refid "com.hurlant.crypto.symmetric:OFBMode/instance/init"
    param QName(PackageNamespace("com.hurlant.crypto.symmetric"), "ISymmetricKey")
    param QName(PackageNamespace("com.hurlant.crypto.symmetric"), "IPad")
    flag HAS_OPTIONAL
@@ -32,7 +32,7 @@ class
   end ; method
   trait method QName(PackageNamespace(""), "encrypt")
    method
-    refid "com.hurlant.crypto.symmetric:OFBMode/encrypt"
+    refid "com.hurlant.crypto.symmetric:OFBMode/instance/encrypt"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     returns QName(PackageNamespace(""), "void")
     body
@@ -52,7 +52,7 @@ class
       getlocal0
       getlocal1
       getlocal2
-      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode"), "core"), 2
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode/instance"), "core"), 2
 
       returnvoid
      end ; code
@@ -61,7 +61,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "decrypt")
    method
-    refid "com.hurlant.crypto.symmetric:OFBMode/decrypt"
+    refid "com.hurlant.crypto.symmetric:OFBMode/instance/decrypt"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     returns QName(PackageNamespace(""), "void")
     body
@@ -81,16 +81,16 @@ class
       getlocal0
       getlocal1
       getlocal2
-      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode"), "core"), 2
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode/instance"), "core"), 2
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode"), "core")
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode/instance"), "core")
    method
-    refid "com.hurlant.crypto.symmetric:OFBMode/core"
+    refid "com.hurlant.crypto.symmetric:OFBMode/instance/com.hurlant.crypto.symmetric:OFBMode/instance/core"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     returns QName(PackageNamespace(""), "void")
@@ -176,12 +176,12 @@ L48:
       getlocal            5
       getlocal            7
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode/core"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-q4"), StaticProtectedNs("_-q4"), StaticProtectedNs("_-026")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode/instance/com.hurlant.crypto.symmetric:OFBMode/instance/core"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-q4"), StaticProtectedNs("_-q4"), StaticProtectedNs("_-026")])
       getlocal2
       getlocal            7
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode/core"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-q4"), StaticProtectedNs("_-q4"), StaticProtectedNs("_-026")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode/instance/com.hurlant.crypto.symmetric:OFBMode/instance/core"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-q4"), StaticProtectedNs("_-q4"), StaticProtectedNs("_-026")])
       bitxor
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode/core"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-q4"), StaticProtectedNs("_-q4"), StaticProtectedNs("_-026")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:OFBMode/instance/com.hurlant.crypto.symmetric:OFBMode/instance/core"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-q4"), StaticProtectedNs("_-q4"), StaticProtectedNs("_-026")])
 
       getlocal            7
       increment
@@ -220,7 +220,7 @@ L81:
   end ; trait
   trait method QName(PackageNamespace(""), "toString")
    method
-    refid "com.hurlant.crypto.symmetric:OFBMode/toString"
+    refid "com.hurlant.crypto.symmetric:OFBMode/instance/toString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 2
@@ -242,7 +242,7 @@ L81:
   end ; trait
  end ; instance
  cinit
-  refid "com.hurlant.crypto.symmetric:OFBMode/cinit"
+  refid "com.hurlant.crypto.symmetric:OFBMode/class/init"
   body
    maxstack 1
    localcount 1

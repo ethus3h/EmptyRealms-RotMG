@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-01A")
   iinit
-   refid "_-4X:_-zU/iinit"
+   refid "_-4X:_-zU/instance/init"
    body
     maxstack 3
     localcount 3
@@ -23,16 +23,16 @@ class
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-4X:_-zU"), "_-ce") type QName(PackageNamespace("_-4X"), "_-0Dl") end
-  trait slot QName(PrivateNamespace("*", "_-4X:_-zU"), "_-d3") type QName(PackageNamespace("_-4X"), "_-qB") end
-  trait slot QName(PrivateNamespace("*", "_-4X:_-zU"), "_-v8") type QName(PackageNamespace("_-4X"), "_-qB") end
-  trait slot QName(PrivateNamespace("*", "_-4X:_-zU"), "_-rZ") type QName(PackageNamespace(""), "Boolean") end
-  trait slot QName(PrivateNamespace("*", "_-4X:_-zU"), "_-So") type QName(PackageNamespace(""), "Boolean") end
-  trait slot QName(PrivateNamespace("*", "_-4X:_-zU"), "_-VI") type QName(PackageNamespace(""), "Boolean") end
-  trait slot QName(PrivateNamespace("*", "_-4X:_-zU"), "_error") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-ce") type QName(PackageNamespace("_-4X"), "_-0Dl") end
+  trait slot QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-d3") type QName(PackageNamespace("_-4X"), "_-qB") end
+  trait slot QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-v8") type QName(PackageNamespace("_-4X"), "_-qB") end
+  trait slot QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-rZ") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-So") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-VI") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_error") type QName(PackageNamespace(""), "String") end
   trait method QName(PackageNamespace(""), "start") flag FINAL
    method
-    refid "_-4X:_-zU/start"
+    refid "_-4X:_-zU/instance/start"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -44,22 +44,22 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU"), "_-rZ")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-rZ")
       iftrue              L22
 
       getlocal0
       pushtrue
-      initproperty        QName(PrivateNamespace("*", "_-4X:_-zU"), "_-rZ")
+      initproperty        QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-rZ")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU"), "_-ce")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-ce")
       coerce_a
       dup
       iffalse             L19
 
       pop
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU"), "_-ce")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-ce")
       getlocal0
       callproperty        QName(PackageNamespace(""), "dispatch"), 1
       coerce_a
@@ -76,7 +76,7 @@ L22:
   end ; trait
   trait method QName(PackageNamespace(""), "reset") flag FINAL
    method
-    refid "_-4X:_-zU/reset"
+    refid "_-4X:_-zU/instance/reset"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -88,57 +88,58 @@ L22:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU"), "_-rZ")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-rZ")
       iffalse             L15
 
       getlocal0
       pushfalse
-      initproperty        QName(PrivateNamespace("*", "_-4X:_-zU"), "_-rZ")
+      initproperty        QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-rZ")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU"), "_-So")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-So")
       iftrue              L15
 
       findpropstrict      QName(PackageNamespace("flash.errors"), "IllegalOperationError")
       pushstring          "Unable to Task.reset() when a task is ongoing"
       constructprop       QName(PackageNamespace("flash.errors"), "IllegalOperationError"), 1
       throw
+
 L15:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU"), "_-ce")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-ce")
       coerce_a
       dup
       iffalse             L25
 
       pop
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU"), "_-ce")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-ce")
       callproperty        QName(PackageNamespace(""), "removeAll"), 0
       coerce_a
 L25:
       pop
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU"), "_-d3")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-d3")
       coerce_a
       dup
       iffalse             L36
 
       pop
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU"), "_-d3")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-d3")
       callproperty        QName(PackageNamespace(""), "removeAll"), 0
       coerce_a
 L36:
       pop
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU"), "_-v8")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-v8")
       coerce_a
       dup
       iffalse             L47
 
       pop
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU"), "_-v8")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-v8")
       callproperty        QName(PackageNamespace(""), "removeAll"), 0
       coerce_a
 L47:
@@ -153,7 +154,7 @@ L47:
   end ; trait
   trait method QName(ProtectedNamespace("_-01A"), "startTask")
    method
-    refid "_-4X:_-zU/_-01A:startTask"
+    refid "_-4X:_-zU/instance/_-01A:startTask"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 3
@@ -171,7 +172,7 @@ L47:
   end ; trait
   trait method QName(ProtectedNamespace("_-01A"), "onReset")
    method
-    refid "_-4X:_-zU/_-01A:onReset"
+    refid "_-4X:_-zU/instance/_-01A:onReset"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 3
@@ -189,7 +190,7 @@ L47:
   end ; trait
   trait method QName(ProtectedNamespace("_-01A"), "_-Ct") flag FINAL
    method
-    refid "_-4X:_-zU/_-01A:_-Ct"
+    refid "_-4X:_-zU/instance/_-01A:_-Ct"
     param QName(PackageNamespace(""), "Boolean")
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
@@ -206,25 +207,25 @@ L47:
 
       getlocal0
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "_-4X:_-zU"), "_-VI")
+      initproperty        QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-VI")
 
       getlocal0
       getlocal2
-      initproperty        QName(PrivateNamespace("*", "_-4X:_-zU"), "_error")
+      initproperty        QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_error")
 
       getlocal0
       pushtrue
-      initproperty        QName(PrivateNamespace("*", "_-4X:_-zU"), "_-So")
+      initproperty        QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-So")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU"), "_-d3")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-d3")
       coerce_a
       dup
       iffalse             L24
 
       pop
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU"), "_-d3")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-d3")
       getlocal0
       getlocal1
       getlocal2
@@ -233,14 +234,14 @@ L47:
 L24:
       pop
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU"), "_-v8")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-v8")
       coerce_a
       dup
       iffalse             L38
 
       pop
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU"), "_-v8")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-v8")
       getlocal0
       getlocal1
       getlocal2
@@ -255,7 +256,7 @@ L38:
   end ; trait
   trait getter QName(PackageNamespace(""), "_-04K") flag FINAL
    method
-    refid "_-4X:_-zU/_-04K/getter"
+    refid "_-4X:_-zU/instance/_-04K/getter"
     returns QName(PackageNamespace("_-sp"), "_-aJ")
     body
      maxstack 5
@@ -268,7 +269,7 @@ L38:
 
       getlocal0
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU"), "_-ce")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-ce")
       coerce              QName(PackageNamespace("_-4X"), "_-0Dl")
       dup
       iftrue              L12
@@ -281,7 +282,7 @@ L12:
       dup
       setlocal1
 
-      initproperty        QName(PrivateNamespace("*", "_-4X:_-zU"), "_-ce")
+      initproperty        QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-ce")
 
       getlocal1
       kill                1
@@ -292,7 +293,7 @@ L12:
   end ; trait
   trait getter QName(PackageNamespace(""), "_-iu") flag FINAL
    method
-    refid "_-4X:_-zU/_-iu/getter"
+    refid "_-4X:_-zU/instance/_-iu/getter"
     returns QName(PackageNamespace("_-4X"), "_-qB")
     body
      maxstack 5
@@ -305,7 +306,7 @@ L12:
 
       getlocal0
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU"), "_-d3")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-d3")
       coerce              QName(PackageNamespace("_-4X"), "_-qB")
       dup
       iftrue              L12
@@ -318,7 +319,7 @@ L12:
       dup
       setlocal1
 
-      initproperty        QName(PrivateNamespace("*", "_-4X:_-zU"), "_-d3")
+      initproperty        QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-d3")
 
       getlocal1
       kill                1
@@ -329,7 +330,7 @@ L12:
   end ; trait
   trait getter QName(PackageInternalNs("_-4X"), "_-0BO") flag FINAL
    method
-    refid "_-4X:_-zU/_-4X:_-0BO/getter"
+    refid "_-4X:_-zU/instance/_-4X:_-0BO/getter"
     returns QName(PackageNamespace("_-4X"), "_-qB")
     body
      maxstack 5
@@ -342,7 +343,7 @@ L12:
 
       getlocal0
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU"), "_-v8")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-v8")
       coerce              QName(PackageNamespace("_-4X"), "_-qB")
       dup
       iftrue              L12
@@ -355,7 +356,7 @@ L12:
       dup
       setlocal1
 
-      initproperty        QName(PrivateNamespace("*", "_-4X:_-zU"), "_-v8")
+      initproperty        QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-v8")
 
       getlocal1
       kill                1
@@ -366,7 +367,7 @@ L12:
   end ; trait
   trait getter QName(PackageNamespace(""), "_-0C8")
    method
-    refid "_-4X:_-zU/_-0C8/getter"
+    refid "_-4X:_-zU/instance/_-0C8/getter"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 3
@@ -378,7 +379,7 @@ L12:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU"), "_-rZ")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-rZ")
       returnvalue
      end ; code
     end ; body
@@ -386,7 +387,7 @@ L12:
   end ; trait
   trait getter QName(PackageNamespace(""), "_-qu")
    method
-    refid "_-4X:_-zU/_-qu/getter"
+    refid "_-4X:_-zU/instance/_-qu/getter"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 3
@@ -398,7 +399,7 @@ L12:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU"), "_-So")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-So")
       returnvalue
      end ; code
     end ; body
@@ -406,7 +407,7 @@ L12:
   end ; trait
   trait getter QName(PackageNamespace(""), "_-vm")
    method
-    refid "_-4X:_-zU/_-vm/getter"
+    refid "_-4X:_-zU/instance/_-vm/getter"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 3
@@ -418,7 +419,7 @@ L12:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU"), "_-VI")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_-VI")
       returnvalue
      end ; code
     end ; body
@@ -426,7 +427,7 @@ L12:
   end ; trait
   trait getter QName(PackageNamespace(""), "error")
    method
-    refid "_-4X:_-zU/error/getter"
+    refid "_-4X:_-zU/instance/error/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -438,7 +439,7 @@ L12:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU"), "_error")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-zU/instance"), "_error")
       returnvalue
      end ; code
     end ; body
@@ -446,7 +447,7 @@ L12:
   end ; trait
  end ; instance
  cinit
-  refid "_-4X:_-zU/cinit"
+  refid "_-4X:_-zU/class/init"
   body
    maxstack 3
    localcount 1

@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-0Ki")
   iinit
-   refid "_-zm:_-fp/iinit"
+   refid "_-zm:_-fp/instance/init"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "int")
    param QName(PackageNamespace(""), "int")
@@ -39,24 +39,24 @@ class
      dup
      pushstring          "Myriad Pro"
      constructprop       QName(PackageNamespace("com.company.ui"), "SimpleText"), 6
-     initproperty        QName(PrivateNamespace("*", "_-zm:_-fp"), "nameText_")
+     initproperty        QName(PrivateNamespace("*", "_-zm:_-fp/instance"), "nameText_")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-zm:_-fp"), "nameText_")
+     getproperty         QName(PrivateNamespace("*", "_-zm:_-fp/instance"), "nameText_")
      pushtrue
      callpropvoid        QName(PackageNamespace(""), "_-8Y"), 1
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-zm:_-fp"), "nameText_")
+     getproperty         QName(PrivateNamespace("*", "_-zm:_-fp/instance"), "nameText_")
      getlocal1
      setproperty         QName(PackageNamespace(""), "text")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-zm:_-fp"), "nameText_")
+     getproperty         QName(PrivateNamespace("*", "_-zm:_-fp/instance"), "nameText_")
      callpropvoid        QName(PackageNamespace(""), "updateMetrics"), 0
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-zm:_-fp"), "nameText_")
+     getproperty         QName(PrivateNamespace("*", "_-zm:_-fp/instance"), "nameText_")
      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
      pushbyte            0
      dup
@@ -66,13 +66,13 @@ class
      setproperty         QName(PackageNamespace(""), "filters")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-zm:_-fp"), "nameText_")
+     getproperty         QName(PrivateNamespace("*", "_-zm:_-fp/instance"), "nameText_")
      getlocal0
      getproperty         QName(PackageNamespace(""), "w_")
      pushbyte            2
      divide
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-zm:_-fp"), "nameText_")
+     getproperty         QName(PrivateNamespace("*", "_-zm:_-fp/instance"), "nameText_")
      getproperty         QName(PackageNamespace(""), "width")
      pushbyte            2
      divide
@@ -80,13 +80,13 @@ class
      setproperty         QName(PackageNamespace(""), "x")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-zm:_-fp"), "nameText_")
+     getproperty         QName(PrivateNamespace("*", "_-zm:_-fp/instance"), "nameText_")
      getlocal0
      getproperty         QName(PackageNamespace(""), "h_")
      pushbyte            2
      divide
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-zm:_-fp"), "nameText_")
+     getproperty         QName(PrivateNamespace("*", "_-zm:_-fp/instance"), "nameText_")
      getproperty         QName(PackageNamespace(""), "height")
      pushbyte            2
      divide
@@ -95,25 +95,25 @@ class
 
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-zm:_-fp"), "nameText_")
+     getproperty         QName(PrivateNamespace("*", "_-zm:_-fp/instance"), "nameText_")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
      getlocal0
      pushint             3552822
-     callpropvoid        QName(PrivateNamespace("*", "_-zm:_-fp"), "_-rC"), 1
+     callpropvoid        QName(PrivateNamespace("*", "_-zm:_-fp/instance"), "_-rC"), 1
 
      findpropstrict      QName(PackageNamespace(""), "addEventListener")
      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
      getproperty         QName(PackageNamespace(""), "MOUSE_OVER")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-zm:_-fp"), "onMouseOver")
+     getproperty         QName(PrivateNamespace("*", "_-zm:_-fp/instance"), "onMouseOver")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
      findpropstrict      QName(PackageNamespace(""), "addEventListener")
      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
      getproperty         QName(PackageNamespace(""), "MOUSE_OUT")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-zm:_-fp"), "onMouseOut")
+     getproperty         QName(PrivateNamespace("*", "_-zm:_-fp/instance"), "onMouseOut")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
      returnvoid
@@ -122,10 +122,10 @@ class
   end ; method
   trait slot QName(PackageNamespace(""), "w_") type QName(PackageNamespace(""), "int") end
   trait slot QName(PackageNamespace(""), "h_") type QName(PackageNamespace(""), "int") end
-  trait slot QName(PrivateNamespace("*", "_-zm:_-fp"), "nameText_") type QName(PackageNamespace("com.company.ui"), "SimpleText") end
+  trait slot QName(PrivateNamespace("*", "_-zm:_-fp/instance"), "nameText_") type QName(PackageNamespace("com.company.ui"), "SimpleText") end
   trait method QName(PackageNamespace(""), "getValue")
    method
-    refid "_-zm:_-fp/getValue"
+    refid "_-zm:_-fp/instance/getValue"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -137,16 +137,16 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-zm:_-fp"), "nameText_")
+      getproperty         QName(PrivateNamespace("*", "_-zm:_-fp/instance"), "nameText_")
       getproperty         QName(PackageNamespace(""), "text")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-zm:_-fp"), "onMouseOver")
+  trait method QName(PrivateNamespace("*", "_-zm:_-fp/instance"), "onMouseOver")
    method
-    refid "_-zm:_-fp/onMouseOver"
+    refid "_-zm:_-fp/instance/_-zm:_-fp/instance/onMouseOver"
     param QName(PackageNamespace("flash.events"), "MouseEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -160,16 +160,16 @@ class
 
       getlocal0
       pushint             5658198
-      callpropvoid        QName(PrivateNamespace("*", "_-zm:_-fp"), "_-rC"), 1
+      callpropvoid        QName(PrivateNamespace("*", "_-zm:_-fp/instance"), "_-rC"), 1
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-zm:_-fp"), "onMouseOut")
+  trait method QName(PrivateNamespace("*", "_-zm:_-fp/instance"), "onMouseOut")
    method
-    refid "_-zm:_-fp/onMouseOut"
+    refid "_-zm:_-fp/instance/_-zm:_-fp/instance/onMouseOut"
     param QName(PackageNamespace("flash.events"), "MouseEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -183,16 +183,16 @@ class
 
       getlocal0
       pushint             3552822
-      callpropvoid        QName(PrivateNamespace("*", "_-zm:_-fp"), "_-rC"), 1
+      callpropvoid        QName(PrivateNamespace("*", "_-zm:_-fp/instance"), "_-rC"), 1
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-zm:_-fp"), "_-rC")
+  trait method QName(PrivateNamespace("*", "_-zm:_-fp/instance"), "_-rC")
    method
-    refid "_-zm:_-fp/_-rC"
+    refid "_-zm:_-fp/instance/_-zm:_-fp/instance/_-rC"
     param QName(PackageNamespace(""), "uint")
     returns QName(PackageNamespace(""), "void")
     body
@@ -239,7 +239,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-zm:_-fp/cinit"
+  refid "_-zm:_-fp/class/init"
   body
    maxstack 3
    localcount 1

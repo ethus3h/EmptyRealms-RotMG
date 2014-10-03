@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-ot")
   iinit
-   refid "com.company.assembleegameclient.screens.charrects:CharacterRect/iinit"
+   refid "com.company.assembleegameclient.screens.charrects:CharacterRect/instance/init"
    param QName(PackageNamespace(""), "uint")
    param QName(PackageNamespace(""), "uint")
    body
@@ -23,24 +23,24 @@ class
 
      getlocal0
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect"), "color_")
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "color_")
 
      getlocal0
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect"), "overColor_")
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "overColor_")
 
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
      constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
-     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect"), "box_")
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "box_")
 
      getlocal0
      pushfalse
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect"), "drawBox"), 1
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "drawBox"), 1
 
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect"), "box_")
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "box_")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
      findpropstrict      QName(PackageNamespace(""), "addEventListener")
@@ -61,12 +61,12 @@ class
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect"), "color_") type QName(PackageNamespace(""), "uint") end
-  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect"), "overColor_") type QName(PackageNamespace(""), "uint") end
-  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect"), "box_") type QName(PackageNamespace("flash.display"), "Shape") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "color_") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "overColor_") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "box_") type QName(PackageNamespace("flash.display"), "Shape") end
   trait method QName(ProtectedNamespace("_-ot"), "onMouseOver")
    method
-    refid "com.company.assembleegameclient.screens.charrects:CharacterRect/_-ot:onMouseOver"
+    refid "com.company.assembleegameclient.screens.charrects:CharacterRect/instance/_-ot:onMouseOver"
     param QName(PackageNamespace("flash.events"), "MouseEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -80,7 +80,7 @@ class
 
       getlocal0
       pushtrue
-      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect"), "drawBox"), 1
+      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "drawBox"), 1
 
       returnvoid
      end ; code
@@ -89,7 +89,7 @@ class
   end ; trait
   trait method QName(ProtectedNamespace("_-ot"), "onRollOut")
    method
-    refid "com.company.assembleegameclient.screens.charrects:CharacterRect/_-ot:onRollOut"
+    refid "com.company.assembleegameclient.screens.charrects:CharacterRect/instance/_-ot:onRollOut"
     param QName(PackageNamespace("flash.events"), "MouseEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -103,16 +103,16 @@ class
 
       getlocal0
       pushfalse
-      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect"), "drawBox"), 1
+      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "drawBox"), 1
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect"), "drawBox")
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "drawBox")
    method
-    refid "com.company.assembleegameclient.screens.charrects:CharacterRect/drawBox"
+    refid "com.company.assembleegameclient.screens.charrects:CharacterRect/instance/com.company.assembleegameclient.screens.charrects:CharacterRect/instance/drawBox"
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
     body
@@ -125,7 +125,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect"), "box_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "box_")
       getproperty         QName(PackageNamespace(""), "graphics")
       coerce              QName(PackageNamespace("flash.display"), "Graphics")
       setlocal2
@@ -138,13 +138,13 @@ class
       iffalse             L16
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect"), "overColor_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "overColor_")
       convert_u
       jump                L19
 
 L16:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect"), "color_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRect/instance"), "color_")
       convert_u
 L19:
       callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
@@ -166,7 +166,7 @@ L19:
   end ; trait
  end ; instance
  cinit
-  refid "com.company.assembleegameclient.screens.charrects:CharacterRect/cinit"
+  refid "com.company.assembleegameclient.screens.charrects:CharacterRect/class/init"
   body
    maxstack 2
    localcount 1

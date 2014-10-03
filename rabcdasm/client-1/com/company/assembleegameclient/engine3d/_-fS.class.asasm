@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-Yx")
   iinit
-   refid "com.company.assembleegameclient.engine3d:_-fS/iinit"
+   refid "com.company.assembleegameclient.engine3d:_-fS/instance/init"
    body
     maxstack 3
     localcount 3
@@ -25,7 +25,7 @@ class
   end ; method
  end ; instance
  cinit
-  refid "com.company.assembleegameclient.engine3d:_-fS/cinit"
+  refid "com.company.assembleegameclient.engine3d:_-fS/class/init"
   body
    maxstack 4
    localcount 3
@@ -36,8 +36,8 @@ class
     pushscope
 
     findproperty        QName(PackageNamespace(""), "LIGHT_VECTOR")
-    findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-fS"), "_-M0")
-    callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-fS"), "_-M0"), 0
+    findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-fS/class/init"), "_-M0")
+    callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-fS/class/init"), "_-M0"), 0
     initproperty        QName(PackageNamespace(""), "LIGHT_VECTOR")
 
     returnvoid
@@ -47,7 +47,7 @@ class
  trait const QName(PackageNamespace(""), "LIGHT_VECTOR") slotid 1 type QName(PackageNamespace("flash.geom"), "Vector3D") end
  trait method QName(PackageNamespace(""), "_-sq") flag FINAL dispid 3
   method
-   refid "com.company.assembleegameclient.engine3d:_-fS/_-sq"
+   refid "com.company.assembleegameclient.engine3d:_-fS/class/_-sq"
    param QName(PackageNamespace("flash.geom"), "Vector3D")
    param QName(PackageNamespace(""), "Number")
    returns QName(PackageNamespace(""), "Number")
@@ -83,9 +83,9 @@ class
    end ; body
   end ; method
  end ; trait
- trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-fS"), "_-M0") flag FINAL dispid 4
+ trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-fS/class/init"), "_-M0") flag FINAL dispid 4
   method
-   refid "com.company.assembleegameclient.engine3d:_-fS/_-M0"
+   refid "com.company.assembleegameclient.engine3d:_-fS/class/com.company.assembleegameclient.engine3d:_-fS/class/init/_-M0"
    returns QName(PackageNamespace("flash.geom"), "Vector3D")
    body
     maxstack 6

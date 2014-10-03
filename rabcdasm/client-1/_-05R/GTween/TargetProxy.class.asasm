@@ -5,7 +5,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("GTween.as$35:TargetProxy")
   iinit
-   refid "_-05R:GTween/TargetProxy/iinit"
+   refid "_-05R:GTween/TargetProxy/instance/init"
    param QName(PackageNamespace("_-05R"), "GTween")
    returns QName(PackageNamespace(""), "void")
    body
@@ -22,16 +22,16 @@ class
 
      getlocal0
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "_-05R:GTween/TargetProxy"), "tween")
+     initproperty        QName(PrivateNamespace("*", "_-05R:GTween/TargetProxy/instance"), "tween")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-05R:GTween/TargetProxy"), "tween") type QName(PackageNamespace("_-05R"), "GTween") end
+  trait slot QName(PrivateNamespace("*", "_-05R:GTween/TargetProxy/instance"), "tween") type QName(PackageNamespace("_-05R"), "GTween") end
   trait method QName(Namespace("http://www.adobe.com/2006/actionscript/flash/proxy"), "callProperty") flag OVERRIDE
    method
-    refid "_-05R:GTween/TargetProxy/http://www.adobe.com/2006/actionscript/flash/proxy:callProperty"
+    refid "_-05R:GTween/TargetProxy/instance/http://www.adobe.com/2006/actionscript/flash/proxy:callProperty"
     param null
     flag NEED_REST
     body
@@ -44,13 +44,13 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-05R:GTween/TargetProxy"), "tween")
+      getproperty         QName(PrivateNamespace("*", "_-05R:GTween/TargetProxy/instance"), "tween")
       getproperty         QName(PackageNamespace(""), "target")
       getlocal1
-      getproperty         MultinameL([PackageNamespace(""), PrivateNamespace("*", "_-05R:GTween#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-05R:GTween/TargetProxy"), ProtectedNamespace("GTween.as$35:TargetProxy"), StaticProtectedNs("GTween.as$35:TargetProxy"), StaticProtectedNs("flash.utils:Proxy")])
+      getproperty         MultinameL([PackageNamespace(""), PrivateNamespace("*", "_-05R:GTween#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-05R:GTween/TargetProxy/instance"), ProtectedNamespace("GTween.as$35:TargetProxy"), StaticProtectedNs("GTween.as$35:TargetProxy"), StaticProtectedNs("flash.utils:Proxy")])
       pushnull
       getlocal2
-      callproperty        Multiname("apply", [PackageNamespace(""), PrivateNamespace("*", "_-05R:GTween#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-05R:GTween/TargetProxy"), ProtectedNamespace("GTween.as$35:TargetProxy"), StaticProtectedNs("GTween.as$35:TargetProxy"), StaticProtectedNs("flash.utils:Proxy")]), 2
+      callproperty        Multiname("apply", [PackageNamespace(""), PrivateNamespace("*", "_-05R:GTween#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-05R:GTween/TargetProxy/instance"), ProtectedNamespace("GTween.as$35:TargetProxy"), StaticProtectedNs("GTween.as$35:TargetProxy"), StaticProtectedNs("flash.utils:Proxy")]), 2
       returnvalue
      end ; code
     end ; body
@@ -58,7 +58,7 @@ class
   end ; trait
   trait method QName(Namespace("http://www.adobe.com/2006/actionscript/flash/proxy"), "getProperty") flag OVERRIDE
    method
-    refid "_-05R:GTween/TargetProxy/http://www.adobe.com/2006/actionscript/flash/proxy:getProperty"
+    refid "_-05R:GTween/TargetProxy/instance/http://www.adobe.com/2006/actionscript/flash/proxy:getProperty"
     param null
     body
      maxstack 2
@@ -70,7 +70,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-05R:GTween/TargetProxy"), "tween")
+      getproperty         QName(PrivateNamespace("*", "_-05R:GTween/TargetProxy/instance"), "tween")
       getlocal1
       callproperty        QName(PackageNamespace(""), "getValue"), 1
       convert_d
@@ -82,10 +82,10 @@ class
       iffalse             L19
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-05R:GTween/TargetProxy"), "tween")
+      getproperty         QName(PrivateNamespace("*", "_-05R:GTween/TargetProxy/instance"), "tween")
       getproperty         QName(PackageNamespace(""), "target")
       getlocal1
-      getproperty         MultinameL([PackageNamespace(""), PrivateNamespace("*", "_-05R:GTween#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-05R:GTween/TargetProxy"), ProtectedNamespace("GTween.as$35:TargetProxy"), StaticProtectedNs("GTween.as$35:TargetProxy"), StaticProtectedNs("flash.utils:Proxy")])
+      getproperty         MultinameL([PackageNamespace(""), PrivateNamespace("*", "_-05R:GTween#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-05R:GTween/TargetProxy/instance"), ProtectedNamespace("GTween.as$35:TargetProxy"), StaticProtectedNs("GTween.as$35:TargetProxy"), StaticProtectedNs("flash.utils:Proxy")])
       coerce_a
       jump                L21
 
@@ -100,7 +100,7 @@ L21:
   end ; trait
   trait method QName(Namespace("http://www.adobe.com/2006/actionscript/flash/proxy"), "setProperty") flag OVERRIDE
    method
-    refid "_-05R:GTween/TargetProxy/http://www.adobe.com/2006/actionscript/flash/proxy:setProperty"
+    refid "_-05R:GTween/TargetProxy/instance/http://www.adobe.com/2006/actionscript/flash/proxy:setProperty"
     param null
     param null
     returns QName(PackageNamespace(""), "void")
@@ -136,17 +136,17 @@ L18:
       iffalse             L26
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-05R:GTween/TargetProxy"), "tween")
+      getproperty         QName(PrivateNamespace("*", "_-05R:GTween/TargetProxy/instance"), "tween")
       getproperty         QName(PackageNamespace(""), "target")
       getlocal1
       getlocal2
-      setproperty         MultinameL([PackageNamespace(""), PrivateNamespace("*", "_-05R:GTween#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-05R:GTween/TargetProxy"), ProtectedNamespace("GTween.as$35:TargetProxy"), StaticProtectedNs("GTween.as$35:TargetProxy"), StaticProtectedNs("flash.utils:Proxy")])
+      setproperty         MultinameL([PackageNamespace(""), PrivateNamespace("*", "_-05R:GTween#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-05R:GTween/TargetProxy/instance"), ProtectedNamespace("GTween.as$35:TargetProxy"), StaticProtectedNs("GTween.as$35:TargetProxy"), StaticProtectedNs("flash.utils:Proxy")])
 
       jump                L35
 
 L26:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-05R:GTween/TargetProxy"), "tween")
+      getproperty         QName(PrivateNamespace("*", "_-05R:GTween/TargetProxy/instance"), "tween")
       findpropstrict      QName(PackageNamespace(""), "String")
       getlocal1
       callproperty        QName(PackageNamespace(""), "String"), 1
@@ -163,7 +163,7 @@ L35:
   end ; trait
   trait method QName(Namespace("http://www.adobe.com/2006/actionscript/flash/proxy"), "deleteProperty") flag OVERRIDE
    method
-    refid "_-05R:GTween/TargetProxy/http://www.adobe.com/2006/actionscript/flash/proxy:deleteProperty"
+    refid "_-05R:GTween/TargetProxy/instance/http://www.adobe.com/2006/actionscript/flash/proxy:deleteProperty"
     param null
     returns QName(PackageNamespace(""), "Boolean")
     body
@@ -176,7 +176,7 @@ L35:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-05R:GTween/TargetProxy"), "tween")
+      getproperty         QName(PrivateNamespace("*", "_-05R:GTween/TargetProxy/instance"), "tween")
       getlocal1
       callpropvoid        QName(PackageNamespace(""), "_-V6"), 1
 
@@ -188,7 +188,7 @@ L35:
   end ; trait
  end ; instance
  cinit
-  refid "_-05R:GTween/TargetProxy/cinit"
+  refid "_-05R:GTween/TargetProxy/class/init"
   body
    maxstack 1
    localcount 1

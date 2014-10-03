@@ -7,7 +7,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-07b")
   iinit
-   refid "com.hurlant.crypto.symmetric:DESKey/iinit"
+   refid "com.hurlant.crypto.symmetric:DESKey/instance/init"
    param QName(PackageNamespace("flash.utils"), "ByteArray")
    body
     maxstack 5
@@ -50,7 +50,7 @@ class
   trait slot QName(ProtectedNamespace("_-07b"), "decKey") type QName(PackageNamespace(""), "Array") end
   trait method QName(PackageNamespace(""), "getBlockSize")
    method
-    refid "com.hurlant.crypto.symmetric:DESKey/getBlockSize"
+    refid "com.hurlant.crypto.symmetric:DESKey/instance/getBlockSize"
     returns QName(PackageNamespace(""), "uint")
     body
      maxstack 1
@@ -69,7 +69,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "decrypt")
    method
-    refid "com.hurlant.crypto.symmetric:DESKey/decrypt"
+    refid "com.hurlant.crypto.symmetric:DESKey/instance/decrypt"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     param QName(PackageNamespace(""), "uint")
     returns QName(PackageNamespace(""), "void")
@@ -100,7 +100,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "dispose")
    method
-    refid "com.hurlant.crypto.symmetric:DESKey/dispose"
+    refid "com.hurlant.crypto.symmetric:DESKey/instance/dispose"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 3
@@ -127,7 +127,7 @@ L9:
       getproperty         QName(ProtectedNamespace("_-07b"), "encKey")
       getlocal1
       pushbyte            0
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
 
       getlocal1
       increment
@@ -153,7 +153,7 @@ L28:
       getproperty         QName(ProtectedNamespace("_-07b"), "decKey")
       getlocal1
       pushbyte            0
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
 
       getlocal1
       increment
@@ -187,7 +187,7 @@ L53:
       getproperty         QName(ProtectedNamespace("_-07b"), "key")
       getlocal1
       pushbyte            0
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
 
       getlocal1
       increment
@@ -220,7 +220,7 @@ L63:
   end ; trait
   trait method QName(PackageNamespace(""), "encrypt")
    method
-    refid "com.hurlant.crypto.symmetric:DESKey/encrypt"
+    refid "com.hurlant.crypto.symmetric:DESKey/instance/encrypt"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     param QName(PackageNamespace(""), "uint")
     returns QName(PackageNamespace(""), "void")
@@ -251,7 +251,7 @@ L63:
   end ; trait
   trait method QName(ProtectedNamespace("_-07b"), "generateWorkingKey")
    method
-    refid "com.hurlant.crypto.symmetric:DESKey/_-07b:generateWorkingKey"
+    refid "com.hurlant.crypto.symmetric:DESKey/instance/_-07b:generateWorkingKey"
     param QName(PackageNamespace(""), "Boolean")
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     param QName(PackageNamespace(""), "uint")
@@ -307,9 +307,9 @@ L63:
 
 L32:
       label
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "pc1")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "pc1")
       getlocal            8
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       convert_u
       setlocal            7
 
@@ -321,17 +321,17 @@ L32:
       pushbyte            3
       urshift
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "bytebit")
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "bytebit")
       getlocal            7
       pushbyte            7
       bitand
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       bitand
       pushbyte            0
       equals
       not
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
 
       getlocal            8
       increment
@@ -386,11 +386,11 @@ L84:
       dup
       setlocal            14
 
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
 
       getlocal            14
       kill                14
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
 
       pushbyte            0
       convert_u
@@ -401,9 +401,9 @@ L84:
 L104:
       label
       getlocal            8
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "totrot")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "totrot")
       getlocal            9
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       add
       convert_u
       dup
@@ -416,8 +416,8 @@ L104:
       getlocal            8
       getlocal            5
       getlocal            7
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
 
       jump                L130
 
@@ -428,8 +428,8 @@ L122:
       getlocal            7
       pushbyte            28
       subtract
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
 
 L130:
       getlocal            8
@@ -451,9 +451,9 @@ L134:
 L141:
       label
       getlocal            8
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "totrot")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "totrot")
       getlocal            9
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       add
       convert_u
       dup
@@ -466,8 +466,8 @@ L141:
       getlocal            8
       getlocal            5
       getlocal            7
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
 
       jump                L167
 
@@ -478,8 +478,8 @@ L159:
       getlocal            7
       pushbyte            28
       subtract
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
 
 L167:
       getlocal            8
@@ -501,43 +501,43 @@ L171:
 L178:
       label
       getlocal            6
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "pc2")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "pc2")
       getlocal            8
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       iffalse             L195
 
       getlocal            4
       getlocal            10
       getlocal            4
       getlocal            10
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "bigbyte")
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "bigbyte")
       getlocal            8
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       bitor
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
 
 L195:
       getlocal            6
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "pc2")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "pc2")
       getlocal            8
       pushbyte            24
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       iffalse             L213
 
       getlocal            4
       getlocal            11
       getlocal            4
       getlocal            11
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "bigbyte")
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "bigbyte")
       getlocal            8
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       bitor
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
 
 L213:
       getlocal            8
@@ -570,7 +570,7 @@ L231:
       label
       getlocal            4
       getlocal            9
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       convert_u
       setlocal            12
 
@@ -578,7 +578,7 @@ L231:
       getlocal            9
       pushbyte            1
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       convert_u
       setlocal            13
 
@@ -607,7 +607,7 @@ L231:
       pushbyte            6
       urshift
       bitor
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
 
       getlocal            4
       getlocal            9
@@ -634,7 +634,7 @@ L231:
       pushbyte            63
       bitand
       bitor
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
 
       getlocal            9
       pushbyte            2
@@ -655,7 +655,7 @@ L301:
   end ; trait
   trait method QName(ProtectedNamespace("_-07b"), "desFunc")
    method
-    refid "com.hurlant.crypto.symmetric:DESKey/_-07b:desFunc"
+    refid "com.hurlant.crypto.symmetric:DESKey/instance/_-07b:desFunc"
     param QName(PackageNamespace(""), "Array")
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     param QName(PackageNamespace(""), "uint")
@@ -691,7 +691,7 @@ L301:
       getlocal3
       pushbyte            0
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       pushshort           255
       bitand
       pushbyte            24
@@ -704,7 +704,7 @@ L301:
       getlocal3
       pushbyte            1
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       pushshort           255
       bitand
       pushbyte            16
@@ -718,7 +718,7 @@ L301:
       getlocal3
       pushbyte            2
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       pushshort           255
       bitand
       pushbyte            8
@@ -732,7 +732,7 @@ L301:
       getlocal3
       pushbyte            3
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       pushshort           255
       bitand
       bitor
@@ -743,7 +743,7 @@ L301:
       getlocal3
       pushbyte            4
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       pushshort           255
       bitand
       pushbyte            24
@@ -756,7 +756,7 @@ L301:
       getlocal3
       pushbyte            5
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       pushshort           255
       bitand
       pushbyte            16
@@ -770,7 +770,7 @@ L301:
       getlocal3
       pushbyte            6
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       pushshort           255
       bitand
       pushbyte            8
@@ -784,7 +784,7 @@ L301:
       getlocal3
       pushbyte            7
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       pushshort           255
       bitand
       bitor
@@ -960,51 +960,51 @@ L241:
       multiply
       pushbyte            0
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       bitxor
       convert_u
       setlocal            6
 
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP7")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP7")
       getlocal            6
       pushbyte            63
       bitand
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       convert_u
       dup
       setlocal            10
 
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP5")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP5")
       getlocal            6
       pushbyte            8
       urshift
       pushbyte            63
       bitand
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       bitor
       convert_u
       dup
       setlocal            10
 
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP3")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP3")
       getlocal            6
       pushbyte            16
       urshift
       pushbyte            63
       bitand
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       bitor
       convert_u
       dup
       setlocal            10
 
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP1")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP1")
       getlocal            6
       pushbyte            24
       urshift
       pushbyte            63
       bitand
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       bitor
       convert_u
       setlocal            10
@@ -1016,53 +1016,53 @@ L241:
       multiply
       pushbyte            1
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       bitxor
       convert_u
       setlocal            6
 
       getlocal            10
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP8")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP8")
       getlocal            6
       pushbyte            63
       bitand
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       bitor
       convert_u
       dup
       setlocal            10
 
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP6")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP6")
       getlocal            6
       pushbyte            8
       urshift
       pushbyte            63
       bitand
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       bitor
       convert_u
       dup
       setlocal            10
 
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP4")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP4")
       getlocal            6
       pushbyte            16
       urshift
       pushbyte            63
       bitand
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       bitor
       convert_u
       dup
       setlocal            10
 
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP2")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP2")
       getlocal            6
       pushbyte            24
       urshift
       pushbyte            63
       bitand
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       bitor
       convert_u
       setlocal            10
@@ -1090,51 +1090,51 @@ L241:
       multiply
       pushbyte            2
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       bitxor
       convert_u
       setlocal            6
 
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP7")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP7")
       getlocal            6
       pushbyte            63
       bitand
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       convert_u
       dup
       setlocal            10
 
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP5")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP5")
       getlocal            6
       pushbyte            8
       urshift
       pushbyte            63
       bitand
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       bitor
       convert_u
       dup
       setlocal            10
 
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP3")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP3")
       getlocal            6
       pushbyte            16
       urshift
       pushbyte            63
       bitand
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       bitor
       convert_u
       dup
       setlocal            10
 
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP1")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP1")
       getlocal            6
       pushbyte            24
       urshift
       pushbyte            63
       bitand
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       bitor
       convert_u
       setlocal            10
@@ -1146,53 +1146,53 @@ L241:
       multiply
       pushbyte            3
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       bitxor
       convert_u
       setlocal            6
 
       getlocal            10
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP8")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP8")
       getlocal            6
       pushbyte            63
       bitand
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       bitor
       convert_u
       dup
       setlocal            10
 
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP6")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP6")
       getlocal            6
       pushbyte            8
       urshift
       pushbyte            63
       bitand
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       bitor
       convert_u
       dup
       setlocal            10
 
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP4")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP4")
       getlocal            6
       pushbyte            16
       urshift
       pushbyte            63
       bitand
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       bitor
       convert_u
       dup
       setlocal            10
 
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP2")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP2")
       getlocal            6
       pushbyte            24
       urshift
       pushbyte            63
       bitand
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
       bitor
       convert_u
       setlocal            10
@@ -1358,7 +1358,7 @@ L482:
       urshift
       pushshort           255
       bitand
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
 
       getlocal            4
       getlocal            5
@@ -1369,7 +1369,7 @@ L482:
       urshift
       pushshort           255
       bitand
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
 
       getlocal            4
       getlocal            5
@@ -1380,7 +1380,7 @@ L482:
       urshift
       pushshort           255
       bitand
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
 
       getlocal            4
       getlocal            5
@@ -1389,7 +1389,7 @@ L482:
       getlocal            7
       pushshort           255
       bitand
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
 
       getlocal            4
       getlocal            5
@@ -1400,7 +1400,7 @@ L482:
       urshift
       pushshort           255
       bitand
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
 
       getlocal            4
       getlocal            5
@@ -1411,7 +1411,7 @@ L482:
       urshift
       pushshort           255
       bitand
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
 
       getlocal            4
       getlocal            5
@@ -1422,7 +1422,7 @@ L482:
       urshift
       pushshort           255
       bitand
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
 
       getlocal            4
       getlocal            5
@@ -1431,7 +1431,7 @@ L482:
       getlocal            8
       pushshort           255
       bitand
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), ProtectedNamespace("_-07b"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-07b")])
 
       returnvoid
      end ; code
@@ -1440,7 +1440,7 @@ L482:
   end ; trait
   trait method QName(PackageNamespace(""), "toString")
    method
-    refid "com.hurlant.crypto.symmetric:DESKey/toString"
+    refid "com.hurlant.crypto.symmetric:DESKey/instance/toString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -1459,7 +1459,7 @@ L482:
   end ; trait
  end ; instance
  cinit
-  refid "com.hurlant.crypto.symmetric:DESKey/cinit"
+  refid "com.hurlant.crypto.symmetric:DESKey/class/init"
   body
    maxstack 65
    localcount 1
@@ -1469,7 +1469,7 @@ L482:
     getlocal0
     pushscope
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "Df_Key")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "Df_Key")
     pushbyte            1
     pushbyte            35
     pushbyte            69
@@ -1495,9 +1495,9 @@ L482:
     pushbyte            69
     pushbyte            103
     newarray            24
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "Df_Key")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "Df_Key")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "bytebit")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "bytebit")
     pushshort           128
     pushbyte            64
     pushbyte            32
@@ -1507,9 +1507,9 @@ L482:
     pushbyte            2
     pushbyte            1
     newarray            8
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "bytebit")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "bytebit")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "bigbyte")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "bigbyte")
     pushint             8388608
     pushint             4194304
     pushint             2097152
@@ -1535,9 +1535,9 @@ L482:
     pushbyte            2
     pushbyte            1
     newarray            24
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "bigbyte")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "bigbyte")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "pc1")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "pc1")
     pushbyte            56
     pushbyte            48
     pushbyte            40
@@ -1595,9 +1595,9 @@ L482:
     pushbyte            11
     pushbyte            3
     newarray            56
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "pc1")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "pc1")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "totrot")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "totrot")
     pushbyte            1
     pushbyte            2
     pushbyte            4
@@ -1615,9 +1615,9 @@ L482:
     pushbyte            27
     pushbyte            28
     newarray            16
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "totrot")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "totrot")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "pc2")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "pc2")
     pushbyte            13
     pushbyte            16
     pushbyte            10
@@ -1667,9 +1667,9 @@ L482:
     pushbyte            28
     pushbyte            31
     newarray            48
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "pc2")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "pc2")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP1")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP1")
     pushint             16843776
     pushbyte            0
     pushint             65536
@@ -1735,9 +1735,9 @@ L482:
     pushbyte            0
     pushint             16842756
     newarray            64
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP1")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP1")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP2")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP2")
     pushdouble          2148565024
     pushdouble          2147516416
     pushint             32768
@@ -1803,9 +1803,9 @@ L482:
     pushdouble          2148565024
     pushint             1081344
     newarray            64
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP2")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP2")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP3")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP3")
     pushshort           520
     pushint             134349312
     pushbyte            0
@@ -1871,9 +1871,9 @@ L482:
     pushint             134348808
     pushint             131584
     newarray            64
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP3")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP3")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP4")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP4")
     pushint             8396801
     pushshort           8321
     pushshort           8321
@@ -1939,9 +1939,9 @@ L482:
     pushshort           8192
     pushint             8396928
     newarray            64
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP4")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP4")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP5")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP5")
     pushshort           256
     pushint             34078976
     pushint             34078720
@@ -2007,9 +2007,9 @@ L482:
     pushint             34078976
     pushint             1073742080
     newarray            64
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP5")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP5")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP6")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP6")
     pushint             536870928
     pushint             541065216
     pushshort           16384
@@ -2075,9 +2075,9 @@ L482:
     pushint             4194320
     pushint             536887312
     newarray            64
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP6")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP6")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP7")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP7")
     pushint             2097152
     pushint             69206018
     pushint             67110914
@@ -2143,9 +2143,9 @@ L482:
     pushshort           2048
     pushint             2097154
     newarray            64
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP7")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP7")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP8")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP8")
     pushint             268439616
     pushshort           4096
     pushint             262144
@@ -2211,24 +2211,24 @@ L482:
     pushint             268435456
     pushint             268701696
     newarray            64
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP8")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP8")
 
     returnvoid
    end ; code
   end ; body
  end ; method
- trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "Df_Key") slotid 1 type QName(PackageNamespace(""), "Array") end
- trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "bytebit") slotid 2 type QName(PackageNamespace(""), "Array") end
- trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "bigbyte") slotid 3 type QName(PackageNamespace(""), "Array") end
- trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "pc1") slotid 4 type QName(PackageNamespace(""), "Array") end
- trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "totrot") slotid 5 type QName(PackageNamespace(""), "Array") end
- trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "pc2") slotid 6 type QName(PackageNamespace(""), "Array") end
- trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP1") slotid 7 type QName(PackageNamespace(""), "Array") end
- trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP2") slotid 8 type QName(PackageNamespace(""), "Array") end
- trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP3") slotid 9 type QName(PackageNamespace(""), "Array") end
- trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP4") slotid 10 type QName(PackageNamespace(""), "Array") end
- trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP5") slotid 11 type QName(PackageNamespace(""), "Array") end
- trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP6") slotid 12 type QName(PackageNamespace(""), "Array") end
- trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP7") slotid 13 type QName(PackageNamespace(""), "Array") end
- trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey#0"), "SP8") slotid 14 type QName(PackageNamespace(""), "Array") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "Df_Key") slotid 1 type QName(PackageNamespace(""), "Array") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "bytebit") slotid 2 type QName(PackageNamespace(""), "Array") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "bigbyte") slotid 3 type QName(PackageNamespace(""), "Array") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "pc1") slotid 4 type QName(PackageNamespace(""), "Array") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "totrot") slotid 5 type QName(PackageNamespace(""), "Array") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "pc2") slotid 6 type QName(PackageNamespace(""), "Array") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP1") slotid 7 type QName(PackageNamespace(""), "Array") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP2") slotid 8 type QName(PackageNamespace(""), "Array") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP3") slotid 9 type QName(PackageNamespace(""), "Array") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP4") slotid 10 type QName(PackageNamespace(""), "Array") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP5") slotid 11 type QName(PackageNamespace(""), "Array") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP6") slotid 12 type QName(PackageNamespace(""), "Array") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP7") slotid 13 type QName(PackageNamespace(""), "Array") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:DESKey"), "SP8") slotid 14 type QName(PackageNamespace(""), "Array") end
 end ; class

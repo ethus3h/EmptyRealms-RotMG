@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-Z2")
   iinit
-   refid "_-Re:_-LZ/iinit"
+   refid "_-Re:_-LZ/instance/init"
    body
     maxstack 3
     localcount 3
@@ -57,7 +57,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "initialize") flag OVERRIDE
    method
-    refid "_-Re:_-LZ/initialize"
+    refid "_-Re:_-LZ/instance/initialize"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 5
@@ -78,21 +78,21 @@ class
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "COMPLETE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Re:_-LZ"), "onComplete")
+      getproperty         QName(PrivateNamespace("*", "_-Re:_-LZ/instance"), "onComplete")
       callpropvoid        QName(ProtectedNamespace("_-AB"), "_-b6"), 2
 
       findpropstrict      QName(ProtectedNamespace("_-AB"), "_-b6")
       getlex              QName(PackageNamespace("_-9R"), "_-j-")
       getproperty         QName(PackageNamespace(""), "RECONNECT")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Re:_-LZ"), "_-X3")
+      getproperty         QName(PrivateNamespace("*", "_-Re:_-LZ/instance"), "_-X3")
       callpropvoid        QName(ProtectedNamespace("_-AB"), "_-b6"), 2
 
       findpropstrict      QName(ProtectedNamespace("_-AB"), "_-b6")
       getlex              QName(PackageNamespace("_-9R"), "_-DX")
       getproperty         QName(PackageNamespace(""), "CLIENT_UPDATE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Re:_-LZ"), "_-Yz")
+      getproperty         QName(PrivateNamespace("*", "_-Re:_-LZ/instance"), "_-Yz")
       callpropvoid        QName(ProtectedNamespace("_-AB"), "_-b6"), 2
 
       returnvoid
@@ -102,7 +102,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "destroy") flag OVERRIDE
    method
-    refid "_-Re:_-LZ/destroy"
+    refid "_-Re:_-LZ/instance/destroy"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 5
@@ -123,21 +123,21 @@ class
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "COMPLETE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Re:_-LZ"), "onComplete")
+      getproperty         QName(PrivateNamespace("*", "_-Re:_-LZ/instance"), "onComplete")
       callpropvoid        QName(ProtectedNamespace("_-AB"), "_-0EK"), 2
 
       findpropstrict      QName(ProtectedNamespace("_-AB"), "_-0EK")
       getlex              QName(PackageNamespace("_-9R"), "_-DX")
       getproperty         QName(PackageNamespace(""), "CLIENT_UPDATE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Re:_-LZ"), "_-Yz")
+      getproperty         QName(PrivateNamespace("*", "_-Re:_-LZ/instance"), "_-Yz")
       callpropvoid        QName(ProtectedNamespace("_-AB"), "_-0EK"), 2
 
       findpropstrict      QName(ProtectedNamespace("_-AB"), "_-0EK")
       getlex              QName(PackageNamespace("_-9R"), "_-j-")
       getproperty         QName(PackageNamespace(""), "RECONNECT")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Re:_-LZ"), "_-X3")
+      getproperty         QName(PrivateNamespace("*", "_-Re:_-LZ/instance"), "_-X3")
       callpropvoid        QName(ProtectedNamespace("_-AB"), "_-0EK"), 2
 
       getlocal0
@@ -151,7 +151,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "_-n4")
    method
-    refid "_-Re:_-LZ/_-n4"
+    refid "_-Re:_-LZ/instance/_-n4"
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
     body
@@ -174,9 +174,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Re:_-LZ"), "onComplete")
+  trait method QName(PrivateNamespace("*", "_-Re:_-LZ/instance"), "onComplete")
    method
-    refid "_-Re:_-LZ/onComplete"
+    refid "_-Re:_-LZ/instance/_-Re:_-LZ/instance/onComplete"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -203,9 +203,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Re:_-LZ"), "_-Yz")
+  trait method QName(PrivateNamespace("*", "_-Re:_-LZ/instance"), "_-Yz")
    method
-    refid "_-Re:_-LZ/_-Yz"
+    refid "_-Re:_-LZ/instance/_-Re:_-LZ/instance/_-Yz"
     param QName(PackageNamespace("_-9R"), "_-DX")
     returns QName(PackageNamespace(""), "void")
     body
@@ -232,9 +232,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Re:_-LZ"), "_-X3")
+  trait method QName(PrivateNamespace("*", "_-Re:_-LZ/instance"), "_-X3")
    method
-    refid "_-Re:_-LZ/_-X3"
+    refid "_-Re:_-LZ/instance/_-Re:_-LZ/instance/_-X3"
     param QName(PackageNamespace("_-9R"), "_-j-")
     returns QName(PackageNamespace(""), "void")
     body
@@ -301,7 +301,7 @@ L7:
   end ; trait
  end ; instance
  cinit
-  refid "_-Re:_-LZ/cinit"
+  refid "_-Re:_-LZ/class/init"
   body
    maxstack 3
    localcount 1

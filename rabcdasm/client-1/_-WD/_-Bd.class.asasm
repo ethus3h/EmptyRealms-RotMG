@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-G1")
   iinit
-   refid "_-WD:_-Bd/iinit"
+   refid "_-WD:_-Bd/instance/init"
    body
     maxstack 3
     localcount 3
@@ -27,10 +27,10 @@ class
    metadata "Inject"
    end ; metadata
   end ; trait
-  trait const QName(PrivateNamespace("*", "_-WD:_-Bd#0"), "_-CJ") type QName(PackageNamespace(""), "String") value Utf8("Desktop") end
+  trait const QName(PrivateNamespace("*", "_-WD:_-Bd/instance"), "_-CJ") type QName(PackageNamespace(""), "String") value Utf8("Desktop") end
   trait method QName(PackageNamespace(""), "_-0Bz")
    method
-    refid "_-WD:_-Bd/_-0Bz"
+    refid "_-WD:_-Bd/instance/_-0Bz"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 4
@@ -44,7 +44,7 @@ class
       getlex              QName(PackageNamespace("flash.system"), "Capabilities")
       getproperty         QName(PackageNamespace(""), "playerType")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-WD:_-Bd#0"), "_-CJ")
+      getproperty         QName(PrivateNamespace("*", "_-WD:_-Bd/instance"), "_-CJ")
       equals
       not
       returnvalue
@@ -54,7 +54,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "_-Hz")
    method
-    refid "_-WD:_-Bd/_-Hz"
+    refid "_-WD:_-Bd/instance/_-Hz"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 4
@@ -68,7 +68,7 @@ class
       getlex              QName(PackageNamespace("flash.system"), "Capabilities")
       getproperty         QName(PackageNamespace(""), "playerType")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-WD:_-Bd#0"), "_-CJ")
+      getproperty         QName(PrivateNamespace("*", "_-WD:_-Bd/instance"), "_-CJ")
       equals
       returnvalue
      end ; code
@@ -77,7 +77,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "_-RK")
    method
-    refid "_-WD:_-Bd/_-RK"
+    refid "_-WD:_-Bd/instance/_-RK"
     returns QName(PackageNamespace("_-WD"), "_-0Iz")
     body
      maxstack 5
@@ -88,21 +88,21 @@ class
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "_-WD:_-Bd#0"), "platform")
-      getlex              QName(PrivateNamespace("*", "_-WD:_-Bd#0"), "platform")
+      findproperty        QName(PrivateNamespace("*", "_-WD:_-Bd/instance"), "platform")
+      getlex              QName(PrivateNamespace("*", "_-WD:_-Bd/instance"), "platform")
       coerce              QName(PackageNamespace("_-WD"), "_-0Iz")
       dup
       iftrue              L11
 
       pop
       getlocal0
-      callproperty        QName(PrivateNamespace("*", "_-WD:_-Bd#0"), "_-gQ"), 0
+      callproperty        QName(PrivateNamespace("*", "_-WD:_-Bd/instance"), "_-gQ"), 0
       coerce              QName(PackageNamespace("_-WD"), "_-0Iz")
 L11:
       dup
       setlocal1
 
-      setproperty         QName(PrivateNamespace("*", "_-WD:_-Bd#0"), "platform")
+      setproperty         QName(PrivateNamespace("*", "_-WD:_-Bd/instance"), "platform")
 
       getlocal1
       kill                1
@@ -111,9 +111,9 @@ L11:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-WD:_-Bd#0"), "_-gQ")
+  trait method QName(PrivateNamespace("*", "_-WD:_-Bd/instance"), "_-gQ")
    method
-    refid "_-WD:_-Bd/_-gQ"
+    refid "_-WD:_-Bd/instance/_-WD:_-Bd/instance/_-gQ"
     returns QName(PackageNamespace("_-WD"), "_-0Iz")
     body
      maxstack 4
@@ -137,7 +137,7 @@ L11:
 
       getlocal0
       getlocal1
-      callproperty        QName(PrivateNamespace("*", "_-WD:_-Bd#0"), "_-PR"), 1
+      callproperty        QName(PrivateNamespace("*", "_-WD:_-Bd/instance"), "_-PR"), 1
       iffalse             L19
 
       getlex              QName(PackageNamespace("_-WD"), "_-0Iz")
@@ -147,7 +147,7 @@ L11:
 L19:
       getlocal0
       getlocal1
-      callproperty        QName(PrivateNamespace("*", "_-WD:_-Bd#0"), "_-0Jx"), 1
+      callproperty        QName(PrivateNamespace("*", "_-WD:_-Bd/instance"), "_-0Jx"), 1
       iffalse             L26
 
       getlex              QName(PackageNamespace("_-WD"), "_-0Iz")
@@ -157,7 +157,7 @@ L19:
 L26:
       getlocal0
       getlocal1
-      callproperty        QName(PrivateNamespace("*", "_-WD:_-Bd#0"), "_-8w"), 1
+      callproperty        QName(PrivateNamespace("*", "_-WD:_-Bd/instance"), "_-8w"), 1
       iffalse             L33
 
       getlex              QName(PackageNamespace("_-WD"), "_-0Iz")
@@ -172,9 +172,9 @@ L33:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-WD:_-Bd#0"), "_-PR")
+  trait method QName(PrivateNamespace("*", "_-WD:_-Bd/instance"), "_-PR")
    method
-    refid "_-WD:_-Bd/_-PR"
+    refid "_-WD:_-Bd/instance/_-WD:_-Bd/instance/_-PR"
     param QName(PackageNamespace(""), "Object")
     returns QName(PackageNamespace(""), "Boolean")
     body
@@ -187,7 +187,7 @@ L33:
       pushscope
 
       getlocal1
-      getproperty         Multiname("kongregate_api_path", [PrivateNamespace("*", "_-WD:_-Bd#0"), PackageNamespace(""), PackageNamespace("_-WD"), PrivateNamespace("*", "_-WD:_-Bd#1"), PackageInternalNs("_-WD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-G1"), StaticProtectedNs("_-G1")])
+      getproperty         Multiname("kongregate_api_path", [PrivateNamespace("*", "_-WD:_-Bd/instance"), PackageNamespace(""), PackageNamespace("_-WD"), PrivateNamespace("*", "_-WD:_-Bd/instance/_-WD:_-Bd/instance"), PackageInternalNs("_-WD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-G1"), StaticProtectedNs("_-G1")])
       pushnull
       equals
       not
@@ -196,9 +196,9 @@ L33:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-WD:_-Bd#0"), "_-0Jx")
+  trait method QName(PrivateNamespace("*", "_-WD:_-Bd/instance"), "_-0Jx")
    method
-    refid "_-WD:_-Bd/_-0Jx"
+    refid "_-WD:_-Bd/instance/_-WD:_-Bd/instance/_-0Jx"
     param QName(PackageNamespace(""), "Object")
     returns QName(PackageNamespace(""), "Boolean")
     body
@@ -211,7 +211,7 @@ L33:
       pushscope
 
       getlocal1
-      getproperty         Multiname("steam_api_path", [PrivateNamespace("*", "_-WD:_-Bd#0"), PackageNamespace(""), PackageNamespace("_-WD"), PrivateNamespace("*", "_-WD:_-Bd#1"), PackageInternalNs("_-WD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-G1"), StaticProtectedNs("_-G1")])
+      getproperty         Multiname("steam_api_path", [PrivateNamespace("*", "_-WD:_-Bd/instance"), PackageNamespace(""), PackageNamespace("_-WD"), PrivateNamespace("*", "_-WD:_-Bd/instance/_-WD:_-Bd/instance"), PackageInternalNs("_-WD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-G1"), StaticProtectedNs("_-G1")])
       pushnull
       equals
       not
@@ -220,9 +220,9 @@ L33:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-WD:_-Bd#0"), "_-8w")
+  trait method QName(PrivateNamespace("*", "_-WD:_-Bd/instance"), "_-8w")
    method
-    refid "_-WD:_-Bd/_-8w"
+    refid "_-WD:_-Bd/instance/_-WD:_-Bd/instance/_-8w"
     param QName(PackageNamespace(""), "Object")
     returns QName(PackageNamespace(""), "Boolean")
     body
@@ -235,7 +235,7 @@ L33:
       pushscope
 
       getlocal1
-      getproperty         Multiname("kabam_signed_request", [PrivateNamespace("*", "_-WD:_-Bd#0"), PackageNamespace(""), PackageNamespace("_-WD"), PrivateNamespace("*", "_-WD:_-Bd#1"), PackageInternalNs("_-WD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-G1"), StaticProtectedNs("_-G1")])
+      getproperty         Multiname("kabam_signed_request", [PrivateNamespace("*", "_-WD:_-Bd/instance"), PackageNamespace(""), PackageNamespace("_-WD"), PrivateNamespace("*", "_-WD:_-Bd/instance/_-WD:_-Bd/instance"), PackageInternalNs("_-WD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-G1"), StaticProtectedNs("_-G1")])
       pushnull
       equals
       not
@@ -246,7 +246,7 @@ L33:
   end ; trait
  end ; instance
  cinit
-  refid "_-WD:_-Bd/cinit"
+  refid "_-WD:_-Bd/class/init"
   body
    maxstack 3
    localcount 1
@@ -260,5 +260,5 @@ L33:
    end ; code
   end ; body
  end ; method
- trait slot QName(PrivateNamespace("*", "_-WD:_-Bd#0"), "platform") slotid 1 type QName(PackageNamespace("_-WD"), "_-0Iz") end
+ trait slot QName(PrivateNamespace("*", "_-WD:_-Bd/instance"), "platform") slotid 1 type QName(PackageNamespace("_-WD"), "_-0Iz") end
 end ; class

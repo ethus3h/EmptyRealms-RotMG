@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-EF")
   iinit
-   refid "_-zD:_-1k/iinit"
+   refid "_-zD:_-1k/instance/init"
    body
     maxstack 3
     localcount 3
@@ -37,7 +37,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "initialize") flag OVERRIDE
    method
-    refid "_-zD:_-1k/initialize"
+    refid "_-zD:_-1k/instance/initialize"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 5
@@ -52,7 +52,7 @@ class
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "COMPLETE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-zD:_-1k"), "onComplete")
+      getproperty         QName(PrivateNamespace("*", "_-zD:_-1k/instance"), "onComplete")
       callpropvoid        QName(ProtectedNamespace("_-AB"), "_-b6"), 2
 
       returnvoid
@@ -62,7 +62,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "destroy") flag OVERRIDE
    method
-    refid "_-zD:_-1k/destroy"
+    refid "_-zD:_-1k/instance/destroy"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 5
@@ -77,7 +77,7 @@ class
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "COMPLETE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-zD:_-1k"), "onComplete")
+      getproperty         QName(PrivateNamespace("*", "_-zD:_-1k/instance"), "onComplete")
       callpropvoid        QName(ProtectedNamespace("_-AB"), "_-0EK"), 2
 
       returnvoid
@@ -85,9 +85,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-zD:_-1k"), "onComplete")
+  trait method QName(PrivateNamespace("*", "_-zD:_-1k/instance"), "onComplete")
    method
-    refid "_-zD:_-1k/onComplete"
+    refid "_-zD:_-1k/instance/_-zD:_-1k/instance/onComplete"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -116,7 +116,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-zD:_-1k/cinit"
+  refid "_-zD:_-1k/class/init"
   body
    maxstack 3
    localcount 1

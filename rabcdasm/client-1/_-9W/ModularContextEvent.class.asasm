@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-aF")
   iinit
-   refid "_-9W:ModularContextEvent/iinit"
+   refid "_-9W:ModularContextEvent/instance/init"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace("_-0-p"), "_-Ly")
    body
@@ -26,16 +26,16 @@ class
 
      getlocal0
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "_-9W:ModularContextEvent"), "_-rA")
+     initproperty        QName(PrivateNamespace("*", "_-9W:ModularContextEvent/instance"), "_-rA")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-9W:ModularContextEvent"), "_-rA") type QName(PackageNamespace("_-0-p"), "_-Ly") end
+  trait slot QName(PrivateNamespace("*", "_-9W:ModularContextEvent/instance"), "_-rA") type QName(PackageNamespace("_-0-p"), "_-Ly") end
   trait getter QName(PackageNamespace(""), "context")
    method
-    refid "_-9W:ModularContextEvent/context/getter"
+    refid "_-9W:ModularContextEvent/instance/context/getter"
     returns QName(PackageNamespace("_-0-p"), "_-Ly")
     body
      maxstack 3
@@ -47,7 +47,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:ModularContextEvent"), "_-rA")
+      getproperty         QName(PrivateNamespace("*", "_-9W:ModularContextEvent/instance"), "_-rA")
       returnvalue
      end ; code
     end ; body
@@ -55,7 +55,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
    method
-    refid "_-9W:ModularContextEvent/clone"
+    refid "_-9W:ModularContextEvent/instance/clone"
     returns QName(PackageNamespace("flash.events"), "Event")
     body
      maxstack 5
@@ -78,7 +78,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "toString") flag OVERRIDE
    method
-    refid "_-9W:ModularContextEvent/toString"
+    refid "_-9W:ModularContextEvent/instance/toString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 5
@@ -100,7 +100,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-9W:ModularContextEvent/cinit"
+  refid "_-9W:ModularContextEvent/class/init"
   body
    maxstack 4
    localcount 3

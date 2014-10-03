@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-VK")
   iinit
-   refid "com.company.googleanalytics:GA/iinit"
+   refid "com.company.googleanalytics:GA/instance/init"
    body
     maxstack 2
     localcount 1
@@ -28,7 +28,7 @@ class
   end ; method
  end ; instance
  cinit
-  refid "com.company.googleanalytics:GA/cinit"
+  refid "com.company.googleanalytics:GA/class/init"
   body
    maxstack 2
    localcount 1
@@ -38,18 +38,18 @@ class
     getlocal0
     pushscope
 
-    findproperty        QName(PrivateNamespace("*", "com.company.googleanalytics:GA"), "tracker")
+    findproperty        QName(PrivateNamespace("*", "com.company.googleanalytics:GA/class"), "tracker")
     pushnull
-    setproperty         QName(PrivateNamespace("*", "com.company.googleanalytics:GA"), "tracker")
+    setproperty         QName(PrivateNamespace("*", "com.company.googleanalytics:GA/class"), "tracker")
 
     returnvoid
    end ; code
   end ; body
  end ; method
- trait slot QName(PrivateNamespace("*", "com.company.googleanalytics:GA"), "tracker") slotid 1 type QName(PackageNamespace("com.google.analytics"), "GATracker") value Null() end
+ trait slot QName(PrivateNamespace("*", "com.company.googleanalytics:GA/class"), "tracker") slotid 1 type QName(PackageNamespace("com.google.analytics"), "GATracker") value Null() end
  trait method QName(PackageNamespace(""), "global") flag FINAL dispid 3
   method
-   refid "com.company.googleanalytics:GA/global"
+   refid "com.company.googleanalytics:GA/class/global"
    returns QName(PackageNamespace("com.google.analytics"), "GATracker")
    body
     maxstack 1
@@ -60,7 +60,7 @@ class
      getlocal0
      pushscope
 
-     getlex              QName(PrivateNamespace("*", "com.company.googleanalytics:GA"), "tracker")
+     getlex              QName(PrivateNamespace("*", "com.company.googleanalytics:GA/class"), "tracker")
      returnvalue
     end ; code
    end ; body
@@ -68,7 +68,7 @@ class
  end ; trait
  trait method QName(PackageNamespace(""), "setTracker") flag FINAL dispid 4
   method
-   refid "com.company.googleanalytics:GA/setTracker"
+   refid "com.company.googleanalytics:GA/class/setTracker"
    param QName(PackageNamespace("com.google.analytics"), "GATracker")
    returns QName(PackageNamespace(""), "void")
    body
@@ -83,7 +83,7 @@ class
      getglobalscope
      getslot             1
      getlocal1
-     setproperty         QName(PrivateNamespace("*", "com.company.googleanalytics:GA"), "tracker")
+     setproperty         QName(PrivateNamespace("*", "com.company.googleanalytics:GA/class"), "tracker")
 
      returnvoid
     end ; code

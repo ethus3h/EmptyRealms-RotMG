@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("mx.core:FlexBitmap")
   iinit
-   refid "mx.core:FlexBitmap/iinit"
+   refid "mx.core:FlexBitmap/instance/init"
    param QName(PackageNamespace("flash.display"), "BitmapData")
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "Boolean")
@@ -63,7 +63,7 @@ L24:
   end ; method
   trait method QName(PackageNamespace(""), "toString") flag OVERRIDE
    method
-    refid "mx.core:FlexBitmap/toString"
+    refid "mx.core:FlexBitmap/instance/toString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 2
@@ -84,7 +84,7 @@ L24:
   end ; trait
  end ; instance
  cinit
-  refid "mx.core:FlexBitmap/cinit"
+  refid "mx.core:FlexBitmap/class/init"
   body
    maxstack 2
    localcount 1

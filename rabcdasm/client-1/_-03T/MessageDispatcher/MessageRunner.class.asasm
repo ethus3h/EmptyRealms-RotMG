@@ -1,12 +1,12 @@
 class
  refid "_-03T:MessageDispatcher/MessageRunner"
- instance QName(PrivateNamespace("*", "_-03T:MessageDispatcher#0"), "MessageRunner")
+ instance QName(PrivateNamespace("*", "_-03T:MessageDispatcher"), "MessageRunner")
   extends QName(PackageNamespace(""), "Object")
   flag SEALED
   flag PROTECTEDNS
   protectedns ProtectedNamespace("MessageDispatcher.as$100:MessageRunner")
   iinit
-   refid "_-03T:MessageDispatcher/MessageRunner/iinit"
+   refid "_-03T:MessageDispatcher/MessageRunner/instance/init"
    param QName(PackageNamespace(""), "Object")
    param QName(PackageNamespace(""), "Array")
    param QName(PackageNamespace(""), "Function")
@@ -24,26 +24,26 @@ class
 
      getlocal0
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner"), "_message")
+     initproperty        QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner/instance"), "_message")
 
      getlocal0
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner"), "_handlers")
+     initproperty        QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner/instance"), "_handlers")
 
      getlocal0
      getlocal3
-     initproperty        QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner"), "_callback")
+     initproperty        QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner/instance"), "_callback")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner"), "_message") type QName(PackageNamespace(""), "Object") end
-  trait slot QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner"), "_handlers") type QName(PackageNamespace(""), "Array") end
-  trait slot QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner"), "_callback") type QName(PackageNamespace(""), "Function") end
+  trait slot QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner/instance"), "_message") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner/instance"), "_handlers") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner/instance"), "_callback") type QName(PackageNamespace(""), "Function") end
   trait method QName(PackageNamespace(""), "run")
    method
-    refid "_-03T:MessageDispatcher/MessageRunner/run"
+    refid "_-03T:MessageDispatcher/MessageRunner/instance/run"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 1
@@ -55,16 +55,16 @@ class
       pushscope
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner"), "next"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner/instance"), "next"), 0
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner"), "next")
+  trait method QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner/instance"), "next")
    method
-    refid "_-03T:MessageDispatcher/MessageRunner/_-03T:MessageDispatcher/MessageRunner/next"
+    refid "_-03T:MessageDispatcher/MessageRunner/instance/_-03T:MessageDispatcher/MessageRunner/instance/next"
     returns QName(PackageNamespace(""), "void")
     flag NEED_ACTIVATION
     body
@@ -119,7 +119,7 @@ L26:
       getslot             1
       getglobalscope
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner"), "_message")
+      getproperty         QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner/instance"), "_message")
       call                1
       pop
       jump                L57
@@ -135,8 +135,8 @@ L39:
       getslot             1
       getglobalscope
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner"), "_message")
-      newfunction         "_-03T:MessageDispatcher/MessageRunner/_-03T:MessageDispatcher/MessageRunner/next/inline_method"
+      getproperty         QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner/instance"), "_message")
+      newfunction         "_-03T:MessageDispatcher/MessageRunner/instance/_-03T:MessageDispatcher/MessageRunner/instance/next/inline_method"
       call                2
       pop
       returnvoid
@@ -146,10 +146,11 @@ L53:
       pushstring          "Bad handler signature"
       constructprop       QName(PackageNamespace(""), "Error"), 1
       throw
+
 L57:
       getscopeobject      1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner"), "_handlers")
+      getproperty         QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner/instance"), "_handlers")
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "pop"), 0
       dup
       setlocal2
@@ -162,7 +163,7 @@ L57:
       iftrue              L14
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner"), "_callback")
+      getproperty         QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner/instance"), "_callback")
       coerce_a
       dup
       iffalse             L82
@@ -170,24 +171,24 @@ L57:
       pop
       findpropstrict      QName(PackageNamespace("_-03T"), "safelyCallBack")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner"), "_callback")
+      getproperty         QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner/instance"), "_callback")
       pushnull
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner"), "_message")
+      getproperty         QName(PrivateNamespace("*", "_-03T:MessageDispatcher/MessageRunner/instance"), "_message")
       callproperty        QName(PackageNamespace("_-03T"), "safelyCallBack"), 3
       coerce_a
 L82:
       pop
       returnvoid
      end ; code
-     trait slot QName(PrivateNamespace("*", "_-03T:MessageDispatcher#0"), "handler") slotid 1 type QName(PackageNamespace(""), "Function") end
-     trait slot QName(PrivateNamespace("*", "_-03T:MessageDispatcher#0"), "handled") slotid 2 type QName(PackageNamespace(""), "Boolean") end
+     trait slot QName(PrivateNamespace("*", "_-03T:MessageDispatcher"), "handler") slotid 1 type QName(PackageNamespace(""), "Function") end
+     trait slot QName(PrivateNamespace("*", "_-03T:MessageDispatcher"), "handled") slotid 2 type QName(PackageNamespace(""), "Boolean") end
     end ; body
    end ; method
   end ; trait
  end ; instance
  cinit
-  refid "_-03T:MessageDispatcher/MessageRunner/cinit"
+  refid "_-03T:MessageDispatcher/MessageRunner/class/init"
   body
    maxstack 1
    localcount 1

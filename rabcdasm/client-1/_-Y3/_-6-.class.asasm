@@ -7,7 +7,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-vQ")
   iinit
-   refid "_-Y3:_-6-/iinit"
+   refid "_-Y3:_-6-/instance/init"
    param QName(PackageNamespace(""), "Class")
    body
     maxstack 4
@@ -23,16 +23,16 @@ class
 
      getlocal0
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "_-Y3:_-6-"), "_-2h")
+     initproperty        QName(PrivateNamespace("*", "_-Y3:_-6-/instance"), "_-2h")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-Y3:_-6-"), "_-2h") type QName(PackageNamespace(""), "Class") end
+  trait slot QName(PrivateNamespace("*", "_-Y3:_-6-/instance"), "_-2h") type QName(PackageNamespace(""), "Class") end
   trait method QName(PackageNamespace(""), "apply")
    method
-    refid "_-Y3:_-6-/apply"
+    refid "_-Y3:_-6-/instance/apply"
     param QName(PackageNamespace(""), "Class")
     param QName(PackageNamespace("_-eZ"), "_-08b")
     param QName(PackageNamespace("flash.utils"), "Dictionary")
@@ -55,7 +55,7 @@ class
       getproperty         RTQName("_-0IF")
       getlocal            4
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Y3:_-6-"), "_-2h")
+      getproperty         QName(PrivateNamespace("*", "_-Y3:_-6-/instance"), "_-2h")
       call                1
       kill                4
       returnvalue
@@ -65,7 +65,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "destroy")
    method
-    refid "_-Y3:_-6-/destroy"
+    refid "_-Y3:_-6-/instance/destroy"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 3
@@ -83,7 +83,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-Y3:_-6-/cinit"
+  refid "_-Y3:_-6-/class/init"
   body
    maxstack 3
    localcount 1

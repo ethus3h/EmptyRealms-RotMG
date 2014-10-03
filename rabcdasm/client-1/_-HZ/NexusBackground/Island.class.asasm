@@ -1,12 +1,12 @@
 class
  refid "_-HZ:NexusBackground/Island"
- instance QName(PrivateNamespace("*", "_-HZ:NexusBackground#1"), "Island")
+ instance QName(PrivateNamespace("*", "_-HZ:NexusBackground"), "Island")
   extends QName(PackageNamespace(""), "Object")
   flag SEALED
   flag PROTECTEDNS
   protectedns ProtectedNamespace("NexusBackground.as$1228:Island")
   iinit
-   refid "_-HZ:NexusBackground/Island/iinit"
+   refid "_-HZ:NexusBackground/Island/instance/init"
    param QName(PackageNamespace(""), "Number")
    param QName(PackageNamespace(""), "Number")
    param QName(PackageNamespace(""), "int")
@@ -28,18 +28,18 @@ class
      pushtrue
      pushfalse
      constructprop       QName(PackageNamespace("flash.display"), "GraphicsBitmapFill"), 4
-     initproperty        QName(PrivateNamespace("*", "_-HZ:NexusBackground/Island"), "bitmapFill_")
+     initproperty        QName(PrivateNamespace("*", "_-HZ:NexusBackground/Island/instance"), "bitmapFill_")
 
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsPath")
      getlex              QName(PackageNamespace("com.company.util"), "_-9e")
      getproperty         QName(PackageNamespace(""), "_-H2")
-     getlex              Multiname("Vector", [PackageNamespace(""), PrivateNamespace("*", "_-HZ:NexusBackground#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "_-HZ:NexusBackground/Island"), ProtectedNamespace("NexusBackground.as$1228:Island"), StaticProtectedNs("NexusBackground.as$1228:Island")])
+     getlex              Multiname("Vector", [PackageNamespace(""), PrivateNamespace("*", "_-HZ:NexusBackground"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "_-HZ:NexusBackground/Island/instance"), ProtectedNamespace("NexusBackground.as$1228:Island"), StaticProtectedNs("NexusBackground.as$1228:Island")])
      getlex              QName(PackageNamespace(""), "Number")
      applytype           1
      construct           0
      constructprop       QName(PackageNamespace("flash.display"), "GraphicsPath"), 2
-     initproperty        QName(PrivateNamespace("*", "_-HZ:NexusBackground/Island"), "path_")
+     initproperty        QName(PrivateNamespace("*", "_-HZ:NexusBackground/Island/instance"), "path_")
 
      getlocal0
      constructsuper      0
@@ -68,11 +68,11 @@ class
   trait slot QName(PackageNamespace(""), "center_") type QName(PackageNamespace("flash.geom"), "Point") end
   trait slot QName(PackageNamespace(""), "startTime_") type QName(PackageNamespace(""), "int") end
   trait slot QName(PackageNamespace(""), "bitmapData_") type QName(PackageNamespace("flash.display"), "BitmapData") end
-  trait slot QName(PrivateNamespace("*", "_-HZ:NexusBackground/Island"), "bitmapFill_") type QName(PackageNamespace("flash.display"), "GraphicsBitmapFill") end
-  trait slot QName(PrivateNamespace("*", "_-HZ:NexusBackground/Island"), "path_") type QName(PackageNamespace("flash.display"), "GraphicsPath") end
+  trait slot QName(PrivateNamespace("*", "_-HZ:NexusBackground/Island/instance"), "bitmapFill_") type QName(PackageNamespace("flash.display"), "GraphicsBitmapFill") end
+  trait slot QName(PrivateNamespace("*", "_-HZ:NexusBackground/Island/instance"), "path_") type QName(PackageNamespace("flash.display"), "GraphicsPath") end
   trait method QName(PackageNamespace(""), "draw")
    method
-    refid "_-HZ:NexusBackground/Island/draw"
+    refid "_-HZ:NexusBackground/Island/instance/draw"
     param QName(PackageNamespace("com.company.assembleegameclient.map"), "_-0Dv")
     param QName(PackageNamespace(""), "int")
     param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>)
@@ -118,7 +118,7 @@ class
       setlocal            6
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-HZ:NexusBackground/Island"), "bitmapFill_")
+      getproperty         QName(PrivateNamespace("*", "_-HZ:NexusBackground/Island/instance"), "bitmapFill_")
       getproperty         QName(PackageNamespace(""), "matrix")
       coerce              QName(PackageNamespace("flash.geom"), "Matrix")
       dup
@@ -138,18 +138,18 @@ class
       callpropvoid        QName(PackageNamespace(""), "rotate"), 1
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-HZ:NexusBackground/Island"), "bitmapFill_")
+      getproperty         QName(PrivateNamespace("*", "_-HZ:NexusBackground/Island/instance"), "bitmapFill_")
       getlocal0
       getproperty         QName(PackageNamespace(""), "bitmapData_")
       setproperty         QName(PackageNamespace(""), "bitmapData")
 
       getlocal3
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-HZ:NexusBackground/Island"), "bitmapFill_")
+      getproperty         QName(PrivateNamespace("*", "_-HZ:NexusBackground/Island/instance"), "bitmapFill_")
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-HZ:NexusBackground/Island"), "path_")
+      getproperty         QName(PrivateNamespace("*", "_-HZ:NexusBackground/Island/instance"), "path_")
       getproperty         QName(PackageNamespace(""), "data")
       pushbyte            0
       setproperty         QName(PackageNamespace(""), "length")
@@ -181,7 +181,7 @@ class
       setlocal            9
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-HZ:NexusBackground/Island"), "path_")
+      getproperty         QName(PrivateNamespace("*", "_-HZ:NexusBackground/Island/instance"), "path_")
       getproperty         QName(PackageNamespace(""), "data")
       getlocal            8
       getproperty         QName(PackageNamespace(""), "x")
@@ -203,7 +203,7 @@ class
 
       getlocal3
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-HZ:NexusBackground/Island"), "path_")
+      getproperty         QName(PrivateNamespace("*", "_-HZ:NexusBackground/Island/instance"), "path_")
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
       getlocal3
@@ -218,7 +218,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-HZ:NexusBackground/Island/cinit"
+  refid "_-HZ:NexusBackground/Island/class/init"
   body
    maxstack 1
    localcount 1

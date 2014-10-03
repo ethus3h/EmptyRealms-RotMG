@@ -1,6 +1,6 @@
 script ; 558
  sinit
-  refid "_-4K:Stats.sinit"
+  refid "_-4K:Stats/init"
   body
    maxstack 2
    localcount 1
@@ -46,7 +46,7 @@ script ; 558
     getlex              QName(PackageNamespace(""), "Object")
     newclass            "_-4K:Stats/Colors"
     popscope
-    initproperty        QName(PrivateNamespace("*", "_-4K:Stats#1"), "Colors")
+    initproperty        QName(PrivateNamespace("*", "_-4K:Stats"), "Colors")
 
     returnvoid
    end ; code
@@ -55,7 +55,7 @@ script ; 558
  trait class QName(PackageNamespace("_-4K"), "Stats") slotid 1
   #include "Stats.class.asasm"
  end ; trait
- trait class QName(PrivateNamespace("*", "_-4K:Stats#1"), "Colors") slotid 2
+ trait class QName(PrivateNamespace("*", "_-4K:Stats"), "Colors") slotid 2
   #include "Stats/Colors.class.asasm"
  end ; trait
 end ; script

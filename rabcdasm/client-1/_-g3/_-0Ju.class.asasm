@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-b2")
   iinit
-   refid "_-g3:_-0Ju/iinit"
+   refid "_-g3:_-0Ju/instance/init"
    param QName(PackageNamespace(""), "Class")
    body
     maxstack 5
@@ -22,23 +22,23 @@ class
 
      getlocal0
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "_-g3:_-0Ju"), "_-0Eh")
+     initproperty        QName(PrivateNamespace("*", "_-g3:_-0Ju/instance"), "_-0Eh")
 
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.utils"), "getQualifiedClassName")
      getlocal1
      callproperty        QName(PackageNamespace("flash.utils"), "getQualifiedClassName"), 1
-     initproperty        QName(PrivateNamespace("*", "_-g3:_-0Ju"), "_-06T")
+     initproperty        QName(PrivateNamespace("*", "_-g3:_-0Ju/instance"), "_-06T")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-g3:_-0Ju"), "_-0Eh") type QName(PackageNamespace(""), "Class") end
-  trait slot QName(PrivateNamespace("*", "_-g3:_-0Ju"), "_-06T") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "_-g3:_-0Ju/instance"), "_-0Eh") type QName(PackageNamespace(""), "Class") end
+  trait slot QName(PrivateNamespace("*", "_-g3:_-0Ju/instance"), "_-06T") type QName(PackageNamespace(""), "String") end
   trait method QName(PackageNamespace(""), "matches") flag OVERRIDE
    method
-    refid "_-g3:_-0Ju/matches"
+    refid "_-g3:_-0Ju/instance/matches"
     param QName(PackageNamespace(""), "Object")
     returns QName(PackageNamespace(""), "Boolean")
     body
@@ -52,7 +52,7 @@ class
 
       getlocal1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-g3:_-0Ju"), "_-0Eh")
+      getproperty         QName(PrivateNamespace("*", "_-g3:_-0Ju/instance"), "_-0Eh")
       istypelate
       returnvalue
      end ; code
@@ -61,7 +61,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "describeTo") flag OVERRIDE
    method
-    refid "_-g3:_-0Ju/describeTo"
+    refid "_-g3:_-0Ju/instance/describeTo"
     param QName(PackageNamespace("_-qj"), "Description")
     returns QName(PackageNamespace(""), "void")
     body
@@ -77,7 +77,7 @@ class
       pushstring          "an instance of "
       callproperty        QName(Namespace("_-08T"), "appendText"), 1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-g3:_-0Ju"), "_-06T")
+      getproperty         QName(PrivateNamespace("*", "_-g3:_-0Ju/instance"), "_-06T")
       callpropvoid        QName(Namespace("_-08T"), "appendText"), 1
 
       returnvoid
@@ -87,7 +87,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-g3:_-0Ju/cinit"
+  refid "_-g3:_-0Ju/class/init"
   body
    maxstack 3
    localcount 1

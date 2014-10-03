@@ -7,7 +7,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-HM")
   iinit
-   refid "_-1O:_-pj/iinit"
+   refid "_-1O:_-pj/instance/init"
    body
     maxstack 5
     localcount 3
@@ -21,7 +21,7 @@ class
      getlex              QName(PackageNamespace("_-03T"), "_-078")
      getlex              QName(PackageNamespace("_-1O"), "_-pj")
      callproperty        QName(PackageNamespace(""), "create"), 1
-     initproperty        QName(PrivateNamespace("*", "_-1O:_-pj"), "_-ul")
+     initproperty        QName(PrivateNamespace("*", "_-1O:_-pj/instance"), "_-ul")
 
      getlocal0
      constructsuper      0
@@ -30,11 +30,11 @@ class
     end ; code
    end ; body
   end ; method
-  trait const QName(PrivateNamespace("*", "_-1O:_-pj"), "_-ul") type QName(PackageNamespace(""), "String") end
-  trait slot QName(PrivateNamespace("*", "_-1O:_-pj"), "_-vz") type QName(PackageNamespace("_-eZ"), "_-08b") end
+  trait const QName(PrivateNamespace("*", "_-1O:_-pj/instance"), "_-ul") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "_-1O:_-pj/instance"), "_-vz") type QName(PackageNamespace("_-eZ"), "_-08b") end
   trait method QName(PackageNamespace(""), "extend")
    method
-    refid "_-1O:_-pj/extend"
+    refid "_-1O:_-pj/instance/extend"
     param QName(PackageNamespace("_-0-p"), "_-Ly")
     returns QName(PackageNamespace(""), "void")
     body
@@ -46,35 +46,35 @@ class
       getlocal0
       pushscope
 
-      findpropstrict      QName(PrivateNamespace("*", "_-1O:_-pj"), "_-8B")
+      findpropstrict      QName(PrivateNamespace("*", "_-1O:_-pj/instance"), "_-8B")
       dup
       setlocal2
 
-      getproperty         QName(PrivateNamespace("*", "_-1O:_-pj"), "_-8B")
+      getproperty         QName(PrivateNamespace("*", "_-1O:_-pj/instance"), "_-8B")
       increment
       setlocal3
 
       getlocal2
       getlocal3
-      setproperty         QName(PrivateNamespace("*", "_-1O:_-pj"), "_-8B")
+      setproperty         QName(PrivateNamespace("*", "_-1O:_-pj/instance"), "_-8B")
 
       kill                3
       kill                2
       getlocal0
       getlocal1
       getproperty         QName(Namespace("_-06J"), "_-OR")
-      initproperty        QName(PrivateNamespace("*", "_-1O:_-pj"), "_-vz")
+      initproperty        QName(PrivateNamespace("*", "_-1O:_-pj/instance"), "_-vz")
 
       getlocal1
       getproperty         QName(Namespace("_-06J"), "_-iL")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-1O:_-pj"), "_-0Ct")
+      getproperty         QName(PrivateNamespace("*", "_-1O:_-pj/instance"), "_-0Ct")
       callpropvoid        QName(Namespace("_-CZ"), "_-0Ct"), 1
 
       getlocal1
       getproperty         QName(Namespace("_-06J"), "_-iL")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-1O:_-pj"), "_-kf")
+      getproperty         QName(PrivateNamespace("*", "_-1O:_-pj/instance"), "_-kf")
       callpropvoid        QName(Namespace("_-CZ"), "_-kf"), 1
 
       returnvoid
@@ -84,7 +84,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "toString")
    method
-    refid "_-1O:_-pj/toString"
+    refid "_-1O:_-pj/instance/toString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -96,15 +96,15 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-1O:_-pj"), "_-ul")
+      getproperty         QName(PrivateNamespace("*", "_-1O:_-pj/instance"), "_-ul")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-1O:_-pj"), "_-0Ct")
+  trait method QName(PrivateNamespace("*", "_-1O:_-pj/instance"), "_-0Ct")
    method
-    refid "_-1O:_-pj/_-0Ct"
+    refid "_-1O:_-pj/instance/_-1O:_-pj/instance/_-0Ct"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 5
@@ -119,22 +119,22 @@ class
       coerce              QName(PackageNamespace("_-lo"), "_-t5")
       setlocal1
 
-      getlex              QName(PrivateNamespace("*", "_-1O:_-pj"), "_-H0")
+      getlex              QName(PrivateNamespace("*", "_-1O:_-pj/instance"), "_-H0")
       pushnull
       ifne                L19
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-1O:_-pj"), "_-vz")
+      getproperty         QName(PrivateNamespace("*", "_-1O:_-pj/instance"), "_-vz")
       getlex              QName(PackageNamespace("_-lo"), "_-t5")
       callproperty        QName(PackageNamespace(""), "getInstance"), 1
       coerce              QName(PackageNamespace("_-lo"), "_-t5")
       setlocal1
 
-      findproperty        QName(PrivateNamespace("*", "_-1O:_-pj"), "_-H0")
+      findproperty        QName(PrivateNamespace("*", "_-1O:_-pj/instance"), "_-H0")
       findpropstrict      QName(PackageNamespace("_-lo"), "_-LW")
       getlocal1
       constructprop       QName(PackageNamespace("_-lo"), "_-LW"), 1
-      setproperty         QName(PrivateNamespace("*", "_-1O:_-pj"), "_-H0")
+      setproperty         QName(PrivateNamespace("*", "_-1O:_-pj/instance"), "_-H0")
 
 L19:
       returnvoid
@@ -142,9 +142,9 @@ L19:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-1O:_-pj"), "_-kf")
+  trait method QName(PrivateNamespace("*", "_-1O:_-pj/instance"), "_-kf")
    method
-    refid "_-1O:_-pj/_-kf"
+    refid "_-1O:_-pj/instance/_-1O:_-pj/instance/_-kf"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -155,30 +155,30 @@ L19:
       getlocal0
       pushscope
 
-      findpropstrict      QName(PrivateNamespace("*", "_-1O:_-pj"), "_-8B")
+      findpropstrict      QName(PrivateNamespace("*", "_-1O:_-pj/instance"), "_-8B")
       dup
       setlocal1
 
-      getproperty         QName(PrivateNamespace("*", "_-1O:_-pj"), "_-8B")
+      getproperty         QName(PrivateNamespace("*", "_-1O:_-pj/instance"), "_-8B")
       decrement
       setlocal2
 
       getlocal1
       getlocal2
-      setproperty         QName(PrivateNamespace("*", "_-1O:_-pj"), "_-8B")
+      setproperty         QName(PrivateNamespace("*", "_-1O:_-pj/instance"), "_-8B")
 
       kill                2
       kill                1
-      getlex              QName(PrivateNamespace("*", "_-1O:_-pj"), "_-8B")
+      getlex              QName(PrivateNamespace("*", "_-1O:_-pj/instance"), "_-8B")
       pushbyte            0
       ifne                L21
 
-      getlex              QName(PrivateNamespace("*", "_-1O:_-pj"), "_-H0")
+      getlex              QName(PrivateNamespace("*", "_-1O:_-pj/instance"), "_-H0")
       callpropvoid        QName(PackageNamespace(""), "destroy"), 0
 
-      findproperty        QName(PrivateNamespace("*", "_-1O:_-pj"), "_-H0")
+      findproperty        QName(PrivateNamespace("*", "_-1O:_-pj/instance"), "_-H0")
       pushnull
-      setproperty         QName(PrivateNamespace("*", "_-1O:_-pj"), "_-H0")
+      setproperty         QName(PrivateNamespace("*", "_-1O:_-pj/instance"), "_-H0")
 
 L21:
       returnvoid
@@ -188,7 +188,7 @@ L21:
   end ; trait
  end ; instance
  cinit
-  refid "_-1O:_-pj/cinit"
+  refid "_-1O:_-pj/class/init"
   body
    maxstack 3
    localcount 1
@@ -202,6 +202,6 @@ L21:
    end ; code
   end ; body
  end ; method
- trait slot QName(PrivateNamespace("*", "_-1O:_-pj"), "_-H0") slotid 1 type QName(PackageNamespace("_-lo"), "_-LW") end
- trait slot QName(PrivateNamespace("*", "_-1O:_-pj"), "_-8B") slotid 2 type QName(PackageNamespace(""), "uint") end
+ trait slot QName(PrivateNamespace("*", "_-1O:_-pj/instance"), "_-H0") slotid 1 type QName(PackageNamespace("_-lo"), "_-LW") end
+ trait slot QName(PrivateNamespace("*", "_-1O:_-pj/instance"), "_-8B") slotid 2 type QName(PackageNamespace(""), "uint") end
 end ; class

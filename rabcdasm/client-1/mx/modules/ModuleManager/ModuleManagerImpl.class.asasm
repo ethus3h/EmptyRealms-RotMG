@@ -1,12 +1,12 @@
 class
  refid "mx.modules:ModuleManager/ModuleManagerImpl"
- instance QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleManagerImpl")
+ instance QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "ModuleManagerImpl")
   extends QName(PackageNamespace("flash.events"), "EventDispatcher")
   flag SEALED
   flag PROTECTEDNS
   protectedns ProtectedNamespace("ModuleManager.as$413:ModuleManagerImpl")
   iinit
-   refid "mx.modules:ModuleManager/ModuleManagerImpl/iinit"
+   refid "mx.modules:ModuleManager/ModuleManagerImpl/instance/init"
    body
     maxstack 3
     localcount 1
@@ -20,7 +20,7 @@ class
      findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
      pushtrue
      constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 1
-     initproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleManagerImpl"), "moduleDictionary")
+     initproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleManagerImpl/instance"), "moduleDictionary")
 
      getlocal0
      constructsuper      0
@@ -29,10 +29,10 @@ class
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleManagerImpl"), "moduleDictionary") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+  trait slot QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleManagerImpl/instance"), "moduleDictionary") type QName(PackageNamespace("flash.utils"), "Dictionary") end
   trait method QName(PackageNamespace(""), "getAssociatedFactory")
    method
-    refid "mx.modules:ModuleManager/ModuleManagerImpl/getAssociatedFactory"
+    refid "mx.modules:ModuleManager/ModuleManagerImpl/instance/getAssociatedFactory"
     param QName(PackageNamespace(""), "Object")
     returns QName(PackageNamespace("mx.core"), "IFlexModuleFactory")
     body
@@ -49,7 +49,7 @@ class
       setlocal3
 
       pushnull
-      coerce              QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleInfo")
+      coerce              QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "ModuleInfo")
       setlocal            4
 
       pushnull
@@ -70,7 +70,7 @@ class
       setlocal            7
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleManagerImpl"), "moduleDictionary")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleManagerImpl/instance"), "moduleDictionary")
       coerce_a
       setlocal            8
 
@@ -85,9 +85,9 @@ L26:
       setlocal3
 
       getlocal3
-      getlex              QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleInfo")
+      getlex              QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "ModuleInfo")
       astypelate
-      coerce              QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleInfo")
+      coerce              QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "ModuleInfo")
       dup
       setlocal            4
 
@@ -145,7 +145,7 @@ L68:
   end ; trait
   trait method QName(PackageNamespace(""), "getModule")
    method
-    refid "mx.modules:ModuleManager/ModuleManagerImpl/getModule"
+    refid "mx.modules:ModuleManager/ModuleManagerImpl/instance/getModule"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace("mx.modules"), "IModuleInfo")
     body
@@ -162,18 +162,18 @@ L68:
       setlocal3
 
       pushnull
-      coerce              QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleInfo")
+      coerce              QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "ModuleInfo")
       setlocal            4
 
       pushnull
-      coerce              QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleInfo")
+      coerce              QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "ModuleInfo")
       setlocal2
 
       pushbyte            0
       setlocal            5
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleManagerImpl"), "moduleDictionary")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleManagerImpl/instance"), "moduleDictionary")
       coerce_a
       setlocal            6
 
@@ -188,20 +188,20 @@ L18:
       setlocal3
 
       getlocal3
-      getlex              QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleInfo")
+      getlex              QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "ModuleInfo")
       astypelate
-      coerce              QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleInfo")
+      coerce              QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "ModuleInfo")
       setlocal            4
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleManagerImpl"), "moduleDictionary")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleManagerImpl/instance"), "moduleDictionary")
       getlocal            4
-      getproperty         MultinameL([PrivateNamespace("*", "mx.modules:ModuleManager#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.modules:ModuleManager/ModuleManagerImpl"), ProtectedNamespace("ModuleManager.as$413:ModuleManagerImpl"), StaticProtectedNs("ModuleManager.as$413:ModuleManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         MultinameL([PrivateNamespace("*", "mx.modules:ModuleManager"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.modules:ModuleManager/ModuleManagerImpl/instance"), ProtectedNamespace("ModuleManager.as$413:ModuleManagerImpl"), StaticProtectedNs("ModuleManager.as$413:ModuleManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher")])
       getlocal1
       ifne                L39
 
       getlocal            4
-      coerce              QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleInfo")
+      coerce              QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "ModuleInfo")
       setlocal2
 
       jump                L41
@@ -216,22 +216,22 @@ L41:
       getlocal2
       iftrue              L55
 
-      findpropstrict      QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleInfo")
+      findpropstrict      QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "ModuleInfo")
       getlocal1
-      constructprop       QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleInfo"), 1
-      coerce              QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleInfo")
+      constructprop       QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "ModuleInfo"), 1
+      coerce              QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "ModuleInfo")
       setlocal2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleManagerImpl"), "moduleDictionary")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleManagerImpl/instance"), "moduleDictionary")
       getlocal2
       getlocal1
-      setproperty         MultinameL([PrivateNamespace("*", "mx.modules:ModuleManager#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.modules:ModuleManager/ModuleManagerImpl"), ProtectedNamespace("ModuleManager.as$413:ModuleManagerImpl"), StaticProtectedNs("ModuleManager.as$413:ModuleManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher")])
+      setproperty         MultinameL([PrivateNamespace("*", "mx.modules:ModuleManager"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.modules:ModuleManager/ModuleManagerImpl/instance"), ProtectedNamespace("ModuleManager.as$413:ModuleManagerImpl"), StaticProtectedNs("ModuleManager.as$413:ModuleManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher")])
 
 L55:
-      findpropstrict      QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleInfoProxy")
+      findpropstrict      QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "ModuleInfoProxy")
       getlocal2
-      constructprop       QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleInfoProxy"), 1
+      constructprop       QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "ModuleInfoProxy"), 1
       returnvalue
      end ; code
     end ; body
@@ -239,7 +239,7 @@ L55:
   end ; trait
  end ; instance
  cinit
-  refid "mx.modules:ModuleManager/ModuleManagerImpl/cinit"
+  refid "mx.modules:ModuleManager/ModuleManagerImpl/class/init"
   body
    maxstack 1
    localcount 1

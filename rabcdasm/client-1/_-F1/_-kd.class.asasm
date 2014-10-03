@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-2O")
   iinit
-   refid "_-F1:_-kd/iinit"
+   refid "_-F1:_-kd/instance/init"
    param QName(PackageNamespace(""), "Class")
    body
     maxstack 5
@@ -23,17 +23,17 @@ class
      getlocal0
      getlocal1
      construct           0
-     initproperty        QName(PrivateNamespace("*", "_-F1:_-kd"), "_-oT")
+     initproperty        QName(PrivateNamespace("*", "_-F1:_-kd/instance"), "_-oT")
 
      getlocal0
      findpropstrict      QName(PackageNamespace("_-sp"), "_-aJ")
      getlex              QName(PackageNamespace("_-F1"), "_-kd")
      constructprop       QName(PackageNamespace("_-sp"), "_-aJ"), 1
-     initproperty        QName(PrivateNamespace("*", "_-F1:_-kd"), "_ready")
+     initproperty        QName(PrivateNamespace("*", "_-F1:_-kd/instance"), "_ready")
 
      findpropstrict      QName(PackageNamespace("flash.display"), "Loader")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:_-kd"), "_-oT")
+     getproperty         QName(PrivateNamespace("*", "_-F1:_-kd/instance"), "_-oT")
      pushbyte            0
      callproperty        QName(PackageNamespace(""), "getChildAt"), 1
      callproperty        QName(PackageNamespace("flash.display"), "Loader"), 1
@@ -49,19 +49,19 @@ class
      getlex              QName(PackageNamespace("flash.events"), "Event")
      getproperty         QName(PackageNamespace(""), "COMPLETE")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:_-kd"), "set ")
+     getproperty         QName(PrivateNamespace("*", "_-F1:_-kd/instance"), "set ")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-F1:_-kd"), "_ready") type QName(PackageNamespace("_-sp"), "_-aJ") end
-  trait slot QName(PrivateNamespace("*", "_-F1:_-kd"), "_-oT") type QName(PackageNamespace("mx.core"), "MovieClipAsset") end
-  trait slot QName(PrivateNamespace("*", "_-F1:_-kd"), "_content") type QName(PackageNamespace("flash.display"), "MovieClip") end
-  trait method QName(PrivateNamespace("*", "_-F1:_-kd"), "set ")
+  trait slot QName(PrivateNamespace("*", "_-F1:_-kd/instance"), "_ready") type QName(PackageNamespace("_-sp"), "_-aJ") end
+  trait slot QName(PrivateNamespace("*", "_-F1:_-kd/instance"), "_-oT") type QName(PackageNamespace("mx.core"), "MovieClipAsset") end
+  trait slot QName(PrivateNamespace("*", "_-F1:_-kd/instance"), "_content") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait method QName(PrivateNamespace("*", "_-F1:_-kd/instance"), "set ")
    method
-    refid "_-F1:_-kd/set "
+    refid "_-F1:_-kd/instance/_-F1:_-kd/instance/set "
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -84,7 +84,7 @@ class
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "COMPLETE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-kd"), "set ")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-kd/instance"), "set ")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
       getlocal0
@@ -93,10 +93,10 @@ class
       getproperty         QName(PackageNamespace(""), "loader")
       getproperty         QName(PackageNamespace(""), "content")
       callproperty        QName(PackageNamespace("flash.display"), "MovieClip"), 1
-      initproperty        QName(PrivateNamespace("*", "_-F1:_-kd"), "_content")
+      initproperty        QName(PrivateNamespace("*", "_-F1:_-kd/instance"), "_content")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-kd"), "_ready")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-kd/instance"), "_ready")
       getlocal0
       callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
 
@@ -107,7 +107,7 @@ class
   end ; trait
   trait getter QName(PackageNamespace(""), "content")
    method
-    refid "_-F1:_-kd/content/getter"
+    refid "_-F1:_-kd/instance/content/getter"
     returns QName(PackageNamespace("flash.display"), "MovieClip")
     body
      maxstack 3
@@ -119,7 +119,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-kd"), "_content")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-kd/instance"), "_content")
       returnvalue
      end ; code
     end ; body
@@ -127,7 +127,7 @@ class
   end ; trait
   trait getter QName(PackageNamespace(""), "ready")
    method
-    refid "_-F1:_-kd/ready/getter"
+    refid "_-F1:_-kd/instance/ready/getter"
     returns QName(PackageNamespace("_-sp"), "_-aJ")
     body
      maxstack 3
@@ -139,7 +139,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-kd"), "_ready")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-kd/instance"), "_ready")
       returnvalue
      end ; code
     end ; body
@@ -147,7 +147,7 @@ class
   end ; trait
   trait getter QName(PackageNamespace(""), "_-rc")
    method
-    refid "_-F1:_-kd/_-rc/getter"
+    refid "_-F1:_-kd/instance/_-rc/getter"
     returns QName(PackageNamespace("mx.core"), "MovieClipAsset")
     body
      maxstack 3
@@ -159,7 +159,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-kd"), "_-oT")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-kd/instance"), "_-oT")
       returnvalue
      end ; code
     end ; body
@@ -167,7 +167,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-F1:_-kd/cinit"
+  refid "_-F1:_-kd/class/init"
   body
    maxstack 3
    localcount 1

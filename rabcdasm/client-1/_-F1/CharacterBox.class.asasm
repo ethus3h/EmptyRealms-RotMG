@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-xZ")
   iinit
-   refid "_-F1:CharacterBox/iinit"
+   refid "_-F1:CharacterBox/instance/init"
    param QName(PackageNamespace(""), "XML")
    param QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0AH")
    param QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0KR")
@@ -57,7 +57,7 @@ class
      getlocal0
      findpropstrict      QName(PackageNamespace("com.company.rotmg.graphics"), "LockedCharBoxGraphic")
      constructprop       QName(PackageNamespace("com.company.rotmg.graphics"), "LockedCharBoxGraphic"), 0
-     initproperty        QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-87")
+     initproperty        QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-87")
 
      jump                L38
 
@@ -65,19 +65,19 @@ L34:
      getlocal0
      findpropstrict      QName(PackageNamespace("com.company.rotmg.graphics"), "FullCharBoxGraphic")
      constructprop       QName(PackageNamespace("com.company.rotmg.graphics"), "FullCharBoxGraphic"), 0
-     initproperty        QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-87")
+     initproperty        QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-87")
 
 L38:
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-87")
+     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-87")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.display"), "Bitmap")
      pushnull
      constructprop       QName(PackageNamespace("flash.display"), "Bitmap"), 1
-     initproperty        QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "bitmap_")
+     initproperty        QName(PrivateNamespace("*", "_-F1:CharacterBox"), "bitmap_")
 
      getlocal0
      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-lJ")
@@ -85,11 +85,11 @@ L38:
      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-lJ")
      getproperty         QName(PackageNamespace(""), "_-sS")
      pushbyte            0
-     callpropvoid        QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "setImage"), 3
+     callpropvoid        QName(PrivateNamespace("*", "_-F1:CharacterBox"), "setImage"), 3
 
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "bitmap_")
+     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox"), "bitmap_")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
      getlocal0
@@ -101,36 +101,36 @@ L38:
      dup
      pushstring          "Myriad Pro"
      constructprop       QName(PackageNamespace("com.company.ui"), "SimpleText"), 6
-     initproperty        QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "classNameText_")
+     initproperty        QName(PrivateNamespace("*", "_-F1:CharacterBox"), "classNameText_")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "classNameText_")
+     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox"), "classNameText_")
      pushtrue
      callpropvoid        QName(PackageNamespace(""), "_-8Y"), 1
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "classNameText_")
+     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox"), "classNameText_")
      pushstring          "<p align=\"center\">"
      getlocal0
      getproperty         QName(PackageNamespace(""), "playerXML_")
-     getproperty         MultinameA("id", [PrivateNamespace("*", "_-F1:CharacterBox#0"), PackageNamespace(""), PrivateNamespace("*", "_-F1:CharacterBox#1"), PackageNamespace("_-F1"), PackageInternalNs("_-F1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-xZ"), StaticProtectedNs("_-xZ"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getproperty         MultinameA("id", [PrivateNamespace("*", "_-F1:CharacterBox"), PackageNamespace(""), PrivateNamespace("*", "_-F1:CharacterBox/instance"), PackageNamespace("_-F1"), PackageInternalNs("_-F1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-xZ"), StaticProtectedNs("_-xZ"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
      add
      pushstring          "</p>"
      add
      setproperty         QName(PackageNamespace(""), "htmlText")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "classNameText_")
+     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox"), "classNameText_")
      getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
      getproperty         QName(PackageNamespace(""), "CENTER")
      setproperty         QName(PackageNamespace(""), "autoSize")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "classNameText_")
+     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox"), "classNameText_")
      callpropvoid        QName(PackageNamespace(""), "updateMetrics"), 0
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "classNameText_")
+     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox"), "classNameText_")
      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
      pushbyte            0
      dup
@@ -144,7 +144,7 @@ L38:
 
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "classNameText_")
+     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox"), "classNameText_")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
      getlocal0
@@ -189,30 +189,30 @@ L38:
      dup
      pushstring          "Myriad Pro"
      constructprop       QName(PackageNamespace("com.company.ui"), "SimpleText"), 6
-     initproperty        QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-LB")
+     initproperty        QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-LB")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-LB")
+     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-LB")
      pushstring          "<p align=\"center\">Locked</p>"
      setproperty         QName(PackageNamespace(""), "htmlText")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-LB")
+     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-LB")
      pushtrue
      callpropvoid        QName(PackageNamespace(""), "_-8Y"), 1
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-LB")
+     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-LB")
      getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
      getproperty         QName(PackageNamespace(""), "CENTER")
      setproperty         QName(PackageNamespace(""), "autoSize")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-LB")
+     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-LB")
      callpropvoid        QName(PackageNamespace(""), "updateMetrics"), 0
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-LB")
+     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-LB")
      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
      pushbyte            0
      dup
@@ -225,17 +225,17 @@ L38:
      setproperty         QName(PackageNamespace(""), "filters")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-LB")
+     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-LB")
      pushbyte            58
      setproperty         QName(PackageNamespace(""), "y")
 
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-LB")
+     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-LB")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "classNameText_")
+     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox"), "classNameText_")
      pushbyte            78
      setproperty         QName(PackageNamespace(""), "y")
 
@@ -253,7 +253,7 @@ L183:
      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-ZB")
      getproperty         QName(PackageNamespace(""), "_-yJ")
      getproperty         QName(PackageNamespace(""), "length")
-     callproperty        QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-kU"), 2
+     callproperty        QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-kU"), 2
      coerce              QName(PackageNamespace("flash.display"), "Sprite")
      dup
      setlocal            5
@@ -263,7 +263,7 @@ L183:
 
      getlocal            5
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-87")
+     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-87")
      getproperty         QName(PackageNamespace(""), "width")
      pushbyte            2
      divide
@@ -291,7 +291,7 @@ L183:
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "classNameText_")
+     getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox"), "classNameText_")
      pushbyte            74
      setproperty         QName(PackageNamespace(""), "y")
 
@@ -304,13 +304,13 @@ L230:
   trait slot QName(PackageNamespace(""), "charStats_") type QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0AH") end
   trait slot QName(PackageNamespace(""), "charList_") type QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0KR") end
   trait slot QName(PackageNamespace(""), "_-FI") type QName(PackageNamespace(""), "Boolean") end
-  trait slot QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-87") type QName(PackageNamespace("flash.display"), "Sprite") end
-  trait slot QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "bitmap_") type QName(PackageNamespace("flash.display"), "Bitmap") end
-  trait slot QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-LB") type QName(PackageNamespace("com.company.ui"), "SimpleText") end
-  trait slot QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "classNameText_") type QName(PackageNamespace("com.company.ui"), "SimpleText") end
+  trait slot QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-87") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(PrivateNamespace("*", "_-F1:CharacterBox"), "bitmap_") type QName(PackageNamespace("flash.display"), "Bitmap") end
+  trait slot QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-LB") type QName(PackageNamespace("com.company.ui"), "SimpleText") end
+  trait slot QName(PrivateNamespace("*", "_-F1:CharacterBox"), "classNameText_") type QName(PackageNamespace("com.company.ui"), "SimpleText") end
   trait method QName(PackageNamespace(""), "objectType")
    method
-    refid "_-F1:CharacterBox/objectType"
+    refid "_-F1:CharacterBox/instance/objectType"
     returns QName(PackageNamespace(""), "int")
     body
      maxstack 4
@@ -324,7 +324,7 @@ L230:
       findpropstrict      QName(PackageNamespace(""), "int")
       getlocal0
       getproperty         QName(PackageNamespace(""), "playerXML_")
-      getproperty         MultinameA("type", [PrivateNamespace("*", "_-F1:CharacterBox#0"), PackageNamespace(""), PrivateNamespace("*", "_-F1:CharacterBox#1"), PackageNamespace("_-F1"), PackageInternalNs("_-F1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-xZ"), StaticProtectedNs("_-xZ"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         MultinameA("type", [PrivateNamespace("*", "_-F1:CharacterBox"), PackageNamespace(""), PrivateNamespace("*", "_-F1:CharacterBox/instance"), PackageNamespace("_-F1"), PackageInternalNs("_-F1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-xZ"), StaticProtectedNs("_-xZ"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       callproperty        QName(PackageNamespace(""), "int"), 1
       returnvalue
      end ; code
@@ -333,7 +333,7 @@ L230:
   end ; trait
   trait method QName(PackageNamespace(""), "getTooltip")
    method
-    refid "_-F1:CharacterBox/getTooltip"
+    refid "_-F1:CharacterBox/instance/getTooltip"
     returns QName(PackageNamespace("_-E7"), "for ")
     body
      maxstack 6
@@ -359,7 +359,7 @@ L230:
   end ; trait
   trait method QName(PackageNamespace(""), "_-PY")
    method
-    refid "_-F1:CharacterBox/_-PY"
+    refid "_-F1:CharacterBox/instance/_-PY"
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
     body
@@ -406,9 +406,9 @@ L23:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-0AY")
+  trait method QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-0AY")
    method
-    refid "_-F1:CharacterBox/_-0AY"
+    refid "_-F1:CharacterBox/instance/_-F1:CharacterBox/_-0AY"
     param QName(PackageNamespace("flash.events"), "KeyboardEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -441,9 +441,9 @@ L14:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "onDeleteClick")
+  trait method QName(PrivateNamespace("*", "_-F1:CharacterBox"), "onDeleteClick")
    method
-    refid "_-F1:CharacterBox/onDeleteClick"
+    refid "_-F1:CharacterBox/instance/_-F1:CharacterBox/onDeleteClick"
     param QName(PackageNamespace("flash.events"), "MouseEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -473,9 +473,9 @@ L14:
   trait slot QName(PackageNamespace(""), "_-6S") type QName(PackageNamespace(""), "int") value Integer(-2147483648) end
   trait slot QName(PackageNamespace(""), "_-P") type QName(PackageNamespace(""), "int") end
   trait slot QName(PackageNamespace(""), "_-NK") type QName(PackageNamespace(""), "int") end
-  trait method QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "onEnterFrame")
+  trait method QName(PrivateNamespace("*", "_-F1:CharacterBox"), "onEnterFrame")
    method
-    refid "_-F1:CharacterBox/onEnterFrame"
+    refid "_-F1:CharacterBox/instance/_-F1:CharacterBox/onEnterFrame"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -519,7 +519,7 @@ L14:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-NK")
       getlocal3
-      callpropvoid        QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "setImage"), 3
+      callpropvoid        QName(PrivateNamespace("*", "_-F1:CharacterBox"), "setImage"), 3
 
       jump                L64
 
@@ -530,7 +530,7 @@ L32:
       getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-lJ")
       getproperty         QName(PackageNamespace(""), "_-sS")
       pushbyte            0
-      callpropvoid        QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "setImage"), 3
+      callpropvoid        QName(PrivateNamespace("*", "_-F1:CharacterBox"), "setImage"), 3
 
       getlex              QName(PackageNamespace(""), "Math")
       callproperty        QName(PackageNamespace(""), "random"), 0
@@ -571,9 +571,9 @@ L64:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "setImage")
+  trait method QName(PrivateNamespace("*", "_-F1:CharacterBox"), "setImage")
    method
-    refid "_-F1:CharacterBox/setImage"
+    refid "_-F1:CharacterBox/instance/_-F1:CharacterBox/setImage"
     param QName(PackageNamespace(""), "int")
     param QName(PackageNamespace(""), "int")
     param QName(PackageNamespace(""), "Number")
@@ -588,7 +588,7 @@ L64:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "bitmap_")
+      getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox"), "bitmap_")
       getlex              QName(PackageNamespace("com.company.assembleegameclient.appengine"), "SavedCharacter")
       pushnull
       getlocal0
@@ -603,14 +603,14 @@ L64:
       setproperty         QName(PackageNamespace(""), "bitmapData")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "bitmap_")
+      getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox"), "bitmap_")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-87")
+      getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-87")
       getproperty         QName(PackageNamespace(""), "width")
       pushbyte            2
       divide
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "bitmap_")
+      getproperty         QName(PrivateNamespace("*", "_-F1:CharacterBox"), "bitmap_")
       getproperty         QName(PackageNamespace(""), "bitmapData")
       getproperty         QName(PackageNamespace(""), "width")
       pushbyte            2
@@ -623,9 +623,9 @@ L64:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-kU")
+  trait method QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-kU")
    method
-    refid "_-F1:CharacterBox/_-kU"
+    refid "_-F1:CharacterBox/instance/_-F1:CharacterBox/_-kU"
     param QName(PackageNamespace(""), "int")
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace("flash.display"), "Sprite")
@@ -668,7 +668,7 @@ L14:
 
       getlocal            5
       getproperty         QName(PackageNamespace(""), "transform")
-      getlex              QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-Zk")
+      getlex              QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-Zk")
       setproperty         QName(PackageNamespace(""), "colorTransform")
 
       getlocal3
@@ -703,7 +703,7 @@ L40:
 
       getlocal            5
       getproperty         QName(PackageNamespace(""), "transform")
-      getlex              QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-t0")
+      getlex              QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-t0")
       setproperty         QName(PackageNamespace(""), "colorTransform")
 
       getlocal3
@@ -731,7 +731,7 @@ L62:
   end ; trait
  end ; instance
  cinit
-  refid "_-F1:CharacterBox/cinit"
+  refid "_-F1:CharacterBox/class/init"
   body
    maxstack 7
    localcount 3
@@ -749,29 +749,29 @@ L62:
     pushstring          "ENTER_NAME"
     initproperty        QName(PackageNamespace(""), "ENTER_NAME")
 
-    findproperty        QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-Zk")
+    findproperty        QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-Zk")
     findpropstrict      QName(PackageNamespace("flash.geom"), "ColorTransform")
     pushdouble          0.8
     pushdouble          0.8
     pushdouble          0.8
     constructprop       QName(PackageNamespace("flash.geom"), "ColorTransform"), 3
-    initproperty        QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-Zk")
+    initproperty        QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-Zk")
 
-    findproperty        QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-t0")
+    findproperty        QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-t0")
     findpropstrict      QName(PackageNamespace("flash.geom"), "ColorTransform")
     pushdouble          0.2
     pushdouble          0.2
     pushdouble          0.2
     constructprop       QName(PackageNamespace("flash.geom"), "ColorTransform"), 3
-    initproperty        QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-t0")
+    initproperty        QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-t0")
 
-    findproperty        QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-IZ")
+    findproperty        QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-IZ")
     findpropstrict      QName(PackageNamespace("flash.geom"), "ColorTransform")
     pushdouble          0.87
     pushdouble          0.62
     pushdouble          0
     constructprop       QName(PackageNamespace("flash.geom"), "ColorTransform"), 3
-    initproperty        QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-IZ")
+    initproperty        QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-IZ")
 
     returnvoid
    end ; code
@@ -779,7 +779,7 @@ L62:
  end ; method
  trait const QName(PackageNamespace(""), "DELETE_CHAR") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("DELETE_CHAR") end
  trait const QName(PackageNamespace(""), "ENTER_NAME") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("ENTER_NAME") end
- trait const QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-Zk") slotid 3 type QName(PackageNamespace("flash.geom"), "ColorTransform") end
- trait const QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-t0") slotid 4 type QName(PackageNamespace("flash.geom"), "ColorTransform") end
- trait const QName(PrivateNamespace("*", "_-F1:CharacterBox#0"), "_-IZ") slotid 5 type QName(PackageNamespace("flash.geom"), "ColorTransform") end
+ trait const QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-Zk") slotid 3 type QName(PackageNamespace("flash.geom"), "ColorTransform") end
+ trait const QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-t0") slotid 4 type QName(PackageNamespace("flash.geom"), "ColorTransform") end
+ trait const QName(PrivateNamespace("*", "_-F1:CharacterBox"), "_-IZ") slotid 5 type QName(PackageNamespace("flash.geom"), "ColorTransform") end
 end ; class

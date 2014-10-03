@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-hN")
   iinit
-   refid "_-5H:_-ii/iinit"
+   refid "_-5H:_-ii/instance/init"
    body
     maxstack 6
     localcount 4
@@ -22,11 +22,11 @@ class
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
      getlocal0
-     callproperty        QName(PrivateNamespace("*", "_-5H:_-ii#0"), "_-0Hg"), 0
+     callproperty        QName(PrivateNamespace("*", "_-5H:_-ii/instance"), "_-0Hg"), 0
      dup
      setlocal1
 
-     initproperty        QName(PrivateNamespace("*", "_-5H:_-ii#0"), "_-NX")
+     initproperty        QName(PrivateNamespace("*", "_-5H:_-ii/instance"), "_-NX")
 
      getlocal1
      kill                1
@@ -35,11 +35,11 @@ class
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
      getlocal0
-     callproperty        QName(PrivateNamespace("*", "_-5H:_-ii#0"), "_-z8"), 0
+     callproperty        QName(PrivateNamespace("*", "_-5H:_-ii/instance"), "_-z8"), 0
      dup
      setlocal1
 
-     initproperty        QName(PrivateNamespace("*", "_-5H:_-ii#0"), "selected")
+     initproperty        QName(PrivateNamespace("*", "_-5H:_-ii/instance"), "selected")
 
      getlocal1
      kill                1
@@ -53,12 +53,12 @@ class
     end ; code
    end ; body
   end ; method
-  trait const QName(PrivateNamespace("*", "_-5H:_-ii#0"), "HEIGHT") type QName(PackageNamespace(""), "int") value Integer(28) end
-  trait slot QName(PrivateNamespace("*", "_-5H:_-ii#0"), "_-NX") type QName(PackageNamespace("flash.display"), "Shape") end
-  trait slot QName(PrivateNamespace("*", "_-5H:_-ii#0"), "selected") type QName(PackageNamespace("flash.display"), "Shape") end
+  trait const QName(PrivateNamespace("*", "_-5H:_-ii/instance"), "HEIGHT") type QName(PackageNamespace(""), "int") value Integer(28) end
+  trait slot QName(PrivateNamespace("*", "_-5H:_-ii/instance"), "_-NX") type QName(PackageNamespace("flash.display"), "Shape") end
+  trait slot QName(PrivateNamespace("*", "_-5H:_-ii/instance"), "selected") type QName(PackageNamespace("flash.display"), "Shape") end
   trait method QName(PackageNamespace(""), "setSelected")
    method
-    refid "_-5H:_-ii/setSelected"
+    refid "_-5H:_-ii/instance/setSelected"
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
     body
@@ -71,13 +71,13 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-5H:_-ii#0"), "_-NX")
+      getproperty         QName(PrivateNamespace("*", "_-5H:_-ii/instance"), "_-NX")
       getlocal1
       not
       setproperty         QName(PackageNamespace(""), "visible")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-5H:_-ii#0"), "selected")
+      getproperty         QName(PrivateNamespace("*", "_-5H:_-ii/instance"), "selected")
       getlocal1
       setproperty         QName(PackageNamespace(""), "visible")
 
@@ -86,9 +86,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-5H:_-ii#0"), "_-0Hg")
+  trait method QName(PrivateNamespace("*", "_-5H:_-ii/instance"), "_-0Hg")
    method
-    refid "_-5H:_-ii/_-0Hg"
+    refid "_-5H:_-ii/instance/_-5H:_-ii/instance/_-0Hg"
     returns QName(PackageNamespace("flash.display"), "Shape")
     body
      maxstack 4
@@ -107,7 +107,7 @@ class
       getlocal0
       getlocal1
       getproperty         QName(PackageNamespace(""), "graphics")
-      callpropvoid        QName(PrivateNamespace("*", "_-5H:_-ii#0"), "_-0MU"), 1
+      callpropvoid        QName(PrivateNamespace("*", "_-5H:_-ii/instance"), "_-0MU"), 1
 
       getlocal1
       returnvalue
@@ -115,9 +115,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-5H:_-ii#0"), "_-z8")
+  trait method QName(PrivateNamespace("*", "_-5H:_-ii/instance"), "_-z8")
    method
-    refid "_-5H:_-ii/_-z8"
+    refid "_-5H:_-ii/instance/_-5H:_-ii/instance/_-z8"
     returns QName(PackageNamespace("flash.display"), "Shape")
     body
      maxstack 4
@@ -136,12 +136,12 @@ class
       getlocal0
       getlocal1
       getproperty         QName(PackageNamespace(""), "graphics")
-      callpropvoid        QName(PrivateNamespace("*", "_-5H:_-ii#0"), "_-0MU"), 1
+      callpropvoid        QName(PrivateNamespace("*", "_-5H:_-ii/instance"), "_-0MU"), 1
 
       getlocal0
       getlocal1
       getproperty         QName(PackageNamespace(""), "graphics")
-      callpropvoid        QName(PrivateNamespace("*", "_-5H:_-ii#0"), "_-B-"), 1
+      callpropvoid        QName(PrivateNamespace("*", "_-5H:_-ii/instance"), "_-B-"), 1
 
       getlocal1
       returnvalue
@@ -149,9 +149,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-5H:_-ii#0"), "_-0MU")
+  trait method QName(PrivateNamespace("*", "_-5H:_-ii/instance"), "_-0MU")
    method
-    refid "_-5H:_-ii/_-0MU"
+    refid "_-5H:_-ii/instance/_-5H:_-ii/instance/_-0MU"
     param QName(PackageNamespace("flash.display"), "Graphics")
     returns QName(PackageNamespace(""), "void")
     body
@@ -201,9 +201,9 @@ class
       pushbyte            0
       dup
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-5H:_-ii#0"), "HEIGHT")
+      getproperty         QName(PrivateNamespace("*", "_-5H:_-ii/instance"), "HEIGHT")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-5H:_-ii#0"), "HEIGHT")
+      getproperty         QName(PrivateNamespace("*", "_-5H:_-ii/instance"), "HEIGHT")
       pushbyte            4
       getlex              QName(PackageNamespace("com.company.util"), "_-9e")
       getproperty         QName(PackageNamespace(""), "_-0D3")
@@ -211,7 +211,7 @@ class
       callpropvoid        QName(PackageNamespace(""), "_-Cm"), 7
 
       findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
-      getproperty         Multiname("Vector", [PrivateNamespace("*", "_-5H:_-ii#0"), PackageNamespace(""), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "_-5H:_-ii#1"), PackageNamespace("_-5H"), PackageInternalNs("_-5H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-hN"), StaticProtectedNs("_-hN"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("Vector", [PrivateNamespace("*", "_-5H:_-ii/instance"), PackageNamespace(""), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "_-5H:_-ii/instance/_-5H:_-ii/instance"), PackageNamespace("_-5H"), PackageInternalNs("_-5H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-hN"), StaticProtectedNs("_-hN"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       getlex              QName(PackageNamespace("flash.display"), "IGraphicsData")
       applytype           1
       pushbyte            5
@@ -255,9 +255,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-5H:_-ii#0"), "_-B-")
+  trait method QName(PrivateNamespace("*", "_-5H:_-ii/instance"), "_-B-")
    method
-    refid "_-5H:_-ii/_-B-"
+    refid "_-5H:_-ii/instance/_-5H:_-ii/instance/_-B-"
     param QName(PackageNamespace("flash.display"), "Graphics")
     returns QName(PackageNamespace(""), "void")
     body
@@ -285,11 +285,11 @@ class
       pushbyte            4
       dup
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-5H:_-ii#0"), "HEIGHT")
+      getproperty         QName(PrivateNamespace("*", "_-5H:_-ii/instance"), "HEIGHT")
       pushbyte            8
       subtract
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-5H:_-ii#0"), "HEIGHT")
+      getproperty         QName(PrivateNamespace("*", "_-5H:_-ii/instance"), "HEIGHT")
       pushbyte            8
       subtract
       pushbyte            2
@@ -299,7 +299,7 @@ class
       callpropvoid        QName(PackageNamespace(""), "_-Cm"), 7
 
       findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
-      getproperty         Multiname("Vector", [PrivateNamespace("*", "_-5H:_-ii#0"), PackageNamespace(""), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "_-5H:_-ii#1"), PackageNamespace("_-5H"), PackageInternalNs("_-5H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-hN"), StaticProtectedNs("_-hN"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("Vector", [PrivateNamespace("*", "_-5H:_-ii/instance"), PackageNamespace(""), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "_-5H:_-ii/instance/_-5H:_-ii/instance"), PackageNamespace("_-5H"), PackageInternalNs("_-5H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-hN"), StaticProtectedNs("_-hN"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       getlex              QName(PackageNamespace("flash.display"), "IGraphicsData")
       applytype           1
       pushbyte            3
@@ -334,7 +334,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-5H:_-ii/cinit"
+  refid "_-5H:_-ii/class/init"
   body
    maxstack 3
    localcount 1

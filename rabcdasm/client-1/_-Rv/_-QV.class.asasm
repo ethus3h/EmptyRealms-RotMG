@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-04z")
   iinit
-   refid "_-Rv:_-QV/iinit"
+   refid "_-Rv:_-QV/instance/init"
    param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
    param QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")
    param QName(PackageNamespace(""), "int")
@@ -56,10 +56,10 @@ class
   trait slot QName(PackageNamespace(""), "_-G2") type QName(PackageNamespace("_-Rv"), "Panel") value Null() end
   trait slot QName(PackageNamespace(""), "_-dN") type QName(PackageNamespace("com.company.assembleegameclient.objects"), "_-G4") value Null() end
   trait slot QName(PackageNamespace(""), "_-VD") type QName(PackageNamespace("_-Rv"), "_-w6") end
-  trait slot QName(PrivateNamespace("*", "_-Rv:_-QV"), "_-g") type QName(PackageNamespace("_-Rv"), "Panel") end
+  trait slot QName(PrivateNamespace("*", "_-Rv:_-QV/instance"), "_-g") type QName(PackageNamespace("_-Rv"), "Panel") end
   trait method QName(PackageNamespace(""), "_-j")
    method
-    refid "_-Rv:_-QV/_-j"
+    refid "_-Rv:_-QV/instance/_-j"
     param QName(PackageNamespace("_-Rv"), "Panel")
     returns QName(PackageNamespace(""), "void")
     body
@@ -72,29 +72,29 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Rv:_-QV"), "_-g")
+      getproperty         QName(PrivateNamespace("*", "_-Rv:_-QV/instance"), "_-g")
       pushnull
       ifeq                L13
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Rv:_-QV"), "_-g")
+      getproperty         QName(PrivateNamespace("*", "_-Rv:_-QV/instance"), "_-g")
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "COMPLETE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Rv:_-QV"), "onComplete")
+      getproperty         QName(PrivateNamespace("*", "_-Rv:_-QV/instance"), "onComplete")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
 L13:
       getlocal0
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "_-Rv:_-QV"), "_-g")
+      initproperty        QName(PrivateNamespace("*", "_-Rv:_-QV/instance"), "_-g")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Rv:_-QV"), "_-g")
+      getproperty         QName(PrivateNamespace("*", "_-Rv:_-QV/instance"), "_-g")
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "COMPLETE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Rv:_-QV"), "onComplete")
+      getproperty         QName(PrivateNamespace("*", "_-Rv:_-QV/instance"), "onComplete")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       returnvoid
@@ -104,7 +104,7 @@ L13:
   end ; trait
   trait method QName(PackageNamespace(""), "redraw")
    method
-    refid "_-Rv:_-QV/redraw"
+    refid "_-Rv:_-QV/instance/redraw"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 3
@@ -126,7 +126,7 @@ L13:
   end ; trait
   trait method QName(PackageNamespace(""), "draw")
    method
-    refid "_-Rv:_-QV/draw"
+    refid "_-Rv:_-QV/instance/draw"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 7
@@ -153,15 +153,15 @@ L13:
       setlocal            6
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Rv:_-QV"), "_-g")
+      getproperty         QName(PrivateNamespace("*", "_-Rv:_-QV/instance"), "_-g")
       pushnull
       ifeq                L26
 
       getlocal0
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Rv:_-QV"), "_-g")
+      getproperty         QName(PrivateNamespace("*", "_-Rv:_-QV/instance"), "_-g")
       pushtrue
-      callpropvoid        QName(PrivateNamespace("*", "_-Rv:_-QV"), "_-tB"), 2
+      callpropvoid        QName(PrivateNamespace("*", "_-Rv:_-QV/instance"), "_-tB"), 2
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-G2")
@@ -361,7 +361,7 @@ L168:
       pushnull
       equals
       not
-      callpropvoid        QName(PrivateNamespace("*", "_-Rv:_-QV"), "_-tB"), 2
+      callpropvoid        QName(PrivateNamespace("*", "_-Rv:_-QV/instance"), "_-tB"), 2
 
 L178:
       getlocal0
@@ -373,9 +373,9 @@ L178:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Rv:_-QV"), "onComplete")
+  trait method QName(PrivateNamespace("*", "_-Rv:_-QV/instance"), "onComplete")
    method
-    refid "_-Rv:_-QV/onComplete"
+    refid "_-Rv:_-QV/instance/_-Rv:_-QV/instance/onComplete"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -388,27 +388,27 @@ L178:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Rv:_-QV"), "_-g")
+      getproperty         QName(PrivateNamespace("*", "_-Rv:_-QV/instance"), "_-g")
       pushnull
       ifeq                L16
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Rv:_-QV"), "_-g")
+      getproperty         QName(PrivateNamespace("*", "_-Rv:_-QV/instance"), "_-g")
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "COMPLETE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Rv:_-QV"), "onComplete")
+      getproperty         QName(PrivateNamespace("*", "_-Rv:_-QV/instance"), "onComplete")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
       getlocal0
       pushnull
-      initproperty        QName(PrivateNamespace("*", "_-Rv:_-QV"), "_-g")
+      initproperty        QName(PrivateNamespace("*", "_-Rv:_-QV/instance"), "_-g")
 
 L16:
       getlocal0
       pushnull
       pushfalse
-      callpropvoid        QName(PrivateNamespace("*", "_-Rv:_-QV"), "_-tB"), 2
+      callpropvoid        QName(PrivateNamespace("*", "_-Rv:_-QV/instance"), "_-tB"), 2
 
       getlocal0
       callpropvoid        QName(PackageNamespace(""), "draw"), 0
@@ -418,9 +418,9 @@ L16:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Rv:_-QV"), "_-tB")
+  trait method QName(PrivateNamespace("*", "_-Rv:_-QV/instance"), "_-tB")
    method
-    refid "_-Rv:_-QV/_-tB"
+    refid "_-Rv:_-QV/instance/_-Rv:_-QV/instance/_-tB"
     param QName(PackageNamespace("_-Rv"), "Panel")
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
@@ -490,7 +490,7 @@ L33:
   end ; trait
  end ; instance
  cinit
-  refid "_-Rv:_-QV/cinit"
+  refid "_-Rv:_-QV/class/init"
   body
    maxstack 4
    localcount 3

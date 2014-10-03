@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-s5")
   iinit
-   refid "_-F1:News/iinit"
+   refid "_-F1:News/instance/init"
    param QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0KR")
    body
     maxstack 10
@@ -22,11 +22,11 @@ class
      setlocal2
 
      getlocal0
-     getlex              Multiname("Vector", [PrivateNamespace("*", "_-F1:News"), PrivateNamespace("*", "_-F1:News/iinit"), PackageNamespace(""), PackageNamespace("_-F1"), PackageInternalNs("_-F1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-s5"), StaticProtectedNs("_-s5"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("__AS3__.vec")])
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_-F1:News/instance"), PrivateNamespace("*", "_-F1:News/instance/init"), PackageNamespace(""), PackageNamespace("_-F1"), PackageInternalNs("_-F1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-s5"), StaticProtectedNs("_-s5"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("__AS3__.vec")])
      getlex              QName(PackageNamespace("_-F1"), "_-0Bm")
      applytype           1
      construct           0
-     initproperty        QName(PrivateNamespace("*", "_-F1:News"), "_-dL")
+     initproperty        QName(PrivateNamespace("*", "_-F1:News/instance"), "_-dL")
 
      getlocal0
      constructsuper      0
@@ -80,10 +80,10 @@ L45:
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-F1:News"), "_-dL") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("_-F1"), "_-0Bm")>) end
+  trait slot QName(PrivateNamespace("*", "_-F1:News/instance"), "_-dL") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("_-F1"), "_-0Bm")>) end
   trait method QName(PackageNamespace(""), "_-yQ")
    method
-    refid "_-F1:News/_-yQ"
+    refid "_-F1:News/instance/_-yQ"
     param QName(PackageNamespace("_-F1"), "_-0Bm")
     returns QName(PackageNamespace(""), "void")
     body
@@ -98,7 +98,7 @@ L45:
       getlocal1
       pushbyte            4
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:News"), "_-dL")
+      getproperty         QName(PrivateNamespace("*", "_-F1:News/instance"), "_-dL")
       getproperty         QName(PackageNamespace(""), "length")
       getlex              QName(PackageNamespace("_-F1"), "_-0Bm")
       getproperty         QName(PackageNamespace(""), "HEIGHT")
@@ -109,7 +109,7 @@ L45:
       setproperty         QName(PackageNamespace(""), "y")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:News"), "_-dL")
+      getproperty         QName(PrivateNamespace("*", "_-F1:News/instance"), "_-dL")
       getlocal1
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
@@ -124,7 +124,7 @@ L45:
   end ; trait
  end ; instance
  cinit
-  refid "_-F1:News/cinit"
+  refid "_-F1:News/class/init"
   body
    maxstack 3
    localcount 1

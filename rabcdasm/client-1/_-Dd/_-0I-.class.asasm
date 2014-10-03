@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-0A-")
   iinit
-   refid "_-Dd:_-0I-/iinit"
+   refid "_-Dd:_-0I-/instance/init"
    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("com.company.util"), "IntPoint")>)
    param QName(PackageNamespace(""), "String")
    body
@@ -28,10 +28,10 @@ class
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
      constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
-     initproperty        QName(PrivateNamespace("*", "_-Dd:_-0I-"), "_-Ty")
+     initproperty        QName(PrivateNamespace("*", "_-Dd:_-0I-/instance"), "_-Ty")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-Dd:_-0I-"), "_-Ty")
+     getproperty         QName(PrivateNamespace("*", "_-Dd:_-0I-/instance"), "_-Ty")
      getproperty         QName(PackageNamespace(""), "graphics")
      coerce              QName(PackageNamespace("flash.display"), "Graphics")
      setlocal3
@@ -56,17 +56,17 @@ class
 
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-Dd:_-0I-"), "_-Ty")
+     getproperty         QName(PrivateNamespace("*", "_-Dd:_-0I-/instance"), "_-Ty")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
      getlocal0
      findpropstrict      QName(PackageNamespace("_-Dd"), "_-Rc")
      getlocal2
      constructprop       QName(PackageNamespace("_-Dd"), "_-Rc"), 1
-     initproperty        QName(PrivateNamespace("*", "_-Dd:_-0I-"), "_-0KF")
+     initproperty        QName(PrivateNamespace("*", "_-Dd:_-0I-/instance"), "_-0KF")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-Dd:_-0I-"), "_-0KF")
+     getproperty         QName(PrivateNamespace("*", "_-Dd:_-0I-/instance"), "_-0KF")
      getlex              QName(PackageNamespace("flash.events"), "Event")
      getproperty         QName(PackageNamespace(""), "COMPLETE")
      getlocal0
@@ -74,7 +74,7 @@ class
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-Dd:_-0I-"), "_-0KF")
+     getproperty         QName(PrivateNamespace("*", "_-Dd:_-0I-/instance"), "_-0KF")
      getlex              QName(PackageNamespace("flash.events"), "Event")
      getproperty         QName(PackageNamespace(""), "CANCEL")
      getlocal0
@@ -83,7 +83,7 @@ class
 
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-Dd:_-0I-"), "_-0KF")
+     getproperty         QName(PrivateNamespace("*", "_-Dd:_-0I-/instance"), "_-0KF")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
      returnvoid
@@ -91,11 +91,11 @@ class
    end ; body
   end ; method
   trait slot QName(PackageNamespace(""), "tiles_") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("com.company.util"), "IntPoint")>) end
-  trait slot QName(PrivateNamespace("*", "_-Dd:_-0I-"), "_-Ty") type QName(PackageNamespace("flash.display"), "Shape") end
-  trait slot QName(PrivateNamespace("*", "_-Dd:_-0I-"), "_-0KF") type QName(PackageNamespace("_-Dd"), "_-Rc") end
+  trait slot QName(PrivateNamespace("*", "_-Dd:_-0I-/instance"), "_-Ty") type QName(PackageNamespace("flash.display"), "Shape") end
+  trait slot QName(PrivateNamespace("*", "_-Dd:_-0I-/instance"), "_-0KF") type QName(PackageNamespace("_-Dd"), "_-Rc") end
   trait method QName(PackageNamespace(""), "_-wa")
    method
-    refid "_-Dd:_-0I-/_-wa"
+    refid "_-Dd:_-0I-/instance/_-wa"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 4
@@ -107,7 +107,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Dd:_-0I-"), "_-0KF")
+      getproperty         QName(PrivateNamespace("*", "_-Dd:_-0I-/instance"), "_-0KF")
       getproperty         QName(PackageNamespace(""), "_-Ow")
       callproperty        QName(PackageNamespace(""), "text"), 0
       pushstring          ""
@@ -118,7 +118,7 @@ class
 
 L10:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Dd:_-0I-"), "_-0KF")
+      getproperty         QName(PrivateNamespace("*", "_-Dd:_-0I-/instance"), "_-0KF")
       getproperty         QName(PackageNamespace(""), "_-Ow")
       callproperty        QName(PackageNamespace(""), "text"), 0
       returnvalue
@@ -128,7 +128,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "onComplete")
    method
-    refid "_-Dd:_-0I-/onComplete"
+    refid "_-Dd:_-0I-/instance/onComplete"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -158,7 +158,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "onCancel")
    method
-    refid "_-Dd:_-0I-/onCancel"
+    refid "_-Dd:_-0I-/instance/onCancel"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -181,7 +181,7 @@ L10:
   end ; trait
  end ; instance
  cinit
-  refid "_-Dd:_-0I-/cinit"
+  refid "_-Dd:_-0I-/class/init"
   body
    maxstack 3
    localcount 1

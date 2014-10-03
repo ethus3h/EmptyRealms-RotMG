@@ -1,6 +1,6 @@
 script ; 277
  sinit
-  refid "_-03T:ObjectProcessor.sinit"
+  refid "_-03T:ObjectProcessor/init"
   body
    maxstack 2
    localcount 1
@@ -19,14 +19,14 @@ script ; 277
     popscope
     initproperty        QName(PackageNamespace("_-03T"), "ObjectProcessor")
 
-    findpropstrict      Multiname("ObjectHandler", [PrivateNamespace("*", "_-03T:ObjectProcessor#0")])
+    findpropstrict      Multiname("ObjectHandler", [PrivateNamespace("*", "_-03T:ObjectProcessor")])
     getlex              QName(PackageNamespace(""), "Object")
     pushscope
 
     getlex              QName(PackageNamespace(""), "Object")
     newclass            "_-03T:ObjectProcessor/ObjectHandler"
     popscope
-    initproperty        QName(PrivateNamespace("*", "_-03T:ObjectProcessor#0"), "ObjectHandler")
+    initproperty        QName(PrivateNamespace("*", "_-03T:ObjectProcessor"), "ObjectHandler")
 
     returnvoid
    end ; code
@@ -35,7 +35,7 @@ script ; 277
  trait class QName(PackageNamespace("_-03T"), "ObjectProcessor")
   #include "ObjectProcessor.class.asasm"
  end ; trait
- trait class QName(PrivateNamespace("*", "_-03T:ObjectProcessor#0"), "ObjectHandler")
+ trait class QName(PrivateNamespace("*", "_-03T:ObjectProcessor"), "ObjectHandler")
   #include "ObjectProcessor/ObjectHandler.class.asasm"
  end ; trait
 end ; script

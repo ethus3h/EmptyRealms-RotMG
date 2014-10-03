@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-0Ek")
   iinit
-   refid "_-03T:_-078/iinit"
+   refid "_-03T:_-078/instance/init"
    body
     maxstack 3
     localcount 3
@@ -25,7 +25,7 @@ class
   end ; method
  end ; instance
  cinit
-  refid "_-03T:_-078/cinit"
+  refid "_-03T:_-078/class/init"
   body
    maxstack 3
    localcount 1
@@ -39,10 +39,10 @@ class
    end ; code
   end ; body
  end ; method
- trait slot QName(PrivateNamespace("*", "_-03T:_-078"), "_-0CL") slotid 1 type QName(PackageNamespace(""), "uint") end
+ trait slot QName(PrivateNamespace("*", "_-03T:_-078/class/create"), "_-0CL") slotid 1 type QName(PackageNamespace(""), "uint") end
  trait method QName(PackageNamespace(""), "create") flag FINAL dispid 3
   method
-   refid "_-03T:_-078/create"
+   refid "_-03T:_-078/class/create"
    param null
    returns QName(PackageNamespace(""), "String")
    flag HAS_OPTIONAL
@@ -84,11 +84,11 @@ L21:
      pushstring          ""
      coerce_a
 L23:
-     findpropstrict      QName(PrivateNamespace("*", "_-03T:_-078"), "_-0CL")
+     findpropstrict      QName(PrivateNamespace("*", "_-03T:_-078/class/create"), "_-0CL")
      dup
      setlocal2
 
-     getproperty         QName(PrivateNamespace("*", "_-03T:_-078"), "_-0CL")
+     getproperty         QName(PrivateNamespace("*", "_-03T:_-078/class/create"), "_-0CL")
      convert_d
      dup
      increment
@@ -96,7 +96,7 @@ L23:
 
      getlocal2
      getlocal3
-     setproperty         QName(PrivateNamespace("*", "_-03T:_-078"), "_-0CL")
+     setproperty         QName(PrivateNamespace("*", "_-03T:_-078/class/create"), "_-0CL")
 
      kill                3
      kill                2

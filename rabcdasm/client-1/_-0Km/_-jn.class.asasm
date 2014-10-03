@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-Ps")
   iinit
-   refid "_-0Km:_-jn/iinit"
+   refid "_-0Km:_-jn/instance/init"
    param QName(PackageNamespace(""), "uint")
    param QName(PackageNamespace(""), "Number")
    param QName(PackageNamespace(""), "Number")
@@ -67,7 +67,7 @@ class
     end ; code
    end ; body
   end ; method
-  trait const QName(PrivateNamespace("*", "_-0Km:_-jn"), "_-4j") type QName(PackageNamespace(""), "Number") value Double(0.0025) end
+  trait const QName(PrivateNamespace("*", "_-0Km:_-jn/instance/update"), "_-4j") type QName(PackageNamespace(""), "Number") value Double(0.0025) end
   trait slot QName(PackageNamespace(""), "_-hB") type QName(PackageNamespace(""), "int") end
   trait slot QName(PackageNamespace(""), "speed") type QName(PackageNamespace(""), "Number") end
   trait slot QName(PackageNamespace(""), "spread") type QName(PackageNamespace(""), "Number") end
@@ -80,7 +80,7 @@ class
   trait slot QName(PackageNamespace(""), "_-M-") type QName(PackageNamespace(""), "Number") end
   trait method QName(PackageNamespace(""), "restart")
    method
-    refid "_-0Km:_-jn/restart"
+    refid "_-0Km:_-jn/instance/restart"
     param QName(PackageNamespace(""), "int")
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace(""), "void")
@@ -182,7 +182,7 @@ L47:
   end ; trait
   trait method QName(PackageNamespace(""), "removeFromMap") flag OVERRIDE
    method
-    refid "_-0Km:_-jn/removeFromMap"
+    refid "_-0Km:_-jn/instance/removeFromMap"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 3
@@ -202,7 +202,7 @@ L47:
   end ; trait
   trait method QName(PackageNamespace(""), "update") flag OVERRIDE
    method
-    refid "_-0Km:_-jn/update"
+    refid "_-0Km:_-jn/instance/update"
     param QName(PackageNamespace(""), "int")
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace(""), "Boolean")
@@ -259,7 +259,7 @@ L22:
       getlocal2
       multiply
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0Km:_-jn"), "_-4j")
+      getproperty         QName(PrivateNamespace("*", "_-0Km:_-jn/instance/update"), "_-4j")
       multiply
       add
       getlex              QName(PackageNamespace(""), "y_")
@@ -268,7 +268,7 @@ L22:
       getlocal2
       multiply
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0Km:_-jn"), "_-4j")
+      getproperty         QName(PrivateNamespace("*", "_-0Km:_-jn/instance/update"), "_-4j")
       multiply
       add
       callpropvoid        QName(PackageNamespace(""), "moveTo"), 2
@@ -282,7 +282,7 @@ L52:
   end ; trait
  end ; instance
  cinit
-  refid "_-0Km:_-jn/cinit"
+  refid "_-0Km:_-jn/class/init"
   body
    maxstack 3
    localcount 1
@@ -298,7 +298,7 @@ L52:
  end ; method
  trait method QName(PackageNamespace(""), "create") flag FINAL dispid 3
   method
-   refid "_-0Km:_-jn/create"
+   refid "_-0Km:_-jn/class/create"
    param null
    param QName(PackageNamespace(""), "uint")
    param QName(PackageNamespace(""), "Number")

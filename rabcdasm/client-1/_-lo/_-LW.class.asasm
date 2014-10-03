@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-ny")
   iinit
-   refid "_-lo:_-LW/iinit"
+   refid "_-lo:_-LW/instance/init"
    param QName(PackageNamespace("_-lo"), "_-t5")
    body
     maxstack 5
@@ -25,36 +25,36 @@ class
      getlex              QName(PackageNamespace(""), "RegExp")
      pushstring          "^mx\\.|^spark\\.|^flash\\."
      construct           1
-     initproperty        QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_filter")
+     initproperty        QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_filter")
 
      getlocal0
      constructsuper      0
 
      getlocal0
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-055")
+     initproperty        QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-055")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-055")
+     getproperty         QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-055")
      getlex              QName(PackageNamespace("_-lo"), "_-or")
      getproperty         QName(PackageNamespace(""), "_-YN")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-Sg")
+     getproperty         QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-Sg")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-055")
+     getproperty         QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-055")
      getlex              QName(PackageNamespace("_-lo"), "_-or")
      getproperty         QName(PackageNamespace(""), "_-OU")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-0G6")
+     getproperty         QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-0G6")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
      pushbyte            0
      setlocal3
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-055")
+     getproperty         QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-055")
      getproperty         QName(PackageNamespace(""), "_-0CW")
      coerce_a
      setlocal            4
@@ -72,7 +72,7 @@ L37:
      getlocal0
      getlocal2
      getproperty         QName(PackageNamespace(""), "container")
-     callpropvoid        QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-5-"), 1
+     callpropvoid        QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-5-"), 1
 
 L47:
      hasnext2            4, 3
@@ -84,11 +84,11 @@ L47:
     end ; code
    end ; body
   end ; method
-  trait const QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_filter") type QName(PackageNamespace(""), "RegExp") end
-  trait slot QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-055") type QName(PackageNamespace("_-lo"), "_-t5") end
+  trait const QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_filter") type QName(PackageNamespace(""), "RegExp") end
+  trait slot QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-055") type QName(PackageNamespace("_-lo"), "_-t5") end
   trait method QName(PackageNamespace(""), "destroy")
    method
-    refid "_-lo:_-LW/destroy"
+    refid "_-lo:_-LW/instance/destroy"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 5
@@ -104,26 +104,26 @@ L47:
       setlocal1
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-055")
+      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-055")
       getlex              QName(PackageNamespace("_-lo"), "_-or")
       getproperty         QName(PackageNamespace(""), "_-YN")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-Sg")
+      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-Sg")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-055")
+      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-055")
       getlex              QName(PackageNamespace("_-lo"), "_-or")
       getproperty         QName(PackageNamespace(""), "_-OU")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-0G6")
+      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-0G6")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
       pushbyte            0
       setlocal2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-055")
+      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-055")
       getproperty         QName(PackageNamespace(""), "_-0CW")
       coerce_a
       setlocal3
@@ -141,7 +141,7 @@ L27:
       getlocal0
       getlocal1
       getproperty         QName(PackageNamespace(""), "container")
-      callpropvoid        QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-04Q"), 1
+      callpropvoid        QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-04Q"), 1
 
 L37:
       hasnext2            3, 2
@@ -154,9 +154,9 @@ L37:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-Sg")
+  trait method QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-Sg")
    method
-    refid "_-lo:_-LW/_-Sg"
+    refid "_-lo:_-LW/instance/_-lo:_-LW/instance/_-Sg"
     param QName(PackageNamespace("_-lo"), "_-or")
     returns QName(PackageNamespace(""), "void")
     body
@@ -171,16 +171,16 @@ L37:
       getlocal0
       getlocal1
       getproperty         QName(PackageNamespace(""), "container")
-      callpropvoid        QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-5-"), 1
+      callpropvoid        QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-5-"), 1
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-0G6")
+  trait method QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-0G6")
    method
-    refid "_-lo:_-LW/_-0G6"
+    refid "_-lo:_-LW/instance/_-lo:_-LW/instance/_-0G6"
     param QName(PackageNamespace("_-lo"), "_-or")
     returns QName(PackageNamespace(""), "void")
     body
@@ -195,16 +195,16 @@ L37:
       getlocal0
       getlocal1
       getproperty         QName(PackageNamespace(""), "container")
-      callpropvoid        QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-04Q"), 1
+      callpropvoid        QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-04Q"), 1
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-5-")
+  trait method QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-5-")
    method
-    refid "_-lo:_-LW/_-5-"
+    refid "_-lo:_-LW/instance/_-lo:_-LW/instance/_-5-"
     param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
     returns QName(PackageNamespace(""), "void")
     body
@@ -220,7 +220,7 @@ L37:
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-74")
+      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-74")
       pushtrue
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
 
@@ -228,7 +228,7 @@ L37:
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-UK")
+      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-UK")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       returnvoid
@@ -236,9 +236,9 @@ L37:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-04Q")
+  trait method QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-04Q")
    method
-    refid "_-lo:_-LW/_-04Q"
+    refid "_-lo:_-LW/instance/_-lo:_-LW/instance/_-04Q"
     param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
     returns QName(PackageNamespace(""), "void")
     body
@@ -254,7 +254,7 @@ L37:
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-74")
+      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-74")
       pushtrue
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
 
@@ -262,7 +262,7 @@ L37:
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-UK")
+      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-UK")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
       returnvoid
@@ -270,9 +270,9 @@ L37:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-74")
+  trait method QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-74")
    method
-    refid "_-lo:_-LW/_-74"
+    refid "_-lo:_-LW/instance/_-lo:_-LW/instance/_-74"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -306,7 +306,7 @@ L37:
       setlocal3
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_filter")
+      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_filter")
       getlocal3
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "test"), 1
       convert_b
@@ -320,12 +320,12 @@ L37:
 L28:
       getlocal2
       pushstring          "constructor"
-      getproperty         MultinameL([PrivateNamespace("*", "_-lo:_-LW#0"), PackageNamespace("_-lo"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-lo:_-LW#1"), PackageInternalNs("_-lo"), ProtectedNamespace("_-ny"), StaticProtectedNs("_-ny")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-lo:_-LW/instance"), PackageNamespace("_-lo"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-lo:_-LW/instance/_-lo:_-LW/instance"), PackageInternalNs("_-lo"), ProtectedNamespace("_-ny"), StaticProtectedNs("_-ny")])
       coerce              QName(PackageNamespace(""), "Class")
       setlocal            5
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-055")
+      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-055")
       getlocal2
       callproperty        QName(PackageNamespace(""), "_-0CH"), 1
       coerce              QName(PackageNamespace("_-lo"), "_-02f")
@@ -354,9 +354,9 @@ L49:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-UK")
+  trait method QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-UK")
    method
-    refid "_-lo:_-LW/_-UK"
+    refid "_-lo:_-LW/instance/_-lo:_-LW/instance/_-UK"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -383,17 +383,17 @@ L49:
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-UK")
+      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-UK")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
       getlocal2
       pushstring          "constructor"
-      getproperty         MultinameL([PrivateNamespace("*", "_-lo:_-LW#0"), PackageNamespace("_-lo"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-lo:_-LW#1"), PackageInternalNs("_-lo"), ProtectedNamespace("_-ny"), StaticProtectedNs("_-ny")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-lo:_-LW/instance"), PackageNamespace("_-lo"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-lo:_-LW/instance/_-lo:_-LW/instance"), PackageInternalNs("_-lo"), ProtectedNamespace("_-ny"), StaticProtectedNs("_-ny")])
       coerce              QName(PackageNamespace(""), "Class")
       setlocal3
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW#0"), "_-055")
+      getproperty         QName(PrivateNamespace("*", "_-lo:_-LW/instance"), "_-055")
       getlocal2
       callproperty        QName(PackageNamespace(""), "_-3N"), 1
       coerce              QName(PackageNamespace("_-lo"), "_-02f")
@@ -411,7 +411,7 @@ L49:
   end ; trait
  end ; instance
  cinit
-  refid "_-lo:_-LW/cinit"
+  refid "_-lo:_-LW/class/init"
   body
    maxstack 3
    localcount 1

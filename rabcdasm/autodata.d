@@ -1,5 +1,5 @@
 /*
- *  Copyright 2010, 2011, 2012 Vladimir Panteleev <vladimir@thecybershadow.net>
+ *  Copyright 2010, 2011, 2012, 2014 Vladimir Panteleev <vladimir@thecybershadow.net>
  *  This file is part of RABCDAsm.
  *
  *  RABCDAsm is free software: you can redistribute it and/or modify
@@ -34,7 +34,7 @@ template AutoCompare()
 		alias typeof(this) _AutoDataTypeReference;
 		alias Object _AutoDataOtherTypeReference;
 
-		override hash_t toHash() const { return _AutoDataHash(); }
+		override hash_t toHash() const { try { return _AutoDataHash(); } catch(object.Exception e) { assert(0, e.msg); } }
 		override bool opEquals(Object o) const { return _AutoDataEquals(o); }
 		override int opCmp(Object o) const { return _AutoDataCmp(o); }
 	}
@@ -78,7 +78,7 @@ template AutoToString()
 	static if (is(typeof(this)==class))
 		override string toString() const { return _AutoDataToString(); }
 	else // struct
-		string toString() { return _AutoDataToString(); }
+		string toString() const { return _AutoDataToString(); }
 
 	string _AutoDataToString() const
 	{
@@ -202,7 +202,7 @@ struct CmpDataHandler(O)
 		else
 		static if (is(typeof(T.opCmp)))
 			enum dataCode = nullCheck!(T, name, reverseStr)
-			              ~ "{ int _AutoDataCmp = this." ~ name ~ ".opCmp(_AutoDataOther." ~ name ~ "); if (_AutoDataCmp != 0) return " ~ reverseStr ~ "_AutoDataCmp; }";
+			              ~ "{ int _AutoDataCmp = this." ~ name ~ ".opCmp(cast()_AutoDataOther." ~ name ~ "); if (_AutoDataCmp != 0) return " ~ reverseStr ~ "_AutoDataCmp; }";
 		else
 			enum dataCode = "if (this." ~ name ~ " < _AutoDataOther." ~ name ~ ") return " ~ reverseStr ~ "(-1);" ~
 			                "if (this." ~ name ~ " > _AutoDataOther." ~ name ~ ") return " ~ reverseStr ~ "( 1);";
@@ -212,8 +212,46 @@ struct CmpDataHandler(O)
 
 struct ToStringDataHandler
 {
+	template getMixinSingle(T, string name)
+	{
+/*
+		enum getMixinSingle = "
+				static if (is(typeof(_AutoDataResult ~= " ~ name ~ ".toString())))
+					_AutoDataResult ~= " ~ name ~ ".toString();
+				else
+					_AutoDataResult ~= to!string(" ~ name ~ ");
+		";
+*/
+		static if (is(typeof(T.init is null)))
+			enum getMixinSingle = "_AutoDataResult ~= " ~ name ~ " ? to!string(" ~ name ~ ") : `null`;";
+		else
+			enum getMixinSingle = "_AutoDataResult ~= to!string(" ~ name ~ ");";
+	}
+
+	template getMixinBody(T, string name)
+	{
+		// TODO: arrays of arrays
+		static if (is(T U : U[]) && !is(T : const(char)[]))
+		{
+			enum getMixinBody = "
+				_AutoDataResult ~= ` [ `;
+				foreach (_AutoDataArrayIndex, _AutoDataArrayItem; " ~ name ~ ")
+				{
+					if (_AutoDataArrayIndex) _AutoDataResult ~= ` , `;
+					" ~ getMixinSingle!(U, "_AutoDataArrayItem") ~ "
+				}
+				_AutoDataResult ~= ` ] `;
+			";
+		}
+		else
+			enum getMixinBody = getMixinSingle!(T, name);
+	}
+
 	template getMixin(T, string name, bool reverseSort)
 	{
-		enum getMixin = "_AutoDataResult ~= `" ~ name ~ " = ` ~ to!string(this." ~ name ~ ") ~ ` `;";
+		enum getMixin =
+			"_AutoDataResult ~= `" ~ name ~ " = `;" ~
+			getMixinBody!(T, name) ~
+			"_AutoDataResult ~= ` `;";
 	}
 }

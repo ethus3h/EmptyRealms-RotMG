@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-")
   iinit
-   refid "_-F1:_-zf/iinit"
+   refid "_-F1:_-zf/instance/init"
    body
     maxstack 10
     localcount 3
@@ -38,35 +38,35 @@ class
      dup
      pushstring          "Myriad Pro"
      constructprop       QName(PackageNamespace("com.company.ui"), "SimpleText"), 6
-     initproperty        QName(PrivateNamespace("*", "_-F1:_-zf"), "text")
+     initproperty        QName(PrivateNamespace("*", "_-F1:_-zf/instance"), "text")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:_-zf"), "text")
+     getproperty         QName(PrivateNamespace("*", "_-F1:_-zf/instance"), "text")
      pushshort           526
      setproperty         QName(PackageNamespace(""), "y")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:_-zf"), "text")
+     getproperty         QName(PrivateNamespace("*", "_-F1:_-zf/instance"), "text")
      pushtrue
      callpropvoid        QName(PackageNamespace(""), "_-8Y"), 1
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:_-zf"), "text")
+     getproperty         QName(PrivateNamespace("*", "_-F1:_-zf/instance"), "text")
      pushstring          "<p align=\"center\">Loading...</p>"
      setproperty         QName(PackageNamespace(""), "htmlText")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:_-zf"), "text")
+     getproperty         QName(PrivateNamespace("*", "_-F1:_-zf/instance"), "text")
      getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
      getproperty         QName(PackageNamespace(""), "CENTER")
      setproperty         QName(PackageNamespace(""), "autoSize")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:_-zf"), "text")
+     getproperty         QName(PrivateNamespace("*", "_-F1:_-zf/instance"), "text")
      callpropvoid        QName(PackageNamespace(""), "updateMetrics"), 0
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:_-zf"), "text")
+     getproperty         QName(PrivateNamespace("*", "_-F1:_-zf/instance"), "text")
      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
      pushbyte            0
      dup
@@ -80,17 +80,17 @@ class
 
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-F1:_-zf"), "text")
+     getproperty         QName(PrivateNamespace("*", "_-F1:_-zf/instance"), "text")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-F1:_-zf"), "text") type QName(PackageNamespace("com.company.ui"), "SimpleText") end
+  trait slot QName(PrivateNamespace("*", "_-F1:_-zf/instance"), "text") type QName(PackageNamespace("com.company.ui"), "SimpleText") end
   trait method QName(PackageNamespace(""), "_-02C")
    method
-    refid "_-F1:_-zf/_-02C"
+    refid "_-F1:_-zf/instance/_-02C"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -103,16 +103,16 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-zf"), "text")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-zf/instance"), "text")
       getlocal1
       setproperty         QName(PackageNamespace(""), "htmlText")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-zf"), "text")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-zf/instance"), "text")
       getlex              QName(PackageNamespace(""), "stage")
       getproperty         QName(PackageNamespace(""), "stageWidth")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-F1:_-zf"), "text")
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-zf/instance"), "text")
       getproperty         QName(PackageNamespace(""), "width")
       subtract
       pushdouble          0.5
@@ -126,7 +126,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-F1:_-zf/cinit"
+  refid "_-F1:_-zf/class/init"
   body
    maxstack 3
    localcount 1

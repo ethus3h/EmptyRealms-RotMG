@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-Mn")
   iinit
-   refid "com.hurlant.util.der:PEM/iinit"
+   refid "com.hurlant.util.der:PEM/instance/init"
    body
     maxstack 1
     localcount 1
@@ -25,7 +25,7 @@ class
   end ; method
  end ; instance
  cinit
-  refid "com.hurlant.util.der:PEM/cinit"
+  refid "com.hurlant.util.der:PEM/class/init"
   body
    maxstack 2
    localcount 1
@@ -35,43 +35,43 @@ class
     getlocal0
     pushscope
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PRIVATE_KEY_HEADER")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "RSA_PRIVATE_KEY_HEADER")
     pushstring          "-----BEGIN RSA PRIVATE KEY-----"
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PRIVATE_KEY_HEADER")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "RSA_PRIVATE_KEY_HEADER")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PRIVATE_KEY_FOOTER")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "RSA_PRIVATE_KEY_FOOTER")
     pushstring          "-----END RSA PRIVATE KEY-----"
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PRIVATE_KEY_FOOTER")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "RSA_PRIVATE_KEY_FOOTER")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PUBLIC_KEY_HEADER")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "RSA_PUBLIC_KEY_HEADER")
     pushstring          "-----BEGIN PUBLIC KEY-----"
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PUBLIC_KEY_HEADER")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "RSA_PUBLIC_KEY_HEADER")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PUBLIC_KEY_FOOTER")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "RSA_PUBLIC_KEY_FOOTER")
     pushstring          "-----END PUBLIC KEY-----"
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PUBLIC_KEY_FOOTER")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "RSA_PUBLIC_KEY_FOOTER")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "CERTIFICATE_HEADER")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "CERTIFICATE_HEADER")
     pushstring          "-----BEGIN CERTIFICATE-----"
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "CERTIFICATE_HEADER")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "CERTIFICATE_HEADER")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "CERTIFICATE_FOOTER")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "CERTIFICATE_FOOTER")
     pushstring          "-----END CERTIFICATE-----"
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "CERTIFICATE_FOOTER")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "CERTIFICATE_FOOTER")
 
     returnvoid
    end ; code
   end ; body
  end ; method
- trait const QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PRIVATE_KEY_HEADER") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("-----BEGIN RSA PRIVATE KEY-----") end
- trait const QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PRIVATE_KEY_FOOTER") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("-----END RSA PRIVATE KEY-----") end
- trait const QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PUBLIC_KEY_HEADER") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("-----BEGIN PUBLIC KEY-----") end
- trait const QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PUBLIC_KEY_FOOTER") slotid 4 type QName(PackageNamespace(""), "String") value Utf8("-----END PUBLIC KEY-----") end
- trait const QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "CERTIFICATE_HEADER") slotid 5 type QName(PackageNamespace(""), "String") value Utf8("-----BEGIN CERTIFICATE-----") end
- trait const QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "CERTIFICATE_FOOTER") slotid 6 type QName(PackageNamespace(""), "String") value Utf8("-----END CERTIFICATE-----") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "RSA_PRIVATE_KEY_HEADER") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("-----BEGIN RSA PRIVATE KEY-----") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "RSA_PRIVATE_KEY_FOOTER") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("-----END RSA PRIVATE KEY-----") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "RSA_PUBLIC_KEY_HEADER") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("-----BEGIN PUBLIC KEY-----") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "RSA_PUBLIC_KEY_FOOTER") slotid 4 type QName(PackageNamespace(""), "String") value Utf8("-----END PUBLIC KEY-----") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "CERTIFICATE_HEADER") slotid 5 type QName(PackageNamespace(""), "String") value Utf8("-----BEGIN CERTIFICATE-----") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "CERTIFICATE_FOOTER") slotid 6 type QName(PackageNamespace(""), "String") value Utf8("-----END CERTIFICATE-----") end
  trait method QName(PackageNamespace(""), "readRSAPrivateKey") flag FINAL dispid 3
   method
-   refid "com.hurlant.util.der:PEM/readRSAPrivateKey"
+   refid "com.hurlant.util.der:PEM/class/readRSAPrivateKey"
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace("com.hurlant.crypto.rsa"), "RSAKey")
    body
@@ -87,11 +87,11 @@ class
      coerce              QName(PackageNamespace(""), "Array")
      setlocal            4
 
-     findpropstrict      QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "extractBinary")
-     getlex              QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PRIVATE_KEY_HEADER")
-     getlex              QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PRIVATE_KEY_FOOTER")
+     findpropstrict      QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "extractBinary")
+     getlex              QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "RSA_PRIVATE_KEY_HEADER")
+     getlex              QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "RSA_PRIVATE_KEY_FOOTER")
      getlocal1
-     callproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "extractBinary"), 3
+     callproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "extractBinary"), 3
      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
      setlocal2
 
@@ -123,29 +123,29 @@ L17:
      findpropstrict      QName(PackageNamespace("com.hurlant.crypto.rsa"), "RSAKey")
      getlocal            4
      pushbyte            1
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM/class#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
      getlocal            4
      pushbyte            2
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
-     callproperty        Multiname("valueOf", [PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")]), 0
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM/class#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
+     callproperty        Multiname("valueOf", [PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM/class#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")]), 0
      getlocal            4
      pushbyte            3
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM/class#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
      getlocal            4
      pushbyte            4
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM/class#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
      getlocal            4
      pushbyte            5
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM/class#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
      getlocal            4
      pushbyte            6
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM/class#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
      getlocal            4
      pushbyte            7
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM/class#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
      getlocal            4
      pushbyte            8
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM/class#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
      constructprop       QName(PackageNamespace("com.hurlant.crypto.rsa"), "RSAKey"), 8
      returnvalue
 
@@ -158,7 +158,7 @@ L59:
  end ; trait
  trait method QName(PackageNamespace(""), "readRSAPublicKey") flag FINAL dispid 4
   method
-   refid "com.hurlant.util.der:PEM/readRSAPublicKey"
+   refid "com.hurlant.util.der:PEM/class/readRSAPublicKey"
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace("com.hurlant.crypto.rsa"), "RSAKey")
    body
@@ -174,11 +174,11 @@ L59:
      coerce              QName(PackageNamespace(""), "Array")
      setlocal            4
 
-     findpropstrict      QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "extractBinary")
-     getlex              QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PUBLIC_KEY_HEADER")
-     getlex              QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "RSA_PUBLIC_KEY_FOOTER")
+     findpropstrict      QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "extractBinary")
+     getlex              QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "RSA_PUBLIC_KEY_HEADER")
+     getlex              QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "RSA_PUBLIC_KEY_FOOTER")
      getlocal1
-     callproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "extractBinary"), 3
+     callproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "extractBinary"), 3
      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
      setlocal2
 
@@ -209,10 +209,10 @@ L17:
      setlocal            4
 
      pushbyte            0
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM/class#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
      pushbyte            0
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
-     callproperty        Multiname("toString", [PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")]), 0
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM/class#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
+     callproperty        Multiname("toString", [PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM/class#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")]), 0
      getlex              QName(PackageNamespace("com.hurlant.util.der"), "OID")
      getproperty         QName(PackageNamespace(""), "RSA_ENCRYPTION")
      ifeq                L42
@@ -223,28 +223,28 @@ L17:
 L42:
      getlocal            4
      pushbyte            1
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM/class#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
      getlocal            4
      pushbyte            1
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
-     getproperty         Multiname("position", [PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM/class#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
+     getproperty         Multiname("position", [PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM/class#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM/class#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
      pushbyte            0
      ifne                L65
 
      getlocal            4
      pushbyte            1
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM/class#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
      dup
      setlocal            5
 
-     getproperty         Multiname("position", [PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
+     getproperty         Multiname("position", [PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM/class#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
      increment
      setlocal            6
 
      getlocal            5
      getlocal            6
-     setproperty         Multiname("position", [PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
+     setproperty         Multiname("position", [PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM/class#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
 
      kill                6
      kill                5
@@ -252,7 +252,7 @@ L65:
      getlex              QName(PackageNamespace("com.hurlant.util.der"), "DER")
      getlocal            4
      pushbyte            1
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM/class#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
      callproperty        QName(PackageNamespace(""), "parse"), 1
      coerce_a
      setlocal3
@@ -271,10 +271,10 @@ L65:
      findpropstrict      QName(PackageNamespace("com.hurlant.crypto.rsa"), "RSAKey")
      getlocal            4
      pushbyte            0
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM/class#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
      getlocal            4
      pushbyte            1
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:PEM/class#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mn"), StaticProtectedNs("_-Mn")])
      constructprop       QName(PackageNamespace("com.hurlant.crypto.rsa"), "RSAKey"), 2
      returnvalue
 
@@ -291,7 +291,7 @@ L92:
  end ; trait
  trait method QName(PackageNamespace(""), "readCertIntoArray") flag FINAL dispid 5
   method
-   refid "com.hurlant.util.der:PEM/readCertIntoArray"
+   refid "com.hurlant.util.der:PEM/class/readCertIntoArray"
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace("flash.utils"), "ByteArray")
    body
@@ -303,11 +303,11 @@ L92:
      getlocal0
      pushscope
 
-     findpropstrict      QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "extractBinary")
-     getlex              QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "CERTIFICATE_HEADER")
-     getlex              QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "CERTIFICATE_FOOTER")
+     findpropstrict      QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "extractBinary")
+     getlex              QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "CERTIFICATE_HEADER")
+     getlex              QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "CERTIFICATE_FOOTER")
      getlocal1
-     callproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "extractBinary"), 3
+     callproperty        QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "extractBinary"), 3
      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
      setlocal2
 
@@ -317,9 +317,9 @@ L92:
    end ; body
   end ; method
  end ; trait
- trait method QName(PrivateNamespace("*", "com.hurlant.util.der:PEM#0"), "extractBinary") flag FINAL dispid 6
+ trait method QName(PrivateNamespace("*", "com.hurlant.util.der:PEM/class#0"), "extractBinary") flag FINAL dispid 6
   method
-   refid "com.hurlant.util.der:PEM/extractBinary"
+   refid "com.hurlant.util.der:PEM/class/com.hurlant.util.der:PEM/class/extractBinary"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "String")

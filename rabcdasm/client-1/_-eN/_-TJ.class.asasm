@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-NS")
   iinit
-   refid "_-eN:_-TJ/iinit"
+   refid "_-eN:_-TJ/instance/init"
    body
     maxstack 7
     localcount 4
@@ -22,10 +22,10 @@ class
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
      constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
-     initproperty        QName(PrivateNamespace("*", "_-eN:_-TJ"), "_-Ty")
+     initproperty        QName(PrivateNamespace("*", "_-eN:_-TJ/instance"), "_-Ty")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-eN:_-TJ"), "_-Ty")
+     getproperty         QName(PrivateNamespace("*", "_-eN:_-TJ/instance"), "_-Ty")
      getproperty         QName(PackageNamespace(""), "graphics")
      coerce              QName(PackageNamespace("flash.display"), "Graphics")
      setlocal1
@@ -50,21 +50,21 @@ class
 
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-eN:_-TJ"), "_-Ty")
+     getproperty         QName(PrivateNamespace("*", "_-eN:_-TJ/instance"), "_-Ty")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
      getlocal0
-     callpropvoid        QName(PrivateNamespace("*", "_-eN:_-TJ"), "_-Xd"), 0
+     callpropvoid        QName(PrivateNamespace("*", "_-eN:_-TJ/instance"), "_-Xd"), 0
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-eN:_-TJ"), "_-ZX") type QName(PackageNamespace("_-0Dd"), "Frame") value Null() end
-  trait slot QName(PrivateNamespace("*", "_-eN:_-TJ"), "_-Ty") type QName(PackageNamespace("flash.display"), "Shape") end
-  trait method QName(PrivateNamespace("*", "_-eN:_-TJ"), "_-Xd")
+  trait slot QName(PrivateNamespace("*", "_-eN:_-TJ/instance"), "_-ZX") type QName(PackageNamespace("_-0Dd"), "Frame") value Null() end
+  trait slot QName(PrivateNamespace("*", "_-eN:_-TJ/instance"), "_-Ty") type QName(PackageNamespace("flash.display"), "Shape") end
+  trait method QName(PrivateNamespace("*", "_-eN:_-TJ/instance"), "_-Xd")
    method
-    refid "_-eN:_-TJ/_-Xd"
+    refid "_-eN:_-TJ/instance/_-eN:_-TJ/instance/_-Xd"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -78,16 +78,16 @@ class
       getlocal0
       findpropstrict      QName(PackageInternalNs("_-eN"), "_-0Gd")
       constructprop       QName(PackageInternalNs("_-eN"), "_-0Gd"), 0
-      callpropvoid        QName(PrivateNamespace("*", "_-eN:_-TJ"), "_-dY"), 1
+      callpropvoid        QName(PrivateNamespace("*", "_-eN:_-TJ/instance"), "_-dY"), 1
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-eN:_-TJ"), "_-dY")
+  trait method QName(PrivateNamespace("*", "_-eN:_-TJ/instance"), "_-dY")
    method
-    refid "_-eN:_-TJ/_-dY"
+    refid "_-eN:_-TJ/instance/_-eN:_-TJ/instance/_-dY"
     param QName(PackageNamespace("_-0Dd"), "Frame")
     returns QName(PackageNamespace(""), "void")
     body
@@ -100,13 +100,13 @@ class
       pushscope
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-eN:_-TJ"), "_-np"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-eN:_-TJ/instance"), "_-np"), 0
 
       getlocal1
       getlex              QName(PackageInternalNs("_-eN"), "_-1")
       getproperty         QName(PackageNamespace(""), "DONE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-eN:_-TJ"), "_-FH")
+      getproperty         QName(PrivateNamespace("*", "_-eN:_-TJ/instance"), "_-FH")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       findpropstrict      QName(PackageNamespace(""), "addChild")
@@ -115,16 +115,16 @@ class
 
       getlocal0
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "_-eN:_-TJ"), "_-ZX")
+      initproperty        QName(PrivateNamespace("*", "_-eN:_-TJ/instance"), "_-ZX")
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-eN:_-TJ"), "_-FH")
+  trait method QName(PrivateNamespace("*", "_-eN:_-TJ/instance"), "_-FH")
    method
-    refid "_-eN:_-TJ/_-FH"
+    refid "_-eN:_-TJ/instance/_-eN:_-TJ/instance/_-FH"
     param QName(PackageInternalNs("_-eN"), "_-1")
     returns QName(PackageNamespace(""), "void")
     body
@@ -148,9 +148,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-eN:_-TJ"), "_-np")
+  trait method QName(PrivateNamespace("*", "_-eN:_-TJ/instance"), "_-np")
    method
-    refid "_-eN:_-TJ/_-np"
+    refid "_-eN:_-TJ/instance/_-eN:_-TJ/instance/_-np"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -162,7 +162,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-eN:_-TJ"), "_-ZX")
+      getproperty         QName(PrivateNamespace("*", "_-eN:_-TJ/instance"), "_-ZX")
       pushnull
       equals
       not
@@ -172,7 +172,7 @@ class
       pop
       findpropstrict      QName(PackageNamespace(""), "contains")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-eN:_-TJ"), "_-ZX")
+      getproperty         QName(PrivateNamespace("*", "_-eN:_-TJ/instance"), "_-ZX")
       callproperty        QName(PackageNamespace(""), "contains"), 1
       convert_b
 L15:
@@ -180,7 +180,7 @@ L15:
 
       findpropstrict      QName(PackageNamespace(""), "removeChild")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-eN:_-TJ"), "_-ZX")
+      getproperty         QName(PrivateNamespace("*", "_-eN:_-TJ/instance"), "_-ZX")
       callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
 
 L20:
@@ -191,7 +191,7 @@ L20:
   end ; trait
  end ; instance
  cinit
-  refid "_-eN:_-TJ/cinit"
+  refid "_-eN:_-TJ/class/init"
   body
    maxstack 3
    localcount 1

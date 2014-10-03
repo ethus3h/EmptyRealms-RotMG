@@ -1,6 +1,6 @@
 script ; 1170
  sinit
-  refid "com.company.assembleegameclient.engine3d:Order.sinit"
+  refid "com.company.assembleegameclient.engine3d:Order/init"
   body
    maxstack 2
    localcount 1
@@ -19,14 +19,14 @@ script ; 1170
     popscope
     initproperty        QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "Order")
 
-    findpropstrict      Multiname("StaticEnforcer", [PrivateNamespace("*", "com.company.assembleegameclient.engine3d:Order.sinit")])
+    findpropstrict      Multiname("StaticEnforcer", [PrivateNamespace("*", "com.company.assembleegameclient.engine3d:Order")])
     getlex              QName(PackageNamespace(""), "Object")
     pushscope
 
     getlex              QName(PackageNamespace(""), "Object")
-    newclass            "com.company.assembleegameclient.engine3d:Order.sinit/StaticEnforcer"
+    newclass            "com.company.assembleegameclient.engine3d:Order/StaticEnforcer"
     popscope
-    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:Order.sinit"), "StaticEnforcer")
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:Order"), "StaticEnforcer")
 
     returnvoid
    end ; code
@@ -35,7 +35,7 @@ script ; 1170
  trait class QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "Order")
   #include "Order.class.asasm"
  end ; trait
- trait class QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:Order.sinit"), "StaticEnforcer")
-  #include "Order.sinit/StaticEnforcer.class.asasm"
+ trait class QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:Order"), "StaticEnforcer")
+  #include "Order/StaticEnforcer.class.asasm"
  end ; trait
 end ; script

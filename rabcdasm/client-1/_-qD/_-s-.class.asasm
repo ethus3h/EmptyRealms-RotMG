@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-Pq")
   iinit
-   refid "_-qD:_-s-/iinit"
+   refid "_-qD:_-s-/instance/init"
    param QName(PackageNamespace(""), "int")
    param QName(PackageNamespace(""), "Boolean")
    body
@@ -27,7 +27,7 @@ class
 
      getlocal0
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "_-qD:_-s-"), "_-Mb")
+     initproperty        QName(PrivateNamespace("*", "_-qD:_-s-/instance"), "_-Mb")
 
      getlocal0
      callpropvoid        QName(PackageNamespace(""), "redraw"), 0
@@ -38,10 +38,10 @@ class
   end ; method
   trait slot QName(PackageNamespace(""), "size_") type QName(PackageNamespace(""), "int") end
   trait slot QName(PackageNamespace(""), "_-Ud") type QName(PackageNamespace("_-4x"), "_-0Iy") value Null() end
-  trait slot QName(PrivateNamespace("*", "_-qD:_-s-"), "_-Mb") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "_-qD:_-s-/instance"), "_-Mb") type QName(PackageNamespace(""), "Boolean") end
   trait method QName(PackageNamespace(""), "_-LV")
    method
-    refid "_-qD:_-s-/_-LV"
+    refid "_-qD:_-s-/instance/_-LV"
     param QName(PackageNamespace("_-4x"), "_-0Iy")
     returns QName(PackageNamespace(""), "void")
     body
@@ -87,7 +87,7 @@ L18:
   end ; trait
   trait method QName(PackageNamespace(""), "getColor")
    method
-    refid "_-qD:_-s-/getColor"
+    refid "_-qD:_-s-/instance/getColor"
     returns QName(PackageNamespace(""), "uint")
     body
      maxstack 6
@@ -129,7 +129,7 @@ L22:
   end ; trait
   trait method QName(PackageNamespace(""), "redraw")
    method
-    refid "_-qD:_-s-/redraw"
+    refid "_-qD:_-s-/instance/redraw"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 7
@@ -151,7 +151,7 @@ L22:
       getlex              QName(PackageNamespace(""), "graphics")
       pushbyte            0
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-qD:_-s-"), "_-Mb")
+      getproperty         QName(PrivateNamespace("*", "_-qD:_-s-/instance"), "_-Mb")
       iffalse             L16
 
       pushdouble          0
@@ -201,7 +201,7 @@ L33:
   end ; trait
  end ; instance
  cinit
-  refid "_-qD:_-s-/cinit"
+  refid "_-qD:_-s-/class/init"
   body
    maxstack 3
    localcount 1

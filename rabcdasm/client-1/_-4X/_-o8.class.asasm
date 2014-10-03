@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-09z")
   iinit
-   refid "_-4X:_-o8/iinit"
+   refid "_-4X:_-o8/instance/init"
    body
     maxstack 5
     localcount 3
@@ -20,21 +20,21 @@ class
      constructsuper      0
 
      getlocal0
-     getlex              Multiname("Vector", [PrivateNamespace("*", "_-4X:_-o8#0"), PrivateNamespace("*", "_-4X:_-o8#1"), PackageNamespace(""), PackageNamespace("_-4X"), PackageInternalNs("_-4X"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-09z"), StaticProtectedNs("_-09z"), StaticProtectedNs("_-01A"), PackageNamespace("__AS3__.vec")])
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_-4X:_-o8/instance#0"), PrivateNamespace("*", "_-4X:_-o8/instance#1"), PackageNamespace(""), PackageNamespace("_-4X"), PackageInternalNs("_-4X"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-09z"), StaticProtectedNs("_-09z"), StaticProtectedNs("_-01A"), PackageNamespace("__AS3__.vec")])
      getlex              QName(PackageNamespace("_-4X"), "_-zU")
      applytype           1
      construct           0
-     initproperty        QName(PrivateNamespace("*", "_-4X:_-o8#0"), "_-AX")
+     initproperty        QName(PrivateNamespace("*", "_-4X:_-o8/instance#0"), "_-AX")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-4X:_-o8#0"), "_-AX") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("_-4X"), "_-zU")>) end
-  trait slot QName(PrivateNamespace("*", "_-4X:_-o8#0"), "_-0-S") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "_-4X:_-o8/instance#0"), "_-AX") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("_-4X"), "_-zU")>) end
+  trait slot QName(PrivateNamespace("*", "_-4X:_-o8/instance#0"), "_-0-S") type QName(PackageNamespace(""), "int") end
   trait method QName(PackageNamespace(""), "add")
    method
-    refid "_-4X:_-o8/add"
+    refid "_-4X:_-o8/instance/add"
     param QName(PackageNamespace("_-4X"), "_-zU")
     returns QName(PackageNamespace(""), "void")
     body
@@ -47,7 +47,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-o8#0"), "_-AX")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-o8/instance#0"), "_-AX")
       getlocal1
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
@@ -58,7 +58,7 @@ class
   end ; trait
   trait method QName(ProtectedNamespace("_-09z"), "startTask") flag OVERRIDE
    method
-    refid "_-4X:_-o8/_-09z:startTask"
+    refid "_-4X:_-o8/instance/_-09z:startTask"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -71,10 +71,10 @@ class
 
       getlocal0
       pushbyte            0
-      initproperty        QName(PrivateNamespace("*", "_-4X:_-o8#0"), "_-0-S")
+      initproperty        QName(PrivateNamespace("*", "_-4X:_-o8/instance#0"), "_-0-S")
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-4X:_-o8#0"), "_-0J4"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-4X:_-o8/instance#0"), "_-0J4"), 0
 
       returnvoid
      end ; code
@@ -83,7 +83,7 @@ class
   end ; trait
   trait method QName(ProtectedNamespace("_-09z"), "onReset") flag OVERRIDE
    method
-    refid "_-4X:_-o8/_-09z:onReset"
+    refid "_-4X:_-o8/instance/_-09z:onReset"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -102,7 +102,7 @@ class
       setlocal2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-o8#0"), "_-AX")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-o8/instance#0"), "_-AX")
       coerce_a
       setlocal3
 
@@ -130,9 +130,9 @@ L20:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-4X:_-o8#0"), "_-0J4")
+  trait method QName(PrivateNamespace("*", "_-4X:_-o8/instance#0"), "_-0J4")
    method
-    refid "_-4X:_-o8/_-0J4"
+    refid "_-4X:_-o8/instance/_-4X:_-o8/instance/_-0J4"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -144,11 +144,11 @@ L20:
       pushscope
 
       getlocal0
-      callproperty        QName(PrivateNamespace("*", "_-4X:_-o8#0"), "_-hs"), 0
+      callproperty        QName(PrivateNamespace("*", "_-4X:_-o8/instance#0"), "_-hs"), 0
       iffalse             L8
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-4X:_-o8#0"), "_-9q"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-4X:_-o8/instance#0"), "_-9q"), 0
 
       jump                L11
 
@@ -163,9 +163,9 @@ L11:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-4X:_-o8#0"), "_-hs")
+  trait method QName(PrivateNamespace("*", "_-4X:_-o8/instance#0"), "_-hs")
    method
-    refid "_-4X:_-o8/_-hs"
+    refid "_-4X:_-o8/instance/_-4X:_-o8/instance/_-hs"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 4
@@ -177,9 +177,9 @@ L11:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-o8#0"), "_-0-S")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-o8/instance#0"), "_-0-S")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-o8#0"), "_-AX")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-o8/instance#0"), "_-AX")
       getproperty         QName(PackageNamespace(""), "length")
       lessthan
       returnvalue
@@ -187,9 +187,9 @@ L11:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-4X:_-o8#0"), "_-9q")
+  trait method QName(PrivateNamespace("*", "_-4X:_-o8/instance#0"), "_-9q")
    method
-    refid "_-4X:_-o8/_-9q"
+    refid "_-4X:_-o8/instance/_-4X:_-o8/instance/_-9q"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 6
@@ -201,30 +201,30 @@ L11:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-o8#0"), "_-AX")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-o8/instance#0"), "_-AX")
       getlocal0
       dup
       setlocal2
 
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-o8#0"), "_-0-S")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-o8/instance#0"), "_-0-S")
       dup
       increment_i
       setlocal3
 
       getlocal2
       getlocal3
-      setproperty         QName(PrivateNamespace("*", "_-4X:_-o8#0"), "_-0-S")
+      setproperty         QName(PrivateNamespace("*", "_-4X:_-o8/instance#0"), "_-0-S")
 
       kill                3
       kill                2
-      getproperty         MultinameL([PrivateNamespace("*", "_-4X:_-o8#0"), PrivateNamespace("*", "_-4X:_-o8#1"), PackageNamespace(""), PackageNamespace("_-4X"), PackageInternalNs("_-4X"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-09z"), StaticProtectedNs("_-09z"), StaticProtectedNs("_-01A")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-4X:_-o8/instance#0"), PrivateNamespace("*", "_-4X:_-o8/instance#1"), PackageNamespace(""), PackageNamespace("_-4X"), PackageInternalNs("_-4X"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-09z"), StaticProtectedNs("_-09z"), StaticProtectedNs("_-01A")])
       coerce              QName(PackageNamespace("_-4X"), "_-zU")
       setlocal1
 
       getlocal1
       getproperty         QName(PackageInternalNs("_-4X"), "_-0BO")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-o8#0"), "_-TT")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-o8/instance#0"), "_-TT")
       callpropvoid        QName(PackageNamespace(""), "addOnce"), 1
 
       getlocal1
@@ -235,9 +235,9 @@ L11:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-4X:_-o8#0"), "_-TT")
+  trait method QName(PrivateNamespace("*", "_-4X:_-o8/instance#0"), "_-TT")
    method
-    refid "_-4X:_-o8/_-TT"
+    refid "_-4X:_-o8/instance/_-4X:_-o8/instance/_-TT"
     param QName(PackageNamespace("_-4X"), "_-zU")
     param QName(PackageNamespace(""), "Boolean")
     param QName(PackageNamespace(""), "String")
@@ -255,7 +255,7 @@ L11:
       iffalse             L7
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-4X:_-o8#0"), "_-0J4"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-4X:_-o8/instance#0"), "_-0J4"), 0
 
       jump                L11
 
@@ -273,7 +273,7 @@ L11:
   end ; trait
  end ; instance
  cinit
-  refid "_-4X:_-o8/cinit"
+  refid "_-4X:_-o8/class/init"
   body
    maxstack 3
    localcount 1

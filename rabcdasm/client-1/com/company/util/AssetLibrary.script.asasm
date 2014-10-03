@@ -1,6 +1,6 @@
 script ; 226
  sinit
-  refid "com.company.util:AssetLibrary.sinit"
+  refid "com.company.util:AssetLibrary/init"
   body
    maxstack 2
    localcount 1
@@ -26,7 +26,7 @@ script ; 226
     getlex              QName(PackageNamespace(""), "Object")
     newclass            "com.company.util:AssetLibrary/StaticEnforcer"
     popscope
-    initproperty        QName(PrivateNamespace("*", "com.company.util:AssetLibrary#1"), "StaticEnforcer")
+    initproperty        QName(PrivateNamespace("*", "com.company.util:AssetLibrary"), "StaticEnforcer")
 
     returnvoid
    end ; code
@@ -35,7 +35,7 @@ script ; 226
  trait class QName(PackageNamespace("com.company.util"), "AssetLibrary") slotid 1
   #include "AssetLibrary.class.asasm"
  end ; trait
- trait class QName(PrivateNamespace("*", "com.company.util:AssetLibrary#1"), "StaticEnforcer") slotid 2
+ trait class QName(PrivateNamespace("*", "com.company.util:AssetLibrary"), "StaticEnforcer") slotid 2
   #include "AssetLibrary/StaticEnforcer.class.asasm"
  end ; trait
 end ; script

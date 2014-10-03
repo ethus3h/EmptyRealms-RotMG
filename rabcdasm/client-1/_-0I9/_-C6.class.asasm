@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-q1")
   iinit
-   refid "_-0I9:_-C6/iinit"
+   refid "_-0I9:_-C6/instance/init"
    body
     maxstack 3
     localcount 3
@@ -23,11 +23,11 @@ class
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-0I9:_-C6"), "_-Sm") type QName(PackageNamespace("flash.display"), "Sprite") end
-  trait slot QName(PrivateNamespace("*", "_-0I9:_-C6"), "_-0LU") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(PrivateNamespace("*", "_-0I9:_-C6/instance"), "_-Sm") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(PrivateNamespace("*", "_-0I9:_-C6/instance"), "_-0LU") type QName(PackageNamespace("flash.display"), "Sprite") end
   trait method QName(PackageNamespace(""), "_-T-")
    method
-    refid "_-0I9:_-C6/_-T-"
+    refid "_-0I9:_-C6/instance/_-T-"
     param QName(PackageNamespace("flash.display"), "Sprite")
     returns QName(PackageNamespace(""), "void")
     body
@@ -40,7 +40,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0I9:_-C6"), "_-Sm")
+      getproperty         QName(PrivateNamespace("*", "_-0I9:_-C6/instance"), "_-Sm")
       getlocal1
       ifne                L7
 
@@ -48,11 +48,11 @@ class
 
 L7:
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-0I9:_-C6"), "_-Vn"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-0I9:_-C6/instance"), "_-Vn"), 0
 
       getlocal0
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "_-0I9:_-C6"), "_-Sm")
+      initproperty        QName(PrivateNamespace("*", "_-0I9:_-C6/instance"), "_-Sm")
 
       findpropstrict      QName(PackageNamespace(""), "addChild")
       getlocal1
@@ -63,9 +63,9 @@ L7:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-0I9:_-C6"), "_-Vn")
+  trait method QName(PrivateNamespace("*", "_-0I9:_-C6/instance"), "_-Vn")
    method
-    refid "_-0I9:_-C6/_-Vn"
+    refid "_-0I9:_-C6/instance/_-0I9:_-C6/instance/_-Vn"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -77,7 +77,7 @@ L7:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0I9:_-C6"), "_-Sm")
+      getproperty         QName(PrivateNamespace("*", "_-0I9:_-C6/instance"), "_-Sm")
       convert_b
       dup
       iffalse             L13
@@ -85,7 +85,7 @@ L7:
       pop
       findpropstrict      QName(PackageNamespace(""), "contains")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0I9:_-C6"), "_-Sm")
+      getproperty         QName(PrivateNamespace("*", "_-0I9:_-C6/instance"), "_-Sm")
       callproperty        QName(PackageNamespace(""), "contains"), 1
       convert_b
 L13:
@@ -93,12 +93,12 @@ L13:
 
       getlocal0
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0I9:_-C6"), "_-Sm")
-      initproperty        QName(PrivateNamespace("*", "_-0I9:_-C6"), "_-0LU")
+      getproperty         QName(PrivateNamespace("*", "_-0I9:_-C6/instance"), "_-Sm")
+      initproperty        QName(PrivateNamespace("*", "_-0I9:_-C6/instance"), "_-0LU")
 
       findpropstrict      QName(PackageNamespace(""), "removeChild")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0I9:_-C6"), "_-Sm")
+      getproperty         QName(PrivateNamespace("*", "_-0I9:_-C6/instance"), "_-Sm")
       callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
 
 L22:
@@ -109,7 +109,7 @@ L22:
   end ; trait
   trait method QName(PackageNamespace(""), "_-bM")
    method
-    refid "_-0I9:_-C6/_-bM"
+    refid "_-0I9:_-C6/instance/_-bM"
     returns QName(PackageNamespace("flash.display"), "Sprite")
     body
      maxstack 3
@@ -121,7 +121,7 @@ L22:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0I9:_-C6"), "_-0LU")
+      getproperty         QName(PrivateNamespace("*", "_-0I9:_-C6/instance"), "_-0LU")
       returnvalue
      end ; code
     end ; body
@@ -129,7 +129,7 @@ L22:
   end ; trait
  end ; instance
  cinit
-  refid "_-0I9:_-C6/cinit"
+  refid "_-0I9:_-C6/class/init"
   body
    maxstack 3
    localcount 1

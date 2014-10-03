@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-my")
   iinit
-   refid "_-FF:_-V2/iinit"
+   refid "_-FF:_-V2/instance/init"
    body
     maxstack 3
     localcount 3
@@ -33,7 +33,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "execute")
    method
-    refid "_-FF:_-V2/execute"
+    refid "_-FF:_-V2/instance/execute"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -50,7 +50,7 @@ class
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-T-")
       getlocal0
-      callproperty        QName(PrivateNamespace("*", "_-FF:_-V2"), "_-0EM"), 0
+      callproperty        QName(PrivateNamespace("*", "_-FF:_-V2/instance/execute"), "_-0EM"), 0
       callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
 
       returnvoid
@@ -58,9 +58,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-FF:_-V2"), "_-0EM")
+  trait method QName(PrivateNamespace("*", "_-FF:_-V2/instance/execute"), "_-0EM")
    method
-    refid "_-FF:_-V2/_-0EM"
+    refid "_-FF:_-V2/instance/_-FF:_-V2/instance/execute/_-0EM"
     returns QName(PackageNamespace("flash.display"), "Sprite")
     body
      maxstack 3
@@ -95,7 +95,7 @@ L15:
   end ; trait
  end ; instance
  cinit
-  refid "_-FF:_-V2/cinit"
+  refid "_-FF:_-V2/class/init"
   body
    maxstack 3
    localcount 1

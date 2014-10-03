@@ -1,6 +1,6 @@
 script ; 373
  sinit
-  refid "com.company.util:MoreColorUtil.sinit"
+  refid "com.company.util:MoreColorUtil/init"
   body
    maxstack 2
    localcount 1
@@ -19,14 +19,14 @@ script ; 373
     popscope
     initproperty        QName(PackageNamespace("com.company.util"), "MoreColorUtil")
 
-    findpropstrict      Multiname("StaticEnforcer", [PrivateNamespace("*", "com.company.util:MoreColorUtil.sinit")])
+    findpropstrict      Multiname("StaticEnforcer", [PrivateNamespace("*", "com.company.util:MoreColorUtil")])
     getlex              QName(PackageNamespace(""), "Object")
     pushscope
 
     getlex              QName(PackageNamespace(""), "Object")
-    newclass            "com.company.util:MoreColorUtil.sinit/StaticEnforcer"
+    newclass            "com.company.util:MoreColorUtil/StaticEnforcer"
     popscope
-    initproperty        QName(PrivateNamespace("*", "com.company.util:MoreColorUtil.sinit"), "StaticEnforcer")
+    initproperty        QName(PrivateNamespace("*", "com.company.util:MoreColorUtil"), "StaticEnforcer")
 
     returnvoid
    end ; code
@@ -35,7 +35,7 @@ script ; 373
  trait class QName(PackageNamespace("com.company.util"), "MoreColorUtil")
   #include "MoreColorUtil.class.asasm"
  end ; trait
- trait class QName(PrivateNamespace("*", "com.company.util:MoreColorUtil.sinit"), "StaticEnforcer")
-  #include "MoreColorUtil.sinit/StaticEnforcer.class.asasm"
+ trait class QName(PrivateNamespace("*", "com.company.util:MoreColorUtil"), "StaticEnforcer")
+  #include "MoreColorUtil/StaticEnforcer.class.asasm"
  end ; trait
 end ; script

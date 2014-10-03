@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-TE")
   iinit
-   refid "com.company.assembleegameclient.objects:NPC/iinit"
+   refid "com.company.assembleegameclient.objects:NPC/instance/init"
    param QName(PackageNamespace(""), "XML")
    body
     maxstack 5
@@ -27,7 +27,7 @@ class
   end ; method
   trait method QName(ProtectedNamespace("_-TE"), "generateNameBitmapData") flag OVERRIDE
    method
-    refid "com.company.assembleegameclient.objects:NPC/_-TE:generateNameBitmapData"
+    refid "com.company.assembleegameclient.objects:NPC/instance/_-TE:generateNameBitmapData"
     param QName(PackageNamespace("com.company.ui"), "SimpleText")
     returns QName(PackageNamespace("flash.display"), "BitmapData")
     body
@@ -111,7 +111,7 @@ L15:
   end ; trait
   trait method QName(ProtectedNamespace("_-TE"), "getTexture") flag OVERRIDE
    method
-    refid "com.company.assembleegameclient.objects:NPC/_-TE:getTexture"
+    refid "com.company.assembleegameclient.objects:NPC/instance/_-TE:getTexture"
     param QName(PackageNamespace("com.company.assembleegameclient.map"), "_-0Dv")
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace("flash.display"), "BitmapData")
@@ -150,7 +150,7 @@ L16:
   end ; trait
  end ; instance
  cinit
-  refid "com.company.assembleegameclient.objects:NPC/cinit"
+  refid "com.company.assembleegameclient.objects:NPC/class/init"
   body
    maxstack 15
    localcount 5

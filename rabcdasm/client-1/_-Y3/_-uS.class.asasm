@@ -7,7 +7,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-13")
   iinit
-   refid "_-Y3:_-uS/iinit"
+   refid "_-Y3:_-uS/instance/init"
    param QName(PackageNamespace(""), "Class")
    param QName(PackageNamespace("_-eZ"), "_-08b")
    body
@@ -24,23 +24,23 @@ class
 
      getlocal0
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "_-Y3:_-uS"), "_-2h")
+     initproperty        QName(PrivateNamespace("*", "_-Y3:_-uS/instance"), "_-2h")
 
      getlocal0
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "_-Y3:_-uS"), "_-00-")
+     initproperty        QName(PrivateNamespace("*", "_-Y3:_-uS/instance"), "_-00-")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-Y3:_-uS"), "_-2h") type QName(PackageNamespace(""), "Class") end
-  trait slot QName(PrivateNamespace("*", "_-Y3:_-uS"), "_-00-") type QName(PackageNamespace("_-eZ"), "_-08b") end
-  trait slot QName(PrivateNamespace("*", "_-Y3:_-uS"), "_-Hw") type QName(PackageNamespace(""), "Object") end
-  trait slot QName(PrivateNamespace("*", "_-Y3:_-uS"), "_-0M") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "_-Y3:_-uS/instance"), "_-2h") type QName(PackageNamespace(""), "Class") end
+  trait slot QName(PrivateNamespace("*", "_-Y3:_-uS/instance"), "_-00-") type QName(PackageNamespace("_-eZ"), "_-08b") end
+  trait slot QName(PrivateNamespace("*", "_-Y3:_-uS/instance"), "_-Hw") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PrivateNamespace("*", "_-Y3:_-uS/instance"), "_-0M") type QName(PackageNamespace(""), "Boolean") end
   trait method QName(PackageNamespace(""), "apply")
    method
-    refid "_-Y3:_-uS/apply"
+    refid "_-Y3:_-uS/instance/apply"
     param QName(PackageNamespace(""), "Class")
     param QName(PackageNamespace("_-eZ"), "_-08b")
     param QName(PackageNamespace("flash.utils"), "Dictionary")
@@ -56,7 +56,7 @@ class
 
       getlocal0
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Y3:_-uS"), "_-Hw")
+      getproperty         QName(PrivateNamespace("*", "_-Y3:_-uS/instance"), "_-Hw")
       coerce              QName(PackageNamespace(""), "Object")
       dup
       iftrue              L14
@@ -64,14 +64,14 @@ class
       pop
       getlocal0
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Y3:_-uS"), "_-00-")
-      callproperty        QName(PrivateNamespace("*", "_-Y3:_-uS"), "_-hw"), 1
+      getproperty         QName(PrivateNamespace("*", "_-Y3:_-uS/instance"), "_-00-")
+      callproperty        QName(PrivateNamespace("*", "_-Y3:_-uS/instance"), "_-hw"), 1
       coerce              QName(PackageNamespace(""), "Object")
 L14:
       dup
       setlocal            4
 
-      initproperty        QName(PrivateNamespace("*", "_-Y3:_-uS"), "_-Hw")
+      initproperty        QName(PrivateNamespace("*", "_-Y3:_-uS/instance"), "_-Hw")
 
       getlocal            4
       kill                4
@@ -80,9 +80,9 @@ L14:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Y3:_-uS"), "_-hw")
+  trait method QName(PrivateNamespace("*", "_-Y3:_-uS/instance"), "_-hw")
    method
-    refid "_-Y3:_-uS/_-hw"
+    refid "_-Y3:_-uS/instance/_-Y3:_-uS/instance/_-hw"
     param QName(PackageNamespace("_-eZ"), "_-08b")
     returns QName(PackageNamespace(""), "Object")
     body
@@ -95,18 +95,19 @@ L14:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Y3:_-uS"), "_-0M")
+      getproperty         QName(PrivateNamespace("*", "_-Y3:_-uS/instance"), "_-0M")
       iffalse             L14
 
       findpropstrict      QName(PackageNamespace("_-eZ"), "_-Np")
       pushstring          "Forbidden usage of unmapped singleton provider for type "
       findpropstrict      QName(PackageNamespace("flash.utils"), "getQualifiedClassName")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Y3:_-uS"), "_-2h")
+      getproperty         QName(PrivateNamespace("*", "_-Y3:_-uS/instance"), "_-2h")
       callproperty        QName(PackageNamespace("flash.utils"), "getQualifiedClassName"), 1
       add
       constructprop       QName(PackageNamespace("_-eZ"), "_-Np"), 1
       throw
+
 L14:
       getlocal1
       dup
@@ -117,7 +118,7 @@ L14:
       getproperty         RTQName("_-0IF")
       getlocal2
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Y3:_-uS"), "_-2h")
+      getproperty         QName(PrivateNamespace("*", "_-Y3:_-uS/instance"), "_-2h")
       call                1
       kill                2
       returnvalue
@@ -127,7 +128,7 @@ L14:
   end ; trait
   trait method QName(PackageNamespace(""), "destroy")
    method
-    refid "_-Y3:_-uS/destroy"
+    refid "_-Y3:_-uS/instance/destroy"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 6
@@ -140,19 +141,19 @@ L14:
 
       getlocal0
       pushtrue
-      initproperty        QName(PrivateNamespace("*", "_-Y3:_-uS"), "_-0M")
+      initproperty        QName(PrivateNamespace("*", "_-Y3:_-uS/instance"), "_-0M")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Y3:_-uS"), "_-Hw")
+      getproperty         QName(PrivateNamespace("*", "_-Y3:_-uS/instance"), "_-Hw")
       iftrue              L9
 
       returnvoid
 
 L9:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Y3:_-uS"), "_-00-")
+      getproperty         QName(PrivateNamespace("*", "_-Y3:_-uS/instance"), "_-00-")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Y3:_-uS"), "_-2h")
+      getproperty         QName(PrivateNamespace("*", "_-Y3:_-uS/instance"), "_-2h")
       callproperty        QName(PackageNamespace(""), "_-0EN"), 1
       coerce              QName(PackageNamespace("_-0Jk"), "_-Qm")
       setlocal1
@@ -168,11 +169,11 @@ L21:
       label
       getlocal2
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Y3:_-uS"), "_-Hw")
+      getproperty         QName(PrivateNamespace("*", "_-Y3:_-uS/instance"), "_-Hw")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Y3:_-uS"), "_-2h")
+      getproperty         QName(PrivateNamespace("*", "_-Y3:_-uS/instance"), "_-2h")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Y3:_-uS"), "_-00-")
+      getproperty         QName(PrivateNamespace("*", "_-Y3:_-uS/instance"), "_-00-")
       callpropvoid        QName(PackageNamespace(""), "applyInjection"), 3
 
       findpropstrict      QName(PackageNamespace("_-0Jk"), "_-tv")
@@ -188,7 +189,7 @@ L36:
 
       getlocal0
       pushnull
-      initproperty        QName(PrivateNamespace("*", "_-Y3:_-uS"), "_-Hw")
+      initproperty        QName(PrivateNamespace("*", "_-Y3:_-uS/instance"), "_-Hw")
 
       returnvoid
      end ; code
@@ -197,7 +198,7 @@ L36:
   end ; trait
  end ; instance
  cinit
-  refid "_-Y3:_-uS/cinit"
+  refid "_-Y3:_-uS/class/init"
   body
    maxstack 3
    localcount 1

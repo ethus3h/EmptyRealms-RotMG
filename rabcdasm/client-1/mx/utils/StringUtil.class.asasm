@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("mx.utils:StringUtil")
   iinit
-   refid "mx.utils:StringUtil/iinit"
+   refid "mx.utils:StringUtil/instance/init"
    body
     maxstack 1
     localcount 1
@@ -25,7 +25,7 @@ class
   end ; method
  end ; instance
  cinit
-  refid "mx.utils:StringUtil/cinit"
+  refid "mx.utils:StringUtil/class/init"
   body
    maxstack 2
    localcount 1
@@ -46,7 +46,7 @@ class
  trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.6.0.23201") end
  trait method QName(PackageNamespace(""), "trim") flag FINAL dispid 3
   method
-   refid "mx.utils:StringUtil/trim"
+   refid "mx.utils:StringUtil/class/trim"
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace(""), "String")
    body
@@ -125,7 +125,7 @@ L44:
  end ; trait
  trait method QName(PackageNamespace(""), "trimArrayElements") flag FINAL dispid 4
   method
-   refid "mx.utils:StringUtil/trimArrayElements"
+   refid "mx.utils:StringUtil/class/trimArrayElements"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace(""), "String")
@@ -186,9 +186,9 @@ L33:
      getlex              QName(PackageNamespace("mx.utils"), "StringUtil")
      getlocal3
      getlocal            5
-     getproperty         MultinameL([PrivateNamespace("*", "mx.utils:StringUtil#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("mx.utils"), PrivateNamespace("*", "mx.utils:StringUtil#1"), PackageInternalNs("mx.utils"), ProtectedNamespace("mx.utils:StringUtil"), StaticProtectedNs("mx.utils:StringUtil")])
+     getproperty         MultinameL([PrivateNamespace("*", "mx.utils:StringUtil/class#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("mx.utils"), PrivateNamespace("*", "mx.utils:StringUtil/class#1"), PackageInternalNs("mx.utils"), ProtectedNamespace("mx.utils:StringUtil"), StaticProtectedNs("mx.utils:StringUtil")])
      callproperty        QName(PackageNamespace(""), "trim"), 1
-     setproperty         MultinameL([PrivateNamespace("*", "mx.utils:StringUtil#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("mx.utils"), PrivateNamespace("*", "mx.utils:StringUtil#1"), PackageInternalNs("mx.utils"), ProtectedNamespace("mx.utils:StringUtil"), StaticProtectedNs("mx.utils:StringUtil")])
+     setproperty         MultinameL([PrivateNamespace("*", "mx.utils:StringUtil/class#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("mx.utils"), PrivateNamespace("*", "mx.utils:StringUtil/class#1"), PackageInternalNs("mx.utils"), ProtectedNamespace("mx.utils:StringUtil"), StaticProtectedNs("mx.utils:StringUtil")])
 
      inclocal_i          5
 L43:
@@ -215,7 +215,7 @@ L54:
  end ; trait
  trait method QName(PackageNamespace(""), "isWhitespace") flag FINAL dispid 5
   method
-   refid "mx.utils:StringUtil/isWhitespace"
+   refid "mx.utils:StringUtil/class/isWhitespace"
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace(""), "Boolean")
    body
@@ -293,7 +293,7 @@ L37:
  end ; trait
  trait method QName(PackageNamespace(""), "substitute") flag FINAL dispid 6
   method
-   refid "mx.utils:StringUtil/substitute"
+   refid "mx.utils:StringUtil/class/substitute"
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace(""), "String")
    flag NEED_REST
@@ -332,7 +332,7 @@ L10:
      pop
      getlocal2
      pushbyte            0
-     getproperty         MultinameL([PrivateNamespace("*", "mx.utils:StringUtil#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("mx.utils"), PrivateNamespace("*", "mx.utils:StringUtil#1"), PackageInternalNs("mx.utils"), ProtectedNamespace("mx.utils:StringUtil"), StaticProtectedNs("mx.utils:StringUtil")])
+     getproperty         MultinameL([PrivateNamespace("*", "mx.utils:StringUtil/class#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("mx.utils"), PrivateNamespace("*", "mx.utils:StringUtil/class#1"), PackageInternalNs("mx.utils"), ProtectedNamespace("mx.utils:StringUtil"), StaticProtectedNs("mx.utils:StringUtil")])
      getlex              QName(PackageNamespace(""), "Array")
      istypelate
 L25:
@@ -340,7 +340,7 @@ L25:
 
      getlocal2
      pushbyte            0
-     getproperty         MultinameL([PrivateNamespace("*", "mx.utils:StringUtil#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("mx.utils"), PrivateNamespace("*", "mx.utils:StringUtil#1"), PackageInternalNs("mx.utils"), ProtectedNamespace("mx.utils:StringUtil"), StaticProtectedNs("mx.utils:StringUtil")])
+     getproperty         MultinameL([PrivateNamespace("*", "mx.utils:StringUtil/class#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("mx.utils"), PrivateNamespace("*", "mx.utils:StringUtil/class#1"), PackageInternalNs("mx.utils"), ProtectedNamespace("mx.utils:StringUtil"), StaticProtectedNs("mx.utils:StringUtil")])
      getlex              QName(PackageNamespace(""), "Array")
      astypelate
      coerce              QName(PackageNamespace(""), "Array")
@@ -377,7 +377,7 @@ L44:
      constructprop       QName(PackageNamespace(""), "RegExp"), 2
      getlocal            4
      getlocal            5
-     getproperty         MultinameL([PrivateNamespace("*", "mx.utils:StringUtil#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("mx.utils"), PrivateNamespace("*", "mx.utils:StringUtil#1"), PackageInternalNs("mx.utils"), ProtectedNamespace("mx.utils:StringUtil"), StaticProtectedNs("mx.utils:StringUtil")])
+     getproperty         MultinameL([PrivateNamespace("*", "mx.utils:StringUtil/class#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("mx.utils"), PrivateNamespace("*", "mx.utils:StringUtil/class#1"), PackageInternalNs("mx.utils"), ProtectedNamespace("mx.utils:StringUtil"), StaticProtectedNs("mx.utils:StringUtil")])
      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
      coerce_s
      setlocal1
@@ -396,7 +396,7 @@ L61:
  end ; trait
  trait method QName(PackageNamespace(""), "repeat") flag FINAL dispid 7
   method
-   refid "mx.utils:StringUtil/repeat"
+   refid "mx.utils:StringUtil/class/repeat"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "int")
    returns QName(PackageNamespace(""), "String")
@@ -448,7 +448,7 @@ L20:
  end ; trait
  trait method QName(PackageNamespace(""), "restrict") flag FINAL dispid 8
   method
-   refid "mx.utils:StringUtil/restrict"
+   refid "mx.utils:StringUtil/class/restrict"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace(""), "String")
@@ -503,10 +503,10 @@ L25:
      convert_u
      setlocal            6
 
-     findpropstrict      QName(PrivateNamespace("*", "mx.utils:StringUtil#0"), "testCharacter")
+     findpropstrict      QName(PrivateNamespace("*", "mx.utils:StringUtil/class#0"), "testCharacter")
      getlocal            6
      getlocal2
-     callproperty        QName(PrivateNamespace("*", "mx.utils:StringUtil#0"), "testCharacter"), 2
+     callproperty        QName(PrivateNamespace("*", "mx.utils:StringUtil/class#0"), "testCharacter"), 2
      iffalse             L39
 
      getlocal3
@@ -530,9 +530,9 @@ L40:
    end ; body
   end ; method
  end ; trait
- trait method QName(PrivateNamespace("*", "mx.utils:StringUtil#0"), "testCharacter") flag FINAL dispid 9
+ trait method QName(PrivateNamespace("*", "mx.utils:StringUtil/class#0"), "testCharacter") flag FINAL dispid 9
   method
-   refid "mx.utils:StringUtil/testCharacter"
+   refid "mx.utils:StringUtil/class/mx.utils:StringUtil/class/testCharacter"
    param QName(PackageNamespace(""), "uint")
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace(""), "Boolean")

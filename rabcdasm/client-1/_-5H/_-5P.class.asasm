@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-dG")
   iinit
-   refid "_-5H:_-5P/iinit"
+   refid "_-5H:_-5P/instance/init"
    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("_-5H"), "_-xY")>)
    body
     maxstack 4
@@ -22,17 +22,17 @@ class
 
      getlocal0
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "_-5H:_-5P"), "_-05t")
+     initproperty        QName(PrivateNamespace("*", "_-5H:_-5P/instance"), "_-05t")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-5H:_-5P"), "_-05t") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("_-5H"), "_-xY")>) end
-  trait slot QName(PrivateNamespace("*", "_-5H:_-5P"), "selected") type QName(PackageNamespace("_-5H"), "_-xY") end
+  trait slot QName(PrivateNamespace("*", "_-5H:_-5P/instance"), "_-05t") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("_-5H"), "_-xY")>) end
+  trait slot QName(PrivateNamespace("*", "_-5H:_-5P/instance"), "selected") type QName(PackageNamespace("_-5H"), "_-xY") end
   trait method QName(PackageNamespace(""), "setSelected")
    method
-    refid "_-5H:_-5P/setSelected"
+    refid "_-5H:_-5P/instance/setSelected"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -52,7 +52,7 @@ class
       setlocal3
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-5H:_-5P"), "_-05t")
+      getproperty         QName(PrivateNamespace("*", "_-5H:_-5P/instance"), "_-05t")
       coerce_a
       setlocal            4
 
@@ -73,7 +73,7 @@ L12:
 
       getlocal0
       getlocal2
-      callpropvoid        QName(PrivateNamespace("*", "_-5H:_-5P"), "_-0HV"), 1
+      callpropvoid        QName(PrivateNamespace("*", "_-5H:_-5P/instance"), "_-0HV"), 1
 
       returnvoid
 
@@ -90,7 +90,7 @@ L26:
   end ; trait
   trait method QName(PackageNamespace(""), "_-rq")
    method
-    refid "_-5H:_-5P/_-rq"
+    refid "_-5H:_-5P/instance/_-rq"
     returns QName(PackageNamespace("_-5H"), "_-xY")
     body
      maxstack 3
@@ -102,15 +102,15 @@ L26:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-5H:_-5P"), "selected")
+      getproperty         QName(PrivateNamespace("*", "_-5H:_-5P/instance"), "selected")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-5H:_-5P"), "_-0HV")
+  trait method QName(PrivateNamespace("*", "_-5H:_-5P/instance"), "_-0HV")
    method
-    refid "_-5H:_-5P/_-0HV"
+    refid "_-5H:_-5P/instance/_-5H:_-5P/instance/_-0HV"
     param QName(PackageNamespace("_-5H"), "_-xY")
     returns QName(PackageNamespace(""), "void")
     body
@@ -123,22 +123,22 @@ L26:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-5H:_-5P"), "selected")
+      getproperty         QName(PrivateNamespace("*", "_-5H:_-5P/instance"), "selected")
       pushnull
       ifeq                L10
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-5H:_-5P"), "selected")
+      getproperty         QName(PrivateNamespace("*", "_-5H:_-5P/instance"), "selected")
       pushfalse
       callpropvoid        QName(Namespace("_-w4"), "setSelected"), 1
 
 L10:
       getlocal0
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "_-5H:_-5P"), "selected")
+      initproperty        QName(PrivateNamespace("*", "_-5H:_-5P/instance"), "selected")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-5H:_-5P"), "selected")
+      getproperty         QName(PrivateNamespace("*", "_-5H:_-5P/instance"), "selected")
       pushtrue
       callpropvoid        QName(Namespace("_-w4"), "setSelected"), 1
 
@@ -149,7 +149,7 @@ L10:
   end ; trait
  end ; instance
  cinit
-  refid "_-5H:_-5P/cinit"
+  refid "_-5H:_-5P/class/init"
   body
    maxstack 3
    localcount 1

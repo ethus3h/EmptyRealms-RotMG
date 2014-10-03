@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-pU")
   iinit
-   refid "_-zD:_-0Dh/iinit"
+   refid "_-zD:_-0Dh/instance/init"
    body
     maxstack 3
     localcount 3
@@ -33,7 +33,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "initialize") flag OVERRIDE
    method
-    refid "_-zD:_-0Dh/initialize"
+    refid "_-zD:_-0Dh/instance/initialize"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -47,7 +47,7 @@ class
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-07t")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-zD:_-0Dh"), "_-nO")
+      getproperty         QName(PrivateNamespace("*", "_-zD:_-0Dh/instance"), "_-nO")
       callpropvoid        QName(PackageNamespace(""), "add"), 1
 
       getlocal0
@@ -62,7 +62,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "destroy") flag OVERRIDE
    method
-    refid "_-zD:_-0Dh/destroy"
+    refid "_-zD:_-0Dh/instance/destroy"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -76,7 +76,7 @@ class
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-07t")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-zD:_-0Dh"), "_-nO")
+      getproperty         QName(PrivateNamespace("*", "_-zD:_-0Dh/instance"), "_-nO")
       callpropvoid        QName(PackageNamespace(""), "remove"), 1
 
       returnvoid
@@ -84,9 +84,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-zD:_-0Dh"), "_-nO")
+  trait method QName(PrivateNamespace("*", "_-zD:_-0Dh/instance"), "_-nO")
    method
-    refid "_-zD:_-0Dh/_-nO"
+    refid "_-zD:_-0Dh/instance/_-zD:_-0Dh/instance/_-nO"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -110,7 +110,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-zD:_-0Dh/cinit"
+  refid "_-zD:_-0Dh/class/init"
   body
    maxstack 3
    localcount 1

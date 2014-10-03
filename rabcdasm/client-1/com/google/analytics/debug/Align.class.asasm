@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("com.google.analytics.debug:Align")
   iinit
-   refid "com.google.analytics.debug:Align/iinit"
+   refid "com.google.analytics.debug:Align/instance/init"
    param QName(PackageNamespace(""), "int")
    param QName(PackageNamespace(""), "String")
    flag HAS_OPTIONAL
@@ -24,22 +24,22 @@ class
      getlocal0
      constructsuper      0
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Align"), "_value")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Align/instance"), "_value")
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Align"), "_value")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Align/instance"), "_value")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Align"), "_name")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Align/instance"), "_name")
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Align"), "_name")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Align/instance"), "_name")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Align"), "_value") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Align/instance"), "_value") type QName(PackageNamespace(""), "int") end
   trait method QName(PackageNamespace(""), "valueOf")
    method
-    refid "com.google.analytics.debug:Align/valueOf"
+    refid "com.google.analytics.debug:Align/instance/valueOf"
     returns QName(PackageNamespace(""), "int")
     body
      maxstack 1
@@ -50,16 +50,16 @@ class
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Align"), "_value")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Align/instance"), "_value")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Align"), "_name") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Align/instance"), "_name") type QName(PackageNamespace(""), "String") end
   trait method QName(PackageNamespace(""), "toString")
    method
-    refid "com.google.analytics.debug:Align/toString"
+    refid "com.google.analytics.debug:Align/instance/toString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -70,7 +70,7 @@ class
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Align"), "_name")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Align/instance"), "_name")
       returnvalue
      end ; code
     end ; body
@@ -78,7 +78,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "com.google.analytics.debug:Align/cinit"
+  refid "com.google.analytics.debug:Align/class/init"
   body
    maxstack 4
    localcount 1

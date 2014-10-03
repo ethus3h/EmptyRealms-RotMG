@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("com.google.analytics.external:HTMLDOM")
   iinit
-   refid "com.google.analytics.external:HTMLDOM/iinit"
+   refid "com.google.analytics.external:HTMLDOM/instance/init"
    param QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration")
    body
     maxstack 2
@@ -27,7 +27,7 @@ class
   end ; method
   trait getter QName(PackageNamespace(""), "search")
    method
-    refid "com.google.analytics.external:HTMLDOM/search/getter"
+    refid "com.google.analytics.external:HTMLDOM/instance/search/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -38,10 +38,10 @@ class
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_search")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_search")
       iffalse             L6
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_search")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_search")
       returnvalue
 
 L6:
@@ -53,13 +53,13 @@ L6:
       returnvalue
 
 L11:
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_search")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_search")
       findpropstrict      QName(PackageNamespace(""), "getProperty")
       pushstring          "document.location.search"
       callproperty        QName(PackageNamespace(""), "getProperty"), 1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_search")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_search")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_search")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_search")
       returnvalue
      end ; code
     end ; body
@@ -67,7 +67,7 @@ L11:
   end ; trait
   trait getter QName(PackageNamespace(""), "location")
    method
-    refid "com.google.analytics.external:HTMLDOM/location/getter"
+    refid "com.google.analytics.external:HTMLDOM/instance/location/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -78,10 +78,10 @@ L11:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_location")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_location")
       iffalse             L6
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_location")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_location")
       returnvalue
 
 L6:
@@ -93,24 +93,24 @@ L6:
       returnvalue
 
 L11:
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_location")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_location")
       findpropstrict      QName(PackageNamespace(""), "getPropertyString")
       pushstring          "document.location"
       callproperty        QName(PackageNamespace(""), "getPropertyString"), 1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_location")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_location")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_location")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_location")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_referrer") type QName(PackageNamespace(""), "String") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_language") type QName(PackageNamespace(""), "String") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_host") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_referrer") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_language") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_host") type QName(PackageNamespace(""), "String") end
   trait getter QName(PackageNamespace(""), "pathname")
    method
-    refid "com.google.analytics.external:HTMLDOM/pathname/getter"
+    refid "com.google.analytics.external:HTMLDOM/instance/pathname/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -121,10 +121,10 @@ L11:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_pathname")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_pathname")
       iffalse             L6
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_pathname")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_pathname")
       returnvalue
 
 L6:
@@ -136,23 +136,23 @@ L6:
       returnvalue
 
 L11:
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_pathname")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_pathname")
       findpropstrict      QName(PackageNamespace(""), "getProperty")
       pushstring          "document.location.pathname"
       callproperty        QName(PackageNamespace(""), "getProperty"), 1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_pathname")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_pathname")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_pathname")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_pathname")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_pathname") type QName(PackageNamespace(""), "String") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_location") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_pathname") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_location") type QName(PackageNamespace(""), "String") end
   trait method QName(PackageNamespace(""), "cacheProperties")
    method
-    refid "com.google.analytics.external:HTMLDOM/cacheProperties"
+    refid "com.google.analytics.external:HTMLDOM/instance/cacheProperties"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -179,55 +179,55 @@ L6:
       getlocal1
       iffalse             L53
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_host")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_host")
       getlocal1
-      getproperty         Multiname("host", [PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/cacheProperties"), PackageNamespace("com.google.analytics.external"), PackageInternalNs("com.google.analytics.external"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:JavascriptProxy"), StaticProtectedNs("Object")])
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_host")
+      getproperty         Multiname("host", [PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance/cacheProperties"), PackageNamespace("com.google.analytics.external"), PackageInternalNs("com.google.analytics.external"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:JavascriptProxy"), StaticProtectedNs("Object")])
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_host")
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_language")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_language")
       getlocal1
-      getproperty         Multiname("language", [PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/cacheProperties"), PackageNamespace("com.google.analytics.external"), PackageInternalNs("com.google.analytics.external"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:JavascriptProxy"), StaticProtectedNs("Object")])
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_language")
+      getproperty         Multiname("language", [PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance/cacheProperties"), PackageNamespace("com.google.analytics.external"), PackageInternalNs("com.google.analytics.external"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:JavascriptProxy"), StaticProtectedNs("Object")])
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_language")
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_characterSet")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_characterSet")
       getlocal1
-      getproperty         Multiname("characterSet", [PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/cacheProperties"), PackageNamespace("com.google.analytics.external"), PackageInternalNs("com.google.analytics.external"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:JavascriptProxy"), StaticProtectedNs("Object")])
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_characterSet")
+      getproperty         Multiname("characterSet", [PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance/cacheProperties"), PackageNamespace("com.google.analytics.external"), PackageInternalNs("com.google.analytics.external"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:JavascriptProxy"), StaticProtectedNs("Object")])
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_characterSet")
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_colorDepth")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_colorDepth")
       getlocal1
-      getproperty         Multiname("colorDepth", [PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/cacheProperties"), PackageNamespace("com.google.analytics.external"), PackageInternalNs("com.google.analytics.external"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:JavascriptProxy"), StaticProtectedNs("Object")])
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_colorDepth")
+      getproperty         Multiname("colorDepth", [PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance/cacheProperties"), PackageNamespace("com.google.analytics.external"), PackageInternalNs("com.google.analytics.external"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:JavascriptProxy"), StaticProtectedNs("Object")])
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_colorDepth")
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_location")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_location")
       getlocal1
-      getproperty         Multiname("location", [PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/cacheProperties"), PackageNamespace("com.google.analytics.external"), PackageInternalNs("com.google.analytics.external"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:JavascriptProxy"), StaticProtectedNs("Object")])
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_location")
+      getproperty         Multiname("location", [PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance/cacheProperties"), PackageNamespace("com.google.analytics.external"), PackageInternalNs("com.google.analytics.external"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:JavascriptProxy"), StaticProtectedNs("Object")])
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_location")
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_pathname")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_pathname")
       getlocal1
-      getproperty         Multiname("pathname", [PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/cacheProperties"), PackageNamespace("com.google.analytics.external"), PackageInternalNs("com.google.analytics.external"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:JavascriptProxy"), StaticProtectedNs("Object")])
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_pathname")
+      getproperty         Multiname("pathname", [PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance/cacheProperties"), PackageNamespace("com.google.analytics.external"), PackageInternalNs("com.google.analytics.external"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:JavascriptProxy"), StaticProtectedNs("Object")])
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_pathname")
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_protocol")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_protocol")
       getlocal1
-      getproperty         Multiname("protocol", [PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/cacheProperties"), PackageNamespace("com.google.analytics.external"), PackageInternalNs("com.google.analytics.external"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:JavascriptProxy"), StaticProtectedNs("Object")])
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_protocol")
+      getproperty         Multiname("protocol", [PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance/cacheProperties"), PackageNamespace("com.google.analytics.external"), PackageInternalNs("com.google.analytics.external"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:JavascriptProxy"), StaticProtectedNs("Object")])
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_protocol")
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_search")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_search")
       getlocal1
-      getproperty         Multiname("search", [PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/cacheProperties"), PackageNamespace("com.google.analytics.external"), PackageInternalNs("com.google.analytics.external"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:JavascriptProxy"), StaticProtectedNs("Object")])
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_search")
+      getproperty         Multiname("search", [PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance/cacheProperties"), PackageNamespace("com.google.analytics.external"), PackageInternalNs("com.google.analytics.external"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:JavascriptProxy"), StaticProtectedNs("Object")])
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_search")
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_referrer")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_referrer")
       getlocal1
-      getproperty         Multiname("referrer", [PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/cacheProperties"), PackageNamespace("com.google.analytics.external"), PackageInternalNs("com.google.analytics.external"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:JavascriptProxy"), StaticProtectedNs("Object")])
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_referrer")
+      getproperty         Multiname("referrer", [PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance/cacheProperties"), PackageNamespace("com.google.analytics.external"), PackageInternalNs("com.google.analytics.external"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:JavascriptProxy"), StaticProtectedNs("Object")])
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_referrer")
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_title")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_title")
       getlocal1
-      getproperty         Multiname("title", [PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/cacheProperties"), PackageNamespace("com.google.analytics.external"), PackageInternalNs("com.google.analytics.external"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:JavascriptProxy"), StaticProtectedNs("Object")])
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_title")
+      getproperty         Multiname("title", [PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance/cacheProperties"), PackageNamespace("com.google.analytics.external"), PackageInternalNs("com.google.analytics.external"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:HTMLDOM"), StaticProtectedNs("com.google.analytics.external:JavascriptProxy"), StaticProtectedNs("Object")])
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_title")
 
 L53:
       returnvoid
@@ -235,12 +235,12 @@ L53:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_search") type QName(PackageNamespace(""), "String") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_characterSet") type QName(PackageNamespace(""), "String") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_title") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_search") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_characterSet") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_title") type QName(PackageNamespace(""), "String") end
   trait getter QName(PackageNamespace(""), "language")
    method
-    refid "com.google.analytics.external:HTMLDOM/language/getter"
+    refid "com.google.analytics.external:HTMLDOM/instance/language/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 2
@@ -251,10 +251,10 @@ L53:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_language")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_language")
       iffalse             L6
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_language")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_language")
       returnvalue
 
 L6:
@@ -283,11 +283,11 @@ L11:
       setlocal1
 
 L24:
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_language")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_language")
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_language")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_language")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_language")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_language")
       returnvalue
      end ; code
     end ; body
@@ -295,7 +295,7 @@ L24:
   end ; trait
   trait getter QName(PackageNamespace(""), "colorDepth")
    method
-    refid "com.google.analytics.external:HTMLDOM/colorDepth/getter"
+    refid "com.google.analytics.external:HTMLDOM/instance/colorDepth/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -306,10 +306,10 @@ L24:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_colorDepth")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_colorDepth")
       iffalse             L6
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_colorDepth")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_colorDepth")
       returnvalue
 
 L6:
@@ -321,13 +321,13 @@ L6:
       returnvalue
 
 L11:
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_colorDepth")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_colorDepth")
       findpropstrict      QName(PackageNamespace(""), "getProperty")
       pushstring          "window.screen.colorDepth"
       callproperty        QName(PackageNamespace(""), "getProperty"), 1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_colorDepth")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_colorDepth")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_colorDepth")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_colorDepth")
       returnvalue
      end ; code
     end ; body
@@ -335,7 +335,7 @@ L11:
   end ; trait
   trait getter QName(PackageNamespace(""), "referrer")
    method
-    refid "com.google.analytics.external:HTMLDOM/referrer/getter"
+    refid "com.google.analytics.external:HTMLDOM/instance/referrer/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -346,10 +346,10 @@ L11:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_referrer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_referrer")
       iffalse             L6
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_referrer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_referrer")
       returnvalue
 
 L6:
@@ -361,13 +361,13 @@ L6:
       returnvalue
 
 L11:
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_referrer")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_referrer")
       findpropstrict      QName(PackageNamespace(""), "getProperty")
       pushstring          "document.referrer"
       callproperty        QName(PackageNamespace(""), "getProperty"), 1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_referrer")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_referrer")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_referrer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_referrer")
       returnvalue
      end ; code
     end ; body
@@ -375,7 +375,7 @@ L11:
   end ; trait
   trait getter QName(PackageNamespace(""), "protocol")
    method
-    refid "com.google.analytics.external:HTMLDOM/protocol/getter"
+    refid "com.google.analytics.external:HTMLDOM/instance/protocol/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -386,10 +386,10 @@ L11:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_protocol")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_protocol")
       iffalse             L6
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_protocol")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_protocol")
       returnvalue
 
 L6:
@@ -401,13 +401,13 @@ L6:
       returnvalue
 
 L11:
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_protocol")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_protocol")
       findpropstrict      QName(PackageNamespace(""), "getProperty")
       pushstring          "document.location.protocol"
       callproperty        QName(PackageNamespace(""), "getProperty"), 1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_protocol")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_protocol")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_protocol")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_protocol")
       returnvalue
      end ; code
     end ; body
@@ -415,7 +415,7 @@ L11:
   end ; trait
   trait getter QName(PackageNamespace(""), "host")
    method
-    refid "com.google.analytics.external:HTMLDOM/host/getter"
+    refid "com.google.analytics.external:HTMLDOM/instance/host/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -426,10 +426,10 @@ L11:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_host")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_host")
       iffalse             L6
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_host")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_host")
       returnvalue
 
 L6:
@@ -441,22 +441,22 @@ L6:
       returnvalue
 
 L11:
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_host")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_host")
       findpropstrict      QName(PackageNamespace(""), "getProperty")
       pushstring          "document.location.host"
       callproperty        QName(PackageNamespace(""), "getProperty"), 1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_host")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_host")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_host")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_host")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_protocol") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_protocol") type QName(PackageNamespace(""), "String") end
   trait getter QName(PackageNamespace(""), "characterSet")
    method
-    refid "com.google.analytics.external:HTMLDOM/characterSet/getter"
+    refid "com.google.analytics.external:HTMLDOM/instance/characterSet/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 2
@@ -467,10 +467,10 @@ L11:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_characterSet")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_characterSet")
       iffalse             L6
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_characterSet")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_characterSet")
       returnvalue
 
 L6:
@@ -499,11 +499,11 @@ L11:
       setlocal1
 
 L24:
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_characterSet")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_characterSet")
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_characterSet")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_characterSet")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_characterSet")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_characterSet")
       returnvalue
      end ; code
     end ; body
@@ -511,7 +511,7 @@ L24:
   end ; trait
   trait getter QName(PackageNamespace(""), "title")
    method
-    refid "com.google.analytics.external:HTMLDOM/title/getter"
+    refid "com.google.analytics.external:HTMLDOM/instance/title/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -522,10 +522,10 @@ L24:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_title")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_title")
       iffalse             L6
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_title")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_title")
       returnvalue
 
 L6:
@@ -537,22 +537,22 @@ L6:
       returnvalue
 
 L11:
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_title")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_title")
       findpropstrict      QName(PackageNamespace(""), "getProperty")
       pushstring          "document.title"
       callproperty        QName(PackageNamespace(""), "getProperty"), 1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_title")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_title")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_title")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_title")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM"), "_colorDepth") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.external:HTMLDOM/instance"), "_colorDepth") type QName(PackageNamespace(""), "String") end
  end ; instance
  cinit
-  refid "com.google.analytics.external:HTMLDOM/cinit"
+  refid "com.google.analytics.external:HTMLDOM/class/init"
   body
    maxstack 3
    localcount 1

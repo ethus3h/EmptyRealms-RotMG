@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-hl")
   iinit
-   refid "_-02b:_-6E/iinit"
+   refid "_-02b:_-6E/instance/init#1"
    body
     maxstack 3
     localcount 3
@@ -23,10 +23,10 @@ class
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-02b:_-6E"), "tracker") type QName(PackageNamespace("com.google.analytics"), "GATracker") end
+  trait slot QName(PrivateNamespace("*", "_-02b:_-6E/instance"), "tracker") type QName(PackageNamespace("com.google.analytics"), "GATracker") end
   trait method QName(PackageNamespace(""), "init")
    method
-    refid "_-02b:_-6E/init"
+    refid "_-02b:_-6E/instance/init#0"
     param QName(PackageNamespace("flash.display"), "Stage")
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
@@ -44,11 +44,11 @@ class
       getlocal1
       getlocal2
       constructprop       QName(PackageNamespace("com.google.analytics"), "GATracker"), 2
-      initproperty        QName(PrivateNamespace("*", "_-02b:_-6E"), "tracker")
+      initproperty        QName(PrivateNamespace("*", "_-02b:_-6E/instance"), "tracker")
 
       getlex              QName(PackageNamespace("com.company.googleanalytics"), "GA")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-02b:_-6E"), "tracker")
+      getproperty         QName(PrivateNamespace("*", "_-02b:_-6E/instance"), "tracker")
       callpropvoid        QName(PackageNamespace(""), "setTracker"), 1
 
       returnvoid
@@ -58,7 +58,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "trackEvent")
    method
-    refid "_-02b:_-6E/trackEvent"
+    refid "_-02b:_-6E/instance/trackEvent"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
@@ -74,7 +74,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-02b:_-6E"), "tracker")
+      getproperty         QName(PrivateNamespace("*", "_-02b:_-6E/instance"), "tracker")
       getlocal1
       getlocal2
       getlocal3
@@ -87,7 +87,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "_-Mx")
    method
-    refid "_-02b:_-6E/_-Mx"
+    refid "_-02b:_-6E/instance/_-Mx"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -100,7 +100,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-02b:_-6E"), "tracker")
+      getproperty         QName(PrivateNamespace("*", "_-02b:_-6E/instance"), "tracker")
       getlocal1
       callpropvoid        QName(PackageNamespace(""), "trackPageview"), 1
 
@@ -111,7 +111,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-02b:_-6E/cinit"
+  refid "_-02b:_-6E/class/init"
   body
    maxstack 3
    localcount 1

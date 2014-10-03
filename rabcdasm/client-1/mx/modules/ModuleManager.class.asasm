@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("mx.modules:ModuleManager")
   iinit
-   refid "mx.modules:ModuleManager/iinit"
+   refid "mx.modules:ModuleManager/instance/init"
    body
     maxstack 1
     localcount 1
@@ -25,7 +25,7 @@ class
   end ; method
  end ; instance
  cinit
-  refid "mx.modules:ModuleManager/cinit"
+  refid "mx.modules:ModuleManager/class/init"
   body
    maxstack 2
    localcount 1
@@ -46,7 +46,7 @@ class
  trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.6.0.23201") end
  trait method QName(PackageNamespace(""), "getModule") flag FINAL dispid 3
   method
-   refid "mx.modules:ModuleManager/getModule"
+   refid "mx.modules:ModuleManager/class/getModule"
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace("mx.modules"), "IModuleInfo")
    body
@@ -58,10 +58,10 @@ class
      getlocal0
      pushscope
 
-     findpropstrict      QName(PrivateNamespace("*", "mx.modules:ModuleManager#1"), "getSingleton")
-     callproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager#1"), "getSingleton"), 0
+     findpropstrict      QName(PrivateNamespace("*", "mx.modules:ModuleManager/class"), "getSingleton")
+     callproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager/class"), "getSingleton"), 0
      getlocal1
-     callproperty        Multiname("getModule", [PrivateNamespace("*", "mx.modules:ModuleManager#1"), PrivateNamespace("*", "mx.modules:ModuleManager#0"), PackageNamespace(""), PackageNamespace("mx.modules"), PackageInternalNs("mx.modules"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.modules:ModuleManager"), StaticProtectedNs("mx.modules:ModuleManager")]), 1
+     callproperty        Multiname("getModule", [PrivateNamespace("*", "mx.modules:ModuleManager/class"), PrivateNamespace("*", "mx.modules:ModuleManager"), PackageNamespace(""), PackageNamespace("mx.modules"), PackageInternalNs("mx.modules"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.modules:ModuleManager"), StaticProtectedNs("mx.modules:ModuleManager")]), 1
      returnvalue
     end ; code
    end ; body
@@ -69,7 +69,7 @@ class
  end ; trait
  trait method QName(PackageNamespace(""), "getAssociatedFactory") flag FINAL dispid 4
   method
-   refid "mx.modules:ModuleManager/getAssociatedFactory"
+   refid "mx.modules:ModuleManager/class/getAssociatedFactory"
    param QName(PackageNamespace(""), "Object")
    returns QName(PackageNamespace("mx.core"), "IFlexModuleFactory")
    body
@@ -81,18 +81,18 @@ class
      getlocal0
      pushscope
 
-     findpropstrict      QName(PrivateNamespace("*", "mx.modules:ModuleManager#1"), "getSingleton")
-     callproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager#1"), "getSingleton"), 0
+     findpropstrict      QName(PrivateNamespace("*", "mx.modules:ModuleManager/class"), "getSingleton")
+     callproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager/class"), "getSingleton"), 0
      getlocal1
-     callproperty        Multiname("getAssociatedFactory", [PrivateNamespace("*", "mx.modules:ModuleManager#1"), PrivateNamespace("*", "mx.modules:ModuleManager#0"), PackageNamespace(""), PackageNamespace("mx.modules"), PackageInternalNs("mx.modules"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.modules:ModuleManager"), StaticProtectedNs("mx.modules:ModuleManager")]), 1
+     callproperty        Multiname("getAssociatedFactory", [PrivateNamespace("*", "mx.modules:ModuleManager/class"), PrivateNamespace("*", "mx.modules:ModuleManager"), PackageNamespace(""), PackageNamespace("mx.modules"), PackageInternalNs("mx.modules"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.modules:ModuleManager"), StaticProtectedNs("mx.modules:ModuleManager")]), 1
      returnvalue
     end ; code
    end ; body
   end ; method
  end ; trait
- trait method QName(PrivateNamespace("*", "mx.modules:ModuleManager#1"), "getSingleton") flag FINAL dispid 5
+ trait method QName(PrivateNamespace("*", "mx.modules:ModuleManager/class"), "getSingleton") flag FINAL dispid 5
   method
-   refid "mx.modules:ModuleManager/getSingleton"
+   refid "mx.modules:ModuleManager/class/mx.modules:ModuleManager/class/getSingleton"
    returns QName(PackageNamespace(""), "Object")
    body
     maxstack 2
@@ -108,8 +108,8 @@ class
      iftrue              L9
 
      getlex              QName(PackageNamespace("mx.modules"), "ModuleManagerGlobals")
-     findpropstrict      QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleManagerImpl")
-     constructprop       QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleManagerImpl"), 0
+     findpropstrict      QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "ModuleManagerImpl")
+     constructprop       QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "ModuleManagerImpl"), 0
      setproperty         QName(PackageNamespace(""), "managerSingleton")
 
 L9:

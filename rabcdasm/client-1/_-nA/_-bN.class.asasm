@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-cT")
   iinit
-   refid "_-nA:_-bN/iinit"
+   refid "_-nA:_-bN/instance/init"
    body
     maxstack 3
     localcount 3
@@ -41,7 +41,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "initialize") flag OVERRIDE
    method
-    refid "_-nA:_-bN/initialize"
+    refid "_-nA:_-bN/instance/initialize"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -56,14 +56,14 @@ class
       getproperty         QName(PackageNamespace(""), "view")
       getproperty         QName(PackageNamespace(""), "_-bF")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-nA:_-bN"), "onButtonClick")
+      getproperty         QName(PrivateNamespace("*", "_-nA:_-bN/instance"), "onButtonClick")
       callpropvoid        QName(PackageNamespace(""), "add"), 1
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-02X")
       getproperty         QName(Namespace("_-Mk"), "_-Qo")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-nA:_-bN"), "_-036")
+      getproperty         QName(PrivateNamespace("*", "_-nA:_-bN/instance"), "_-036")
       callpropvoid        QName(PackageNamespace(""), "addOnce"), 1
 
       getlocal0
@@ -80,7 +80,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "destroy") flag OVERRIDE
    method
-    refid "_-nA:_-bN/destroy"
+    refid "_-nA:_-bN/instance/destroy"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -95,14 +95,14 @@ class
       getproperty         QName(PackageNamespace(""), "view")
       getproperty         QName(PackageNamespace(""), "_-bF")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-nA:_-bN"), "onButtonClick")
+      getproperty         QName(PrivateNamespace("*", "_-nA:_-bN/instance"), "onButtonClick")
       callpropvoid        QName(PackageNamespace(""), "remove"), 1
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-02X")
       getproperty         QName(Namespace("_-Mk"), "_-Qo")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-nA:_-bN"), "_-036")
+      getproperty         QName(PrivateNamespace("*", "_-nA:_-bN/instance"), "_-036")
       callpropvoid        QName(PackageNamespace(""), "remove"), 1
 
       returnvoid
@@ -110,9 +110,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-nA:_-bN"), "onButtonClick")
+  trait method QName(PrivateNamespace("*", "_-nA:_-bN/instance"), "onButtonClick")
    method
-    refid "_-nA:_-bN/onButtonClick"
+    refid "_-nA:_-bN/instance/_-nA:_-bN/instance/onButtonClick"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 3
@@ -132,9 +132,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-nA:_-bN"), "_-036")
+  trait method QName(PrivateNamespace("*", "_-nA:_-bN/instance"), "_-036")
    method
-    refid "_-nA:_-bN/_-036"
+    refid "_-nA:_-bN/instance/_-nA:_-bN/instance/_-036"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 3
@@ -156,7 +156,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-nA:_-bN/cinit"
+  refid "_-nA:_-bN/class/init"
   body
    maxstack 3
    localcount 1

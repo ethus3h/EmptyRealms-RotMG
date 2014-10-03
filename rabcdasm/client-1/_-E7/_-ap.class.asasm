@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-je")
   iinit
-   refid "_-E7:_-ap/iinit"
+   refid "_-E7:_-ap/instance/init"
    param QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
    body
     maxstack 10
@@ -34,24 +34,24 @@ class
      dup
      pushstring          "Myriad Pro"
      constructprop       QName(PackageNamespace("com.company.ui"), "SimpleText"), 6
-     initproperty        QName(PrivateNamespace("*", "_-E7:_-ap"), "text_")
+     initproperty        QName(PrivateNamespace("*", "_-E7:_-ap/instance/init"), "text_")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-E7:_-ap"), "text_")
+     getproperty         QName(PrivateNamespace("*", "_-E7:_-ap/instance/init"), "text_")
      pushtrue
      callpropvoid        QName(PackageNamespace(""), "_-8Y"), 1
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-E7:_-ap"), "text_")
+     getproperty         QName(PrivateNamespace("*", "_-E7:_-ap/instance/init"), "text_")
      pushstring          "Quest!"
      setproperty         QName(PackageNamespace(""), "text")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-E7:_-ap"), "text_")
+     getproperty         QName(PrivateNamespace("*", "_-E7:_-ap/instance/init"), "text_")
      callpropvoid        QName(PackageNamespace(""), "updateMetrics"), 0
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-E7:_-ap"), "text_")
+     getproperty         QName(PrivateNamespace("*", "_-E7:_-ap/instance/init"), "text_")
      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
      pushbyte            0
      dup
@@ -61,18 +61,18 @@ class
      setproperty         QName(PackageNamespace(""), "filters")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-E7:_-ap"), "text_")
+     getproperty         QName(PrivateNamespace("*", "_-E7:_-ap/instance/init"), "text_")
      pushbyte            0
      setproperty         QName(PackageNamespace(""), "x")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-E7:_-ap"), "text_")
+     getproperty         QName(PrivateNamespace("*", "_-E7:_-ap/instance/init"), "text_")
      pushbyte            0
      setproperty         QName(PackageNamespace(""), "y")
 
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-E7:_-ap"), "text_")
+     getproperty         QName(PrivateNamespace("*", "_-E7:_-ap/instance/init"), "text_")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
      getlocal0
@@ -106,11 +106,11 @@ class
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-E7:_-ap"), "text_") type QName(PackageNamespace("com.company.ui"), "SimpleText") end
+  trait slot QName(PrivateNamespace("*", "_-E7:_-ap/instance/init"), "text_") type QName(PackageNamespace("com.company.ui"), "SimpleText") end
   trait slot QName(PackageNamespace(""), "_-id") type QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-gV") end
  end ; instance
  cinit
-  refid "_-E7:_-ap/cinit"
+  refid "_-E7:_-ap/class/init"
   body
    maxstack 3
    localcount 1

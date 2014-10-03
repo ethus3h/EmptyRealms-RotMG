@@ -1,14 +1,14 @@
 class
  refid "mx.modules:ModuleManager/ModuleInfoProxy"
- instance QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleInfoProxy")
+ instance QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "ModuleInfoProxy")
   extends QName(PackageNamespace("flash.events"), "EventDispatcher")
   implements Multiname("IModuleInfo", [PackageNamespace("mx.modules")])
   flag SEALED
   flag PROTECTEDNS
   protectedns ProtectedNamespace("ModuleManager.as$413:ModuleInfoProxy")
   iinit
-   refid "mx.modules:ModuleManager/ModuleInfoProxy/iinit"
-   param QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleInfo")
+   refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/init"
+   param QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "ModuleInfo")
    body
     maxstack 6
     localcount 2
@@ -23,13 +23,13 @@ class
 
      getlocal0
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "info")
+     initproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "info")
 
      getlocal1
      getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
      getproperty         QName(PackageNamespace(""), "SETUP")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "moduleEventHandler")
+     getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "moduleEventHandler")
      pushfalse
      pushbyte            0
      pushtrue
@@ -39,7 +39,7 @@ class
      getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
      getproperty         QName(PackageNamespace(""), "PROGRESS")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "moduleEventHandler")
+     getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "moduleEventHandler")
      pushfalse
      pushbyte            0
      pushtrue
@@ -49,7 +49,7 @@ class
      getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
      getproperty         QName(PackageNamespace(""), "READY")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "moduleEventHandler")
+     getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "moduleEventHandler")
      pushfalse
      pushbyte            0
      pushtrue
@@ -59,7 +59,7 @@ class
      getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
      getproperty         QName(PackageNamespace(""), "ERROR")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "moduleEventHandler")
+     getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "moduleEventHandler")
      pushfalse
      pushbyte            0
      pushtrue
@@ -69,7 +69,7 @@ class
      getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
      getproperty         QName(PackageNamespace(""), "UNLOAD")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "moduleEventHandler")
+     getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "moduleEventHandler")
      pushfalse
      pushbyte            0
      pushtrue
@@ -79,12 +79,12 @@ class
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "info") type QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleInfo") end
-  trait slot QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "referenced") type QName(PackageNamespace(""), "Boolean") value False() end
-  trait slot QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "_data") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "info") type QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "ModuleInfo") end
+  trait slot QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "referenced") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "_data") type QName(PackageNamespace(""), "Object") end
   trait getter QName(PackageNamespace(""), "data")
    method
-    refid "mx.modules:ModuleManager/ModuleInfoProxy/data/getter"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/data/getter"
     returns QName(PackageNamespace(""), "Object")
     body
      maxstack 1
@@ -96,7 +96,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "_data")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "_data")
       returnvalue
      end ; code
     end ; body
@@ -104,7 +104,7 @@ class
   end ; trait
   trait setter QName(PackageNamespace(""), "data")
    method
-    refid "mx.modules:ModuleManager/ModuleInfoProxy/data/setter"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/data/setter"
     param QName(PackageNamespace(""), "Object")
     returns QName(PackageNamespace(""), "void")
     body
@@ -118,7 +118,7 @@ class
 
       getlocal0
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "_data")
+      initproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "_data")
 
       returnvoid
      end ; code
@@ -127,7 +127,7 @@ class
   end ; trait
   trait getter QName(PackageNamespace(""), "error")
    method
-    refid "mx.modules:ModuleManager/ModuleInfoProxy/error/getter"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/error/getter"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 1
@@ -139,7 +139,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "info")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "info")
       getproperty         QName(PackageNamespace(""), "error")
       returnvalue
      end ; code
@@ -148,7 +148,7 @@ class
   end ; trait
   trait getter QName(PackageNamespace(""), "factory")
    method
-    refid "mx.modules:ModuleManager/ModuleInfoProxy/factory/getter"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/factory/getter"
     returns QName(PackageNamespace("mx.core"), "IFlexModuleFactory")
     body
      maxstack 1
@@ -160,7 +160,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "info")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "info")
       getproperty         QName(PackageNamespace(""), "factory")
       returnvalue
      end ; code
@@ -169,7 +169,7 @@ class
   end ; trait
   trait getter QName(PackageNamespace(""), "loaded")
    method
-    refid "mx.modules:ModuleManager/ModuleInfoProxy/loaded/getter"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/loaded/getter"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 1
@@ -181,7 +181,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "info")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "info")
       getproperty         QName(PackageNamespace(""), "loaded")
       returnvalue
      end ; code
@@ -190,7 +190,7 @@ class
   end ; trait
   trait getter QName(PackageNamespace(""), "ready")
    method
-    refid "mx.modules:ModuleManager/ModuleInfoProxy/ready/getter"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/ready/getter"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 1
@@ -202,7 +202,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "info")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "info")
       getproperty         QName(PackageNamespace(""), "ready")
       returnvalue
      end ; code
@@ -211,7 +211,7 @@ class
   end ; trait
   trait getter QName(PackageNamespace(""), "setup")
    method
-    refid "mx.modules:ModuleManager/ModuleInfoProxy/setup/getter"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/setup/getter"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 1
@@ -223,7 +223,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "info")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "info")
       getproperty         QName(PackageNamespace(""), "setup")
       returnvalue
      end ; code
@@ -232,7 +232,7 @@ class
   end ; trait
   trait getter QName(PackageNamespace(""), "url")
    method
-    refid "mx.modules:ModuleManager/ModuleInfoProxy/url/getter"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/url/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -244,7 +244,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "info")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "info")
       getproperty         QName(PackageNamespace(""), "url")
       returnvalue
      end ; code
@@ -253,7 +253,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "publish")
    method
-    refid "mx.modules:ModuleManager/ModuleInfoProxy/publish"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/publish"
     param QName(PackageNamespace("mx.core"), "IFlexModuleFactory")
     returns QName(PackageNamespace(""), "void")
     body
@@ -266,7 +266,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "info")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "info")
       getlocal1
       callpropvoid        QName(PackageNamespace(""), "publish"), 1
 
@@ -277,7 +277,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "load")
    method
-    refid "mx.modules:ModuleManager/ModuleInfoProxy/load"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/load"
     param QName(PackageNamespace("flash.system"), "ApplicationDomain")
     param QName(PackageNamespace("flash.system"), "SecurityDomain")
     param QName(PackageNamespace("flash.utils"), "ByteArray")
@@ -302,24 +302,24 @@ class
       setlocal            5
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "info")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "info")
       callpropvoid        QName(PackageNamespace(""), "resurrect"), 0
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "referenced")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "referenced")
       iftrue              L17
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "info")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "info")
       callpropvoid        QName(PackageNamespace(""), "addReference"), 0
 
       getlocal0
       pushtrue
-      initproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "referenced")
+      initproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "referenced")
 
 L17:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "info")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "info")
       getproperty         QName(PackageNamespace(""), "error")
       iffalse             L28
 
@@ -334,12 +334,12 @@ L17:
 
 L28:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "info")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "info")
       getproperty         QName(PackageNamespace(""), "loaded")
       iffalse             L72
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "info")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "info")
       getproperty         QName(PackageNamespace(""), "setup")
       iffalse             L71
 
@@ -351,7 +351,7 @@ L28:
       callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "info")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "info")
       getproperty         QName(PackageNamespace(""), "ready")
       iffalse             L71
 
@@ -364,13 +364,13 @@ L28:
       setlocal            5
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "info")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "info")
       getproperty         QName(PackageNamespace(""), "size")
       setproperty         QName(PackageNamespace(""), "bytesLoaded")
 
       getlocal            5
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "info")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "info")
       getproperty         QName(PackageNamespace(""), "size")
       setproperty         QName(PackageNamespace(""), "bytesTotal")
 
@@ -390,7 +390,7 @@ L71:
 
 L72:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "info")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "info")
       getlocal1
       getlocal2
       getlocal3
@@ -405,7 +405,7 @@ L79:
   end ; trait
   trait method QName(PackageNamespace(""), "release")
    method
-    refid "mx.modules:ModuleManager/ModuleInfoProxy/release"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/release"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -417,16 +417,16 @@ L79:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "referenced")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "referenced")
       iffalse             L11
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "info")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "info")
       callpropvoid        QName(PackageNamespace(""), "removeReference"), 0
 
       getlocal0
       pushfalse
-      initproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "referenced")
+      initproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "referenced")
 
 L11:
       returnvoid
@@ -436,7 +436,7 @@ L11:
   end ; trait
   trait method QName(PackageNamespace(""), "unload")
    method
-    refid "mx.modules:ModuleManager/ModuleInfoProxy/unload"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/unload"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 3
@@ -448,47 +448,47 @@ L11:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "info")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "info")
       callpropvoid        QName(PackageNamespace(""), "unload"), 0
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "info")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "info")
       getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
       getproperty         QName(PackageNamespace(""), "SETUP")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "moduleEventHandler")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "moduleEventHandler")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "info")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "info")
       getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
       getproperty         QName(PackageNamespace(""), "PROGRESS")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "moduleEventHandler")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "moduleEventHandler")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "info")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "info")
       getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
       getproperty         QName(PackageNamespace(""), "READY")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "moduleEventHandler")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "moduleEventHandler")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "info")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "info")
       getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
       getproperty         QName(PackageNamespace(""), "ERROR")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "moduleEventHandler")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "moduleEventHandler")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "info")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "info")
       getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
       getproperty         QName(PackageNamespace(""), "UNLOAD")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "moduleEventHandler")
+      getproperty         QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "moduleEventHandler")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
       returnvoid
@@ -496,9 +496,9 @@ L11:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy"), "moduleEventHandler")
+  trait method QName(PrivateNamespace("*", "mx.modules:ModuleManager/ModuleInfoProxy/instance"), "moduleEventHandler")
    method
-    refid "mx.modules:ModuleManager/ModuleInfoProxy/mx.modules:ModuleManager/ModuleInfoProxy/moduleEventHandler"
+    refid "mx.modules:ModuleManager/ModuleInfoProxy/instance/mx.modules:ModuleManager/ModuleInfoProxy/instance/moduleEventHandler"
     param QName(PackageNamespace("mx.events"), "ModuleEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -521,7 +521,7 @@ L11:
   end ; trait
  end ; instance
  cinit
-  refid "mx.modules:ModuleManager/ModuleInfoProxy/cinit"
+  refid "mx.modules:ModuleManager/ModuleInfoProxy/class/init"
   body
    maxstack 1
    localcount 1

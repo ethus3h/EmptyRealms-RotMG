@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-08O")
   iinit
-   refid "_-WD:Domain/iinit"
+   refid "_-WD:Domain/instance/init"
    body
     maxstack 13
     localcount 3
@@ -25,7 +25,7 @@ class
      pushstring          "localhost"
      pushstring          "localhost"
      newarray            3
-     initproperty        QName(PrivateNamespace("*", "_-WD:Domain"), "_-Vw")
+     initproperty        QName(PrivateNamespace("*", "_-WD:Domain/instance"), "_-Vw")
 
      getlocal0
      getlex              QName(PackageNamespace("_-yn"), "_-07Y")
@@ -35,15 +35,15 @@ class
      convert_s
      pushstring          "localhost"
      newarray            2
-     initproperty        QName(PrivateNamespace("*", "_-WD:Domain"), "_-eg")
+     initproperty        QName(PrivateNamespace("*", "_-WD:Domain/instance"), "_-eg")
 
      getlocal0
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-WD:Domain"), "_-Vw")
+     getproperty         QName(PrivateNamespace("*", "_-WD:Domain/instance"), "_-Vw")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-WD:Domain"), "_-eg")
+     getproperty         QName(PrivateNamespace("*", "_-WD:Domain/instance"), "_-eg")
      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 1
-     initproperty        QName(PrivateNamespace("*", "_-WD:Domain"), "_-Vk")
+     initproperty        QName(PrivateNamespace("*", "_-WD:Domain/instance"), "_-Vk")
 
      getlocal0
      constructsuper      0
@@ -52,18 +52,18 @@ class
     end ; code
    end ; body
   end ; method
-  trait const QName(PrivateNamespace("*", "_-WD:Domain"), "_-jC") type QName(PackageNamespace(""), "String") value Utf8("localhost") end
-  trait const QName(PrivateNamespace("*", "_-WD:Domain"), "_-Vw") type QName(PackageNamespace(""), "Array") end
-  trait const QName(PrivateNamespace("*", "_-WD:Domain"), "_-eg") type QName(PackageNamespace(""), "Array") end
-  trait const QName(PrivateNamespace("*", "_-WD:Domain"), "_-Vk") type QName(PackageNamespace(""), "Array") end
+  trait const QName(PrivateNamespace("*", "_-WD:Domain/instance"), "_-jC") type QName(PackageNamespace(""), "String") value Utf8("localhost") end
+  trait const QName(PrivateNamespace("*", "_-WD:Domain/instance"), "_-Vw") type QName(PackageNamespace(""), "Array") end
+  trait const QName(PrivateNamespace("*", "_-WD:Domain/instance"), "_-eg") type QName(PackageNamespace(""), "Array") end
+  trait const QName(PrivateNamespace("*", "_-WD:Domain/instance"), "_-Vk") type QName(PackageNamespace(""), "Array") end
   trait slot QName(PackageNamespace(""), "_-0Ky") flag METADATA type QName(PackageNamespace("_-WD"), "_-Bd")
    metadata "Inject"
    end ; metadata
   end ; trait
-  trait slot QName(PrivateNamespace("*", "_-WD:Domain"), "_-04V") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "_-WD:Domain/instance"), "_-04V") type QName(PackageNamespace(""), "String") end
   trait method QName(PackageNamespace(""), "_-Br")
    method
-    refid "_-WD:Domain/_-Br"
+    refid "_-WD:Domain/instance/_-Br"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -82,7 +82,7 @@ class
       setlocal2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-WD:Domain"), "_-Vk")
+      getproperty         QName(PrivateNamespace("*", "_-WD:Domain/instance"), "_-Vk")
       coerce_a
       setlocal3
 
@@ -113,7 +113,7 @@ L21:
   end ; trait
   trait method QName(PackageNamespace(""), "_-FN")
    method
-    refid "_-WD:Domain/_-FN"
+    refid "_-WD:Domain/instance/_-FN"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 4
@@ -133,7 +133,7 @@ L21:
 
       pop
       getlocal0
-      callproperty        QName(PrivateNamespace("*", "_-WD:Domain"), "_-QE"), 0
+      callproperty        QName(PrivateNamespace("*", "_-WD:Domain/instance"), "_-QE"), 0
       convert_b
 L12:
       returnvalue
@@ -143,7 +143,7 @@ L12:
   end ; trait
   trait method QName(PackageNamespace(""), "_-Hn")
    method
-    refid "_-WD:Domain/_-Hn"
+    refid "_-WD:Domain/instance/_-Hn"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 4
@@ -155,12 +155,12 @@ L12:
       pushscope
 
       getlocal0
-      callproperty        QName(PrivateNamespace("*", "_-WD:Domain"), "_-Tg"), 0
+      callproperty        QName(PrivateNamespace("*", "_-WD:Domain/instance"), "_-Tg"), 0
       coerce_s
       setlocal1
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-WD:Domain"), "_-Vw")
+      getproperty         QName(PrivateNamespace("*", "_-WD:Domain/instance"), "_-Vw")
       getlocal1
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
       pushbyte            255
@@ -171,9 +171,9 @@ L12:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-WD:Domain"), "_-QE")
+  trait method QName(PrivateNamespace("*", "_-WD:Domain/instance"), "_-QE")
    method
-    refid "_-WD:Domain/_-QE"
+    refid "_-WD:Domain/instance/_-WD:Domain/instance/_-QE"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 4
@@ -189,13 +189,13 @@ L12:
       setlocal3
 
       getlocal0
-      callproperty        QName(PrivateNamespace("*", "_-WD:Domain"), "_-Tg"), 0
+      callproperty        QName(PrivateNamespace("*", "_-WD:Domain/instance"), "_-Tg"), 0
       coerce_s
       setlocal1
 
       getlocal1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-WD:Domain"), "_-jC")
+      getproperty         QName(PrivateNamespace("*", "_-WD:Domain/instance"), "_-jC")
       equals
       setlocal2
 
@@ -203,7 +203,7 @@ L12:
       setlocal            4
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-WD:Domain"), "_-Vk")
+      getproperty         QName(PrivateNamespace("*", "_-WD:Domain/instance"), "_-Vk")
       coerce_a
       setlocal            5
 
@@ -242,9 +242,9 @@ L37:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-WD:Domain"), "_-Tg")
+  trait method QName(PrivateNamespace("*", "_-WD:Domain/instance"), "_-Tg")
    method
-    refid "_-WD:Domain/_-Tg"
+    refid "_-WD:Domain/instance/_-WD:Domain/instance/_-Tg"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 5
@@ -257,7 +257,7 @@ L37:
 
       getlocal0
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-WD:Domain"), "_-04V")
+      getproperty         QName(PrivateNamespace("*", "_-WD:Domain/instance"), "_-04V")
       coerce_s
       dup
       iftrue              L13
@@ -271,7 +271,7 @@ L13:
       dup
       setlocal1
 
-      initproperty        QName(PrivateNamespace("*", "_-WD:Domain"), "_-04V")
+      initproperty        QName(PrivateNamespace("*", "_-WD:Domain/instance"), "_-04V")
 
       getlocal1
       kill                1
@@ -282,7 +282,7 @@ L13:
   end ; trait
  end ; instance
  cinit
-  refid "_-WD:Domain/cinit"
+  refid "_-WD:Domain/class/init"
   body
    maxstack 3
    localcount 1

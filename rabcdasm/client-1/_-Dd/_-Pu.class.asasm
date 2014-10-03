@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-m4")
   iinit
-   refid "_-Dd:_-Pu/iinit"
+   refid "_-Dd:_-Pu/instance/init"
    param QName(PackageNamespace(""), "int")
    body
     maxstack 5
@@ -28,14 +28,14 @@ class
      getlex              QName(PackageNamespace("flash.events"), "Event")
      getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-Dd:_-Pu"), "onAddedToStage")
+     getproperty         QName(PrivateNamespace("*", "_-Dd:_-Pu/instance"), "onAddedToStage")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
      findpropstrict      QName(PackageNamespace(""), "addEventListener")
      getlex              QName(PackageNamespace("flash.events"), "Event")
      getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-Dd:_-Pu"), "onRemovedFromStage")
+     getproperty         QName(PrivateNamespace("*", "_-Dd:_-Pu/instance"), "onRemovedFromStage")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
      returnvoid
@@ -47,7 +47,7 @@ class
   trait slot QName(ProtectedNamespace("_-m4"), "_-68") type QName(PackageNamespace(""), "Boolean") value False() end
   trait method QName(PackageNamespace(""), "setSelected")
    method
-    refid "_-Dd:_-Pu/setSelected"
+    refid "_-Dd:_-Pu/instance/setSelected"
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
     body
@@ -64,16 +64,16 @@ class
       initproperty        QName(ProtectedNamespace("_-m4"), "selected_")
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-Dd:_-Pu"), "draw"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-Dd:_-Pu/instance"), "draw"), 0
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Dd:_-Pu"), "onAddedToStage")
+  trait method QName(PrivateNamespace("*", "_-Dd:_-Pu/instance"), "onAddedToStage")
    method
-    refid "_-Dd:_-Pu/onAddedToStage"
+    refid "_-Dd:_-Pu/instance/_-Dd:_-Pu/instance/onAddedToStage"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -89,14 +89,14 @@ class
       getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
       getproperty         QName(PackageNamespace(""), "MOUSE_OVER")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Dd:_-Pu"), "onMouseOver")
+      getproperty         QName(PrivateNamespace("*", "_-Dd:_-Pu/instance"), "onMouseOver")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       findpropstrict      QName(PackageNamespace(""), "addEventListener")
       getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
       getproperty         QName(PackageNamespace(""), "ROLL_OUT")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Dd:_-Pu"), "onRollOut")
+      getproperty         QName(PrivateNamespace("*", "_-Dd:_-Pu/instance"), "onRollOut")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       returnvoid
@@ -104,9 +104,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Dd:_-Pu"), "onRemovedFromStage")
+  trait method QName(PrivateNamespace("*", "_-Dd:_-Pu/instance"), "onRemovedFromStage")
    method
-    refid "_-Dd:_-Pu/onRemovedFromStage"
+    refid "_-Dd:_-Pu/instance/_-Dd:_-Pu/instance/onRemovedFromStage"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -122,14 +122,14 @@ class
       getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
       getproperty         QName(PackageNamespace(""), "MOUSE_OVER")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Dd:_-Pu"), "onMouseOver")
+      getproperty         QName(PrivateNamespace("*", "_-Dd:_-Pu/instance"), "onMouseOver")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
       findpropstrict      QName(PackageNamespace(""), "removeEventListener")
       getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
       getproperty         QName(PackageNamespace(""), "ROLL_OUT")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Dd:_-Pu"), "onRollOut")
+      getproperty         QName(PrivateNamespace("*", "_-Dd:_-Pu/instance"), "onRollOut")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
       returnvoid
@@ -137,9 +137,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Dd:_-Pu"), "onMouseOver")
+  trait method QName(PrivateNamespace("*", "_-Dd:_-Pu/instance"), "onMouseOver")
    method
-    refid "_-Dd:_-Pu/onMouseOver"
+    refid "_-Dd:_-Pu/instance/_-Dd:_-Pu/instance/onMouseOver"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -156,7 +156,7 @@ class
       initproperty        QName(ProtectedNamespace("_-m4"), "_-68")
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-Dd:_-Pu"), "draw"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-Dd:_-Pu/instance"), "draw"), 0
 
       getlocal0
       getlocal0
@@ -168,9 +168,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Dd:_-Pu"), "onRollOut")
+  trait method QName(PrivateNamespace("*", "_-Dd:_-Pu/instance"), "onRollOut")
    method
-    refid "_-Dd:_-Pu/onRollOut"
+    refid "_-Dd:_-Pu/instance/_-Dd:_-Pu/instance/onRollOut"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -187,7 +187,7 @@ class
       initproperty        QName(ProtectedNamespace("_-m4"), "_-68")
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-Dd:_-Pu"), "draw"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-Dd:_-Pu/instance"), "draw"), 0
 
       getlocal0
       callpropvoid        QName(ProtectedNamespace("_-m4"), "_-XS"), 0
@@ -199,7 +199,7 @@ class
   end ; trait
   trait method QName(ProtectedNamespace("_-m4"), "_-VB")
    method
-    refid "_-Dd:_-Pu/_-m4:_-VB"
+    refid "_-Dd:_-Pu/instance/_-m4:_-VB"
     param QName(PackageNamespace("_-E7"), "for ")
     returns QName(PackageNamespace(""), "void")
     body
@@ -234,7 +234,7 @@ L13:
   end ; trait
   trait method QName(ProtectedNamespace("_-m4"), "_-XS")
    method
-    refid "_-Dd:_-Pu/_-m4:_-XS"
+    refid "_-Dd:_-Pu/instance/_-m4:_-XS"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -272,7 +272,7 @@ L16:
   end ; trait
   trait method QName(ProtectedNamespace("_-m4"), "getToolTip")
    method
-    refid "_-Dd:_-Pu/_-m4:getToolTip"
+    refid "_-Dd:_-Pu/instance/_-m4:getToolTip"
     returns QName(PackageNamespace("_-E7"), "for ")
     body
      maxstack 3
@@ -289,9 +289,9 @@ L16:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Dd:_-Pu"), "draw")
+  trait method QName(PrivateNamespace("*", "_-Dd:_-Pu/instance"), "draw")
    method
-    refid "_-Dd:_-Pu/draw"
+    refid "_-Dd:_-Pu/instance/_-Dd:_-Pu/instance/draw"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 8
@@ -368,7 +368,7 @@ L43:
   end ; trait
  end ; instance
  cinit
-  refid "_-Dd:_-Pu/cinit"
+  refid "_-Dd:_-Pu/class/init"
   body
    maxstack 4
    localcount 3

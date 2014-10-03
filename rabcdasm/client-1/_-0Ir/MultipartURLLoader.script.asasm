@@ -1,6 +1,6 @@
 script ; 831
  sinit
-  refid "_-0Ir:MultipartURLLoader.sinit"
+  refid "_-0Ir:MultipartURLLoader/init"
   body
    maxstack 2
    localcount 1
@@ -30,7 +30,7 @@ script ; 831
     getlex              QName(PackageNamespace(""), "Object")
     newclass            "_-0Ir:MultipartURLLoader/FilePart"
     popscope
-    initproperty        QName(PrivateNamespace("*", "_-0Ir:MultipartURLLoader#1"), "FilePart")
+    initproperty        QName(PrivateNamespace("*", "_-0Ir:MultipartURLLoader"), "FilePart")
 
     returnvoid
    end ; code
@@ -39,7 +39,7 @@ script ; 831
  trait class QName(PackageNamespace("_-0Ir"), "MultipartURLLoader") slotid 1
   #include "MultipartURLLoader.class.asasm"
  end ; trait
- trait class QName(PrivateNamespace("*", "_-0Ir:MultipartURLLoader#1"), "FilePart") slotid 2
+ trait class QName(PrivateNamespace("*", "_-0Ir:MultipartURLLoader"), "FilePart") slotid 2
   #include "MultipartURLLoader/FilePart.class.asasm"
  end ; trait
 end ; script

@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-TE")
   iinit
-   refid "com.company.assembleegameclient.objects:Character/iinit"
+   refid "com.company.assembleegameclient.objects:Character/instance/init"
    param QName(PackageNamespace(""), "XML")
    body
     maxstack 5
@@ -24,12 +24,12 @@ class
      getlocal0
      getlocal1
      pushstring          "HitSound"
-     callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Character/iinit#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Character/iinit#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-TE"), StaticProtectedNs("_-TE"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")]), 1
+     callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Character/instance/init#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Character/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-TE"), StaticProtectedNs("_-TE"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")]), 1
      iffalse             L16
 
      findpropstrict      QName(PackageNamespace(""), "String")
      getlocal1
-     getproperty         Multiname("HitSound", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Character/iinit#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Character/iinit#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-TE"), StaticProtectedNs("_-TE"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
+     getproperty         Multiname("HitSound", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Character/instance/init#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Character/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-TE"), StaticProtectedNs("_-TE"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
      callproperty        QName(PackageNamespace(""), "String"), 1
      coerce_s
      jump                L17
@@ -47,12 +47,12 @@ L17:
      getlocal0
      getlocal1
      pushstring          "DeathSound"
-     callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Character/iinit#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Character/iinit#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-TE"), StaticProtectedNs("_-TE"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")]), 1
+     callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Character/instance/init#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Character/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-TE"), StaticProtectedNs("_-TE"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")]), 1
      iffalse             L33
 
      findpropstrict      QName(PackageNamespace(""), "String")
      getlocal1
-     getproperty         Multiname("DeathSound", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Character/iinit#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Character/iinit#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-TE"), StaticProtectedNs("_-TE"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
+     getproperty         Multiname("DeathSound", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Character/instance/init#0"), PrivateNamespace("*", "com.company.assembleegameclient.objects:Character/instance/init#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-TE"), StaticProtectedNs("_-TE"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
      callproperty        QName(PackageNamespace(""), "String"), 1
      coerce_s
      jump                L34
@@ -78,7 +78,7 @@ L34:
   trait slot QName(PackageNamespace(""), "_-0Lg") type QName(PackageNamespace(""), "String") end
   trait method QName(PackageNamespace(""), "damage") flag OVERRIDE
    method
-    refid "com.company.assembleegameclient.objects:Character/damage"
+    refid "com.company.assembleegameclient.objects:Character/instance/damage"
     param QName(PackageNamespace(""), "int")
     param QName(PackageNamespace(""), "int")
     param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "uint")>)
@@ -146,7 +146,7 @@ L37:
   end ; trait
  end ; instance
  cinit
-  refid "com.company.assembleegameclient.objects:Character/cinit"
+  refid "com.company.assembleegameclient.objects:Character/class/init"
   body
    maxstack 3
    localcount 1

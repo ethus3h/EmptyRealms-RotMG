@@ -5,7 +5,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("com.google.analytics.core:Buffer")
   iinit
-   refid "com.google.analytics.core:Buffer/iinit"
+   refid "com.google.analytics.core:Buffer/instance/init"
    param QName(PackageNamespace("com.google.analytics.v4"), "Configuration")
    param QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration")
    param QName(PackageNamespace(""), "Boolean")
@@ -29,37 +29,37 @@ class
      getlocal0
      constructsuper      0
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_config")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_config")
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_config")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_config")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_data")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_data")
      getlocal            4
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_data")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_data")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_volatile")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_volatile")
      getlocal3
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_volatile")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_volatile")
 
-     getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_volatile")
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_volatile")
      iffalse             L49
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_OBJ")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_OBJ")
      findpropstrict      QName(PackageNamespace(""), "Object")
      constructprop       QName(PackageNamespace(""), "Object"), 0
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_OBJ")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_OBJ")
 
-     getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_data")
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_data")
      iffalse             L49
 
      pushbyte            0
      setlocal            6
 
-     getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_data")
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_data")
      coerce_a
      setlocal            7
 
@@ -73,12 +73,12 @@ L33:
      coerce_s
      setlocal            5
 
-     getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_OBJ")
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_OBJ")
      getlocal            5
-     getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_data")
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_data")
      getlocal            5
-     getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
-     setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
 
 L45:
      hasnext2            7, 6
@@ -91,10 +91,10 @@ L49:
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO") type QName(PackageNamespace("flash.net"), "SharedObject") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO") type QName(PackageNamespace("flash.net"), "SharedObject") end
   trait method QName(PackageNamespace(""), "save")
    method
-    refid "com.google.analytics.core:Buffer/save"
+    refid "com.google.analytics.core:Buffer/instance/save"
     returns QName(PackageNamespace(""), "void")
     flag NEED_ACTIVATION
     body
@@ -128,7 +128,7 @@ L49:
 
 L17:
       getscopeobject      1
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
       callproperty        QName(PackageNamespace(""), "flush"), 0
       coerce_s
       setslot             1
@@ -153,7 +153,7 @@ L23:
       swap
       setslot             1
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       pushstring          "Error...Could not write SharedObject to disk"
       callpropvoid        QName(PackageNamespace(""), "warning"), 1
 
@@ -164,21 +164,21 @@ L39:
 
 L40:
       label
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       pushstring          "Requesting permission to save object..."
       callpropvoid        QName(PackageNamespace(""), "info"), 1
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
       getlex              QName(PackageNamespace("flash.events"), "NetStatusEvent")
       getproperty         QName(PackageNamespace(""), "NET_STATUS")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_onFlushStatus")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_onFlushStatus")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       jump                L75
 
 L50:
       label
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       pushstring          "Value flushed to disk."
       callpropvoid        QName(PackageNamespace(""), "info"), 1
 
@@ -226,7 +226,7 @@ L75:
   end ; trait
   trait getter QName(PackageNamespace(""), "utmv")
    method
-    refid "com.google.analytics.core:Buffer/utmv/getter"
+    refid "com.google.analytics.core:Buffer/instance/utmv/getter"
     returns QName(PackageNamespace("com.google.analytics.data"), "UTMV")
     body
      maxstack 1
@@ -241,20 +241,20 @@ L75:
       callproperty        QName(PackageNamespace(""), "hasUTMV"), 0
       iftrue              L7
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTV")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTV"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTV")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTV"), 0
 
 L7:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmv")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmv")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_data") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_data") type QName(PackageNamespace(""), "Object") end
   trait getter QName(PackageNamespace(""), "utmx")
    method
-    refid "com.google.analytics.core:Buffer/utmx/getter"
+    refid "com.google.analytics.core:Buffer/instance/utmx/getter"
     returns QName(PackageNamespace("com.google.analytics.data"), "UTMX")
     body
      maxstack 1
@@ -269,11 +269,11 @@ L7:
       callproperty        QName(PackageNamespace(""), "hasUTMX"), 0
       iftrue              L7
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTX")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTX"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTX")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTX"), 0
 
 L7:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmx")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmx")
       returnvalue
      end ; code
     end ; body
@@ -281,7 +281,7 @@ L7:
   end ; trait
   trait getter QName(PackageNamespace(""), "utmz")
    method
-    refid "com.google.analytics.core:Buffer/utmz/getter"
+    refid "com.google.analytics.core:Buffer/instance/utmz/getter"
     returns QName(PackageNamespace("com.google.analytics.data"), "UTMZ")
     body
      maxstack 1
@@ -296,11 +296,11 @@ L7:
       callproperty        QName(PackageNamespace(""), "hasUTMZ"), 0
       iftrue              L7
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTZ")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTZ"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTZ")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTZ"), 0
 
 L7:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmz")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmz")
       returnvalue
      end ; code
     end ; body
@@ -308,7 +308,7 @@ L7:
   end ; trait
   trait method QName(PackageNamespace(""), "hasUTMA")
    method
-    refid "com.google.analytics.core:Buffer/hasUTMA"
+    refid "com.google.analytics.core:Buffer/instance/hasUTMA"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 1
@@ -319,7 +319,7 @@ L7:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utma")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utma")
       iffalse             L6
 
       pushtrue
@@ -334,7 +334,7 @@ L6:
   end ; trait
   trait method QName(PackageNamespace(""), "hasUTMB")
    method
-    refid "com.google.analytics.core:Buffer/hasUTMB"
+    refid "com.google.analytics.core:Buffer/instance/hasUTMB"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 1
@@ -345,7 +345,7 @@ L6:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmb")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmb")
       iffalse             L6
 
       pushtrue
@@ -360,7 +360,7 @@ L6:
   end ; trait
   trait method QName(PackageNamespace(""), "hasUTMC")
    method
-    refid "com.google.analytics.core:Buffer/hasUTMC"
+    refid "com.google.analytics.core:Buffer/instance/hasUTMC"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 1
@@ -371,7 +371,7 @@ L6:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmc")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmc")
       iffalse             L6
 
       pushtrue
@@ -386,7 +386,7 @@ L6:
   end ; trait
   trait method QName(PackageNamespace(""), "clearCookies")
    method
-    refid "com.google.analytics.core:Buffer/clearCookies"
+    refid "com.google.analytics.core:Buffer/instance/clearCookies"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 1
@@ -422,7 +422,7 @@ L6:
   end ; trait
   trait method QName(PackageNamespace(""), "resetCurrentSession")
    method
-    refid "com.google.analytics.core:Buffer/resetCurrentSession"
+    refid "com.google.analytics.core:Buffer/instance/resetCurrentSession"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 1
@@ -433,11 +433,11 @@ L6:
       getlocal0
       pushscope
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_clearUTMB")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_clearUTMB"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_clearUTMB")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_clearUTMB"), 0
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_clearUTMC")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_clearUTMC"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_clearUTMC")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_clearUTMC"), 0
 
       findpropstrict      QName(PackageNamespace(""), "save")
       callpropvoid        QName(PackageNamespace(""), "save"), 0
@@ -449,7 +449,7 @@ L6:
   end ; trait
   trait method QName(PackageNamespace(""), "hasUTMK")
    method
-    refid "com.google.analytics.core:Buffer/hasUTMK"
+    refid "com.google.analytics.core:Buffer/instance/hasUTMK"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 1
@@ -460,7 +460,7 @@ L6:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmk")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmk")
       iffalse             L6
 
       pushtrue
@@ -473,10 +473,10 @@ L6:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_OBJ") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_OBJ") type QName(PackageNamespace(""), "Object") end
   trait method QName(PackageNamespace(""), "getLinkerUrl")
    method
-    refid "com.google.analytics.core:Buffer/getLinkerUrl"
+    refid "com.google.analytics.core:Buffer/instance/getLinkerUrl"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "String")
@@ -577,7 +577,7 @@ L56:
 L62:
       getlocal            5
       pushbyte            0
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
       coerce_s
       setlocal            4
 
@@ -607,7 +607,7 @@ L81:
       add
       getlocal            5
       pushbyte            1
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
       add
       add
       coerce_s
@@ -622,7 +622,7 @@ L92:
   end ; trait
   trait method QName(PackageNamespace(""), "generateCookiesHash")
    method
-    refid "com.google.analytics.core:Buffer/generateCookiesHash"
+    refid "com.google.analytics.core:Buffer/instance/generateCookiesHash"
     returns QName(PackageNamespace(""), "Number")
     body
      maxstack 2
@@ -686,9 +686,9 @@ L92:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTA")
+  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTA")
    method
-    refid "com.google.analytics.core:Buffer/_createUMTA"
+    refid "com.google.analytics.core:Buffer/instance/com.google.analytics.core:Buffer/instance/_createUMTA"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -699,12 +699,12 @@ L92:
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utma")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utma")
       findpropstrict      QName(PackageNamespace("com.google.analytics.data"), "UTMA")
       constructprop       QName(PackageNamespace("com.google.analytics.data"), "UTMA"), 0
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utma")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utma")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utma")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utma")
       getlocal0
       setproperty         QName(PackageNamespace(""), "proxy")
 
@@ -713,9 +713,9 @@ L92:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTB")
+  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTB")
    method
-    refid "com.google.analytics.core:Buffer/_createUMTB"
+    refid "com.google.analytics.core:Buffer/instance/com.google.analytics.core:Buffer/instance/_createUMTB"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -726,12 +726,12 @@ L92:
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmb")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmb")
       findpropstrict      QName(PackageNamespace("com.google.analytics.data"), "UTMB")
       constructprop       QName(PackageNamespace("com.google.analytics.data"), "UTMB"), 0
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmb")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmb")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmb")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmb")
       getlocal0
       setproperty         QName(PackageNamespace(""), "proxy")
 
@@ -740,9 +740,9 @@ L92:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTC")
+  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTC")
    method
-    refid "com.google.analytics.core:Buffer/_createUMTC"
+    refid "com.google.analytics.core:Buffer/instance/com.google.analytics.core:Buffer/instance/_createUMTC"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -753,10 +753,10 @@ L92:
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmc")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmc")
       findpropstrict      QName(PackageNamespace("com.google.analytics.data"), "UTMC")
       constructprop       QName(PackageNamespace("com.google.analytics.data"), "UTMC"), 0
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmc")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmc")
 
       returnvoid
      end ; code
@@ -765,7 +765,7 @@ L92:
   end ; trait
   trait method QName(PackageNamespace(""), "hasUTMV")
    method
-    refid "com.google.analytics.core:Buffer/hasUTMV"
+    refid "com.google.analytics.core:Buffer/instance/hasUTMV"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 1
@@ -776,7 +776,7 @@ L92:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmv")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmv")
       iffalse             L6
 
       pushtrue
@@ -789,9 +789,9 @@ L6:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTK")
+  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTK")
    method
-    refid "com.google.analytics.core:Buffer/_createUMTK"
+    refid "com.google.analytics.core:Buffer/instance/com.google.analytics.core:Buffer/instance/_createUMTK"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -802,12 +802,12 @@ L6:
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmk")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmk")
       findpropstrict      QName(PackageNamespace("com.google.analytics.data"), "UTMK")
       constructprop       QName(PackageNamespace("com.google.analytics.data"), "UTMK"), 0
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmk")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmk")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmk")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmk")
       getlocal0
       setproperty         QName(PackageNamespace(""), "proxy")
 
@@ -818,7 +818,7 @@ L6:
   end ; trait
   trait method QName(PackageNamespace(""), "hasUTMX")
    method
-    refid "com.google.analytics.core:Buffer/hasUTMX"
+    refid "com.google.analytics.core:Buffer/instance/hasUTMX"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 1
@@ -829,7 +829,7 @@ L6:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmx")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmx")
       iffalse             L6
 
       pushtrue
@@ -844,7 +844,7 @@ L6:
   end ; trait
   trait method QName(PackageNamespace(""), "hasUTMZ")
    method
-    refid "com.google.analytics.core:Buffer/hasUTMZ"
+    refid "com.google.analytics.core:Buffer/instance/hasUTMZ"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 1
@@ -855,7 +855,7 @@ L6:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmz")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmz")
       iffalse             L6
 
       pushtrue
@@ -868,9 +868,9 @@ L6:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTV")
+  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTV")
    method
-    refid "com.google.analytics.core:Buffer/_createUMTV"
+    refid "com.google.analytics.core:Buffer/instance/com.google.analytics.core:Buffer/instance/_createUMTV"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -881,12 +881,12 @@ L6:
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmv")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmv")
       findpropstrict      QName(PackageNamespace("com.google.analytics.data"), "UTMV")
       constructprop       QName(PackageNamespace("com.google.analytics.data"), "UTMV"), 0
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmv")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmv")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmv")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmv")
       getlocal0
       setproperty         QName(PackageNamespace(""), "proxy")
 
@@ -895,9 +895,9 @@ L6:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTX")
+  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTX")
    method
-    refid "com.google.analytics.core:Buffer/_createUMTX"
+    refid "com.google.analytics.core:Buffer/instance/com.google.analytics.core:Buffer/instance/_createUMTX"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -908,12 +908,12 @@ L6:
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmx")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmx")
       findpropstrict      QName(PackageNamespace("com.google.analytics.data"), "UTMX")
       constructprop       QName(PackageNamespace("com.google.analytics.data"), "UTMX"), 0
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmx")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmx")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmx")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmx")
       getlocal0
       setproperty         QName(PackageNamespace(""), "proxy")
 
@@ -922,9 +922,9 @@ L6:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTZ")
+  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTZ")
    method
-    refid "com.google.analytics.core:Buffer/_createUMTZ"
+    refid "com.google.analytics.core:Buffer/instance/com.google.analytics.core:Buffer/instance/_createUMTZ"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -935,12 +935,12 @@ L6:
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmz")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmz")
       findpropstrict      QName(PackageNamespace("com.google.analytics.data"), "UTMZ")
       constructprop       QName(PackageNamespace("com.google.analytics.data"), "UTMZ"), 0
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmz")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmz")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmz")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmz")
       getlocal0
       setproperty         QName(PackageNamespace(""), "proxy")
 
@@ -951,7 +951,7 @@ L6:
   end ; trait
   trait method QName(PackageNamespace(""), "updateUTMA")
    method
-    refid "com.google.analytics.core:Buffer/updateUTMA"
+    refid "com.google.analytics.core:Buffer/instance/updateUTMA"
     param QName(PackageNamespace(""), "Number")
     returns QName(PackageNamespace(""), "void")
     body
@@ -963,11 +963,11 @@ L6:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "verbose")
       iffalse             L14
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       pushstring          "updateUTMA( "
       getlocal1
       add
@@ -1020,7 +1020,7 @@ L39:
   end ; trait
   trait method QName(PackageNamespace(""), "isGenuine")
    method
-    refid "com.google.analytics.core:Buffer/isGenuine"
+    refid "com.google.analytics.core:Buffer/instance/isGenuine"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 2
@@ -1049,9 +1049,9 @@ L7:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_onFlushStatus")
+  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_onFlushStatus")
    method
-    refid "com.google.analytics.core:Buffer/_onFlushStatus"
+    refid "com.google.analytics.core:Buffer/instance/com.google.analytics.core:Buffer/instance/_onFlushStatus"
     param QName(PackageNamespace("flash.events"), "NetStatusEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1063,7 +1063,7 @@ L7:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       pushstring          "User closed permission dialog..."
       callpropvoid        QName(PackageNamespace(""), "info"), 1
 
@@ -1071,7 +1071,7 @@ L7:
 
 L6:
       label
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       pushstring          "User granted permission -- value saved."
       callpropvoid        QName(PackageNamespace(""), "info"), 1
 
@@ -1079,7 +1079,7 @@ L6:
 
 L11:
       label
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       pushstring          "User denied permission -- value not saved."
       callpropvoid        QName(PackageNamespace(""), "info"), 1
 
@@ -1092,7 +1092,7 @@ L16:
 L18:
       getlocal1
       getproperty         QName(PackageNamespace(""), "info")
-      getproperty         Multiname("code", [PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+      getproperty         Multiname("code", [PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
       setlocal2
 
       pushstring          "SharedObject.Flush.Success"
@@ -1117,10 +1117,10 @@ L33:
       lookupswitch        L16, [L6, L11, L16]
 
 L35:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
       getlex              QName(PackageNamespace("flash.events"), "NetStatusEvent")
       getproperty         QName(PackageNamespace(""), "NET_STATUS")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_onFlushStatus")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_onFlushStatus")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
       returnvoid
@@ -1130,7 +1130,7 @@ L35:
   end ; trait
   trait method QName(PackageNamespace(""), "toLinkerParams")
    method
-    refid "com.google.analytics.core:Buffer/toLinkerParams"
+    refid "com.google.analytics.core:Buffer/instance/toLinkerParams"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -1211,9 +1211,9 @@ L35:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_clearUTMA")
+  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_clearUTMA")
    method
-    refid "com.google.analytics.core:Buffer/_clearUTMA"
+    refid "com.google.analytics.core:Buffer/instance/com.google.analytics.core:Buffer/instance/_clearUTMA"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -1224,22 +1224,22 @@ L35:
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utma")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utma")
       pushnull
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utma")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utma")
 
       findpropstrict      QName(PackageNamespace(""), "isVolatile")
       callproperty        QName(PackageNamespace(""), "isVolatile"), 0
       iftrue              L16
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
       getproperty         QName(PackageNamespace(""), "data")
       pushnull
-      setproperty         Multiname("utma", [PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+      setproperty         Multiname("utma", [PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
       getproperty         QName(PackageNamespace(""), "data")
-      deleteproperty      Multiname("utma", [PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+      deleteproperty      Multiname("utma", [PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
       pop
 L16:
       returnvoid
@@ -1247,9 +1247,9 @@ L16:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_clearUTMC")
+  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_clearUTMC")
    method
-    refid "com.google.analytics.core:Buffer/_clearUTMC"
+    refid "com.google.analytics.core:Buffer/instance/com.google.analytics.core:Buffer/instance/_clearUTMC"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -1260,18 +1260,18 @@ L16:
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmc")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmc")
       pushnull
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmc")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmc")
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_clearUTMB")
+  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_clearUTMB")
    method
-    refid "com.google.analytics.core:Buffer/_clearUTMB"
+    refid "com.google.analytics.core:Buffer/instance/com.google.analytics.core:Buffer/instance/_clearUTMB"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -1282,22 +1282,22 @@ L16:
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmb")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmb")
       pushnull
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmb")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmb")
 
       findpropstrict      QName(PackageNamespace(""), "isVolatile")
       callproperty        QName(PackageNamespace(""), "isVolatile"), 0
       iftrue              L16
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
       getproperty         QName(PackageNamespace(""), "data")
       pushnull
-      setproperty         Multiname("utmb", [PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+      setproperty         Multiname("utmb", [PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
       getproperty         QName(PackageNamespace(""), "data")
-      deleteproperty      Multiname("utmb", [PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+      deleteproperty      Multiname("utmb", [PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
       pop
 L16:
       returnvoid
@@ -1307,7 +1307,7 @@ L16:
   end ; trait
   trait method QName(PackageNamespace(""), "update")
    method
-    refid "com.google.analytics.core:Buffer/update"
+    refid "com.google.analytics.core:Buffer/instance/update"
     param QName(PackageNamespace(""), "String")
     param null
     returns QName(PackageNamespace(""), "void")
@@ -1324,19 +1324,19 @@ L16:
       callproperty        QName(PackageNamespace(""), "isVolatile"), 0
       iffalse             L10
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_OBJ")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_OBJ")
       getlocal1
       getlocal2
-      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
 
       jump                L15
 
 L10:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
       getproperty         QName(PackageNamespace(""), "data")
       getlocal1
       getlocal2
-      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
 
 L15:
       returnvoid
@@ -1344,11 +1344,11 @@ L15:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmb") type QName(PackageNamespace("com.google.analytics.data"), "UTMB") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmc") type QName(PackageNamespace("com.google.analytics.data"), "UTMC") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmb") type QName(PackageNamespace("com.google.analytics.data"), "UTMB") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmc") type QName(PackageNamespace("com.google.analytics.data"), "UTMC") end
   trait method QName(PackageNamespace(""), "createSO")
    method
-    refid "com.google.analytics.core:Buffer/createSO"
+    refid "com.google.analytics.core:Buffer/instance/createSO"
     returns QName(PackageNamespace(""), "void")
     flag NEED_ACTIVATION
     body
@@ -1371,27 +1371,27 @@ L15:
       setslot             1
 
       getlex              QName(PackageNamespace("com.google.analytics.data"), "UTMZ")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "conversionTimeout")
       setproperty         QName(PackageNamespace(""), "defaultTimespan")
 
       getlex              QName(PackageNamespace("com.google.analytics.data"), "UTMB")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "sessionTimeout")
       setproperty         QName(PackageNamespace(""), "defaultTimespan")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_volatile")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_volatile")
       iftrue              L273
 
 L19:
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
       getlex              QName(PackageNamespace("flash.net"), "SharedObject")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "cookieName")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "cookiePath")
       callproperty        QName(PackageNamespace(""), "getLocal"), 2
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
 
 L27:
       jump                L56
@@ -1413,13 +1413,13 @@ L28:
       swap
       setslot             1
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "active")
       iffalse             L54
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       pushstring          "Shared Object "
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "cookieName")
       add
       pushstring          " failed to be set\nreason: "
@@ -1438,32 +1438,32 @@ L56:
       pushfalse
       setslot             1
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
       getproperty         QName(PackageNamespace(""), "data")
-      getproperty         Multiname("utma", [PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+      getproperty         Multiname("utma", [PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
       iffalse             L101
 
       findpropstrict      QName(PackageNamespace(""), "hasUTMA")
       callproperty        QName(PackageNamespace(""), "hasUTMA"), 0
       iftrue              L68
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTA")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTA"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTA")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTA"), 0
 
 L68:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utma")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utma")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
       getproperty         QName(PackageNamespace(""), "data")
-      getproperty         Multiname("utma", [PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+      getproperty         Multiname("utma", [PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
       callpropvoid        QName(PackageNamespace(""), "fromSharedObject"), 1
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "verbose")
       iffalse             L85
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       pushstring          "found: "
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utma")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utma")
       pushtrue
       callproperty        QName(PackageNamespace(""), "toString"), 1
       add
@@ -1472,55 +1472,55 @@ L68:
       callpropvoid        QName(PackageNamespace(""), "info"), 2
 
 L85:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utma")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utma")
       callproperty        QName(PackageNamespace(""), "isExpired"), 0
       iffalse             L101
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "verbose")
       iffalse             L96
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       pushstring          "UTMA has expired"
       getlex              QName(PackageNamespace("com.google.analytics.debug"), "VisualDebugMode")
       getproperty         QName(PackageNamespace(""), "advanced")
       callpropvoid        QName(PackageNamespace(""), "warning"), 2
 
 L96:
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_clearUTMA")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_clearUTMA"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_clearUTMA")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_clearUTMA"), 0
 
       getscopeobject      1
       pushtrue
       setslot             1
 
 L101:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
       getproperty         QName(PackageNamespace(""), "data")
-      getproperty         Multiname("utmb", [PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+      getproperty         Multiname("utmb", [PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
       iffalse             L143
 
       findpropstrict      QName(PackageNamespace(""), "hasUTMB")
       callproperty        QName(PackageNamespace(""), "hasUTMB"), 0
       iftrue              L110
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTB")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTB"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTB")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTB"), 0
 
 L110:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmb")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmb")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
       getproperty         QName(PackageNamespace(""), "data")
-      getproperty         Multiname("utmb", [PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+      getproperty         Multiname("utmb", [PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
       callpropvoid        QName(PackageNamespace(""), "fromSharedObject"), 1
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "verbose")
       iffalse             L127
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       pushstring          "found: "
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmb")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmb")
       pushtrue
       callproperty        QName(PackageNamespace(""), "toString"), 1
       add
@@ -1529,69 +1529,69 @@ L110:
       callpropvoid        QName(PackageNamespace(""), "info"), 2
 
 L127:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmb")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmb")
       callproperty        QName(PackageNamespace(""), "isExpired"), 0
       iffalse             L143
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "verbose")
       iffalse             L138
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       pushstring          "UTMB has expired"
       getlex              QName(PackageNamespace("com.google.analytics.debug"), "VisualDebugMode")
       getproperty         QName(PackageNamespace(""), "advanced")
       callpropvoid        QName(PackageNamespace(""), "warning"), 2
 
 L138:
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_clearUTMB")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_clearUTMB"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_clearUTMB")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_clearUTMB"), 0
 
       getscopeobject      1
       pushtrue
       setslot             1
 
 L143:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
       getproperty         QName(PackageNamespace(""), "data")
-      getproperty         Multiname("utmc", [PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+      getproperty         Multiname("utmc", [PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
       iffalse             L154
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
       getproperty         QName(PackageNamespace(""), "data")
-      deleteproperty      Multiname("utmc", [PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+      deleteproperty      Multiname("utmc", [PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
       pop
       getscopeobject      1
       pushtrue
       setslot             1
 
 L154:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
       getproperty         QName(PackageNamespace(""), "data")
-      getproperty         Multiname("utmk", [PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+      getproperty         Multiname("utmk", [PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
       iffalse             L179
 
       findpropstrict      QName(PackageNamespace(""), "hasUTMK")
       callproperty        QName(PackageNamespace(""), "hasUTMK"), 0
       iftrue              L163
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTK")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTK"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTK")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTK"), 0
 
 L163:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmk")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmk")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
       getproperty         QName(PackageNamespace(""), "data")
-      getproperty         Multiname("utmk", [PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+      getproperty         Multiname("utmk", [PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
       callpropvoid        QName(PackageNamespace(""), "fromSharedObject"), 1
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "verbose")
       iffalse             L179
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       pushstring          "found: "
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmk")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmk")
       callproperty        QName(PackageNamespace(""), "toString"), 0
       add
       getlex              QName(PackageNamespace("com.google.analytics.debug"), "VisualDebugMode")
@@ -1603,36 +1603,36 @@ L179:
       callproperty        QName(PackageNamespace(""), "hasUTMX"), 0
       iftrue              L184
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTX")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTX"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTX")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTX"), 0
 
 L184:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
       getproperty         QName(PackageNamespace(""), "data")
-      getproperty         Multiname("utmv", [PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+      getproperty         Multiname("utmv", [PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
       iffalse             L226
 
       findpropstrict      QName(PackageNamespace(""), "hasUTMV")
       callproperty        QName(PackageNamespace(""), "hasUTMV"), 0
       iftrue              L193
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTV")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTV"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTV")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTV"), 0
 
 L193:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmv")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmv")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
       getproperty         QName(PackageNamespace(""), "data")
-      getproperty         Multiname("utmv", [PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+      getproperty         Multiname("utmv", [PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
       callpropvoid        QName(PackageNamespace(""), "fromSharedObject"), 1
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "verbose")
       iffalse             L210
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       pushstring          "found: "
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmv")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmv")
       pushtrue
       callproperty        QName(PackageNamespace(""), "toString"), 1
       add
@@ -1641,55 +1641,55 @@ L193:
       callpropvoid        QName(PackageNamespace(""), "info"), 2
 
 L210:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmv")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmv")
       callproperty        QName(PackageNamespace(""), "isExpired"), 0
       iffalse             L226
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "verbose")
       iffalse             L221
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       pushstring          "UTMV has expired"
       getlex              QName(PackageNamespace("com.google.analytics.debug"), "VisualDebugMode")
       getproperty         QName(PackageNamespace(""), "advanced")
       callpropvoid        QName(PackageNamespace(""), "warning"), 2
 
 L221:
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_clearUTMV")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_clearUTMV"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_clearUTMV")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_clearUTMV"), 0
 
       getscopeobject      1
       pushtrue
       setslot             1
 
 L226:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
       getproperty         QName(PackageNamespace(""), "data")
-      getproperty         Multiname("utmz", [PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+      getproperty         Multiname("utmz", [PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
       iffalse             L268
 
       findpropstrict      QName(PackageNamespace(""), "hasUTMZ")
       callproperty        QName(PackageNamespace(""), "hasUTMZ"), 0
       iftrue              L235
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTZ")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTZ"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTZ")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTZ"), 0
 
 L235:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmz")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmz")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
       getproperty         QName(PackageNamespace(""), "data")
-      getproperty         Multiname("utmz", [PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+      getproperty         Multiname("utmz", [PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
       callpropvoid        QName(PackageNamespace(""), "fromSharedObject"), 1
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "verbose")
       iffalse             L252
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       pushstring          "found: "
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmz")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmz")
       pushtrue
       callproperty        QName(PackageNamespace(""), "toString"), 1
       add
@@ -1698,23 +1698,23 @@ L235:
       callpropvoid        QName(PackageNamespace(""), "info"), 2
 
 L252:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmz")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmz")
       callproperty        QName(PackageNamespace(""), "isExpired"), 0
       iffalse             L268
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "verbose")
       iffalse             L263
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug")
       pushstring          "UTMZ has expired"
       getlex              QName(PackageNamespace("com.google.analytics.debug"), "VisualDebugMode")
       getproperty         QName(PackageNamespace(""), "advanced")
       callpropvoid        QName(PackageNamespace(""), "warning"), 2
 
 L263:
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_clearUTMZ")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_clearUTMZ"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_clearUTMZ")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_clearUTMZ"), 0
 
       getscopeobject      1
       pushtrue
@@ -1736,10 +1736,10 @@ L273:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utma") type QName(PackageNamespace("com.google.analytics.data"), "UTMA") end
-  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_clearUTMZ")
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utma") type QName(PackageNamespace("com.google.analytics.data"), "UTMA") end
+  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_clearUTMZ")
    method
-    refid "com.google.analytics.core:Buffer/_clearUTMZ"
+    refid "com.google.analytics.core:Buffer/instance/com.google.analytics.core:Buffer/instance/_clearUTMZ"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -1750,22 +1750,22 @@ L273:
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmz")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmz")
       pushnull
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmz")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmz")
 
       findpropstrict      QName(PackageNamespace(""), "isVolatile")
       callproperty        QName(PackageNamespace(""), "isVolatile"), 0
       iftrue              L16
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
       getproperty         QName(PackageNamespace(""), "data")
       pushnull
-      setproperty         Multiname("utmz", [PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+      setproperty         Multiname("utmz", [PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
       getproperty         QName(PackageNamespace(""), "data")
-      deleteproperty      Multiname("utmz", [PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+      deleteproperty      Multiname("utmz", [PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
       pop
 L16:
       returnvoid
@@ -1773,11 +1773,11 @@ L16:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_debug") type QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmk") type QName(PackageNamespace("com.google.analytics.data"), "UTMK") end
-  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_clearUTMV")
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_debug") type QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmk") type QName(PackageNamespace("com.google.analytics.data"), "UTMK") end
+  trait method QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_clearUTMV")
    method
-    refid "com.google.analytics.core:Buffer/_clearUTMV"
+    refid "com.google.analytics.core:Buffer/instance/com.google.analytics.core:Buffer/instance/_clearUTMV"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -1788,22 +1788,22 @@ L16:
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmv")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmv")
       pushnull
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmv")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmv")
 
       findpropstrict      QName(PackageNamespace(""), "isVolatile")
       callproperty        QName(PackageNamespace(""), "isVolatile"), 0
       iftrue              L16
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
       getproperty         QName(PackageNamespace(""), "data")
       pushnull
-      setproperty         Multiname("utmv", [PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+      setproperty         Multiname("utmv", [PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_SO")
       getproperty         QName(PackageNamespace(""), "data")
-      deleteproperty      Multiname("utmv", [PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
+      deleteproperty      Multiname("utmv", [PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#1"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:Buffer"), StaticProtectedNs("com.google.analytics.core:Buffer"), StaticProtectedNs("Object")])
       pop
 L16:
       returnvoid
@@ -1811,10 +1811,10 @@ L16:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_config") type QName(PackageNamespace("com.google.analytics.v4"), "Configuration") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_config") type QName(PackageNamespace("com.google.analytics.v4"), "Configuration") end
   trait method QName(PackageNamespace(""), "isVolatile")
    method
-    refid "com.google.analytics.core:Buffer/isVolatile"
+    refid "com.google.analytics.core:Buffer/instance/isVolatile"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 1
@@ -1825,18 +1825,18 @@ L16:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_volatile")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_volatile")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmv") type QName(PackageNamespace("com.google.analytics.data"), "UTMV") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmx") type QName(PackageNamespace("com.google.analytics.data"), "UTMX") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmz") type QName(PackageNamespace("com.google.analytics.data"), "UTMZ") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmv") type QName(PackageNamespace("com.google.analytics.data"), "UTMV") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmx") type QName(PackageNamespace("com.google.analytics.data"), "UTMX") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmz") type QName(PackageNamespace("com.google.analytics.data"), "UTMZ") end
   trait getter QName(PackageNamespace(""), "utma")
    method
-    refid "com.google.analytics.core:Buffer/utma/getter"
+    refid "com.google.analytics.core:Buffer/instance/utma/getter"
     returns QName(PackageNamespace("com.google.analytics.data"), "UTMA")
     body
      maxstack 1
@@ -1851,11 +1851,11 @@ L16:
       callproperty        QName(PackageNamespace(""), "hasUTMA"), 0
       iftrue              L7
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTA")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTA"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTA")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTA"), 0
 
 L7:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utma")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utma")
       returnvalue
      end ; code
     end ; body
@@ -1863,7 +1863,7 @@ L7:
   end ; trait
   trait getter QName(PackageNamespace(""), "utmb")
    method
-    refid "com.google.analytics.core:Buffer/utmb/getter"
+    refid "com.google.analytics.core:Buffer/instance/utmb/getter"
     returns QName(PackageNamespace("com.google.analytics.data"), "UTMB")
     body
      maxstack 1
@@ -1878,11 +1878,11 @@ L7:
       callproperty        QName(PackageNamespace(""), "hasUTMB"), 0
       iftrue              L7
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTB")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTB"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTB")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTB"), 0
 
 L7:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmb")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmb")
       returnvalue
      end ; code
     end ; body
@@ -1890,7 +1890,7 @@ L7:
   end ; trait
   trait getter QName(PackageNamespace(""), "utmc")
    method
-    refid "com.google.analytics.core:Buffer/utmc/getter"
+    refid "com.google.analytics.core:Buffer/instance/utmc/getter"
     returns QName(PackageNamespace("com.google.analytics.data"), "UTMC")
     body
      maxstack 1
@@ -1905,20 +1905,20 @@ L7:
       callproperty        QName(PackageNamespace(""), "hasUTMC"), 0
       iftrue              L7
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTC")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTC"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTC")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTC"), 0
 
 L7:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmc")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmc")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_volatile") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_volatile") type QName(PackageNamespace(""), "Boolean") end
   trait getter QName(PackageNamespace(""), "utmk")
    method
-    refid "com.google.analytics.core:Buffer/utmk/getter"
+    refid "com.google.analytics.core:Buffer/instance/utmk/getter"
     returns QName(PackageNamespace("com.google.analytics.data"), "UTMK")
     body
      maxstack 1
@@ -1933,11 +1933,11 @@ L7:
       callproperty        QName(PackageNamespace(""), "hasUTMK"), 0
       iftrue              L7
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTK")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_createUMTK"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTK")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_createUMTK"), 0
 
 L7:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_utmk")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer/instance#0"), "_utmk")
       returnvalue
      end ; code
     end ; body
@@ -1945,7 +1945,7 @@ L7:
   end ; trait
  end ; instance
  cinit
-  refid "com.google.analytics.core:Buffer/cinit"
+  refid "com.google.analytics.core:Buffer/class/init"
   body
    maxstack 1
    localcount 1

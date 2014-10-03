@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("com.google.analytics.core:GIFRequest")
   iinit
-   refid "com.google.analytics.core:GIFRequest/iinit"
+   refid "com.google.analytics.core:GIFRequest/instance/init"
    param QName(PackageNamespace("com.google.analytics.v4"), "Configuration")
    param QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration")
    param QName(PackageNamespace("com.google.analytics.core"), "Buffer")
@@ -23,33 +23,33 @@ class
      getlocal0
      constructsuper      0
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_config")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_config")
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_config")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_config")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_buffer")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_buffer")
      getlocal3
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_buffer")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_buffer")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_info")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_info")
      getlocal            4
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_info")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_info")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_count")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_count")
      pushbyte            0
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_count")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_count")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_alertcount")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_alertcount")
      pushbyte            0
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_alertcount")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_alertcount")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_requests")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_requests")
      newarray            0
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_requests")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_requests")
 
      returnvoid
     end ; code
@@ -57,7 +57,7 @@ class
   end ; method
   trait getter QName(PackageNamespace(""), "utmn")
    method
-    refid "com.google.analytics.core:GIFRequest/utmn/getter"
+    refid "com.google.analytics.core:GIFRequest/instance/utmn/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 2
@@ -79,7 +79,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "onIOError")
    method
-    refid "com.google.analytics.core:GIFRequest/onIOError"
+    refid "com.google.analytics.core:GIFRequest/instance/onIOError"
     param QName(PackageNamespace("flash.events"), "IOErrorEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -91,13 +91,13 @@ class
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_lastRequest")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_lastRequest")
       getproperty         QName(PackageNamespace(""), "url")
       coerce_s
       setlocal2
 
       findpropstrict      QName(PackageNamespace(""), "String")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_requests")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_requests")
       getproperty         QName(PackageNamespace(""), "length")
       decrement
       callproperty        QName(PackageNamespace(""), "String"), 1
@@ -111,11 +111,11 @@ class
       add
       setlocal            4
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "GIFRequests")
       iffalse             L64
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "verbose")
       iftrue              L42
 
@@ -129,20 +129,20 @@ class
       pushstring          "?"
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
       pushbyte            0
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
       coerce_s
       setlocal2
 
 L37:
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_shortenURL")
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_shortenURL")
       getlocal2
-      callproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_shortenURL"), 1
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_shortenURL"), 1
       coerce_s
       setlocal2
 
 L42:
       findpropstrict      QName(PackageNamespace(""), "int")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "mode")
       callproperty        QName(PackageNamespace(""), "int"), 1
       findpropstrict      QName(PackageNamespace(""), "int")
@@ -162,22 +162,22 @@ L42:
       setlocal            4
 
 L60:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
       getlocal            4
       callpropvoid        QName(PackageNamespace(""), "failure"), 1
 
       jump                L67
 
 L64:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
       getlocal            4
       callpropvoid        QName(PackageNamespace(""), "warning"), 1
 
 L67:
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_removeListeners")
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_removeListeners")
       getlocal1
       getproperty         QName(PackageNamespace(""), "target")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_removeListeners"), 1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_removeListeners"), 1
 
       returnvoid
      end ; code
@@ -186,7 +186,7 @@ L67:
   end ; trait
   trait method QName(PackageNamespace(""), "send")
    method
-    refid "com.google.analytics.core:GIFRequest/send"
+    refid "com.google.analytics.core:GIFRequest/instance/send"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace("com.google.analytics.utils"), "Variables")
     param QName(PackageNamespace(""), "Boolean")
@@ -217,9 +217,9 @@ L67:
       coerce              QName(PackageNamespace("flash.net"), "URLRequest")
       setlocal            7
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_utmac")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_utmac")
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_utmac")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_utmac")
 
       getlocal2
       iftrue              L20
@@ -258,19 +258,19 @@ L20:
       newarray            1
       setproperty         QName(PackageNamespace(""), "post")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "verbose")
       iffalse             L62
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
       pushstring          "tracking: "
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmb")
       getproperty         QName(PackageNamespace(""), "trackCount")
       add
       pushstring          "/"
       add
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "trackingLimitPerSession")
       add
       getlex              QName(PackageNamespace("com.google.analytics.debug"), "VisualDebugMode")
@@ -278,10 +278,10 @@ L20:
       callpropvoid        QName(PackageNamespace(""), "info"), 2
 
 L62:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmb")
       getproperty         QName(PackageNamespace(""), "trackCount")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "trackingLimitPerSession")
       lessthan
       dup
@@ -313,7 +313,7 @@ L85:
       iftrue              L93
 
       pop
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmb")
       getproperty         QName(PackageNamespace(""), "token")
       pushbyte            1
@@ -332,30 +332,30 @@ L93:
 L101:
       iffalse             L109
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmb")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmb")
       getproperty         QName(PackageNamespace(""), "token")
       decrement
       setproperty         QName(PackageNamespace(""), "token")
 
 L109:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmb")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmb")
       getproperty         QName(PackageNamespace(""), "trackCount")
       pushbyte            1
       add
       setproperty         QName(PackageNamespace(""), "trackCount")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "verbose")
       iffalse             L127
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmb")
       callproperty        QName(PackageNamespace(""), "toString"), 0
       getlex              QName(PackageNamespace("com.google.analytics.debug"), "VisualDebugMode")
@@ -365,38 +365,38 @@ L109:
 L127:
       getlocal2
       getlex              QName(PackageNamespace(""), "utmwv")
-      setproperty         Multiname("utmwv", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
+      setproperty         Multiname("utmwv", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
 
       getlocal2
       getlex              QName(PackageNamespace("com.google.analytics.core"), "Utils")
       callproperty        QName(PackageNamespace(""), "generate32bitRandom"), 0
-      setproperty         Multiname("utmn", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
+      setproperty         Multiname("utmn", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_info")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_info")
       getproperty         QName(PackageNamespace(""), "domainName")
       pushstring          ""
       ifeq                L142
 
       getlocal2
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_info")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_info")
       getproperty         QName(PackageNamespace(""), "domainName")
-      setproperty         Multiname("utmhn", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
+      setproperty         Multiname("utmhn", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
 
 L142:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "sampleRate")
       pushbyte            1
       ifnlt               L152
 
       getlocal2
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "sampleRate")
       pushbyte            100
       multiply
-      setproperty         Multiname("utmsp", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
+      setproperty         Multiname("utmsp", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
 
 L152:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "serverMode")
       getlex              QName(PackageNamespace("com.google.analytics.core"), "ServerOperationMode")
       getproperty         QName(PackageNamespace(""), "local")
@@ -405,7 +405,7 @@ L152:
       iftrue              L165
 
       pop
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "serverMode")
       getlex              QName(PackageNamespace("com.google.analytics.core"), "ServerOperationMode")
       getproperty         QName(PackageNamespace(""), "both")
@@ -413,7 +413,7 @@ L152:
 L165:
       iffalse             L230
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_info")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_info")
       getproperty         QName(PackageNamespace(""), "locationSWFPath")
       coerce_s
       dup
@@ -439,7 +439,7 @@ L183:
       coerce              QName(PackageNamespace("flash.net"), "URLRequest")
       setlocal            6
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "localGIFpath")
       pushstring          "http"
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
@@ -447,7 +447,7 @@ L183:
       ifne                L198
 
       getlocal            6
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "localGIFpath")
       setproperty         QName(PackageNamespace(""), "url")
 
@@ -456,7 +456,7 @@ L183:
 L198:
       getlocal            6
       getlocal            5
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "localGIFpath")
       add
       setproperty         QName(PackageNamespace(""), "url")
@@ -472,22 +472,22 @@ L204:
       add
       setproperty         QName(PackageNamespace(""), "url")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "active")
       convert_b
       dup
       iffalse             L222
 
       pop
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "GIFRequests")
       convert_b
 L222:
       iffalse             L227
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debugSend")
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debugSend")
       getlocal            6
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debugSend"), 1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debugSend"), 1
 
       jump                L230
 
@@ -497,7 +497,7 @@ L227:
       callpropvoid        QName(PackageNamespace(""), "sendRequest"), 1
 
 L230:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "serverMode")
       getlex              QName(PackageNamespace("com.google.analytics.core"), "ServerOperationMode")
       getproperty         QName(PackageNamespace(""), "remote")
@@ -506,7 +506,7 @@ L230:
       iftrue              L243
 
       pop
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "serverMode")
       getlex              QName(PackageNamespace("com.google.analytics.core"), "ServerOperationMode")
       getproperty         QName(PackageNamespace(""), "both")
@@ -519,28 +519,28 @@ L243:
       coerce              QName(PackageNamespace("flash.net"), "URLRequest")
       setlocal            7
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_info")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_info")
       getproperty         QName(PackageNamespace(""), "protocol")
       getlex              QName(PackageNamespace("com.google.analytics.utils"), "Protocols")
       getproperty         QName(PackageNamespace(""), "HTTPS")
       ifne                L258
 
       getlocal            7
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "secureRemoteGIFpath")
       setproperty         QName(PackageNamespace(""), "url")
 
       jump                L272
 
 L258:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_info")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_info")
       getproperty         QName(PackageNamespace(""), "protocol")
       getlex              QName(PackageNamespace("com.google.analytics.utils"), "Protocols")
       getproperty         QName(PackageNamespace(""), "HTTP")
       ifne                L268
 
       getlocal            7
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "remoteGIFpath")
       setproperty         QName(PackageNamespace(""), "url")
 
@@ -548,20 +548,20 @@ L258:
 
 L268:
       getlocal            7
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "remoteGIFpath")
       setproperty         QName(PackageNamespace(""), "url")
 
 L272:
       getlocal2
       getlex              QName(PackageNamespace(""), "utmac")
-      setproperty         Multiname("utmac", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
+      setproperty         Multiname("utmac", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
 
       getlocal2
       findpropstrict      QName(PackageNamespace(""), "encodeURIComponent")
       getlex              QName(PackageNamespace(""), "utmcc")
       callproperty        QName(PackageNamespace(""), "encodeURIComponent"), 1
-      setproperty         Multiname("utmcc", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
+      setproperty         Multiname("utmcc", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
 
       getlocal            7
       getlocal            7
@@ -573,22 +573,22 @@ L272:
       add
       setproperty         QName(PackageNamespace(""), "url")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "active")
       convert_b
       dup
       iffalse             L298
 
       pop
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "GIFRequests")
       convert_b
 L298:
       iffalse             L303
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debugSend")
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debugSend")
       getlocal            7
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debugSend"), 1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debugSend"), 1
 
       jump                L306
 
@@ -605,7 +605,7 @@ L306:
   end ; trait
   trait method QName(PackageNamespace(""), "onSecurityError")
    method
-    refid "com.google.analytics.core:GIFRequest/onSecurityError"
+    refid "com.google.analytics.core:GIFRequest/instance/onSecurityError"
     param QName(PackageNamespace("flash.events"), "SecurityErrorEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -617,11 +617,11 @@ L306:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "GIFRequests")
       iffalse             L9
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
       getlocal1
       getproperty         QName(PackageNamespace(""), "text")
       callpropvoid        QName(PackageNamespace(""), "failure"), 1
@@ -634,7 +634,7 @@ L9:
   end ; trait
   trait getter QName(PackageNamespace(""), "utmsp")
    method
-    refid "com.google.analytics.core:GIFRequest/utmsp/getter"
+    refid "com.google.analytics.core:GIFRequest/instance/utmsp/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 2
@@ -645,7 +645,7 @@ L9:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "sampleRate")
       pushbyte            100
       multiply
@@ -656,10 +656,10 @@ L9:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_info") type QName(PackageNamespace("com.google.analytics.utils"), "Environment") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_info") type QName(PackageNamespace("com.google.analytics.utils"), "Environment") end
   trait getter QName(PackageNamespace(""), "utmcc")
    method
-    refid "com.google.analytics.core:GIFRequest/utmcc/getter"
+    refid "com.google.analytics.core:GIFRequest/instance/utmcc/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -674,12 +674,12 @@ L9:
       coerce              QName(PackageNamespace(""), "Array")
       setlocal1
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_buffer")
       callproperty        QName(PackageNamespace(""), "hasUTMA"), 0
       iffalse             L15
 
       getlocal1
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utma")
       callproperty        QName(PackageNamespace(""), "toURLString"), 0
       pushstring          ";"
@@ -687,12 +687,12 @@ L9:
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
 L15:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_buffer")
       callproperty        QName(PackageNamespace(""), "hasUTMZ"), 0
       iffalse             L25
 
       getlocal1
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmz")
       callproperty        QName(PackageNamespace(""), "toURLString"), 0
       pushstring          ";"
@@ -700,12 +700,12 @@ L15:
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
 L25:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_buffer")
       callproperty        QName(PackageNamespace(""), "hasUTMV"), 0
       iffalse             L35
 
       getlocal1
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmv")
       callproperty        QName(PackageNamespace(""), "toURLString"), 0
       pushstring          ";"
@@ -721,13 +721,13 @@ L35:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_count") type QName(PackageNamespace(""), "int") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_utmac") type QName(PackageNamespace(""), "String") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_alertcount") type QName(PackageNamespace(""), "int") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug") type QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_count") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_utmac") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_alertcount") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug") type QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration") end
   trait getter QName(PackageNamespace(""), "utmac")
    method
-    refid "com.google.analytics.core:GIFRequest/utmac/getter"
+    refid "com.google.analytics.core:GIFRequest/instance/utmac/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -738,16 +738,16 @@ L35:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_utmac")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_utmac")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_lastRequest") type QName(PackageNamespace("flash.net"), "URLRequest") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_lastRequest") type QName(PackageNamespace("flash.net"), "URLRequest") end
   trait getter QName(PackageNamespace(""), "utmwv")
    method
-    refid "com.google.analytics.core:GIFRequest/utmwv/getter"
+    refid "com.google.analytics.core:GIFRequest/instance/utmwv/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -758,19 +758,19 @@ L35:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "version")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_buffer") type QName(PackageNamespace("com.google.analytics.core"), "Buffer") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_config") type QName(PackageNamespace("com.google.analytics.v4"), "Configuration") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_requests") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_buffer") type QName(PackageNamespace("com.google.analytics.core"), "Buffer") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_config") type QName(PackageNamespace("com.google.analytics.v4"), "Configuration") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_requests") type QName(PackageNamespace(""), "Array") end
   trait method QName(PackageNamespace(""), "sendRequest")
    method
-    refid "com.google.analytics.core:GIFRequest/sendRequest"
+    refid "com.google.analytics.core:GIFRequest/instance/sendRequest"
     param QName(PackageNamespace("flash.net"), "URLRequest")
     returns QName(PackageNamespace(""), "void")
     flag NEED_ACTIVATION
@@ -802,18 +802,18 @@ L35:
       getscopeobject      1
       getslot             2
       findpropstrict      QName(PackageNamespace(""), "String")
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_count")
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_count")
       dup
       setlocal3
 
-      getproperty         QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_count")
+      getproperty         QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_count")
       dup
       increment_i
       setlocal            4
 
       getlocal3
       getlocal            4
-      setproperty         QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_count")
+      setproperty         QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_count")
 
       kill                4
       kill                3
@@ -843,12 +843,12 @@ L35:
       getlex              QName(PackageNamespace(""), "onComplete")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_lastRequest")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_lastRequest")
       getscopeobject      1
       getslot             1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_lastRequest")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_lastRequest")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_requests")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_requests")
       getscopeobject      1
       getslot             2
       getproperty         QName(PackageNamespace(""), "name")
@@ -856,7 +856,7 @@ L35:
       getscopeobject      1
       getslot             1
       constructprop       QName(PackageNamespace("com.google.analytics.core"), "RequestObject"), 1
-      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
 
 L64:
       getscopeobject      1
@@ -887,7 +887,7 @@ L72:
       swap
       setslot             1
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
       pushstring          "\"Loader.load()\" could not instanciate Gif Request"
       callpropvoid        QName(PackageNamespace(""), "failure"), 1
 
@@ -903,9 +903,9 @@ L88:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_removeListeners")
+  trait method QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_removeListeners")
    method
-    refid "com.google.analytics.core:GIFRequest/_removeListeners"
+    refid "com.google.analytics.core:GIFRequest/instance/com.google.analytics.core:GIFRequest/instance/_removeListeners"
     param QName(PackageNamespace(""), "Object")
     returns QName(PackageNamespace(""), "void")
     body
@@ -921,13 +921,13 @@ L88:
       getlex              QName(PackageNamespace("flash.events"), "IOErrorEvent")
       getproperty         QName(PackageNamespace(""), "IO_ERROR")
       getlex              QName(PackageNamespace(""), "onIOError")
-      callpropvoid        Multiname("removeEventListener", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")]), 2
+      callpropvoid        Multiname("removeEventListener", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")]), 2
 
       getlocal1
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "COMPLETE")
       getlex              QName(PackageNamespace(""), "onComplete")
-      callpropvoid        Multiname("removeEventListener", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")]), 2
+      callpropvoid        Multiname("removeEventListener", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")]), 2
 
       returnvoid
      end ; code
@@ -936,7 +936,7 @@ L88:
   end ; trait
   trait method QName(PackageNamespace(""), "updateToken")
    method
-    refid "com.google.analytics.core:GIFRequest/updateToken"
+    refid "com.google.analytics.core:GIFRequest/instance/updateToken"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 5
@@ -957,11 +957,11 @@ L88:
       setlocal1
 
       getlocal1
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmb")
       getproperty         QName(PackageNamespace(""), "lastTime")
       subtract
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "tokenRate")
       pushshort           1000
       divide
@@ -969,11 +969,11 @@ L88:
       convert_d
       setlocal2
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "verbose")
       iffalse             L31
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
       pushstring          "tokenDelta: "
       getlocal2
       add
@@ -986,32 +986,32 @@ L31:
       pushbyte            1
       ifnge               L62
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmb")
       getlex              QName(PackageNamespace(""), "Math")
       getlex              QName(PackageNamespace(""), "Math")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmb")
       getproperty         QName(PackageNamespace(""), "token")
       getlocal2
       add
       callproperty        QName(PackageNamespace(""), "floor"), 1
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "bucketCapacity")
       callproperty        QName(PackageNamespace(""), "min"), 2
       setproperty         QName(PackageNamespace(""), "token")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmb")
       getlocal1
       setproperty         QName(PackageNamespace(""), "lastTime")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "verbose")
       iffalse             L62
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmb")
       callproperty        QName(PackageNamespace(""), "toString"), 0
       getlex              QName(PackageNamespace("com.google.analytics.debug"), "VisualDebugMode")
@@ -1026,7 +1026,7 @@ L62:
   end ; trait
   trait getter QName(PackageNamespace(""), "utmhn")
    method
-    refid "com.google.analytics.core:GIFRequest/utmhn/getter"
+    refid "com.google.analytics.core:GIFRequest/instance/utmhn/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -1037,16 +1037,16 @@ L62:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_info")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_info")
       getproperty         QName(PackageNamespace(""), "domainName")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_shortenURL")
+  trait method QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_shortenURL")
    method
-    refid "com.google.analytics.core:GIFRequest/_shortenURL"
+    refid "com.google.analytics.core:GIFRequest/instance/com.google.analytics.core:GIFRequest/instance/_shortenURL"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "String")
     body
@@ -1101,9 +1101,9 @@ L29:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debugSend")
+  trait method QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debugSend")
    method
-    refid "com.google.analytics.core:GIFRequest/_debugSend"
+    refid "com.google.analytics.core:GIFRequest/instance/com.google.analytics.core:GIFRequest/instance/_debugSend"
     param QName(PackageNamespace("flash.net"), "URLRequest")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1127,7 +1127,7 @@ L29:
 L8:
       label
       pushstring          "Gif Request #"
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_alertcount")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_alertcount")
       add
       pushstring          ":\n"
       add
@@ -1156,19 +1156,19 @@ L20:
       pushstring          "?"
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
       pushbyte            0
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
       coerce_s
       setlocal3
 
 L37:
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_shortenURL")
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_shortenURL")
       getlocal3
-      callproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_shortenURL"), 1
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_shortenURL"), 1
       coerce_s
       setlocal3
 
       pushstring          "Send Gif Request #"
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_alertcount")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_alertcount")
       add
       pushstring          ":\n"
       add
@@ -1185,13 +1185,13 @@ L53:
 L54:
       label
       pushstring          "Send "
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "serverMode")
       callproperty        QName(PackageNamespace(""), "toString"), 0
       add
       pushstring          " Gif Request #"
       add
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_alertcount")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_alertcount")
       add
       pushstring          " ?"
       add
@@ -1200,7 +1200,7 @@ L54:
       jump                L92
 
 L68:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "mode")
       setlocal            4
 
@@ -1237,23 +1237,23 @@ L90:
       lookupswitch        L54, [L8, L20, L53, L54]
 
 L92:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
       getlocal2
       getlocal1
       getlocal0
       callpropvoid        QName(PackageNamespace(""), "alertGifRequest"), 3
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_alertcount")
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_alertcount")
       dup
       setlocal            4
 
-      getproperty         QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_alertcount")
+      getproperty         QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_alertcount")
       increment_i
       setlocal            5
 
       getlocal            4
       getlocal            5
-      setproperty         QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_alertcount")
+      setproperty         QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_alertcount")
 
       kill                5
       kill                4
@@ -1264,7 +1264,7 @@ L92:
   end ; trait
   trait method QName(PackageNamespace(""), "onComplete")
    method
-    refid "com.google.analytics.core:GIFRequest/onComplete"
+    refid "com.google.analytics.core:GIFRequest/instance/onComplete"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1278,15 +1278,15 @@ L92:
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "target")
-      getproperty         Multiname("loader", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
-      getproperty         Multiname("name", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
+      getproperty         Multiname("loader", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
+      getproperty         Multiname("name", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
       coerce_s
       setlocal2
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_requests")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_requests")
       getlocal2
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
-      callpropvoid        Multiname("complete", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")]), 0
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
+      callpropvoid        Multiname("complete", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")]), 0
 
       pushstring          "Gif Request #"
       getlocal2
@@ -1295,19 +1295,19 @@ L92:
       add
       setlocal3
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_requests")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_requests")
       getlocal2
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
-      getproperty         Multiname("request", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
-      getproperty         Multiname("url", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
+      getproperty         Multiname("request", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
+      getproperty         Multiname("url", [PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
       coerce_s
       setlocal            4
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "GIFRequests")
       iffalse             L70
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "verbose")
       iftrue              L48
 
@@ -1321,20 +1321,20 @@ L92:
       pushstring          "?"
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
       pushbyte            0
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), PackageNamespace("com.google.analytics.core"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#1"), PackageInternalNs("com.google.analytics.core"), ProtectedNamespace("com.google.analytics.core:GIFRequest"), StaticProtectedNs("com.google.analytics.core:GIFRequest"), StaticProtectedNs("Object")])
       coerce_s
       setlocal            4
 
 L43:
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_shortenURL")
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_shortenURL")
       getlocal            4
-      callproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_shortenURL"), 1
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_shortenURL"), 1
       coerce_s
       setlocal            4
 
 L48:
       findpropstrict      QName(PackageNamespace(""), "int")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
       getproperty         QName(PackageNamespace(""), "mode")
       callproperty        QName(PackageNamespace(""), "int"), 1
       findpropstrict      QName(PackageNamespace(""), "int")
@@ -1354,22 +1354,22 @@ L48:
       setlocal3
 
 L66:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
       getlocal3
       callpropvoid        QName(PackageNamespace(""), "success"), 1
 
       jump                L73
 
 L70:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_debug")
       getlocal3
       callpropvoid        QName(PackageNamespace(""), "info"), 1
 
 L73:
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_removeListeners")
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_removeListeners")
       getlocal1
       getproperty         QName(PackageNamespace(""), "target")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_removeListeners"), 1
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest/instance#0"), "_removeListeners"), 1
 
       returnvoid
      end ; code
@@ -1378,7 +1378,7 @@ L73:
   end ; trait
  end ; instance
  cinit
-  refid "com.google.analytics.core:GIFRequest/cinit"
+  refid "com.google.analytics.core:GIFRequest/class/init"
   body
    maxstack 1
    localcount 1

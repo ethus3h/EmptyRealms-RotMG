@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-02D")
   iinit
-   refid "_-0Dd:_-At/iinit"
+   refid "_-0Dd:_-At/instance/init"
    body
     maxstack 7
     localcount 3
@@ -29,23 +29,23 @@ class
      pushfalse
      pushstring          ""
      constructprop       QName(PackageNamespace("_-0Dd"), "_-OI"), 3
-     initproperty        QName(PrivateNamespace("*", "_-0Dd:_-At"), "name_")
+     initproperty        QName(PrivateNamespace("*", "_-0Dd:_-At/instance"), "name_")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-0Dd:_-At"), "name_")
+     getproperty         QName(PrivateNamespace("*", "_-0Dd:_-At/instance"), "name_")
      getproperty         QName(PackageNamespace(""), "inputText_")
      pushstring          "A-Za-z"
      setproperty         QName(PackageNamespace(""), "restrict")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-0Dd:_-At"), "name_")
+     getproperty         QName(PrivateNamespace("*", "_-0Dd:_-At/instance"), "name_")
      getproperty         QName(PackageNamespace(""), "inputText_")
      pushbyte            10
      setproperty         QName(PackageNamespace(""), "maxChars")
 
      findpropstrict      QName(PackageNamespace(""), "_-vO")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-0Dd:_-At"), "name_")
+     getproperty         QName(PrivateNamespace("*", "_-0Dd:_-At/instance"), "name_")
      callpropvoid        QName(PackageNamespace(""), "_-vO"), 1
 
      findpropstrict      QName(PackageNamespace(""), "_-0DI")
@@ -64,25 +64,25 @@ class
      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
      getproperty         QName(PackageNamespace(""), "CLICK")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-0Dd:_-At"), "onCancel")
+     getproperty         QName(PrivateNamespace("*", "_-0Dd:_-At/instance"), "onCancel")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
      getlex              QName(PackageNamespace(""), "_-uu")
      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
      getproperty         QName(PackageNamespace(""), "CLICK")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-0Dd:_-At"), "_-Jp")
+     getproperty         QName(PrivateNamespace("*", "_-0Dd:_-At/instance"), "_-Jp")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-0Dd:_-At"), "name_") type QName(PackageNamespace("_-0Dd"), "_-OI") end
-  trait slot QName(PrivateNamespace("*", "_-0Dd:_-At"), "_-zH") type QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0Bu") value Null() end
-  trait method QName(PrivateNamespace("*", "_-0Dd:_-At"), "onCancel")
+  trait slot QName(PrivateNamespace("*", "_-0Dd:_-At/instance"), "name_") type QName(PackageNamespace("_-0Dd"), "_-OI") end
+  trait slot QName(PrivateNamespace("*", "_-0Dd:_-At/instance"), "_-zH") type QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0Bu") value Null() end
+  trait method QName(PrivateNamespace("*", "_-0Dd:_-At/instance"), "onCancel")
    method
-    refid "_-0Dd:_-At/onCancel"
+    refid "_-0Dd:_-At/instance/_-0Dd:_-At/instance/onCancel"
     param QName(PackageNamespace("flash.events"), "MouseEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -106,9 +106,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-0Dd:_-At"), "_-Jp")
+  trait method QName(PrivateNamespace("*", "_-0Dd:_-At/instance"), "_-Jp")
    method
-    refid "_-0Dd:_-At/_-Jp"
+    refid "_-0Dd:_-At/instance/_-0Dd:_-At/instance/_-Jp"
     param QName(PackageNamespace("flash.events"), "MouseEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -121,14 +121,14 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0Dd:_-At"), "name_")
+      getproperty         QName(PrivateNamespace("*", "_-0Dd:_-At/instance"), "name_")
       callproperty        QName(PackageNamespace(""), "text"), 0
       getproperty         QName(PackageNamespace(""), "length")
       pushbyte            1
       ifnlt               L13
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0Dd:_-At"), "name_")
+      getproperty         QName(PrivateNamespace("*", "_-0Dd:_-At/instance"), "name_")
       pushstring          "Name too short"
       callpropvoid        QName(PackageNamespace(""), "_-0BT"), 1
 
@@ -148,19 +148,19 @@ L13:
       getlex              QName(PackageNamespace("_-zo"), "_-8C")
       getproperty         QName(PackageNamespace(""), "GENERIC_DATA")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0Dd:_-At"), "_-E0")
+      getproperty         QName(PrivateNamespace("*", "_-0Dd:_-At/instance"), "_-E0")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       getlocal2
       getlex              QName(PackageNamespace("_-zo"), "_-mS")
       getproperty         QName(PackageNamespace(""), "TEXT_ERROR")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0Dd:_-At"), "_-06Q")
+      getproperty         QName(PrivateNamespace("*", "_-0Dd:_-At/instance"), "_-06Q")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       pushstring          "name"
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0Dd:_-At"), "name_")
+      getproperty         QName(PrivateNamespace("*", "_-0Dd:_-At/instance"), "name_")
       callproperty        QName(PackageNamespace(""), "text"), 0
       newobject           1
       coerce              QName(PackageNamespace(""), "Object")
@@ -186,9 +186,9 @@ L13:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-0Dd:_-At"), "_-E0")
+  trait method QName(PrivateNamespace("*", "_-0Dd:_-At/instance"), "_-E0")
    method
-    refid "_-0Dd:_-At/_-E0"
+    refid "_-0Dd:_-At/instance/_-0Dd:_-At/instance/_-E0"
     param QName(PackageNamespace("_-zo"), "_-8C")
     returns QName(PackageNamespace(""), "void")
     body
@@ -212,9 +212,9 @@ L13:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-0Dd:_-At"), "_-06Q")
+  trait method QName(PrivateNamespace("*", "_-0Dd:_-At/instance"), "_-06Q")
    method
-    refid "_-0Dd:_-At/_-06Q"
+    refid "_-0Dd:_-At/instance/_-0Dd:_-At/instance/_-06Q"
     param QName(PackageNamespace("_-zo"), "_-mS")
     returns QName(PackageNamespace(""), "void")
     body
@@ -227,7 +227,7 @@ L13:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0Dd:_-At"), "name_")
+      getproperty         QName(PrivateNamespace("*", "_-0Dd:_-At/instance"), "name_")
       getlocal1
       getproperty         QName(PackageNamespace(""), "text_")
       callpropvoid        QName(PackageNamespace(""), "_-0BT"), 1
@@ -242,7 +242,7 @@ L13:
   end ; trait
  end ; instance
  cinit
-  refid "_-0Dd:_-At/cinit"
+  refid "_-0Dd:_-At/class/init"
   body
    maxstack 3
    localcount 1

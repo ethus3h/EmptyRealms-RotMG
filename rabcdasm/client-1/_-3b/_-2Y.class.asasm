@@ -7,7 +7,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-0EP")
   iinit
-   refid "_-3b:_-2Y/iinit"
+   refid "_-3b:_-2Y/instance/init"
    body
     maxstack 5
     localcount 3
@@ -21,7 +21,7 @@ class
      getlex              QName(PackageNamespace("_-03T"), "_-078")
      getlex              QName(PackageNamespace("_-3b"), "_-2Y")
      callproperty        QName(PackageNamespace(""), "create"), 1
-     initproperty        QName(PrivateNamespace("*", "_-3b:_-2Y"), "_-ul")
+     initproperty        QName(PrivateNamespace("*", "_-3b:_-2Y/instance"), "_-ul")
 
      getlocal0
      constructsuper      0
@@ -30,10 +30,10 @@ class
     end ; code
    end ; body
   end ; method
-  trait const QName(PrivateNamespace("*", "_-3b:_-2Y"), "_-ul") type QName(PackageNamespace(""), "String") end
+  trait const QName(PrivateNamespace("*", "_-3b:_-2Y/instance"), "_-ul") type QName(PackageNamespace(""), "String") end
   trait method QName(PackageNamespace(""), "extend")
    method
-    refid "_-3b:_-2Y/extend"
+    refid "_-3b:_-2Y/instance/extend"
     param QName(PackageNamespace("_-0-p"), "_-Ly")
     returns QName(PackageNamespace(""), "void")
     body
@@ -59,7 +59,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "toString")
    method
-    refid "_-3b:_-2Y/toString"
+    refid "_-3b:_-2Y/instance/toString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -71,7 +71,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-3b:_-2Y"), "_-ul")
+      getproperty         QName(PrivateNamespace("*", "_-3b:_-2Y/instance"), "_-ul")
       returnvalue
      end ; code
     end ; body
@@ -79,7 +79,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-3b:_-2Y/cinit"
+  refid "_-3b:_-2Y/class/init"
   body
    maxstack 3
    localcount 1

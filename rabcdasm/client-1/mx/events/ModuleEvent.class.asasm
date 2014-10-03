@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("mx.events:ModuleEvent")
   iinit
-   refid "mx.events:ModuleEvent/iinit"
+   refid "mx.events:ModuleEvent/instance/init"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "Boolean")
    param QName(PackageNamespace(""), "Boolean")
@@ -44,17 +44,17 @@ class
 
      getlocal0
      getlocal            7
-     initproperty        QName(PrivateNamespace("*", "mx.events:ModuleEvent"), "_module")
+     initproperty        QName(PrivateNamespace("*", "mx.events:ModuleEvent/instance"), "_module")
 
      returnvoid
     end ; code
    end ; body
   end ; method
   trait slot QName(PackageNamespace(""), "errorText") type QName(PackageNamespace(""), "String") end
-  trait slot QName(PrivateNamespace("*", "mx.events:ModuleEvent"), "_module") type QName(PackageNamespace("mx.modules"), "IModuleInfo") end
+  trait slot QName(PrivateNamespace("*", "mx.events:ModuleEvent/instance"), "_module") type QName(PackageNamespace("mx.modules"), "IModuleInfo") end
   trait getter QName(PackageNamespace(""), "module")
    method
-    refid "mx.events:ModuleEvent/module/getter"
+    refid "mx.events:ModuleEvent/instance/module/getter"
     returns QName(PackageNamespace("mx.modules"), "IModuleInfo")
     body
      maxstack 2
@@ -66,11 +66,11 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.events:ModuleEvent"), "_module")
+      getproperty         QName(PrivateNamespace("*", "mx.events:ModuleEvent/instance"), "_module")
       iffalse             L8
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.events:ModuleEvent"), "_module")
+      getproperty         QName(PrivateNamespace("*", "mx.events:ModuleEvent/instance"), "_module")
       returnvalue
 
 L8:
@@ -84,7 +84,7 @@ L8:
   end ; trait
   trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
    method
-    refid "mx.events:ModuleEvent/clone"
+    refid "mx.events:ModuleEvent/instance/clone"
     returns QName(PackageNamespace("flash.events"), "Event")
     body
      maxstack 8
@@ -113,7 +113,7 @@ L8:
   end ; trait
  end ; instance
  cinit
-  refid "mx.events:ModuleEvent/cinit"
+  refid "mx.events:ModuleEvent/class/init"
   body
    maxstack 2
    localcount 1

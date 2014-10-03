@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-5k")
   iinit
-   refid "_-E7:_-zY/iinit"
+   refid "_-E7:_-zY/instance/init"
    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")>)
    param QName(PackageNamespace(""), "Boolean")
    flag HAS_OPTIONAL
@@ -21,11 +21,11 @@ class
      pushscope
 
      getlocal0
-     getlex              Multiname("Vector", [PrivateNamespace("*", "_-E7:_-zY"), PrivateNamespace("*", "_-E7:_-zY/iinit"), PackageNamespace(""), PackageNamespace("_-E7"), PackageInternalNs("_-E7"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-5k"), StaticProtectedNs("_-5k"), StaticProtectedNs("_-2D"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("__AS3__.vec")])
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_-E7:_-zY/instance"), PrivateNamespace("*", "_-E7:_-zY/instance/init"), PackageNamespace(""), PackageNamespace("_-E7"), PackageInternalNs("_-E7"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-5k"), StaticProtectedNs("_-5k"), StaticProtectedNs("_-2D"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("__AS3__.vec")])
      getlex              QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-gV")
      applytype           1
      construct           0
-     initproperty        QName(PrivateNamespace("*", "_-E7:_-zY"), "_-o2")
+     initproperty        QName(PrivateNamespace("*", "_-E7:_-zY/instance"), "_-o2")
 
      getlocal0
      pushint             3552822
@@ -44,19 +44,19 @@ class
      dup
      pushstring          "Myriad Pro"
      constructprop       QName(PackageNamespace("com.company.ui"), "SimpleText"), 6
-     initproperty        QName(PrivateNamespace("*", "_-E7:_-zY"), "_-xi")
+     initproperty        QName(PrivateNamespace("*", "_-E7:_-zY/instance"), "_-xi")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-E7:_-zY"), "_-xi")
+     getproperty         QName(PrivateNamespace("*", "_-E7:_-zY/instance"), "_-xi")
      pushstring          "(Click to open menu)"
      setproperty         QName(PackageNamespace(""), "text")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-E7:_-zY"), "_-xi")
+     getproperty         QName(PrivateNamespace("*", "_-E7:_-zY/instance"), "_-xi")
      callpropvoid        QName(PackageNamespace(""), "updateMetrics"), 0
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-E7:_-zY"), "_-xi")
+     getproperty         QName(PrivateNamespace("*", "_-E7:_-zY/instance"), "_-xi")
      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
      pushbyte            0
      dup
@@ -67,7 +67,7 @@ class
 
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-E7:_-zY"), "_-xi")
+     getproperty         QName(PrivateNamespace("*", "_-E7:_-zY/instance"), "_-xi")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
      getlocal0
@@ -87,11 +87,11 @@ L53:
    end ; body
   end ; method
   trait slot QName(PackageNamespace(""), "_-nC") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")>) value Null() end
-  trait slot QName(PrivateNamespace("*", "_-E7:_-zY"), "_-o2") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-gV")>) end
-  trait slot QName(PrivateNamespace("*", "_-E7:_-zY"), "_-xi") type QName(PackageNamespace("com.company.ui"), "SimpleText") end
+  trait slot QName(PrivateNamespace("*", "_-E7:_-zY/instance"), "_-o2") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-gV")>) end
+  trait slot QName(PrivateNamespace("*", "_-E7:_-zY/instance"), "_-xi") type QName(PackageNamespace("com.company.ui"), "SimpleText") end
   trait method QName(PackageNamespace(""), "_-09B")
    method
-    refid "_-E7:_-zY/_-09B"
+    refid "_-E7:_-zY/instance/_-09B"
     param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")>)
     returns QName(PackageNamespace(""), "void")
     body
@@ -112,7 +112,7 @@ L53:
       setlocal            4
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-E7:_-zY"), "clear"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-E7:_-zY/instance"), "clear"), 0
 
       getlocal0
       getlocal1
@@ -179,7 +179,7 @@ L36:
       callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-E7:_-zY"), "_-o2")
+      getproperty         QName(PrivateNamespace("*", "_-E7:_-zY/instance"), "_-o2")
       getlocal            4
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
@@ -196,12 +196,12 @@ L67:
       kill                6
       kill                5
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-E7:_-zY"), "_-xi")
+      getproperty         QName(PrivateNamespace("*", "_-E7:_-zY/instance"), "_-xi")
       getlex              QName(PackageNamespace(""), "width")
       pushbyte            2
       divide
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-E7:_-zY"), "_-xi")
+      getproperty         QName(PrivateNamespace("*", "_-E7:_-zY/instance"), "_-xi")
       getproperty         QName(PackageNamespace(""), "width")
       pushbyte            2
       divide
@@ -209,7 +209,7 @@ L67:
       setproperty         QName(PackageNamespace(""), "x")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-E7:_-zY"), "_-xi")
+      getproperty         QName(PrivateNamespace("*", "_-E7:_-zY/instance"), "_-xi")
       getlocal2
       setproperty         QName(PackageNamespace(""), "y")
 
@@ -221,9 +221,9 @@ L67:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-E7:_-zY"), "clear")
+  trait method QName(PrivateNamespace("*", "_-E7:_-zY/instance"), "clear")
    method
-    refid "_-E7:_-zY/clear"
+    refid "_-E7:_-zY/instance/_-E7:_-zY/instance/clear"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -245,7 +245,7 @@ L67:
       setlocal2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-E7:_-zY"), "_-o2")
+      getproperty         QName(PrivateNamespace("*", "_-E7:_-zY/instance"), "_-o2")
       coerce_a
       setlocal3
 
@@ -270,7 +270,7 @@ L23:
       kill                3
       kill                2
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-E7:_-zY"), "_-o2")
+      getproperty         QName(PrivateNamespace("*", "_-E7:_-zY/instance"), "_-o2")
       pushbyte            0
       setproperty         QName(PackageNamespace(""), "length")
 
@@ -281,7 +281,7 @@ L23:
   end ; trait
  end ; instance
  cinit
-  refid "_-E7:_-zY/cinit"
+  refid "_-E7:_-zY/class/init"
   body
    maxstack 3
    localcount 1

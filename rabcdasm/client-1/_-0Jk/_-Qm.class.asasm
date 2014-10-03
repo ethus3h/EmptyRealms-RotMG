@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-h8")
   iinit
-   refid "_-0Jk:_-Qm/iinit"
+   refid "_-0Jk:_-Qm/instance/init"
    param QName(PackageNamespace(""), "Boolean")
    flag HAS_OPTIONAL
    optional True()
@@ -38,10 +38,10 @@ L10:
   trait slot QName(PackageNamespace(""), "ctor") type QName(PackageNamespace("_-0Jk"), "_-ND") end
   trait slot QName(PackageNamespace(""), "injectionPoints") type QName(PackageNamespace("_-0Jk"), "_-5W") end
   trait slot QName(PackageNamespace(""), " case") type QName(PackageNamespace("_-0Jk"), "_-tv") end
-  trait slot QName(PrivateNamespace("*", "_-0Jk:_-Qm"), "_-y-") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "_-0Jk:_-Qm/instance"), "_-y-") type QName(PackageNamespace(""), "Boolean") end
   trait method QName(PackageNamespace(""), "_-V9")
    method
-    refid "_-0Jk:_-Qm/_-V9"
+    refid "_-0Jk:_-Qm/instance/_-V9"
     param QName(PackageNamespace(""), "Array")
     param QName(PackageNamespace(""), "Array")
     param QName(PackageNamespace(""), "uint")
@@ -73,7 +73,7 @@ L10:
       newarray            0
       coerce              QName(PackageNamespace(""), "Array")
 L13:
-      callproperty        QName(PrivateNamespace("*", "_-0Jk:_-Qm"), "_-st"), 2
+      callproperty        QName(PrivateNamespace("*", "_-0Jk:_-Qm/instance"), "_-st"), 2
       getlocal3
       getlocal            4
       constructprop       QName(PackageNamespace("_-0Jk"), "_-ND"), 3
@@ -87,7 +87,7 @@ L13:
   end ; trait
   trait method QName(PackageNamespace(""), "_-88")
    method
-    refid "_-0Jk:_-Qm/_-88"
+    refid "_-0Jk:_-Qm/instance/_-88"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "Class")
     param QName(PackageNamespace(""), "String")
@@ -108,13 +108,14 @@ L13:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0Jk:_-Qm"), "_-y-")
+      getproperty         QName(PrivateNamespace("*", "_-0Jk:_-Qm/instance"), "_-y-")
       iffalse             L9
 
       findpropstrict      QName(PackageNamespace("_-eZ"), "_-Np")
       pushstring          "Can't add injection point after post construct method"
       constructprop       QName(PackageNamespace("_-eZ"), "_-Np"), 1
       throw
+
 L9:
       getlocal0
       findpropstrict      QName(PackageNamespace("_-0Jk"), "_-0Jf")
@@ -139,7 +140,7 @@ L9:
   end ; trait
   trait method QName(PackageNamespace(""), "_-JA")
    method
-    refid "_-0Jk:_-Qm/_-JA"
+    refid "_-0Jk:_-Qm/instance/_-JA"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "Array")
     param QName(PackageNamespace(""), "Array")
@@ -162,13 +163,14 @@ L9:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0Jk:_-Qm"), "_-y-")
+      getproperty         QName(PrivateNamespace("*", "_-0Jk:_-Qm/instance"), "_-y-")
       iffalse             L9
 
       findpropstrict      QName(PackageNamespace("_-eZ"), "_-Np")
       pushstring          "Can't add injection point after post construct method"
       constructprop       QName(PackageNamespace("_-eZ"), "_-Np"), 1
       throw
+
 L9:
       getlocal0
       findpropstrict      QName(PackageNamespace("_-0Jk"), "_-ZT")
@@ -184,7 +186,7 @@ L9:
       newarray            0
       coerce              QName(PackageNamespace(""), "Array")
 L21:
-      callproperty        QName(PrivateNamespace("*", "_-0Jk:_-Qm"), "_-st"), 2
+      callproperty        QName(PrivateNamespace("*", "_-0Jk:_-Qm/instance"), "_-st"), 2
       getlex              QName(PackageNamespace(""), "Math")
       getlocal            4
       getlocal2
@@ -203,7 +205,7 @@ L21:
   end ; trait
   trait method QName(PackageNamespace(""), "_-jw")
    method
-    refid "_-0Jk:_-Qm/_-jw"
+    refid "_-0Jk:_-Qm/instance/_-jw"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "Array")
     param QName(PackageNamespace(""), "Array")
@@ -223,7 +225,7 @@ L21:
 
       getlocal0
       pushtrue
-      initproperty        QName(PrivateNamespace("*", "_-0Jk:_-Qm"), "_-y-")
+      initproperty        QName(PrivateNamespace("*", "_-0Jk:_-Qm/instance"), "_-y-")
 
       getlocal0
       findpropstrict      QName(PackageNamespace("_-0Jk"), "_-kG")
@@ -239,7 +241,7 @@ L21:
       newarray            0
       coerce              QName(PackageNamespace(""), "Array")
 L17:
-      callproperty        QName(PrivateNamespace("*", "_-0Jk:_-Qm"), "_-st"), 2
+      callproperty        QName(PrivateNamespace("*", "_-0Jk:_-Qm/instance"), "_-st"), 2
       getlex              QName(PackageNamespace(""), "Math")
       getlocal            4
       getlocal2
@@ -257,7 +259,7 @@ L17:
   end ; trait
   trait method QName(PackageNamespace(""), "_-IL")
    method
-    refid "_-0Jk:_-Qm/_-IL"
+    refid "_-0Jk:_-Qm/instance/_-IL"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "Array")
     param QName(PackageNamespace(""), "Array")
@@ -288,7 +290,7 @@ L17:
       newarray            0
       coerce              QName(PackageNamespace(""), "Array")
 L13:
-      callproperty        QName(PrivateNamespace("*", "_-0Jk:_-Qm"), "_-st"), 2
+      callproperty        QName(PrivateNamespace("*", "_-0Jk:_-Qm/instance"), "_-st"), 2
       getlex              QName(PackageNamespace(""), "Math")
       getlocal            4
       getlocal2
@@ -335,7 +337,7 @@ L43:
   end ; trait
   trait method QName(PackageNamespace(""), "_-ph")
    method
-    refid "_-0Jk:_-Qm/_-ph"
+    refid "_-0Jk:_-Qm/instance/_-ph"
     param QName(PackageNamespace("_-0Jk"), "_-5W")
     returns QName(PackageNamespace(""), "void")
     body
@@ -380,9 +382,9 @@ L22:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-0Jk:_-Qm"), "_-st")
+  trait method QName(PrivateNamespace("*", "_-0Jk:_-Qm/instance"), "_-st")
    method
-    refid "_-0Jk:_-Qm/_-st"
+    refid "_-0Jk:_-Qm/instance/_-0Jk:_-Qm/instance/_-st"
     param QName(PackageNamespace(""), "Array")
     param QName(PackageNamespace(""), "Array")
     returns QName(PackageNamespace(""), "Array")
@@ -416,13 +418,13 @@ L13:
       findpropstrict      QName(PackageNamespace("flash.utils"), "getQualifiedClassName")
       getlocal1
       getlocal            4
-      getproperty         MultinameL([PrivateNamespace("*", "_-0Jk:_-Qm"), PackageNamespace("_-0Jk"), PackageNamespace(""), PrivateNamespace("*", "_-0Jk:_-Qm/_-st"), PackageInternalNs("_-0Jk"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-h8"), StaticProtectedNs("_-h8")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-0Jk:_-Qm/instance"), PackageNamespace("_-0Jk"), PackageNamespace(""), PrivateNamespace("*", "_-0Jk:_-Qm/instance/_-0Jk:_-Qm/instance/_-st"), PackageInternalNs("_-0Jk"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-h8"), StaticProtectedNs("_-h8")])
       callproperty        QName(PackageNamespace("flash.utils"), "getQualifiedClassName"), 1
       pushstring          "|"
       add
       getlocal2
       getlocal            4
-      getproperty         MultinameL([PrivateNamespace("*", "_-0Jk:_-Qm"), PackageNamespace("_-0Jk"), PackageNamespace(""), PrivateNamespace("*", "_-0Jk:_-Qm/_-st"), PackageInternalNs("_-0Jk"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-h8"), StaticProtectedNs("_-h8")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-0Jk:_-Qm/instance"), PackageNamespace("_-0Jk"), PackageNamespace(""), PrivateNamespace("*", "_-0Jk:_-Qm/instance/_-0Jk:_-Qm/instance/_-st"), PackageInternalNs("_-0Jk"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-h8"), StaticProtectedNs("_-h8")])
       coerce_a
       dup
       iftrue              L32
@@ -432,7 +434,7 @@ L13:
       coerce_a
 L32:
       add
-      setproperty         MultinameL([PrivateNamespace("*", "_-0Jk:_-Qm"), PackageNamespace("_-0Jk"), PackageNamespace(""), PrivateNamespace("*", "_-0Jk:_-Qm/_-st"), PackageInternalNs("_-0Jk"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-h8"), StaticProtectedNs("_-h8")])
+      setproperty         MultinameL([PrivateNamespace("*", "_-0Jk:_-Qm/instance"), PackageNamespace("_-0Jk"), PackageNamespace(""), PrivateNamespace("*", "_-0Jk:_-Qm/instance/_-0Jk:_-Qm/instance/_-st"), PackageInternalNs("_-0Jk"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-h8"), StaticProtectedNs("_-h8")])
 
 L34:
       getlocal            4
@@ -450,7 +452,7 @@ L34:
   end ; trait
  end ; instance
  cinit
-  refid "_-0Jk:_-Qm/cinit"
+  refid "_-0Jk:_-Qm/class/init"
   body
    maxstack 3
    localcount 1

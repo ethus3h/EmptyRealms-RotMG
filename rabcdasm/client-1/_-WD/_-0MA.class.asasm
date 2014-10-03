@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-Mf")
   iinit
-   refid "_-WD:_-0MA/iinit"
+   refid "_-WD:_-0MA/instance/init"
    body
     maxstack 3
     localcount 3
@@ -23,7 +23,7 @@ class
     end ; code
    end ; body
   end ; method
-  trait const QName(PrivateNamespace("*", "_-WD:_-0MA"), "_-Yn") type QName(PackageNamespace(""), "String") value Utf8("Production") end
+  trait const QName(PrivateNamespace("*", "_-WD:_-0MA/instance"), "_-Yn") type QName(PackageNamespace(""), "String") value Utf8("Production") end
   trait slot QName(PackageNamespace(""), "root") flag METADATA type QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
    metadata "Inject"
    end ; metadata
@@ -38,7 +38,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "_-IO")
    method
-    refid "_-WD:_-0MA/_-IO"
+    refid "_-WD:_-0MA/instance/_-IO"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 3
@@ -59,7 +59,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "_-Bz")
    method
-    refid "_-WD:_-0MA/_-Bz"
+    refid "_-WD:_-0MA/instance/_-Bz"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 3
@@ -76,7 +76,7 @@ class
       iffalse             L9
 
       getlocal0
-      callproperty        QName(PrivateNamespace("*", "_-WD:_-0MA"), "_-0BP"), 0
+      callproperty        QName(PrivateNamespace("*", "_-WD:_-0MA/instance"), "_-0BP"), 0
       returnvalue
 
 L9:
@@ -88,9 +88,9 @@ L9:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-WD:_-0MA"), "_-0BP")
+  trait method QName(PrivateNamespace("*", "_-WD:_-0MA/instance"), "_-0BP")
    method
-    refid "_-WD:_-0MA/_-0BP"
+    refid "_-WD:_-0MA/instance/_-WD:_-0MA/instance/_-0BP"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 4
@@ -109,9 +109,9 @@ L9:
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "parameters")
-      getproperty         Multiname("deployment", [PrivateNamespace("*", "_-WD:_-0MA"), PackageNamespace(""), PrivateNamespace("*", "_-WD:_-0MA/_-0BP"), PackageNamespace("_-WD"), PackageInternalNs("_-WD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mf"), StaticProtectedNs("_-Mf")])
+      getproperty         Multiname("deployment", [PrivateNamespace("*", "_-WD:_-0MA/instance"), PackageNamespace(""), PrivateNamespace("*", "_-WD:_-0MA/instance/_-WD:_-0MA/instance/_-0BP"), PackageNamespace("_-WD"), PackageInternalNs("_-WD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mf"), StaticProtectedNs("_-Mf")])
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-WD:_-0MA"), "_-Yn")
+      getproperty         QName(PrivateNamespace("*", "_-WD:_-0MA/instance"), "_-Yn")
       equals
       returnvalue
      end ; code
@@ -120,7 +120,7 @@ L9:
   end ; trait
  end ; instance
  cinit
-  refid "_-WD:_-0MA/cinit"
+  refid "_-WD:_-0MA/class/init"
   body
    maxstack 3
    localcount 1

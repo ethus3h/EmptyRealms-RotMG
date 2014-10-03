@@ -7,7 +7,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("com.google.analytics:GATracker")
   iinit
-   refid "com.google.analytics:GATracker/iinit"
+   refid "com.google.analytics:GATracker/instance/init"
    param QName(PackageNamespace("flash.display"), "DisplayObject")
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "String")
@@ -31,20 +31,20 @@ class
      getlocal0
      constructsuper      0
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_display")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_display")
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_display")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_display")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_eventDispatcher")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_eventDispatcher")
      findpropstrict      QName(PackageNamespace("flash.events"), "EventDispatcher")
      getlocal0
      constructprop       QName(PackageNamespace("flash.events"), "EventDispatcher"), 1
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_eventDispatcher")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_eventDispatcher")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
      findpropstrict      QName(PackageNamespace("com.google.analytics.core"), "TrackerCache")
      constructprop       QName(PackageNamespace("com.google.analytics.core"), "TrackerCache"), 0
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
 
      getlocal0
      getlocal2
@@ -87,8 +87,8 @@ L42:
      getlex              QName(PackageNamespace(""), "autobuild")
      iffalse             L46
 
-     findpropstrict      QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_factory")
-     callpropvoid        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_factory"), 0
+     findpropstrict      QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_factory")
+     callpropvoid        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_factory"), 0
 
 L46:
      returnvoid
@@ -97,7 +97,7 @@ L46:
   end ; method
   trait method QName(PackageNamespace(""), "link")
    method
-    refid "com.google.analytics:GATracker/link"
+    refid "com.google.analytics:GATracker/instance/link"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
@@ -112,7 +112,7 @@ L46:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       getlocal2
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "link"), 2
@@ -124,7 +124,7 @@ L46:
   end ; trait
   trait method QName(PackageNamespace(""), "addOrganic")
    method
-    refid "com.google.analytics:GATracker/addOrganic"
+    refid "com.google.analytics:GATracker/instance/addOrganic"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
@@ -137,7 +137,7 @@ L46:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       getlocal2
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "addOrganic"), 2
@@ -149,7 +149,7 @@ L46:
   end ; trait
   trait method QName(PackageNamespace(""), "setAllowLinker")
    method
-    refid "com.google.analytics:GATracker/setAllowLinker"
+    refid "com.google.analytics:GATracker/instance/setAllowLinker"
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
     body
@@ -161,7 +161,7 @@ L46:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "setAllowLinker"), 1
 
@@ -172,7 +172,7 @@ L46:
   end ; trait
   trait method QName(PackageNamespace(""), "trackEvent")
    method
-    refid "com.google.analytics:GATracker/trackEvent"
+    refid "com.google.analytics:GATracker/instance/trackEvent"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
@@ -190,7 +190,7 @@ L46:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       getlocal2
       getlocal3
@@ -203,7 +203,7 @@ L46:
   end ; trait
   trait method QName(PackageNamespace(""), "getLinkerUrl")
    method
-    refid "com.google.analytics:GATracker/getLinkerUrl"
+    refid "com.google.analytics:GATracker/instance/getLinkerUrl"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "String")
@@ -219,7 +219,7 @@ L46:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       getlocal2
       callproperty        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "getLinkerUrl"), 2
@@ -228,10 +228,10 @@ L46:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_adSense") type QName(PackageNamespace("com.google.analytics.external"), "AdSenseGlobals") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_adSense") type QName(PackageNamespace("com.google.analytics.external"), "AdSenseGlobals") end
   trait method QName(PackageNamespace(""), "setCookieTimeout")
    method
-    refid "com.google.analytics:GATracker/setCookieTimeout"
+    refid "com.google.analytics:GATracker/instance/setCookieTimeout"
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace(""), "void")
     body
@@ -243,7 +243,7 @@ L46:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "setCookieTimeout"), 1
 
@@ -254,7 +254,7 @@ L46:
   end ; trait
   trait method QName(PackageNamespace(""), "trackTrans")
    method
-    refid "com.google.analytics:GATracker/trackTrans"
+    refid "com.google.analytics:GATracker/instance/trackTrans"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 1
@@ -265,7 +265,7 @@ L46:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "trackTrans"), 0
 
       returnvoid
@@ -275,7 +275,7 @@ L46:
   end ; trait
   trait method QName(PackageNamespace(""), "getClientInfo")
    method
-    refid "com.google.analytics:GATracker/getClientInfo"
+    refid "com.google.analytics:GATracker/instance/getClientInfo"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 1
@@ -286,7 +286,7 @@ L46:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       callproperty        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "getClientInfo"), 0
       returnvalue
      end ; code
@@ -295,7 +295,7 @@ L46:
   end ; trait
   trait method QName(PackageNamespace(""), "trackPageview")
    method
-    refid "com.google.analytics:GATracker/trackPageview"
+    refid "com.google.analytics:GATracker/instance/trackPageview"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     flag HAS_OPTIONAL
@@ -309,7 +309,7 @@ L46:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "trackPageview"), 1
 
@@ -320,7 +320,7 @@ L46:
   end ; trait
   trait method QName(PackageNamespace(""), "setClientInfo")
    method
-    refid "com.google.analytics:GATracker/setClientInfo"
+    refid "com.google.analytics:GATracker/instance/setClientInfo"
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
     body
@@ -332,7 +332,7 @@ L46:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "setClientInfo"), 1
 
@@ -343,7 +343,7 @@ L46:
   end ; trait
   trait getter QName(PackageNamespace(""), "account")
    method
-    refid "com.google.analytics:GATracker/account/getter"
+    refid "com.google.analytics:GATracker/instance/account/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -354,16 +354,16 @@ L46:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_account")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_account")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_env") type QName(PackageNamespace("com.google.analytics.utils"), "Environment") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_env") type QName(PackageNamespace("com.google.analytics.utils"), "Environment") end
   trait method QName(PackageNamespace(""), "linkByPost")
    method
-    refid "com.google.analytics:GATracker/linkByPost"
+    refid "com.google.analytics:GATracker/instance/linkByPost"
     param QName(PackageNamespace(""), "Object")
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
@@ -378,7 +378,7 @@ L46:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       getlocal2
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "linkByPost"), 2
@@ -388,10 +388,10 @@ L46:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_visualDebug") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_visualDebug") type QName(PackageNamespace(""), "Boolean") end
   trait method QName(PackageNamespace(""), "getDetectTitle")
    method
-    refid "com.google.analytics:GATracker/getDetectTitle"
+    refid "com.google.analytics:GATracker/instance/getDetectTitle"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 1
@@ -402,7 +402,7 @@ L46:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       callproperty        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "getDetectTitle"), 0
       returnvalue
      end ; code
@@ -411,7 +411,7 @@ L46:
   end ; trait
   trait method QName(PackageNamespace(""), "dispatchEvent")
    method
-    refid "com.google.analytics:GATracker/dispatchEvent"
+    refid "com.google.analytics:GATracker/instance/dispatchEvent"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "Boolean")
     body
@@ -423,7 +423,7 @@ L46:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_eventDispatcher")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_eventDispatcher")
       getlocal1
       callproperty        QName(PackageNamespace(""), "dispatchEvent"), 1
       returnvalue
@@ -433,7 +433,7 @@ L46:
   end ; trait
   trait getter QName(PackageNamespace(""), "config")
    method
-    refid "com.google.analytics:GATracker/config/getter"
+    refid "com.google.analytics:GATracker/instance/config/getter"
     returns QName(PackageNamespace("com.google.analytics.v4"), "Configuration")
     body
      maxstack 1
@@ -444,7 +444,7 @@ L46:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_config")
       returnvalue
      end ; code
     end ; body
@@ -452,7 +452,7 @@ L46:
   end ; trait
   trait setter QName(PackageNamespace(""), "mode")
    method
-    refid "com.google.analytics:GATracker/mode/setter"
+    refid "com.google.analytics:GATracker/instance/mode/setter"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -464,9 +464,9 @@ L46:
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_mode")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_mode")
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_mode")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_mode")
 
       returnvoid
      end ; code
@@ -475,7 +475,7 @@ L46:
   end ; trait
   trait method QName(PackageNamespace(""), "removeEventListener")
    method
-    refid "com.google.analytics:GATracker/removeEventListener"
+    refid "com.google.analytics:GATracker/instance/removeEventListener"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "Function")
     param QName(PackageNamespace(""), "Boolean")
@@ -491,7 +491,7 @@ L46:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_eventDispatcher")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_eventDispatcher")
       getlocal1
       getlocal2
       getlocal3
@@ -504,7 +504,7 @@ L46:
   end ; trait
   trait method QName(PackageNamespace(""), "setDetectFlash")
    method
-    refid "com.google.analytics:GATracker/setDetectFlash"
+    refid "com.google.analytics:GATracker/instance/setDetectFlash"
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
     body
@@ -516,7 +516,7 @@ L46:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "setDetectFlash"), 1
 
@@ -527,7 +527,7 @@ L46:
   end ; trait
   trait method QName(PackageNamespace(""), "resetSession")
    method
-    refid "com.google.analytics:GATracker/resetSession"
+    refid "com.google.analytics:GATracker/instance/resetSession"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 1
@@ -538,7 +538,7 @@ L46:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "resetSession"), 0
 
       returnvoid
@@ -548,7 +548,7 @@ L46:
   end ; trait
   trait method QName(PackageNamespace(""), "setCampNameKey")
    method
-    refid "com.google.analytics:GATracker/setCampNameKey"
+    refid "com.google.analytics:GATracker/instance/setCampNameKey"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -560,7 +560,7 @@ L46:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "setCampNameKey"), 1
 
@@ -569,10 +569,10 @@ L46:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_idleTimer") type QName(PackageNamespace("com.google.analytics.core"), "IdleTimer") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_idleTimer") type QName(PackageNamespace("com.google.analytics.core"), "IdleTimer") end
   trait getter QName(PackageNamespace(""), "debug")
    method
-    refid "com.google.analytics:GATracker/debug/getter"
+    refid "com.google.analytics:GATracker/instance/debug/getter"
     returns QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration")
     body
      maxstack 1
@@ -583,16 +583,16 @@ L46:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_debug")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_debug") type QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_debug") type QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration") end
   trait method QName(PackageNamespace(""), "addItem")
    method
-    refid "com.google.analytics:GATracker/addItem"
+    refid "com.google.analytics:GATracker/instance/addItem"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
@@ -609,7 +609,7 @@ L46:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       getlocal2
       getlocal3
@@ -623,11 +623,11 @@ L46:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_buffer") type QName(PackageNamespace("com.google.analytics.core"), "Buffer") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_config") type QName(PackageNamespace("com.google.analytics.v4"), "Configuration") end
-  trait method QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_bridgeFactory")
+  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_buffer") type QName(PackageNamespace("com.google.analytics.core"), "Buffer") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_config") type QName(PackageNamespace("com.google.analytics.v4"), "Configuration") end
+  trait method QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_bridgeFactory")
    method
-    refid "com.google.analytics:GATracker/_bridgeFactory"
+    refid "com.google.analytics:GATracker/instance/com.google.analytics:GATracker/instance/_bridgeFactory"
     returns QName(PackageNamespace("com.google.analytics.v4"), "GoogleAnalyticsAPI")
     body
      maxstack 4
@@ -650,8 +650,8 @@ L46:
 
       findpropstrict      QName(PackageNamespace("com.google.analytics.v4"), "Bridge")
       getlex              QName(PackageNamespace(""), "account")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_debug")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_jsproxy")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_jsproxy")
       constructprop       QName(PackageNamespace("com.google.analytics.v4"), "Bridge"), 3
       returnvalue
      end ; code
@@ -660,7 +660,7 @@ L46:
   end ; trait
   trait method QName(PackageNamespace(""), "clearIgnoredOrganic")
    method
-    refid "com.google.analytics:GATracker/clearIgnoredOrganic"
+    refid "com.google.analytics:GATracker/instance/clearIgnoredOrganic"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 1
@@ -671,7 +671,7 @@ L46:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "clearIgnoredOrganic"), 0
 
       returnvoid
@@ -681,7 +681,7 @@ L46:
   end ; trait
   trait setter QName(PackageNamespace(""), "account")
    method
-    refid "com.google.analytics:GATracker/account/setter"
+    refid "com.google.analytics:GATracker/instance/account/setter"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -693,9 +693,9 @@ L46:
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_account")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_account")
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_account")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_account")
 
       returnvoid
      end ; code
@@ -704,7 +704,7 @@ L46:
   end ; trait
   trait method QName(PackageNamespace(""), "setVar")
    method
-    refid "com.google.analytics:GATracker/setVar"
+    refid "com.google.analytics:GATracker/instance/setVar"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -716,7 +716,7 @@ L46:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "setVar"), 1
 
@@ -727,7 +727,7 @@ L46:
   end ; trait
   trait method QName(PackageNamespace(""), "build")
    method
-    refid "com.google.analytics:GATracker/build"
+    refid "com.google.analytics:GATracker/instance/build"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 1
@@ -742,8 +742,8 @@ L46:
       callproperty        QName(PackageNamespace(""), "isReady"), 0
       iftrue              L7
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_factory")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_factory"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_factory")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_factory"), 0
 
 L7:
       returnvoid
@@ -753,7 +753,7 @@ L7:
   end ; trait
   trait method QName(PackageNamespace(""), "addEventListener")
    method
-    refid "com.google.analytics:GATracker/addEventListener"
+    refid "com.google.analytics:GATracker/instance/addEventListener"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "Function")
     param QName(PackageNamespace(""), "Boolean")
@@ -773,7 +773,7 @@ L7:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_eventDispatcher")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_eventDispatcher")
       getlocal1
       getlocal2
       getlocal3
@@ -788,7 +788,7 @@ L7:
   end ; trait
   trait method QName(PackageNamespace(""), "setDomainName")
    method
-    refid "com.google.analytics:GATracker/setDomainName"
+    refid "com.google.analytics:GATracker/instance/setDomainName"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -800,7 +800,7 @@ L7:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "setDomainName"), 1
 
@@ -811,7 +811,7 @@ L7:
   end ; trait
   trait method QName(PackageNamespace(""), "createEventTracker")
    method
-    refid "com.google.analytics:GATracker/createEventTracker"
+    refid "com.google.analytics:GATracker/instance/createEventTracker"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace("com.google.analytics.core"), "EventTracker")
     body
@@ -823,7 +823,7 @@ L7:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       callproperty        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "createEventTracker"), 1
       returnvalue
@@ -833,7 +833,7 @@ L7:
   end ; trait
   trait method QName(PackageNamespace(""), "setCampSourceKey")
    method
-    refid "com.google.analytics:GATracker/setCampSourceKey"
+    refid "com.google.analytics:GATracker/instance/setCampSourceKey"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -845,7 +845,7 @@ L7:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "setCampSourceKey"), 1
 
@@ -854,11 +854,11 @@ L7:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_mode") type QName(PackageNamespace(""), "String") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_display") type QName(PackageNamespace("flash.display"), "DisplayObject") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_mode") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_display") type QName(PackageNamespace("flash.display"), "DisplayObject") end
   trait setter QName(PackageNamespace(""), "config")
    method
-    refid "com.google.analytics:GATracker/config/setter"
+    refid "com.google.analytics:GATracker/instance/config/setter"
     param QName(PackageNamespace("com.google.analytics.v4"), "Configuration")
     returns QName(PackageNamespace(""), "void")
     body
@@ -870,19 +870,19 @@ L7:
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_config")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_config")
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_config")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_config")
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_jsproxy") type QName(PackageNamespace("com.google.analytics.external"), "JavascriptProxy") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_jsproxy") type QName(PackageNamespace("com.google.analytics.external"), "JavascriptProxy") end
   trait method QName(PackageNamespace(""), "addTrans")
    method
-    refid "com.google.analytics:GATracker/addTrans"
+    refid "com.google.analytics:GATracker/instance/addTrans"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "Number")
@@ -901,7 +901,7 @@ L7:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       getlocal2
       getlocal3
@@ -919,7 +919,7 @@ L7:
   end ; trait
   trait method QName(PackageNamespace(""), "setCampContentKey")
    method
-    refid "com.google.analytics:GATracker/setCampContentKey"
+    refid "com.google.analytics:GATracker/instance/setCampContentKey"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -931,7 +931,7 @@ L7:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "setCampContentKey"), 1
 
@@ -940,10 +940,10 @@ L7:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_dom") type QName(PackageNamespace("com.google.analytics.external"), "HTMLDOM") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_dom") type QName(PackageNamespace("com.google.analytics.external"), "HTMLDOM") end
   trait method QName(PackageNamespace(""), "willTrigger")
    method
-    refid "com.google.analytics:GATracker/willTrigger"
+    refid "com.google.analytics:GATracker/instance/willTrigger"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "Boolean")
     body
@@ -955,7 +955,7 @@ L7:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_eventDispatcher")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_eventDispatcher")
       getlocal1
       callproperty        QName(PackageNamespace(""), "willTrigger"), 1
       returnvalue
@@ -965,7 +965,7 @@ L7:
   end ; trait
   trait method QName(PackageNamespace(""), "setLocalServerMode")
    method
-    refid "com.google.analytics:GATracker/setLocalServerMode"
+    refid "com.google.analytics:GATracker/instance/setLocalServerMode"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 1
@@ -976,7 +976,7 @@ L7:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "setLocalServerMode"), 0
 
       returnvoid
@@ -986,7 +986,7 @@ L7:
   end ; trait
   trait method QName(PackageNamespace(""), "isReady")
    method
-    refid "com.google.analytics:GATracker/isReady"
+    refid "com.google.analytics:GATracker/instance/isReady"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 1
@@ -997,7 +997,7 @@ L7:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_ready")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_ready")
       returnvalue
      end ; code
     end ; body
@@ -1005,7 +1005,7 @@ L7:
   end ; trait
   trait method QName(PackageNamespace(""), "getLocalGifPath")
    method
-    refid "com.google.analytics:GATracker/getLocalGifPath"
+    refid "com.google.analytics:GATracker/instance/getLocalGifPath"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -1016,7 +1016,7 @@ L7:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       callproperty        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "getLocalGifPath"), 0
       returnvalue
      end ; code
@@ -1025,7 +1025,7 @@ L7:
   end ; trait
   trait method QName(PackageNamespace(""), "setAllowAnchor")
    method
-    refid "com.google.analytics:GATracker/setAllowAnchor"
+    refid "com.google.analytics:GATracker/instance/setAllowAnchor"
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1037,7 +1037,7 @@ L7:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "setAllowAnchor"), 1
 
@@ -1048,7 +1048,7 @@ L7:
   end ; trait
   trait method QName(PackageNamespace(""), "clearIgnoredRef")
    method
-    refid "com.google.analytics:GATracker/clearIgnoredRef"
+    refid "com.google.analytics:GATracker/instance/clearIgnoredRef"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 1
@@ -1059,7 +1059,7 @@ L7:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "clearIgnoredRef"), 0
 
       returnvoid
@@ -1067,10 +1067,10 @@ L7:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_eventDispatcher") type QName(PackageNamespace("flash.events"), "EventDispatcher") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_eventDispatcher") type QName(PackageNamespace("flash.events"), "EventDispatcher") end
   trait getter QName(PackageNamespace(""), "mode")
    method
-    refid "com.google.analytics:GATracker/mode/getter"
+    refid "com.google.analytics:GATracker/instance/mode/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -1081,16 +1081,16 @@ L7:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_mode")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_mode")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_ready") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_ready") type QName(PackageNamespace(""), "Boolean") value False() end
   trait setter QName(PackageNamespace(""), "debug")
    method
-    refid "com.google.analytics:GATracker/debug/setter"
+    refid "com.google.analytics:GATracker/instance/debug/setter"
     param QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1102,9 +1102,9 @@ L7:
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_debug")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_debug")
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_debug")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_debug")
 
       returnvoid
      end ; code
@@ -1113,7 +1113,7 @@ L7:
   end ; trait
   trait method QName(PackageNamespace(""), "setLocalGifPath")
    method
-    refid "com.google.analytics:GATracker/setLocalGifPath"
+    refid "com.google.analytics:GATracker/instance/setLocalGifPath"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1125,7 +1125,7 @@ L7:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "setLocalGifPath"), 1
 
@@ -1136,7 +1136,7 @@ L7:
   end ; trait
   trait method QName(PackageNamespace(""), "getVersion")
    method
-    refid "com.google.analytics:GATracker/getVersion"
+    refid "com.google.analytics:GATracker/instance/getVersion"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -1147,7 +1147,7 @@ L7:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       callproperty        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "getVersion"), 0
       returnvalue
      end ; code
@@ -1156,7 +1156,7 @@ L7:
   end ; trait
   trait method QName(PackageNamespace(""), "setSampleRate")
    method
-    refid "com.google.analytics:GATracker/setSampleRate"
+    refid "com.google.analytics:GATracker/instance/setSampleRate"
     param QName(PackageNamespace(""), "Number")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1168,7 +1168,7 @@ L7:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "setSampleRate"), 1
 
@@ -1179,7 +1179,7 @@ L7:
   end ; trait
   trait method QName(PackageNamespace(""), "setCookiePath")
    method
-    refid "com.google.analytics:GATracker/setCookiePath"
+    refid "com.google.analytics:GATracker/instance/setCookiePath"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1191,7 +1191,7 @@ L7:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "setCookiePath"), 1
 
@@ -1202,7 +1202,7 @@ L7:
   end ; trait
   trait method QName(PackageNamespace(""), "setAllowHash")
    method
-    refid "com.google.analytics:GATracker/setAllowHash"
+    refid "com.google.analytics:GATracker/instance/setAllowHash"
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1214,7 +1214,7 @@ L7:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "setAllowHash"), 1
 
@@ -1225,7 +1225,7 @@ L7:
   end ; trait
   trait method QName(PackageNamespace(""), "addIgnoredOrganic")
    method
-    refid "com.google.analytics:GATracker/addIgnoredOrganic"
+    refid "com.google.analytics:GATracker/instance/addIgnoredOrganic"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1237,7 +1237,7 @@ L7:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "addIgnoredOrganic"), 1
 
@@ -1248,7 +1248,7 @@ L7:
   end ; trait
   trait method QName(PackageNamespace(""), "setLocalRemoteServerMode")
    method
-    refid "com.google.analytics:GATracker/setLocalRemoteServerMode"
+    refid "com.google.analytics:GATracker/instance/setLocalRemoteServerMode"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 1
@@ -1259,7 +1259,7 @@ L7:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "setLocalRemoteServerMode"), 0
 
       returnvoid
@@ -1269,7 +1269,7 @@ L7:
   end ; trait
   trait method QName(PackageNamespace(""), "cookiePathCopy")
    method
-    refid "com.google.analytics:GATracker/cookiePathCopy"
+    refid "com.google.analytics:GATracker/instance/cookiePathCopy"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1281,7 +1281,7 @@ L7:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "cookiePathCopy"), 1
 
@@ -1290,10 +1290,10 @@ L7:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_gifRequest") type QName(PackageNamespace("com.google.analytics.core"), "GIFRequest") end
-  trait method QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_factory")
+  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_gifRequest") type QName(PackageNamespace("com.google.analytics.core"), "GIFRequest") end
+  trait method QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_factory")
    method
-    refid "com.google.analytics:GATracker/_factory"
+    refid "com.google.analytics:GATracker/instance/com.google.analytics:GATracker/instance/_factory"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -1308,11 +1308,11 @@ L7:
       coerce              QName(PackageNamespace("com.google.analytics.v4"), "GoogleAnalyticsAPI")
       setlocal1
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_jsproxy")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_jsproxy")
       findpropstrict      QName(PackageNamespace("com.google.analytics.external"), "JavascriptProxy")
       getlex              QName(PackageNamespace(""), "debug")
       constructprop       QName(PackageNamespace("com.google.analytics.external"), "JavascriptProxy"), 1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_jsproxy")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_jsproxy")
 
       getlex              QName(PackageNamespace(""), "visualDebug")
       iffalse             L21
@@ -1320,7 +1320,7 @@ L7:
       getlex              QName(PackageNamespace(""), "debug")
       findpropstrict      QName(PackageNamespace("com.google.analytics.debug"), "Layout")
       getlex              QName(PackageNamespace(""), "debug")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_display")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_display")
       constructprop       QName(PackageNamespace("com.google.analytics.debug"), "Layout"), 2
       setproperty         QName(PackageNamespace(""), "layout")
 
@@ -1329,7 +1329,7 @@ L7:
       setproperty         QName(PackageNamespace(""), "active")
 
 L21:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlex              QName(PackageNamespace("com.google.analytics.core"), "TrackerCache")
       astypelate
       coerce              QName(PackageNamespace("com.google.analytics.core"), "TrackerCache")
@@ -1339,8 +1339,8 @@ L21:
 
 L27:
       label
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_bridgeFactory")
-      callproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_bridgeFactory"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_bridgeFactory")
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_bridgeFactory"), 0
       coerce              QName(PackageNamespace("com.google.analytics.v4"), "GoogleAnalyticsAPI")
       setlocal1
 
@@ -1350,8 +1350,8 @@ L33:
       label
 L34:
       label
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_trackerFactory")
-      callproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_trackerFactory"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_trackerFactory")
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_trackerFactory"), 0
       coerce              QName(PackageNamespace("com.google.analytics.v4"), "GoogleAnalyticsAPI")
       setlocal1
 
@@ -1397,13 +1397,13 @@ L57:
       callpropvoid        QName(PackageNamespace(""), "flush"), 0
 
 L65:
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_ready")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_ready")
       pushtrue
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_ready")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_ready")
 
       findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
       findpropstrict      QName(PackageNamespace("com.google.analytics.events"), "AnalyticsEvent")
@@ -1420,7 +1420,7 @@ L65:
   end ; trait
   trait method QName(PackageNamespace(""), "setCampTermKey")
    method
-    refid "com.google.analytics:GATracker/setCampTermKey"
+    refid "com.google.analytics:GATracker/instance/setCampTermKey"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1432,7 +1432,7 @@ L65:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "setCampTermKey"), 1
 
@@ -1441,9 +1441,9 @@ L65:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_trackerFactory")
+  trait method QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_trackerFactory")
    method
-    refid "com.google.analytics:GATracker/_trackerFactory"
+    refid "com.google.analytics:GATracker/instance/com.google.analytics:GATracker/instance/_trackerFactory"
     returns QName(PackageNamespace("com.google.analytics.v4"), "GoogleAnalyticsAPI")
     body
      maxstack 9
@@ -1464,65 +1464,65 @@ L65:
       add
       callpropvoid        QName(PackageNamespace(""), "info"), 1
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_adSense")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_adSense")
       findpropstrict      QName(PackageNamespace("com.google.analytics.external"), "AdSenseGlobals")
       getlex              QName(PackageNamespace(""), "debug")
       constructprop       QName(PackageNamespace("com.google.analytics.external"), "AdSenseGlobals"), 1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_adSense")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_adSense")
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_dom")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_dom")
       findpropstrict      QName(PackageNamespace("com.google.analytics.external"), "HTMLDOM")
       getlex              QName(PackageNamespace(""), "debug")
       constructprop       QName(PackageNamespace("com.google.analytics.external"), "HTMLDOM"), 1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_dom")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_dom")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_dom")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_dom")
       callpropvoid        QName(PackageNamespace(""), "cacheProperties"), 0
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_env")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_env")
       findpropstrict      QName(PackageNamespace("com.google.analytics.utils"), "Environment")
       pushstring          ""
       pushstring          ""
       pushstring          ""
       getlex              QName(PackageNamespace(""), "debug")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_dom")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_dom")
       constructprop       QName(PackageNamespace("com.google.analytics.utils"), "Environment"), 5
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_env")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_env")
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_buffer")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_buffer")
       findpropstrict      QName(PackageNamespace("com.google.analytics.core"), "Buffer")
       getlex              QName(PackageNamespace(""), "config")
       getlex              QName(PackageNamespace(""), "debug")
       pushfalse
       constructprop       QName(PackageNamespace("com.google.analytics.core"), "Buffer"), 3
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_buffer")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_buffer")
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_gifRequest")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_gifRequest")
       findpropstrict      QName(PackageNamespace("com.google.analytics.core"), "GIFRequest")
       getlex              QName(PackageNamespace(""), "config")
       getlex              QName(PackageNamespace(""), "debug")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_buffer")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_env")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_env")
       constructprop       QName(PackageNamespace("com.google.analytics.core"), "GIFRequest"), 4
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_gifRequest")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_gifRequest")
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_idleTimer")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_idleTimer")
       findpropstrict      QName(PackageNamespace("com.google.analytics.core"), "IdleTimer")
       getlex              QName(PackageNamespace(""), "config")
       getlex              QName(PackageNamespace(""), "debug")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_display")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_display")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_buffer")
       constructprop       QName(PackageNamespace("com.google.analytics.core"), "IdleTimer"), 4
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_idleTimer")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_idleTimer")
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_ecom")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_ecom")
       findpropstrict      QName(PackageNamespace("com.google.analytics.core"), "Ecommerce")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_debug")
       constructprop       QName(PackageNamespace("com.google.analytics.core"), "Ecommerce"), 1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_ecom")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_ecom")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_env")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_display")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_env")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_display")
       getproperty         QName(PackageNamespace(""), "stage")
       getproperty         QName(PackageNamespace(""), "loaderInfo")
       getproperty         QName(PackageNamespace(""), "url")
@@ -1532,11 +1532,11 @@ L65:
       getlex              QName(PackageNamespace(""), "account")
       getlex              QName(PackageNamespace(""), "config")
       getlex              QName(PackageNamespace(""), "debug")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_env")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_buffer")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_gifRequest")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_adSense")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_ecom")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_env")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_gifRequest")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_adSense")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_ecom")
       constructprop       QName(PackageNamespace("com.google.analytics.v4"), "Tracker"), 8
       returnvalue
      end ; code
@@ -1545,7 +1545,7 @@ L65:
   end ; trait
   trait method QName(PackageNamespace(""), "setCampNOKey")
    method
-    refid "com.google.analytics:GATracker/setCampNOKey"
+    refid "com.google.analytics:GATracker/instance/setCampNOKey"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1557,7 +1557,7 @@ L65:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "setCampNOKey"), 1
 
@@ -1568,7 +1568,7 @@ L65:
   end ; trait
   trait method QName(PackageNamespace(""), "setDetectTitle")
    method
-    refid "com.google.analytics:GATracker/setDetectTitle"
+    refid "com.google.analytics:GATracker/instance/setDetectTitle"
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1580,7 +1580,7 @@ L65:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "setDetectTitle"), 1
 
@@ -1589,10 +1589,10 @@ L65:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_ecom") type QName(PackageNamespace("com.google.analytics.core"), "Ecommerce") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_ecom") type QName(PackageNamespace("com.google.analytics.core"), "Ecommerce") end
   trait method QName(PackageNamespace(""), "clearOrganic")
    method
-    refid "com.google.analytics:GATracker/clearOrganic"
+    refid "com.google.analytics:GATracker/instance/clearOrganic"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 1
@@ -1603,7 +1603,7 @@ L65:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "clearOrganic"), 0
 
       returnvoid
@@ -1613,7 +1613,7 @@ L65:
   end ; trait
   trait method QName(PackageNamespace(""), "setCampaignTrack")
    method
-    refid "com.google.analytics:GATracker/setCampaignTrack"
+    refid "com.google.analytics:GATracker/instance/setCampaignTrack"
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1625,7 +1625,7 @@ L65:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "setCampaignTrack"), 1
 
@@ -1636,7 +1636,7 @@ L65:
   end ; trait
   trait method QName(PackageNamespace(""), "addIgnoredRef")
    method
-    refid "com.google.analytics:GATracker/addIgnoredRef"
+    refid "com.google.analytics:GATracker/instance/addIgnoredRef"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1648,7 +1648,7 @@ L65:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "addIgnoredRef"), 1
 
@@ -1659,7 +1659,7 @@ L65:
   end ; trait
   trait method QName(PackageNamespace(""), "getServiceMode")
    method
-    refid "com.google.analytics:GATracker/getServiceMode"
+    refid "com.google.analytics:GATracker/instance/getServiceMode"
     returns QName(PackageNamespace("com.google.analytics.core"), "ServerOperationMode")
     body
      maxstack 1
@@ -1670,7 +1670,7 @@ L65:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       callproperty        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "getServiceMode"), 0
       returnvalue
      end ; code
@@ -1679,7 +1679,7 @@ L65:
   end ; trait
   trait setter QName(PackageNamespace(""), "visualDebug")
    method
-    refid "com.google.analytics:GATracker/visualDebug/setter"
+    refid "com.google.analytics:GATracker/instance/visualDebug/setter"
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1691,9 +1691,9 @@ L65:
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_visualDebug")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_visualDebug")
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_visualDebug")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_visualDebug")
 
       returnvoid
      end ; code
@@ -1702,7 +1702,7 @@ L65:
   end ; trait
   trait method QName(PackageNamespace(""), "setCampMediumKey")
    method
-    refid "com.google.analytics:GATracker/setCampMediumKey"
+    refid "com.google.analytics:GATracker/instance/setCampMediumKey"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1714,7 +1714,7 @@ L65:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "setCampMediumKey"), 1
 
@@ -1723,10 +1723,10 @@ L65:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_account") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_account") type QName(PackageNamespace(""), "String") end
   trait method QName(PackageNamespace(""), "getDetectFlash")
    method
-    refid "com.google.analytics:GATracker/getDetectFlash"
+    refid "com.google.analytics:GATracker/instance/getDetectFlash"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 1
@@ -1737,7 +1737,7 @@ L65:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       callproperty        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "getDetectFlash"), 0
       returnvalue
      end ; code
@@ -1746,7 +1746,7 @@ L65:
   end ; trait
   trait getter QName(PackageNamespace(""), "visualDebug")
    method
-    refid "com.google.analytics:GATracker/visualDebug/getter"
+    refid "com.google.analytics:GATracker/instance/visualDebug/getter"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 1
@@ -1757,7 +1757,7 @@ L65:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_visualDebug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_visualDebug")
       returnvalue
      end ; code
     end ; body
@@ -1765,7 +1765,7 @@ L65:
   end ; trait
   trait method QName(PackageNamespace(""), "hasEventListener")
    method
-    refid "com.google.analytics:GATracker/hasEventListener"
+    refid "com.google.analytics:GATracker/instance/hasEventListener"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "Boolean")
     body
@@ -1777,7 +1777,7 @@ L65:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_eventDispatcher")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_eventDispatcher")
       getlocal1
       callproperty        QName(PackageNamespace(""), "hasEventListener"), 1
       returnvalue
@@ -1787,7 +1787,7 @@ L65:
   end ; trait
   trait method QName(PackageNamespace(""), "getAccount")
    method
-    refid "com.google.analytics:GATracker/getAccount"
+    refid "com.google.analytics:GATracker/instance/getAccount"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -1798,17 +1798,17 @@ L65:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       callproperty        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "getAccount"), 0
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker") type QName(PackageNamespace("com.google.analytics.v4"), "GoogleAnalyticsAPI") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker") type QName(PackageNamespace("com.google.analytics.v4"), "GoogleAnalyticsAPI") end
   trait method QName(PackageNamespace(""), "setSessionTimeout")
    method
-    refid "com.google.analytics:GATracker/setSessionTimeout"
+    refid "com.google.analytics:GATracker/instance/setSessionTimeout"
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1820,7 +1820,7 @@ L65:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       getlocal1
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "setSessionTimeout"), 1
 
@@ -1831,7 +1831,7 @@ L65:
   end ; trait
   trait method QName(PackageNamespace(""), "setRemoteServerMode")
    method
-    refid "com.google.analytics:GATracker/setRemoteServerMode"
+    refid "com.google.analytics:GATracker/instance/setRemoteServerMode"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 1
@@ -1842,7 +1842,7 @@ L65:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics:GATracker/instance"), "_tracker")
       callpropvoid        QName(Namespace("com.google.analytics.v4:GoogleAnalyticsAPI"), "setRemoteServerMode"), 0
 
       returnvoid
@@ -1852,7 +1852,7 @@ L65:
   end ; trait
  end ; instance
  cinit
-  refid "com.google.analytics:GATracker/cinit"
+  refid "com.google.analytics:GATracker/class/init"
   body
    maxstack 2
    localcount 1

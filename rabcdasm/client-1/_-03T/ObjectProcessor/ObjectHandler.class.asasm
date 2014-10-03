@@ -1,12 +1,12 @@
 class
  refid "_-03T:ObjectProcessor/ObjectHandler"
- instance QName(PrivateNamespace("*", "_-03T:ObjectProcessor#0"), "ObjectHandler")
+ instance QName(PrivateNamespace("*", "_-03T:ObjectProcessor"), "ObjectHandler")
   extends QName(PackageNamespace(""), "Object")
   flag SEALED
   flag PROTECTEDNS
   protectedns ProtectedNamespace("ObjectProcessor.as$54:ObjectHandler")
   iinit
-   refid "_-03T:ObjectProcessor/ObjectHandler/iinit"
+   refid "_-03T:ObjectProcessor/ObjectHandler/instance/init"
    param QName(PackageNamespace("_-qj"), "_-pn")
    param QName(PackageNamespace(""), "Function")
    body
@@ -23,21 +23,21 @@ class
 
      getlocal0
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "_-03T:ObjectProcessor/ObjectHandler"), "_matcher")
+     initproperty        QName(PrivateNamespace("*", "_-03T:ObjectProcessor/ObjectHandler/instance"), "_matcher")
 
      getlocal0
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "_-03T:ObjectProcessor/ObjectHandler"), "_handler")
+     initproperty        QName(PrivateNamespace("*", "_-03T:ObjectProcessor/ObjectHandler/instance"), "_handler")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-03T:ObjectProcessor/ObjectHandler"), "_matcher") type QName(PackageNamespace("_-qj"), "_-pn") end
-  trait slot QName(PrivateNamespace("*", "_-03T:ObjectProcessor/ObjectHandler"), "_handler") type QName(PackageNamespace(""), "Function") end
+  trait slot QName(PrivateNamespace("*", "_-03T:ObjectProcessor/ObjectHandler/instance"), "_matcher") type QName(PackageNamespace("_-qj"), "_-pn") end
+  trait slot QName(PrivateNamespace("*", "_-03T:ObjectProcessor/ObjectHandler/instance"), "_handler") type QName(PackageNamespace(""), "Function") end
   trait method QName(PackageNamespace(""), "handle")
    method
-    refid "_-03T:ObjectProcessor/ObjectHandler/handle"
+    refid "_-03T:ObjectProcessor/ObjectHandler/instance/handle"
     param QName(PackageNamespace(""), "Object")
     returns QName(PackageNamespace(""), "void")
     body
@@ -50,7 +50,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-03T:ObjectProcessor/ObjectHandler"), "_matcher")
+      getproperty         QName(PrivateNamespace("*", "_-03T:ObjectProcessor/ObjectHandler/instance"), "_matcher")
       getlocal1
       callproperty        QName(Namespace("_-08J"), "matches"), 1
       coerce_a
@@ -60,7 +60,7 @@ class
       pop
       getlocal0
       getlocal1
-      callproperty        QName(PrivateNamespace("*", "_-03T:ObjectProcessor/ObjectHandler"), "_handler"), 1
+      callproperty        QName(PrivateNamespace("*", "_-03T:ObjectProcessor/ObjectHandler/instance"), "_handler"), 1
       coerce_a
 L14:
       pop
@@ -71,7 +71,7 @@ L14:
   end ; trait
  end ; instance
  cinit
-  refid "_-03T:ObjectProcessor/ObjectHandler/cinit"
+  refid "_-03T:ObjectProcessor/ObjectHandler/class/init"
   body
    maxstack 1
    localcount 1

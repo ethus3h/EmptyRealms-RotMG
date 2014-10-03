@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-Mm")
   iinit
-   refid "_-0LC:_-0DW/iinit"
+   refid "_-0LC:_-0DW/instance/init"
    body
     maxstack 4
     localcount 3
@@ -19,12 +19,12 @@ class
      getlocal0
      getlex              QName(PackageNamespace("_-0LC"), "_-qO")
      getproperty         QName(PackageNamespace(""), "BUTTON1_EVENT")
-     initproperty        QName(PrivateNamespace("*", "_-0LC:_-0DW"), "_-0Kr")
+     initproperty        QName(PrivateNamespace("*", "_-0LC:_-0DW/instance"), "_-0Kr")
 
      getlocal0
      getlex              QName(PackageNamespace("_-0LC"), "_-qO")
      getproperty         QName(PackageNamespace(""), "BUTTON2_EVENT")
-     initproperty        QName(PrivateNamespace("*", "_-0LC:_-0DW"), "_-M4")
+     initproperty        QName(PrivateNamespace("*", "_-0LC:_-0DW/instance"), "_-M4")
 
      getlocal0
      constructsuper      0
@@ -43,14 +43,14 @@ class
     end ; code
    end ; body
   end ; method
-  trait const QName(PrivateNamespace("*", "_-0LC:_-0DW"), "_-cR") type QName(PackageNamespace(""), "String") value Utf8("Are you really sure you want to delete ${NAME} the ${DISPLAYID}?") end
-  trait const QName(PrivateNamespace("*", "_-0LC:_-0DW"), "_-0Kr") type QName(PackageNamespace(""), "String") end
-  trait const QName(PrivateNamespace("*", "_-0LC:_-0DW"), "_-M4") type QName(PackageNamespace(""), "String") end
+  trait const QName(PrivateNamespace("*", "_-0LC:_-0DW/instance"), "_-cR") type QName(PackageNamespace(""), "String") value Utf8("Are you really sure you want to delete ${NAME} the ${DISPLAYID}?") end
+  trait const QName(PrivateNamespace("*", "_-0LC:_-0DW/instance"), "_-0Kr") type QName(PackageNamespace(""), "String") end
+  trait const QName(PrivateNamespace("*", "_-0LC:_-0DW/instance"), "_-M4") type QName(PackageNamespace(""), "String") end
   trait slot QName(PackageNamespace(""), "deleteCharacter") type QName(PackageNamespace("_-sp"), "_-aJ") end
   trait slot QName(PackageNamespace(""), "cancel") type QName(PackageNamespace("_-sp"), "_-aJ") end
   trait method QName(PackageNamespace(""), "_-02C")
    method
-    refid "_-0LC:_-0DW/_-02C"
+    refid "_-0LC:_-0DW/instance/_-02C"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
@@ -64,7 +64,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0LC:_-0DW"), "_-cR")
+      getproperty         QName(PrivateNamespace("*", "_-0LC:_-0DW/instance"), "_-cR")
       pushstring          "${NAME}"
       getlocal1
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
@@ -86,16 +86,16 @@ class
       setlocal            4
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0LC:_-0DW"), "_-0Kr")
+      getproperty         QName(PrivateNamespace("*", "_-0LC:_-0DW/instance"), "_-0Kr")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0LC:_-0DW"), "onCancel")
+      getproperty         QName(PrivateNamespace("*", "_-0LC:_-0DW/instance"), "onCancel")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       getlocal            4
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0LC:_-0DW"), "_-M4")
+      getproperty         QName(PrivateNamespace("*", "_-0LC:_-0DW/instance"), "_-M4")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0LC:_-0DW"), "onDelete")
+      getproperty         QName(PrivateNamespace("*", "_-0LC:_-0DW/instance"), "onDelete")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       findpropstrict      QName(PackageNamespace(""), "addChild")
@@ -107,9 +107,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-0LC:_-0DW"), "onCancel")
+  trait method QName(PrivateNamespace("*", "_-0LC:_-0DW/instance"), "onCancel")
    method
-    refid "_-0LC:_-0DW/onCancel"
+    refid "_-0LC:_-0DW/instance/_-0LC:_-0DW/instance/onCancel"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -130,9 +130,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-0LC:_-0DW"), "onDelete")
+  trait method QName(PrivateNamespace("*", "_-0LC:_-0DW/instance"), "onDelete")
    method
-    refid "_-0LC:_-0DW/onDelete"
+    refid "_-0LC:_-0DW/instance/_-0LC:_-0DW/instance/onDelete"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -155,7 +155,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-0LC:_-0DW/cinit"
+  refid "_-0LC:_-0DW/class/init"
   body
    maxstack 3
    localcount 1

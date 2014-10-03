@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("mx.utils:NameUtil")
   iinit
-   refid "mx.utils:NameUtil/iinit"
+   refid "mx.utils:NameUtil/instance/init"
    body
     maxstack 1
     localcount 1
@@ -25,7 +25,7 @@ class
   end ; method
  end ; instance
  cinit
-  refid "mx.utils:NameUtil/cinit"
+  refid "mx.utils:NameUtil/class/init"
   body
    maxstack 2
    localcount 1
@@ -39,19 +39,19 @@ class
     pushstring          "4.6.0.23201"
     initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
 
-    findproperty        QName(PrivateNamespace("*", "mx.utils:NameUtil"), "counter")
+    findproperty        QName(PrivateNamespace("*", "mx.utils:NameUtil/class"), "counter")
     pushbyte            0
-    setproperty         QName(PrivateNamespace("*", "mx.utils:NameUtil"), "counter")
+    setproperty         QName(PrivateNamespace("*", "mx.utils:NameUtil/class"), "counter")
 
     returnvoid
    end ; code
   end ; body
  end ; method
  trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.6.0.23201") end
- trait slot QName(PrivateNamespace("*", "mx.utils:NameUtil"), "counter") slotid 2 type QName(PackageNamespace(""), "int") value Integer(0) end
+ trait slot QName(PrivateNamespace("*", "mx.utils:NameUtil/class"), "counter") slotid 2 type QName(PackageNamespace(""), "int") value Integer(0) end
  trait method QName(PackageNamespace(""), "createUniqueName") flag FINAL dispid 3
   method
-   refid "mx.utils:NameUtil/createUniqueName"
+   refid "mx.utils:NameUtil/class/createUniqueName"
    param QName(PackageNamespace(""), "Object")
    returns QName(PackageNamespace(""), "String")
    body
@@ -123,18 +123,18 @@ L42:
 
 L47:
      getlocal2
-     findpropstrict      QName(PrivateNamespace("*", "mx.utils:NameUtil"), "counter")
+     findpropstrict      QName(PrivateNamespace("*", "mx.utils:NameUtil/class"), "counter")
      dup
      setlocal            5
 
-     getproperty         QName(PrivateNamespace("*", "mx.utils:NameUtil"), "counter")
+     getproperty         QName(PrivateNamespace("*", "mx.utils:NameUtil/class"), "counter")
      dup
      increment_i
      setlocal            6
 
      getlocal            5
      getlocal            6
-     setproperty         QName(PrivateNamespace("*", "mx.utils:NameUtil"), "counter")
+     setproperty         QName(PrivateNamespace("*", "mx.utils:NameUtil/class"), "counter")
 
      kill                6
      kill                5
@@ -146,7 +146,7 @@ L47:
  end ; trait
  trait method QName(PackageNamespace(""), "displayObjectToString") flag FINAL dispid 4
   method
-   refid "mx.utils:NameUtil/displayObjectToString"
+   refid "mx.utils:NameUtil/class/displayObjectToString"
    param QName(PackageNamespace("flash.display"), "DisplayObject")
    returns QName(PackageNamespace(""), "String")
    body
@@ -220,14 +220,14 @@ L40:
      pop
      getlocal3
      pushstring          "id"
-     getproperty         MultinameL([PrivateNamespace("*", "mx.utils:NameUtil"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace(""), PrivateNamespace("*", "mx.utils:NameUtil/displayObjectToString"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), ProtectedNamespace("mx.utils:NameUtil"), StaticProtectedNs("mx.utils:NameUtil")])
+     getproperty         MultinameL([PrivateNamespace("*", "mx.utils:NameUtil/class"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace(""), PrivateNamespace("*", "mx.utils:NameUtil/class/displayObjectToString"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), ProtectedNamespace("mx.utils:NameUtil"), StaticProtectedNs("mx.utils:NameUtil")])
      convert_b
 L50:
      iffalse             L56
 
      getlocal3
      pushstring          "id"
-     getproperty         MultinameL([PrivateNamespace("*", "mx.utils:NameUtil"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace(""), PrivateNamespace("*", "mx.utils:NameUtil/displayObjectToString"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), ProtectedNamespace("mx.utils:NameUtil"), StaticProtectedNs("mx.utils:NameUtil")])
+     getproperty         MultinameL([PrivateNamespace("*", "mx.utils:NameUtil/class"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace(""), PrivateNamespace("*", "mx.utils:NameUtil/class/displayObjectToString"), PackageNamespace("mx.utils"), PackageInternalNs("mx.utils"), ProtectedNamespace("mx.utils:NameUtil"), StaticProtectedNs("mx.utils:NameUtil")])
      coerce_s
      jump                L59
 
@@ -326,7 +326,7 @@ L118:
  end ; trait
  trait method QName(PackageNamespace(""), "getUnqualifiedClassName") flag FINAL dispid 5
   method
-   refid "mx.utils:NameUtil/getUnqualifiedClassName"
+   refid "mx.utils:NameUtil/class/getUnqualifiedClassName"
    param QName(PackageNamespace(""), "Object")
    returns QName(PackageNamespace(""), "String")
    body

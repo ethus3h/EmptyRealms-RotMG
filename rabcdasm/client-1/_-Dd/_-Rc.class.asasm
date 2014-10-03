@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-bw")
   iinit
-   refid "_-Dd:_-Rc/iinit"
+   refid "_-Dd:_-Rc/instance/init"
    param QName(PackageNamespace(""), "String")
    body
     maxstack 7
@@ -52,14 +52,14 @@ L23:
      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
      getproperty         QName(PackageNamespace(""), "CLICK")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-Dd:_-Rc"), "onCancel")
+     getproperty         QName(PrivateNamespace("*", "_-Dd:_-Rc/instance/init"), "onCancel")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
      getlex              QName(PackageNamespace(""), "_-uu")
      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
      getproperty         QName(PackageNamespace(""), "CLICK")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-Dd:_-Rc"), "_-FH")
+     getproperty         QName(PrivateNamespace("*", "_-Dd:_-Rc/instance/init"), "_-FH")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
      returnvoid
@@ -67,9 +67,9 @@ L23:
    end ; body
   end ; method
   trait slot QName(PackageNamespace(""), "_-Ow") type QName(PackageNamespace("_-0Dd"), "_-OI") end
-  trait method QName(PrivateNamespace("*", "_-Dd:_-Rc"), "onCancel")
+  trait method QName(PrivateNamespace("*", "_-Dd:_-Rc/instance/init"), "onCancel")
    method
-    refid "_-Dd:_-Rc/onCancel"
+    refid "_-Dd:_-Rc/instance/_-Dd:_-Rc/instance/init/onCancel"
     param QName(PackageNamespace("flash.events"), "MouseEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -93,9 +93,9 @@ L23:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Dd:_-Rc"), "_-FH")
+  trait method QName(PrivateNamespace("*", "_-Dd:_-Rc/instance/init"), "_-FH")
    method
-    refid "_-Dd:_-Rc/_-FH"
+    refid "_-Dd:_-Rc/instance/_-Dd:_-Rc/instance/init/_-FH"
     param QName(PackageNamespace("flash.events"), "MouseEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -121,7 +121,7 @@ L23:
   end ; trait
  end ; instance
  cinit
-  refid "_-Dd:_-Rc/cinit"
+  refid "_-Dd:_-Rc/class/init"
   body
    maxstack 3
    localcount 1

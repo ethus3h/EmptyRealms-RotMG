@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("com.google.analytics.core:Domain")
   iinit
-   refid "com.google.analytics.core:Domain/iinit"
+   refid "com.google.analytics.core:Domain/instance/init"
    param QName(PackageNamespace("com.google.analytics.core"), "DomainNameMode")
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration")
@@ -26,9 +26,9 @@ class
      getlocal0
      constructsuper      0
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Domain"), "_debug")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Domain/instance"), "_debug")
      getlocal3
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Domain"), "_debug")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Domain/instance"), "_debug")
 
      getlocal1
      pushnull
@@ -40,9 +40,9 @@ class
      setlocal1
 
 L14:
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Domain"), "_mode")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Domain/instance"), "_mode")
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Domain"), "_mode")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Domain/instance"), "_mode")
 
      getlocal1
      getlex              QName(PackageNamespace("com.google.analytics.core"), "DomainNameMode")
@@ -56,9 +56,9 @@ L14:
      jump                L28
 
 L25:
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Domain"), "_name")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Domain/instance"), "_name")
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Domain"), "_name")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Domain/instance"), "_name")
 
 L28:
      returnvoid
@@ -67,7 +67,7 @@ L28:
   end ; method
   trait getter QName(PackageNamespace(""), "mode")
    method
-    refid "com.google.analytics.core:Domain/mode/getter"
+    refid "com.google.analytics.core:Domain/instance/mode/getter"
     returns QName(PackageNamespace("com.google.analytics.core"), "DomainNameMode")
     body
      maxstack 1
@@ -78,17 +78,17 @@ L28:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Domain"), "_mode")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Domain/instance"), "_mode")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Domain"), "_mode") type QName(PackageNamespace("com.google.analytics.core"), "DomainNameMode") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Domain"), "_debug") type QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Domain/instance"), "_mode") type QName(PackageNamespace("com.google.analytics.core"), "DomainNameMode") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Domain/instance"), "_debug") type QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration") end
   trait setter QName(PackageNamespace(""), "mode")
    method
-    refid "com.google.analytics.core:Domain/mode/setter"
+    refid "com.google.analytics.core:Domain/instance/mode/setter"
     param QName(PackageNamespace("com.google.analytics.core"), "DomainNameMode")
     returns QName(PackageNamespace(""), "void")
     body
@@ -100,18 +100,18 @@ L28:
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Domain"), "_mode")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Domain/instance"), "_mode")
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Domain"), "_mode")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Domain/instance"), "_mode")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Domain"), "_mode")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Domain/instance"), "_mode")
       getlex              QName(PackageNamespace("com.google.analytics.core"), "DomainNameMode")
       getproperty         QName(PackageNamespace(""), "none")
       ifne                L12
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Domain"), "_name")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Domain/instance"), "_name")
       pushstring          ""
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Domain"), "_name")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Domain/instance"), "_name")
 
 L12:
       returnvoid
@@ -119,10 +119,10 @@ L12:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Domain"), "_name") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Domain/instance"), "_name") type QName(PackageNamespace(""), "String") end
   trait getter QName(PackageNamespace(""), "name")
    method
-    refid "com.google.analytics.core:Domain/name/getter"
+    refid "com.google.analytics.core:Domain/instance/name/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -133,7 +133,7 @@ L12:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Domain"), "_name")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Domain/instance"), "_name")
       returnvalue
      end ; code
     end ; body
@@ -141,7 +141,7 @@ L12:
   end ; trait
   trait setter QName(PackageNamespace(""), "name")
    method
-    refid "com.google.analytics.core:Domain/name/setter"
+    refid "com.google.analytics.core:Domain/instance/name/setter"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -163,12 +163,12 @@ L12:
       iffalse             L13
 
       pop
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Domain"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Domain/instance"), "_debug")
       convert_b
 L13:
       iffalse             L21
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Domain"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Domain/instance"), "_debug")
       pushstring          "missing leading period \".\", cookie will only be accessible on "
       getlocal1
       add
@@ -177,9 +177,9 @@ L13:
       callpropvoid        QName(PackageNamespace(""), "warning"), 2
 
 L21:
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Domain"), "_name")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Domain/instance"), "_name")
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Domain"), "_name")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:Domain/instance"), "_name")
 
       returnvoid
      end ; code
@@ -188,7 +188,7 @@ L21:
   end ; trait
  end ; instance
  cinit
-  refid "com.google.analytics.core:Domain/cinit"
+  refid "com.google.analytics.core:Domain/class/init"
   body
    maxstack 1
    localcount 1

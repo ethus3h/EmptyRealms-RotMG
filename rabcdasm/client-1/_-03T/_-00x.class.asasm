@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-03s")
   iinit
-   refid "_-03T:_-00x/iinit"
+   refid "_-03T:_-00x/instance/init"
    param QName(PackageNamespace("_-0-p"), "_-Ly")
    body
     maxstack 5
@@ -21,45 +21,45 @@ class
      getlex              QName(PackageNamespace("_-03T"), "_-078")
      getlex              QName(PackageNamespace("_-03T"), "_-00x")
      callproperty        QName(PackageNamespace(""), "create"), 1
-     initproperty        QName(PrivateNamespace("*", "_-03T:_-00x"), "_-ul")
+     initproperty        QName(PrivateNamespace("*", "_-03T:_-00x/instance"), "_-ul")
 
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
      pushtrue
      constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 1
-     initproperty        QName(PrivateNamespace("*", "_-03T:_-00x"), " each")
+     initproperty        QName(PrivateNamespace("*", "_-03T:_-00x/instance"), " each")
 
      getlocal0
      findpropstrict      QName(PackageNamespace("_-0BK"), "_-0DC")
      constructprop       QName(PackageNamespace("_-0BK"), "_-0DC"), 0
-     initproperty        QName(PrivateNamespace("*", "_-03T:_-00x"), "_-07e")
+     initproperty        QName(PrivateNamespace("*", "_-03T:_-00x/instance"), "_-07e")
 
      getlocal0
      constructsuper      0
 
      getlocal0
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "_-03T:_-00x"), "_-rA")
+     initproperty        QName(PrivateNamespace("*", "_-03T:_-00x/instance"), "_-rA")
 
      getlocal0
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-03T:_-00x"), "_-rA")
+     getproperty         QName(PrivateNamespace("*", "_-03T:_-00x/instance"), "_-rA")
      getlocal0
      callproperty        QName(Namespace("_-06J"), "_-0H4"), 1
-     initproperty        QName(PrivateNamespace("*", "_-03T:_-00x"), "_-eo")
+     initproperty        QName(PrivateNamespace("*", "_-03T:_-00x/instance"), "_-eo")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait const QName(PrivateNamespace("*", "_-03T:_-00x"), "_-ul") type QName(PackageNamespace(""), "String") end
-  trait const QName(PrivateNamespace("*", "_-03T:_-00x"), " each") type QName(PackageNamespace("flash.utils"), "Dictionary") end
-  trait const QName(PrivateNamespace("*", "_-03T:_-00x"), "_-07e") type QName(PackageNamespace("_-0BK"), "_-0Iq") end
-  trait slot QName(PrivateNamespace("*", "_-03T:_-00x"), "_-rA") type QName(PackageNamespace("_-0-p"), "_-Ly") end
-  trait slot QName(PrivateNamespace("*", "_-03T:_-00x"), "_-eo") type QName(PackageNamespace("_-0-p"), "_-Q5") end
+  trait const QName(PrivateNamespace("*", "_-03T:_-00x/instance"), "_-ul") type QName(PackageNamespace(""), "String") end
+  trait const QName(PrivateNamespace("*", "_-03T:_-00x/instance"), " each") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+  trait const QName(PrivateNamespace("*", "_-03T:_-00x/instance"), "_-07e") type QName(PackageNamespace("_-0BK"), "_-0Iq") end
+  trait slot QName(PrivateNamespace("*", "_-03T:_-00x/instance"), "_-rA") type QName(PackageNamespace("_-0-p"), "_-Ly") end
+  trait slot QName(PrivateNamespace("*", "_-03T:_-00x/instance"), "_-eo") type QName(PackageNamespace("_-0-p"), "_-Q5") end
   trait method QName(PackageNamespace(""), "_-0My")
    method
-    refid "_-03T:_-00x/_-0My"
+    refid "_-03T:_-00x/instance/_-0My"
     param QName(PackageNamespace(""), "Object")
     returns QName(PackageNamespace(""), "void")
     body
@@ -81,9 +81,9 @@ class
       iffalse             L26
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-03T:_-00x"), " each")
+      getproperty         QName(PrivateNamespace("*", "_-03T:_-00x/instance"), " each")
       getlocal1
-      getproperty         MultinameL([PrivateNamespace("*", "_-03T:_-00x"), PackageNamespace("_-03T"), PackageNamespace(""), PrivateNamespace("*", "_-03T:_-00x/_-0My"), PackageInternalNs("_-03T"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-03s"), StaticProtectedNs("_-03s")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-03T:_-00x/instance"), PackageNamespace("_-03T"), PackageNamespace(""), PrivateNamespace("*", "_-03T:_-00x/instance/_-0My"), PackageInternalNs("_-03T"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-03s"), StaticProtectedNs("_-03s")])
       coerce_a
       dup
       iftrue              L24
@@ -102,38 +102,38 @@ L24:
 
 L26:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-03T:_-00x"), "_-07e")
+      getproperty         QName(PrivateNamespace("*", "_-03T:_-00x/instance"), "_-07e")
       getlocal1
       callproperty        QName(Namespace("_-vI"), "getClass"), 1
       coerce              QName(PackageNamespace(""), "Class")
       setlocal2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-03T:_-00x"), " each")
+      getproperty         QName(PrivateNamespace("*", "_-03T:_-00x/instance"), " each")
       getlocal2
-      getproperty         MultinameL([PrivateNamespace("*", "_-03T:_-00x"), PackageNamespace("_-03T"), PackageNamespace(""), PrivateNamespace("*", "_-03T:_-00x/_-0My"), PackageInternalNs("_-03T"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-03s"), StaticProtectedNs("_-03s")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-03T:_-00x/instance"), PackageNamespace("_-03T"), PackageNamespace(""), PrivateNamespace("*", "_-03T:_-00x/instance/_-0My"), PackageInternalNs("_-03T"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-03s"), StaticProtectedNs("_-03s")])
       iffalse             L38
 
       returnvoid
 
 L38:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-03T:_-00x"), "_-eo")
+      getproperty         QName(PrivateNamespace("*", "_-03T:_-00x/instance"), "_-eo")
       pushstring          "Installing extension {0}"
       getlocal1
       newarray            1
       callpropvoid        QName(Namespace("_-4t"), "debug"), 2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-03T:_-00x"), " each")
+      getproperty         QName(PrivateNamespace("*", "_-03T:_-00x/instance"), " each")
       getlocal2
       pushtrue
-      setproperty         MultinameL([PrivateNamespace("*", "_-03T:_-00x"), PackageNamespace("_-03T"), PackageNamespace(""), PrivateNamespace("*", "_-03T:_-00x/_-0My"), PackageInternalNs("_-03T"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-03s"), StaticProtectedNs("_-03s")])
+      setproperty         MultinameL([PrivateNamespace("*", "_-03T:_-00x/instance"), PackageNamespace("_-03T"), PackageNamespace(""), PrivateNamespace("*", "_-03T:_-00x/instance/_-0My"), PackageInternalNs("_-03T"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-03s"), StaticProtectedNs("_-03s")])
 
       getlocal1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-03T:_-00x"), "_-rA")
-      callpropvoid        Multiname("extend", [PrivateNamespace("*", "_-03T:_-00x"), PackageNamespace("_-03T"), PackageNamespace(""), PrivateNamespace("*", "_-03T:_-00x/_-0My"), PackageInternalNs("_-03T"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-03s"), StaticProtectedNs("_-03s")]), 1
+      getproperty         QName(PrivateNamespace("*", "_-03T:_-00x/instance"), "_-rA")
+      callpropvoid        Multiname("extend", [PrivateNamespace("*", "_-03T:_-00x/instance"), PackageNamespace("_-03T"), PackageNamespace(""), PrivateNamespace("*", "_-03T:_-00x/instance/_-0My"), PackageInternalNs("_-03T"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-03s"), StaticProtectedNs("_-03s")]), 1
 
 L53:
       returnvoid
@@ -143,7 +143,7 @@ L53:
   end ; trait
   trait method QName(PackageNamespace(""), "toString")
    method
-    refid "_-03T:_-00x/toString"
+    refid "_-03T:_-00x/instance/toString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -155,7 +155,7 @@ L53:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-03T:_-00x"), "_-ul")
+      getproperty         QName(PrivateNamespace("*", "_-03T:_-00x/instance"), "_-ul")
       returnvalue
      end ; code
     end ; body
@@ -163,7 +163,7 @@ L53:
   end ; trait
  end ; instance
  cinit
-  refid "_-03T:_-00x/cinit"
+  refid "_-03T:_-00x/class/init"
   body
    maxstack 3
    localcount 1

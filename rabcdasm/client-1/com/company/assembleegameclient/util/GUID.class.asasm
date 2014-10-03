@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-aw")
   iinit
-   refid "com.company.assembleegameclient.util:GUID/iinit"
+   refid "com.company.assembleegameclient.util:GUID/instance/init"
    body
     maxstack 3
     localcount 3
@@ -25,7 +25,7 @@ class
   end ; method
  end ; instance
  cinit
-  refid "com.company.assembleegameclient.util:GUID/cinit"
+  refid "com.company.assembleegameclient.util:GUID/class/init"
   body
    maxstack 4
    localcount 3
@@ -35,9 +35,9 @@ class
     getlocal0
     pushscope
 
-    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "counter")
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "counter")
     pushbyte            0
-    setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "counter")
+    setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "counter")
 
     returnvoid
    end ; code
@@ -45,7 +45,7 @@ class
  end ; method
  trait method QName(PackageNamespace(""), "create") flag FINAL dispid 3
   method
-   refid "com.company.assembleegameclient.util:GUID/create"
+   refid "com.company.assembleegameclient.util:GUID/class/create"
    returns QName(PackageNamespace(""), "String")
    body
     maxstack 7
@@ -79,17 +79,17 @@ class
      coerce_s
      setlocal            4
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-0D4")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-0D4")
      getlocal2
      getlocal            4
      add
      getlocal3
      add
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "counter")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "counter")
      dup
      setlocal            5
 
-     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "counter")
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "counter")
      convert_d
      dup
      increment
@@ -97,22 +97,22 @@ class
 
      getlocal            5
      getlocal            6
-     setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "counter")
+     setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "counter")
 
      kill                6
      kill                5
      add
-     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-0D4"), 1
+     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-0D4"), 1
      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toUpperCase"), 0
      returnvalue
     end ; code
    end ; body
   end ; method
  end ; trait
- trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "counter") slotid 1 type QName(PackageNamespace(""), "Number") value Integer(0) end
- trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-0D4") flag FINAL dispid 4
+ trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "counter") slotid 1 type QName(PackageNamespace(""), "Number") value Integer(0) end
+ trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-0D4") flag FINAL dispid 4
   method
-   refid "com.company.assembleegameclient.util:GUID/_-0D4"
+   refid "com.company.assembleegameclient.util:GUID/class/com.company.assembleegameclient.util:GUID/class/_-0D4"
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace(""), "String")
    body
@@ -124,17 +124,17 @@ class
      getlocal0
      pushscope
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-042")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-042")
      getlocal1
-     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-042"), 1
+     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-042"), 1
      returnvalue
     end ; code
    end ; body
   end ; method
  end ; trait
- trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-042") flag FINAL dispid 5
+ trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-042") flag FINAL dispid 5
   method
-   refid "com.company.assembleegameclient.util:GUID/_-042"
+   refid "com.company.assembleegameclient.util:GUID/class/com.company.assembleegameclient.util:GUID/class/_-042"
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace(""), "String")
    body
@@ -146,25 +146,25 @@ class
      getlocal0
      pushscope
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-rD")
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-08X")
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-KG")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-rD")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-08X")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-KG")
      getlocal1
-     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-KG"), 1
+     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-KG"), 1
      getlocal1
      getproperty         QName(PackageNamespace(""), "length")
      pushbyte            8
      multiply
-     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-08X"), 2
-     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-rD"), 1
+     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-08X"), 2
+     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-rD"), 1
      returnvalue
     end ; code
    end ; body
   end ; method
  end ; trait
- trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-08X") flag FINAL dispid 6
+ trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-08X") flag FINAL dispid 6
   method
-   refid "com.company.assembleegameclient.util:GUID/_-08X"
+   refid "com.company.assembleegameclient.util:GUID/class/com.company.assembleegameclient.util:GUID/class/_-08X"
    param QName(PackageNamespace(""), "Array")
    param QName(PackageNamespace(""), "Number")
    returns QName(PackageNamespace(""), "Array")
@@ -206,7 +206,7 @@ class
      getlocal2
      pushbyte            5
      rshift
-     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#1"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class/com.company.assembleegameclient.util:GUID/class"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
      pushshort           128
      pushbyte            24
      getlocal2
@@ -215,7 +215,7 @@ class
      subtract
      lshift
      bitor
-     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#1"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class/com.company.assembleegameclient.util:GUID/class"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
 
      getlocal1
      getlocal2
@@ -228,7 +228,7 @@ class
      pushbyte            15
      add
      getlocal2
-     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#1"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class/com.company.assembleegameclient.util:GUID/class"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
 
      findpropstrict      QName(PackageNamespace(""), "Array")
      pushbyte            80
@@ -302,68 +302,68 @@ L90:
      getlocal            9
      getlocal            15
      add
-     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#1"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
-     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#1"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class/com.company.assembleegameclient.util:GUID/class"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class/com.company.assembleegameclient.util:GUID/class"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
 
      jump                L132
 
 L103:
      getlocal3
      getlocal            15
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "rol")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "rol")
      getlocal3
      getlocal            15
      pushbyte            3
      subtract
-     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#1"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class/com.company.assembleegameclient.util:GUID/class"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
      getlocal3
      getlocal            15
      pushbyte            8
      subtract
-     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#1"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class/com.company.assembleegameclient.util:GUID/class"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
      bitxor
      getlocal3
      getlocal            15
      pushbyte            14
      subtract
-     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#1"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class/com.company.assembleegameclient.util:GUID/class"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
      bitxor
      getlocal3
      getlocal            15
      pushbyte            16
      subtract
-     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#1"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class/com.company.assembleegameclient.util:GUID/class"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
      bitxor
      pushbyte            1
-     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "rol"), 2
-     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#1"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
+     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "rol"), 2
+     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class/com.company.assembleegameclient.util:GUID/class"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
 
 L132:
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-ea")
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-ea")
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "rol")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-ea")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-ea")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "rol")
      getlocal            4
      pushbyte            5
-     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "rol"), 2
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "sha1_ft")
+     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "rol"), 2
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "sha1_ft")
      getlocal            15
      getlocal            5
      getlocal            6
      getlocal            7
-     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "sha1_ft"), 4
-     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-ea"), 2
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-ea")
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-ea")
+     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "sha1_ft"), 4
+     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-ea"), 2
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-ea")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-ea")
      getlocal            8
      getlocal3
      getlocal            15
-     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#1"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
-     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-ea"), 2
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "sha1_kt")
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class/com.company.assembleegameclient.util:GUID/class"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
+     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-ea"), 2
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "sha1_kt")
      getlocal            15
-     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "sha1_kt"), 1
-     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-ea"), 2
-     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-ea"), 2
+     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "sha1_kt"), 1
+     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-ea"), 2
+     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-ea"), 2
      convert_d
      setlocal            16
 
@@ -375,10 +375,10 @@ L132:
      convert_d
      setlocal            7
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "rol")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "rol")
      getlocal            5
      pushbyte            30
-     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "rol"), 2
+     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "rol"), 2
      convert_d
      setlocal            6
 
@@ -400,38 +400,38 @@ L181:
      pushbyte            80
      iflt                L90
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-ea")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-ea")
      getlocal            4
      getlocal            10
-     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-ea"), 2
+     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-ea"), 2
      convert_d
      setlocal            4
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-ea")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-ea")
      getlocal            5
      getlocal            11
-     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-ea"), 2
+     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-ea"), 2
      convert_d
      setlocal            5
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-ea")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-ea")
      getlocal            6
      getlocal            12
-     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-ea"), 2
+     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-ea"), 2
      convert_d
      setlocal            6
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-ea")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-ea")
      getlocal            7
      getlocal            13
-     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-ea"), 2
+     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-ea"), 2
      convert_d
      setlocal            7
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-ea")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-ea")
      getlocal            8
      getlocal            14
-     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-ea"), 2
+     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-ea"), 2
      convert_d
      setlocal            8
 
@@ -459,9 +459,9 @@ L219:
    end ; body
   end ; method
  end ; trait
- trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "sha1_ft") flag FINAL dispid 7
+ trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "sha1_ft") flag FINAL dispid 7
   method
-   refid "com.company.assembleegameclient.util:GUID/sha1_ft"
+   refid "com.company.assembleegameclient.util:GUID/class/com.company.assembleegameclient.util:GUID/class/sha1_ft"
    param QName(PackageNamespace(""), "Number")
    param QName(PackageNamespace(""), "Number")
    param QName(PackageNamespace(""), "Number")
@@ -531,9 +531,9 @@ L38:
    end ; body
   end ; method
  end ; trait
- trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "sha1_kt") flag FINAL dispid 8
+ trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "sha1_kt") flag FINAL dispid 8
   method
-   refid "com.company.assembleegameclient.util:GUID/sha1_kt"
+   refid "com.company.assembleegameclient.util:GUID/class/com.company.assembleegameclient.util:GUID/class/sha1_kt"
    param QName(PackageNamespace(""), "Number")
    returns QName(PackageNamespace(""), "Number")
    body
@@ -580,9 +580,9 @@ L22:
    end ; body
   end ; method
  end ; trait
- trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-ea") flag FINAL dispid 9
+ trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-ea") flag FINAL dispid 9
   method
-   refid "com.company.assembleegameclient.util:GUID/_-ea"
+   refid "com.company.assembleegameclient.util:GUID/class/com.company.assembleegameclient.util:GUID/class/_-ea"
    param QName(PackageNamespace(""), "Number")
    param QName(PackageNamespace(""), "Number")
    returns QName(PackageNamespace(""), "Number")
@@ -631,9 +631,9 @@ L22:
    end ; body
   end ; method
  end ; trait
- trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "rol") flag FINAL dispid 10
+ trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "rol") flag FINAL dispid 10
   method
-   refid "com.company.assembleegameclient.util:GUID/rol"
+   refid "com.company.assembleegameclient.util:GUID/class/com.company.assembleegameclient.util:GUID/class/rol"
    param QName(PackageNamespace(""), "Number")
    param QName(PackageNamespace(""), "Number")
    returns QName(PackageNamespace(""), "Number")
@@ -660,9 +660,9 @@ L22:
    end ; body
   end ; method
  end ; trait
- trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-KG") flag FINAL dispid 11
+ trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-KG") flag FINAL dispid 11
   method
-   refid "com.company.assembleegameclient.util:GUID/_-KG"
+   refid "com.company.assembleegameclient.util:GUID/class/com.company.assembleegameclient.util:GUID/class/_-KG"
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace(""), "Array")
    body
@@ -702,7 +702,7 @@ L16:
      getlocal            4
      pushbyte            5
      rshift
-     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#1"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class/com.company.assembleegameclient.util:GUID/class"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
      getlocal1
      getlocal            4
      pushbyte            8
@@ -717,7 +717,7 @@ L16:
      subtract
      lshift
      bitor
-     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#1"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class/com.company.assembleegameclient.util:GUID/class"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
 
      getlocal            4
      pushbyte            8
@@ -739,9 +739,9 @@ L46:
    end ; body
   end ; method
  end ; trait
- trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), "_-rD") flag FINAL dispid 12
+ trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), "_-rD") flag FINAL dispid 12
   method
-   refid "com.company.assembleegameclient.util:GUID/_-rD"
+   refid "com.company.assembleegameclient.util:GUID/class/com.company.assembleegameclient.util:GUID/class/_-rD"
    param QName(PackageNamespace(""), "Array")
    returns QName(PackageNamespace(""), "String")
    body
@@ -779,7 +779,7 @@ L16:
      getlocal            4
      pushbyte            2
      rshift
-     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#1"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class/com.company.assembleegameclient.util:GUID/class"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
      pushbyte            3
      getlocal            4
      pushbyte            4
@@ -798,7 +798,7 @@ L16:
      getlocal            4
      pushbyte            2
      rshift
-     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID#1"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.util:GUID/class/com.company.assembleegameclient.util:GUID/class"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), ProtectedNamespace("_-aw"), StaticProtectedNs("_-aw")])
      pushbyte            3
      getlocal            4
      pushbyte            4

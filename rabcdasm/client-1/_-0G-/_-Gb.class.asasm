@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-YM")
   iinit
-   refid "_-0G-:_-Gb/iinit"
+   refid "_-0G-:_-Gb/instance/init"
    body
     maxstack 3
     localcount 3
@@ -45,7 +45,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "execute")
    method
-    refid "_-0G-:_-Gb/execute"
+    refid "_-0G-:_-Gb/instance/execute"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -62,7 +62,7 @@ class
       iffalse             L9
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-0G-:_-Gb"), "_-qx"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-0G-:_-Gb/instance/execute"), "_-qx"), 0
 
       jump                L14
 
@@ -79,9 +79,9 @@ L14:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-0G-:_-Gb"), "_-qx")
+  trait method QName(PrivateNamespace("*", "_-0G-:_-Gb/instance/execute"), "_-qx")
    method
-    refid "_-0G-:_-Gb/_-qx"
+    refid "_-0G-:_-Gb/instance/_-0G-:_-Gb/instance/execute/_-qx"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 6
@@ -132,7 +132,7 @@ L14:
   end ; trait
  end ; instance
  cinit
-  refid "_-0G-:_-Gb/cinit"
+  refid "_-0G-:_-Gb/class/init"
   body
    maxstack 3
    localcount 1

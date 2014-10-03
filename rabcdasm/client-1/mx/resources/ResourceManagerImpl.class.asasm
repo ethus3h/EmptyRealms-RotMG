@@ -7,7 +7,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("mx.resources:ResourceManagerImpl")
   iinit
-   refid "mx.resources:ResourceManagerImpl/iinit"
+   refid "mx.resources:ResourceManagerImpl/instance/init"
    body
     maxstack 3
     localcount 2
@@ -102,7 +102,7 @@ L59:
   trait slot QName(PrivateNamespace("*", "mx.resources:ResourceManagerImpl#0"), "_localeChain") type QName(PackageNamespace(""), "Array") end
   trait getter QName(PackageNamespace(""), "localeChain")
    method
-    refid "mx.resources:ResourceManagerImpl/localeChain/getter"
+    refid "mx.resources:ResourceManagerImpl/instance/localeChain/getter"
     returns QName(PackageNamespace(""), "Array")
     body
      maxstack 1
@@ -122,7 +122,7 @@ L59:
   end ; trait
   trait setter QName(PackageNamespace(""), "localeChain")
    method
-    refid "mx.resources:ResourceManagerImpl/localeChain/setter"
+    refid "mx.resources:ResourceManagerImpl/instance/localeChain/setter"
     param QName(PackageNamespace(""), "Array")
     returns QName(PackageNamespace(""), "void")
     body
@@ -148,7 +148,7 @@ L59:
   end ; trait
   trait method QName(PackageNamespace(""), "installCompiledResourceBundles")
    method
-    refid "mx.resources:ResourceManagerImpl/installCompiledResourceBundles"
+    refid "mx.resources:ResourceManagerImpl/instance/installCompiledResourceBundles"
     param QName(PackageNamespace("flash.system"), "ApplicationDomain")
     param QName(PackageNamespace(""), "Array")
     param QName(PackageNamespace(""), "Array")
@@ -290,7 +290,7 @@ L82:
   end ; trait
   trait method QName(PrivateNamespace("*", "mx.resources:ResourceManagerImpl#0"), "installCompiledResourceBundle")
    method
-    refid "mx.resources:ResourceManagerImpl/installCompiledResourceBundle"
+    refid "mx.resources:ResourceManagerImpl/instance/mx.resources:ResourceManagerImpl/installCompiledResourceBundle"
     param QName(PackageNamespace("flash.system"), "ApplicationDomain")
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
@@ -462,6 +462,7 @@ L112:
       add
       constructprop       QName(PackageNamespace(""), "Error"), 1
       throw
+
 L124:
       findpropstrict      QName(PackageNamespace("mx.resources"), "ResourceBundle")
       getlocal            10
@@ -495,7 +496,7 @@ L124:
   end ; trait
   trait method QName(PrivateNamespace("*", "mx.resources:ResourceManagerImpl#0"), "newChildApplicationHandler")
    method
-    refid "mx.resources:ResourceManagerImpl/newChildApplicationHandler"
+    refid "mx.resources:ResourceManagerImpl/instance/mx.resources:ResourceManagerImpl/newChildApplicationHandler"
     param QName(PackageNamespace("flash.events"), "FocusEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -557,7 +558,7 @@ L35:
   end ; trait
   trait method QName(PrivateNamespace("*", "mx.resources:ResourceManagerImpl#0"), "processInfo")
    method
-    refid "mx.resources:ResourceManagerImpl/processInfo"
+    refid "mx.resources:ResourceManagerImpl/instance/mx.resources:ResourceManagerImpl/processInfo"
     param QName(PackageNamespace(""), "Object")
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "Array")
@@ -670,7 +671,7 @@ L74:
   end ; trait
   trait method QName(PackageNamespace(""), "initializeLocaleChain")
    method
-    refid "mx.resources:ResourceManagerImpl/initializeLocaleChain"
+    refid "mx.resources:ResourceManagerImpl/instance/initializeLocaleChain"
     param QName(PackageNamespace(""), "Array")
     returns QName(PackageNamespace(""), "void")
     body
@@ -699,7 +700,7 @@ L74:
   end ; trait
   trait method QName(PackageNamespace(""), "loadResourceModule")
    method
-    refid "mx.resources:ResourceManagerImpl/loadResourceModule"
+    refid "mx.resources:ResourceManagerImpl/instance/loadResourceModule"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "Boolean")
     param QName(PackageNamespace("flash.system"), "ApplicationDomain")
@@ -778,7 +779,7 @@ L74:
       setslot             6
 
       getscopeobject      1
-      newfunction         "mx.resources:ResourceManagerImpl/loadResourceModule/inline_method#2"
+      newfunction         "mx.resources:ResourceManagerImpl/instance/loadResourceModule/inline_method#2"
       coerce              QName(PackageNamespace(""), "Function")
       setslot             7
 
@@ -794,7 +795,7 @@ L74:
       callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "addEventListener"), 5
 
       getscopeobject      1
-      newfunction         "mx.resources:ResourceManagerImpl/loadResourceModule/inline_method#1"
+      newfunction         "mx.resources:ResourceManagerImpl/instance/loadResourceModule/inline_method#1"
       coerce              QName(PackageNamespace(""), "Function")
       setslot             8
 
@@ -831,7 +832,7 @@ L74:
       setslot             9
 
       getscopeobject      1
-      newfunction         "mx.resources:ResourceManagerImpl/loadResourceModule/inline_method#0"
+      newfunction         "mx.resources:ResourceManagerImpl/instance/loadResourceModule/inline_method#0"
       coerce              QName(PackageNamespace(""), "Function")
       setslot             10
 
@@ -869,7 +870,7 @@ L74:
   end ; trait
   trait method QName(PackageNamespace(""), "unloadResourceModule")
    method
-    refid "mx.resources:ResourceManagerImpl/unloadResourceModule"
+    refid "mx.resources:ResourceManagerImpl/instance/unloadResourceModule"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
@@ -995,7 +996,7 @@ L79:
   end ; trait
   trait method QName(PackageNamespace(""), "addResourceBundle")
    method
-    refid "mx.resources:ResourceManagerImpl/addResourceBundle"
+    refid "mx.resources:ResourceManagerImpl/instance/addResourceBundle"
     param QName(PackageNamespace("mx.resources"), "IResourceBundle")
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
@@ -1083,7 +1084,7 @@ L53:
   end ; trait
   trait method QName(PackageNamespace(""), "getResourceBundle")
    method
-    refid "mx.resources:ResourceManagerImpl/getResourceBundle"
+    refid "mx.resources:ResourceManagerImpl/instance/getResourceBundle"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace("mx.resources"), "IResourceBundle")
@@ -1108,7 +1109,7 @@ L53:
   end ; trait
   trait method QName(PrivateNamespace("*", "mx.resources:ResourceManagerImpl#0"), "getResourceBundleInternal")
    method
-    refid "mx.resources:ResourceManagerImpl/getResourceBundleInternal"
+    refid "mx.resources:ResourceManagerImpl/instance/mx.resources:ResourceManagerImpl/getResourceBundleInternal"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "Boolean")
@@ -1228,7 +1229,7 @@ L72:
   end ; trait
   trait method QName(PackageNamespace(""), "removeResourceBundle")
    method
-    refid "mx.resources:ResourceManagerImpl/removeResourceBundle"
+    refid "mx.resources:ResourceManagerImpl/instance/removeResourceBundle"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
@@ -1268,7 +1269,7 @@ L20:
   end ; trait
   trait method QName(PackageNamespace(""), "removeResourceBundlesForLocale")
    method
-    refid "mx.resources:ResourceManagerImpl/removeResourceBundlesForLocale"
+    refid "mx.resources:ResourceManagerImpl/instance/removeResourceBundlesForLocale"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1292,7 +1293,7 @@ L20:
   end ; trait
   trait method QName(PackageNamespace(""), "update")
    method
-    refid "mx.resources:ResourceManagerImpl/update"
+    refid "mx.resources:ResourceManagerImpl/instance/update"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 3
@@ -1317,7 +1318,7 @@ L20:
   end ; trait
   trait method QName(PackageNamespace(""), "getLocales")
    method
-    refid "mx.resources:ResourceManagerImpl/getLocales"
+    refid "mx.resources:ResourceManagerImpl/instance/getLocales"
     returns QName(PackageNamespace(""), "Array")
     body
      maxstack 2
@@ -1372,7 +1373,7 @@ L24:
   end ; trait
   trait method QName(PackageNamespace(""), "getPreferredLocaleChain")
    method
-    refid "mx.resources:ResourceManagerImpl/getPreferredLocaleChain"
+    refid "mx.resources:ResourceManagerImpl/instance/getPreferredLocaleChain"
     returns QName(PackageNamespace(""), "Array")
     body
      maxstack 5
@@ -1398,7 +1399,7 @@ L24:
   end ; trait
   trait method QName(PackageNamespace(""), "getBundleNamesForLocale")
    method
-    refid "mx.resources:ResourceManagerImpl/getBundleNamesForLocale"
+    refid "mx.resources:ResourceManagerImpl/instance/getBundleNamesForLocale"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "Array")
     body
@@ -1456,7 +1457,7 @@ L26:
   end ; trait
   trait method QName(PackageNamespace(""), "findResourceBundleWithResource")
    method
-    refid "mx.resources:ResourceManagerImpl/findResourceBundleWithResource"
+    refid "mx.resources:ResourceManagerImpl/instance/findResourceBundleWithResource"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace("mx.resources"), "IResourceBundle")
@@ -1640,7 +1641,7 @@ L115:
   end ; trait
   trait method QName(PackageNamespace(""), "getObject") flag METADATA
    method
-    refid "mx.resources:ResourceManagerImpl/getObject"
+    refid "mx.resources:ResourceManagerImpl/instance/getObject"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
@@ -1684,7 +1685,7 @@ L13:
   end ; trait
   trait method QName(PackageNamespace(""), "getString") flag METADATA
    method
-    refid "mx.resources:ResourceManagerImpl/getString"
+    refid "mx.resources:ResourceManagerImpl/instance/getString"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "Array")
@@ -1748,7 +1749,7 @@ L29:
   end ; trait
   trait method QName(PackageNamespace(""), "getStringArray") flag METADATA
    method
-    refid "mx.resources:ResourceManagerImpl/getStringArray"
+    refid "mx.resources:ResourceManagerImpl/instance/getStringArray"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
@@ -1832,7 +1833,7 @@ L43:
   end ; trait
   trait method QName(PackageNamespace(""), "getNumber") flag METADATA
    method
-    refid "mx.resources:ResourceManagerImpl/getNumber"
+    refid "mx.resources:ResourceManagerImpl/instance/getNumber"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
@@ -1883,7 +1884,7 @@ L13:
   end ; trait
   trait method QName(PackageNamespace(""), "getInt") flag METADATA
    method
-    refid "mx.resources:ResourceManagerImpl/getInt"
+    refid "mx.resources:ResourceManagerImpl/instance/getInt"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
@@ -1934,7 +1935,7 @@ L13:
   end ; trait
   trait method QName(PackageNamespace(""), "getUint") flag METADATA
    method
-    refid "mx.resources:ResourceManagerImpl/getUint"
+    refid "mx.resources:ResourceManagerImpl/instance/getUint"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
@@ -1985,7 +1986,7 @@ L13:
   end ; trait
   trait method QName(PackageNamespace(""), "getBoolean") flag METADATA
    method
-    refid "mx.resources:ResourceManagerImpl/getBoolean"
+    refid "mx.resources:ResourceManagerImpl/instance/getBoolean"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
@@ -2039,7 +2040,7 @@ L13:
   end ; trait
   trait method QName(PackageNamespace(""), "getClass") flag METADATA
    method
-    refid "mx.resources:ResourceManagerImpl/getClass"
+    refid "mx.resources:ResourceManagerImpl/instance/getClass"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
@@ -2090,7 +2091,7 @@ L13:
   end ; trait
   trait method QName(PrivateNamespace("*", "mx.resources:ResourceManagerImpl#0"), "findBundle")
    method
-    refid "mx.resources:ResourceManagerImpl/findBundle"
+    refid "mx.resources:ResourceManagerImpl/instance/mx.resources:ResourceManagerImpl/findBundle"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
@@ -2132,7 +2133,7 @@ L18:
   end ; trait
   trait method QName(PrivateNamespace("*", "mx.resources:ResourceManagerImpl#0"), "supportNonFrameworkApps")
    method
-    refid "mx.resources:ResourceManagerImpl/supportNonFrameworkApps"
+    refid "mx.resources:ResourceManagerImpl/instance/mx.resources:ResourceManagerImpl/supportNonFrameworkApps"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -2211,7 +2212,7 @@ L24:
   end ; trait
   trait method QName(PrivateNamespace("*", "mx.resources:ResourceManagerImpl#0"), "getSystemPreferredLocales")
    method
-    refid "mx.resources:ResourceManagerImpl/getSystemPreferredLocales"
+    refid "mx.resources:ResourceManagerImpl/instance/mx.resources:ResourceManagerImpl/getSystemPreferredLocales"
     returns QName(PackageNamespace(""), "Array")
     body
      maxstack 2
@@ -2255,7 +2256,7 @@ L20:
   end ; trait
   trait method QName(PrivateNamespace("*", "mx.resources:ResourceManagerImpl#0"), "dumpResourceModule")
    method
-    refid "mx.resources:ResourceManagerImpl/dumpResourceModule"
+    refid "mx.resources:ResourceManagerImpl/instance/mx.resources:ResourceManagerImpl/dumpResourceModule"
     param null
     returns QName(PackageNamespace(""), "void")
     body
@@ -2337,7 +2338,7 @@ L44:
   end ; trait
   trait method QName(PrivateNamespace("*", "mx.resources:ResourceManagerImpl#0"), "enterFrameHandler")
    method
-    refid "mx.resources:ResourceManagerImpl/enterFrameHandler"
+    refid "mx.resources:ResourceManagerImpl/instance/mx.resources:ResourceManagerImpl/enterFrameHandler"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -2399,7 +2400,7 @@ L34:
   end ; trait
  end ; instance
  cinit
-  refid "mx.resources:ResourceManagerImpl/cinit"
+  refid "mx.resources:ResourceManagerImpl/class/init"
   body
    maxstack 2
    localcount 1
@@ -2421,7 +2422,7 @@ L34:
  trait slot QName(PrivateNamespace("*", "mx.resources:ResourceManagerImpl#0"), "instance") slotid 2 type QName(PackageNamespace("mx.resources"), "IResourceManager") end
  trait method QName(PackageNamespace(""), "getInstance") flag FINAL dispid 3
   method
-   refid "mx.resources:ResourceManagerImpl/getInstance"
+   refid "mx.resources:ResourceManagerImpl/class/getInstance"
    returns QName(PackageNamespace("mx.resources"), "IResourceManager")
    body
     maxstack 2

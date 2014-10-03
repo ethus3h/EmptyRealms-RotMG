@@ -8,7 +8,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-lH")
   iinit
-   refid "com.hurlant.crypto.symmetric:SimpleIVMode/iinit"
+   refid "com.hurlant.crypto.symmetric:SimpleIVMode/instance/init"
    param QName(PackageNamespace("com.hurlant.crypto.symmetric"), "IVMode")
    body
     maxstack 3
@@ -40,7 +40,7 @@ class
   trait slot QName(ProtectedNamespace("_-lH"), "cipher") type QName(PackageNamespace("com.hurlant.crypto.symmetric"), "ICipher") end
   trait method QName(PackageNamespace(""), "getBlockSize")
    method
-    refid "com.hurlant.crypto.symmetric:SimpleIVMode/getBlockSize"
+    refid "com.hurlant.crypto.symmetric:SimpleIVMode/instance/getBlockSize"
     returns QName(PackageNamespace(""), "uint")
     body
      maxstack 1
@@ -61,7 +61,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "dispose")
    method
-    refid "com.hurlant.crypto.symmetric:SimpleIVMode/dispose"
+    refid "com.hurlant.crypto.symmetric:SimpleIVMode/instance/dispose"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -94,7 +94,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "encrypt")
    method
-    refid "com.hurlant.crypto.symmetric:SimpleIVMode/encrypt"
+    refid "com.hurlant.crypto.symmetric:SimpleIVMode/instance/encrypt"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     returns QName(PackageNamespace(""), "void")
     body
@@ -141,7 +141,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "decrypt")
    method
-    refid "com.hurlant.crypto.symmetric:SimpleIVMode/decrypt"
+    refid "com.hurlant.crypto.symmetric:SimpleIVMode/instance/decrypt"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     returns QName(PackageNamespace(""), "void")
     body
@@ -201,7 +201,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "toString")
    method
-    refid "com.hurlant.crypto.symmetric:SimpleIVMode/toString"
+    refid "com.hurlant.crypto.symmetric:SimpleIVMode/instance/toString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 2
@@ -224,7 +224,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "com.hurlant.crypto.symmetric:SimpleIVMode/cinit"
+  refid "com.hurlant.crypto.symmetric:SimpleIVMode/class/init"
   body
    maxstack 1
    localcount 1

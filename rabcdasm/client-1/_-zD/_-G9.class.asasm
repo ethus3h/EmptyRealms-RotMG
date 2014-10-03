@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-00h")
   iinit
-   refid "_-zD:_-G9/iinit"
+   refid "_-zD:_-G9/instance/init"
    body
     maxstack 3
     localcount 3
@@ -45,7 +45,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "initialize") flag OVERRIDE
    method
-    refid "_-zD:_-G9/initialize"
+    refid "_-zD:_-G9/instance/initialize"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -60,7 +60,7 @@ class
       getproperty         QName(PackageNamespace(""), "_-yD")
       getproperty         QName(PackageNamespace(""), "_-iu")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-zD:_-G9"), "_-Sf")
+      getproperty         QName(PrivateNamespace("*", "_-zD:_-G9/instance/initialize"), "_-Sf")
       callpropvoid        QName(PackageNamespace(""), "addOnce"), 1
 
       getlocal0
@@ -72,9 +72,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-zD:_-G9"), "_-Sf")
+  trait method QName(PrivateNamespace("*", "_-zD:_-G9/instance/initialize"), "_-Sf")
    method
-    refid "_-zD:_-G9/_-Sf"
+    refid "_-zD:_-G9/instance/_-zD:_-G9/instance/initialize/_-Sf"
     param QName(PackageNamespace("_-4X"), "_-zU")
     param QName(PackageNamespace(""), "Boolean")
     param QName(PackageNamespace(""), "String")
@@ -114,7 +114,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-zD:_-G9/cinit"
+  refid "_-zD:_-G9/class/init"
   body
    maxstack 3
    localcount 1

@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-0IA")
   iinit
-   refid "com.company.assembleegameclient.game:GameSprite/iinit"
+   refid "com.company.assembleegameclient.game:GameSprite/instance/init"
    param QName(PackageNamespace("com.company.assembleegameclient.net"), "Server")
    param QName(PackageNamespace(""), "int")
    param QName(PackageNamespace(""), "Boolean")
@@ -120,7 +120,7 @@ class
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "map") type QName(PackageNamespace("com.company.assembleegameclient.map"), "_-Xl") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "map") type QName(PackageNamespace("com.company.assembleegameclient.map"), "_-Xl") end
   trait slot QName(PackageNamespace(""), "_-on") type QName(PackageNamespace("com.company.assembleegameclient.map"), "_-0Dv") end
   trait slot QName(PackageNamespace(""), "gsc_") type QName(PackageNamespace("com.company.assembleegameclient.net"), "_-1f") end
   trait slot QName(PackageNamespace(""), "mui_") type QName(PackageNamespace("com.company.assembleegameclient.game"), "_-07a") end
@@ -137,13 +137,13 @@ class
   trait slot QName(PackageNamespace(""), "_-3c") type QName(PackageNamespace(""), "Boolean") end
   trait slot QName(PackageNamespace(""), "lastUpdate_") type QName(PackageNamespace(""), "int") value Integer(0) end
   trait slot QName(PackageNamespace(""), "moveRecords_") type QName(PackageNamespace("com.company.assembleegameclient.game"), "_-uw") end
-  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-bA") type QName(PackageNamespace(""), "int") value Integer(0) end
-  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-qA") type QName(PackageNamespace(""), "int") value Integer(0) end
-  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-rz") type QName(PackageNamespace("_-F1"), "_-02a") end
-  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-2e") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-bA") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-qA") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-rz") type QName(PackageNamespace("_-F1"), "_-02a") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-2e") type QName(PackageNamespace(""), "Boolean") end
   trait setter QName(PackageNamespace(""), "map_")
    method
-    refid "com.company.assembleegameclient.game:GameSprite/map_/setter"
+    refid "com.company.assembleegameclient.game:GameSprite/instance/map_/setter"
     param QName(PackageNamespace("com.company.assembleegameclient.map"), "_-Xl")
     returns QName(PackageNamespace(""), "void")
     body
@@ -157,7 +157,7 @@ class
 
       getlocal0
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "map")
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "map")
 
       returnvoid
      end ; code
@@ -166,7 +166,7 @@ class
   end ; trait
   trait getter QName(PackageNamespace(""), "map_")
    method
-    refid "com.company.assembleegameclient.game:GameSprite/map_/getter"
+    refid "com.company.assembleegameclient.game:GameSprite/instance/map_/getter"
     returns QName(PackageNamespace("com.company.assembleegameclient.map"), "_-Xl")
     body
      maxstack 3
@@ -178,7 +178,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "map")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "map")
       returnvalue
      end ; code
     end ; body
@@ -186,7 +186,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "_-Sz")
    method
-    refid "com.company.assembleegameclient.game:GameSprite/_-Sz"
+    refid "com.company.assembleegameclient.game:GameSprite/instance/_-Sz"
     param QName(PackageNamespace("_-011"), "_-wx")
     returns QName(PackageNamespace(""), "void")
     body
@@ -199,7 +199,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "map")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "map")
       getlocal1
       getproperty         QName(PackageNamespace(""), "width_")
       getlocal1
@@ -225,7 +225,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "_-dO")
    method
-    refid "com.company.assembleegameclient.game:GameSprite/_-dO"
+    refid "com.company.assembleegameclient.game:GameSprite/instance/_-dO"
     param QName(PackageNamespace("_-011"), "_-wx")
     returns QName(PackageNamespace(""), "void")
     body
@@ -238,18 +238,18 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-rz")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-rz")
       iftrue              L9
 
       getlocal0
       findpropstrict      QName(PackageNamespace("_-F1"), "_-02a")
       constructprop       QName(PackageNamespace("_-F1"), "_-02a"), 0
-      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-rz")
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-rz")
 
 L9:
       findpropstrict      QName(PackageNamespace(""), "addChild")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-rz")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-rz")
       callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
       getlex              QName(PackageNamespace("_-U5"), "_-DL")
@@ -262,9 +262,9 @@ L9:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-02J")
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-02J")
    method
-    refid "com.company.assembleegameclient.game:GameSprite/_-02J"
+    refid "com.company.assembleegameclient.game:GameSprite/instance/com.company.assembleegameclient.game:GameSprite/instance/_-02J"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -276,16 +276,16 @@ L9:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-rz")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-rz")
       iffalse             L11
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-rz")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-rz")
       callpropvoid        QName(PackageNamespace(""), "_-pW"), 0
 
       getlocal0
       pushnull
-      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-rz")
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-rz")
 
 L11:
       returnvoid
@@ -295,7 +295,7 @@ L11:
   end ; trait
   trait method QName(PackageNamespace(""), "initialize")
    method
-    refid "com.company.assembleegameclient.game:GameSprite/initialize"
+    refid "com.company.assembleegameclient.game:GameSprite/instance/initialize"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 8
@@ -452,7 +452,7 @@ L119:
       pop
       getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
       getproperty         QName(PackageNamespace(""), "data_")
-      getproperty         Multiname("watchForTutorialExit", [PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), PackageNamespace(""), StaticProtectedNs("_-0IA"), PackageNamespace("com.company.assembleegameclient.game"), PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/initialize"), PackageInternalNs("com.company.assembleegameclient.game"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0IA"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("watchForTutorialExit", [PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), PackageNamespace(""), StaticProtectedNs("_-0IA"), PackageNamespace("com.company.assembleegameclient.game"), PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance/initialize"), PackageInternalNs("com.company.assembleegameclient.game"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0IA"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       pushtrue
       equals
 L127:
@@ -461,16 +461,16 @@ L127:
       getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
       getproperty         QName(PackageNamespace(""), "data_")
       pushfalse
-      setproperty         Multiname("watchForTutorialExit", [PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), PackageNamespace(""), StaticProtectedNs("_-0IA"), PackageNamespace("com.company.assembleegameclient.game"), PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/initialize"), PackageInternalNs("com.company.assembleegameclient.game"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0IA"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      setproperty         Multiname("watchForTutorialExit", [PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), PackageNamespace(""), StaticProtectedNs("_-0IA"), PackageNamespace("com.company.assembleegameclient.game"), PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance/initialize"), PackageInternalNs("com.company.assembleegameclient.game"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0IA"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
 
       getlocal0
       pushstring          "rotmg.Marketing.track(\"tutorialComplete\")"
-      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-uG"), 1
+      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-uG"), 1
 
       getlocal3
       pushstring          "fteStepCompleted"
       pushshort           9900
-      setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), PackageNamespace(""), StaticProtectedNs("_-0IA"), PackageNamespace("com.company.assembleegameclient.game"), PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/initialize"), PackageInternalNs("com.company.assembleegameclient.game"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0IA"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), PackageNamespace(""), StaticProtectedNs("_-0IA"), PackageNamespace("com.company.assembleegameclient.game"), PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance/initialize"), PackageInternalNs("com.company.assembleegameclient.game"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0IA"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
 
       getlocal1
       pushstring          "logFteStep"
@@ -487,7 +487,7 @@ L143:
       getlocal3
       pushstring          "fteStepCompleted"
       pushshort           200
-      setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), PackageNamespace(""), StaticProtectedNs("_-0IA"), PackageNamespace("com.company.assembleegameclient.game"), PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/initialize"), PackageInternalNs("com.company.assembleegameclient.game"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0IA"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), PackageNamespace(""), StaticProtectedNs("_-0IA"), PackageNamespace("com.company.assembleegameclient.game"), PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance/initialize"), PackageInternalNs("com.company.assembleegameclient.game"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0IA"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
 
       getlocal1
       pushstring          "logFteStep"
@@ -503,23 +503,23 @@ L156:
 
       getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
       getproperty         QName(PackageNamespace(""), "data_")
-      getproperty         Multiname("needsTutorial", [PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), PackageNamespace(""), StaticProtectedNs("_-0IA"), PackageNamespace("com.company.assembleegameclient.game"), PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/initialize"), PackageInternalNs("com.company.assembleegameclient.game"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0IA"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("needsTutorial", [PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), PackageNamespace(""), StaticProtectedNs("_-0IA"), PackageNamespace("com.company.assembleegameclient.game"), PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance/initialize"), PackageInternalNs("com.company.assembleegameclient.game"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0IA"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       pushtrue
       ifne                L181
 
       getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
       getproperty         QName(PackageNamespace(""), "data_")
       pushtrue
-      setproperty         Multiname("watchForTutorialExit", [PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), PackageNamespace(""), StaticProtectedNs("_-0IA"), PackageNamespace("com.company.assembleegameclient.game"), PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/initialize"), PackageInternalNs("com.company.assembleegameclient.game"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0IA"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      setproperty         Multiname("watchForTutorialExit", [PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), PackageNamespace(""), StaticProtectedNs("_-0IA"), PackageNamespace("com.company.assembleegameclient.game"), PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance/initialize"), PackageInternalNs("com.company.assembleegameclient.game"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0IA"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
 
       getlocal0
       pushstring          "rotmg.Marketing.track(\"install\")"
-      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-uG"), 1
+      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-uG"), 1
 
       getlocal3
       pushstring          "fteStepCompleted"
       pushbyte            100
-      setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), PackageNamespace(""), StaticProtectedNs("_-0IA"), PackageNamespace("com.company.assembleegameclient.game"), PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/initialize"), PackageInternalNs("com.company.assembleegameclient.game"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0IA"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), PackageNamespace(""), StaticProtectedNs("_-0IA"), PackageNamespace("com.company.assembleegameclient.game"), PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance/initialize"), PackageInternalNs("com.company.assembleegameclient.game"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0IA"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
 
       getlocal1
       pushstring          "logFteStep"
@@ -528,7 +528,7 @@ L156:
 
 L181:
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-q6"), 0
+      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-q6"), 0
 
       jump                L207
 
@@ -554,7 +554,7 @@ L197:
       pop
       getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
       getproperty         QName(PackageNamespace(""), "data_")
-      getproperty         Multiname("showProtips", [PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), PackageNamespace(""), StaticProtectedNs("_-0IA"), PackageNamespace("com.company.assembleegameclient.game"), PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/initialize"), PackageInternalNs("com.company.assembleegameclient.game"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0IA"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("showProtips", [PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), PackageNamespace(""), StaticProtectedNs("_-0IA"), PackageNamespace("com.company.assembleegameclient.game"), PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance/initialize"), PackageInternalNs("com.company.assembleegameclient.game"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0IA"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       convert_b
 L204:
       iffalse             L207
@@ -564,16 +564,16 @@ L204:
 
 L207:
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-02J"), 0
+      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-02J"), 0
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-uG")
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-uG")
    method
-    refid "com.company.assembleegameclient.game:GameSprite/_-uG"
+    refid "com.company.assembleegameclient.game:GameSprite/instance/com.company.assembleegameclient.game:GameSprite/instance/_-uG"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -625,7 +625,7 @@ L22:
   end ; trait
   trait method QName(PackageNamespace(""), "_-yH")
    method
-    refid "com.company.assembleegameclient.game:GameSprite/_-yH"
+    refid "com.company.assembleegameclient.game:GameSprite/instance/_-yH"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -656,7 +656,7 @@ L22:
   end ; trait
   trait method QName(PackageNamespace(""), "_-0M8")
    method
-    refid "com.company.assembleegameclient.game:GameSprite/_-0M8"
+    refid "com.company.assembleegameclient.game:GameSprite/instance/_-0M8"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -699,7 +699,7 @@ L18:
   end ; trait
   trait method QName(PackageNamespace(""), "dispose")
    method
-    refid "com.company.assembleegameclient.game:GameSprite/dispose"
+    refid "com.company.assembleegameclient.game:GameSprite/instance/dispose"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -753,9 +753,9 @@ L15:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-q6")
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-q6")
    method
-    refid "com.company.assembleegameclient.game:GameSprite/_-q6"
+    refid "com.company.assembleegameclient.game:GameSprite/instance/com.company.assembleegameclient.game:GameSprite/instance/_-q6"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 5
@@ -784,7 +784,7 @@ L15:
   end ; trait
   trait method QName(PackageNamespace(""), "onAddedToStage")
    method
-    refid "com.company.assembleegameclient.game:GameSprite/onAddedToStage"
+    refid "com.company.assembleegameclient.game:GameSprite/instance/onAddedToStage"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -797,7 +797,7 @@ L15:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-2e")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-2e")
       iffalse             L6
 
       returnvoid
@@ -805,7 +805,7 @@ L15:
 L6:
       getlocal0
       pushtrue
-      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-2e")
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-2e")
 
       getlex              QName(PackageNamespace("com.company.googleanalytics"), "GA")
       callproperty        QName(PackageNamespace(""), "global"), 0
@@ -840,14 +840,14 @@ L6:
       getlex              QName(PackageNamespace("_-9R"), "_-Bw")
       getproperty         QName(PackageNamespace(""), "MONEY_CHANGED")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-Lu")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-Lu")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       getlex              QName(PackageNamespace(""), "stage")
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "onEnterFrame")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "onEnterFrame")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       returnvoid
@@ -857,7 +857,7 @@ L6:
   end ; trait
   trait method QName(PackageNamespace(""), "onRemovedFromStage")
    method
-    refid "com.company.assembleegameclient.game:GameSprite/onRemovedFromStage"
+    refid "com.company.assembleegameclient.game:GameSprite/instance/onRemovedFromStage"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -870,7 +870,7 @@ L6:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-2e")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-2e")
       iftrue              L6
 
       returnvoid
@@ -878,7 +878,7 @@ L6:
 L6:
       getlocal0
       pushfalse
-      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-2e")
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-2e")
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-0HR")
@@ -897,14 +897,14 @@ L6:
       getlex              QName(PackageNamespace("_-9R"), "_-Bw")
       getproperty         QName(PackageNamespace(""), "MONEY_CHANGED")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-Lu")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-Lu")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
       getlex              QName(PackageNamespace(""), "stage")
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "onEnterFrame")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "onEnterFrame")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
       returnvoid
@@ -912,9 +912,9 @@ L6:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-Lu")
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-Lu")
    method
-    refid "com.company.assembleegameclient.game:GameSprite/_-Lu"
+    refid "com.company.assembleegameclient.game:GameSprite/instance/com.company.assembleegameclient.game:GameSprite/instance/_-Lu"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -937,7 +937,7 @@ L6:
   end ; trait
   trait method QName(PackageNamespace(""), "_-vw")
    method
-    refid "com.company.assembleegameclient.game:GameSprite/_-vw"
+    refid "com.company.assembleegameclient.game:GameSprite/instance/_-vw"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 4
@@ -988,9 +988,9 @@ L28:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "onEnterFrame")
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "onEnterFrame")
    method
-    refid "com.company.assembleegameclient.game:GameSprite/onEnterFrame"
+    refid "com.company.assembleegameclient.game:GameSprite/instance/com.company.assembleegameclient.game:GameSprite/instance/onEnterFrame"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1035,20 +1035,20 @@ L28:
 L26:
       getlocal0
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-bA")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-bA")
       getlocal3
       add
-      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-bA")
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-bA")
 
       getlocal0
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-qA")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-qA")
       pushbyte            1
       add
-      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-qA")
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-qA")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-bA")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-bA")
       pushint             300000
       ifngt               L70
 
@@ -1056,10 +1056,10 @@ L26:
       getlex              QName(PackageNamespace(""), "Math")
       pushshort           1000
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-qA")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-qA")
       multiply
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-bA")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-bA")
       divide
       callproperty        QName(PackageNamespace(""), "round"), 1
       callproperty        QName(PackageNamespace(""), "int"), 1
@@ -1078,11 +1078,11 @@ L26:
 
       getlocal0
       pushbyte            0
-      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-qA")
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-qA")
 
       getlocal0
       pushbyte            0
-      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite"), "_-bA")
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.game:GameSprite/instance"), "_-bA")
 
 L70:
       getlocal0
@@ -1248,7 +1248,7 @@ L191:
   end ; trait
  end ; instance
  cinit
-  refid "com.company.assembleegameclient.game:GameSprite/cinit"
+  refid "com.company.assembleegameclient.game:GameSprite/class/init"
   body
    maxstack 5
    localcount 3

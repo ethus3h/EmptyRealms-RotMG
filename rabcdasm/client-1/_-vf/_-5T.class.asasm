@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("use ")
   iinit
-   refid "_-vf:_-5T/iinit"
+   refid "_-vf:_-5T/instance/init"
    body
     maxstack 3
     localcount 3
@@ -25,7 +25,7 @@ class
   end ; method
  end ; instance
  cinit
-  refid "_-vf:_-5T/cinit"
+  refid "_-vf:_-5T/class/init"
   body
    maxstack 5
    localcount 3
@@ -40,21 +40,21 @@ class
     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
     setproperty         QName(PackageNamespace(""), "_-0Hk")
 
-    findproperty        QName(PrivateNamespace("*", "_-vf:_-5T#0"), "_-04b")
+    findproperty        QName(PrivateNamespace("*", "_-vf:_-5T/class#0"), "_-04b")
     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
     pushtrue
     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 1
-    setproperty         QName(PrivateNamespace("*", "_-vf:_-5T#0"), "_-04b")
+    setproperty         QName(PrivateNamespace("*", "_-vf:_-5T/class#0"), "_-04b")
 
     returnvoid
    end ; code
   end ; body
  end ; method
  trait slot QName(PackageNamespace(""), "_-0Hk") slotid 1 type QName(PackageNamespace("flash.utils"), "Dictionary") end
- trait slot QName(PrivateNamespace("*", "_-vf:_-5T#0"), "_-04b") slotid 2 type QName(PackageNamespace("flash.utils"), "Dictionary") end
+ trait slot QName(PrivateNamespace("*", "_-vf:_-5T/class#0"), "_-04b") slotid 2 type QName(PackageNamespace("flash.utils"), "Dictionary") end
  trait method QName(PackageNamespace(""), "load") flag FINAL dispid 3
   method
-   refid "_-vf:_-5T/load"
+   refid "_-vf:_-5T/class/load"
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace("flash.media"), "Sound")
    body
@@ -68,7 +68,7 @@ class
 
      getlex              QName(PackageNamespace(""), "_-0Hk")
      getlocal1
-     getproperty         MultinameL([PrivateNamespace("*", "_-vf:_-5T#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-5T#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("use "), StaticProtectedNs("use ")])
+     getproperty         MultinameL([PrivateNamespace("*", "_-vf:_-5T/class#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-5T/class#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("use "), StaticProtectedNs("use ")])
      coerce              QName(PackageNamespace("flash.media"), "Sound")
      setlocal2
 
@@ -112,7 +112,7 @@ L12:
      getlex              QName(PackageNamespace(""), "_-0Hk")
      getlocal1
      getlocal2
-     setproperty         MultinameL([PrivateNamespace("*", "_-vf:_-5T#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-5T#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("use "), StaticProtectedNs("use ")])
+     setproperty         MultinameL([PrivateNamespace("*", "_-vf:_-5T/class#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-5T/class#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("use "), StaticProtectedNs("use ")])
 
      getlocal2
      returnvalue
@@ -122,7 +122,7 @@ L12:
  end ; trait
  trait method QName(PackageNamespace(""), "play") flag FINAL dispid 4
   method
-   refid "_-vf:_-5T/play"
+   refid "_-vf:_-5T/class/play"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "Number")
    param QName(PackageNamespace(""), "Boolean")
@@ -184,7 +184,7 @@ L33:
      getscopeobject      1
      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
      getproperty         QName(PackageNamespace(""), "data_")
-     getproperty         Multiname("playSFX", [PrivateNamespace("*", "_-vf:_-5T#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-5T#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("use "), StaticProtectedNs("use ")])
+     getproperty         Multiname("playSFX", [PrivateNamespace("*", "_-vf:_-5T/class#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-5T/class#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("use "), StaticProtectedNs("use ")])
      coerce_a
      convert_b
      dup
@@ -211,7 +211,7 @@ L46:
      pop
      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
      getproperty         QName(PackageNamespace(""), "data_")
-     getproperty         Multiname("playPewPew", [PrivateNamespace("*", "_-vf:_-5T#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-5T#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("use "), StaticProtectedNs("use ")])
+     getproperty         Multiname("playPewPew", [PrivateNamespace("*", "_-vf:_-5T/class#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-5T/class#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("use "), StaticProtectedNs("use ")])
      coerce_a
      convert_b
 L62:
@@ -252,18 +252,18 @@ L69:
      getslot             7
      getlex              QName(PackageNamespace("flash.events"), "Event")
      getproperty         QName(PackageNamespace(""), "SOUND_COMPLETE")
-     getlex              QName(PrivateNamespace("*", "_-vf:_-5T#0"), "_-JM")
+     getlex              QName(PrivateNamespace("*", "_-vf:_-5T/class#0"), "_-JM")
      pushfalse
      pushbyte            0
      pushtrue
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
 
-     getlex              QName(PrivateNamespace("*", "_-vf:_-5T#0"), "_-04b")
+     getlex              QName(PrivateNamespace("*", "_-vf:_-5T/class#0"), "_-04b")
      getscopeobject      1
      getslot             7
      getscopeobject      1
      getslot             2
-     setproperty         MultinameL([PrivateNamespace("*", "_-vf:_-5T#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-5T#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("use "), StaticProtectedNs("use ")])
+     setproperty         MultinameL([PrivateNamespace("*", "_-vf:_-5T/class#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-5T/class#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("use "), StaticProtectedNs("use ")])
 
 L103:
      jump                L117
@@ -301,9 +301,9 @@ L117:
    end ; body
   end ; method
  end ; trait
- trait method QName(PrivateNamespace("*", "_-vf:_-5T#0"), "_-JM") flag FINAL dispid 5
+ trait method QName(PrivateNamespace("*", "_-vf:_-5T/class#0"), "_-JM") flag FINAL dispid 5
   method
-   refid "_-vf:_-5T/_-JM"
+   refid "_-vf:_-5T/class/_-vf:_-5T/class/_-JM"
    param QName(PackageNamespace("flash.events"), "Event")
    returns QName(PackageNamespace(""), "void")
    body
@@ -322,9 +322,9 @@ L117:
      coerce              QName(PackageNamespace("flash.media"), "SoundChannel")
      setlocal2
 
-     getlex              QName(PrivateNamespace("*", "_-vf:_-5T#0"), "_-04b")
+     getlex              QName(PrivateNamespace("*", "_-vf:_-5T/class#0"), "_-04b")
      getlocal2
-     deleteproperty      MultinameL([PrivateNamespace("*", "_-vf:_-5T#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-5T#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("use "), StaticProtectedNs("use ")])
+     deleteproperty      MultinameL([PrivateNamespace("*", "_-vf:_-5T/class#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-5T/class#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("use "), StaticProtectedNs("use ")])
      pop
      returnvoid
     end ; code
@@ -333,7 +333,7 @@ L117:
  end ; trait
  trait method QName(PackageNamespace(""), "_-02r") flag FINAL dispid 6
   method
-   refid "_-vf:_-5T/_-02r"
+   refid "_-vf:_-5T/class/_-02r"
    returns QName(PackageNamespace(""), "void")
    body
     maxstack 5
@@ -355,7 +355,7 @@ L117:
      pushbyte            0
      setlocal3
 
-     getlex              QName(PrivateNamespace("*", "_-vf:_-5T#0"), "_-04b")
+     getlex              QName(PrivateNamespace("*", "_-vf:_-5T/class#0"), "_-04b")
      coerce_a
      setlocal            4
 
@@ -377,12 +377,12 @@ L14:
      getlocal2
      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
      getproperty         QName(PackageNamespace(""), "data_")
-     getproperty         Multiname("playSFX", [PrivateNamespace("*", "_-vf:_-5T#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-5T#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("use "), StaticProtectedNs("use ")])
+     getproperty         Multiname("playSFX", [PrivateNamespace("*", "_-vf:_-5T/class#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-5T/class#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("use "), StaticProtectedNs("use ")])
      iffalse             L34
 
-     getlex              QName(PrivateNamespace("*", "_-vf:_-5T#0"), "_-04b")
+     getlex              QName(PrivateNamespace("*", "_-vf:_-5T/class#0"), "_-04b")
      getlocal1
-     getproperty         MultinameL([PrivateNamespace("*", "_-vf:_-5T#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-5T#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("use "), StaticProtectedNs("use ")])
+     getproperty         MultinameL([PrivateNamespace("*", "_-vf:_-5T/class#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-5T/class#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("use "), StaticProtectedNs("use ")])
      convert_d
      jump                L36
 
@@ -409,7 +409,7 @@ L40:
  end ; trait
  trait method QName(PackageNamespace(""), "onIOError") flag FINAL dispid 7
   method
-   refid "_-vf:_-5T/onIOError"
+   refid "_-vf:_-5T/class/onIOError"
    param QName(PackageNamespace("flash.events"), "IOErrorEvent")
    returns QName(PackageNamespace(""), "void")
    body

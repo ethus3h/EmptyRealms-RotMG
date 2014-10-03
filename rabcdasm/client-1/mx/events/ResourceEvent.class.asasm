@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("mx.events:ResourceEvent")
   iinit
-   refid "mx.events:ResourceEvent/iinit"
+   refid "mx.events:ResourceEvent/instance/init"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "Boolean")
    param QName(PackageNamespace(""), "Boolean")
@@ -47,7 +47,7 @@ class
   trait slot QName(PackageNamespace(""), "errorText") type QName(PackageNamespace(""), "String") end
   trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
    method
-    refid "mx.events:ResourceEvent/clone"
+    refid "mx.events:ResourceEvent/instance/clone"
     returns QName(PackageNamespace("flash.events"), "Event")
     body
      maxstack 7
@@ -74,7 +74,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "mx.events:ResourceEvent/cinit"
+  refid "mx.events:ResourceEvent/class/init"
   body
    maxstack 2
    localcount 1

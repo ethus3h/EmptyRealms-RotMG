@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-01d")
   iinit
-   refid "_-Z6:_-mW/iinit"
+   refid "_-Z6:_-mW/instance/init"
    param null
    body
     maxstack 5
@@ -23,17 +23,17 @@ class
      getlocal0
      getlocal0
      getlocal1
-     callproperty        QName(PrivateNamespace("*", "_-Z6:_-mW#0"), "_-4n"), 1
-     initproperty        QName(PrivateNamespace("*", "_-Z6:_-mW#0"), "_-GU")
+     callproperty        QName(PrivateNamespace("*", "_-Z6:_-mW/instance"), "_-4n"), 1
+     initproperty        QName(PrivateNamespace("*", "_-Z6:_-mW/instance"), "_-GU")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-Z6:_-mW#0"), "_-GU") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "_-Z6:_-mW/instance"), "_-GU") type QName(PackageNamespace(""), "String") end
   trait method QName(PackageNamespace(""), "getString")
    method
-    refid "_-Z6:_-mW/getString"
+    refid "_-Z6:_-mW/instance/getString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -45,15 +45,15 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Z6:_-mW#0"), "_-GU")
+      getproperty         QName(PrivateNamespace("*", "_-Z6:_-mW/instance"), "_-GU")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Z6:_-mW#0"), "_-4n")
+  trait method QName(PrivateNamespace("*", "_-Z6:_-mW/instance"), "_-4n")
    method
-    refid "_-Z6:_-mW/_-4n"
+    refid "_-Z6:_-mW/instance/_-Z6:_-mW/instance/_-4n"
     param null
     returns QName(PackageNamespace(""), "String")
     body
@@ -74,14 +74,14 @@ class
       getlocal1
       getlex              QName(PackageNamespace(""), "String")
       astypelate
-      callproperty        QName(PrivateNamespace("*", "_-Z6:_-mW#0"), "_-cQ"), 1
+      callproperty        QName(PrivateNamespace("*", "_-Z6:_-mW/instance"), "_-cQ"), 1
       returnvalue
 
 L12:
       getlocal1
       getlex              QName(PackageNamespace(""), "Number")
       istypelate
-      iffalse             L29
+      iffalse             L32
 
       findpropstrict      QName(PackageNamespace(""), "isFinite")
       getlocal1
@@ -91,7 +91,7 @@ L12:
       iffalse             L26
 
       getlocal1
-      callproperty        Multiname("toString", [PrivateNamespace("*", "_-Z6:_-mW#0"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW#1"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")]), 0
+      callproperty        Multiname("toString", [PrivateNamespace("*", "_-Z6:_-mW/instance"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW/instance/_-Z6:_-mW/instance"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")]), 0
       coerce_s
       jump                L27
 
@@ -100,70 +100,74 @@ L26:
 L27:
       returnvalue
 
-      jump                L65
-
-L29:
+      ; 0x10
+      ; 0x46
+      ; 0x00
+      ; 0x00
+L32:
       getlocal1
       getlex              QName(PackageNamespace(""), "Boolean")
       istypelate
-      iffalse             L40
+      iffalse             L46
 
       getlocal1
-      iffalse             L37
+      iffalse             L40
 
       pushstring          "true"
-      jump                L38
-
-L37:
-      pushstring          "false"
-L38:
-      returnvalue
-
-      jump                L65
+      jump                L41
 
 L40:
+      pushstring          "false"
+L41:
+      returnvalue
+
+      ; 0x10
+      ; 0x2B
+      ; 0x00
+      ; 0x00
+L46:
       getlocal1
       getlex              QName(PackageNamespace(""), "Array")
       istypelate
-      iffalse             L50
+      iffalse             L56
 
       getlocal0
       getlocal1
       getlex              QName(PackageNamespace(""), "Array")
       astypelate
-      callproperty        QName(PrivateNamespace("*", "_-Z6:_-mW#0"), "_-f6"), 1
+      callproperty        QName(PrivateNamespace("*", "_-Z6:_-mW/instance"), "_-f6"), 1
       returnvalue
 
-L50:
+L56:
       getlocal1
       getlex              QName(PackageNamespace(""), "Object")
       istypelate
       dup
-      iffalse             L60
+      iffalse             L66
 
       pop
       getlocal1
       pushnull
       equals
       not
-L60:
-      iffalse             L65
+L66:
+      iffalse             L71
 
       getlocal0
       getlocal1
-      callproperty        QName(PrivateNamespace("*", "_-Z6:_-mW#0"), "catch"), 1
+      callproperty        QName(PrivateNamespace("*", "_-Z6:_-mW/instance"), "catch"), 1
       returnvalue
 
-L65:
+L71:
       pushstring          "null"
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Z6:_-mW#0"), "_-cQ")
+  trait method QName(PrivateNamespace("*", "_-Z6:_-mW/instance"), "_-cQ")
    method
-    refid "_-Z6:_-mW/_-cQ"
+    refid "_-Z6:_-mW/instance/_-Z6:_-mW/instance/_-cQ"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "String")
     body
@@ -406,9 +410,9 @@ L147:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Z6:_-mW#0"), "_-f6")
+  trait method QName(PrivateNamespace("*", "_-Z6:_-mW/instance"), "_-f6")
    method
-    refid "_-Z6:_-mW/_-f6"
+    refid "_-Z6:_-mW/instance/_-Z6:_-mW/instance/_-f6"
     param QName(PackageNamespace(""), "Array")
     returns QName(PackageNamespace(""), "String")
     body
@@ -445,8 +449,8 @@ L16:
       getlocal0
       getlocal1
       getlocal3
-      getproperty         MultinameL([PrivateNamespace("*", "_-Z6:_-mW#0"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW#1"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")])
-      callproperty        QName(PrivateNamespace("*", "_-Z6:_-mW#0"), "_-4n"), 1
+      getproperty         MultinameL([PrivateNamespace("*", "_-Z6:_-mW/instance"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW/instance/_-Z6:_-mW/instance"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")])
+      callproperty        QName(PrivateNamespace("*", "_-Z6:_-mW/instance"), "_-4n"), 1
       add
       coerce_s
       setlocal2
@@ -468,9 +472,9 @@ L26:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Z6:_-mW#0"), "catch")
+  trait method QName(PrivateNamespace("*", "_-Z6:_-mW/instance"), "catch")
    method
-    refid "_-Z6:_-mW/catch"
+    refid "_-Z6:_-mW/instance/_-Z6:_-mW/instance/catch"
     param QName(PackageNamespace(""), "Object")
     returns QName(PackageNamespace(""), "String")
     flag NEED_ACTIVATION
@@ -522,8 +526,8 @@ L26:
 
       getscopeobject      1
       getslot             3
-      getproperty         MultinameA("name", [PrivateNamespace("*", "_-Z6:_-mW#0"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW#1"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")])
-      callproperty        Multiname("toString", [PrivateNamespace("*", "_-Z6:_-mW#0"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW#1"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")]), 0
+      getproperty         MultinameA("name", [PrivateNamespace("*", "_-Z6:_-mW/instance"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW/instance/_-Z6:_-mW/instance"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")])
+      callproperty        Multiname("toString", [PrivateNamespace("*", "_-Z6:_-mW/instance"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW/instance/_-Z6:_-mW/instance"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")]), 0
       pushstring          "Object"
       ifne                L98
 
@@ -551,7 +555,7 @@ L44:
       getslot             1
       getscopeobject      1
       getslot             5
-      getproperty         MultinameL([PrivateNamespace("*", "_-Z6:_-mW#0"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW#1"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-Z6:_-mW/instance"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW/instance/_-Z6:_-mW/instance"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")])
       coerce              QName(PackageNamespace(""), "Object")
       setslot             4
 
@@ -584,13 +588,13 @@ L76:
       getlocal0
       getscopeobject      1
       getslot             5
-      callproperty        QName(PrivateNamespace("*", "_-Z6:_-mW#0"), "_-cQ"), 1
+      callproperty        QName(PrivateNamespace("*", "_-Z6:_-mW/instance"), "_-cQ"), 1
       pushstring          ":"
       add
       getlocal0
       getscopeobject      1
       getslot             4
-      callproperty        QName(PrivateNamespace("*", "_-Z6:_-mW#0"), "_-4n"), 1
+      callproperty        QName(PrivateNamespace("*", "_-Z6:_-mW/instance"), "_-4n"), 1
       add
       add
       coerce_s
@@ -613,7 +617,7 @@ L98:
 
       getscopeobject      1
       getslot             3
-      getdescendants      Multiname("*", [PrivateNamespace("*", "_-Z6:_-mW#0"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW#1"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")])
+      getdescendants      Multiname("*", [PrivateNamespace("*", "_-Z6:_-mW/instance"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW/instance/_-Z6:_-mW/instance"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")])
       checkfilter
       coerce_a
       setlocal            7
@@ -637,16 +641,16 @@ L113:
       setlocal            9
 
       pushwith
-      findpropstrict      Multiname("name", [PrivateNamespace("*", "_-Z6:_-mW#0"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW#1"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")])
-      callproperty        Multiname("name", [PrivateNamespace("*", "_-Z6:_-mW#0"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW#1"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")]), 0
+      findpropstrict      Multiname("name", [PrivateNamespace("*", "_-Z6:_-mW/instance"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW/instance/_-Z6:_-mW/instance"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")])
+      callproperty        Multiname("name", [PrivateNamespace("*", "_-Z6:_-mW/instance"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW/instance/_-Z6:_-mW/instance"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")]), 0
       pushstring          "variable"
       equals
       dup
       iftrue              L133
 
       pop
-      findpropstrict      Multiname("name", [PrivateNamespace("*", "_-Z6:_-mW#0"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW#1"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")])
-      callproperty        Multiname("name", [PrivateNamespace("*", "_-Z6:_-mW#0"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW#1"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")]), 0
+      findpropstrict      Multiname("name", [PrivateNamespace("*", "_-Z6:_-mW/instance"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW/instance/_-Z6:_-mW/instance"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")])
+      callproperty        Multiname("name", [PrivateNamespace("*", "_-Z6:_-mW/instance"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW/instance/_-Z6:_-mW/instance"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")]), 0
       pushstring          "accessor"
       equals
 L133:
@@ -655,7 +659,7 @@ L133:
       getlocal            5
       getlocal            6
       getlocal            8
-      setproperty         MultinameL([PrivateNamespace("*", "_-Z6:_-mW#0"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW#1"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")])
+      setproperty         MultinameL([PrivateNamespace("*", "_-Z6:_-mW/instance"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW/instance/_-Z6:_-mW/instance"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")])
 
 L138:
       popscope
@@ -703,9 +707,9 @@ L168:
       getlocal0
       getscopeobject      1
       getslot             6
-      getproperty         MultinameA("name", [PrivateNamespace("*", "_-Z6:_-mW#0"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW#1"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")])
-      callproperty        Multiname("toString", [PrivateNamespace("*", "_-Z6:_-mW#0"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW#1"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")]), 0
-      callproperty        QName(PrivateNamespace("*", "_-Z6:_-mW#0"), "_-cQ"), 1
+      getproperty         MultinameA("name", [PrivateNamespace("*", "_-Z6:_-mW/instance"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW/instance/_-Z6:_-mW/instance"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")])
+      callproperty        Multiname("toString", [PrivateNamespace("*", "_-Z6:_-mW/instance"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW/instance/_-Z6:_-mW/instance"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")]), 0
+      callproperty        QName(PrivateNamespace("*", "_-Z6:_-mW/instance"), "_-cQ"), 1
       pushstring          ":"
       add
       getlocal0
@@ -713,9 +717,9 @@ L168:
       getslot             1
       getscopeobject      1
       getslot             6
-      getproperty         MultinameA("name", [PrivateNamespace("*", "_-Z6:_-mW#0"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW#1"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")])
-      getproperty         MultinameL([PrivateNamespace("*", "_-Z6:_-mW#0"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW#1"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")])
-      callproperty        QName(PrivateNamespace("*", "_-Z6:_-mW#0"), "_-4n"), 1
+      getproperty         MultinameA("name", [PrivateNamespace("*", "_-Z6:_-mW/instance"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW/instance/_-Z6:_-mW/instance"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-Z6:_-mW/instance"), PackageNamespace(""), PrivateNamespace("*", "_-Z6:_-mW/instance/_-Z6:_-mW/instance"), PackageNamespace("_-Z6"), PackageInternalNs("_-Z6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-01d"), StaticProtectedNs("_-01d")])
+      callproperty        QName(PrivateNamespace("*", "_-Z6:_-mW/instance"), "_-4n"), 1
       add
       add
       coerce_s
@@ -747,7 +751,7 @@ L195:
   end ; trait
  end ; instance
  cinit
-  refid "_-Z6:_-mW/cinit"
+  refid "_-Z6:_-mW/class/init"
   body
    maxstack 3
    localcount 1

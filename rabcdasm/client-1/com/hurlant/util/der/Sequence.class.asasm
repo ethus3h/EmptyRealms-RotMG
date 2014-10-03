@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-nl")
   iinit
-   refid "com.hurlant.util.der:Sequence/iinit"
+   refid "com.hurlant.util.der:Sequence/instance/init"
    param QName(PackageNamespace(""), "uint")
    param QName(PackageNamespace(""), "uint")
    flag HAS_OPTIONAL
@@ -40,7 +40,7 @@ class
   trait slot QName(ProtectedNamespace("_-nl"), "len") type QName(PackageNamespace(""), "uint") end
   trait method QName(PackageNamespace(""), "getLength")
    method
-    refid "com.hurlant.util.der:Sequence/getLength"
+    refid "com.hurlant.util.der:Sequence/instance/getLength"
     returns QName(PackageNamespace(""), "uint")
     body
      maxstack 1
@@ -60,7 +60,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "getType")
    method
-    refid "com.hurlant.util.der:Sequence/getType"
+    refid "com.hurlant.util.der:Sequence/instance/getType"
     returns QName(PackageNamespace(""), "uint")
     body
      maxstack 1
@@ -80,7 +80,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "toDER")
    method
-    refid "com.hurlant.util.der:Sequence/toDER"
+    refid "com.hurlant.util.der:Sequence/instance/toDER"
     returns QName(PackageNamespace("flash.utils"), "ByteArray")
     body
      maxstack 3
@@ -109,7 +109,7 @@ L12:
       label
       getlocal0
       getlocal2
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence#0"), ProtectedNamespace("_-nl"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-nl")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence/instance#0"), ProtectedNamespace("_-nl"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence/instance#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-nl")])
       coerce              QName(PackageNamespace("com.hurlant.util.der"), "IAsn1Type")
       setlocal3
 
@@ -152,7 +152,7 @@ L33:
   end ; trait
   trait method QName(PackageNamespace(""), "toString")
    method
-    refid "com.hurlant.util.der:Sequence/toString"
+    refid "com.hurlant.util.der:Sequence/instance/toString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 4
@@ -194,7 +194,7 @@ L22:
       label
       getlocal0
       getlocal3
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence#0"), ProtectedNamespace("_-nl"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-nl")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence/instance#0"), ProtectedNamespace("_-nl"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence/instance#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-nl")])
       pushnull
       ifne                L29
 
@@ -232,10 +232,10 @@ L37:
       pop
       getlocal0
       getlocal3
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence#0"), ProtectedNamespace("_-nl"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-nl")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence/instance#0"), ProtectedNamespace("_-nl"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence/instance#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-nl")])
       getlocal0
       getlocal            5
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence#0"), ProtectedNamespace("_-nl"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-nl")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence/instance#0"), ProtectedNamespace("_-nl"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence/instance#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-nl")])
       equals
 L58:
       iffalse             L75
@@ -246,7 +246,7 @@ L58:
       add
       getlocal0
       getlocal3
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence#0"), ProtectedNamespace("_-nl"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-nl")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence/instance#0"), ProtectedNamespace("_-nl"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence/instance#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-nl")])
       add
       pushstring          "\n"
       add
@@ -272,7 +272,7 @@ L77:
       getlocal2
       getlocal0
       getlocal3
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence#0"), ProtectedNamespace("_-nl"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-nl")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence/instance#0"), ProtectedNamespace("_-nl"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence/instance#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-nl")])
       pushstring          "\n"
       add
       add
@@ -319,7 +319,7 @@ L91:
   end ; trait
   trait method QName(PackageNamespace(""), "findAttributeValue")
    method
-    refid "com.hurlant.util.der:Sequence/findAttributeValue"
+    refid "com.hurlant.util.der:Sequence/instance/findAttributeValue"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace("com.hurlant.util.der"), "IAsn1Type")
     body
@@ -371,7 +371,7 @@ L20:
 
       getlocal2
       pushbyte            0
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence#0"), ProtectedNamespace("_-nl"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-nl")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence/instance#0"), ProtectedNamespace("_-nl"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence/instance#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-nl")])
       coerce_a
       setlocal3
 
@@ -382,7 +382,7 @@ L20:
 
       getlocal3
       pushbyte            0
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence#0"), ProtectedNamespace("_-nl"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-nl")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence/instance#0"), ProtectedNamespace("_-nl"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence/instance#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-nl")])
       coerce_a
       dup
       setlocal            4
@@ -404,7 +404,7 @@ L20:
 
       getlocal3
       pushbyte            1
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence#0"), ProtectedNamespace("_-nl"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-nl")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util.der:Sequence/instance#0"), ProtectedNamespace("_-nl"), PackageNamespace(""), PackageNamespace("com.hurlant.util.der"), PrivateNamespace("*", "com.hurlant.util.der:Sequence/instance#1"), PackageInternalNs("com.hurlant.util.der"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-nl")])
       getlex              QName(PackageNamespace("com.hurlant.util.der"), "IAsn1Type")
       astypelate
       returnvalue
@@ -423,7 +423,7 @@ L63:
   end ; trait
  end ; instance
  cinit
-  refid "com.hurlant.util.der:Sequence/cinit"
+  refid "com.hurlant.util.der:Sequence/class/init"
   body
    maxstack 1
    localcount 1

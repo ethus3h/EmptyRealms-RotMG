@@ -7,7 +7,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("com.google.analytics.data:UTMCookie")
   iinit
-   refid "com.google.analytics.data:UTMCookie/iinit"
+   refid "com.google.analytics.data:UTMCookie/instance/init"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "Array")
@@ -38,9 +38,9 @@ class
      getlocal3
      initproperty        QName(ProtectedNamespace("com.google.analytics.data:UTMCookie"), "fields")
 
-     findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), "_timestamp")
+     findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), "_timestamp")
      getlocal            4
-     callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), "_timestamp"), 1
+     callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), "_timestamp"), 1
 
      returnvoid
     end ; code
@@ -48,7 +48,7 @@ class
   end ; method
   trait method QName(PackageNamespace(""), "isEmpty")
    method
-    refid "com.google.analytics.data:UTMCookie/isEmpty"
+    refid "com.google.analytics.data:UTMCookie/instance/isEmpty"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 3
@@ -75,13 +75,13 @@ L10:
       label
       getlex              QName(ProtectedNamespace("com.google.analytics.data:UTMCookie"), "fields")
       getlocal3
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
       coerce_s
       setlocal2
 
       getlocal0
       getlocal2
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
       getlex              QName(PackageNamespace(""), "Number")
       istypelate
       dup
@@ -91,7 +91,7 @@ L10:
       findpropstrict      QName(PackageNamespace(""), "isNaN")
       getlocal0
       getlocal2
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
       callproperty        QName(PackageNamespace(""), "isNaN"), 1
       convert_b
 L30:
@@ -103,7 +103,7 @@ L30:
 L33:
       getlocal0
       getlocal2
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
       getlex              QName(PackageNamespace(""), "String")
       istypelate
       dup
@@ -112,7 +112,7 @@ L33:
       pop
       getlocal0
       getlocal2
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
       pushstring          ""
       equals
 L46:
@@ -144,7 +144,7 @@ L59:
   end ; trait
   trait method QName(PackageNamespace(""), "resetTimestamp")
    method
-    refid "com.google.analytics.data:UTMCookie/resetTimestamp"
+    refid "com.google.analytics.data:UTMCookie/instance/resetTimestamp"
     param QName(PackageNamespace(""), "Number")
     returns QName(PackageNamespace(""), "void")
     flag HAS_OPTIONAL
@@ -163,22 +163,22 @@ L59:
       callproperty        QName(PackageNamespace(""), "isNaN"), 1
       iftrue              L9
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), "_timespan")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), "_timespan")
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), "_timespan")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), "_timespan")
 
 L9:
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), "_creation")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), "_creation")
       pushnull
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), "_creation")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), "_creation")
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), "_expiration")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), "_expiration")
       pushnull
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), "_expiration")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), "_expiration")
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), "_timestamp")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), "_timespan")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), "_timestamp"), 1
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), "_timestamp")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), "_timespan")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), "_timestamp"), 1
 
       returnvoid
      end ; code
@@ -187,7 +187,7 @@ L9:
   end ; trait
   trait method QName(ProtectedNamespace("com.google.analytics.data:UTMCookie"), "update")
    method
-    refid "com.google.analytics.data:UTMCookie:update"
+    refid "com.google.analytics.data:UTMCookie/instance/com.google.analytics.data:UTMCookie:update"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 3
@@ -218,11 +218,11 @@ L11:
   end ; trait
   trait slot QName(ProtectedNamespace("com.google.analytics.data:UTMCookie"), "inURL") type QName(PackageNamespace(""), "String") end
   trait slot QName(ProtectedNamespace("com.google.analytics.data:UTMCookie"), "name") type QName(PackageNamespace(""), "String") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), "_creation") type QName(PackageNamespace(""), "Date") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), "_expiration") type QName(PackageNamespace(""), "Date") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), "_creation") type QName(PackageNamespace(""), "Date") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), "_expiration") type QName(PackageNamespace(""), "Date") end
   trait method QName(PackageNamespace(""), "reset")
    method
-    refid "com.google.analytics.data:UTMCookie/reset"
+    refid "com.google.analytics.data:UTMCookie/instance/reset"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 3
@@ -246,13 +246,13 @@ L8:
       label
       getlex              QName(ProtectedNamespace("com.google.analytics.data:UTMCookie"), "fields")
       getlocal2
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
       coerce_s
       setlocal1
 
       getlocal0
       getlocal1
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
       getlex              QName(PackageNamespace(""), "Number")
       istypelate
       iffalse             L25
@@ -260,14 +260,14 @@ L8:
       getlocal0
       getlocal1
       getlex              QName(PackageNamespace(""), "NaN")
-      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
 
       jump                L35
 
 L25:
       getlocal0
       getlocal1
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
       getlex              QName(PackageNamespace(""), "String")
       istypelate
       iffalse             L35
@@ -275,7 +275,7 @@ L25:
       getlocal0
       getlocal1
       pushstring          ""
-      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
 
 L35:
       inclocal_i          2
@@ -298,7 +298,7 @@ L36:
   end ; trait
   trait method QName(PackageNamespace(""), "fromSharedObject")
    method
-    refid "com.google.analytics.data:UTMCookie/fromSharedObject"
+    refid "com.google.analytics.data:UTMCookie/instance/fromSharedObject"
     param QName(PackageNamespace(""), "Object")
     returns QName(PackageNamespace(""), "void")
     body
@@ -328,21 +328,21 @@ L12:
       label
       getlex              QName(ProtectedNamespace("com.google.analytics.data:UTMCookie"), "fields")
       getlocal            4
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
       coerce_s
       setlocal2
 
       getlocal1
       getlocal2
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
       iffalse             L28
 
       getlocal0
       getlocal2
       getlocal1
       getlocal2
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
-      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
 
 L28:
       inclocal_i          4
@@ -352,22 +352,22 @@ L29:
       iflt                L12
 
       getlocal1
-      getproperty         Multiname("creation", [PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      getproperty         Multiname("creation", [PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
       iffalse             L39
 
       getlocal0
       getlocal1
-      getproperty         Multiname("creation", [PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      getproperty         Multiname("creation", [PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
       setproperty         QName(PackageNamespace(""), "creation")
 
 L39:
       getlocal1
-      getproperty         Multiname("expiration", [PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      getproperty         Multiname("expiration", [PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
       iffalse             L46
 
       getlocal0
       getlocal1
-      getproperty         Multiname("expiration", [PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      getproperty         Multiname("expiration", [PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
       setproperty         QName(PackageNamespace(""), "expiration")
 
 L46:
@@ -376,9 +376,9 @@ L46:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), "_timestamp")
+  trait method QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), "_timestamp")
    method
-    refid "com.google.analytics.data:UTMCookie/_timestamp"
+    refid "com.google.analytics.data:UTMCookie/instance/com.google.analytics.data:UTMCookie/instance/_timestamp"
     param QName(PackageNamespace(""), "Number")
     returns QName(PackageNamespace(""), "void")
     body
@@ -395,9 +395,9 @@ L46:
       constructprop       QName(PackageNamespace(""), "Date"), 0
       initproperty        QName(PackageNamespace(""), "creation")
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), "_timespan")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), "_timespan")
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), "_timespan")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), "_timespan")
 
       getlocal1
       pushbyte            0
@@ -420,7 +420,7 @@ L20:
   end ; trait
   trait method QName(PackageNamespace(""), "isExpired")
    method
-    refid "com.google.analytics.data:UTMCookie/isExpired"
+    refid "com.google.analytics.data:UTMCookie/instance/isExpired"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 2
@@ -460,7 +460,7 @@ L18:
   end ; trait
   trait setter QName(PackageNamespace(""), "expiration")
    method
-    refid "com.google.analytics.data:UTMCookie/expiration/setter"
+    refid "com.google.analytics.data:UTMCookie/instance/expiration/setter"
     param QName(PackageNamespace(""), "Date")
     returns QName(PackageNamespace(""), "void")
     body
@@ -472,9 +472,9 @@ L18:
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), "_expiration")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), "_expiration")
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), "_expiration")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), "_expiration")
 
       returnvoid
      end ; code
@@ -483,7 +483,7 @@ L18:
   end ; trait
   trait getter QName(PackageNamespace(""), "creation")
    method
-    refid "com.google.analytics.data:UTMCookie/creation/getter"
+    refid "com.google.analytics.data:UTMCookie/instance/creation/getter"
     returns QName(PackageNamespace(""), "Date")
     body
      maxstack 1
@@ -494,7 +494,7 @@ L18:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), "_creation")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), "_creation")
       returnvalue
      end ; code
     end ; body
@@ -502,7 +502,7 @@ L18:
   end ; trait
   trait method QName(PackageNamespace(""), "valueOf")
    method
-    refid "com.google.analytics.data:UTMCookie/valueOf"
+    refid "com.google.analytics.data:UTMCookie/instance/valueOf"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -541,13 +541,13 @@ L19:
       label
       getlex              QName(ProtectedNamespace("com.google.analytics.data:UTMCookie"), "fields")
       getlocal            6
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
       coerce_s
       setlocal2
 
       getlocal0
       getlocal2
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
       coerce_a
       setlocal3
 
@@ -644,7 +644,7 @@ L83:
   trait slot QName(PackageNamespace(""), "proxy") type QName(PackageNamespace("com.google.analytics.core"), "Buffer") end
   trait method QName(PackageNamespace(""), "toURLString")
    method
-    refid "com.google.analytics.data:UTMCookie/toURLString"
+    refid "com.google.analytics.data:UTMCookie/instance/toURLString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 2
@@ -668,7 +668,7 @@ L83:
   end ; trait
   trait getter QName(PackageNamespace(""), "expiration")
    method
-    refid "com.google.analytics.data:UTMCookie/expiration/getter"
+    refid "com.google.analytics.data:UTMCookie/instance/expiration/getter"
     returns QName(PackageNamespace(""), "Date")
     body
      maxstack 3
@@ -679,10 +679,10 @@ L83:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), "_expiration")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), "_expiration")
       iffalse             L6
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), "_expiration")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), "_expiration")
       returnvalue
 
 L6:
@@ -700,7 +700,7 @@ L6:
   end ; trait
   trait method QName(PackageNamespace(""), "toSharedObject")
    method
-    refid "com.google.analytics.data:UTMCookie/toSharedObject"
+    refid "com.google.analytics.data:UTMCookie/instance/toSharedObject"
     returns QName(PackageNamespace(""), "Object")
     body
      maxstack 3
@@ -732,13 +732,13 @@ L14:
       label
       getlex              QName(ProtectedNamespace("com.google.analytics.data:UTMCookie"), "fields")
       getlocal            4
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
       coerce_s
       setlocal2
 
       getlocal0
       getlocal2
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
       coerce_a
       setlocal3
 
@@ -750,7 +750,7 @@ L14:
       getlocal1
       getlocal2
       getlocal3
-      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
 
       jump                L51
 
@@ -762,7 +762,7 @@ L34:
       getlocal1
       getlocal2
       getlocal3
-      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
 
       jump                L51
 
@@ -778,7 +778,7 @@ L47:
       getlocal1
       getlocal2
       getlocal3
-      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
 
 L51:
       inclocal_i          4
@@ -790,11 +790,11 @@ L52:
 
       getlocal1
       getlex              QName(PackageNamespace(""), "creation")
-      setproperty         Multiname("creation", [PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      setproperty         Multiname("creation", [PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
 
       getlocal1
       getlex              QName(PackageNamespace(""), "expiration")
-      setproperty         Multiname("expiration", [PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      setproperty         Multiname("expiration", [PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
 
       getlocal1
       returnvalue
@@ -805,7 +805,7 @@ L52:
   trait slot QName(ProtectedNamespace("com.google.analytics.data:UTMCookie"), "fields") type QName(PackageNamespace(""), "Array") end
   trait method QName(PackageNamespace(""), "toString")
    method
-    refid "com.google.analytics.data:UTMCookie/toString"
+    refid "com.google.analytics.data:UTMCookie/instance/toString"
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "String")
     flag HAS_OPTIONAL
@@ -845,13 +845,13 @@ L18:
       label
       getlex              QName(ProtectedNamespace("com.google.analytics.data:UTMCookie"), "fields")
       getlocal            6
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
       coerce_s
       setlocal3
 
       getlocal0
       getlocal3
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), ProtectedNamespace("com.google.analytics.data:UTMCookie"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#1"), PackageNamespace("com.google.analytics.data"), PackageInternalNs("com.google.analytics.data"), StaticProtectedNs("com.google.analytics.data:UTMCookie"), StaticProtectedNs("Object")])
       coerce_a
       dup
       setlocal            4
@@ -945,10 +945,10 @@ L94:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), "_timespan") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), "_timespan") type QName(PackageNamespace(""), "Number") end
   trait setter QName(PackageNamespace(""), "creation")
    method
-    refid "com.google.analytics.data:UTMCookie/creation/setter"
+    refid "com.google.analytics.data:UTMCookie/instance/creation/setter"
     param QName(PackageNamespace(""), "Date")
     returns QName(PackageNamespace(""), "void")
     body
@@ -960,9 +960,9 @@ L94:
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), "_creation")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), "_creation")
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie#0"), "_creation")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.data:UTMCookie/instance#0"), "_creation")
 
       returnvoid
      end ; code
@@ -971,7 +971,7 @@ L94:
   end ; trait
  end ; instance
  cinit
-  refid "com.google.analytics.data:UTMCookie/cinit"
+  refid "com.google.analytics.data:UTMCookie/class/init"
   body
    maxstack 1
    localcount 1

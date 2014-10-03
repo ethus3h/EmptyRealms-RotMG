@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-Uf")
   iinit
-   refid "_-rK:LinkFrame/iinit"
+   refid "_-rK:LinkFrame/instance/init"
    body
     maxstack 10
     localcount 4
@@ -35,7 +35,7 @@ class
      setlocal1
 
      getlocal1
-     getlex              QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "_-Kz")
+     getlex              QName(PrivateNamespace("*", "_-rK:LinkFrame"), "_-Kz")
      callpropvoid        QName(PackageNamespace(""), "parseCSS"), 1
 
      getlocal0
@@ -49,33 +49,33 @@ class
      pushbyte            0
      pushstring          "Myriad Pro"
      constructprop       QName(PackageNamespace("com.company.ui"), "SimpleText"), 6
-     initproperty        QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "_-PH")
+     initproperty        QName(PrivateNamespace("*", "_-rK:LinkFrame"), "_-PH")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "_-PH")
+     getproperty         QName(PrivateNamespace("*", "_-rK:LinkFrame"), "_-PH")
      getlocal1
      setproperty         QName(PackageNamespace(""), "styleSheet")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "_-PH")
+     getproperty         QName(PrivateNamespace("*", "_-rK:LinkFrame"), "_-PH")
      pushtrue
      setproperty         QName(PackageNamespace(""), "wordWrap")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "_-PH")
+     getproperty         QName(PrivateNamespace("*", "_-rK:LinkFrame"), "_-PH")
      pushstring          "<span class='in'>"
-     getlex              QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "_-05T")
+     getlex              QName(PrivateNamespace("*", "_-rK:LinkFrame"), "_-05T")
      add
      pushstring          "</span>"
      add
      setproperty         QName(PackageNamespace(""), "htmlText")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "_-PH")
+     getproperty         QName(PrivateNamespace("*", "_-rK:LinkFrame"), "_-PH")
      callpropvoid        QName(PackageNamespace(""), "_-08S"), 0
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "_-PH")
+     getproperty         QName(PrivateNamespace("*", "_-rK:LinkFrame"), "_-PH")
      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
      pushbyte            0
      dup
@@ -88,12 +88,12 @@ class
      setproperty         QName(PackageNamespace(""), "filters")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "_-PH")
+     getproperty         QName(PrivateNamespace("*", "_-rK:LinkFrame"), "_-PH")
      pushbyte            17
      setproperty         QName(PackageNamespace(""), "x")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "_-PH")
+     getproperty         QName(PrivateNamespace("*", "_-rK:LinkFrame"), "_-PH")
      getlex              QName(ProtectedNamespace("_-I0"), "h_")
      pushbyte            66
      subtract
@@ -101,7 +101,7 @@ class
 
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "_-PH")
+     getproperty         QName(PrivateNamespace("*", "_-rK:LinkFrame"), "_-PH")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
      findproperty        QName(ProtectedNamespace("_-I0"), "h_")
@@ -140,26 +140,26 @@ class
      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
      getproperty         QName(PackageNamespace(""), "CLICK")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "onCancel")
+     getproperty         QName(PrivateNamespace("*", "_-rK:LinkFrame"), "onCancel")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
      getlex              QName(PackageNamespace(""), "_-uu")
      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
      getproperty         QName(PackageNamespace(""), "CLICK")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "onLink")
+     getproperty         QName(PrivateNamespace("*", "_-rK:LinkFrame"), "onLink")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "_-PH") type QName(PackageNamespace("com.company.ui"), "SimpleText") end
+  trait slot QName(PrivateNamespace("*", "_-rK:LinkFrame"), "_-PH") type QName(PackageNamespace("com.company.ui"), "SimpleText") end
   trait slot QName(PackageNamespace(""), "_-xb") type QName(PackageNamespace("_-0Dd"), "_-OI") end
   trait slot QName(PackageNamespace(""), "password_") type QName(PackageNamespace("_-0Dd"), "_-OI") end
-  trait method QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "onCancel")
+  trait method QName(PrivateNamespace("*", "_-rK:LinkFrame"), "onCancel")
    method
-    refid "_-rK:LinkFrame/onCancel"
+    refid "_-rK:LinkFrame/instance/_-rK:LinkFrame/onCancel"
     param QName(PackageNamespace("flash.events"), "MouseEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -183,9 +183,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "onLink")
+  trait method QName(PrivateNamespace("*", "_-rK:LinkFrame"), "onLink")
    method
-    refid "_-rK:LinkFrame/onLink"
+    refid "_-rK:LinkFrame/instance/_-rK:LinkFrame/onLink"
     param QName(PackageNamespace("flash.events"), "MouseEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -245,14 +245,14 @@ L22:
       getlex              QName(PackageNamespace("_-zo"), "_-8C")
       getproperty         QName(PackageNamespace(""), "GENERIC_DATA")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "_-018")
+      getproperty         QName(PrivateNamespace("*", "_-rK:LinkFrame"), "_-018")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       getlocal3
       getlex              QName(PackageNamespace("_-zo"), "_-mS")
       getproperty         QName(PackageNamespace(""), "TEXT_ERROR")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "_-bi")
+      getproperty         QName(PrivateNamespace("*", "_-rK:LinkFrame"), "_-bi")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       getlocal3
@@ -260,11 +260,11 @@ L22:
       pushstring          "steamid"
       getlocal2
       getproperty         QName(PackageNamespace(""), "_-Zd")
-      callproperty        Multiname("getSteamID", [PrivateNamespace("*", "_-rK:LinkFrame#0"), PackageNamespace(""), PackageNamespace("_-rK"), PrivateNamespace("*", "_-rK:LinkFrame#1"), PackageInternalNs("_-rK"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Uf"), StaticProtectedNs("_-Uf"), StaticProtectedNs("_-I0"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+      callproperty        Multiname("getSteamID", [PrivateNamespace("*", "_-rK:LinkFrame"), PackageNamespace(""), PackageNamespace("_-rK"), PrivateNamespace("*", "_-rK:LinkFrame/instance/_-rK:LinkFrame"), PackageInternalNs("_-rK"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Uf"), StaticProtectedNs("_-Uf"), StaticProtectedNs("_-I0"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
       pushstring          "sessionticket"
       getlocal2
       getproperty         QName(PackageNamespace(""), "_-Zd")
-      callproperty        Multiname("getAuthSessionTicket", [PrivateNamespace("*", "_-rK:LinkFrame#0"), PackageNamespace(""), PackageNamespace("_-rK"), PrivateNamespace("*", "_-rK:LinkFrame#1"), PackageInternalNs("_-rK"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Uf"), StaticProtectedNs("_-Uf"), StaticProtectedNs("_-I0"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+      callproperty        Multiname("getAuthSessionTicket", [PrivateNamespace("*", "_-rK:LinkFrame"), PackageNamespace(""), PackageNamespace("_-rK"), PrivateNamespace("*", "_-rK:LinkFrame/instance/_-rK:LinkFrame"), PackageInternalNs("_-rK"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Uf"), StaticProtectedNs("_-Uf"), StaticProtectedNs("_-I0"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
       pushstring          "guid"
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-xb")
@@ -284,9 +284,9 @@ L22:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "_-018")
+  trait method QName(PrivateNamespace("*", "_-rK:LinkFrame"), "_-018")
    method
-    refid "_-rK:LinkFrame/_-018"
+    refid "_-rK:LinkFrame/instance/_-rK:LinkFrame/_-018"
     param QName(PackageNamespace("_-zo"), "_-8C")
     returns QName(PackageNamespace(""), "void")
     body
@@ -314,10 +314,10 @@ L22:
       getlex              QName(PackageNamespace("_-qN"), "Account")
       callproperty        QName(PackageNamespace(""), "get"), 0
       getlocal2
-      getproperty         Multiname("GUID", [PrivateNamespace("*", "_-rK:LinkFrame#0"), PackageNamespace(""), PackageNamespace("_-rK"), PrivateNamespace("*", "_-rK:LinkFrame#1"), PackageInternalNs("_-rK"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Uf"), StaticProtectedNs("_-Uf"), StaticProtectedNs("_-I0"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("GUID", [PrivateNamespace("*", "_-rK:LinkFrame"), PackageNamespace(""), PackageNamespace("_-rK"), PrivateNamespace("*", "_-rK:LinkFrame/instance/_-rK:LinkFrame"), PackageInternalNs("_-rK"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Uf"), StaticProtectedNs("_-Uf"), StaticProtectedNs("_-I0"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       pushnull
       getlocal2
-      getproperty         Multiname("Secret", [PrivateNamespace("*", "_-rK:LinkFrame#0"), PackageNamespace(""), PackageNamespace("_-rK"), PrivateNamespace("*", "_-rK:LinkFrame#1"), PackageInternalNs("_-rK"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Uf"), StaticProtectedNs("_-Uf"), StaticProtectedNs("_-I0"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("Secret", [PrivateNamespace("*", "_-rK:LinkFrame"), PackageNamespace(""), PackageNamespace("_-rK"), PrivateNamespace("*", "_-rK:LinkFrame/instance/_-rK:LinkFrame"), PackageInternalNs("_-rK"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Uf"), StaticProtectedNs("_-Uf"), StaticProtectedNs("_-I0"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       callpropvoid        QName(PackageNamespace(""), "modify"), 3
 
       findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
@@ -332,9 +332,9 @@ L22:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "_-bi")
+  trait method QName(PrivateNamespace("*", "_-rK:LinkFrame"), "_-bi")
    method
-    refid "_-rK:LinkFrame/_-bi"
+    refid "_-rK:LinkFrame/instance/_-rK:LinkFrame/_-bi"
     param QName(PackageNamespace("_-zo"), "_-mS")
     returns QName(PackageNamespace(""), "void")
     body
@@ -362,7 +362,7 @@ L22:
   end ; trait
  end ; instance
  cinit
-  refid "_-rK:LinkFrame/cinit"
+  refid "_-rK:LinkFrame/class/init"
   body
    maxstack 5
    localcount 3
@@ -372,11 +372,11 @@ L22:
     getlocal0
     pushscope
 
-    findproperty        QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "_-Kz")
+    findproperty        QName(PrivateNamespace("*", "_-rK:LinkFrame"), "_-Kz")
     pushstring          ".in { margin-left:10px; text-indent: -10px; }"
-    initproperty        QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "_-Kz")
+    initproperty        QName(PrivateNamespace("*", "_-rK:LinkFrame"), "_-Kz")
 
-    findproperty        QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "_-05T")
+    findproperty        QName(PrivateNamespace("*", "_-rK:LinkFrame"), "_-05T")
     pushstring          "<font color=\"#FF0000\"><b>WARNING:</b></font> "
     pushstring          "You will "
     add
@@ -388,12 +388,12 @@ L22:
     add
     pushstring          "Think carefully before hitting Replace."
     add
-    initproperty        QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "_-05T")
+    initproperty        QName(PrivateNamespace("*", "_-rK:LinkFrame"), "_-05T")
 
     returnvoid
    end ; code
   end ; body
  end ; method
- trait const QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "_-Kz") slotid 1 type QName(PackageNamespace(""), "String") value Utf8(".in { margin-left:10px; text-indent: -10px; }") end
- trait const QName(PrivateNamespace("*", "_-rK:LinkFrame#0"), "_-05T") slotid 2 type QName(PackageNamespace(""), "String") end
+ trait const QName(PrivateNamespace("*", "_-rK:LinkFrame"), "_-Kz") slotid 1 type QName(PackageNamespace(""), "String") value Utf8(".in { margin-left:10px; text-indent: -10px; }") end
+ trait const QName(PrivateNamespace("*", "_-rK:LinkFrame"), "_-05T") slotid 2 type QName(PackageNamespace(""), "String") end
 end ; class

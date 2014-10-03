@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-xm")
   iinit
-   refid "_-4X:_-0GR/iinit"
+   refid "_-4X:_-0GR/instance/init"
    param QName(PackageNamespace(""), "Function")
    flag NEED_REST
    body
@@ -23,21 +23,21 @@ class
 
      getlocal0
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "_-4X:_-0GR"), "callback")
+     initproperty        QName(PrivateNamespace("*", "_-4X:_-0GR/instance"), "callback")
 
      getlocal0
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "_-4X:_-0GR"), "_-wR")
+     initproperty        QName(PrivateNamespace("*", "_-4X:_-0GR/instance"), "_-wR")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-4X:_-0GR"), "callback") type QName(PackageNamespace(""), "Function") end
-  trait slot QName(PrivateNamespace("*", "_-4X:_-0GR"), "_-wR") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("*", "_-4X:_-0GR/instance"), "callback") type QName(PackageNamespace(""), "Function") end
+  trait slot QName(PrivateNamespace("*", "_-4X:_-0GR/instance"), "_-wR") type QName(PackageNamespace(""), "Array") end
   trait method QName(ProtectedNamespace("_-xm"), "startTask") flag OVERRIDE
    method
-    refid "_-4X:_-0GR/_-xm:startTask"
+    refid "_-4X:_-0GR/instance/_-xm:startTask"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -49,9 +49,9 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-0GR"), "callback")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-0GR/instance"), "callback")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-0GR"), "_-wR")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-0GR/instance"), "_-wR")
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "apply"), 1
 
       findpropstrict      QName(ProtectedNamespace("_-01A"), "_-Ct")
@@ -65,7 +65,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-4X:_-0GR/cinit"
+  refid "_-4X:_-0GR/class/init"
   body
    maxstack 3
    localcount 1

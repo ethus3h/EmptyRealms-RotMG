@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("com.google.analytics.core:OrganicReferrer")
   iinit
-   refid "com.google.analytics.core:OrganicReferrer/iinit"
+   refid "com.google.analytics.core:OrganicReferrer/instance/init"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "String")
    body
@@ -35,7 +35,7 @@ class
   end ; method
   trait getter QName(PackageNamespace(""), "keyword")
    method
-    refid "com.google.analytics.core:OrganicReferrer/keyword/getter"
+    refid "com.google.analytics.core:OrganicReferrer/instance/keyword/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -46,16 +46,16 @@ class
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:OrganicReferrer"), "_keyword")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:OrganicReferrer/instance"), "_keyword")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:OrganicReferrer"), "_engine") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:OrganicReferrer/instance"), "_engine") type QName(PackageNamespace(""), "String") end
   trait getter QName(PackageNamespace(""), "engine")
    method
-    refid "com.google.analytics.core:OrganicReferrer/engine/getter"
+    refid "com.google.analytics.core:OrganicReferrer/instance/engine/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -66,16 +66,16 @@ class
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:OrganicReferrer"), "_engine")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:OrganicReferrer/instance"), "_engine")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:OrganicReferrer"), "_keyword") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:OrganicReferrer/instance"), "_keyword") type QName(PackageNamespace(""), "String") end
   trait setter QName(PackageNamespace(""), "engine")
    method
-    refid "com.google.analytics.core:OrganicReferrer/engine/setter"
+    refid "com.google.analytics.core:OrganicReferrer/instance/engine/setter"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -87,10 +87,10 @@ class
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:OrganicReferrer"), "_engine")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:OrganicReferrer/instance"), "_engine")
       getlocal1
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:OrganicReferrer"), "_engine")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:OrganicReferrer/instance"), "_engine")
 
       returnvoid
      end ; code
@@ -99,7 +99,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "toString")
    method
-    refid "com.google.analytics.core:OrganicReferrer/toString"
+    refid "com.google.analytics.core:OrganicReferrer/instance/toString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 2
@@ -122,7 +122,7 @@ class
   end ; trait
   trait setter QName(PackageNamespace(""), "keyword")
    method
-    refid "com.google.analytics.core:OrganicReferrer/keyword/setter"
+    refid "com.google.analytics.core:OrganicReferrer/instance/keyword/setter"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -134,10 +134,10 @@ class
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:OrganicReferrer"), "_keyword")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:OrganicReferrer/instance"), "_keyword")
       getlocal1
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:OrganicReferrer"), "_keyword")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:OrganicReferrer/instance"), "_keyword")
 
       returnvoid
      end ; code
@@ -146,7 +146,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "com.google.analytics.core:OrganicReferrer/cinit"
+  refid "com.google.analytics.core:OrganicReferrer/class/init"
   body
    maxstack 1
    localcount 1

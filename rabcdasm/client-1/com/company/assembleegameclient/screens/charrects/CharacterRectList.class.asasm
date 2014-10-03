@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-kP")
   iinit
-   refid "com.company.assembleegameclient.screens.charrects:CharacterRectList/iinit"
+   refid "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance/init"
    param QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0KR")
    param QName(PackageNamespace("_-F1"), "_-05p")
    body
@@ -42,11 +42,11 @@ class
 
      getlocal0
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "charList_")
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "charList_")
 
      getlocal0
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "screen_")
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "screen_")
 
      getlocal0
      findpropstrict      QName(PackageNamespace("_-sp"), "_-aJ")
@@ -79,15 +79,15 @@ L39:
 
      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.screens.charrects"), "CurrentCharacterRect")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "charList_")
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "charList_")
      getproperty         QName(PackageNamespace(""), "name_")
      getlocal            5
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "charList_")
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "charList_")
      getproperty         QName(PackageNamespace(""), "charStats_")
      getlocal            5
      callproperty        QName(PackageNamespace(""), "objectType"), 0
-     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), PackageNamespace("com.company.assembleegameclient.screens.charrects"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/iinit"), PackageInternalNs("com.company.assembleegameclient.screens.charrects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-kP"), StaticProtectedNs("_-kP"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), PackageNamespace("com.company.assembleegameclient.screens.charrects"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance/init"), PackageInternalNs("com.company.assembleegameclient.screens.charrects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-kP"), StaticProtectedNs("_-kP"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
      constructprop       QName(PackageNamespace("com.company.assembleegameclient.screens.charrects"), "CurrentCharacterRect"), 3
      coerce              QName(PackageNamespace("com.company.assembleegameclient.screens.charrects"), "CurrentCharacterRect")
      dup
@@ -140,7 +140,7 @@ L86:
      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
      getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "onNewChar")
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "onNewChar")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
      getlocal            9
@@ -182,7 +182,7 @@ L120:
      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
      getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "onBuyCharSlot")
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "onBuyCharSlot")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
      getlocal            6
@@ -201,13 +201,13 @@ L120:
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "charList_") type QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0KR") end
-  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "screen_") type QName(PackageNamespace("_-F1"), "_-05p") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "charList_") type QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0KR") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "screen_") type QName(PackageNamespace("_-F1"), "_-05p") end
   trait slot QName(PackageNamespace(""), "newCharacter") type QName(PackageNamespace("_-sp"), "_-aJ") end
   trait slot QName(PackageNamespace(""), "deleteCharacter") type QName(PackageNamespace("_-sp"), "_-aJ") end
-  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "onCancel")
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "onCancel")
    method
-    refid "com.company.assembleegameclient.screens.charrects:CharacterRectList/onCancel"
+    refid "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance/com.company.assembleegameclient.screens.charrects:CharacterRectList/instance/onCancel"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -227,7 +227,7 @@ L120:
       setlocal2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "screen_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "screen_")
       getlocal2
       callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
 
@@ -236,9 +236,9 @@ L120:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "onNewChar")
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "onNewChar")
    method
-    refid "com.company.assembleegameclient.screens.charrects:CharacterRectList/onNewChar"
+    refid "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance/com.company.assembleegameclient.screens.charrects:CharacterRectList/instance/onNewChar"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -259,9 +259,9 @@ L120:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "onBuyCharSlot")
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "onBuyCharSlot")
    method
-    refid "com.company.assembleegameclient.screens.charrects:CharacterRectList/onBuyCharSlot"
+    refid "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance/com.company.assembleegameclient.screens.charrects:CharacterRectList/instance/onBuyCharSlot"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -291,18 +291,18 @@ L120:
       getlex              QName(PackageNamespace("_-0LC"), "_-qO")
       getproperty         QName(PackageNamespace(""), "BUTTON1_EVENT")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "onCancel")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "onCancel")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       getlocal3
       getlex              QName(PackageNamespace("_-0LC"), "_-qO")
       getproperty         QName(PackageNamespace(""), "BUTTON2_EVENT")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "onDialogRegister")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "onDialogRegister")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "screen_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "screen_")
       getlocal3
       callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
@@ -310,18 +310,18 @@ L120:
 
 L30:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "charList_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "charList_")
       getproperty         QName(PackageNamespace(""), "credits_")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "charList_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "charList_")
       getproperty         QName(PackageNamespace(""), "nextCharSlotPrice_")
       ifnlt               L46
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "screen_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "screen_")
       findpropstrict      QName(PackageNamespace("_-0LC"), "_-0GH")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "charList_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "charList_")
       getproperty         QName(PackageNamespace(""), "nextCharSlotPrice_")
       constructprop       QName(PackageNamespace("_-0LC"), "_-0GH"), 1
       callpropvoid        QName(PackageNamespace(""), "addChild"), 1
@@ -331,7 +331,7 @@ L30:
 L46:
       findpropstrict      QName(PackageNamespace("_-0LC"), "_-0Gy")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "charList_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "charList_")
       getproperty         QName(PackageNamespace(""), "nextCharSlotPrice_")
       constructprop       QName(PackageNamespace("_-0LC"), "_-0Gy"), 1
       coerce              QName(PackageNamespace("_-0LC"), "_-0Gy")
@@ -341,11 +341,11 @@ L46:
       getlex              QName(PackageNamespace("_-zo"), "_-mS")
       getproperty         QName(PackageNamespace(""), "TEXT_ERROR")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "onDialogError")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "onDialogError")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "screen_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "screen_")
       getlocal2
       callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
@@ -354,9 +354,9 @@ L46:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "onDialogRegister")
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "onDialogRegister")
    method
-    refid "com.company.assembleegameclient.screens.charrects:CharacterRectList/onDialogRegister"
+    refid "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance/com.company.assembleegameclient.screens.charrects:CharacterRectList/instance/onDialogRegister"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -390,7 +390,7 @@ L46:
 L19:
       pop
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "screen_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "screen_")
       callpropvoid        QName(PackageNamespace(""), "_-0j"), 0
 
       returnvoid
@@ -398,9 +398,9 @@ L19:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "onDialogError")
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "onDialogError")
    method
-    refid "com.company.assembleegameclient.screens.charrects:CharacterRectList/onDialogError"
+    refid "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance/com.company.assembleegameclient.screens.charrects:CharacterRectList/instance/onDialogError"
     param QName(PackageNamespace("_-zo"), "_-mS")
     returns QName(PackageNamespace(""), "void")
     body
@@ -420,7 +420,7 @@ L19:
       setlocal2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "screen_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "screen_")
       getlocal2
       callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
 
@@ -432,7 +432,7 @@ L19:
       setlocal3
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList"), "screen_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CharacterRectList/instance"), "screen_")
       getlocal3
       callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
@@ -443,7 +443,7 @@ L19:
   end ; trait
  end ; instance
  cinit
-  refid "com.company.assembleegameclient.screens.charrects:CharacterRectList/cinit"
+  refid "com.company.assembleegameclient.screens.charrects:CharacterRectList/class/init"
   body
    maxstack 1
    localcount 1

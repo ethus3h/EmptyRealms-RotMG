@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-08g")
   iinit
-   refid "_-F1:_-0Bm/iinit"
+   refid "_-F1:_-0Bm/instance/init"
    param QName(PackageNamespace("flash.display"), "BitmapData")
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "String")
@@ -191,7 +191,7 @@ class
      getproperty         QName(PackageNamespace(""), "_-Y0")
      getlocal0
      getlocal            5
-     callproperty        QName(PrivateNamespace("*", "_-F1:_-0Bm"), "_-06P"), 1
+     callproperty        QName(PrivateNamespace("*", "_-F1:_-0Bm/instance"), "_-06P"), 1
      setproperty         QName(PackageNamespace(""), "text")
 
      getlocal0
@@ -259,7 +259,7 @@ class
   trait slot QName(PackageNamespace(""), "accountId") type QName(PackageNamespace(""), "int") end
   trait method QName(ProtectedNamespace("_-08g"), "onMouseOver")
    method
-    refid "_-F1:_-0Bm/_-08g:onMouseOver"
+    refid "_-F1:_-0Bm/instance/_-08g:onMouseOver"
     param QName(PackageNamespace("flash.events"), "MouseEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -293,7 +293,7 @@ class
   end ; trait
   trait method QName(ProtectedNamespace("_-08g"), "onRollOut")
    method
-    refid "_-F1:_-0Bm/_-08g:onRollOut"
+    refid "_-F1:_-0Bm/instance/_-08g:onRollOut"
     param QName(PackageNamespace("flash.events"), "MouseEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -327,7 +327,7 @@ class
   end ; trait
   trait method QName(ProtectedNamespace("_-08g"), "onMouseDown")
    method
-    refid "_-F1:_-0Bm/_-08g:onMouseDown"
+    refid "_-F1:_-0Bm/instance/_-08g:onMouseDown"
     param QName(PackageNamespace("flash.events"), "MouseEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -356,7 +356,7 @@ L10:
       findpropstrict      QName(PackageNamespace(""), "int")
       getlocal2
       pushbyte            1
-      getproperty         MultinameL([PrivateNamespace("*", "_-F1:_-0Bm"), PackageNamespace(""), ProtectedNamespace("_-08g"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-F1:_-0Bm/_-08g:onMouseDown"), PackageNamespace("_-F1"), PackageInternalNs("_-F1"), StaticProtectedNs("_-08g"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-F1:_-0Bm/instance"), PackageNamespace(""), ProtectedNamespace("_-08g"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-F1:_-0Bm/instance/_-08g:onMouseDown"), PackageNamespace("_-F1"), PackageInternalNs("_-F1"), StaticProtectedNs("_-08g"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       callproperty        QName(PackageNamespace(""), "int"), 1
       callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
 
@@ -379,7 +379,7 @@ L21:
 L30:
       getlocal2
       pushbyte            0
-      getproperty         MultinameL([PrivateNamespace("*", "_-F1:_-0Bm"), PackageNamespace(""), ProtectedNamespace("_-08g"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-F1:_-0Bm/_-08g:onMouseDown"), PackageNamespace("_-F1"), PackageInternalNs("_-F1"), StaticProtectedNs("_-08g"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-F1:_-0Bm/instance"), PackageNamespace(""), ProtectedNamespace("_-08g"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-F1:_-0Bm/instance/_-08g:onMouseDown"), PackageNamespace("_-F1"), PackageInternalNs("_-F1"), StaticProtectedNs("_-08g"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       setlocal3
 
       pushstring          "fame"
@@ -417,9 +417,9 @@ L52:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-F1:_-0Bm"), "_-06P")
+  trait method QName(PrivateNamespace("*", "_-F1:_-0Bm/instance"), "_-06P")
    method
-    refid "_-F1:_-0Bm/_-06P"
+    refid "_-F1:_-0Bm/instance/_-F1:_-0Bm/instance/_-06P"
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace(""), "String")
     body
@@ -517,7 +517,7 @@ L56:
   end ; trait
  end ; instance
  cinit
-  refid "_-F1:_-0Bm/cinit"
+  refid "_-F1:_-0Bm/class/init"
   body
    maxstack 4
    localcount 3

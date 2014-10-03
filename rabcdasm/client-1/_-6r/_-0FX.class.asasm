@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-4o")
   iinit
-   refid "_-6r:_-0FX/iinit"
+   refid "_-6r:_-0FX/instance/init"
    body
     maxstack 3
     localcount 3
@@ -23,10 +23,10 @@ class
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-6r:_-0FX"), "_-vP") type QName(PackageNamespace("_-E7"), "for ") end
+  trait slot QName(PrivateNamespace("*", "_-6r:_-0FX/instance"), "_-vP") type QName(PackageNamespace("_-E7"), "for ") end
   trait method QName(PackageNamespace(""), "show")
    method
-    refid "_-6r:_-0FX/show"
+    refid "_-6r:_-0FX/instance/show"
     param QName(PackageNamespace("_-E7"), "for ")
     returns QName(PackageNamespace(""), "void")
     body
@@ -43,7 +43,7 @@ class
 
       getlocal0
       getlocal1
-      setproperty         QName(PrivateNamespace("*", "_-6r:_-0FX"), "_-vP")
+      setproperty         QName(PrivateNamespace("*", "_-6r:_-0FX/instance"), "_-vP")
 
       getlocal1
       iffalse             L12
@@ -60,7 +60,7 @@ L12:
   end ; trait
   trait method QName(PackageNamespace(""), "hide")
    method
-    refid "_-6r:_-0FX/hide"
+    refid "_-6r:_-0FX/instance/hide"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -72,30 +72,30 @@ L12:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-6r:_-0FX"), "_-vP")
+      getproperty         QName(PrivateNamespace("*", "_-6r:_-0FX/instance"), "_-vP")
       convert_b
       dup
       iffalse             L12
 
       pop
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-6r:_-0FX"), "_-vP")
+      getproperty         QName(PrivateNamespace("*", "_-6r:_-0FX/instance"), "_-vP")
       getproperty         QName(PackageNamespace(""), "parent")
       convert_b
 L12:
       iffalse             L19
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-6r:_-0FX"), "_-vP")
+      getproperty         QName(PrivateNamespace("*", "_-6r:_-0FX/instance"), "_-vP")
       getproperty         QName(PackageNamespace(""), "parent")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-6r:_-0FX"), "_-vP")
+      getproperty         QName(PrivateNamespace("*", "_-6r:_-0FX/instance"), "_-vP")
       callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
 
 L19:
       getlocal0
       pushnull
-      initproperty        QName(PrivateNamespace("*", "_-6r:_-0FX"), "_-vP")
+      initproperty        QName(PrivateNamespace("*", "_-6r:_-0FX/instance"), "_-vP")
 
       returnvoid
      end ; code
@@ -104,7 +104,7 @@ L19:
   end ; trait
  end ; instance
  cinit
-  refid "_-6r:_-0FX/cinit"
+  refid "_-6r:_-0FX/class/init"
   body
    maxstack 3
    localcount 1

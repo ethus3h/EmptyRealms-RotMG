@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-Wn")
   iinit
-   refid "_-5H:_-Rh/iinit"
+   refid "_-5H:_-Rh/instance/init"
    body
     maxstack 3
     localcount 3
@@ -23,12 +23,12 @@ class
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-5H:_-Rh"), "_-WA") type QName(PackageNamespace(""), "int") end
-  trait slot QName(PrivateNamespace("*", "_-5H:_-Rh"), "_height") type QName(PackageNamespace(""), "int") end
-  trait slot QName(PrivateNamespace("*", "_-5H:_-Rh"), "_color") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "_-5H:_-Rh/instance"), "_-WA") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "_-5H:_-Rh/instance"), "_height") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "_-5H:_-Rh/instance"), "_color") type QName(PackageNamespace(""), "int") end
   trait method QName(PackageNamespace(""), "_-H9")
    method
-    refid "_-5H:_-Rh/_-H9"
+    refid "_-5H:_-Rh/instance/_-H9"
     param QName(PackageNamespace(""), "int")
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace(""), "void")
@@ -43,14 +43,14 @@ class
 
       getlocal0
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "_-5H:_-Rh"), "_-WA")
+      initproperty        QName(PrivateNamespace("*", "_-5H:_-Rh/instance"), "_-WA")
 
       getlocal0
       getlocal2
-      initproperty        QName(PrivateNamespace("*", "_-5H:_-Rh"), "_height")
+      initproperty        QName(PrivateNamespace("*", "_-5H:_-Rh/instance"), "_height")
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-5H:_-Rh"), "_-B-"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-5H:_-Rh/instance"), "_-B-"), 0
 
       returnvoid
      end ; code
@@ -59,7 +59,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "_-gp")
    method
-    refid "_-5H:_-Rh/_-gp"
+    refid "_-5H:_-Rh/instance/_-gp"
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace(""), "void")
     body
@@ -73,19 +73,19 @@ class
 
       getlocal0
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "_-5H:_-Rh"), "_color")
+      initproperty        QName(PrivateNamespace("*", "_-5H:_-Rh/instance"), "_color")
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-5H:_-Rh"), "_-B-"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-5H:_-Rh/instance"), "_-B-"), 0
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-5H:_-Rh"), "_-B-")
+  trait method QName(PrivateNamespace("*", "_-5H:_-Rh/instance"), "_-B-")
    method
-    refid "_-5H:_-Rh/_-B-"
+    refid "_-5H:_-Rh/instance/_-5H:_-Rh/instance/_-B-"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 7
@@ -101,16 +101,16 @@ class
 
       getlex              QName(PackageNamespace(""), "graphics")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-5H:_-Rh"), "_color")
+      getproperty         QName(PrivateNamespace("*", "_-5H:_-Rh/instance"), "_color")
       callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
 
       getlex              QName(PackageNamespace(""), "graphics")
       pushbyte            0
       dup
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-5H:_-Rh"), "_-WA")
+      getproperty         QName(PrivateNamespace("*", "_-5H:_-Rh/instance"), "_-WA")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-5H:_-Rh"), "_height")
+      getproperty         QName(PrivateNamespace("*", "_-5H:_-Rh/instance"), "_height")
       callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
 
       getlex              QName(PackageNamespace(""), "graphics")
@@ -123,7 +123,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-5H:_-Rh/cinit"
+  refid "_-5H:_-Rh/class/init"
   body
    maxstack 3
    localcount 1

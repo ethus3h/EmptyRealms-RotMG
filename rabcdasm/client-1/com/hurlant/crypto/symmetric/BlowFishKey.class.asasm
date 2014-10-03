@@ -7,7 +7,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-Dg")
   iinit
-   refid "com.hurlant.crypto.symmetric:BlowFishKey/iinit"
+   refid "com.hurlant.crypto.symmetric:BlowFishKey/instance/init"
    param QName(PackageNamespace("flash.utils"), "ByteArray")
    body
     maxstack 2
@@ -23,25 +23,25 @@ class
 
      getlocal0
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "key")
+     initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "key")
 
      getlocal0
      getlocal1
-     callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "setKey"), 1
+     callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "setKey"), 1
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S0") type QName(PackageNamespace(""), "Array") end
-  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S1") type QName(PackageNamespace(""), "Array") end
-  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S2") type QName(PackageNamespace(""), "Array") end
-  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S3") type QName(PackageNamespace(""), "Array") end
-  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P") type QName(PackageNamespace(""), "Array") end
-  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "key") type QName(PackageNamespace("flash.utils"), "ByteArray") value Null() end
+  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S0") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S1") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S2") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S3") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "key") type QName(PackageNamespace("flash.utils"), "ByteArray") value Null() end
   trait method QName(PackageNamespace(""), "getBlockSize")
    method
-    refid "com.hurlant.crypto.symmetric:BlowFishKey/getBlockSize"
+    refid "com.hurlant.crypto.symmetric:BlowFishKey/instance/getBlockSize"
     returns QName(PackageNamespace(""), "uint")
     body
      maxstack 1
@@ -52,7 +52,7 @@ class
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "BLOCK_SIZE")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "BLOCK_SIZE")
       returnvalue
      end ; code
     end ; body
@@ -60,7 +60,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "decrypt")
    method
-    refid "com.hurlant.crypto.symmetric:BlowFishKey/decrypt"
+    refid "com.hurlant.crypto.symmetric:BlowFishKey/instance/decrypt"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     param QName(PackageNamespace(""), "uint")
     returns QName(PackageNamespace(""), "void")
@@ -80,7 +80,7 @@ class
       getlocal2
       getlocal1
       getlocal2
-      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "decryptBlock"), 4
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "decryptBlock"), 4
 
       returnvoid
      end ; code
@@ -89,7 +89,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "dispose")
    method
-    refid "com.hurlant.crypto.symmetric:BlowFishKey/dispose"
+    refid "com.hurlant.crypto.symmetric:BlowFishKey/instance/dispose"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 3
@@ -113,10 +113,10 @@ class
 L9:
       label
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S0")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S0")
       getlocal1
       pushbyte            0
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
 
       getlocal1
       increment
@@ -126,7 +126,7 @@ L9:
 L19:
       getlocal1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S0")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S0")
       getproperty         QName(PackageNamespace(""), "length")
       iflt                L9
 
@@ -139,10 +139,10 @@ L19:
 L28:
       label
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S1")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S1")
       getlocal1
       pushbyte            0
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
 
       getlocal1
       increment
@@ -152,7 +152,7 @@ L28:
 L38:
       getlocal1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S1")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S1")
       getproperty         QName(PackageNamespace(""), "length")
       iflt                L28
 
@@ -165,10 +165,10 @@ L38:
 L47:
       label
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S2")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S2")
       getlocal1
       pushbyte            0
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
 
       getlocal1
       increment
@@ -178,7 +178,7 @@ L47:
 L57:
       getlocal1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S2")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S2")
       getproperty         QName(PackageNamespace(""), "length")
       iflt                L47
 
@@ -191,10 +191,10 @@ L57:
 L66:
       label
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S3")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S3")
       getlocal1
       pushbyte            0
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
 
       getlocal1
       increment
@@ -204,7 +204,7 @@ L66:
 L76:
       getlocal1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S3")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S3")
       getproperty         QName(PackageNamespace(""), "length")
       iflt                L66
 
@@ -217,10 +217,10 @@ L76:
 L85:
       label
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P")
       getlocal1
       pushbyte            0
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
 
       getlocal1
       increment
@@ -230,29 +230,29 @@ L85:
 L95:
       getlocal1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P")
       getproperty         QName(PackageNamespace(""), "length")
       iflt                L85
 
       getlocal0
       pushnull
-      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S0")
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S0")
 
       getlocal0
       pushnull
-      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S1")
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S1")
 
       getlocal0
       pushnull
-      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S2")
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S2")
 
       getlocal0
       pushnull
-      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S3")
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S3")
 
       getlocal0
       pushnull
-      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P")
 
       pushbyte            0
       convert_u
@@ -263,10 +263,10 @@ L95:
 L119:
       label
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "key")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "key")
       getlocal1
       pushbyte            0
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
 
       getlocal1
       increment
@@ -276,18 +276,18 @@ L119:
 L129:
       getlocal1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "key")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "key")
       getproperty         QName(PackageNamespace(""), "length")
       iflt                L119
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "key")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "key")
       pushbyte            0
       setproperty         QName(PackageNamespace(""), "length")
 
       getlocal0
       pushnull
-      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "key")
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "key")
 
       getlex              QName(PackageNamespace("com.hurlant.util"), "Memory")
       callpropvoid        QName(PackageNamespace(""), "gc"), 0
@@ -299,7 +299,7 @@ L129:
   end ; trait
   trait method QName(PackageNamespace(""), "encrypt")
    method
-    refid "com.hurlant.crypto.symmetric:BlowFishKey/encrypt"
+    refid "com.hurlant.crypto.symmetric:BlowFishKey/instance/encrypt"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     param QName(PackageNamespace(""), "uint")
     returns QName(PackageNamespace(""), "void")
@@ -319,16 +319,16 @@ L129:
       getlocal2
       getlocal1
       getlocal2
-      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "encryptBlock"), 4
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "encryptBlock"), 4
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "F")
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "F")
    method
-    refid "com.hurlant.crypto.symmetric:BlowFishKey/F"
+    refid "com.hurlant.crypto.symmetric:BlowFishKey/instance/com.hurlant.crypto.symmetric:BlowFishKey/F"
     param QName(PackageNamespace(""), "uint")
     returns QName(PackageNamespace(""), "uint")
     body
@@ -341,44 +341,44 @@ L129:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S0")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S0")
       getlocal1
       pushbyte            24
       urshift
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S1")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S1")
       getlocal1
       pushbyte            16
       urshift
       pushshort           255
       bitand
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       add
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S2")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S2")
       getlocal1
       pushbyte            8
       urshift
       pushshort           255
       bitand
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       bitxor
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S3")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S3")
       getlocal1
       pushshort           255
       bitand
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       add
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "processTable")
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "processTable")
    method
-    refid "com.hurlant.crypto.symmetric:BlowFishKey/processTable"
+    refid "com.hurlant.crypto.symmetric:BlowFishKey/instance/com.hurlant.crypto.symmetric:BlowFishKey/processTable"
     param QName(PackageNamespace(""), "uint")
     param QName(PackageNamespace(""), "uint")
     param QName(PackageNamespace(""), "Array")
@@ -411,9 +411,9 @@ L13:
       label
       getlocal1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P")
       pushbyte            0
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       bitxor
       convert_u
       setlocal1
@@ -429,11 +429,11 @@ L26:
       getlocal2
       getlocal0
       getlocal1
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "F"), 1
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "F"), 1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P")
       getlocal            6
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       bitxor
       bitxor
       convert_u
@@ -442,13 +442,13 @@ L26:
       getlocal1
       getlocal0
       getlocal2
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "F"), 1
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "F"), 1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P")
       getlocal            6
       pushbyte            1
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       bitxor
       bitxor
       convert_u
@@ -462,16 +462,16 @@ L26:
 
 L58:
       getlocal            6
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "ROUNDS")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "ROUNDS")
       iflt                L26
 
       getlocal2
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "ROUNDS")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "ROUNDS")
       pushbyte            1
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       bitxor
       convert_u
       setlocal2
@@ -479,14 +479,14 @@ L58:
       getlocal3
       getlocal            5
       getlocal2
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
 
       getlocal3
       getlocal            5
       pushbyte            1
       add
       getlocal1
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
 
       getlocal1
       convert_u
@@ -494,7 +494,7 @@ L58:
 
       getlocal3
       getlocal            5
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       convert_u
       setlocal1
 
@@ -514,9 +514,9 @@ L94:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "setKey")
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "setKey")
    method
-    refid "com.hurlant.crypto.symmetric:BlowFishKey/setKey"
+    refid "com.hurlant.crypto.symmetric:BlowFishKey/instance/com.hurlant.crypto.symmetric:BlowFishKey/setKey"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     returns QName(PackageNamespace(""), "void")
     body
@@ -537,29 +537,29 @@ L94:
       setlocal            6
 
       getlocal0
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS0")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "KS0")
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 0
-      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S0")
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S0")
 
       getlocal0
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS1")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "KS1")
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 0
-      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S1")
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S1")
 
       getlocal0
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS2")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "KS2")
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 0
-      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S2")
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S2")
 
       getlocal0
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS3")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "KS3")
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 0
-      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S3")
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S3")
 
       getlocal0
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KP")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "KP")
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 0
-      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P")
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "length")
@@ -601,7 +601,7 @@ L47:
       convert_u
       setlocal3
 
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       pushshort           255
       bitand
       bitor
@@ -628,15 +628,15 @@ L74:
       iflt                L47
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P")
       getlocal            4
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P")
       getlocal            4
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       getlocal            5
       bitxor
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
 
       getlocal            4
       increment
@@ -645,88 +645,88 @@ L74:
 
 L91:
       getlocal            4
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P_SZ")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P_SZ")
       iflt                L39
 
       getlocal0
       pushbyte            0
       dup
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
-      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "processTable"), 3
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P")
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "processTable"), 3
 
       getlocal0
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P_SZ")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P_SZ")
       pushbyte            2
       subtract
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P_SZ")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P_SZ")
       decrement
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S0")
-      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "processTable"), 3
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S0")
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "processTable"), 3
 
       getlocal0
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S0")
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "SBOX_SK")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S0")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "SBOX_SK")
       pushbyte            2
       subtract
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S0")
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "SBOX_SK")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S0")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "SBOX_SK")
       decrement
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S1")
-      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "processTable"), 3
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S1")
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "processTable"), 3
 
       getlocal0
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S1")
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "SBOX_SK")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S1")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "SBOX_SK")
       pushbyte            2
       subtract
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S1")
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "SBOX_SK")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S1")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "SBOX_SK")
       decrement
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S2")
-      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "processTable"), 3
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S2")
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "processTable"), 3
 
       getlocal0
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S2")
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "SBOX_SK")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S2")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "SBOX_SK")
       pushbyte            2
       subtract
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S2")
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "SBOX_SK")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S2")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "SBOX_SK")
       decrement
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "S3")
-      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "processTable"), 3
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "S3")
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "processTable"), 3
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "encryptBlock")
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "encryptBlock")
    method
-    refid "com.hurlant.crypto.symmetric:BlowFishKey/encryptBlock"
+    refid "com.hurlant.crypto.symmetric:BlowFishKey/instance/com.hurlant.crypto.symmetric:BlowFishKey/encryptBlock"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     param QName(PackageNamespace(""), "uint")
     param QName(PackageNamespace("flash.utils"), "ByteArray")
@@ -744,7 +744,7 @@ L91:
       getlocal0
       getlocal1
       getlocal2
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "BytesTo32bits"), 2
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "BytesTo32bits"), 2
       convert_u
       setlocal            5
 
@@ -753,15 +753,15 @@ L91:
       getlocal2
       pushbyte            4
       add
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "BytesTo32bits"), 2
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "BytesTo32bits"), 2
       convert_u
       setlocal            6
 
       getlocal            5
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P")
       pushbyte            0
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       bitxor
       convert_u
       setlocal            5
@@ -777,11 +777,11 @@ L28:
       getlocal            6
       getlocal0
       getlocal            5
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "F"), 1
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "F"), 1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P")
       getlocal            7
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       bitxor
       bitxor
       convert_u
@@ -790,13 +790,13 @@ L28:
       getlocal            5
       getlocal0
       getlocal            6
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "F"), 1
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "F"), 1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P")
       getlocal            7
       pushbyte            1
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       bitxor
       bitxor
       convert_u
@@ -810,16 +810,16 @@ L28:
 
 L60:
       getlocal            7
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "ROUNDS")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "ROUNDS")
       iflt                L28
 
       getlocal            6
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "ROUNDS")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "ROUNDS")
       pushbyte            1
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       bitxor
       convert_u
       setlocal            6
@@ -828,7 +828,7 @@ L60:
       getlocal            6
       getlocal3
       getlocal            4
-      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "Bits32ToBytes"), 3
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "Bits32ToBytes"), 3
 
       getlocal0
       getlocal            5
@@ -836,16 +836,16 @@ L60:
       getlocal            4
       pushbyte            4
       add
-      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "Bits32ToBytes"), 3
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "Bits32ToBytes"), 3
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "decryptBlock")
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "decryptBlock")
    method
-    refid "com.hurlant.crypto.symmetric:BlowFishKey/decryptBlock"
+    refid "com.hurlant.crypto.symmetric:BlowFishKey/instance/com.hurlant.crypto.symmetric:BlowFishKey/decryptBlock"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     param QName(PackageNamespace(""), "uint")
     param QName(PackageNamespace("flash.utils"), "ByteArray")
@@ -863,7 +863,7 @@ L60:
       getlocal0
       getlocal1
       getlocal2
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "BytesTo32bits"), 2
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "BytesTo32bits"), 2
       convert_u
       setlocal            5
 
@@ -872,22 +872,22 @@ L60:
       getlocal2
       pushbyte            4
       add
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "BytesTo32bits"), 2
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "BytesTo32bits"), 2
       convert_u
       setlocal            6
 
       getlocal            5
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "ROUNDS")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "ROUNDS")
       pushbyte            1
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       bitxor
       convert_u
       setlocal            5
 
-      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "ROUNDS")
+      getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "ROUNDS")
       convert_u
       setlocal            7
 
@@ -898,11 +898,11 @@ L30:
       getlocal            6
       getlocal0
       getlocal            5
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "F"), 1
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "F"), 1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P")
       getlocal            7
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       bitxor
       bitxor
       convert_u
@@ -911,12 +911,12 @@ L30:
       getlocal            5
       getlocal0
       getlocal            6
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "F"), 1
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "F"), 1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P")
       getlocal            7
       decrement
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       bitxor
       bitxor
       convert_u
@@ -935,9 +935,9 @@ L61:
 
       getlocal            6
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P")
       pushbyte            0
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       bitxor
       convert_u
       setlocal            6
@@ -946,7 +946,7 @@ L61:
       getlocal            6
       getlocal3
       getlocal            4
-      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "Bits32ToBytes"), 3
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "Bits32ToBytes"), 3
 
       getlocal0
       getlocal            5
@@ -954,16 +954,16 @@ L61:
       getlocal            4
       pushbyte            4
       add
-      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "Bits32ToBytes"), 3
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "Bits32ToBytes"), 3
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "BytesTo32bits")
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "BytesTo32bits")
    method
-    refid "com.hurlant.crypto.symmetric:BlowFishKey/BytesTo32bits"
+    refid "com.hurlant.crypto.symmetric:BlowFishKey/instance/com.hurlant.crypto.symmetric:BlowFishKey/BytesTo32bits"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     param QName(PackageNamespace(""), "uint")
     returns QName(PackageNamespace(""), "uint")
@@ -978,7 +978,7 @@ L61:
 
       getlocal1
       getlocal2
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       pushshort           255
       bitand
       pushbyte            24
@@ -987,7 +987,7 @@ L61:
       getlocal2
       pushbyte            1
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       pushshort           255
       bitand
       pushbyte            16
@@ -997,7 +997,7 @@ L61:
       getlocal2
       pushbyte            2
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       pushshort           255
       bitand
       pushbyte            8
@@ -1007,7 +1007,7 @@ L61:
       getlocal2
       pushbyte            3
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
       pushshort           255
       bitand
       bitor
@@ -1016,9 +1016,9 @@ L61:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "Bits32ToBytes")
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "Bits32ToBytes")
    method
-    refid "com.hurlant.crypto.symmetric:BlowFishKey/Bits32ToBytes"
+    refid "com.hurlant.crypto.symmetric:BlowFishKey/instance/com.hurlant.crypto.symmetric:BlowFishKey/Bits32ToBytes"
     param QName(PackageNamespace(""), "uint")
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     param QName(PackageNamespace(""), "uint")
@@ -1037,7 +1037,7 @@ L61:
       pushbyte            3
       add
       getlocal1
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
 
       getlocal2
       getlocal3
@@ -1046,7 +1046,7 @@ L61:
       getlocal1
       pushbyte            8
       rshift
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
 
       getlocal2
       getlocal3
@@ -1055,14 +1055,14 @@ L61:
       getlocal1
       pushbyte            16
       rshift
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
 
       getlocal2
       getlocal3
       getlocal1
       pushbyte            24
       rshift
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#1"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey/instance"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Dg"), StaticProtectedNs("_-Dg")])
 
       returnvoid
      end ; code
@@ -1071,7 +1071,7 @@ L61:
   end ; trait
   trait method QName(PackageNamespace(""), "toString")
    method
-    refid "com.hurlant.crypto.symmetric:BlowFishKey/toString"
+    refid "com.hurlant.crypto.symmetric:BlowFishKey/instance/toString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -1090,7 +1090,7 @@ L61:
   end ; trait
  end ; instance
  cinit
-  refid "com.hurlant.crypto.symmetric:BlowFishKey/cinit"
+  refid "com.hurlant.crypto.symmetric:BlowFishKey/class/init"
   body
    maxstack 257
    localcount 1
@@ -1100,7 +1100,7 @@ L61:
     getlocal0
     pushscope
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KP")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "KP")
     pushint             608135816
     pushdouble          2242054355
     pushint             320440878
@@ -1120,9 +1120,9 @@ L61:
     pushdouble          2450970073
     pushdouble          2306472731
     newarray            18
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KP")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "KP")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS0")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "KS0")
     pushdouble          3509652390
     pushdouble          2564797868
     pushint             805139163
@@ -1380,9 +1380,9 @@ L61:
     pushint             146425753
     pushint             1854211946
     newarray            256
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS0")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "KS0")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS1")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "KS1")
     pushint             1266315497
     pushdouble          3048417604
     pushdouble          3681880366
@@ -1640,9 +1640,9 @@ L61:
     pushdouble          3873677099
     pushdouble          3682840055
     newarray            256
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS1")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "KS1")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS2")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "KS2")
     pushdouble          3913112168
     pushdouble          2491498743
     pushdouble          4132185628
@@ -1900,9 +1900,9 @@ L61:
     pushint             1729034894
     pushint             1080033504
     newarray            256
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS2")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "KS2")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS3")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "KS3")
     pushint             976866871
     pushdouble          3556439503
     pushdouble          2881648439
@@ -2160,37 +2160,37 @@ L61:
     pushint             1469046755
     pushint             985887462
     newarray            256
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS3")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "KS3")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "ROUNDS")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "ROUNDS")
     pushbyte            16
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "ROUNDS")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "ROUNDS")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "BLOCK_SIZE")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "BLOCK_SIZE")
     pushbyte            8
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "BLOCK_SIZE")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "BLOCK_SIZE")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "SBOX_SK")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "SBOX_SK")
     pushshort           256
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "SBOX_SK")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "SBOX_SK")
 
-    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P_SZ")
-    getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "ROUNDS")
+    findproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P_SZ")
+    getlex              QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "ROUNDS")
     pushbyte            2
     add
-    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P_SZ")
+    initproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P_SZ")
 
     returnvoid
    end ; code
   end ; body
  end ; method
- trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KP") slotid 1 type QName(PackageNamespace(""), "Array") end
- trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS0") slotid 2 type QName(PackageNamespace(""), "Array") end
- trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS1") slotid 3 type QName(PackageNamespace(""), "Array") end
- trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS2") slotid 4 type QName(PackageNamespace(""), "Array") end
- trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "KS3") slotid 5 type QName(PackageNamespace(""), "Array") end
- trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "ROUNDS") slotid 6 type QName(PackageNamespace(""), "uint") value Integer(16) end
- trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "BLOCK_SIZE") slotid 7 type QName(PackageNamespace(""), "uint") value Integer(8) end
- trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "SBOX_SK") slotid 8 type QName(PackageNamespace(""), "uint") value Integer(256) end
- trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey#0"), "P_SZ") slotid 9 type QName(PackageNamespace(""), "uint") value Double(18) end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "KP") slotid 1 type QName(PackageNamespace(""), "Array") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "KS0") slotid 2 type QName(PackageNamespace(""), "Array") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "KS1") slotid 3 type QName(PackageNamespace(""), "Array") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "KS2") slotid 4 type QName(PackageNamespace(""), "Array") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "KS3") slotid 5 type QName(PackageNamespace(""), "Array") end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "ROUNDS") slotid 6 type QName(PackageNamespace(""), "uint") value Integer(16) end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "BLOCK_SIZE") slotid 7 type QName(PackageNamespace(""), "uint") value Integer(8) end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "SBOX_SK") slotid 8 type QName(PackageNamespace(""), "uint") value Integer(256) end
+ trait const QName(PrivateNamespace("*", "com.hurlant.crypto.symmetric:BlowFishKey"), "P_SZ") slotid 9 type QName(PackageNamespace(""), "uint") value Double(18) end
 end ; class

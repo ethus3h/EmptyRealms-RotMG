@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("com.google.analytics.utils:Version")
   iinit
-   refid "com.google.analytics.utils:Version/iinit"
+   refid "com.google.analytics.utils:Version/instance/init"
    param QName(PackageNamespace(""), "uint")
    param QName(PackageNamespace(""), "uint")
    param QName(PackageNamespace(""), "uint")
@@ -111,7 +111,7 @@ L50:
   trait slot QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_revision") type QName(PackageNamespace(""), "uint") end
   trait method QName(PackageNamespace(""), "toString")
    method
-    refid "com.google.analytics.utils:Version/toString"
+    refid "com.google.analytics.utils:Version/instance/toString"
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace(""), "String")
     flag HAS_OPTIONAL
@@ -246,7 +246,7 @@ L76:
   end ; trait
   trait setter QName(PackageNamespace(""), "revision")
    method
-    refid "com.google.analytics.utils:Version/revision/setter"
+    refid "com.google.analytics.utils:Version/instance/revision/setter"
     param QName(PackageNamespace(""), "uint")
     returns QName(PackageNamespace(""), "void")
     body
@@ -275,7 +275,7 @@ L76:
   trait slot QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_maxMajor") type QName(PackageNamespace(""), "uint") value Integer(15) end
   trait getter QName(PackageNamespace(""), "revision")
    method
-    refid "com.google.analytics.utils:Version/revision/getter"
+    refid "com.google.analytics.utils:Version/instance/revision/getter"
     returns QName(PackageNamespace(""), "uint")
     body
      maxstack 1
@@ -294,7 +294,7 @@ L76:
   end ; trait
   trait setter QName(PackageNamespace(""), "build")
    method
-    refid "com.google.analytics.utils:Version/build/setter"
+    refid "com.google.analytics.utils:Version/instance/build/setter"
     param QName(PackageNamespace(""), "uint")
     returns QName(PackageNamespace(""), "void")
     body
@@ -322,7 +322,7 @@ L76:
   trait slot QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_maxRevision") type QName(PackageNamespace(""), "uint") value Integer(65535) end
   trait setter QName(PackageNamespace(""), "minor")
    method
-    refid "com.google.analytics.utils:Version/minor/setter"
+    refid "com.google.analytics.utils:Version/instance/minor/setter"
     param QName(PackageNamespace(""), "uint")
     returns QName(PackageNamespace(""), "void")
     body
@@ -348,7 +348,7 @@ L76:
   end ; trait
   trait getter QName(PackageNamespace(""), "build")
    method
-    refid "com.google.analytics.utils:Version/build/getter"
+    refid "com.google.analytics.utils:Version/instance/build/getter"
     returns QName(PackageNamespace(""), "uint")
     body
      maxstack 1
@@ -368,7 +368,7 @@ L76:
   trait slot QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_build") type QName(PackageNamespace(""), "uint") end
   trait setter QName(PackageNamespace(""), "major")
    method
-    refid "com.google.analytics.utils:Version/major/setter"
+    refid "com.google.analytics.utils:Version/instance/major/setter"
     param QName(PackageNamespace(""), "uint")
     returns QName(PackageNamespace(""), "void")
     body
@@ -394,7 +394,7 @@ L76:
   end ; trait
   trait getter QName(PackageNamespace(""), "minor")
    method
-    refid "com.google.analytics.utils:Version/minor/getter"
+    refid "com.google.analytics.utils:Version/instance/minor/getter"
     returns QName(PackageNamespace(""), "uint")
     body
      maxstack 1
@@ -413,7 +413,7 @@ L76:
   end ; trait
   trait method QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "getFields")
    method
-    refid "com.google.analytics.utils:Version/getFields"
+    refid "com.google.analytics.utils:Version/instance/com.google.analytics.utils:Version/getFields"
     returns QName(PackageNamespace(""), "int")
     body
      maxstack 2
@@ -480,7 +480,7 @@ L36:
   end ; trait
   trait method QName(PackageNamespace(""), "valueOf")
    method
-    refid "com.google.analytics.utils:Version/valueOf"
+    refid "com.google.analytics.utils:Version/instance/valueOf"
     returns QName(PackageNamespace(""), "uint")
     body
      maxstack 3
@@ -511,7 +511,7 @@ L36:
   end ; trait
   trait getter QName(PackageNamespace(""), "major")
    method
-    refid "com.google.analytics.utils:Version/major/getter"
+    refid "com.google.analytics.utils:Version/instance/major/getter"
     returns QName(PackageNamespace(""), "uint")
     body
      maxstack 1
@@ -532,7 +532,7 @@ L36:
   trait slot QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_minor") type QName(PackageNamespace(""), "uint") end
   trait method QName(PackageNamespace(""), "equals")
    method
-    refid "com.google.analytics.utils:Version/equals"
+    refid "com.google.analytics.utils:Version/instance/equals"
     param null
     returns QName(PackageNamespace(""), "Boolean")
     body
@@ -598,7 +598,7 @@ L36:
   end ; trait
  end ; instance
  cinit
-  refid "com.google.analytics.utils:Version/cinit"
+  refid "com.google.analytics.utils:Version/class/init"
   body
    maxstack 1
    localcount 1
@@ -614,7 +614,7 @@ L36:
  end ; method
  trait method QName(PackageNamespace(""), "fromString") flag FINAL dispid 3
   method
-   refid "com.google.analytics.utils:Version/fromString"
+   refid "com.google.analytics.utils:Version/class/fromString"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace("com.google.analytics.utils"), "Version")
@@ -718,7 +718,7 @@ L65:
  end ; trait
  trait method QName(PackageNamespace(""), "fromNumber") flag FINAL dispid 4
   method
-   refid "com.google.analytics.utils:Version/fromNumber"
+   refid "com.google.analytics.utils:Version/class/fromNumber"
    param QName(PackageNamespace(""), "Number")
    returns QName(PackageNamespace("com.google.analytics.utils"), "Version")
    flag HAS_OPTIONAL

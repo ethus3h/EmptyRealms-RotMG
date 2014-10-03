@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-0Ge")
   iinit
-   refid "_-Z6:_-uL/iinit"
+   refid "_-Z6:_-uL/instance/init"
    param QName(PackageNamespace(""), "int")
    param QName(PackageNamespace(""), "Object")
    flag HAS_OPTIONAL
@@ -26,21 +26,21 @@ class
 
      getlocal0
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "_-Z6:_-uL"), "_-0Eh")
+     initproperty        QName(PrivateNamespace("*", "_-Z6:_-uL/instance"), "_-0Eh")
 
      getlocal0
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "_-Z6:_-uL"), "_value")
+     initproperty        QName(PrivateNamespace("*", "_-Z6:_-uL/instance"), "_value")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-Z6:_-uL"), "_-0Eh") type QName(PackageNamespace(""), "int") end
-  trait slot QName(PrivateNamespace("*", "_-Z6:_-uL"), "_value") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PrivateNamespace("*", "_-Z6:_-uL/instance"), "_-0Eh") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "_-Z6:_-uL/instance"), "_value") type QName(PackageNamespace(""), "Object") end
   trait getter QName(PackageNamespace(""), "type")
    method
-    refid "_-Z6:_-uL/type/getter"
+    refid "_-Z6:_-uL/instance/type/getter"
     returns QName(PackageNamespace(""), "int")
     body
      maxstack 3
@@ -52,7 +52,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Z6:_-uL"), "_-0Eh")
+      getproperty         QName(PrivateNamespace("*", "_-Z6:_-uL/instance"), "_-0Eh")
       returnvalue
      end ; code
     end ; body
@@ -60,7 +60,7 @@ class
   end ; trait
   trait setter QName(PackageNamespace(""), "type")
    method
-    refid "_-Z6:_-uL/type/setter"
+    refid "_-Z6:_-uL/instance/type/setter"
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace(""), "void")
     body
@@ -74,7 +74,7 @@ class
 
       getlocal0
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "_-Z6:_-uL"), "_-0Eh")
+      initproperty        QName(PrivateNamespace("*", "_-Z6:_-uL/instance"), "_-0Eh")
 
       returnvoid
      end ; code
@@ -83,7 +83,7 @@ class
   end ; trait
   trait getter QName(PackageNamespace(""), "value")
    method
-    refid "_-Z6:_-uL/value/getter"
+    refid "_-Z6:_-uL/instance/value/getter"
     returns QName(PackageNamespace(""), "Object")
     body
      maxstack 3
@@ -95,7 +95,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Z6:_-uL"), "_value")
+      getproperty         QName(PrivateNamespace("*", "_-Z6:_-uL/instance"), "_value")
       returnvalue
      end ; code
     end ; body
@@ -103,7 +103,7 @@ class
   end ; trait
   trait setter QName(PackageNamespace(""), "value")
    method
-    refid "_-Z6:_-uL/value/setter"
+    refid "_-Z6:_-uL/instance/value/setter"
     param QName(PackageNamespace(""), "Object")
     returns QName(PackageNamespace(""), "void")
     body
@@ -117,7 +117,7 @@ class
 
       getlocal0
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "_-Z6:_-uL"), "_value")
+      initproperty        QName(PrivateNamespace("*", "_-Z6:_-uL/instance"), "_value")
 
       returnvoid
      end ; code
@@ -126,7 +126,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-Z6:_-uL/cinit"
+  refid "_-Z6:_-uL/class/init"
   body
    maxstack 3
    localcount 1

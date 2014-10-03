@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-gx")
   iinit
-   refid "_-Rv:_-Xi/iinit"
+   refid "_-Rv:_-Xi/instance/init"
    param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "String")
@@ -32,15 +32,15 @@ class
      pushbyte            0
      pushstring          "Myriad Pro"
      constructprop       QName(PackageNamespace("com.company.ui"), "SimpleText"), 6
-     initproperty        QName(PrivateNamespace("*", "_-Rv:_-Xi"), "_-PV")
+     initproperty        QName(PrivateNamespace("*", "_-Rv:_-Xi/instance/init"), "_-PV")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-Rv:_-Xi"), "_-PV")
+     getproperty         QName(PrivateNamespace("*", "_-Rv:_-Xi/instance/init"), "_-PV")
      pushtrue
      callpropvoid        QName(PackageNamespace(""), "_-8Y"), 1
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-Rv:_-Xi"), "_-PV")
+     getproperty         QName(PrivateNamespace("*", "_-Rv:_-Xi/instance/init"), "_-PV")
      pushstring          "<p align=\"center\">"
      getlocal2
      add
@@ -49,23 +49,23 @@ class
      setproperty         QName(PackageNamespace(""), "htmlText")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-Rv:_-Xi"), "_-PV")
+     getproperty         QName(PrivateNamespace("*", "_-Rv:_-Xi/instance/init"), "_-PV")
      pushtrue
      setproperty         QName(PackageNamespace(""), "wordWrap")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-Rv:_-Xi"), "_-PV")
+     getproperty         QName(PrivateNamespace("*", "_-Rv:_-Xi/instance/init"), "_-PV")
      pushtrue
      setproperty         QName(PackageNamespace(""), "multiline")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-Rv:_-Xi"), "_-PV")
+     getproperty         QName(PrivateNamespace("*", "_-Rv:_-Xi/instance/init"), "_-PV")
      getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
      getproperty         QName(PackageNamespace(""), "CENTER")
      setproperty         QName(PackageNamespace(""), "autoSize")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-Rv:_-Xi"), "_-PV")
+     getproperty         QName(PrivateNamespace("*", "_-Rv:_-Xi/instance/init"), "_-PV")
      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
      pushbyte            0
      dup
@@ -75,13 +75,13 @@ class
      setproperty         QName(PackageNamespace(""), "filters")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-Rv:_-Xi"), "_-PV")
+     getproperty         QName(PrivateNamespace("*", "_-Rv:_-Xi/instance/init"), "_-PV")
      pushbyte            6
      setproperty         QName(PackageNamespace(""), "y")
 
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-Rv:_-Xi"), "_-PV")
+     getproperty         QName(PrivateNamespace("*", "_-Rv:_-Xi/instance/init"), "_-PV")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
      getlocal0
@@ -132,11 +132,11 @@ class
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-Rv:_-Xi"), "_-PV") type QName(PackageNamespace("com.company.ui"), "SimpleText") end
+  trait slot QName(PrivateNamespace("*", "_-Rv:_-Xi/instance/init"), "_-PV") type QName(PackageNamespace("com.company.ui"), "SimpleText") end
   trait slot QName(ProtectedNamespace("_-gx"), "_-ek") type QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-7f") end
   trait method QName(ProtectedNamespace("_-gx"), "onButtonClick")
    method
-    refid "_-Rv:_-Xi/_-gx:onButtonClick"
+    refid "_-Rv:_-Xi/instance/_-gx:onButtonClick"
     param QName(PackageNamespace("flash.events"), "MouseEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -155,7 +155,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-Rv:_-Xi/cinit"
+  refid "_-Rv:_-Xi/class/init"
   body
    maxstack 3
    localcount 1

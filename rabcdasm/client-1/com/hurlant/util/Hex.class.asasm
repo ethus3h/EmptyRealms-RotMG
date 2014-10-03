@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-NU")
   iinit
-   refid "com.hurlant.util:Hex/iinit"
+   refid "com.hurlant.util:Hex/instance/init"
    body
     maxstack 1
     localcount 1
@@ -25,7 +25,7 @@ class
   end ; method
  end ; instance
  cinit
-  refid "com.hurlant.util:Hex/cinit"
+  refid "com.hurlant.util:Hex/class/init"
   body
    maxstack 1
    localcount 1
@@ -41,7 +41,7 @@ class
  end ; method
  trait method QName(PackageNamespace(""), "toArray") flag FINAL dispid 3
   method
-   refid "com.hurlant.util:Hex/toArray"
+   refid "com.hurlant.util:Hex/class/toArray"
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace("flash.utils"), "ByteArray")
    body
@@ -102,7 +102,7 @@ L31:
      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
      pushbyte            16
      callproperty        QName(PackageNamespace(""), "parseInt"), 2
-     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Hex#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.hurlant.util:Hex#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), ProtectedNamespace("_-NU"), StaticProtectedNs("_-NU")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Hex/class#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.hurlant.util:Hex/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), ProtectedNamespace("_-NU"), StaticProtectedNs("_-NU")])
 
      getlocal3
      pushbyte            2
@@ -124,7 +124,7 @@ L49:
  end ; trait
  trait method QName(PackageNamespace(""), "fromArray") flag FINAL dispid 4
   method
-   refid "com.hurlant.util:Hex/fromArray"
+   refid "com.hurlant.util:Hex/class/fromArray"
    param QName(PackageNamespace("flash.utils"), "ByteArray")
    param QName(PackageNamespace(""), "Boolean")
    returns QName(PackageNamespace(""), "String")
@@ -154,9 +154,9 @@ L8:
      pushstring          "0"
      getlocal1
      getlocal            4
-     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Hex#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.hurlant.util:Hex#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), ProtectedNamespace("_-NU"), StaticProtectedNs("_-NU")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.util:Hex/class#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.hurlant.util:Hex/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), ProtectedNamespace("_-NU"), StaticProtectedNs("_-NU")])
      pushbyte            16
-     callproperty        Multiname("toString", [PrivateNamespace("*", "com.hurlant.util:Hex#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.hurlant.util:Hex#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), ProtectedNamespace("_-NU"), StaticProtectedNs("_-NU")]), 1
+     callproperty        Multiname("toString", [PrivateNamespace("*", "com.hurlant.util:Hex/class#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.hurlant.util:Hex/class#1"), PackageNamespace("com.hurlant.util"), PackageInternalNs("com.hurlant.util"), ProtectedNamespace("_-NU"), StaticProtectedNs("_-NU")]), 1
      add
      pushbyte            254
      pushbyte            2
@@ -199,7 +199,7 @@ L38:
  end ; trait
  trait method QName(PackageNamespace(""), "toString") flag FINAL dispid 5
   method
-   refid "com.hurlant.util:Hex/toString"
+   refid "com.hurlant.util:Hex/class/toString"
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace(""), "String")
    body
@@ -228,7 +228,7 @@ L38:
  end ; trait
  trait method QName(PackageNamespace(""), "fromString") flag FINAL dispid 6
   method
-   refid "com.hurlant.util:Hex/fromString"
+   refid "com.hurlant.util:Hex/class/fromString"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "Boolean")
    returns QName(PackageNamespace(""), "String")

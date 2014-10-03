@@ -1,6 +1,6 @@
 script ; 1026
  sinit
-  refid "_-HZ:StarBackground.sinit"
+  refid "_-HZ:StarBackground/init"
   body
    maxstack 2
    localcount 1
@@ -43,14 +43,14 @@ script ; 1026
     popscope
     initproperty        QName(PackageNamespace("_-HZ"), "StarBackground")
 
-    findpropstrict      Multiname("Star", [PrivateNamespace("*", "_-HZ:StarBackground#0")])
+    findpropstrict      Multiname("Star", [PrivateNamespace("*", "_-HZ:StarBackground")])
     getlex              QName(PackageNamespace(""), "Object")
     pushscope
 
     getlex              QName(PackageNamespace(""), "Object")
     newclass            "_-HZ:StarBackground/Star"
     popscope
-    initproperty        QName(PrivateNamespace("*", "_-HZ:StarBackground#0"), "Star")
+    initproperty        QName(PrivateNamespace("*", "_-HZ:StarBackground"), "Star")
 
     returnvoid
    end ; code
@@ -59,7 +59,7 @@ script ; 1026
  trait class QName(PackageNamespace("_-HZ"), "StarBackground")
   #include "StarBackground.class.asasm"
  end ; trait
- trait class QName(PrivateNamespace("*", "_-HZ:StarBackground#0"), "Star")
+ trait class QName(PrivateNamespace("*", "_-HZ:StarBackground"), "Star")
   #include "StarBackground/Star.class.asasm"
  end ; trait
 end ; script

@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-Xp")
   iinit
-   refid "_-lo:_-nR/iinit"
+   refid "_-lo:_-nR/instance/init"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
    param QName(PackageNamespace("_-s3"), "_-yp")
@@ -28,20 +28,20 @@ class
 
      getlocal0
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "_-lo:_-nR"), "_-0Jw")
+     initproperty        QName(PrivateNamespace("*", "_-lo:_-nR/instance"), "_-0Jw")
 
      getlocal0
      getlocal3
-     initproperty        QName(PrivateNamespace("*", "_-lo:_-nR"), "_handler")
+     initproperty        QName(PrivateNamespace("*", "_-lo:_-nR/instance"), "_handler")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-lo:_-nR"), "_-0Jw") type QName(PackageNamespace("flash.display"), "DisplayObjectContainer") end
+  trait slot QName(PrivateNamespace("*", "_-lo:_-nR/instance"), "_-0Jw") type QName(PackageNamespace("flash.display"), "DisplayObjectContainer") end
   trait getter QName(PackageNamespace(""), "container")
    method
-    refid "_-lo:_-nR/container/getter"
+    refid "_-lo:_-nR/instance/container/getter"
     returns QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
     body
      maxstack 3
@@ -53,16 +53,16 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-lo:_-nR"), "_-0Jw")
+      getproperty         QName(PrivateNamespace("*", "_-lo:_-nR/instance"), "_-0Jw")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "_-lo:_-nR"), "_handler") type QName(PackageNamespace("_-s3"), "_-yp") end
+  trait slot QName(PrivateNamespace("*", "_-lo:_-nR/instance"), "_handler") type QName(PackageNamespace("_-s3"), "_-yp") end
   trait getter QName(PackageNamespace(""), "handler")
    method
-    refid "_-lo:_-nR/handler/getter"
+    refid "_-lo:_-nR/instance/handler/getter"
     returns QName(PackageNamespace("_-s3"), "_-yp")
     body
      maxstack 3
@@ -74,7 +74,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-lo:_-nR"), "_handler")
+      getproperty         QName(PrivateNamespace("*", "_-lo:_-nR/instance"), "_handler")
       returnvalue
      end ; code
     end ; body
@@ -82,7 +82,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
    method
-    refid "_-lo:_-nR/clone"
+    refid "_-lo:_-nR/instance/clone"
     returns QName(PackageNamespace("flash.events"), "Event")
     body
      maxstack 6
@@ -96,9 +96,9 @@ class
       findpropstrict      QName(PackageNamespace("_-lo"), "_-nR")
       getlex              QName(PackageNamespace(""), "type")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-lo:_-nR"), "_-0Jw")
+      getproperty         QName(PrivateNamespace("*", "_-lo:_-nR/instance"), "_-0Jw")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-lo:_-nR"), "_handler")
+      getproperty         QName(PrivateNamespace("*", "_-lo:_-nR/instance"), "_handler")
       constructprop       QName(PackageNamespace("_-lo"), "_-nR"), 3
       returnvalue
      end ; code
@@ -107,7 +107,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-lo:_-nR/cinit"
+  refid "_-lo:_-nR/class/init"
   body
    maxstack 4
    localcount 3

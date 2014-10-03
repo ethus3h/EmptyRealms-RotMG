@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-0Lm")
   iinit
-   refid "_-02b:_-0FA/iinit"
+   refid "_-02b:_-0FA/instance/init"
    body
     maxstack 3
     localcount 3
@@ -29,7 +29,7 @@ class
   end ; trait
   trait method QName(ProtectedNamespace("_-0Lm"), "startTask") flag OVERRIDE
    method
-    refid "_-02b:_-0FA/_-0Lm:startTask"
+    refid "_-02b:_-0FA/instance/_-0Lm:startTask"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 5
@@ -50,14 +50,14 @@ class
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "COMPLETE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-02b:_-0FA"), "_-QM")
+      getproperty         QName(PrivateNamespace("*", "_-02b:_-0FA/instance/_-0Lm:startTask"), "_-QM")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       getlocal1
       getlex              QName(PackageNamespace("_-zo"), "_-mS")
       getproperty         QName(PackageNamespace(""), "TEXT_ERROR")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-02b:_-0FA"), "_-ix")
+      getproperty         QName(PrivateNamespace("*", "_-02b:_-0FA/instance/_-0Lm:startTask"), "_-ix")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       getlocal1
@@ -71,9 +71,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-02b:_-0FA"), "_-QM")
+  trait method QName(PrivateNamespace("*", "_-02b:_-0FA/instance/_-0Lm:startTask"), "_-QM")
    method
-    refid "_-02b:_-0FA/_-QM"
+    refid "_-02b:_-0FA/instance/_-02b:_-0FA/instance/_-0Lm:startTask/_-QM"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -95,9 +95,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-02b:_-0FA"), "_-ix")
+  trait method QName(PrivateNamespace("*", "_-02b:_-0FA/instance/_-0Lm:startTask"), "_-ix")
    method
-    refid "_-02b:_-0FA/_-ix"
+    refid "_-02b:_-0FA/instance/_-02b:_-0FA/instance/_-0Lm:startTask/_-ix"
     param QName(PackageNamespace("_-zo"), "_-mS")
     returns QName(PackageNamespace(""), "void")
     body
@@ -121,7 +121,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-02b:_-0FA/cinit"
+  refid "_-02b:_-0FA/class/init"
   body
    maxstack 3
    localcount 1

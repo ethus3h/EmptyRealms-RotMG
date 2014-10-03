@@ -7,7 +7,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-Bj")
   iinit
-   refid "_-01o:_-xy/iinit"
+   refid "_-01o:_-xy/instance/init"
    param QName(PackageNamespace("_-0-p"), "_-Ly")
    body
     maxstack 4
@@ -23,16 +23,16 @@ class
 
      getlocal0
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "_-01o:_-xy"), "_-rA")
+     initproperty        QName(PrivateNamespace("*", "_-01o:_-xy/instance"), "_-rA")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-01o:_-xy"), "_-rA") type QName(PackageNamespace("_-0-p"), "_-Ly") end
+  trait slot QName(PrivateNamespace("*", "_-01o:_-xy/instance"), "_-rA") type QName(PackageNamespace("_-0-p"), "_-Ly") end
   trait method QName(PackageNamespace(""), "apply")
    method
-    refid "_-01o:_-xy/apply"
+    refid "_-01o:_-xy/instance/apply"
     param QName(PackageNamespace(""), "Class")
     param QName(PackageNamespace("_-eZ"), "_-08b")
     param QName(PackageNamespace("flash.utils"), "Dictionary")
@@ -47,7 +47,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-01o:_-xy"), "_-rA")
+      getproperty         QName(PrivateNamespace("*", "_-01o:_-xy/instance"), "_-rA")
       getlocal1
       callproperty        QName(Namespace("_-06J"), "_-0H4"), 1
       returnvalue
@@ -57,7 +57,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "destroy")
    method
-    refid "_-01o:_-xy/destroy"
+    refid "_-01o:_-xy/instance/destroy"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 3
@@ -75,7 +75,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-01o:_-xy/cinit"
+  refid "_-01o:_-xy/class/init"
   body
    maxstack 3
    localcount 1

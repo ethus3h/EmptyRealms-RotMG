@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-Zo")
   iinit
-   refid "com.company.assembleegameclient.ui:_-gV/iinit"
+   refid "com.company.assembleegameclient.ui:_-gV/instance/init"
    param QName(PackageNamespace(""), "uint")
    param QName(PackageNamespace(""), "Boolean")
    param QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
@@ -28,26 +28,26 @@ class
 
      getlocal0
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "color_")
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "color_")
 
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.display"), "Bitmap")
      constructprop       QName(PackageNamespace("flash.display"), "Bitmap"), 0
-     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "_-tm")
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "_-tm")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "_-tm")
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "_-tm")
      pushbyte            252
      setproperty         QName(PackageNamespace(""), "x")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "_-tm")
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "_-tm")
      pushbyte            252
      setproperty         QName(PackageNamespace(""), "y")
 
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "_-tm")
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "_-tm")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
      getlocal0
@@ -63,7 +63,7 @@ class
      dup
      pushstring          "Myriad Pro"
      constructprop       QName(PackageNamespace("com.company.ui"), "SimpleText"), 6
-     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "nameText_")
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "nameText_")
 
      jump                L54
 
@@ -77,26 +77,26 @@ L40:
      pushbyte            20
      pushstring          "Myriad Pro"
      constructprop       QName(PackageNamespace("com.company.ui"), "SimpleText"), 6
-     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "nameText_")
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "nameText_")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "nameText_")
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "nameText_")
      pushtrue
      callpropvoid        QName(PackageNamespace(""), "_-8Y"), 1
 
 L54:
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "nameText_")
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "nameText_")
      pushbyte            32
      setproperty         QName(PackageNamespace(""), "x")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "nameText_")
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "nameText_")
      pushbyte            6
      setproperty         QName(PackageNamespace(""), "y")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "nameText_")
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "nameText_")
      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
      pushbyte            0
      dup
@@ -107,7 +107,7 @@ L54:
 
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "nameText_")
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "nameText_")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
      getlocal0
@@ -118,15 +118,15 @@ L54:
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "_-tm") type QName(PackageNamespace("flash.display"), "Bitmap") end
-  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "nameText_") type QName(PackageNamespace("com.company.ui"), "SimpleText") end
-  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "_-LP") type QName(PackageNamespace("flash.display"), "Sprite") end
-  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "color_") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "_-tm") type QName(PackageNamespace("flash.display"), "Bitmap") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "nameText_") type QName(PackageNamespace("com.company.ui"), "SimpleText") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "_-LP") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "color_") type QName(PackageNamespace(""), "uint") end
   trait slot QName(PackageNamespace(""), "_-Ha") type QName(PackageNamespace(""), "Boolean") end
   trait slot QName(PackageNamespace(""), "go_") type QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject") end
   trait method QName(PackageNamespace(""), "draw")
    method
-    refid "com.company.assembleegameclient.ui:_-gV/draw"
+    refid "com.company.assembleegameclient.ui:_-gV/instance/draw"
     param QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
     param QName(PackageNamespace("flash.geom"), "ColorTransform")
     returns QName(PackageNamespace(""), "void")
@@ -160,14 +160,14 @@ L54:
 
 L15:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "_-tm")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "_-tm")
       getlocal0
       getproperty         QName(PackageNamespace(""), "go_")
       callproperty        QName(PackageNamespace(""), "getPortrait"), 0
       setproperty         QName(PackageNamespace(""), "bitmapData")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "color_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "color_")
       convert_u
       setlocal3
 
@@ -249,7 +249,7 @@ L74:
       getlocal0
       getproperty         QName(PackageNamespace(""), "go_")
       getproperty         QName(PackageNamespace(""), "objectType_")
-      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/draw"), PackageNamespace("com.company.assembleegameclient.ui"), PackageInternalNs("com.company.assembleegameclient.ui"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Zo"), StaticProtectedNs("_-Zo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance/draw"), PackageNamespace("com.company.assembleegameclient.ui"), PackageInternalNs("com.company.assembleegameclient.ui"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Zo"), StaticProtectedNs("_-Zo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       add
       coerce_s
       setlocal            4
@@ -290,7 +290,7 @@ L113:
       getlocal0
       getproperty         QName(PackageNamespace(""), "go_")
       getproperty         QName(PackageNamespace(""), "objectType_")
-      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/draw"), PackageNamespace("com.company.assembleegameclient.ui"), PackageInternalNs("com.company.assembleegameclient.ui"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Zo"), StaticProtectedNs("_-Zo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance/draw"), PackageNamespace("com.company.assembleegameclient.ui"), PackageInternalNs("com.company.assembleegameclient.ui"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Zo"), StaticProtectedNs("_-Zo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       add
       pushstring          "</b>"
       add
@@ -322,7 +322,7 @@ L138:
       getlocal0
       getproperty         QName(PackageNamespace(""), "go_")
       getproperty         QName(PackageNamespace(""), "objectType_")
-      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/draw"), PackageNamespace("com.company.assembleegameclient.ui"), PackageInternalNs("com.company.assembleegameclient.ui"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Zo"), StaticProtectedNs("_-Zo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance/draw"), PackageNamespace("com.company.assembleegameclient.ui"), PackageInternalNs("com.company.assembleegameclient.ui"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Zo"), StaticProtectedNs("_-Zo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       coerce_s
       setlocal            4
 
@@ -341,20 +341,20 @@ L153:
       getlocal            4
       getlocal            5
       getlocal2
-      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "_-0EJ"), 4
+      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "_-0EJ"), 4
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "_-0Ma") type QName(PackageNamespace(""), "uint") value Integer(16777215) end
-  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "_-lB") type QName(PackageNamespace(""), "String") value Null() end
-  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "_-K7") type QName(PackageNamespace(""), "Boolean") value False() end
-  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "_-Hg") type QName(PackageNamespace("flash.geom"), "ColorTransform") value Null() end
-  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "_-0EJ")
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "_-0Ma") type QName(PackageNamespace(""), "uint") value Integer(16777215) end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "_-lB") type QName(PackageNamespace(""), "String") value Null() end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "_-K7") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "_-Hg") type QName(PackageNamespace("flash.geom"), "ColorTransform") value Null() end
+  trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "_-0EJ")
    method
-    refid "com.company.assembleegameclient.ui:_-gV/_-0EJ"
+    refid "com.company.assembleegameclient.ui:_-gV/instance/com.company.assembleegameclient.ui:_-gV/instance/_-0EJ"
     param QName(PackageNamespace(""), "uint")
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "Boolean")
@@ -371,7 +371,7 @@ L153:
 
       getlocal1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "_-0Ma")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "_-0Ma")
       equals
       dup
       iffalse             L13
@@ -379,7 +379,7 @@ L153:
       pop
       getlocal2
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "_-lB")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "_-lB")
       equals
 L13:
       dup
@@ -388,7 +388,7 @@ L13:
       pop
       getlocal3
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "_-K7")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "_-K7")
       equals
 L20:
       dup
@@ -397,7 +397,7 @@ L20:
       pop
       getlocal            4
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "_-Hg")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "_-Hg")
       equals
 L27:
       iffalse             L29
@@ -406,7 +406,7 @@ L27:
 
 L29:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "nameText_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "nameText_")
       getlocal1
       callpropvoid        QName(PackageNamespace(""), "_-gp"), 1
 
@@ -414,7 +414,7 @@ L29:
       iffalse             L40
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "nameText_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "nameText_")
       getlocal2
       setproperty         QName(PackageNamespace(""), "htmlText")
 
@@ -422,17 +422,17 @@ L29:
 
 L40:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "nameText_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "nameText_")
       getlocal2
       setproperty         QName(PackageNamespace(""), "text")
 
 L44:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "nameText_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "nameText_")
       callpropvoid        QName(PackageNamespace(""), "updateMetrics"), 0
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "_-Hg")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "_-Hg")
       pushnull
       equals
       not
@@ -467,19 +467,19 @@ L71:
 L72:
       getlocal0
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "_-0Ma")
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "_-0Ma")
 
       getlocal0
       getlocal2
-      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "_-lB")
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "_-lB")
 
       getlocal0
       getlocal3
-      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "_-K7")
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "_-K7")
 
       getlocal0
       getlocal            4
-      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV"), "_-Hg")
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-gV/instance"), "_-Hg")
 
       returnvoid
      end ; code
@@ -488,7 +488,7 @@ L72:
   end ; trait
  end ; instance
  cinit
-  refid "com.company.assembleegameclient.ui:_-gV/cinit"
+  refid "com.company.assembleegameclient.ui:_-gV/class/init"
   body
    maxstack 3
    localcount 1

@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("com.google.analytics.events:AnalyticsEvent")
   iinit
-   refid "com.google.analytics.events:AnalyticsEvent/iinit"
+   refid "com.google.analytics.events:AnalyticsEvent/instance/init"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace("com.google.analytics"), "AnalyticsTracker")
    param QName(PackageNamespace(""), "Boolean")
@@ -40,7 +40,7 @@ class
   trait slot QName(PackageNamespace(""), "tracker") type QName(PackageNamespace("com.google.analytics"), "AnalyticsTracker") end
   trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
    method
-    refid "com.google.analytics.events:AnalyticsEvent/clone"
+    refid "com.google.analytics.events:AnalyticsEvent/instance/clone"
     returns QName(PackageNamespace("flash.events"), "Event")
     body
      maxstack 5
@@ -64,7 +64,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "com.google.analytics.events:AnalyticsEvent/cinit"
+  refid "com.google.analytics.events:AnalyticsEvent/class/init"
   body
    maxstack 2
    localcount 1

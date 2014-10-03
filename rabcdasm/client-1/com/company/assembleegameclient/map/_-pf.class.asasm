@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-GZ")
   iinit
-   refid "com.company.assembleegameclient.map:_-pf/iinit"
+   refid "com.company.assembleegameclient.map:_-pf/instance/init"
    body
     maxstack 3
     localcount 3
@@ -25,7 +25,7 @@ class
   end ; method
  end ; instance
  cinit
-  refid "com.company.assembleegameclient.map:_-pf/cinit"
+  refid "com.company.assembleegameclient.map:_-pf/class/init"
   body
    maxstack 4
    localcount 3
@@ -45,10 +45,10 @@ class
     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
     initproperty        QName(PackageNamespace(""), "_-QF")
 
-    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#0"), "_-Gx")
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#0"), "_-Gx")
     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
-    setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#0"), "_-Gx")
+    setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#0"), "_-Gx")
 
     findproperty        QName(PackageNamespace(""), "_-Va")
     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
@@ -66,13 +66,13 @@ class
  end ; method
  trait const QName(PackageNamespace(""), "_-020") slotid 1 type QName(PackageNamespace("flash.utils"), "Dictionary") end
  trait const QName(PackageNamespace(""), "_-QF") slotid 2 type QName(PackageNamespace("flash.utils"), "Dictionary") end
- trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#0"), "_-Gx") slotid 3 type QName(PackageNamespace("flash.utils"), "Dictionary") end
+ trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#0"), "_-Gx") slotid 3 type QName(PackageNamespace("flash.utils"), "Dictionary") end
  trait const QName(PackageNamespace(""), "_-Va") slotid 4 type QName(PackageNamespace("flash.utils"), "Dictionary") end
  trait slot QName(PackageNamespace(""), "_-pb") slotid 5 type QName(PackageNamespace("flash.utils"), "Dictionary") end
  trait slot QName(PackageNamespace(""), "_-w8") slotid 6 type QName(PackageNamespace("com.company.assembleegameclient.map"), "_-CO") end
  trait method QName(PackageNamespace(""), "_-nY") flag FINAL dispid 3
   method
-   refid "com.company.assembleegameclient.map:_-pf/_-nY"
+   refid "com.company.assembleegameclient.map:_-pf/class/_-nY"
    param QName(PackageNamespace(""), "XML")
    returns QName(PackageNamespace(""), "void")
    body
@@ -95,7 +95,7 @@ class
      setlocal            4
 
      getlocal1
-     getproperty         Multiname("Ground", [PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
+     getproperty         Multiname("Ground", [PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
      coerce_a
      setlocal            5
 
@@ -111,7 +111,7 @@ L14:
 
      findpropstrict      QName(PackageNamespace(""), "int")
      getlocal2
-     getproperty         MultinameA("type", [PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
+     getproperty         MultinameA("type", [PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
      callproperty        QName(PackageNamespace(""), "int"), 1
      convert_i
      setlocal3
@@ -121,27 +121,27 @@ L14:
      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.map"), "_-CO")
      getlocal2
      constructprop       QName(PackageNamespace("com.company.assembleegameclient.map"), "_-CO"), 1
-     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
 
      getlex              QName(PackageNamespace(""), "_-QF")
      getlocal3
      getlocal2
-     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
 
      getlex              QName(PackageNamespace(""), "_-Va")
      getlocal3
      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.objects"), "_-ZH")
      getlocal2
      constructprop       QName(PackageNamespace("com.company.assembleegameclient.objects"), "_-ZH"), 1
-     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
 
      getlex              QName(PackageNamespace(""), "_-pb")
      findpropstrict      QName(PackageNamespace(""), "String")
      getlocal2
-     getproperty         MultinameA("id", [PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
+     getproperty         MultinameA("id", [PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
      callproperty        QName(PackageNamespace(""), "String"), 1
      getlocal3
-     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
 
 L49:
      hasnext2            5, 4
@@ -152,7 +152,7 @@ L49:
      findproperty        QName(PackageNamespace(""), "_-w8")
      getlex              QName(PackageNamespace(""), "_-020")
      pushshort           255
-     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
      setproperty         QName(PackageNamespace(""), "_-w8")
 
      returnvoid
@@ -162,7 +162,7 @@ L49:
  end ; trait
  trait method QName(PackageNamespace(""), "_-6H") flag FINAL dispid 4
   method
-   refid "com.company.assembleegameclient.map:_-pf/_-6H"
+   refid "com.company.assembleegameclient.map:_-pf/class/_-6H"
    param QName(PackageNamespace(""), "int")
    returns QName(PackageNamespace(""), "String")
    body
@@ -176,7 +176,7 @@ L49:
 
      getlex              QName(PackageNamespace(""), "_-020")
      getlocal1
-     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
      coerce              QName(PackageNamespace("com.company.assembleegameclient.map"), "_-CO")
      setlocal2
 
@@ -197,7 +197,7 @@ L12:
  end ; trait
  trait method QName(PackageNamespace(""), "getBitmapData") flag FINAL dispid 5
   method
-   refid "com.company.assembleegameclient.map:_-pf/getBitmapData"
+   refid "com.company.assembleegameclient.map:_-pf/class/getBitmapData"
    param QName(PackageNamespace(""), "int")
    param QName(PackageNamespace(""), "int")
    returns QName(PackageNamespace("flash.display"), "BitmapData")
@@ -214,9 +214,9 @@ L12:
 
      getlex              QName(PackageNamespace(""), "_-Va")
      getlocal1
-     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
      getlocal2
-     callproperty        Multiname("getTexture", [PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")]), 1
+     callproperty        Multiname("getTexture", [PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")]), 1
      returnvalue
     end ; code
    end ; body
@@ -224,7 +224,7 @@ L12:
  end ; trait
  trait method QName(PackageNamespace(""), "getColor") flag FINAL dispid 6
   method
-   refid "com.company.assembleegameclient.map:_-pf/getColor"
+   refid "com.company.assembleegameclient.map:_-pf/class/getColor"
    param QName(PackageNamespace(""), "int")
    returns QName(PackageNamespace(""), "uint")
    body
@@ -248,25 +248,25 @@ L12:
      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
      setlocal            4
 
-     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#0"), "_-Gx")
+     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#0"), "_-Gx")
      getlocal1
      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "hasOwnProperty"), 1
      iftrue              L45
 
      getlex              QName(PackageNamespace(""), "_-QF")
      getlocal1
-     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
      coerce              QName(PackageNamespace(""), "XML")
      setlocal2
 
      getlocal2
      pushstring          "Color"
-     callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")]), 1
+     callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")]), 1
      iffalse             L31
 
      findpropstrict      QName(PackageNamespace(""), "uint")
      getlocal2
-     getproperty         Multiname("Color", [PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
+     getproperty         Multiname("Color", [PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
      callproperty        QName(PackageNamespace(""), "uint"), 1
      convert_u
      setlocal3
@@ -287,15 +287,15 @@ L31:
      setlocal3
 
 L41:
-     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#0"), "_-Gx")
+     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#0"), "_-Gx")
      getlocal1
      getlocal3
-     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
 
 L45:
-     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#0"), "_-Gx")
+     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#0"), "_-Gx")
      getlocal1
-     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-pf/class#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GZ"), StaticProtectedNs("_-GZ")])
      returnvalue
     end ; code
    end ; body

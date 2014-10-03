@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-B0")
   iinit
-   refid "_-01H:_-6z/iinit"
+   refid "_-01H:_-6z/instance/init"
    body
     maxstack 3
     localcount 3
@@ -25,7 +25,7 @@ class
   end ; method
   trait method QName(PackageNamespace(""), "execute") flag OVERRIDE
    method
-    refid "_-01H:_-6z/execute"
+    refid "_-01H:_-6z/instance/execute"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 8
@@ -57,14 +57,14 @@ class
       getlex              QName(PackageNamespace("_-zo"), "_-8C")
       getproperty         QName(PackageNamespace(""), "GENERIC_DATA")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-dW")
+      getproperty         QName(PrivateNamespace("*", "_-01H:_-6z"), "_-dW")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       getlocal2
       getlex              QName(PackageNamespace("_-zo"), "_-mS")
       getproperty         QName(PackageNamespace(""), "TEXT_ERROR")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-sB")
+      getproperty         QName(PrivateNamespace("*", "_-01H:_-6z"), "_-sB")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       getlocal2
@@ -72,7 +72,7 @@ class
       pushstring          "steamid"
       getlocal1
       getproperty         QName(PackageNamespace(""), "_-Zd")
-      callproperty        Multiname("getSteamID", [PrivateNamespace("*", "_-01H:_-6z#0"), PackageNamespace(""), PackageNamespace("_-01H"), PrivateNamespace("*", "_-01H:_-6z#1"), PackageInternalNs("_-01H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B0"), StaticProtectedNs("_-B0"), StaticProtectedNs("_-QU")]), 0
+      callproperty        Multiname("getSteamID", [PrivateNamespace("*", "_-01H:_-6z"), PackageNamespace(""), PackageNamespace("_-01H"), PrivateNamespace("*", "_-01H:_-6z/instance"), PackageInternalNs("_-01H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B0"), StaticProtectedNs("_-B0"), StaticProtectedNs("_-QU")]), 0
       pushstring          "data"
       getlex              QName(PackageNamespace(""), "offer")
       getproperty         QName(PackageNamespace(""), "data_")
@@ -84,9 +84,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-dW")
+  trait method QName(PrivateNamespace("*", "_-01H:_-6z"), "_-dW")
    method
-    refid "_-01H:_-6z/_-dW"
+    refid "_-01H:_-6z/instance/_-01H:_-6z/_-dW"
     param QName(PackageNamespace("_-zo"), "_-8C")
     returns QName(PackageNamespace(""), "void")
     body
@@ -109,17 +109,17 @@ class
       getproperty         QName(PackageNamespace(""), "_-Zd")
       pushstring          "STEAM_MICRO_TXN_AUTH"
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-P-")
-      callpropvoid        Multiname("addEventListener", [PrivateNamespace("*", "_-01H:_-6z#0"), PackageNamespace(""), PackageNamespace("_-01H"), PrivateNamespace("*", "_-01H:_-6z#1"), PackageInternalNs("_-01H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B0"), StaticProtectedNs("_-B0"), StaticProtectedNs("_-QU")]), 2
+      getproperty         QName(PrivateNamespace("*", "_-01H:_-6z"), "_-P-")
+      callpropvoid        Multiname("addEventListener", [PrivateNamespace("*", "_-01H:_-6z"), PackageNamespace(""), PackageNamespace("_-01H"), PrivateNamespace("*", "_-01H:_-6z/instance"), PackageInternalNs("_-01H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B0"), StaticProtectedNs("_-B0"), StaticProtectedNs("_-QU")]), 2
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-P-")
+  trait method QName(PrivateNamespace("*", "_-01H:_-6z"), "_-P-")
    method
-    refid "_-01H:_-6z/_-P-"
+    refid "_-01H:_-6z/instance/_-01H:_-6z/_-P-"
     param null
     returns QName(PackageNamespace(""), "void")
     body
@@ -140,26 +140,26 @@ class
 
       findpropstrict      QName(PackageNamespace(""), "uint")
       getlocal1
-      getproperty         Multiname("appID", [PrivateNamespace("*", "_-01H:_-6z#0"), PackageNamespace(""), PackageNamespace("_-01H"), PrivateNamespace("*", "_-01H:_-6z#1"), PackageInternalNs("_-01H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B0"), StaticProtectedNs("_-B0"), StaticProtectedNs("_-QU")])
+      getproperty         Multiname("appID", [PrivateNamespace("*", "_-01H:_-6z"), PackageNamespace(""), PackageNamespace("_-01H"), PrivateNamespace("*", "_-01H:_-6z/instance"), PackageInternalNs("_-01H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B0"), StaticProtectedNs("_-B0"), StaticProtectedNs("_-QU")])
       callproperty        QName(PackageNamespace(""), "uint"), 1
       convert_u
       setlocal3
 
       findpropstrict      QName(PackageNamespace(""), "String")
       getlocal1
-      getproperty         Multiname("orderID", [PrivateNamespace("*", "_-01H:_-6z#0"), PackageNamespace(""), PackageNamespace("_-01H"), PrivateNamespace("*", "_-01H:_-6z#1"), PackageInternalNs("_-01H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B0"), StaticProtectedNs("_-B0"), StaticProtectedNs("_-QU")])
+      getproperty         Multiname("orderID", [PrivateNamespace("*", "_-01H:_-6z"), PackageNamespace(""), PackageNamespace("_-01H"), PrivateNamespace("*", "_-01H:_-6z/instance"), PackageInternalNs("_-01H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B0"), StaticProtectedNs("_-B0"), StaticProtectedNs("_-QU")])
       callproperty        QName(PackageNamespace(""), "String"), 1
       coerce_s
       setlocal            4
 
       findpropstrict      QName(PackageNamespace(""), "Boolean")
       getlocal1
-      getproperty         Multiname("isAuthorized", [PrivateNamespace("*", "_-01H:_-6z#0"), PackageNamespace(""), PackageNamespace("_-01H"), PrivateNamespace("*", "_-01H:_-6z#1"), PackageInternalNs("_-01H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B0"), StaticProtectedNs("_-B0"), StaticProtectedNs("_-QU")])
+      getproperty         Multiname("isAuthorized", [PrivateNamespace("*", "_-01H:_-6z"), PackageNamespace(""), PackageNamespace("_-01H"), PrivateNamespace("*", "_-01H:_-6z/instance"), PackageInternalNs("_-01H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B0"), StaticProtectedNs("_-B0"), StaticProtectedNs("_-QU")])
       callproperty        QName(PackageNamespace(""), "Boolean"), 1
       convert_b
       setlocal            5
 
-      getlex              QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-0E1")
+      getlex              QName(PrivateNamespace("*", "_-01H:_-6z"), "_-0E1")
       coerce_s
       dup
       setlocal            6
@@ -188,8 +188,8 @@ class
       getproperty         QName(PackageNamespace(""), "_-Zd")
       pushstring          "STEAM_MICRO_TXN_AUTH"
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-P-")
-      callpropvoid        Multiname("removeEventListener", [PrivateNamespace("*", "_-01H:_-6z#0"), PackageNamespace(""), PackageNamespace("_-01H"), PrivateNamespace("*", "_-01H:_-6z#1"), PackageInternalNs("_-01H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B0"), StaticProtectedNs("_-B0"), StaticProtectedNs("_-QU")]), 2
+      getproperty         QName(PrivateNamespace("*", "_-01H:_-6z"), "_-P-")
+      callpropvoid        Multiname("removeEventListener", [PrivateNamespace("*", "_-01H:_-6z"), PackageNamespace(""), PackageNamespace("_-01H"), PrivateNamespace("*", "_-01H:_-6z/instance"), PackageInternalNs("_-01H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B0"), StaticProtectedNs("_-B0"), StaticProtectedNs("_-QU")]), 2
 
       findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0Bu")
       getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
@@ -205,14 +205,14 @@ class
       getlex              QName(PackageNamespace("_-zo"), "_-8C")
       getproperty         QName(PackageNamespace(""), "GENERIC_DATA")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-dT")
+      getproperty         QName(PrivateNamespace("*", "_-01H:_-6z"), "_-dT")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       getlocal            7
       getlex              QName(PackageNamespace("_-zo"), "_-mS")
       getproperty         QName(PackageNamespace(""), "TEXT_ERROR")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-OX")
+      getproperty         QName(PrivateNamespace("*", "_-01H:_-6z"), "_-OX")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       getlocal            7
@@ -241,9 +241,9 @@ L88:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-dT")
+  trait method QName(PrivateNamespace("*", "_-01H:_-6z"), "_-dT")
    method
-    refid "_-01H:_-6z/_-dT"
+    refid "_-01H:_-6z/instance/_-01H:_-6z/_-dT"
     param QName(PackageNamespace("_-zo"), "_-8C")
     returns QName(PackageNamespace(""), "void")
     body
@@ -257,16 +257,16 @@ L88:
 
       getlocal0
       pushnull
-      callpropvoid        QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-D"), 1
+      callpropvoid        QName(PrivateNamespace("*", "_-01H:_-6z"), "_-D"), 1
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-OX")
+  trait method QName(PrivateNamespace("*", "_-01H:_-6z"), "_-OX")
    method
-    refid "_-01H:_-6z/_-OX"
+    refid "_-01H:_-6z/instance/_-01H:_-6z/_-OX"
     param QName(PackageNamespace("_-zo"), "_-mS")
     returns QName(PackageNamespace(""), "void")
     body
@@ -297,16 +297,16 @@ L88:
 
       getlocal0
       pushnull
-      callpropvoid        QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-D"), 1
+      callpropvoid        QName(PrivateNamespace("*", "_-01H:_-6z"), "_-D"), 1
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-sB")
+  trait method QName(PrivateNamespace("*", "_-01H:_-6z"), "_-sB")
    method
-    refid "_-01H:_-6z/_-sB"
+    refid "_-01H:_-6z/instance/_-01H:_-6z/_-sB"
     param QName(PackageNamespace("_-zo"), "_-mS")
     returns QName(PackageNamespace(""), "void")
     body
@@ -337,16 +337,16 @@ L88:
 
       getlocal0
       pushnull
-      callpropvoid        QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-D"), 1
+      callpropvoid        QName(PrivateNamespace("*", "_-01H:_-6z"), "_-D"), 1
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-D")
+  trait method QName(PrivateNamespace("*", "_-01H:_-6z"), "_-D")
    method
-    refid "_-01H:_-6z/_-D"
+    refid "_-01H:_-6z/instance/_-01H:_-6z/_-D"
     param QName(PackageNamespace(""), "Object")
     returns QName(PackageNamespace(""), "void")
     body
@@ -376,7 +376,7 @@ L10:
   end ; trait
  end ; instance
  cinit
-  refid "_-01H:_-6z/cinit"
+  refid "_-01H:_-6z/class/init"
   body
    maxstack 4
    localcount 3
@@ -386,28 +386,28 @@ L10:
     getlocal0
     pushscope
 
-    findproperty        QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-1M")
+    findproperty        QName(PrivateNamespace("*", "_-01H:_-6z"), "_-1M")
     pushstring          "[ ERROR ] - Received a success response from the GAE server indicating the purchaseOffer request did complete without a problem."
-    initproperty        QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-1M")
+    initproperty        QName(PrivateNamespace("*", "_-01H:_-6z"), "_-1M")
 
-    findproperty        QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-0E1")
+    findproperty        QName(PrivateNamespace("*", "_-01H:_-6z"), "_-0E1")
     pushstring          "[ INFO ] - Received a MicroTxnAuth response from the Steam GameOverlay. The response values are the following:\n\x09AppID: ${appID}\n\x09OrderID: ${orderID}\n\x09IsAuthorized: ${isAuthorized}"
-    initproperty        QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-0E1")
+    initproperty        QName(PrivateNamespace("*", "_-01H:_-6z"), "_-0E1")
 
-    findproperty        QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-AZ")
+    findproperty        QName(PrivateNamespace("*", "_-01H:_-6z"), "_-AZ")
     pushstring          "[ INFO ] - Received a successful response from the GAE server indicating the finalizePurchase request completed without a problem."
-    initproperty        QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-AZ")
+    initproperty        QName(PrivateNamespace("*", "_-01H:_-6z"), "_-AZ")
 
-    findproperty        QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-0AO")
+    findproperty        QName(PrivateNamespace("*", "_-01H:_-6z"), "_-0AO")
     pushstring          "[ ERROR ] - Received a failed response from the GAE server indicating the finalizePurchase request did not complete without a problem."
-    initproperty        QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-0AO")
+    initproperty        QName(PrivateNamespace("*", "_-01H:_-6z"), "_-0AO")
 
     returnvoid
    end ; code
   end ; body
  end ; method
- trait const QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-1M") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("[ ERROR ] - Received a success response from the GAE server indicating the purchaseOffer request did complete without a problem.") end
- trait const QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-0E1") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("[ INFO ] - Received a MicroTxnAuth response from the Steam GameOverlay. The response values are the following:\n\x09AppID: ${appID}\n\x09OrderID: ${orderID}\n\x09IsAuthorized: ${isAuthorized}") end
- trait const QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-AZ") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("[ INFO ] - Received a successful response from the GAE server indicating the finalizePurchase request completed without a problem.") end
- trait const QName(PrivateNamespace("*", "_-01H:_-6z#0"), "_-0AO") slotid 4 type QName(PackageNamespace(""), "String") value Utf8("[ ERROR ] - Received a failed response from the GAE server indicating the finalizePurchase request did not complete without a problem.") end
+ trait const QName(PrivateNamespace("*", "_-01H:_-6z"), "_-1M") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("[ ERROR ] - Received a success response from the GAE server indicating the purchaseOffer request did complete without a problem.") end
+ trait const QName(PrivateNamespace("*", "_-01H:_-6z"), "_-0E1") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("[ INFO ] - Received a MicroTxnAuth response from the Steam GameOverlay. The response values are the following:\n\x09AppID: ${appID}\n\x09OrderID: ${orderID}\n\x09IsAuthorized: ${isAuthorized}") end
+ trait const QName(PrivateNamespace("*", "_-01H:_-6z"), "_-AZ") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("[ INFO ] - Received a successful response from the GAE server indicating the finalizePurchase request completed without a problem.") end
+ trait const QName(PrivateNamespace("*", "_-01H:_-6z"), "_-0AO") slotid 4 type QName(PackageNamespace(""), "String") value Utf8("[ ERROR ] - Received a failed response from the GAE server indicating the finalizePurchase request did not complete without a problem.") end
 end ; class

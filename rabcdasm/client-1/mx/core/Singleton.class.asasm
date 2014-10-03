@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("mx.core:Singleton")
   iinit
-   refid "mx.core:Singleton/iinit"
+   refid "mx.core:Singleton/instance/init"
    body
     maxstack 1
     localcount 1
@@ -25,7 +25,7 @@ class
   end ; method
  end ; instance
  cinit
-  refid "mx.core:Singleton/cinit"
+  refid "mx.core:Singleton/class/init"
   body
    maxstack 2
    localcount 1
@@ -39,19 +39,19 @@ class
     pushstring          "4.6.0.23201"
     initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
 
-    findproperty        QName(PrivateNamespace("*", "mx.core:Singleton#0"), "classMap")
+    findproperty        QName(PrivateNamespace("*", "mx.core:Singleton/class#0"), "classMap")
     newobject           0
-    setproperty         QName(PrivateNamespace("*", "mx.core:Singleton#0"), "classMap")
+    setproperty         QName(PrivateNamespace("*", "mx.core:Singleton/class#0"), "classMap")
 
     returnvoid
    end ; code
   end ; body
  end ; method
  trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.6.0.23201") end
- trait slot QName(PrivateNamespace("*", "mx.core:Singleton#0"), "classMap") slotid 2 type QName(PackageNamespace(""), "Object") end
+ trait slot QName(PrivateNamespace("*", "mx.core:Singleton/class#0"), "classMap") slotid 2 type QName(PackageNamespace(""), "Object") end
  trait method QName(PackageNamespace(""), "registerClass") flag FINAL dispid 3
   method
-   refid "mx.core:Singleton/registerClass"
+   refid "mx.core:Singleton/class/registerClass"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "Class")
    returns QName(PackageNamespace(""), "void")
@@ -64,19 +64,19 @@ class
      getlocal0
      pushscope
 
-     getlex              QName(PrivateNamespace("*", "mx.core:Singleton#0"), "classMap")
+     getlex              QName(PrivateNamespace("*", "mx.core:Singleton/class#0"), "classMap")
      getlocal1
-     getproperty         MultinameL([PrivateNamespace("*", "mx.core:Singleton#0"), PrivateNamespace("*", "mx.core:Singleton#1"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.core:Singleton"), StaticProtectedNs("mx.core:Singleton")])
+     getproperty         MultinameL([PrivateNamespace("*", "mx.core:Singleton/class#0"), PrivateNamespace("*", "mx.core:Singleton/class#1"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.core:Singleton"), StaticProtectedNs("mx.core:Singleton")])
      coerce              QName(PackageNamespace(""), "Class")
      setlocal3
 
      getlocal3
      iftrue              L13
 
-     getlex              QName(PrivateNamespace("*", "mx.core:Singleton#0"), "classMap")
+     getlex              QName(PrivateNamespace("*", "mx.core:Singleton/class#0"), "classMap")
      getlocal1
      getlocal2
-     setproperty         MultinameL([PrivateNamespace("*", "mx.core:Singleton#0"), PrivateNamespace("*", "mx.core:Singleton#1"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.core:Singleton"), StaticProtectedNs("mx.core:Singleton")])
+     setproperty         MultinameL([PrivateNamespace("*", "mx.core:Singleton/class#0"), PrivateNamespace("*", "mx.core:Singleton/class#1"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.core:Singleton"), StaticProtectedNs("mx.core:Singleton")])
 
 L13:
      returnvoid
@@ -86,7 +86,7 @@ L13:
  end ; trait
  trait method QName(PackageNamespace(""), "getClass") flag FINAL dispid 4
   method
-   refid "mx.core:Singleton/getClass"
+   refid "mx.core:Singleton/class/getClass"
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace(""), "Class")
    body
@@ -98,9 +98,9 @@ L13:
      getlocal0
      pushscope
 
-     getlex              QName(PrivateNamespace("*", "mx.core:Singleton#0"), "classMap")
+     getlex              QName(PrivateNamespace("*", "mx.core:Singleton/class#0"), "classMap")
      getlocal1
-     getproperty         MultinameL([PrivateNamespace("*", "mx.core:Singleton#0"), PrivateNamespace("*", "mx.core:Singleton#1"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.core:Singleton"), StaticProtectedNs("mx.core:Singleton")])
+     getproperty         MultinameL([PrivateNamespace("*", "mx.core:Singleton/class#0"), PrivateNamespace("*", "mx.core:Singleton/class#1"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.core:Singleton"), StaticProtectedNs("mx.core:Singleton")])
      returnvalue
     end ; code
    end ; body
@@ -108,7 +108,7 @@ L13:
  end ; trait
  trait method QName(PackageNamespace(""), "getInstance") flag FINAL dispid 5
   method
-   refid "mx.core:Singleton/getInstance"
+   refid "mx.core:Singleton/class/getInstance"
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace(""), "Object")
    body
@@ -120,9 +120,9 @@ L13:
      getlocal0
      pushscope
 
-     getlex              QName(PrivateNamespace("*", "mx.core:Singleton#0"), "classMap")
+     getlex              QName(PrivateNamespace("*", "mx.core:Singleton/class#0"), "classMap")
      getlocal1
-     getproperty         MultinameL([PrivateNamespace("*", "mx.core:Singleton#0"), PrivateNamespace("*", "mx.core:Singleton#1"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.core:Singleton"), StaticProtectedNs("mx.core:Singleton")])
+     getproperty         MultinameL([PrivateNamespace("*", "mx.core:Singleton/class#0"), PrivateNamespace("*", "mx.core:Singleton/class#1"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.core:Singleton"), StaticProtectedNs("mx.core:Singleton")])
      coerce              QName(PackageNamespace(""), "Class")
      setlocal2
 
@@ -137,13 +137,14 @@ L13:
      add
      constructprop       QName(PackageNamespace(""), "Error"), 1
      throw
+
 L17:
      getlocal2
      dup
      setlocal3
 
      pushstring          "getInstance"
-     getproperty         MultinameL([PrivateNamespace("*", "mx.core:Singleton#0"), PrivateNamespace("*", "mx.core:Singleton#1"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.core:Singleton"), StaticProtectedNs("mx.core:Singleton")])
+     getproperty         MultinameL([PrivateNamespace("*", "mx.core:Singleton/class#0"), PrivateNamespace("*", "mx.core:Singleton/class#1"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.core:Singleton"), StaticProtectedNs("mx.core:Singleton")])
      getlocal3
      call                0
      kill                3

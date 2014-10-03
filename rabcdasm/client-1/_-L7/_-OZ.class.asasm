@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-QX")
   iinit
-   refid "_-L7:_-OZ/iinit"
+   refid "_-L7:_-OZ/instance/init"
    body
     maxstack 7
     localcount 5
@@ -54,17 +54,17 @@ class
      getlex              QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-02k")
      pushstring          "/kongregate"
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-L7:_-OZ"), "_-nK")
+     getproperty         QName(PrivateNamespace("*", "_-L7:_-OZ/instance"), "_-nK")
      callpropvoid        QName(PackageNamespace(""), "_-Ut"), 2
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-L7:_-OZ"), "_-2m") type QName(PackageNamespace(""), "Boolean") end
-  trait method QName(PrivateNamespace("*", "_-L7:_-OZ"), "_-nK")
+  trait slot QName(PrivateNamespace("*", "_-L7:_-OZ/instance"), "_-2m") type QName(PackageNamespace(""), "Boolean") end
+  trait method QName(PrivateNamespace("*", "_-L7:_-OZ/instance"), "_-nK")
    method
-    refid "_-L7:_-OZ/_-nK"
+    refid "_-L7:_-OZ/instance/_-L7:_-OZ/instance/_-nK"
     param QName(PackageNamespace("_-zo"), "_-8C")
     returns QName(PackageNamespace(""), "void")
     body
@@ -85,14 +85,14 @@ class
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "CANCEL")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-L7:_-OZ"), "onCancel")
+      getproperty         QName(PrivateNamespace("*", "_-L7:_-OZ/instance"), "onCancel")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       getlocal2
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "COMPLETE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-L7:_-OZ"), "onComplete")
+      getproperty         QName(PrivateNamespace("*", "_-L7:_-OZ/instance"), "onComplete")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       getlocal2
@@ -136,9 +136,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-L7:_-OZ"), "onComplete")
+  trait method QName(PrivateNamespace("*", "_-L7:_-OZ/instance"), "onComplete")
    method
-    refid "_-L7:_-OZ/onComplete"
+    refid "_-L7:_-OZ/instance/_-L7:_-OZ/instance/onComplete"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -164,9 +164,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-L7:_-OZ"), "onCancel")
+  trait method QName(PrivateNamespace("*", "_-L7:_-OZ/instance"), "onCancel")
    method
-    refid "_-L7:_-OZ/onCancel"
+    refid "_-L7:_-OZ/instance/_-L7:_-OZ/instance/onCancel"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -189,7 +189,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-L7:_-OZ/cinit"
+  refid "_-L7:_-OZ/class/init"
   body
    maxstack 3
    localcount 1

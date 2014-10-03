@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-0Ea")
   iinit
-   refid "_-q8:_-9l/iinit"
+   refid "_-q8:_-9l/instance/init"
    body
     maxstack 3
     localcount 3
@@ -25,7 +25,7 @@ class
   end ; method
  end ; instance
  cinit
-  refid "_-q8:_-9l/cinit"
+  refid "_-q8:_-9l/class/init"
   body
    maxstack 4
    localcount 3
@@ -35,9 +35,9 @@ class
     getlocal0
     pushscope
 
-    findproperty        QName(PrivateNamespace("*", "_-q8:_-9l"), "_-oP")
+    findproperty        QName(PrivateNamespace("*", "_-q8:_-9l/class"), "_-oP")
     pushfalse
-    setproperty         QName(PrivateNamespace("*", "_-q8:_-9l"), "_-oP")
+    setproperty         QName(PrivateNamespace("*", "_-q8:_-9l/class"), "_-oP")
 
     returnvoid
    end ; code
@@ -45,7 +45,7 @@ class
  end ; method
  trait method QName(PackageNamespace(""), "encode") flag FINAL dispid 3
   method
-   refid "_-q8:_-9l/encode"
+   refid "_-q8:_-9l/class/encode"
    param QName(PackageNamespace("flash.display"), "BitmapData")
    returns QName(PackageNamespace("flash.utils"), "ByteArray")
    body
@@ -100,11 +100,11 @@ class
      pushbyte            0
      callpropvoid        QName(PackageNamespace(""), "writeByte"), 1
 
-     findpropstrict      QName(PrivateNamespace("*", "_-q8:_-9l"), "_-XH")
+     findpropstrict      QName(PrivateNamespace("*", "_-q8:_-9l/class"), "_-XH")
      getlocal2
      pushint             1229472850
      getlocal3
-     callpropvoid        QName(PrivateNamespace("*", "_-q8:_-9l"), "_-XH"), 3
+     callpropvoid        QName(PrivateNamespace("*", "_-q8:_-9l/class"), "_-XH"), 3
 
      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
      constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
@@ -208,17 +208,17 @@ L110:
      getlocal            4
      callpropvoid        QName(PackageNamespace(""), "compress"), 0
 
-     findpropstrict      QName(PrivateNamespace("*", "_-q8:_-9l"), "_-XH")
+     findpropstrict      QName(PrivateNamespace("*", "_-q8:_-9l/class"), "_-XH")
      getlocal2
      pushint             1229209940
      getlocal            4
-     callpropvoid        QName(PrivateNamespace("*", "_-q8:_-9l"), "_-XH"), 3
+     callpropvoid        QName(PrivateNamespace("*", "_-q8:_-9l/class"), "_-XH"), 3
 
-     findpropstrict      QName(PrivateNamespace("*", "_-q8:_-9l"), "_-XH")
+     findpropstrict      QName(PrivateNamespace("*", "_-q8:_-9l/class"), "_-XH")
      getlocal2
      pushint             1229278788
      pushnull
-     callpropvoid        QName(PrivateNamespace("*", "_-q8:_-9l"), "_-XH"), 3
+     callpropvoid        QName(PrivateNamespace("*", "_-q8:_-9l/class"), "_-XH"), 3
 
      getlocal2
      returnvalue
@@ -226,11 +226,11 @@ L110:
    end ; body
   end ; method
  end ; trait
- trait slot QName(PrivateNamespace("*", "_-q8:_-9l"), "_-oa") slotid 1 type QName(PackageNamespace(""), "Array") end
- trait slot QName(PrivateNamespace("*", "_-q8:_-9l"), "_-oP") slotid 2 type QName(PackageNamespace(""), "Boolean") value False() end
- trait method QName(PrivateNamespace("*", "_-q8:_-9l"), "_-XH") flag FINAL dispid 4
+ trait slot QName(PrivateNamespace("*", "_-q8:_-9l/class"), "_-oa") slotid 1 type QName(PackageNamespace(""), "Array") end
+ trait slot QName(PrivateNamespace("*", "_-q8:_-9l/class"), "_-oP") slotid 2 type QName(PackageNamespace(""), "Boolean") value False() end
+ trait method QName(PrivateNamespace("*", "_-q8:_-9l/class"), "_-XH") flag FINAL dispid 4
   method
-   refid "_-q8:_-9l/_-XH"
+   refid "_-q8:_-9l/class/_-q8:_-9l/class/_-XH"
    param QName(PackageNamespace("flash.utils"), "ByteArray")
    param QName(PackageNamespace(""), "uint")
    param QName(PackageNamespace("flash.utils"), "ByteArray")
@@ -256,16 +256,16 @@ L110:
      convert_u
      setlocal            10
 
-     getlex              QName(PrivateNamespace("*", "_-q8:_-9l"), "_-oP")
+     getlex              QName(PrivateNamespace("*", "_-q8:_-9l/class"), "_-oP")
      iftrue              L75
 
-     findproperty        QName(PrivateNamespace("*", "_-q8:_-9l"), "_-oP")
+     findproperty        QName(PrivateNamespace("*", "_-q8:_-9l/class"), "_-oP")
      pushtrue
-     setproperty         QName(PrivateNamespace("*", "_-q8:_-9l"), "_-oP")
+     setproperty         QName(PrivateNamespace("*", "_-q8:_-9l/class"), "_-oP")
 
-     findproperty        QName(PrivateNamespace("*", "_-q8:_-9l"), "_-oa")
+     findproperty        QName(PrivateNamespace("*", "_-q8:_-9l/class"), "_-oa")
      newarray            0
-     setproperty         QName(PrivateNamespace("*", "_-q8:_-9l"), "_-oa")
+     setproperty         QName(PrivateNamespace("*", "_-q8:_-9l/class"), "_-oa")
 
      pushbyte            0
      convert_u
@@ -328,10 +328,10 @@ L61:
      pushbyte            8
      iflt                L31
 
-     getlex              QName(PrivateNamespace("*", "_-q8:_-9l"), "_-oa")
+     getlex              QName(PrivateNamespace("*", "_-q8:_-9l/class"), "_-oa")
      getlocal            9
      getlocal            8
-     setproperty         MultinameL([PrivateNamespace("*", "_-q8:_-9l"), PackageNamespace(""), PrivateNamespace("*", "_-q8:_-9l/_-XH"), PackageNamespace("_-q8"), PackageInternalNs("_-q8"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.geom"), ProtectedNamespace("_-0Ea"), StaticProtectedNs("_-0Ea")])
+     setproperty         MultinameL([PrivateNamespace("*", "_-q8:_-9l/class"), PackageNamespace(""), PrivateNamespace("*", "_-q8:_-9l/class/_-q8:_-9l/class/_-XH"), PackageNamespace("_-q8"), PackageInternalNs("_-q8"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.geom"), ProtectedNamespace("_-0Ea"), StaticProtectedNs("_-0Ea")])
 
      getlocal            9
      increment
@@ -401,7 +401,7 @@ L101:
 L114:
      label
      findpropstrict      QName(PackageNamespace(""), "uint")
-     getlex              QName(PrivateNamespace("*", "_-q8:_-9l"), "_-oa")
+     getlex              QName(PrivateNamespace("*", "_-q8:_-9l/class"), "_-oa")
      getlocal            8
      getlocal1
      callproperty        QName(PackageNamespace(""), "readUnsignedByte"), 0
@@ -410,7 +410,7 @@ L114:
      pushshort           255
      callproperty        QName(PackageNamespace(""), "uint"), 1
      bitand
-     getproperty         MultinameL([PrivateNamespace("*", "_-q8:_-9l"), PackageNamespace(""), PrivateNamespace("*", "_-q8:_-9l/_-XH"), PackageNamespace("_-q8"), PackageInternalNs("_-q8"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.geom"), ProtectedNamespace("_-0Ea"), StaticProtectedNs("_-0Ea")])
+     getproperty         MultinameL([PrivateNamespace("*", "_-q8:_-9l/class"), PackageNamespace(""), PrivateNamespace("*", "_-q8:_-9l/class/_-q8:_-9l/class/_-XH"), PackageNamespace("_-q8"), PackageInternalNs("_-q8"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.geom"), ProtectedNamespace("_-0Ea"), StaticProtectedNs("_-0Ea")])
      findpropstrict      QName(PackageNamespace(""), "uint")
      getlocal            8
      pushbyte            8

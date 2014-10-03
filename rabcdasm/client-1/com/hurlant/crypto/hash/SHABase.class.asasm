@@ -7,7 +7,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-6j")
   iinit
-   refid "com.hurlant.crypto.hash:SHABase/iinit"
+   refid "com.hurlant.crypto.hash:SHABase/instance/init"
    body
     maxstack 1
     localcount 1
@@ -27,7 +27,7 @@ class
   trait slot QName(PackageNamespace(""), "pad_size") type QName(PackageNamespace(""), "int") value Integer(40) end
   trait method QName(PackageNamespace(""), "getInputSize")
    method
-    refid "com.hurlant.crypto.hash:SHABase/getInputSize"
+    refid "com.hurlant.crypto.hash:SHABase/instance/getInputSize"
     returns QName(PackageNamespace(""), "uint")
     body
      maxstack 1
@@ -46,7 +46,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "getHashSize")
    method
-    refid "com.hurlant.crypto.hash:SHABase/getHashSize"
+    refid "com.hurlant.crypto.hash:SHABase/instance/getHashSize"
     returns QName(PackageNamespace(""), "uint")
     body
      maxstack 1
@@ -65,7 +65,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "getPadSize")
    method
-    refid "com.hurlant.crypto.hash:SHABase/getPadSize"
+    refid "com.hurlant.crypto.hash:SHABase/instance/getPadSize"
     returns QName(PackageNamespace(""), "int")
     body
      maxstack 1
@@ -85,7 +85,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "hash")
    method
-    refid "com.hurlant.crypto.hash:SHABase/hash"
+    refid "com.hurlant.crypto.hash:SHABase/instance/hash"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     returns QName(PackageNamespace("flash.utils"), "ByteArray")
     body
@@ -126,7 +126,7 @@ L20:
       getlocal1
       getproperty         QName(PackageNamespace(""), "length")
       pushbyte            0
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:SHABase/hash#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:SHABase/hash#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-6j"), StaticProtectedNs("_-6j")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:SHABase/instance/hash#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:SHABase/instance/hash#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-6j"), StaticProtectedNs("_-6j")])
 
 L26:
       getlocal1
@@ -199,7 +199,7 @@ L76:
       getlocal            8
       getlocal            7
       getlocal            6
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:SHABase/hash#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:SHABase/hash#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-6j"), StaticProtectedNs("_-6j")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:SHABase/instance/hash#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:SHABase/instance/hash#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-6j"), StaticProtectedNs("_-6j")])
       callpropvoid        QName(PackageNamespace(""), "writeUnsignedInt"), 1
 
       getlocal            6
@@ -228,7 +228,7 @@ L86:
   end ; trait
   trait method QName(ProtectedNamespace("_-6j"), "core")
    method
-    refid "com.hurlant.crypto.hash:SHABase/_-6j:core"
+    refid "com.hurlant.crypto.hash:SHABase/instance/_-6j:core"
     param QName(PackageNamespace(""), "Array")
     param QName(PackageNamespace(""), "uint")
     returns QName(PackageNamespace(""), "Array")
@@ -249,7 +249,7 @@ L86:
   end ; trait
   trait method QName(PackageNamespace(""), "toString")
    method
-    refid "com.hurlant.crypto.hash:SHABase/toString"
+    refid "com.hurlant.crypto.hash:SHABase/instance/toString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -268,7 +268,7 @@ L86:
   end ; trait
  end ; instance
  cinit
-  refid "com.hurlant.crypto.hash:SHABase/cinit"
+  refid "com.hurlant.crypto.hash:SHABase/class/init"
   body
    maxstack 1
    localcount 1

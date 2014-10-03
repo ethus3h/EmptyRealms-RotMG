@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("com.google.analytics.core:Organic")
   iinit
-   refid "com.google.analytics.core:Organic/iinit"
+   refid "com.google.analytics.core:Organic/instance/init"
    body
     maxstack 2
     localcount 1
@@ -53,7 +53,7 @@ class
   end ; method
   trait method QName(PackageNamespace(""), "isIgnoredKeyword")
    method
-    refid "com.google.analytics.core:Organic/isIgnoredKeyword"
+    refid "com.google.analytics.core:Organic/instance/isIgnoredKeyword"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "Boolean")
     body
@@ -82,7 +82,7 @@ L8:
   end ; trait
   trait method QName(PackageNamespace(""), "getKeywordValue")
    method
-    refid "com.google.analytics.core:Organic/getKeywordValue"
+    refid "com.google.analytics.core:Organic/instance/getKeywordValue"
     param QName(PackageNamespace("com.google.analytics.core"), "OrganicReferrer")
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "String")
@@ -112,7 +112,7 @@ L8:
   trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sourcesCache") type QName(PackageNamespace(""), "Array") end
   trait method QName(PackageNamespace(""), "isIgnoredReferral")
    method
-    refid "com.google.analytics.core:Organic/isIgnoredReferral"
+    refid "com.google.analytics.core:Organic/instance/isIgnoredReferral"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "Boolean")
     body
@@ -141,7 +141,7 @@ L8:
   end ; trait
   trait method QName(PackageNamespace(""), "clear")
    method
-    refid "com.google.analytics.core:Organic/clear"
+    refid "com.google.analytics.core:Organic/instance/clear"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 1
@@ -168,7 +168,7 @@ L8:
   end ; trait
   trait getter QName(PackageNamespace(""), "count")
    method
-    refid "com.google.analytics.core:Organic/count/getter"
+    refid "com.google.analytics.core:Organic/instance/count/getter"
     returns QName(PackageNamespace(""), "int")
     body
      maxstack 1
@@ -188,7 +188,7 @@ L8:
   end ; trait
   trait getter QName(PackageNamespace(""), "ignoredKeywordsCount")
    method
-    refid "com.google.analytics.core:Organic/ignoredKeywordsCount/getter"
+    refid "com.google.analytics.core:Organic/instance/ignoredKeywordsCount/getter"
     returns QName(PackageNamespace(""), "int")
     body
      maxstack 1
@@ -208,7 +208,7 @@ L8:
   end ; trait
   trait method QName(PackageNamespace(""), "match")
    method
-    refid "com.google.analytics.core:Organic/match"
+    refid "com.google.analytics.core:Organic/instance/match"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "Boolean")
     body
@@ -251,7 +251,7 @@ L18:
   end ; trait
   trait method QName(PackageNamespace(""), "clearIgnoredKeywords")
    method
-    refid "com.google.analytics.core:Organic/clearIgnoredKeywords"
+    refid "com.google.analytics.core:Organic/instance/clearIgnoredKeywords"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -278,7 +278,7 @@ L18:
   trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sourcesEngine") type QName(PackageNamespace(""), "Array") end
   trait method QName(PackageNamespace(""), "addSource")
    method
-    refid "com.google.analytics.core:Organic/addSource"
+    refid "com.google.analytics.core:Organic/instance/addSource"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
@@ -359,6 +359,7 @@ L48:
       add
       constructprop       QName(PackageNamespace(""), "Error"), 1
       throw
+
 L57:
       returnvoid
      end ; code
@@ -370,7 +371,7 @@ L57:
   trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredReferrals") type QName(PackageNamespace(""), "Array") end
   trait method QName(PackageNamespace(""), "clearEngines")
    method
-    refid "com.google.analytics.core:Organic/clearEngines"
+    refid "com.google.analytics.core:Organic/instance/clearEngines"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -401,7 +402,7 @@ L57:
   trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_ignoredKeywordsCache") type QName(PackageNamespace(""), "Object") end
   trait getter QName(PackageNamespace(""), "ignoredReferralsCount")
    method
-    refid "com.google.analytics.core:Organic/ignoredReferralsCount/getter"
+    refid "com.google.analytics.core:Organic/instance/ignoredReferralsCount/getter"
     returns QName(PackageNamespace(""), "int")
     body
      maxstack 1
@@ -421,7 +422,7 @@ L57:
   end ; trait
   trait method QName(PackageNamespace(""), "addIgnoredReferral")
    method
-    refid "com.google.analytics.core:Organic/addIgnoredReferral"
+    refid "com.google.analytics.core:Organic/instance/addIgnoredReferral"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -464,6 +465,7 @@ L17:
       add
       constructprop       QName(PackageNamespace(""), "Error"), 1
       throw
+
 L27:
       returnvoid
      end ; code
@@ -472,7 +474,7 @@ L27:
   end ; trait
   trait method QName(PackageNamespace(""), "clearIgnoredReferrals")
    method
-    refid "com.google.analytics.core:Organic/clearIgnoredReferrals"
+    refid "com.google.analytics.core:Organic/instance/clearIgnoredReferrals"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -498,7 +500,7 @@ L27:
   end ; trait
   trait method QName(PackageNamespace(""), "getReferrerByName")
    method
-    refid "com.google.analytics.core:Organic/getReferrerByName"
+    refid "com.google.analytics.core:Organic/instance/getReferrerByName"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace("com.google.analytics.core"), "OrganicReferrer")
     body
@@ -540,7 +542,7 @@ L19:
   end ; trait
   trait method QName(PackageNamespace(""), "addIgnoredKeyword")
    method
-    refid "com.google.analytics.core:Organic/addIgnoredKeyword"
+    refid "com.google.analytics.core:Organic/instance/addIgnoredKeyword"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -583,6 +585,7 @@ L17:
       add
       constructprop       QName(PackageNamespace(""), "Error"), 1
       throw
+
 L27:
       returnvoid
      end ; code
@@ -592,7 +595,7 @@ L27:
   trait slot QName(PrivateNamespace("*", "com.google.analytics.core:Organic#0"), "_sources") type QName(PackageNamespace(""), "Array") end
   trait getter QName(PackageNamespace(""), "sources")
    method
-    refid "com.google.analytics.core:Organic/sources/getter"
+    refid "com.google.analytics.core:Organic/instance/sources/getter"
     returns QName(PackageNamespace(""), "Array")
     body
      maxstack 1
@@ -611,7 +614,7 @@ L27:
   end ; trait
  end ; instance
  cinit
-  refid "com.google.analytics.core:Organic/cinit"
+  refid "com.google.analytics.core:Organic/class/init"
   body
    maxstack 2
    localcount 1
@@ -632,7 +635,7 @@ L27:
  trait slot QName(PackageNamespace(""), "throwErrors") slotid 1 type QName(PackageNamespace(""), "Boolean") value False() end
  trait method QName(PackageNamespace(""), "getKeywordValueFromPath") flag FINAL dispid 3
   method
-   refid "com.google.analytics.core:Organic/getKeywordValueFromPath"
+   refid "com.google.analytics.core:Organic/class/getKeywordValueFromPath"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace(""), "String")

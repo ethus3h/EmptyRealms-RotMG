@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-s1")
   iinit
-   refid "_-4X:_-Eh/iinit"
+   refid "_-4X:_-Eh/instance/init"
    body
     maxstack 5
     localcount 3
@@ -21,21 +21,21 @@ class
 
      getlocal0
      findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
-     getproperty         Multiname("Vector", [PrivateNamespace("*", "_-4X:_-Eh"), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "_-4X:_-Eh/iinit"), PackageNamespace(""), PackageNamespace("_-4X"), PackageInternalNs("_-4X"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-s1"), StaticProtectedNs("_-s1")])
+     getproperty         Multiname("Vector", [PrivateNamespace("*", "_-4X:_-Eh/instance"), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "_-4X:_-Eh/instance/init"), PackageNamespace(""), PackageNamespace("_-4X"), PackageInternalNs("_-4X"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-s1"), StaticProtectedNs("_-s1")])
      getlex              QName(PackageNamespace("_-4X"), "_-zU")
      applytype           1
      pushbyte            0
      construct           1
-     initproperty        QName(PrivateNamespace("*", "_-4X:_-Eh"), "_-AX")
+     initproperty        QName(PrivateNamespace("*", "_-4X:_-Eh/instance"), "_-AX")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-4X:_-Eh"), "_-AX") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("_-4X"), "_-zU")>) end
+  trait slot QName(PrivateNamespace("*", "_-4X:_-Eh/instance"), "_-AX") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("_-4X"), "_-zU")>) end
   trait method QName(PackageNamespace(""), "add")
    method
-    refid "_-4X:_-Eh/add"
+    refid "_-4X:_-Eh/instance/add"
     param QName(PackageNamespace("_-4X"), "_-zU")
     returns QName(PackageNamespace(""), "void")
     body
@@ -48,14 +48,14 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-Eh"), "_-AX")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-Eh/instance"), "_-AX")
       getlocal1
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "_-iu")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-Eh"), "_-TT")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-Eh/instance"), "_-TT")
       callpropvoid        QName(PackageNamespace(""), "addOnce"), 1
 
       returnvoid
@@ -65,7 +65,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "_-fw")
    method
-    refid "_-4X:_-Eh/_-fw"
+    refid "_-4X:_-Eh/instance/_-fw"
     param QName(PackageNamespace("_-4X"), "_-zU")
     returns QName(PackageNamespace(""), "Boolean")
     body
@@ -78,7 +78,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-Eh"), "_-AX")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-Eh/instance"), "_-AX")
       getlocal1
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
       pushbyte            255
@@ -89,9 +89,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-4X:_-Eh"), "_-TT")
+  trait method QName(PrivateNamespace("*", "_-4X:_-Eh/instance"), "_-TT")
    method
-    refid "_-4X:_-Eh/_-TT"
+    refid "_-4X:_-Eh/instance/_-4X:_-Eh/instance/_-TT"
     param QName(PackageNamespace("_-4X"), "_-zU")
     param QName(PackageNamespace(""), "Boolean")
     param QName(PackageNamespace(""), "String")
@@ -108,9 +108,9 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-Eh"), "_-AX")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-Eh/instance"), "_-AX")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-4X:_-Eh"), "_-AX")
+      getproperty         QName(PrivateNamespace("*", "_-4X:_-Eh/instance"), "_-AX")
       getlocal1
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
       pushbyte            1
@@ -123,7 +123,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-4X:_-Eh/cinit"
+  refid "_-4X:_-Eh/class/init"
   body
    maxstack 3
    localcount 1

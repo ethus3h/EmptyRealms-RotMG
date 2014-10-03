@@ -7,7 +7,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-Ui")
   iinit
-   refid "_-sp:_-09K/iinit"
+   refid "_-sp:_-09K/instance/init"
    param QName(PackageNamespace("_-sp"), "_-xN")
    param QName(PackageNamespace("_-sp"), "_-09K")
    flag HAS_OPTIONAL
@@ -42,6 +42,7 @@ L11:
      pushstring          "Parameters head and tail are null. Use the NIL element instead."
      constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
      throw
+
 L18:
      getlocal0
      pushfalse
@@ -57,6 +58,7 @@ L22:
      pushstring          "Parameter head cannot be null."
      constructprop       QName(PackageNamespace(""), "ArgumentError"), 1
      throw
+
 L28:
      getlocal0
      getlocal1
@@ -88,7 +90,7 @@ L43:
   trait slot QName(PackageNamespace(""), "nonEmpty") type QName(PackageNamespace(""), "Boolean") value False() end
   trait getter QName(PackageNamespace(""), "length")
    method
-    refid "_-sp:_-09K/length/getter"
+    refid "_-sp:_-09K/instance/length/getter"
     returns QName(PackageNamespace(""), "uint")
     body
      maxstack 4
@@ -151,7 +153,7 @@ L29:
   end ; trait
   trait method QName(PackageNamespace(""), "prepend")
    method
-    refid "_-sp:_-09K/prepend"
+    refid "_-sp:_-09K/instance/prepend"
     param QName(PackageNamespace("_-sp"), "_-xN")
     returns QName(PackageNamespace("_-sp"), "_-09K")
     body
@@ -174,7 +176,7 @@ L29:
   end ; trait
   trait method QName(PackageNamespace(""), "append")
    method
-    refid "_-sp:_-09K/append"
+    refid "_-sp:_-09K/instance/append"
     param QName(PackageNamespace("_-sp"), "_-xN")
     returns QName(PackageNamespace("_-sp"), "_-09K")
     body
@@ -276,7 +278,7 @@ L55:
   end ; trait
   trait method QName(PackageNamespace(""), "insertWithPriority")
    method
-    refid "_-sp:_-09K/insertWithPriority"
+    refid "_-sp:_-09K/instance/insertWithPriority"
     param QName(PackageNamespace("_-sp"), "_-xN")
     returns QName(PackageNamespace("_-sp"), "_-09K")
     body
@@ -390,7 +392,7 @@ L65:
   end ; trait
   trait method QName(PackageNamespace(""), "_-Yf")
    method
-    refid "_-sp:_-09K/_-Yf"
+    refid "_-sp:_-09K/instance/_-Yf"
     param QName(PackageNamespace(""), "Function")
     returns QName(PackageNamespace("_-sp"), "_-09K")
     body
@@ -498,7 +500,7 @@ L64:
   end ; trait
   trait method QName(PackageNamespace(""), "contains")
    method
-    refid "_-sp:_-09K/contains"
+    refid "_-sp:_-09K/instance/contains"
     param QName(PackageNamespace(""), "Function")
     returns QName(PackageNamespace(""), "Boolean")
     body
@@ -554,7 +556,7 @@ L23:
   end ; trait
   trait method QName(PackageNamespace(""), "find")
    method
-    refid "_-sp:_-09K/find"
+    refid "_-sp:_-09K/instance/find"
     param QName(PackageNamespace(""), "Function")
     returns QName(PackageNamespace("_-sp"), "_-xN")
     body
@@ -611,7 +613,7 @@ L24:
   end ; trait
   trait method QName(PackageNamespace(""), "toString")
    method
-    refid "_-sp:_-09K/toString"
+    refid "_-sp:_-09K/instance/toString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 5
@@ -669,7 +671,7 @@ L21:
   end ; trait
  end ; instance
  cinit
-  refid "_-sp:_-09K/cinit"
+  refid "_-sp:_-09K/class/init"
   body
    maxstack 6
    localcount 3

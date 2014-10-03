@@ -1,6 +1,6 @@
 script ; 1040
  sinit
-  refid "mx.resources:LocaleSorter.sinit"
+  refid "mx.resources:LocaleSorter/init"
   body
    maxstack 2
    localcount 1
@@ -19,23 +19,23 @@ script ; 1040
     popscope
     initproperty        QName(PackageNamespace("mx.resources"), "LocaleSorter")
 
-    findpropstrict      Multiname("LocaleID", [PrivateNamespace("*", "mx.resources:LocaleSorter#0")])
+    findpropstrict      Multiname("LocaleID", [PrivateNamespace("*", "mx.resources:LocaleSorter")])
     getlex              QName(PackageNamespace(""), "Object")
     pushscope
 
     getlex              QName(PackageNamespace(""), "Object")
     newclass            "mx.resources:LocaleSorter/LocaleID"
     popscope
-    initproperty        QName(PrivateNamespace("*", "mx.resources:LocaleSorter#0"), "LocaleID")
+    initproperty        QName(PrivateNamespace("*", "mx.resources:LocaleSorter"), "LocaleID")
 
-    findpropstrict      Multiname("LocaleRegistry", [PrivateNamespace("*", "mx.resources:LocaleSorter#0")])
+    findpropstrict      Multiname("LocaleRegistry", [PrivateNamespace("*", "mx.resources:LocaleSorter")])
     getlex              QName(PackageNamespace(""), "Object")
     pushscope
 
     getlex              QName(PackageNamespace(""), "Object")
     newclass            "mx.resources:LocaleSorter/LocaleRegistry"
     popscope
-    initproperty        QName(PrivateNamespace("*", "mx.resources:LocaleSorter#0"), "LocaleRegistry")
+    initproperty        QName(PrivateNamespace("*", "mx.resources:LocaleSorter"), "LocaleRegistry")
 
     returnvoid
    end ; code
@@ -44,10 +44,10 @@ script ; 1040
  trait class QName(PackageNamespace("mx.resources"), "LocaleSorter")
   #include "LocaleSorter.class.asasm"
  end ; trait
- trait class QName(PrivateNamespace("*", "mx.resources:LocaleSorter#0"), "LocaleID")
+ trait class QName(PrivateNamespace("*", "mx.resources:LocaleSorter"), "LocaleID")
   #include "LocaleSorter/LocaleID.class.asasm"
  end ; trait
- trait class QName(PrivateNamespace("*", "mx.resources:LocaleSorter#0"), "LocaleRegistry")
+ trait class QName(PrivateNamespace("*", "mx.resources:LocaleSorter"), "LocaleRegistry")
   #include "LocaleSorter/LocaleRegistry.class.asasm"
  end ; trait
 end ; script

@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-31")
   iinit
-   refid "_-yY:_-0IR/iinit"
+   refid "_-yY:_-0IR/instance/init"
    param QName(PackageNamespace(""), "int")
    param QName(PackageNamespace("flash.geom"), "Point")
    param QName(PackageNamespace("flash.geom"), "Point")
@@ -24,19 +24,19 @@ class
      pushstring          "lofiObj3"
      pushshort           411
      callproperty        QName(PackageNamespace(""), "_-xK"), 2
-     initproperty        QName(PrivateNamespace("*", "_-yY:_-0IR"), "bitmapData")
+     initproperty        QName(PrivateNamespace("*", "_-yY:_-0IR/instance/init"), "bitmapData")
 
      getlocal0
      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "TextureRedrawer")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-yY:_-0IR"), "bitmapData")
+     getproperty         QName(PrivateNamespace("*", "_-yY:_-0IR/instance/init"), "bitmapData")
      pushbyte            80
      pushtrue
      pushbyte            0
      dup
      pushfalse
      callproperty        QName(PackageNamespace(""), "redraw"), 6
-     initproperty        QName(PrivateNamespace("*", "_-yY:_-0IR"), "bitmapData")
+     initproperty        QName(PrivateNamespace("*", "_-yY:_-0IR/instance/init"), "bitmapData")
 
      findproperty        QName(ProtectedNamespace("_-St"), "_-Ao")
      pushdouble          0.2
@@ -45,7 +45,7 @@ class
      getlocal0
      pushbyte            0
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-yY:_-0IR"), "bitmapData")
+     getproperty         QName(PrivateNamespace("*", "_-yY:_-0IR/instance/init"), "bitmapData")
      constructsuper      2
 
      getlocal0
@@ -144,10 +144,10 @@ class
   trait slot QName(PackageNamespace(""), "dy_") type QName(PackageNamespace(""), "Number") end
   trait slot QName(PackageNamespace(""), "pathX_") type QName(PackageNamespace(""), "Number") end
   trait slot QName(PackageNamespace(""), "pathY_") type QName(PackageNamespace(""), "Number") end
-  trait slot QName(PrivateNamespace("*", "_-yY:_-0IR"), "bitmapData") type QName(PackageNamespace("flash.display"), "BitmapData") end
+  trait slot QName(PrivateNamespace("*", "_-yY:_-0IR/instance/init"), "bitmapData") type QName(PackageNamespace("flash.display"), "BitmapData") end
   trait method QName(PackageNamespace(""), "update") flag OVERRIDE
    method
-    refid "_-yY:_-0IR/update"
+    refid "_-yY:_-0IR/instance/update"
     param QName(PackageNamespace(""), "int")
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace(""), "Boolean")
@@ -230,7 +230,7 @@ L14:
   end ; trait
  end ; instance
  cinit
-  refid "_-yY:_-0IR/cinit"
+  refid "_-yY:_-0IR/class/init"
   body
    maxstack 3
    localcount 1

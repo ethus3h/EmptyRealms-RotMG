@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("mx.formatters:StringFormatter")
   iinit
-   refid "mx.formatters:StringFormatter/iinit"
+   refid "mx.formatters:StringFormatter/instance/init"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "Function")
@@ -25,22 +25,22 @@ class
      getlocal0
      getlocal1
      getlocal2
-     callpropvoid        QName(PrivateNamespace("*", "mx.formatters:StringFormatter#0"), "formatPattern"), 2
+     callpropvoid        QName(PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), "formatPattern"), 2
 
      getlocal0
      getlocal3
-     initproperty        QName(PrivateNamespace("*", "mx.formatters:StringFormatter#0"), "extractToken")
+     initproperty        QName(PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), "extractToken")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "mx.formatters:StringFormatter#0"), "extractToken") type QName(PackageNamespace(""), "Function") end
-  trait slot QName(PrivateNamespace("*", "mx.formatters:StringFormatter#0"), "reqFormat") type QName(PackageNamespace(""), "String") end
-  trait slot QName(PrivateNamespace("*", "mx.formatters:StringFormatter#0"), "patternInfo") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), "extractToken") type QName(PackageNamespace(""), "Function") end
+  trait slot QName(PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), "reqFormat") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), "patternInfo") type QName(PackageNamespace(""), "Array") end
   trait method QName(PackageNamespace(""), "formatValue")
    method
-    refid "mx.formatters:StringFormatter/formatValue"
+    refid "mx.formatters:StringFormatter/instance/formatValue"
     param QName(PackageNamespace(""), "Object")
     returns QName(PackageNamespace(""), "String")
     body
@@ -53,22 +53,22 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter#0"), "patternInfo")
+      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), "patternInfo")
       pushbyte            0
-      getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:StringFormatter#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
+      getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter/instance#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
       coerce              QName(PackageNamespace(""), "Object")
       setlocal2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter#0"), "reqFormat")
+      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), "reqFormat")
       pushbyte            0
       getlocal2
-      getproperty         Multiname("begin", [PrivateNamespace("*", "mx.formatters:StringFormatter#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
+      getproperty         Multiname("begin", [PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter/instance#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
       getlocal0
       getlocal1
       getlocal2
-      callproperty        QName(PrivateNamespace("*", "mx.formatters:StringFormatter#0"), "extractToken"), 2
+      callproperty        QName(PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), "extractToken"), 2
       add
       coerce_s
       setlocal3
@@ -78,7 +78,7 @@ class
       setlocal            4
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter#0"), "patternInfo")
+      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), "patternInfo")
       getproperty         QName(PackageNamespace(""), "length")
       convert_i
       setlocal            5
@@ -91,24 +91,24 @@ class
 L32:
       label
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter#0"), "patternInfo")
+      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), "patternInfo")
       getlocal            6
-      getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:StringFormatter#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
+      getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter/instance#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
       coerce              QName(PackageNamespace(""), "Object")
       setlocal2
 
       getlocal3
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter#0"), "reqFormat")
+      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), "reqFormat")
       getlocal            4
-      getproperty         Multiname("end", [PrivateNamespace("*", "mx.formatters:StringFormatter#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
+      getproperty         Multiname("end", [PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter/instance#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
       getlocal2
-      getproperty         Multiname("begin", [PrivateNamespace("*", "mx.formatters:StringFormatter#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
+      getproperty         Multiname("begin", [PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter/instance#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 2
       getlocal0
       getlocal1
       getlocal2
-      callproperty        QName(PrivateNamespace("*", "mx.formatters:StringFormatter#0"), "extractToken"), 2
+      callproperty        QName(PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), "extractToken"), 2
       add
       add
       coerce_s
@@ -125,7 +125,7 @@ L59:
       iflt                L32
 
       getlocal            4
-      getproperty         Multiname("end", [PrivateNamespace("*", "mx.formatters:StringFormatter#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
+      getproperty         Multiname("end", [PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter/instance#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
       pushbyte            0
       greaterthan
       dup
@@ -133,9 +133,9 @@ L59:
 
       pop
       getlocal            4
-      getproperty         Multiname("end", [PrivateNamespace("*", "mx.formatters:StringFormatter#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
+      getproperty         Multiname("end", [PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter/instance#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter#0"), "reqFormat")
+      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), "reqFormat")
       getproperty         QName(PackageNamespace(""), "length")
       equals
       not
@@ -144,9 +144,9 @@ L76:
 
       getlocal3
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter#0"), "reqFormat")
+      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), "reqFormat")
       getlocal            4
-      getproperty         Multiname("end", [PrivateNamespace("*", "mx.formatters:StringFormatter#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
+      getproperty         Multiname("end", [PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter/instance#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substring"), 1
       add
       coerce_s
@@ -159,9 +159,9 @@ L86:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "mx.formatters:StringFormatter#0"), "formatPattern")
+  trait method QName(PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), "formatPattern")
    method
-    refid "mx.formatters:StringFormatter/formatPattern"
+    refid "mx.formatters:StringFormatter/instance/mx.formatters:StringFormatter/instance/formatPattern"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
@@ -191,11 +191,11 @@ L86:
 
       getlocal0
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "mx.formatters:StringFormatter#0"), "reqFormat")
+      initproperty        QName(PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), "reqFormat")
 
       getlocal0
       newarray            0
-      initproperty        QName(PrivateNamespace("*", "mx.formatters:StringFormatter#0"), "patternInfo")
+      initproperty        QName(PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), "patternInfo")
 
       getlocal            6
       getproperty         QName(PackageNamespace(""), "length")
@@ -210,10 +210,10 @@ L86:
 L26:
       label
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter#0"), "reqFormat")
+      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), "reqFormat")
       getlocal            6
       getlocal            8
-      getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:StringFormatter#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
+      getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter/instance#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
       convert_i
       setlocal3
@@ -227,17 +227,17 @@ L26:
       pop
       getlocal3
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter#0"), "reqFormat")
+      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), "reqFormat")
       getproperty         QName(PackageNamespace(""), "length")
       lessthan
 L46:
       iffalse             L85
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter#0"), "reqFormat")
+      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), "reqFormat")
       getlocal            6
       getlocal            8
-      getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:StringFormatter#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
+      getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter/instance#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "lastIndexOf"), 1
       convert_i
       dup
@@ -263,13 +263,13 @@ L68:
       setlocal            4
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter#0"), "patternInfo")
+      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), "patternInfo")
       getlocal            5
       pushbyte            0
       pushstring          "token"
       getlocal            6
       getlocal            8
-      getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:StringFormatter#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
+      getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter/instance#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
       pushstring          "begin"
       getlocal3
       pushstring          "end"
@@ -286,9 +286,9 @@ L86:
       iflt                L26
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter#0"), "patternInfo")
+      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), "patternInfo")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter#0"), "compareValues")
+      getproperty         QName(PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), "compareValues")
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "sort"), 1
 
       returnvoid
@@ -296,9 +296,9 @@ L86:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "mx.formatters:StringFormatter#0"), "compareValues")
+  trait method QName(PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), "compareValues")
    method
-    refid "mx.formatters:StringFormatter/compareValues"
+    refid "mx.formatters:StringFormatter/instance/mx.formatters:StringFormatter/instance/compareValues"
     param QName(PackageNamespace(""), "Object")
     param QName(PackageNamespace(""), "Object")
     returns QName(PackageNamespace(""), "int")
@@ -312,9 +312,9 @@ L86:
       pushscope
 
       getlocal1
-      getproperty         Multiname("begin", [PrivateNamespace("*", "mx.formatters:StringFormatter#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
+      getproperty         Multiname("begin", [PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter/instance#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
       getlocal2
-      getproperty         Multiname("begin", [PrivateNamespace("*", "mx.formatters:StringFormatter#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
+      getproperty         Multiname("begin", [PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter/instance#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
       ifngt               L9
 
       pushbyte            1
@@ -322,9 +322,9 @@ L86:
 
 L9:
       getlocal1
-      getproperty         Multiname("begin", [PrivateNamespace("*", "mx.formatters:StringFormatter#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
+      getproperty         Multiname("begin", [PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter/instance#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
       getlocal2
-      getproperty         Multiname("begin", [PrivateNamespace("*", "mx.formatters:StringFormatter#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
+      getproperty         Multiname("begin", [PrivateNamespace("*", "mx.formatters:StringFormatter/instance#0"), PackageNamespace(""), PrivateNamespace("*", "mx.formatters:StringFormatter/instance#1"), PackageNamespace("mx.formatters"), PackageInternalNs("mx.formatters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.formatters:StringFormatter"), StaticProtectedNs("mx.formatters:StringFormatter")])
       ifnlt               L16
 
       pushbyte            255
@@ -339,7 +339,7 @@ L16:
   end ; trait
  end ; instance
  cinit
-  refid "mx.formatters:StringFormatter/cinit"
+  refid "mx.formatters:StringFormatter/class/init"
   body
    maxstack 2
    localcount 1

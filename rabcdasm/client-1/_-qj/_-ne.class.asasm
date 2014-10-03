@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-VW")
   iinit
-   refid "_-qj:_-ne/iinit"
+   refid "_-qj:_-ne/instance/init"
    body
     maxstack 3
     localcount 3
@@ -26,10 +26,10 @@ class
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-qj:_-ne"), "_-Fp") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "_-qj:_-ne/instance"), "_-Fp") type QName(PackageNamespace(""), "String") end
   trait method QName(ProtectedNamespace("_-VW"), "append") flag OVERRIDE
    method
-    refid "_-qj:_-ne/_-VW:append"
+    refid "_-qj:_-ne/instance/_-VW:append"
     param QName(PackageNamespace(""), "Object")
     returns QName(PackageNamespace(""), "void")
     body
@@ -43,12 +43,12 @@ class
 
       getlocal0
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-qj:_-ne"), "_-Fp")
+      getproperty         QName(PrivateNamespace("*", "_-qj:_-ne/instance"), "_-Fp")
       findpropstrict      QName(PackageNamespace(""), "String")
       getlocal1
       callproperty        QName(PackageNamespace(""), "String"), 1
       add
-      initproperty        QName(PrivateNamespace("*", "_-qj:_-ne"), "_-Fp")
+      initproperty        QName(PrivateNamespace("*", "_-qj:_-ne/instance"), "_-Fp")
 
       returnvoid
      end ; code
@@ -57,7 +57,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "clear")
    method
-    refid "_-qj:_-ne/clear"
+    refid "_-qj:_-ne/instance/clear"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -70,7 +70,7 @@ class
 
       getlocal0
       pushstring          ""
-      initproperty        QName(PrivateNamespace("*", "_-qj:_-ne"), "_-Fp")
+      initproperty        QName(PrivateNamespace("*", "_-qj:_-ne/instance"), "_-Fp")
 
       returnvoid
      end ; code
@@ -79,7 +79,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "toString") flag OVERRIDE
    method
-    refid "_-qj:_-ne/toString#0"
+    refid "_-qj:_-ne/instance/toString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -91,7 +91,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-qj:_-ne"), "_-Fp")
+      getproperty         QName(PrivateNamespace("*", "_-qj:_-ne/instance"), "_-Fp")
       returnvalue
      end ; code
     end ; body
@@ -99,7 +99,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-qj:_-ne/cinit"
+  refid "_-qj:_-ne/class/init"
   body
    maxstack 3
    localcount 1
@@ -115,7 +115,7 @@ class
  end ; method
  trait method QName(PackageNamespace(""), "toString") flag FINAL dispid 3
   method
-   refid "_-qj:_-ne/toString#1"
+   refid "_-qj:_-ne/class/toString"
    param QName(PackageNamespace("_-qj"), "_-0DD")
    returns QName(PackageNamespace(""), "String")
    body

@@ -1,6 +1,6 @@
 script ; 1025
  sinit
-  refid "_-HZ:NexusBackground.sinit"
+  refid "_-HZ:NexusBackground/init"
   body
    maxstack 2
    localcount 1
@@ -43,14 +43,14 @@ script ; 1025
     popscope
     initproperty        QName(PackageNamespace("_-HZ"), "NexusBackground")
 
-    findpropstrict      Multiname("Island", [PrivateNamespace("*", "_-HZ:NexusBackground#1")])
+    findpropstrict      Multiname("Island", [PrivateNamespace("*", "_-HZ:NexusBackground")])
     getlex              QName(PackageNamespace(""), "Object")
     pushscope
 
     getlex              QName(PackageNamespace(""), "Object")
     newclass            "_-HZ:NexusBackground/Island"
     popscope
-    initproperty        QName(PrivateNamespace("*", "_-HZ:NexusBackground#1"), "Island")
+    initproperty        QName(PrivateNamespace("*", "_-HZ:NexusBackground"), "Island")
 
     returnvoid
    end ; code
@@ -59,7 +59,7 @@ script ; 1025
  trait class QName(PackageNamespace("_-HZ"), "NexusBackground")
   #include "NexusBackground.class.asasm"
  end ; trait
- trait class QName(PrivateNamespace("*", "_-HZ:NexusBackground#1"), "Island")
+ trait class QName(PrivateNamespace("*", "_-HZ:NexusBackground"), "Island")
   #include "NexusBackground/Island.class.asasm"
  end ; trait
 end ; script

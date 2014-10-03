@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-rk")
   iinit
-   refid "_-O6:_-zu/iinit"
+   refid "_-O6:_-zu/instance/init"
    param QName(PackageNamespace("_-AG"), "_-07A")
    body
     maxstack 5
@@ -22,32 +22,32 @@ class
 
      getlocal0
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_factory")
+     initproperty        QName(PrivateNamespace("*", "_-O6:_-zu"), "_factory")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_factory")
+     getproperty         QName(PrivateNamespace("*", "_-O6:_-zu"), "_factory")
      getlex              QName(PackageNamespace("_-AG"), "_-0Hc")
      getproperty         QName(PackageNamespace(""), "_-00Q")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_-kS")
+     getproperty         QName(PrivateNamespace("*", "_-O6:_-zu"), "_-kS")
      callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "addEventListener"), 2
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_factory")
+     getproperty         QName(PrivateNamespace("*", "_-O6:_-zu"), "_factory")
      getlex              QName(PackageNamespace("_-AG"), "_-0Hc")
      getproperty         QName(PackageNamespace(""), "_-0J-")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_-cf")
+     getproperty         QName(PrivateNamespace("*", "_-O6:_-zu"), "_-cf")
      callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "addEventListener"), 2
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_factory") type QName(PackageNamespace("_-AG"), "_-07A") end
-  trait method QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_-kS")
+  trait slot QName(PrivateNamespace("*", "_-O6:_-zu"), "_factory") type QName(PackageNamespace("_-AG"), "_-07A") end
+  trait method QName(PrivateNamespace("*", "_-O6:_-zu"), "_-kS")
    method
-    refid "_-O6:_-zu/_-kS"
+    refid "_-O6:_-zu/instance/_-O6:_-zu/_-kS"
     param QName(PackageNamespace("_-AG"), "_-0Hc")
     returns QName(PackageNamespace(""), "void")
     flag NEED_ACTIVATION
@@ -106,7 +106,7 @@ class
       getproperty         QName(PackageNamespace(""), "view")
       getscopeobject      1
       getslot             2
-      callpropvoid        QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_-eE"), 2
+      callpropvoid        QName(PrivateNamespace("*", "_-O6:_-zu"), "_-eE"), 2
 
       returnvoid
 
@@ -116,10 +116,10 @@ L42:
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-O6:_-zu#0"), "onRemovedFromStage")
+      getproperty         QName(PrivateNamespace("*", "_-O6:_-zu"), "onRemovedFromStage")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-      getlex              QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_-05u")
+      getlex              QName(PrivateNamespace("*", "_-O6:_-zu"), "_-05u")
       convert_b
       dup
       iffalse             L58
@@ -127,7 +127,7 @@ L42:
       pop
       getscopeobject      1
       getslot             3
-      getlex              QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_-00v")
+      getlex              QName(PrivateNamespace("*", "_-O6:_-zu"), "_-00v")
       istypelate
 L58:
       dup
@@ -137,7 +137,7 @@ L58:
       getscopeobject      1
       getslot             3
       pushstring          "initialized"
-      getproperty         MultinameL([PrivateNamespace("*", "_-O6:_-zu#0"), PackageNamespace(""), PackageInternalNs("_-O6"), PrivateNamespace("*", "_-O6:_-zu#1"), PackageNamespace("_-O6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-rk"), StaticProtectedNs("_-rk")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-O6:_-zu"), PackageNamespace(""), PackageInternalNs("_-O6"), PrivateNamespace("*", "_-O6:_-zu/instance/_-O6:_-zu"), PackageNamespace("_-O6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-rk"), StaticProtectedNs("_-rk")])
       not
 L66:
       iffalse             L73
@@ -145,7 +145,7 @@ L66:
       getscopeobject      1
       getslot             3
       pushstring          "creationComplete"
-      newfunction         "_-O6:_-zu/_-kS/inline_method"
+      newfunction         "_-O6:_-zu/instance/_-O6:_-zu/_-kS/inline_method"
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       jump                L79
@@ -156,7 +156,7 @@ L73:
       getslot             3
       getscopeobject      1
       getslot             2
-      callpropvoid        QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_-eE"), 2
+      callpropvoid        QName(PrivateNamespace("*", "_-O6:_-zu"), "_-eE"), 2
 
 L79:
       returnvoid
@@ -167,9 +167,9 @@ L79:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_-cf")
+  trait method QName(PrivateNamespace("*", "_-O6:_-zu"), "_-cf")
    method
-    refid "_-O6:_-zu/_-cf"
+    refid "_-O6:_-zu/instance/_-O6:_-zu/_-cf"
     param QName(PackageNamespace("_-AG"), "_-0Hc")
     returns QName(PackageNamespace(""), "void")
     body
@@ -195,7 +195,7 @@ L79:
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-O6:_-zu#0"), "onRemovedFromStage")
+      getproperty         QName(PrivateNamespace("*", "_-O6:_-zu"), "onRemovedFromStage")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
 L16:
@@ -206,7 +206,7 @@ L16:
       getlocal0
       getlocal1
       getproperty         QName(PackageNamespace(""), "mediator")
-      callpropvoid        QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_-xp"), 1
+      callpropvoid        QName(PrivateNamespace("*", "_-O6:_-zu"), "_-xp"), 1
 
 L23:
       returnvoid
@@ -214,9 +214,9 @@ L23:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-O6:_-zu#0"), "onRemovedFromStage")
+  trait method QName(PrivateNamespace("*", "_-O6:_-zu"), "onRemovedFromStage")
    method
-    refid "_-O6:_-zu/onRemovedFromStage"
+    refid "_-O6:_-zu/instance/_-O6:_-zu/onRemovedFromStage"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -229,7 +229,7 @@ L23:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_factory")
+      getproperty         QName(PrivateNamespace("*", "_-O6:_-zu"), "_factory")
       getlocal1
       getproperty         QName(PackageNamespace(""), "target")
       callpropvoid        QName(Namespace("_-9E"), "_-0-Q"), 1
@@ -239,9 +239,9 @@ L23:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_-eE")
+  trait method QName(PrivateNamespace("*", "_-O6:_-zu"), "_-eE")
    method
-    refid "_-O6:_-zu/_-eE"
+    refid "_-O6:_-zu/instance/_-O6:_-zu/_-eE"
     param QName(PackageNamespace(""), "Object")
     param QName(PackageNamespace(""), "Object")
     returns QName(PackageNamespace(""), "void")
@@ -261,7 +261,7 @@ L23:
 
       getlocal2
       getlocal1
-      setproperty         Multiname("viewComponent", [PrivateNamespace("*", "_-O6:_-zu#0"), PackageNamespace(""), PackageInternalNs("_-O6"), PrivateNamespace("*", "_-O6:_-zu#1"), PackageNamespace("_-O6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-rk"), StaticProtectedNs("_-rk")])
+      setproperty         Multiname("viewComponent", [PrivateNamespace("*", "_-O6:_-zu"), PackageNamespace(""), PackageInternalNs("_-O6"), PrivateNamespace("*", "_-O6:_-zu/instance/_-O6:_-zu"), PackageNamespace("_-O6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-rk"), StaticProtectedNs("_-rk")])
 
 L9:
       getlocal2
@@ -270,7 +270,7 @@ L9:
       iffalse             L15
 
       getlocal2
-      callpropvoid        Multiname("initialize", [PrivateNamespace("*", "_-O6:_-zu#0"), PackageNamespace(""), PackageInternalNs("_-O6"), PrivateNamespace("*", "_-O6:_-zu#1"), PackageNamespace("_-O6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-rk"), StaticProtectedNs("_-rk")]), 0
+      callpropvoid        Multiname("initialize", [PrivateNamespace("*", "_-O6:_-zu"), PackageNamespace(""), PackageInternalNs("_-O6"), PrivateNamespace("*", "_-O6:_-zu/instance/_-O6:_-zu"), PackageNamespace("_-O6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-rk"), StaticProtectedNs("_-rk")]), 0
 
 L15:
       returnvoid
@@ -278,9 +278,9 @@ L15:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_-xp")
+  trait method QName(PrivateNamespace("*", "_-O6:_-zu"), "_-xp")
    method
-    refid "_-O6:_-zu/_-xp"
+    refid "_-O6:_-zu/instance/_-O6:_-zu/_-xp"
     param QName(PackageNamespace(""), "Object")
     returns QName(PackageNamespace(""), "void")
     body
@@ -298,7 +298,7 @@ L15:
       iffalse             L8
 
       getlocal1
-      callpropvoid        Multiname("destroy", [PrivateNamespace("*", "_-O6:_-zu#0"), PackageNamespace(""), PackageInternalNs("_-O6"), PrivateNamespace("*", "_-O6:_-zu#1"), PackageNamespace("_-O6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-rk"), StaticProtectedNs("_-rk")]), 0
+      callpropvoid        Multiname("destroy", [PrivateNamespace("*", "_-O6:_-zu"), PackageNamespace(""), PackageInternalNs("_-O6"), PrivateNamespace("*", "_-O6:_-zu/instance/_-O6:_-zu"), PackageNamespace("_-O6"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-rk"), StaticProtectedNs("_-rk")]), 0
 
 L8:
       returnvoid
@@ -308,7 +308,7 @@ L8:
   end ; trait
  end ; instance
  cinit
-  refid "_-O6:_-zu/cinit"
+  refid "_-O6:_-zu/class/init"
   body
    maxstack 4
    localcount 3
@@ -318,20 +318,20 @@ L8:
     getlocal0
     pushscope
 
-    findproperty        QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_-05u")
-    findpropstrict      QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_-0Fb")
-    callproperty        QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_-0Fb"), 0
-    initproperty        QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_-05u")
+    findproperty        QName(PrivateNamespace("*", "_-O6:_-zu"), "_-05u")
+    findpropstrict      QName(PrivateNamespace("*", "_-O6:_-zu"), "_-0Fb")
+    callproperty        QName(PrivateNamespace("*", "_-O6:_-zu"), "_-0Fb"), 0
+    initproperty        QName(PrivateNamespace("*", "_-O6:_-zu"), "_-05u")
 
     returnvoid
    end ; code
   end ; body
  end ; method
- trait slot QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_-00v") slotid 1 type QName(PackageNamespace(""), "Class") end
- trait const QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_-05u") slotid 2 type QName(PackageNamespace(""), "Boolean") end
- trait method QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_-0Fb") flag FINAL dispid 3
+ trait slot QName(PrivateNamespace("*", "_-O6:_-zu"), "_-00v") slotid 1 type QName(PackageNamespace(""), "Class") end
+ trait const QName(PrivateNamespace("*", "_-O6:_-zu"), "_-05u") slotid 2 type QName(PackageNamespace(""), "Boolean") end
+ trait method QName(PrivateNamespace("*", "_-O6:_-zu"), "_-0Fb") flag FINAL dispid 3
   method
-   refid "_-O6:_-zu/_-0Fb"
+   refid "_-O6:_-zu/class/_-O6:_-zu/_-0Fb"
    returns QName(PackageNamespace(""), "Boolean")
    body
     maxstack 5
@@ -343,13 +343,13 @@ L8:
      pushscope
 
 L2:
-     findproperty        QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_-00v")
+     findproperty        QName(PrivateNamespace("*", "_-O6:_-zu"), "_-00v")
      findpropstrict      QName(PackageNamespace("flash.utils"), "getDefinitionByName")
      pushstring          "mx.core::UIComponent"
      callproperty        QName(PackageNamespace("flash.utils"), "getDefinitionByName"), 1
      getlex              QName(PackageNamespace(""), "Class")
      astypelate
-     setproperty         QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_-00v")
+     setproperty         QName(PrivateNamespace("*", "_-O6:_-zu"), "_-00v")
 
 L9:
      jump                L21
@@ -371,7 +371,7 @@ L10:
      popscope
      kill                1
 L21:
-     getlex              QName(PrivateNamespace("*", "_-O6:_-zu#0"), "_-00v")
+     getlex              QName(PrivateNamespace("*", "_-O6:_-zu"), "_-00v")
      pushnull
      equals
      not

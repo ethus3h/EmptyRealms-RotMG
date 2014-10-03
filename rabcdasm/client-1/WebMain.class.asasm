@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("WebMain")
   iinit
-   refid "WebMain/iinit"
+   refid "WebMain/instance/init"
    body
     maxstack 5
     localcount 3
@@ -23,7 +23,7 @@ class
      iffalse             L9
 
      getlocal0
-     callpropvoid        QName(PrivateNamespace("*", "WebMain"), "setup"), 0
+     callpropvoid        QName(PrivateNamespace("*", "WebMain/instance"), "setup"), 0
 
      jump                L15
 
@@ -32,7 +32,7 @@ L9:
      getlex              QName(PackageNamespace("flash.events"), "Event")
      getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "WebMain"), "onAddedToStage")
+     getproperty         QName(PrivateNamespace("*", "WebMain/instance"), "onAddedToStage")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
 L15:
@@ -41,9 +41,9 @@ L15:
    end ; body
   end ; method
   trait slot QName(ProtectedNamespace("WebMain"), "context") type QName(PackageNamespace("_-0-p"), "_-Ly") end
-  trait method QName(PrivateNamespace("*", "WebMain"), "onAddedToStage")
+  trait method QName(PrivateNamespace("*", "WebMain/instance"), "onAddedToStage")
    method
-    refid "WebMain/onAddedToStage"
+    refid "WebMain/instance/WebMain/instance/onAddedToStage"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -59,20 +59,20 @@ L15:
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "WebMain"), "onAddedToStage")
+      getproperty         QName(PrivateNamespace("*", "WebMain/instance"), "onAddedToStage")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "WebMain"), "setup"), 0
+      callpropvoid        QName(PrivateNamespace("*", "WebMain/instance"), "setup"), 0
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "WebMain"), "setup")
+  trait method QName(PrivateNamespace("*", "WebMain/instance"), "setup")
    method
-    refid "WebMain/setup"
+    refid "WebMain/instance/WebMain/instance/setup"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -84,10 +84,10 @@ L15:
       pushscope
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "WebMain"), "_-4y"), 0
+      callpropvoid        QName(PrivateNamespace("*", "WebMain/instance"), "_-4y"), 0
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "WebMain"), "_-i1"), 0
+      callpropvoid        QName(PrivateNamespace("*", "WebMain/instance"), "_-i1"), 0
 
       getlex              QName(PackageNamespace(""), "stage")
       getlex              QName(PackageNamespace("flash.display"), "StageScaleMode")
@@ -106,16 +106,16 @@ L15:
       callpropvoid        QName(PackageNamespace(""), "dispatch"), 0
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "WebMain"), "_-06p"), 0
+      callpropvoid        QName(PrivateNamespace("*", "WebMain/instance"), "_-06p"), 0
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "WebMain"), "_-4y")
+  trait method QName(PrivateNamespace("*", "WebMain/instance"), "_-4y")
    method
-    refid "WebMain/_-4y"
+    refid "WebMain/instance/WebMain/instance/_-4y"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -136,9 +136,9 @@ L15:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "WebMain"), "_-i1")
+  trait method QName(PrivateNamespace("*", "WebMain/instance"), "_-i1")
    method
-    refid "WebMain/_-i1"
+    refid "WebMain/instance/WebMain/instance/_-i1"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -182,9 +182,9 @@ L15:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "WebMain"), "_-06p")
+  trait method QName(PrivateNamespace("*", "WebMain/instance"), "_-06p")
    method
-    refid "WebMain/_-06p"
+    refid "WebMain/instance/WebMain/instance/_-06p"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -203,7 +203,7 @@ L15:
       getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
       getproperty         QName(PackageNamespace(""), "data_")
       pushfalse
-      setproperty         Multiname("fullscreenMode", [PrivateNamespace("*", "WebMain"), PackageNamespace(""), ProtectedNamespace("WebMain"), PrivateNamespace("*", "WebMain/_-06p"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("WebMain"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      setproperty         Multiname("fullscreenMode", [PrivateNamespace("*", "WebMain/instance"), PackageNamespace(""), ProtectedNamespace("WebMain"), PrivateNamespace("*", "WebMain/instance/WebMain/instance/_-06p"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("WebMain"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
 
       getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
       callpropvoid        QName(PackageNamespace(""), "save"), 0
@@ -216,7 +216,7 @@ L12:
   end ; trait
  end ; instance
  cinit
-  refid "WebMain/cinit"
+  refid "WebMain/class/init"
   body
    maxstack 3
    localcount 1

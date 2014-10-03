@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-04h")
   iinit
-   refid "_-03T:ObjectProcessor/iinit"
+   refid "_-03T:ObjectProcessor/instance/init"
    body
     maxstack 4
     localcount 3
@@ -18,7 +18,7 @@ class
 
      getlocal0
      newarray            0
-     initproperty        QName(PrivateNamespace("*", "_-03T:ObjectProcessor#1"), "_handlers")
+     initproperty        QName(PrivateNamespace("*", "_-03T:ObjectProcessor/instance"), "_handlers")
 
      getlocal0
      constructsuper      0
@@ -27,10 +27,10 @@ class
     end ; code
    end ; body
   end ; method
-  trait const QName(PrivateNamespace("*", "_-03T:ObjectProcessor#1"), "_handlers") type QName(PackageNamespace(""), "Array") end
+  trait const QName(PrivateNamespace("*", "_-03T:ObjectProcessor/instance"), "_handlers") type QName(PackageNamespace(""), "Array") end
   trait method QName(PackageNamespace(""), "_-Kj")
    method
-    refid "_-03T:ObjectProcessor/_-Kj"
+    refid "_-03T:ObjectProcessor/instance/_-Kj"
     param QName(PackageNamespace("_-qj"), "_-pn")
     param QName(PackageNamespace(""), "Function")
     returns QName(PackageNamespace(""), "void")
@@ -44,11 +44,11 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-03T:ObjectProcessor#1"), "_handlers")
-      findpropstrict      QName(PrivateNamespace("*", "_-03T:ObjectProcessor#0"), "ObjectHandler")
+      getproperty         QName(PrivateNamespace("*", "_-03T:ObjectProcessor/instance"), "_handlers")
+      findpropstrict      QName(PrivateNamespace("*", "_-03T:ObjectProcessor"), "ObjectHandler")
       getlocal1
       getlocal2
-      constructprop       QName(PrivateNamespace("*", "_-03T:ObjectProcessor#0"), "ObjectHandler"), 2
+      constructprop       QName(PrivateNamespace("*", "_-03T:ObjectProcessor"), "ObjectHandler"), 2
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
       returnvoid
@@ -58,7 +58,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "_-049")
    method
-    refid "_-03T:ObjectProcessor/_-049"
+    refid "_-03T:ObjectProcessor/instance/_-049"
     param QName(PackageNamespace(""), "Object")
     returns QName(PackageNamespace(""), "void")
     body
@@ -71,14 +71,14 @@ class
       pushscope
 
       pushnull
-      coerce              QName(PrivateNamespace("*", "_-03T:ObjectProcessor#0"), "ObjectHandler")
+      coerce              QName(PrivateNamespace("*", "_-03T:ObjectProcessor"), "ObjectHandler")
       setlocal2
 
       pushbyte            0
       setlocal3
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-03T:ObjectProcessor#1"), "_handlers")
+      getproperty         QName(PrivateNamespace("*", "_-03T:ObjectProcessor/instance"), "_handlers")
       coerce_a
       setlocal            4
 
@@ -89,7 +89,7 @@ L12:
       getlocal            4
       getlocal3
       nextvalue
-      coerce              QName(PrivateNamespace("*", "_-03T:ObjectProcessor#0"), "ObjectHandler")
+      coerce              QName(PrivateNamespace("*", "_-03T:ObjectProcessor"), "ObjectHandler")
       setlocal2
 
       getlocal2
@@ -109,7 +109,7 @@ L21:
   end ; trait
  end ; instance
  cinit
-  refid "_-03T:ObjectProcessor/cinit"
+  refid "_-03T:ObjectProcessor/class/init"
   body
    maxstack 3
    localcount 1

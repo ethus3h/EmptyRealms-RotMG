@@ -7,7 +7,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-t1")
   iinit
-   refid "com.hurlant.crypto.hash:MD5/iinit"
+   refid "com.hurlant.crypto.hash:MD5/instance/init"
    body
     maxstack 1
     localcount 1
@@ -27,7 +27,7 @@ class
   trait slot QName(PackageNamespace(""), "pad_size") type QName(PackageNamespace(""), "int") value Integer(48) end
   trait method QName(PackageNamespace(""), "getInputSize")
    method
-    refid "com.hurlant.crypto.hash:MD5/getInputSize"
+    refid "com.hurlant.crypto.hash:MD5/instance/getInputSize"
     returns QName(PackageNamespace(""), "uint")
     body
      maxstack 1
@@ -46,7 +46,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "getHashSize")
    method
-    refid "com.hurlant.crypto.hash:MD5/getHashSize"
+    refid "com.hurlant.crypto.hash:MD5/instance/getHashSize"
     returns QName(PackageNamespace(""), "uint")
     body
      maxstack 1
@@ -65,7 +65,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "getPadSize")
    method
-    refid "com.hurlant.crypto.hash:MD5/getPadSize"
+    refid "com.hurlant.crypto.hash:MD5/instance/getPadSize"
     returns QName(PackageNamespace(""), "int")
     body
      maxstack 1
@@ -85,7 +85,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "hash")
    method
-    refid "com.hurlant.crypto.hash:MD5/hash"
+    refid "com.hurlant.crypto.hash:MD5/instance/hash"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     returns QName(PackageNamespace("flash.utils"), "ByteArray")
     body
@@ -117,7 +117,7 @@ L13:
       getlocal1
       getproperty         QName(PackageNamespace(""), "length")
       pushbyte            0
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
 
 L19:
       getlocal1
@@ -168,7 +168,7 @@ L49:
       getlocal0
       getlocal            4
       getlocal2
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "core_md5"), 2
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "core_md5"), 2
       coerce              QName(PackageNamespace(""), "Array")
       setlocal            6
 
@@ -193,7 +193,7 @@ L71:
       getlocal            7
       getlocal            6
       getlocal            5
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       callpropvoid        QName(PackageNamespace(""), "writeUnsignedInt"), 1
 
       getlocal            5
@@ -222,9 +222,9 @@ L81:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "core_md5")
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "core_md5")
    method
-    refid "com.hurlant.crypto.hash:MD5/core_md5"
+    refid "com.hurlant.crypto.hash:MD5/instance/com.hurlant.crypto.hash:MD5/instance/core_md5"
     param QName(PackageNamespace(""), "Array")
     param QName(PackageNamespace(""), "uint")
     returns QName(PackageNamespace(""), "Array")
@@ -261,14 +261,14 @@ L81:
       getlocal2
       pushbyte            5
       rshift
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushshort           128
       getlocal2
       pushbyte            32
       modulo
       lshift
       bitor
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
 
       getlocal1
       getlocal2
@@ -281,7 +281,7 @@ L81:
       pushbyte            14
       add
       getlocal2
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
 
       pushint             1732584193
       convert_u
@@ -311,7 +311,7 @@ L58:
       getlocal            7
       getlocal1
       getlocal            7
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       coerce_a
       dup
       iftrue              L70
@@ -320,7 +320,7 @@ L58:
       pushbyte            0
       coerce_a
 L70:
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
 
       getlocal1
       getlocal            7
@@ -330,7 +330,7 @@ L70:
       getlocal            7
       pushbyte            1
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       coerce_a
       dup
       iftrue              L86
@@ -339,7 +339,7 @@ L70:
       pushbyte            0
       coerce_a
 L86:
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
 
       getlocal1
       getlocal            7
@@ -349,7 +349,7 @@ L86:
       getlocal            7
       pushbyte            2
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       coerce_a
       dup
       iftrue              L102
@@ -358,7 +358,7 @@ L86:
       pushbyte            0
       coerce_a
 L102:
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
 
       getlocal1
       getlocal            7
@@ -368,7 +368,7 @@ L102:
       getlocal            7
       pushbyte            3
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       coerce_a
       dup
       iftrue              L118
@@ -377,7 +377,7 @@ L102:
       pushbyte            0
       coerce_a
 L118:
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
 
       getlocal1
       getlocal            7
@@ -387,7 +387,7 @@ L118:
       getlocal            7
       pushbyte            4
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       coerce_a
       dup
       iftrue              L134
@@ -396,7 +396,7 @@ L118:
       pushbyte            0
       coerce_a
 L134:
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
 
       getlocal1
       getlocal            7
@@ -406,7 +406,7 @@ L134:
       getlocal            7
       pushbyte            5
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       coerce_a
       dup
       iftrue              L150
@@ -415,7 +415,7 @@ L134:
       pushbyte            0
       coerce_a
 L150:
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
 
       getlocal1
       getlocal            7
@@ -425,7 +425,7 @@ L150:
       getlocal            7
       pushbyte            6
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       coerce_a
       dup
       iftrue              L166
@@ -434,7 +434,7 @@ L150:
       pushbyte            0
       coerce_a
 L166:
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
 
       getlocal1
       getlocal            7
@@ -444,7 +444,7 @@ L166:
       getlocal            7
       pushbyte            7
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       coerce_a
       dup
       iftrue              L182
@@ -453,7 +453,7 @@ L166:
       pushbyte            0
       coerce_a
 L182:
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
 
       getlocal1
       getlocal            7
@@ -463,7 +463,7 @@ L182:
       getlocal            7
       pushbyte            8
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       coerce_a
       dup
       iftrue              L198
@@ -472,7 +472,7 @@ L182:
       pushbyte            0
       coerce_a
 L198:
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
 
       getlocal1
       getlocal            7
@@ -482,7 +482,7 @@ L198:
       getlocal            7
       pushbyte            9
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       coerce_a
       dup
       iftrue              L214
@@ -491,7 +491,7 @@ L198:
       pushbyte            0
       coerce_a
 L214:
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
 
       getlocal1
       getlocal            7
@@ -501,7 +501,7 @@ L214:
       getlocal            7
       pushbyte            10
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       coerce_a
       dup
       iftrue              L230
@@ -510,7 +510,7 @@ L214:
       pushbyte            0
       coerce_a
 L230:
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
 
       getlocal1
       getlocal            7
@@ -520,7 +520,7 @@ L230:
       getlocal            7
       pushbyte            11
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       coerce_a
       dup
       iftrue              L246
@@ -529,7 +529,7 @@ L230:
       pushbyte            0
       coerce_a
 L246:
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
 
       getlocal1
       getlocal            7
@@ -539,7 +539,7 @@ L246:
       getlocal            7
       pushbyte            12
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       coerce_a
       dup
       iftrue              L262
@@ -548,7 +548,7 @@ L246:
       pushbyte            0
       coerce_a
 L262:
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
 
       getlocal1
       getlocal            7
@@ -558,7 +558,7 @@ L262:
       getlocal            7
       pushbyte            13
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       coerce_a
       dup
       iftrue              L278
@@ -567,7 +567,7 @@ L262:
       pushbyte            0
       coerce_a
 L278:
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
 
       getlocal1
       getlocal            7
@@ -577,7 +577,7 @@ L278:
       getlocal            7
       pushbyte            14
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       coerce_a
       dup
       iftrue              L294
@@ -586,7 +586,7 @@ L278:
       pushbyte            0
       coerce_a
 L294:
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
 
       getlocal1
       getlocal            7
@@ -596,7 +596,7 @@ L294:
       getlocal            7
       pushbyte            15
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       coerce_a
       dup
       iftrue              L310
@@ -605,7 +605,7 @@ L294:
       pushbyte            0
       coerce_a
 L310:
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
 
       getlocal3
       convert_u
@@ -632,10 +632,10 @@ L310:
       getlocal            7
       pushbyte            0
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            7
       pushdouble          3614090360
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ff"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ff"), 7
       convert_u
       setlocal3
 
@@ -648,10 +648,10 @@ L310:
       getlocal            7
       pushbyte            1
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            12
       pushdouble          3905402710
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ff"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ff"), 7
       convert_u
       setlocal            6
 
@@ -664,10 +664,10 @@ L310:
       getlocal            7
       pushbyte            2
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            17
       pushint             606105819
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ff"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ff"), 7
       convert_u
       setlocal            5
 
@@ -680,10 +680,10 @@ L310:
       getlocal            7
       pushbyte            3
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            22
       pushdouble          3250441966
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ff"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ff"), 7
       convert_u
       setlocal            4
 
@@ -696,10 +696,10 @@ L310:
       getlocal            7
       pushbyte            4
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            7
       pushdouble          4118548399
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ff"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ff"), 7
       convert_u
       setlocal3
 
@@ -712,10 +712,10 @@ L310:
       getlocal            7
       pushbyte            5
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            12
       pushint             1200080426
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ff"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ff"), 7
       convert_u
       setlocal            6
 
@@ -728,10 +728,10 @@ L310:
       getlocal            7
       pushbyte            6
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            17
       pushdouble          2821735955
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ff"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ff"), 7
       convert_u
       setlocal            5
 
@@ -744,10 +744,10 @@ L310:
       getlocal            7
       pushbyte            7
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            22
       pushdouble          4249261313
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ff"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ff"), 7
       convert_u
       setlocal            4
 
@@ -760,10 +760,10 @@ L310:
       getlocal            7
       pushbyte            8
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            7
       pushint             1770035416
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ff"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ff"), 7
       convert_u
       setlocal3
 
@@ -776,10 +776,10 @@ L310:
       getlocal            7
       pushbyte            9
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            12
       pushdouble          2336552879
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ff"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ff"), 7
       convert_u
       setlocal            6
 
@@ -792,10 +792,10 @@ L310:
       getlocal            7
       pushbyte            10
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            17
       pushdouble          4294925233
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ff"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ff"), 7
       convert_u
       setlocal            5
 
@@ -808,10 +808,10 @@ L310:
       getlocal            7
       pushbyte            11
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            22
       pushdouble          2304563134
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ff"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ff"), 7
       convert_u
       setlocal            4
 
@@ -824,10 +824,10 @@ L310:
       getlocal            7
       pushbyte            12
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            7
       pushint             1804603682
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ff"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ff"), 7
       convert_u
       setlocal3
 
@@ -840,10 +840,10 @@ L310:
       getlocal            7
       pushbyte            13
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            12
       pushdouble          4254626195
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ff"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ff"), 7
       convert_u
       setlocal            6
 
@@ -856,10 +856,10 @@ L310:
       getlocal            7
       pushbyte            14
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            17
       pushdouble          2792965006
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ff"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ff"), 7
       convert_u
       setlocal            5
 
@@ -872,10 +872,10 @@ L310:
       getlocal            7
       pushbyte            15
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            22
       pushint             1236535329
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ff"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ff"), 7
       convert_u
       setlocal            4
 
@@ -888,10 +888,10 @@ L310:
       getlocal            7
       pushbyte            1
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            5
       pushdouble          4129170786
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "gg"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "gg"), 7
       convert_u
       setlocal3
 
@@ -904,10 +904,10 @@ L310:
       getlocal            7
       pushbyte            6
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            9
       pushdouble          3225465664
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "gg"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "gg"), 7
       convert_u
       setlocal            6
 
@@ -920,10 +920,10 @@ L310:
       getlocal            7
       pushbyte            11
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            14
       pushint             643717713
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "gg"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "gg"), 7
       convert_u
       setlocal            5
 
@@ -936,10 +936,10 @@ L310:
       getlocal            7
       pushbyte            0
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            20
       pushdouble          3921069994
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "gg"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "gg"), 7
       convert_u
       setlocal            4
 
@@ -952,10 +952,10 @@ L310:
       getlocal            7
       pushbyte            5
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            5
       pushdouble          3593408605
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "gg"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "gg"), 7
       convert_u
       setlocal3
 
@@ -968,10 +968,10 @@ L310:
       getlocal            7
       pushbyte            10
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            9
       pushint             38016083
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "gg"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "gg"), 7
       convert_u
       setlocal            6
 
@@ -984,10 +984,10 @@ L310:
       getlocal            7
       pushbyte            15
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            14
       pushdouble          3634488961
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "gg"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "gg"), 7
       convert_u
       setlocal            5
 
@@ -1000,10 +1000,10 @@ L310:
       getlocal            7
       pushbyte            4
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            20
       pushdouble          3889429448
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "gg"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "gg"), 7
       convert_u
       setlocal            4
 
@@ -1016,10 +1016,10 @@ L310:
       getlocal            7
       pushbyte            9
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            5
       pushint             568446438
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "gg"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "gg"), 7
       convert_u
       setlocal3
 
@@ -1032,10 +1032,10 @@ L310:
       getlocal            7
       pushbyte            14
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            9
       pushdouble          3275163606
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "gg"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "gg"), 7
       convert_u
       setlocal            6
 
@@ -1048,10 +1048,10 @@ L310:
       getlocal            7
       pushbyte            3
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            14
       pushdouble          4107603335
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "gg"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "gg"), 7
       convert_u
       setlocal            5
 
@@ -1064,10 +1064,10 @@ L310:
       getlocal            7
       pushbyte            8
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            20
       pushint             1163531501
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "gg"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "gg"), 7
       convert_u
       setlocal            4
 
@@ -1080,10 +1080,10 @@ L310:
       getlocal            7
       pushbyte            13
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            5
       pushdouble          2850285829
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "gg"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "gg"), 7
       convert_u
       setlocal3
 
@@ -1096,10 +1096,10 @@ L310:
       getlocal            7
       pushbyte            2
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            9
       pushdouble          4243563512
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "gg"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "gg"), 7
       convert_u
       setlocal            6
 
@@ -1112,10 +1112,10 @@ L310:
       getlocal            7
       pushbyte            7
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            14
       pushint             1735328473
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "gg"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "gg"), 7
       convert_u
       setlocal            5
 
@@ -1128,10 +1128,10 @@ L310:
       getlocal            7
       pushbyte            12
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            20
       pushdouble          2368359562
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "gg"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "gg"), 7
       convert_u
       setlocal            4
 
@@ -1144,10 +1144,10 @@ L310:
       getlocal            7
       pushbyte            5
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            4
       pushdouble          4294588738
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "hh"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "hh"), 7
       convert_u
       setlocal3
 
@@ -1160,10 +1160,10 @@ L310:
       getlocal            7
       pushbyte            8
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            11
       pushdouble          2272392833
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "hh"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "hh"), 7
       convert_u
       setlocal            6
 
@@ -1176,10 +1176,10 @@ L310:
       getlocal            7
       pushbyte            11
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            16
       pushint             1839030562
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "hh"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "hh"), 7
       convert_u
       setlocal            5
 
@@ -1192,10 +1192,10 @@ L310:
       getlocal            7
       pushbyte            14
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            23
       pushdouble          4259657740
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "hh"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "hh"), 7
       convert_u
       setlocal            4
 
@@ -1208,10 +1208,10 @@ L310:
       getlocal            7
       pushbyte            1
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            4
       pushdouble          2763975236
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "hh"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "hh"), 7
       convert_u
       setlocal3
 
@@ -1224,10 +1224,10 @@ L310:
       getlocal            7
       pushbyte            4
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            11
       pushint             1272893353
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "hh"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "hh"), 7
       convert_u
       setlocal            6
 
@@ -1240,10 +1240,10 @@ L310:
       getlocal            7
       pushbyte            7
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            16
       pushdouble          4139469664
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "hh"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "hh"), 7
       convert_u
       setlocal            5
 
@@ -1256,10 +1256,10 @@ L310:
       getlocal            7
       pushbyte            10
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            23
       pushdouble          3200236656
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "hh"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "hh"), 7
       convert_u
       setlocal            4
 
@@ -1272,10 +1272,10 @@ L310:
       getlocal            7
       pushbyte            13
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            4
       pushint             681279174
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "hh"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "hh"), 7
       convert_u
       setlocal3
 
@@ -1288,10 +1288,10 @@ L310:
       getlocal            7
       pushbyte            0
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            11
       pushdouble          3936430074
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "hh"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "hh"), 7
       convert_u
       setlocal            6
 
@@ -1304,10 +1304,10 @@ L310:
       getlocal            7
       pushbyte            3
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            16
       pushdouble          3572445317
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "hh"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "hh"), 7
       convert_u
       setlocal            5
 
@@ -1320,10 +1320,10 @@ L310:
       getlocal            7
       pushbyte            6
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            23
       pushint             76029189
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "hh"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "hh"), 7
       convert_u
       setlocal            4
 
@@ -1336,10 +1336,10 @@ L310:
       getlocal            7
       pushbyte            9
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            4
       pushdouble          3654602809
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "hh"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "hh"), 7
       convert_u
       setlocal3
 
@@ -1352,10 +1352,10 @@ L310:
       getlocal            7
       pushbyte            12
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            11
       pushdouble          3873151461
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "hh"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "hh"), 7
       convert_u
       setlocal            6
 
@@ -1368,10 +1368,10 @@ L310:
       getlocal            7
       pushbyte            15
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            16
       pushint             530742520
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "hh"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "hh"), 7
       convert_u
       setlocal            5
 
@@ -1384,10 +1384,10 @@ L310:
       getlocal            7
       pushbyte            2
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            23
       pushdouble          3299628645
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "hh"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "hh"), 7
       convert_u
       setlocal            4
 
@@ -1400,10 +1400,10 @@ L310:
       getlocal            7
       pushbyte            0
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            6
       pushdouble          4096336452
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ii"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ii"), 7
       convert_u
       setlocal3
 
@@ -1416,10 +1416,10 @@ L310:
       getlocal            7
       pushbyte            7
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            10
       pushint             1126891415
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ii"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ii"), 7
       convert_u
       setlocal            6
 
@@ -1432,10 +1432,10 @@ L310:
       getlocal            7
       pushbyte            14
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            15
       pushdouble          2878612391
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ii"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ii"), 7
       convert_u
       setlocal            5
 
@@ -1448,10 +1448,10 @@ L310:
       getlocal            7
       pushbyte            5
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            21
       pushdouble          4237533241
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ii"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ii"), 7
       convert_u
       setlocal            4
 
@@ -1464,10 +1464,10 @@ L310:
       getlocal            7
       pushbyte            12
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            6
       pushint             1700485571
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ii"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ii"), 7
       convert_u
       setlocal3
 
@@ -1480,10 +1480,10 @@ L310:
       getlocal            7
       pushbyte            3
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            10
       pushdouble          2399980690
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ii"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ii"), 7
       convert_u
       setlocal            6
 
@@ -1496,10 +1496,10 @@ L310:
       getlocal            7
       pushbyte            10
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            15
       pushdouble          4293915773
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ii"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ii"), 7
       convert_u
       setlocal            5
 
@@ -1512,10 +1512,10 @@ L310:
       getlocal            7
       pushbyte            1
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            21
       pushdouble          2240044497
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ii"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ii"), 7
       convert_u
       setlocal            4
 
@@ -1528,10 +1528,10 @@ L310:
       getlocal            7
       pushbyte            8
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            6
       pushint             1873313359
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ii"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ii"), 7
       convert_u
       setlocal3
 
@@ -1544,10 +1544,10 @@ L310:
       getlocal            7
       pushbyte            15
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            10
       pushdouble          4264355552
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ii"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ii"), 7
       convert_u
       setlocal            6
 
@@ -1560,10 +1560,10 @@ L310:
       getlocal            7
       pushbyte            6
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            15
       pushdouble          2734768916
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ii"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ii"), 7
       convert_u
       setlocal            5
 
@@ -1576,10 +1576,10 @@ L310:
       getlocal            7
       pushbyte            13
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            21
       pushint             1309151649
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ii"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ii"), 7
       convert_u
       setlocal            4
 
@@ -1592,10 +1592,10 @@ L310:
       getlocal            7
       pushbyte            4
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            6
       pushdouble          4149444226
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ii"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ii"), 7
       convert_u
       setlocal3
 
@@ -1608,10 +1608,10 @@ L310:
       getlocal            7
       pushbyte            11
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            10
       pushdouble          3174756917
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ii"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ii"), 7
       convert_u
       setlocal            6
 
@@ -1624,10 +1624,10 @@ L310:
       getlocal            7
       pushbyte            2
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            15
       pushint             718787259
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ii"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ii"), 7
       convert_u
       setlocal            5
 
@@ -1640,10 +1640,10 @@ L310:
       getlocal            7
       pushbyte            9
       add
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#1"), PackageNamespace("com.hurlant.crypto.hash"), PackageInternalNs("com.hurlant.crypto.hash"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t1"), StaticProtectedNs("_-t1")])
       pushbyte            21
       pushdouble          3951481745
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ii"), 7
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ii"), 7
       convert_u
       setlocal            4
 
@@ -1693,9 +1693,9 @@ L1308:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "rol")
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "rol")
    method
-    refid "com.hurlant.crypto.hash:MD5/rol"
+    refid "com.hurlant.crypto.hash:MD5/instance/com.hurlant.crypto.hash:MD5/instance/rol"
     param QName(PackageNamespace(""), "uint")
     param QName(PackageNamespace(""), "uint")
     returns QName(PackageNamespace(""), "uint")
@@ -1722,9 +1722,9 @@ L1308:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "cmn")
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "cmn")
    method
-    refid "com.hurlant.crypto.hash:MD5/cmn"
+    refid "com.hurlant.crypto.hash:MD5/instance/com.hurlant.crypto.hash:MD5/instance/cmn"
     param QName(PackageNamespace(""), "uint")
     param QName(PackageNamespace(""), "uint")
     param QName(PackageNamespace(""), "uint")
@@ -1750,7 +1750,7 @@ L1308:
       getlocal            6
       add
       getlocal            5
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "rol"), 2
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "rol"), 2
       getlocal3
       add
       returnvalue
@@ -1758,9 +1758,9 @@ L1308:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ff")
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ff")
    method
-    refid "com.hurlant.crypto.hash:MD5/ff"
+    refid "com.hurlant.crypto.hash:MD5/instance/com.hurlant.crypto.hash:MD5/instance/ff"
     param QName(PackageNamespace(""), "uint")
     param QName(PackageNamespace(""), "uint")
     param QName(PackageNamespace(""), "uint")
@@ -1792,15 +1792,15 @@ L1308:
       getlocal            5
       getlocal            6
       getlocal            7
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "cmn"), 6
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "cmn"), 6
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "gg")
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "gg")
    method
-    refid "com.hurlant.crypto.hash:MD5/gg"
+    refid "com.hurlant.crypto.hash:MD5/instance/com.hurlant.crypto.hash:MD5/instance/gg"
     param QName(PackageNamespace(""), "uint")
     param QName(PackageNamespace(""), "uint")
     param QName(PackageNamespace(""), "uint")
@@ -1832,15 +1832,15 @@ L1308:
       getlocal            5
       getlocal            6
       getlocal            7
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "cmn"), 6
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "cmn"), 6
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "hh")
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "hh")
    method
-    refid "com.hurlant.crypto.hash:MD5/hh"
+    refid "com.hurlant.crypto.hash:MD5/instance/com.hurlant.crypto.hash:MD5/instance/hh"
     param QName(PackageNamespace(""), "uint")
     param QName(PackageNamespace(""), "uint")
     param QName(PackageNamespace(""), "uint")
@@ -1869,15 +1869,15 @@ L1308:
       getlocal            5
       getlocal            6
       getlocal            7
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "cmn"), 6
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "cmn"), 6
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "ii")
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "ii")
    method
-    refid "com.hurlant.crypto.hash:MD5/ii"
+    refid "com.hurlant.crypto.hash:MD5/instance/com.hurlant.crypto.hash:MD5/instance/ii"
     param QName(PackageNamespace(""), "uint")
     param QName(PackageNamespace(""), "uint")
     param QName(PackageNamespace(""), "uint")
@@ -1907,7 +1907,7 @@ L1308:
       getlocal            5
       getlocal            6
       getlocal            7
-      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5#0"), "cmn"), 6
+      callproperty        QName(PrivateNamespace("*", "com.hurlant.crypto.hash:MD5/instance#0"), "cmn"), 6
       returnvalue
      end ; code
     end ; body
@@ -1915,7 +1915,7 @@ L1308:
   end ; trait
   trait method QName(PackageNamespace(""), "toString")
    method
-    refid "com.hurlant.crypto.hash:MD5/toString"
+    refid "com.hurlant.crypto.hash:MD5/instance/toString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -1934,7 +1934,7 @@ L1308:
   end ; trait
  end ; instance
  cinit
-  refid "com.hurlant.crypto.hash:MD5/cinit"
+  refid "com.hurlant.crypto.hash:MD5/class/init"
   body
    maxstack 2
    localcount 1

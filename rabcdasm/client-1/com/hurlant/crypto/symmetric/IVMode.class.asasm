@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-026")
   iinit
-   refid "com.hurlant.crypto.symmetric:IVMode/iinit"
+   refid "com.hurlant.crypto.symmetric:IVMode/instance/init"
    param QName(PackageNamespace("com.hurlant.crypto.symmetric"), "ISymmetricKey")
    param QName(PackageNamespace("com.hurlant.crypto.symmetric"), "IPad")
    flag HAS_OPTIONAL
@@ -82,7 +82,7 @@ L25:
   trait slot QName(ProtectedNamespace("_-026"), "blockSize") type QName(PackageNamespace(""), "uint") end
   trait method QName(PackageNamespace(""), "getBlockSize")
    method
-    refid "com.hurlant.crypto.symmetric:IVMode/getBlockSize"
+    refid "com.hurlant.crypto.symmetric:IVMode/instance/getBlockSize"
     returns QName(PackageNamespace(""), "uint")
     body
      maxstack 1
@@ -103,7 +103,7 @@ L25:
   end ; trait
   trait method QName(PackageNamespace(""), "dispose")
    method
-    refid "com.hurlant.crypto.symmetric:IVMode/dispose"
+    refid "com.hurlant.crypto.symmetric:IVMode/instance/dispose"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 3
@@ -137,7 +137,7 @@ L13:
       getlocal0
       getproperty         QName(ProtectedNamespace("_-026"), "prng")
       callproperty        QName(PackageNamespace(""), "nextByte"), 0
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:IVMode/dispose#0"), ProtectedNamespace("_-026"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:IVMode/dispose#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-026")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:IVMode/instance/dispose#0"), ProtectedNamespace("_-026"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:IVMode/instance/dispose#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-026")])
 
       getlocal1
       increment
@@ -180,7 +180,7 @@ L45:
       getlocal0
       getproperty         QName(ProtectedNamespace("_-026"), "prng")
       callproperty        QName(PackageNamespace(""), "nextByte"), 0
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:IVMode/dispose#0"), ProtectedNamespace("_-026"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:IVMode/dispose#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-026")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.symmetric:IVMode/instance/dispose#0"), ProtectedNamespace("_-026"), PackageNamespace("com.hurlant.crypto.symmetric"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto.symmetric:IVMode/instance/dispose#1"), PackageInternalNs("com.hurlant.crypto.symmetric"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-026")])
 
       getlocal1
       increment
@@ -234,7 +234,7 @@ L69:
   end ; trait
   trait setter QName(PackageNamespace(""), "IV")
    method
-    refid "com.hurlant.crypto.symmetric:IVMode/IV/setter"
+    refid "com.hurlant.crypto.symmetric:IVMode/instance/IV/setter"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     returns QName(PackageNamespace(""), "void")
     body
@@ -268,7 +268,7 @@ L69:
   end ; trait
   trait getter QName(PackageNamespace(""), "IV")
    method
-    refid "com.hurlant.crypto.symmetric:IVMode/IV/getter"
+    refid "com.hurlant.crypto.symmetric:IVMode/instance/IV/getter"
     returns QName(PackageNamespace("flash.utils"), "ByteArray")
     body
      maxstack 1
@@ -288,7 +288,7 @@ L69:
   end ; trait
   trait method QName(ProtectedNamespace("_-026"), "getIV4e")
    method
-    refid "com.hurlant.crypto.symmetric:IVMode/_-026:getIV4e"
+    refid "com.hurlant.crypto.symmetric:IVMode/instance/_-026:getIV4e"
     returns QName(PackageNamespace("flash.utils"), "ByteArray")
     body
      maxstack 3
@@ -342,7 +342,7 @@ L20:
   end ; trait
   trait method QName(ProtectedNamespace("_-026"), "getIV4d")
    method
-    refid "com.hurlant.crypto.symmetric:IVMode/_-026:getIV4d"
+    refid "com.hurlant.crypto.symmetric:IVMode/instance/_-026:getIV4d"
     returns QName(PackageNamespace("flash.utils"), "ByteArray")
     body
      maxstack 2
@@ -374,6 +374,7 @@ L14:
       pushstring          "an IV must be set before calling decrypt()"
       constructprop       QName(PackageNamespace(""), "Error"), 1
       throw
+
 L18:
       getlocal1
       returnvalue
@@ -383,7 +384,7 @@ L18:
   end ; trait
  end ; instance
  cinit
-  refid "com.hurlant.crypto.symmetric:IVMode/cinit"
+  refid "com.hurlant.crypto.symmetric:IVMode/class/init"
   body
    maxstack 1
    localcount 1

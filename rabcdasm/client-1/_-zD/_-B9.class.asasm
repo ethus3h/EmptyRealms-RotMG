@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-jK")
   iinit
-   refid "_-zD:_-B9/iinit"
+   refid "_-zD:_-B9/instance/init"
    body
     maxstack 21
     localcount 3
@@ -36,7 +36,7 @@ class
      pushstring          "Nightie"
      pushstring          "Osprey"
      newarray            18
-     initproperty        QName(PrivateNamespace("*", "_-zD:_-B9"), "_-06G")
+     initproperty        QName(PrivateNamespace("*", "_-zD:_-B9/instance/init"), "_-06G")
 
      getlocal0
      constructsuper      0
@@ -49,11 +49,11 @@ class
    metadata "Inject"
    end ; metadata
   end ; trait
-  trait slot QName(PrivateNamespace("*", "_-zD:_-B9"), "name") type QName(PackageNamespace(""), "String") end
-  trait slot QName(PrivateNamespace("*", "_-zD:_-B9"), "_-06G") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("*", "_-zD:_-B9/instance/init"), "name") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "_-zD:_-B9/instance/init"), "_-06G") type QName(PackageNamespace(""), "Array") end
   trait method QName(PackageNamespace(""), "initialize") flag OVERRIDE
    method
-    refid "_-zD:_-B9/initialize"
+    refid "_-zD:_-B9/instance/initialize"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 3
@@ -71,7 +71,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "destroy") flag OVERRIDE
    method
-    refid "_-zD:_-B9/destroy"
+    refid "_-zD:_-B9/instance/destroy"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 3
@@ -91,7 +91,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-zD:_-B9/cinit"
+  refid "_-zD:_-B9/class/init"
   body
    maxstack 3
    localcount 1

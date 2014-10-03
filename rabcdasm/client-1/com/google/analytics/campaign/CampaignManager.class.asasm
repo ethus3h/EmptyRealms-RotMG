@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("com.google.analytics.campaign:CampaignManager")
   iinit
-   refid "com.google.analytics.campaign:CampaignManager/iinit"
+   refid "com.google.analytics.campaign:CampaignManager/instance/init"
    param QName(PackageNamespace("com.google.analytics.v4"), "Configuration")
    param QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration")
    param QName(PackageNamespace("com.google.analytics.core"), "Buffer")
@@ -25,38 +25,38 @@ class
      getlocal0
      constructsuper      0
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_config")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_config")
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_config")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_config")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_debug")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_debug")
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_debug")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_debug")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_buffer")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_buffer")
      getlocal3
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_buffer")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_buffer")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_domainHash")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_domainHash")
      getlocal            4
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_domainHash")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_domainHash")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_referrer")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_referrer")
      getlocal            5
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_referrer")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_referrer")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_timeStamp")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_timeStamp")
      getlocal            6
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_timeStamp")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_timeStamp")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_config") type QName(PackageNamespace("com.google.analytics.v4"), "Configuration") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_config") type QName(PackageNamespace("com.google.analytics.v4"), "Configuration") end
   trait method QName(PackageNamespace(""), "getCampaignInformation")
    method
-    refid "com.google.analytics.campaign:CampaignManager/getCampaignInformation"
+    refid "com.google.analytics.campaign:CampaignManager/instance/getCampaignInformation"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace("com.google.analytics.campaign"), "CampaignInfo")
@@ -94,20 +94,20 @@ class
       pushbyte            0
       setlocal            7
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "allowLinker")
       convert_b
       dup
       iffalse             L29
 
       pop
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_buffer")
       callproperty        QName(PackageNamespace(""), "isGenuine"), 0
       convert_b
 L29:
       iffalse             L35
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_buffer")
       callproperty        QName(PackageNamespace(""), "hasUTMZ"), 0
       iftrue              L35
 
@@ -138,7 +138,7 @@ L35:
       iffalse             L57
 
       pop
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_buffer")
       callproperty        QName(PackageNamespace(""), "hasUTMZ"), 0
       not
 L57:
@@ -158,7 +158,7 @@ L60:
       coerce              QName(PackageNamespace("com.google.analytics.campaign"), "CampaignTracker")
       setlocal            4
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_buffer")
       callproperty        QName(PackageNamespace(""), "hasUTMZ"), 0
       not
       dup
@@ -194,7 +194,7 @@ L90:
       coerce              QName(PackageNamespace("com.google.analytics.campaign"), "CampaignTracker")
       setlocal            4
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_buffer")
       callproperty        QName(PackageNamespace(""), "hasUTMZ"), 0
       not
       dup
@@ -217,7 +217,7 @@ L108:
       callproperty        QName(PackageNamespace(""), "isValid"), 1
       iftrue              L125
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_buffer")
       callproperty        QName(PackageNamespace(""), "hasUTMZ"), 0
       not
       dup
@@ -244,14 +244,14 @@ L125:
       returnvalue
 
 L131:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_buffer")
       callproperty        QName(PackageNamespace(""), "hasUTMZ"), 0
       convert_b
       dup
       iffalse             L141
 
       pop
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmz")
       callproperty        QName(PackageNamespace(""), "isEmpty"), 0
       not
@@ -264,7 +264,7 @@ L141:
       dup
       setlocal            8
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmz")
       getproperty         QName(PackageNamespace(""), "campaignTracking")
       callpropvoid        QName(PackageNamespace(""), "fromTrackerString"), 1
@@ -276,7 +276,7 @@ L141:
       equals
       setlocal            5
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmz")
       getproperty         QName(PackageNamespace(""), "responseCount")
       convert_i
@@ -294,7 +294,7 @@ L162:
 L169:
       iffalse             L216
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utma")
       getproperty         QName(PackageNamespace(""), "sessionCount")
       convert_i
@@ -309,34 +309,34 @@ L169:
       setlocal            9
 
 L181:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmz")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_domainHash")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_domainHash")
       setproperty         QName(PackageNamespace(""), "domainHash")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmz")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_timeStamp")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_timeStamp")
       setproperty         QName(PackageNamespace(""), "campaignCreation")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmz")
       getlocal            9
       setproperty         QName(PackageNamespace(""), "campaignSessions")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmz")
       getlocal            7
       setproperty         QName(PackageNamespace(""), "responseCount")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmz")
       getlocal            4
       callproperty        QName(PackageNamespace(""), "toTrackerString"), 0
       setproperty         QName(PackageNamespace(""), "campaignTracking")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_debug")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmz")
       callproperty        QName(PackageNamespace(""), "toString"), 0
       getlex              QName(PackageNamespace("com.google.analytics.debug"), "VisualDebugMode")
@@ -369,7 +369,7 @@ L222:
   end ; trait
   trait method QName(PackageNamespace(""), "hasNoOverride")
    method
-    refid "com.google.analytics.campaign:CampaignManager/hasNoOverride"
+    refid "com.google.analytics.campaign:CampaignManager/instance/hasNoOverride"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "Boolean")
     body
@@ -381,7 +381,7 @@ L222:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "campaignKey")
       coerce              QName(PackageNamespace("com.google.analytics.campaign"), "CampaignKey")
       setlocal2
@@ -407,16 +407,16 @@ L11:
       getlocal2
       getproperty         QName(PackageNamespace(""), "UCNO")
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "hasOwnProperty"), 1
-      iffalse             L58
+      iffalse             L61
 
       getlocal3
       getlocal2
       getproperty         QName(PackageNamespace(""), "UCNO")
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.google.analytics.campaign"), PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#1"), PackageInternalNs("com.google.analytics.campaign"), ProtectedNamespace("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.google.analytics.campaign"), PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#1"), PackageInternalNs("com.google.analytics.campaign"), ProtectedNamespace("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("Object")])
       coerce_s
       setlocal            4
 
-      jump                L38
+      jump                L41
 
 L30:
       label
@@ -430,42 +430,44 @@ L34:
       pushfalse
       returnvalue
 
-      jump                L58
-
-L38:
+      ; 0x10
+      ; 0x44
+      ; 0x00
+      ; 0x00
+L41:
       getlocal            4
       setlocal            5
 
       pushstring          "1"
       getlocal            5
-      ifstrictne          L45
+      ifstrictne          L48
 
       pushbyte            0
-      jump                L56
+      jump                L59
 
-L45:
+L48:
       pushstring          ""
       getlocal            5
-      ifstrictne          L50
+      ifstrictne          L53
 
       pushbyte            1
-      jump                L56
+      jump                L59
 
-L50:
+L53:
       pushstring          "0"
       getlocal            5
-      ifstrictne          L55
+      ifstrictne          L58
 
       pushbyte            2
-      jump                L56
+      jump                L59
 
-L55:
+L58:
       pushbyte            3
-L56:
+L59:
       kill                5
       lookupswitch        L34, [L30, L33, L33, L34]
 
-L58:
+L61:
       pushfalse
       returnvalue
      end ; code
@@ -474,7 +476,7 @@ L58:
   end ; trait
   trait method QName(PackageNamespace(""), "getTrackerFromSearchString")
    method
-    refid "com.google.analytics.campaign:CampaignManager/getTrackerFromSearchString"
+    refid "com.google.analytics.campaign:CampaignManager/instance/getTrackerFromSearchString"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace("com.google.analytics.campaign"), "CampaignTracker")
     body
@@ -496,7 +498,7 @@ L58:
       coerce              QName(PackageNamespace("com.google.analytics.campaign"), "CampaignTracker")
       setlocal3
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "campaignKey")
       coerce              QName(PackageNamespace("com.google.analytics.campaign"), "CampaignKey")
       setlocal            4
@@ -525,7 +527,7 @@ L19:
       getlocal            5
       getlocal            4
       getproperty         QName(PackageNamespace(""), "UCID")
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.google.analytics.campaign"), PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#1"), PackageInternalNs("com.google.analytics.campaign"), ProtectedNamespace("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.google.analytics.campaign"), PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#1"), PackageInternalNs("com.google.analytics.campaign"), ProtectedNamespace("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("Object")])
       setproperty         QName(PackageNamespace(""), "id")
 
 L35:
@@ -539,7 +541,7 @@ L35:
       getlocal            5
       getlocal            4
       getproperty         QName(PackageNamespace(""), "UCSR")
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.google.analytics.campaign"), PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#1"), PackageInternalNs("com.google.analytics.campaign"), ProtectedNamespace("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.google.analytics.campaign"), PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#1"), PackageInternalNs("com.google.analytics.campaign"), ProtectedNamespace("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("Object")])
       setproperty         QName(PackageNamespace(""), "source")
 
 L46:
@@ -553,7 +555,7 @@ L46:
       getlocal            5
       getlocal            4
       getproperty         QName(PackageNamespace(""), "UGCLID")
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.google.analytics.campaign"), PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#1"), PackageInternalNs("com.google.analytics.campaign"), ProtectedNamespace("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.google.analytics.campaign"), PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#1"), PackageInternalNs("com.google.analytics.campaign"), ProtectedNamespace("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("Object")])
       setproperty         QName(PackageNamespace(""), "clickId")
 
 L57:
@@ -567,7 +569,7 @@ L57:
       getlocal            5
       getlocal            4
       getproperty         QName(PackageNamespace(""), "UCCN")
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.google.analytics.campaign"), PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#1"), PackageInternalNs("com.google.analytics.campaign"), ProtectedNamespace("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.google.analytics.campaign"), PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#1"), PackageInternalNs("com.google.analytics.campaign"), ProtectedNamespace("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("Object")])
       setproperty         QName(PackageNamespace(""), "name")
 
       jump                L72
@@ -588,7 +590,7 @@ L72:
       getlocal            5
       getlocal            4
       getproperty         QName(PackageNamespace(""), "UCMD")
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.google.analytics.campaign"), PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#1"), PackageInternalNs("com.google.analytics.campaign"), ProtectedNamespace("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.google.analytics.campaign"), PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#1"), PackageInternalNs("com.google.analytics.campaign"), ProtectedNamespace("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("Object")])
       setproperty         QName(PackageNamespace(""), "medium")
 
       jump                L87
@@ -609,7 +611,7 @@ L87:
       getlocal            5
       getlocal            4
       getproperty         QName(PackageNamespace(""), "UCTR")
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.google.analytics.campaign"), PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#1"), PackageInternalNs("com.google.analytics.campaign"), ProtectedNamespace("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.google.analytics.campaign"), PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#1"), PackageInternalNs("com.google.analytics.campaign"), ProtectedNamespace("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("Object")])
       setproperty         QName(PackageNamespace(""), "term")
 
       jump                L114
@@ -645,7 +647,7 @@ L114:
       getlocal            5
       getlocal            4
       getproperty         QName(PackageNamespace(""), "UCCT")
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.google.analytics.campaign"), PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#1"), PackageInternalNs("com.google.analytics.campaign"), ProtectedNamespace("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.google.analytics.campaign"), PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#1"), PackageInternalNs("com.google.analytics.campaign"), ProtectedNamespace("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("Object")])
       setproperty         QName(PackageNamespace(""), "content")
 
 L125:
@@ -657,7 +659,7 @@ L125:
   end ; trait
   trait method QName(PackageNamespace(""), "getOrganicCampaign")
    method
-    refid "com.google.analytics.campaign:CampaignManager/getOrganicCampaign"
+    refid "com.google.analytics.campaign:CampaignManager/instance/getOrganicCampaign"
     returns QName(PackageNamespace("com.google.analytics.campaign"), "CampaignTracker")
     body
      maxstack 3
@@ -685,7 +687,7 @@ L125:
       setlocal            6
 
       findpropstrict      QName(PackageNamespace(""), "isInvalidReferrer")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_referrer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_referrer")
       callproperty        QName(PackageNamespace(""), "isInvalidReferrer"), 1
       convert_b
       dup
@@ -693,8 +695,8 @@ L125:
 
       pop
       findpropstrict      QName(PackageNamespace(""), "isFromGoogleCSE")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_referrer")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_referrer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_config")
       callproperty        QName(PackageNamespace(""), "isFromGoogleCSE"), 2
       convert_b
 L26:
@@ -705,7 +707,7 @@ L26:
 
 L29:
       findpropstrict      QName(PackageNamespace("com.google.analytics.utils"), "URL")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_referrer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_referrer")
       constructprop       QName(PackageNamespace("com.google.analytics.utils"), "URL"), 1
       coerce              QName(PackageNamespace("com.google.analytics.utils"), "URL")
       setlocal2
@@ -738,7 +740,7 @@ L53:
       label
       getlocal            4
       pushbyte            0
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.google.analytics.campaign"), PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#1"), PackageInternalNs("com.google.analytics.campaign"), ProtectedNamespace("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.google.analytics.campaign"), PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#1"), PackageInternalNs("com.google.analytics.campaign"), ProtectedNamespace("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("Object")])
       coerce_s
       setlocal3
 
@@ -748,7 +750,7 @@ L60:
       label
       getlocal            4
       pushbyte            1
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.google.analytics.campaign"), PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#1"), PackageInternalNs("com.google.analytics.campaign"), ProtectedNamespace("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.google.analytics.campaign"), PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#1"), PackageInternalNs("com.google.analytics.campaign"), ProtectedNamespace("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("com.google.analytics.campaign:CampaignManager"), StaticProtectedNs("Object")])
       coerce_s
       setlocal3
 
@@ -785,20 +787,20 @@ L83:
       lookupswitch        L67, [L53, L60, L67]
 
 L85:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "organic")
       getlocal3
       callproperty        QName(PackageNamespace(""), "match"), 1
       iffalse             L121
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "organic")
       getlocal3
       callproperty        QName(PackageNamespace(""), "getReferrerByName"), 1
       coerce              QName(PackageNamespace("com.google.analytics.core"), "OrganicReferrer")
       setlocal            5
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "organic")
       getlocal            5
       getlocal2
@@ -838,7 +840,7 @@ L121:
   end ; trait
   trait method QName(PackageNamespace(""), "getDirectCampaign")
    method
-    refid "com.google.analytics.campaign:CampaignManager/getDirectCampaign"
+    refid "com.google.analytics.campaign:CampaignManager/instance/getDirectCampaign"
     returns QName(PackageNamespace("com.google.analytics.campaign"), "CampaignTracker")
     body
      maxstack 2
@@ -874,7 +876,7 @@ L121:
   end ; trait
   trait method QName(PackageNamespace(""), "isIgnoredKeyword")
    method
-    refid "com.google.analytics.campaign:CampaignManager/isIgnoredKeyword"
+    refid "com.google.analytics.campaign:CampaignManager/instance/isIgnoredKeyword"
     param QName(PackageNamespace("com.google.analytics.campaign"), "CampaignTracker")
     returns QName(PackageNamespace(""), "Boolean")
     body
@@ -899,7 +901,7 @@ L121:
 L11:
       iffalse             L18
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "organic")
       getlocal1
       getproperty         QName(PackageNamespace(""), "term")
@@ -913,10 +915,10 @@ L18:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_domainHash") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_domainHash") type QName(PackageNamespace(""), "Number") end
   trait method QName(PackageNamespace(""), "isIgnoredReferral")
    method
-    refid "com.google.analytics.campaign:CampaignManager/isIgnoredReferral"
+    refid "com.google.analytics.campaign:CampaignManager/instance/isIgnoredReferral"
     param QName(PackageNamespace("com.google.analytics.campaign"), "CampaignTracker")
     returns QName(PackageNamespace(""), "Boolean")
     body
@@ -941,7 +943,7 @@ L18:
 L11:
       iffalse             L18
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_config")
       getproperty         QName(PackageNamespace(""), "organic")
       getlocal1
       getproperty         QName(PackageNamespace(""), "source")
@@ -955,11 +957,11 @@ L18:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_debug") type QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_timeStamp") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_debug") type QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_timeStamp") type QName(PackageNamespace(""), "Number") end
   trait method QName(PackageNamespace(""), "isValid")
    method
-    refid "com.google.analytics.campaign:CampaignManager/isValid"
+    refid "com.google.analytics.campaign:CampaignManager/instance/isValid"
     param QName(PackageNamespace("com.google.analytics.campaign"), "CampaignTracker")
     returns QName(PackageNamespace(""), "Boolean")
     body
@@ -995,7 +997,7 @@ L13:
   end ; trait
   trait method QName(PackageNamespace(""), "getReferrerCampaign")
    method
-    refid "com.google.analytics.campaign:CampaignManager/getReferrerCampaign"
+    refid "com.google.analytics.campaign:CampaignManager/instance/getReferrerCampaign"
     returns QName(PackageNamespace("com.google.analytics.campaign"), "CampaignTracker")
     body
      maxstack 3
@@ -1011,7 +1013,7 @@ L13:
       setlocal1
 
       findpropstrict      QName(PackageNamespace(""), "isInvalidReferrer")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_referrer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_referrer")
       callproperty        QName(PackageNamespace(""), "isInvalidReferrer"), 1
       convert_b
       dup
@@ -1019,8 +1021,8 @@ L13:
 
       pop
       findpropstrict      QName(PackageNamespace(""), "isFromGoogleCSE")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_referrer")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_referrer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_config")
       callproperty        QName(PackageNamespace(""), "isFromGoogleCSE"), 2
       convert_b
 L17:
@@ -1031,7 +1033,7 @@ L17:
 
 L20:
       findpropstrict      QName(PackageNamespace("com.google.analytics.utils"), "URL")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_referrer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_referrer")
       constructprop       QName(PackageNamespace("com.google.analytics.utils"), "URL"), 1
       coerce              QName(PackageNamespace("com.google.analytics.utils"), "URL")
       setlocal2
@@ -1086,11 +1088,11 @@ L43:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_referrer") type QName(PackageNamespace(""), "String") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager#0"), "_buffer") type QName(PackageNamespace("com.google.analytics.core"), "Buffer") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_referrer") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.campaign:CampaignManager/instance#0"), "_buffer") type QName(PackageNamespace("com.google.analytics.core"), "Buffer") end
  end ; instance
  cinit
-  refid "com.google.analytics.campaign:CampaignManager/cinit"
+  refid "com.google.analytics.campaign:CampaignManager/class/init"
   body
    maxstack 2
    localcount 1
@@ -1111,7 +1113,7 @@ L43:
  trait const QName(PackageNamespace(""), "trackingDelimiter") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("|") end
  trait method QName(PackageNamespace(""), "isInvalidReferrer") flag FINAL dispid 3
   method
-   refid "com.google.analytics.campaign:CampaignManager/isInvalidReferrer"
+   refid "com.google.analytics.campaign:CampaignManager/class/isInvalidReferrer"
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace(""), "Boolean")
    body
@@ -1193,7 +1195,7 @@ L49:
  end ; trait
  trait method QName(PackageNamespace(""), "isFromGoogleCSE") flag FINAL dispid 4
   method
-   refid "com.google.analytics.campaign:CampaignManager/isFromGoogleCSE"
+   refid "com.google.analytics.campaign:CampaignManager/class/isFromGoogleCSE"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace("com.google.analytics.v4"), "Configuration")
    returns QName(PackageNamespace(""), "Boolean")

@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-Nx")
   iinit
-   refid "_-vf:_-QP/iinit"
+   refid "_-vf:_-QP/instance/init"
    body
     maxstack 3
     localcount 3
@@ -25,7 +25,7 @@ class
   end ; method
  end ; instance
  cinit
-  refid "_-vf:_-QP/cinit"
+  refid "_-vf:_-QP/class/init"
   body
    maxstack 3
    localcount 1
@@ -39,10 +39,10 @@ class
    end ; code
   end ; body
  end ; method
- trait slot QName(PrivateNamespace("*", "_-vf:_-QP#0"), "_-4w") slotid 1 type QName(PackageNamespace("flash.media"), "SoundTransform") end
+ trait slot QName(PrivateNamespace("*", "_-vf:_-QP/class#0"), "_-4w") slotid 1 type QName(PackageNamespace("flash.media"), "SoundTransform") end
  trait method QName(PackageNamespace(""), "load") flag FINAL dispid 3
   method
-   refid "_-vf:_-QP/load"
+   refid "_-vf:_-QP/class/load"
    returns QName(PackageNamespace(""), "void")
    body
     maxstack 5
@@ -53,11 +53,11 @@ class
      getlocal0
      pushscope
 
-     findproperty        QName(PrivateNamespace("*", "_-vf:_-QP#0"), "_-4w")
+     findproperty        QName(PrivateNamespace("*", "_-vf:_-QP/class#0"), "_-4w")
      findpropstrict      QName(PackageNamespace("flash.media"), "SoundTransform")
      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
      getproperty         QName(PackageNamespace(""), "data_")
-     getproperty         Multiname("playSFX", [PrivateNamespace("*", "_-vf:_-QP#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-QP#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Nx"), StaticProtectedNs("_-Nx")])
+     getproperty         Multiname("playSFX", [PrivateNamespace("*", "_-vf:_-QP/class#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-QP/class#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Nx"), StaticProtectedNs("_-Nx")])
      iffalse             L11
 
      pushbyte            1
@@ -69,7 +69,7 @@ L11:
      convert_d
 L13:
      constructprop       QName(PackageNamespace("flash.media"), "SoundTransform"), 1
-     setproperty         QName(PrivateNamespace("*", "_-vf:_-QP#0"), "_-4w")
+     setproperty         QName(PrivateNamespace("*", "_-vf:_-QP/class#0"), "_-4w")
 
      returnvoid
     end ; code
@@ -78,7 +78,7 @@ L13:
  end ; trait
  trait method QName(PackageNamespace(""), "_-2c") flag FINAL dispid 4
   method
-   refid "_-vf:_-QP/_-2c"
+   refid "_-vf:_-QP/class/_-2c"
    param QName(PackageNamespace(""), "Boolean")
    returns QName(PackageNamespace(""), "void")
    body
@@ -107,7 +107,7 @@ L10:
      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
      getproperty         QName(PackageNamespace(""), "data_")
      getlocal1
-     setproperty         Multiname("playSFX", [PrivateNamespace("*", "_-vf:_-QP#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-QP#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Nx"), StaticProtectedNs("_-Nx")])
+     setproperty         Multiname("playSFX", [PrivateNamespace("*", "_-vf:_-QP/class#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-QP/class#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Nx"), StaticProtectedNs("_-Nx")])
 
      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
      callpropvoid        QName(PackageNamespace(""), "save"), 0

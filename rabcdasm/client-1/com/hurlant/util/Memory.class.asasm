@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-fW")
   iinit
-   refid "com.hurlant.util:Memory/iinit"
+   refid "com.hurlant.util:Memory/instance/init"
    body
     maxstack 1
     localcount 1
@@ -25,7 +25,7 @@ class
   end ; method
  end ; instance
  cinit
-  refid "com.hurlant.util:Memory/cinit"
+  refid "com.hurlant.util:Memory/class/init"
   body
    maxstack 1
    localcount 1
@@ -41,7 +41,7 @@ class
  end ; method
  trait method QName(PackageNamespace(""), "gc") flag FINAL dispid 3
   method
-   refid "com.hurlant.util:Memory/gc"
+   refid "com.hurlant.util:Memory/class/gc"
    returns QName(PackageNamespace(""), "void")
    body
     maxstack 3
@@ -91,7 +91,7 @@ L22:
  end ; trait
  trait getter QName(PackageNamespace(""), "used") flag FINAL dispid 4
   method
-   refid "com.hurlant.util:Memory/used/getter"
+   refid "com.hurlant.util:Memory/class/used/getter"
    returns QName(PackageNamespace(""), "uint")
    body
     maxstack 1

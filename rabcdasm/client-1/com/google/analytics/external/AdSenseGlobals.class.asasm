@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("com.google.analytics.external:AdSenseGlobals")
   iinit
-   refid "com.google.analytics.external:AdSenseGlobals/iinit"
+   refid "com.google.analytics.external:AdSenseGlobals/instance/init"
    param QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration")
    body
     maxstack 2
@@ -27,7 +27,7 @@ class
   end ; method
   trait setter QName(PackageNamespace(""), "vid")
    method
-    refid "com.google.analytics.external:AdSenseGlobals/vid/setter"
+    refid "com.google.analytics.external:AdSenseGlobals/instance/vid/setter"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -46,8 +46,8 @@ class
       returnvoid
 
 L6:
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals"), "_verify")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals"), "_verify"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals/instance"), "_verify")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals/instance"), "_verify"), 0
 
       findpropstrict      QName(PackageNamespace(""), "setProperty")
       pushstring          "gaGlobal.vid"
@@ -61,7 +61,7 @@ L6:
   end ; trait
   trait getter QName(PackageNamespace(""), "hid")
    method
-    refid "com.google.analytics.external:AdSenseGlobals/hid/getter"
+    refid "com.google.analytics.external:AdSenseGlobals/instance/hid/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 2
@@ -80,8 +80,8 @@ L6:
       returnvalue
 
 L7:
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals"), "_verify")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals"), "_verify"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals/instance"), "_verify")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals/instance"), "_verify"), 0
 
       findpropstrict      QName(PackageNamespace(""), "getProperty")
       pushstring          "gaGlobal.hid"
@@ -91,10 +91,10 @@ L7:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals"), "_gaGlobalVerified") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals/instance"), "_gaGlobalVerified") type QName(PackageNamespace(""), "Boolean") value False() end
   trait setter QName(PackageNamespace(""), "hid")
    method
-    refid "com.google.analytics.external:AdSenseGlobals/hid/setter"
+    refid "com.google.analytics.external:AdSenseGlobals/instance/hid/setter"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -113,8 +113,8 @@ L7:
       returnvoid
 
 L6:
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals"), "_verify")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals"), "_verify"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals/instance"), "_verify")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals/instance"), "_verify"), 0
 
       findpropstrict      QName(PackageNamespace(""), "setProperty")
       pushstring          "gaGlobal.hid"
@@ -128,7 +128,7 @@ L6:
   end ; trait
   trait getter QName(PackageNamespace(""), "dh")
    method
-    refid "com.google.analytics.external:AdSenseGlobals/dh/getter"
+    refid "com.google.analytics.external:AdSenseGlobals/instance/dh/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 2
@@ -147,8 +147,8 @@ L6:
       returnvalue
 
 L7:
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals"), "_verify")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals"), "_verify"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals/instance"), "_verify")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals/instance"), "_verify"), 0
 
       findpropstrict      QName(PackageNamespace(""), "getProperty")
       pushstring          "gaGlobal.dh"
@@ -160,7 +160,7 @@ L7:
   end ; trait
   trait getter QName(PackageNamespace(""), "sid")
    method
-    refid "com.google.analytics.external:AdSenseGlobals/sid/getter"
+    refid "com.google.analytics.external:AdSenseGlobals/instance/sid/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 2
@@ -179,8 +179,8 @@ L7:
       returnvalue
 
 L7:
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals"), "_verify")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals"), "_verify"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals/instance"), "_verify")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals/instance"), "_verify"), 0
 
       findpropstrict      QName(PackageNamespace(""), "getProperty")
       pushstring          "gaGlobal.sid"
@@ -192,7 +192,7 @@ L7:
   end ; trait
   trait getter QName(PackageNamespace(""), "vid")
    method
-    refid "com.google.analytics.external:AdSenseGlobals/vid/getter"
+    refid "com.google.analytics.external:AdSenseGlobals/instance/vid/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 2
@@ -211,8 +211,8 @@ L7:
       returnvalue
 
 L7:
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals"), "_verify")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals"), "_verify"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals/instance"), "_verify")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals/instance"), "_verify"), 0
 
       findpropstrict      QName(PackageNamespace(""), "getProperty")
       pushstring          "gaGlobal.vid"
@@ -222,9 +222,9 @@ L7:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals"), "_verify")
+  trait method QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals/instance"), "_verify")
    method
-    refid "com.google.analytics.external:AdSenseGlobals/_verify"
+    refid "com.google.analytics.external:AdSenseGlobals/instance/com.google.analytics.external:AdSenseGlobals/instance/_verify"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -235,16 +235,16 @@ L7:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals"), "_gaGlobalVerified")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals/instance"), "_gaGlobalVerified")
       iftrue              L10
 
       findpropstrict      QName(PackageNamespace(""), "executeBlock")
       getlex              QName(PackageNamespace(""), "gaGlobal_js")
       callpropvoid        QName(PackageNamespace(""), "executeBlock"), 1
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals"), "_gaGlobalVerified")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals/instance"), "_gaGlobalVerified")
       pushtrue
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals"), "_gaGlobalVerified")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals/instance"), "_gaGlobalVerified")
 
 L10:
       returnvoid
@@ -254,7 +254,7 @@ L10:
   end ; trait
   trait setter QName(PackageNamespace(""), "sid")
    method
-    refid "com.google.analytics.external:AdSenseGlobals/sid/setter"
+    refid "com.google.analytics.external:AdSenseGlobals/instance/sid/setter"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -273,8 +273,8 @@ L10:
       returnvoid
 
 L6:
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals"), "_verify")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals"), "_verify"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals/instance"), "_verify")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals/instance"), "_verify"), 0
 
       findpropstrict      QName(PackageNamespace(""), "setProperty")
       pushstring          "gaGlobal.sid"
@@ -288,7 +288,7 @@ L6:
   end ; trait
   trait getter QName(PackageNamespace(""), "gaGlobal")
    method
-    refid "com.google.analytics.external:AdSenseGlobals/gaGlobal/getter"
+    refid "com.google.analytics.external:AdSenseGlobals/instance/gaGlobal/getter"
     returns QName(PackageNamespace(""), "Object")
     body
      maxstack 2
@@ -307,8 +307,8 @@ L6:
       returnvalue
 
 L7:
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals"), "_verify")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals"), "_verify"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals/instance"), "_verify")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.external:AdSenseGlobals/instance"), "_verify"), 0
 
       findpropstrict      QName(PackageNamespace(""), "getProperty")
       pushstring          "gaGlobal"
@@ -320,7 +320,7 @@ L7:
   end ; trait
  end ; instance
  cinit
-  refid "com.google.analytics.external:AdSenseGlobals/cinit"
+  refid "com.google.analytics.external:AdSenseGlobals/class/init"
   body
    maxstack 3
    localcount 1

@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-0Kc")
   iinit
-   refid "com.company.assembleegameclient.net:_-Wv/iinit"
+   refid "com.company.assembleegameclient.net:_-Wv/instance/init"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "int")
    param QName(PackageNamespace(""), "int")
@@ -25,31 +25,31 @@ class
 
      getlocal0
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv"), "id_")
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv/instance"), "id_")
 
      getlocal0
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv"), "price_")
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv/instance"), "price_")
 
      getlocal0
      getlocal3
-     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv"), "currency_")
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv/instance"), "currency_")
 
      getlocal0
      getlocal            4
-     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv"), "converted_")
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv/instance"), "converted_")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv"), "id_") type QName(PackageNamespace(""), "String") end
-  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv"), "price_") type QName(PackageNamespace(""), "int") end
-  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv"), "currency_") type QName(PackageNamespace(""), "int") end
-  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv"), "converted_") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv/instance"), "id_") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv/instance"), "price_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv/instance"), "currency_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv/instance"), "converted_") type QName(PackageNamespace(""), "Boolean") end
   trait method QName(PackageNamespace(""), "_-06m")
    method
-    refid "com.company.assembleegameclient.net:_-Wv/_-06m"
+    refid "com.company.assembleegameclient.net:_-Wv/instance/_-06m"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 7
@@ -68,7 +68,7 @@ L3:
       callproperty        QName(PackageNamespace(""), "global"), 0
       pushstring          "credits"
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv"), "converted_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv/instance"), "converted_")
       iffalse             L12
 
       pushstring          "buyConverted"
@@ -78,9 +78,9 @@ L12:
       pushstring          "buy"
 L13:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv"), "id_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv/instance"), "id_")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv"), "price_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv/instance"), "price_")
       callpropvoid        QName(PackageNamespace(""), "trackEvent"), 4
 
       jump                L67
@@ -92,9 +92,9 @@ L19:
       pushstring          "credits"
       pushstring          "buyFame"
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv"), "id_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv/instance"), "id_")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv"), "price_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv/instance"), "price_")
       callpropvoid        QName(PackageNamespace(""), "trackEvent"), 4
 
       jump                L67
@@ -106,9 +106,9 @@ L30:
       pushstring          "credits"
       pushstring          "buyGuildFame"
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv"), "id_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv/instance"), "id_")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv"), "price_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv/instance"), "price_")
       callpropvoid        QName(PackageNamespace(""), "trackEvent"), 4
 
       jump                L67
@@ -119,7 +119,7 @@ L41:
 
 L43:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv"), "currency_")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.net:_-Wv/instance"), "currency_")
       setlocal1
 
       getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "Currency")
@@ -162,7 +162,7 @@ L67:
   end ; trait
  end ; instance
  cinit
-  refid "com.company.assembleegameclient.net:_-Wv/cinit"
+  refid "com.company.assembleegameclient.net:_-Wv/class/init"
   body
    maxstack 3
    localcount 1

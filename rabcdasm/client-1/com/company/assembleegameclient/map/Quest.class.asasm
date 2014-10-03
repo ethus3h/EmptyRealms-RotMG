@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-QQ")
   iinit
-   refid "com.company.assembleegameclient.map:Quest/iinit"
+   refid "com.company.assembleegameclient.map:Quest/instance/init"
    param QName(PackageNamespace("com.company.assembleegameclient.map"), "_-Xl")
    body
     maxstack 4
@@ -30,11 +30,11 @@ class
   end ; method
   trait slot QName(PackageNamespace(""), "map_") type QName(PackageNamespace("com.company.assembleegameclient.map"), "_-Xl") end
   trait slot QName(PackageNamespace(""), "objectId_") type QName(PackageNamespace(""), "int") value Integer(-1) end
-  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest"), "_-F2") type QName(PackageNamespace(""), "int") value Integer(0) end
-  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest"), "_-vx") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest/instance"), "_-F2") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest/instance"), "_-vx") type QName(PackageNamespace(""), "int") value Integer(0) end
   trait method QName(PackageNamespace(""), "setObject")
    method
-    refid "com.company.assembleegameclient.map:Quest/setObject"
+    refid "com.company.assembleegameclient.map:Quest/instance/setObject"
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace(""), "void")
     body
@@ -66,14 +66,14 @@ L13:
       callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
       pushshort           4000
       add
-      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest"), "_-F2")
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest/instance"), "_-F2")
 
       getlocal0
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest"), "_-F2")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest/instance"), "_-F2")
       pushshort           2000
       add
-      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest"), "_-vx")
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest/instance"), "_-vx")
 
 L26:
       getlocal0
@@ -87,7 +87,7 @@ L26:
   end ; trait
   trait method QName(PackageNamespace(""), "completed")
    method
-    refid "com.company.assembleegameclient.map:Quest/completed"
+    refid "com.company.assembleegameclient.map:Quest/instance/completed"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 6
@@ -108,14 +108,14 @@ L26:
       pushshort           10000
       multiply
       subtract
-      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest"), "_-F2")
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest/instance"), "_-F2")
 
       getlocal0
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest"), "_-F2")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest/instance"), "_-F2")
       pushshort           2000
       add
-      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest"), "_-vx")
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest/instance"), "_-vx")
 
       returnvoid
      end ; code
@@ -124,7 +124,7 @@ L26:
   end ; trait
   trait method QName(PackageNamespace(""), "getObject")
    method
-    refid "com.company.assembleegameclient.map:Quest/getObject"
+    refid "com.company.assembleegameclient.map:Quest/instance/getObject"
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
     body
@@ -138,7 +138,7 @@ L26:
 
       getlocal1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest"), "_-F2")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest/instance"), "_-F2")
       ifnlt               L8
 
       pushnull
@@ -150,7 +150,7 @@ L8:
       getproperty         QName(PackageNamespace(""), "goDict_")
       getlocal0
       getproperty         QName(PackageNamespace(""), "objectId_")
-      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.map:Quest"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.map"), PrivateNamespace("*", "com.company.assembleegameclient.map:Quest/getObject"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-QQ"), StaticProtectedNs("_-QQ")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.map:Quest/instance"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.map"), PrivateNamespace("*", "com.company.assembleegameclient.map:Quest/instance/getObject"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-QQ"), StaticProtectedNs("_-QQ")])
       returnvalue
      end ; code
     end ; body
@@ -158,7 +158,7 @@ L8:
   end ; trait
   trait method QName(PackageNamespace(""), "isNew")
    method
-    refid "com.company.assembleegameclient.map:Quest/isNew"
+    refid "com.company.assembleegameclient.map:Quest/instance/isNew"
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace(""), "Boolean")
     body
@@ -172,7 +172,7 @@ L8:
 
       getlocal1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest"), "_-vx")
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest/instance"), "_-vx")
       lessthan
       returnvalue
      end ; code
@@ -181,7 +181,7 @@ L8:
   end ; trait
  end ; instance
  cinit
-  refid "com.company.assembleegameclient.map:Quest/cinit"
+  refid "com.company.assembleegameclient.map:Quest/class/init"
   body
    maxstack 3
    localcount 1

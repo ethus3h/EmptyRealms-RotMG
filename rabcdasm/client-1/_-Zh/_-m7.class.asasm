@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-0FO")
   iinit
-   refid "_-Zh:_-m7/iinit"
+   refid "_-Zh:_-m7/instance/init"
    body
     maxstack 3
     localcount 3
@@ -24,14 +24,14 @@ class
    end ; body
   end ; method
   trait slot QName(PackageNamespace(""), "_-nq") end
-  trait slot QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "_-ya") type QName(PackageNamespace(""), "String") value Null() end
-  trait slot QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "guid_") type QName(PackageNamespace(""), "String") value Null() end
-  trait slot QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "secret_") type QName(PackageNamespace(""), "String") value Null() end
-  trait slot QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "_-cd") type QName(PackageNamespace("flash.display"), "Stage") end
-  trait slot QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "callback_") type QName(PackageNamespace(""), "Function") end
+  trait slot QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "_-ya") type QName(PackageNamespace(""), "String") value Null() end
+  trait slot QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "guid_") type QName(PackageNamespace(""), "String") value Null() end
+  trait slot QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "secret_") type QName(PackageNamespace(""), "String") value Null() end
+  trait slot QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "_-cd") type QName(PackageNamespace("flash.display"), "Stage") end
+  trait slot QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "callback_") type QName(PackageNamespace(""), "Function") end
   trait method QName(PackageNamespace(""), "guid") flag OVERRIDE
    method
-    refid "_-Zh:_-m7/guid"
+    refid "_-Zh:_-m7/instance/guid"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -43,7 +43,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "guid_")
+      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "guid_")
       returnvalue
      end ; code
     end ; body
@@ -51,7 +51,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "secret") flag OVERRIDE
    method
-    refid "_-Zh:_-m7/secret"
+    refid "_-Zh:_-m7/instance/secret"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 4
@@ -63,7 +63,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "secret_")
+      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "secret_")
       pushnull
       ifne                L8
 
@@ -72,7 +72,7 @@ class
 
 L8:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "secret_")
+      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "secret_")
       coerce_s
 L11:
       returnvalue
@@ -82,7 +82,7 @@ L11:
   end ; trait
   trait method QName(PackageNamespace(""), "credentials") flag OVERRIDE
    method
-    refid "_-Zh:_-m7/credentials"
+    refid "_-Zh:_-m7/instance/credentials"
     returns QName(PackageNamespace(""), "Object")
     body
      maxstack 6
@@ -107,7 +107,7 @@ L11:
   end ; trait
   trait method QName(PackageNamespace(""), "isRegistered") flag OVERRIDE
    method
-    refid "_-Zh:_-m7/isRegistered"
+    refid "_-Zh:_-m7/instance/isRegistered"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 4
@@ -130,7 +130,7 @@ L11:
   end ; trait
   trait method QName(PackageNamespace(""), "_-aT")
    method
-    refid "_-Zh:_-m7/_-aT"
+    refid "_-Zh:_-m7/instance/_-aT"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 4
@@ -143,7 +143,7 @@ L11:
 
       getlex              QName(PackageNamespace("com.company.util"), "_-9S")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "guid_")
+      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "guid_")
       callproperty        QName(PackageNamespace(""), "_-02A"), 1
       returnvalue
      end ; code
@@ -152,7 +152,7 @@ L11:
   end ; trait
   trait method QName(PackageNamespace(""), "_-2J")
    method
-    refid "_-Zh:_-m7/_-2J"
+    refid "_-Zh:_-m7/instance/_-2J"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -165,8 +165,8 @@ L11:
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-nq")
-      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
-      callproperty        Multiname("getUsername", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 0
+      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
+      callproperty        Multiname("getUsername", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 0
       returnvalue
      end ; code
     end ; body
@@ -174,7 +174,7 @@ L11:
   end ; trait
   trait method QName(PackageNamespace(""), "gameNetworkUserId") flag OVERRIDE
    method
-    refid "_-Zh:_-m7/gameNetworkUserId"
+    refid "_-Zh:_-m7/instance/gameNetworkUserId"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -187,8 +187,8 @@ L11:
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-nq")
-      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
-      callproperty        Multiname("getUserId", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 0
+      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
+      callproperty        Multiname("getUserId", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 0
       returnvalue
      end ; code
     end ; body
@@ -196,7 +196,7 @@ L11:
   end ; trait
   trait method QName(PackageNamespace(""), "gameNetwork") flag OVERRIDE
    method
-    refid "_-Zh:_-m7/gameNetwork"
+    refid "_-Zh:_-m7/instance/gameNetwork"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -215,7 +215,7 @@ L11:
   end ; trait
   trait method QName(PackageNamespace(""), "playPlatform") flag OVERRIDE
    method
-    refid "_-Zh:_-m7/playPlatform"
+    refid "_-Zh:_-m7/instance/playPlatform"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -234,7 +234,7 @@ L11:
   end ; trait
   trait method QName(ProtectedNamespace("_-0FO"), "internalLoad") flag OVERRIDE
    method
-    refid "_-Zh:_-m7/_-0FO:internalLoad"
+    refid "_-Zh:_-m7/instance/_-0FO:internalLoad"
     param QName(PackageNamespace("flash.display"), "Stage")
     param QName(PackageNamespace(""), "Function")
     returns QName(PackageNamespace(""), "void")
@@ -249,11 +249,11 @@ L11:
 
       getlocal0
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "_-cd")
+      initproperty        QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "_-cd")
 
       getlocal0
       getlocal2
-      initproperty        QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "callback_")
+      initproperty        QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "callback_")
 
       findpropstrict      QName(PackageNamespace("flash.display"), "LoaderInfo")
       getlocal1
@@ -265,7 +265,7 @@ L11:
       setlocal3
 
       getlocal3
-      getproperty         Multiname("kongregate_api_path", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
+      getproperty         Multiname("kongregate_api_path", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
       coerce_s
       setlocal            4
 
@@ -289,7 +289,7 @@ L11:
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "COMPLETE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "_-02n")
+      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "_-02n")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       getlocal            6
@@ -307,7 +307,7 @@ L11:
   end ; trait
   trait method QName(PackageNamespace(""), "modify") flag OVERRIDE
    method
-    refid "_-Zh:_-m7/modify"
+    refid "_-Zh:_-m7/instance/modify"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
@@ -323,11 +323,11 @@ L11:
 
       getlocal0
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "guid_")
+      initproperty        QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "guid_")
 
       getlocal0
       getlocal3
-      initproperty        QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "secret_")
+      initproperty        QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "secret_")
 
       returnvoid
      end ; code
@@ -336,7 +336,7 @@ L11:
   end ; trait
   trait method QName(PackageNamespace(""), "reportIntStat") flag OVERRIDE
    method
-    refid "_-Zh:_-m7/reportIntStat"
+    refid "_-Zh:_-m7/instance/reportIntStat"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace(""), "void")
@@ -351,19 +351,19 @@ L11:
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-nq")
-      getproperty         Multiname("stats", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
+      getproperty         Multiname("stats", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
       getlocal1
       getlocal2
-      callpropvoid        Multiname("submit", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 2
+      callpropvoid        Multiname("submit", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 2
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "_-02n")
+  trait method QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "_-02n")
    method
-    refid "_-Zh:_-m7/_-02n"
+    refid "_-Zh:_-m7/instance/_-Zh:_-m7/instance/_-02n"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -382,20 +382,20 @@ L11:
       getlocal0
       getlocal1
       getproperty         QName(PackageNamespace(""), "target")
-      getproperty         Multiname("content", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
+      getproperty         Multiname("content", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
       initproperty        QName(PackageNamespace(""), "_-nq")
 
       getlex              QName(PackageNamespace("flash.system"), "Security")
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-nq")
-      getproperty         Multiname("loaderInfo", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
-      getproperty         Multiname("url", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
+      getproperty         Multiname("loaderInfo", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
+      getproperty         Multiname("url", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
       callpropvoid        QName(PackageNamespace(""), "allowDomain"), 1
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-nq")
-      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
-      callpropvoid        Multiname("connect", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 0
+      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
+      callpropvoid        Multiname("connect", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 0
 
 L20:
       getlex              QName(PackageNamespace("flash.net"), "SharedObject")
@@ -415,8 +415,8 @@ L20:
       getlocal2
       getproperty         QName(PackageNamespace(""), "data")
       pushstring          "GuestGUID"
-      getproperty         MultinameL([PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
-      initproperty        QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "_-ya")
+      getproperty         MultinameL([PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
+      initproperty        QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "_-ya")
 
 L37:
       jump                L49
@@ -439,14 +439,14 @@ L38:
       kill                4
 L49:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "_-ya")
+      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "_-ya")
       pushnull
       ifne                L83
 
       getlocal0
       getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "GUID")
       callproperty        QName(PackageNamespace(""), "create"), 0
-      initproperty        QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "_-ya")
+      initproperty        QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "_-ya")
 
 L57:
       getlex              QName(PackageNamespace("flash.net"), "SharedObject")
@@ -460,8 +460,8 @@ L57:
       getproperty         QName(PackageNamespace(""), "data")
       pushstring          "GuestGUID"
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "_-ya")
-      setproperty         MultinameL([PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
+      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "_-ya")
+      setproperty         MultinameL([PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
 
       getlocal2
       callpropvoid        QName(PackageNamespace(""), "flush"), 0
@@ -488,29 +488,29 @@ L72:
 L83:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-nq")
-      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
-      callproperty        Multiname("isGuest", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 0
+      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
+      callproperty        Multiname("isGuest", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 0
       iffalse             L105
 
       getlocal0
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "_-ya")
-      initproperty        QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "guid_")
+      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "_-ya")
+      initproperty        QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "guid_")
 
       getlocal0
       pushstring          ""
-      initproperty        QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "secret_")
+      initproperty        QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "secret_")
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-nq")
-      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
+      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
       pushstring          "login"
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "_-pQ")
-      callpropvoid        Multiname("addEventListener", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 2
+      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "_-pQ")
+      callpropvoid        Multiname("addEventListener", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 2
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "callback_"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "callback_"), 0
 
       returnvoid
 
@@ -529,14 +529,14 @@ L105:
       getlex              QName(PackageNamespace("_-zo"), "_-8C")
       getproperty         QName(PackageNamespace(""), "GENERIC_DATA")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "_-6l")
+      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "_-6l")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       getlocal3
       getlex              QName(PackageNamespace("_-zo"), "_-mS")
       getproperty         QName(PackageNamespace(""), "TEXT_ERROR")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "_-T")
+      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "_-T")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       getlocal3
@@ -544,18 +544,18 @@ L105:
       pushstring          "userId"
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-nq")
-      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
-      callproperty        Multiname("getUserId", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 0
+      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
+      callproperty        Multiname("getUserId", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 0
       pushstring          "username"
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-nq")
-      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
-      callproperty        Multiname("getUsername", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 0
+      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
+      callproperty        Multiname("getUsername", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 0
       pushstring          "gameAuthToken"
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-nq")
-      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
-      callproperty        Multiname("getGameAuthToken", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 0
+      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
+      callproperty        Multiname("getGameAuthToken", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 0
       newobject           3
       callpropvoid        QName(PackageNamespace(""), "sendRequest"), 2
 
@@ -566,9 +566,9 @@ L105:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "_-6l")
+  trait method QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "_-6l")
    method
-    refid "_-Zh:_-m7/_-6l"
+    refid "_-Zh:_-m7/instance/_-Zh:_-m7/instance/_-6l"
     param QName(PackageNamespace("_-zo"), "_-8C")
     returns QName(PackageNamespace(""), "void")
     body
@@ -589,25 +589,25 @@ L105:
 
       getlocal0
       getlocal2
-      getproperty         Multiname("GUID", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT"), PackageNamespace("com.company.assembleegameclient.util")])
-      initproperty        QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "guid_")
+      getproperty         Multiname("GUID", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT"), PackageNamespace("com.company.assembleegameclient.util")])
+      initproperty        QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "guid_")
 
       getlocal0
       getlocal2
-      getproperty         Multiname("Secret", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
-      initproperty        QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "secret_")
+      getproperty         Multiname("Secret", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
+      initproperty        QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "secret_")
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "callback_"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "callback_"), 0
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "_-T")
+  trait method QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "_-T")
    method
-    refid "_-Zh:_-m7/_-T"
+    refid "_-Zh:_-m7/instance/_-Zh:_-m7/instance/_-T"
     param QName(PackageNamespace("_-zo"), "_-mS")
     returns QName(PackageNamespace(""), "void")
     body
@@ -620,7 +620,7 @@ L105:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "_-cd")
+      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "_-cd")
       findpropstrict      QName(PackageNamespace("_-0LC"), "_-qM")
       pushstring          "Error: "
       getlocal1
@@ -634,9 +634,9 @@ L105:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "_-pQ")
+  trait method QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "_-pQ")
    method
-    refid "_-Zh:_-m7/_-pQ"
+    refid "_-Zh:_-m7/instance/_-Zh:_-m7/instance/_-pQ"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -662,14 +662,14 @@ L105:
       getlex              QName(PackageNamespace("_-zo"), "_-8C")
       getproperty         QName(PackageNamespace(""), "GENERIC_DATA")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "_-I9")
+      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "_-I9")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       getlocal2
       getlex              QName(PackageNamespace("_-zo"), "_-mS")
       getproperty         QName(PackageNamespace(""), "TEXT_ERROR")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "_-0T")
+      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "_-0T")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       getlocal2
@@ -677,21 +677,21 @@ L105:
       pushstring          "userId"
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-nq")
-      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
-      callproperty        Multiname("getUserId", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 0
+      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
+      callproperty        Multiname("getUserId", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 0
       pushstring          "username"
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-nq")
-      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
-      callproperty        Multiname("getUsername", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 0
+      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
+      callproperty        Multiname("getUsername", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 0
       pushstring          "gameAuthToken"
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-nq")
-      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
-      callproperty        Multiname("getGameAuthToken", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 0
+      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
+      callproperty        Multiname("getGameAuthToken", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 0
       pushstring          "guid"
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "_-ya")
+      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "_-ya")
       newobject           4
       callpropvoid        QName(PackageNamespace(""), "sendRequest"), 2
 
@@ -700,9 +700,9 @@ L105:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "_-0T")
+  trait method QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "_-0T")
    method
-    refid "_-Zh:_-m7/_-0T"
+    refid "_-Zh:_-m7/instance/_-Zh:_-m7/instance/_-0T"
     param QName(PackageNamespace("_-zo"), "_-mS")
     returns QName(PackageNamespace(""), "void")
     body
@@ -715,7 +715,7 @@ L105:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "_-cd")
+      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "_-cd")
       findpropstrict      QName(PackageNamespace("_-0LC"), "_-qM")
       pushstring          "Error: "
       getlocal1
@@ -729,9 +729,9 @@ L105:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "_-I9")
+  trait method QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "_-I9")
    method
-    refid "_-Zh:_-m7/_-I9"
+    refid "_-Zh:_-m7/instance/_-Zh:_-m7/instance/_-I9"
     param QName(PackageNamespace("_-zo"), "_-8C")
     returns QName(PackageNamespace(""), "void")
     body
@@ -752,16 +752,16 @@ L105:
 
       getlocal0
       getlocal2
-      getproperty         Multiname("GUID", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT"), PackageNamespace("com.company.assembleegameclient.util")])
-      initproperty        QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "guid_")
+      getproperty         Multiname("GUID", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT"), PackageNamespace("com.company.assembleegameclient.util")])
+      initproperty        QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "guid_")
 
       getlocal0
       getlocal2
-      getproperty         Multiname("Secret", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
-      initproperty        QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "secret_")
+      getproperty         Multiname("Secret", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
+      initproperty        QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "secret_")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7#0"), "_-cd")
+      getproperty         QName(PrivateNamespace("*", "_-Zh:_-m7/instance#0"), "_-cd")
       findpropstrict      QName(PackageNamespace("_-9R"), "_-Wh")
       constructprop       QName(PackageNamespace("_-9R"), "_-Wh"), 0
       callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
@@ -773,7 +773,7 @@ L105:
   end ; trait
   trait method QName(PackageNamespace(""), "newAccountText") flag OVERRIDE
    method
-    refid "_-Zh:_-m7/newAccountText"
+    refid "_-Zh:_-m7/instance/newAccountText"
     returns QName(PackageNamespace("_-qN"), "_-9j")
     body
      maxstack 3
@@ -793,7 +793,7 @@ L105:
   end ; trait
   trait method QName(PackageNamespace(""), "newAccountManagement") flag OVERRIDE
    method
-    refid "_-Zh:_-m7/newAccountManagement"
+    refid "_-Zh:_-m7/instance/newAccountManagement"
     returns QName(PackageNamespace("flash.display"), "Sprite")
     body
      maxstack 4
@@ -822,8 +822,8 @@ L105:
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "_-nq")
-      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
-      callpropvoid        Multiname("showRegistrationBox", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 0
+      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
+      callpropvoid        Multiname("showRegistrationBox", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 0
 
       pushnull
       returnvalue
@@ -838,7 +838,7 @@ L21:
   end ; trait
   trait method QName(PackageNamespace(""), "showInGameRegister") flag OVERRIDE
    method
-    refid "_-Zh:_-m7/showInGameRegister"
+    refid "_-Zh:_-m7/instance/showInGameRegister"
     param QName(PackageNamespace("flash.display"), "Stage")
     returns QName(PackageNamespace(""), "void")
     body
@@ -852,8 +852,8 @@ L21:
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-nq")
-      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
-      callpropvoid        Multiname("showRegistrationBox", [PrivateNamespace("*", "_-Zh:_-m7#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 0
+      getproperty         Multiname("services", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")])
+      callpropvoid        Multiname("showRegistrationBox", [PrivateNamespace("*", "_-Zh:_-m7/instance#0"), PackageNamespace(""), PrivateNamespace("*", "_-Zh:_-m7/instance#1"), PackageNamespace("_-Zh"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0FO"), StaticProtectedNs("_-0FO"), StaticProtectedNs("_-iT")]), 0
 
       returnvoid
      end ; code
@@ -862,7 +862,7 @@ L21:
   end ; trait
   trait method QName(PackageNamespace(""), "cacheOffers") flag OVERRIDE
    method
-    refid "_-Zh:_-m7/cacheOffers"
+    refid "_-Zh:_-m7/instance/cacheOffers"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 5
@@ -885,7 +885,7 @@ L21:
   end ; trait
   trait method QName(PackageNamespace(""), "showMoneyManagement") flag OVERRIDE
    method
-    refid "_-Zh:_-m7/showMoneyManagement"
+    refid "_-Zh:_-m7/instance/showMoneyManagement"
     param QName(PackageNamespace("flash.display"), "Stage")
     returns QName(PackageNamespace(""), "void")
     body
@@ -909,7 +909,7 @@ L21:
   end ; trait
   trait method QName(PackageNamespace(""), "entrytag") flag OVERRIDE
    method
-    refid "_-Zh:_-m7/entrytag"
+    refid "_-Zh:_-m7/instance/entrytag"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -928,7 +928,7 @@ L21:
   end ; trait
  end ; instance
  cinit
-  refid "_-Zh:_-m7/cinit"
+  refid "_-Zh:_-m7/class/init"
   body
    maxstack 4
    localcount 3

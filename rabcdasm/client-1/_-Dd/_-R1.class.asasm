@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-C")
   iinit
-   refid "_-Dd:_-R1/iinit"
+   refid "_-Dd:_-R1/instance/init"
    param QName(PackageInternalNs("_-Dd"), "_-Ng")
    param QName(PackageNamespace(""), "int")
    param QName(PackageNamespace(""), "int")
@@ -26,36 +26,36 @@ class
 
      getlocal0
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "_-Dd:_-R1"), "map_")
+     initproperty        QName(PrivateNamespace("*", "_-Dd:_-R1/instance"), "map_")
 
      getlocal0
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "_-Dd:_-R1"), "x_")
+     initproperty        QName(PrivateNamespace("*", "_-Dd:_-R1/instance"), "x_")
 
      getlocal0
      getlocal3
-     initproperty        QName(PrivateNamespace("*", "_-Dd:_-R1"), "y_")
+     initproperty        QName(PrivateNamespace("*", "_-Dd:_-R1/instance"), "y_")
 
      getlocal0
      getlocal            4
-     initproperty        QName(PrivateNamespace("*", "_-Dd:_-R1"), "_-0KO")
+     initproperty        QName(PrivateNamespace("*", "_-Dd:_-R1/instance"), "_-0KO")
 
      getlocal0
      getlocal            5
-     initproperty        QName(PrivateNamespace("*", "_-Dd:_-R1"), "_-08v")
+     initproperty        QName(PrivateNamespace("*", "_-Dd:_-R1/instance"), "_-08v")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-Dd:_-R1"), "map_") type QName(PackageInternalNs("_-Dd"), "_-Ng") end
-  trait slot QName(PrivateNamespace("*", "_-Dd:_-R1"), "x_") type QName(PackageNamespace(""), "int") end
-  trait slot QName(PrivateNamespace("*", "_-Dd:_-R1"), "y_") type QName(PackageNamespace(""), "int") end
-  trait slot QName(PrivateNamespace("*", "_-Dd:_-R1"), "_-0KO") type QName(PackageNamespace(""), "String") end
-  trait slot QName(PrivateNamespace("*", "_-Dd:_-R1"), "_-08v") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "_-Dd:_-R1/instance"), "map_") type QName(PackageInternalNs("_-Dd"), "_-Ng") end
+  trait slot QName(PrivateNamespace("*", "_-Dd:_-R1/instance"), "x_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "_-Dd:_-R1/instance"), "y_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "_-Dd:_-R1/instance"), "_-0KO") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "_-Dd:_-R1/instance"), "_-08v") type QName(PackageNamespace(""), "String") end
   trait method QName(PackageNamespace(""), "execute") flag OVERRIDE
    method
-    refid "_-Dd:_-R1/execute"
+    refid "_-Dd:_-R1/instance/execute"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 6
@@ -67,13 +67,13 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Dd:_-R1"), "map_")
+      getproperty         QName(PrivateNamespace("*", "_-Dd:_-R1/instance"), "map_")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Dd:_-R1"), "x_")
+      getproperty         QName(PrivateNamespace("*", "_-Dd:_-R1/instance"), "x_")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Dd:_-R1"), "y_")
+      getproperty         QName(PrivateNamespace("*", "_-Dd:_-R1/instance"), "y_")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Dd:_-R1"), "_-08v")
+      getproperty         QName(PrivateNamespace("*", "_-Dd:_-R1/instance"), "_-08v")
       callpropvoid        QName(PackageNamespace(""), "_-NF"), 3
 
       returnvoid
@@ -83,7 +83,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "unexecute") flag OVERRIDE
    method
-    refid "_-Dd:_-R1/unexecute"
+    refid "_-Dd:_-R1/instance/unexecute"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 6
@@ -95,13 +95,13 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Dd:_-R1"), "map_")
+      getproperty         QName(PrivateNamespace("*", "_-Dd:_-R1/instance"), "map_")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Dd:_-R1"), "x_")
+      getproperty         QName(PrivateNamespace("*", "_-Dd:_-R1/instance"), "x_")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Dd:_-R1"), "y_")
+      getproperty         QName(PrivateNamespace("*", "_-Dd:_-R1/instance"), "y_")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Dd:_-R1"), "_-0KO")
+      getproperty         QName(PrivateNamespace("*", "_-Dd:_-R1/instance"), "_-0KO")
       callpropvoid        QName(PackageNamespace(""), "_-NF"), 3
 
       returnvoid
@@ -111,7 +111,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-Dd:_-R1/cinit"
+  refid "_-Dd:_-R1/class/init"
   body
    maxstack 3
    localcount 1

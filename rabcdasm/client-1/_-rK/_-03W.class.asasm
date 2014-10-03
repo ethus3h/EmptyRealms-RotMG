@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-0-")
   iinit
-   refid "_-rK:_-03W/iinit"
+   refid "_-rK:_-03W/instance/init"
    param QName(PackageNamespace(""), "Boolean")
    flag HAS_OPTIONAL
    optional False()
@@ -32,7 +32,7 @@ class
 
      getlocal0
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "_-rK:_-03W#0"), "_-2m")
+     initproperty        QName(PrivateNamespace("*", "_-rK:_-03W/instance"), "_-2m")
 
      getlex              QName(PackageNamespace("_-qN"), "Account")
      callproperty        QName(PackageNamespace(""), "get"), 0
@@ -43,7 +43,7 @@ class
 
      getlocal0
      getlocal2
-     callproperty        QName(PrivateNamespace("*", "_-rK:_-03W#0"), "_-Wl"), 1
+     callproperty        QName(PrivateNamespace("*", "_-rK:_-03W/instance"), "_-Wl"), 1
      iffalse             L54
 
      findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
@@ -81,7 +81,7 @@ class
      getlex              QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-02k")
      pushstring          "/steamworks"
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-rK:_-03W#0"), "_-nK")
+     getproperty         QName(PrivateNamespace("*", "_-rK:_-03W/instance"), "_-nK")
      callpropvoid        QName(PackageNamespace(""), "_-Ut"), 2
 
      jump                L60
@@ -91,7 +91,7 @@ L54:
      getlex              QName(PackageNamespace("flash.events"), "Event")
      getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-rK:_-03W#0"), "onAddedToStage")
+     getproperty         QName(PrivateNamespace("*", "_-rK:_-03W/instance"), "onAddedToStage")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
 L60:
@@ -99,10 +99,10 @@ L60:
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-rK:_-03W#0"), "_-2m") type QName(PackageNamespace(""), "Boolean") end
-  trait method QName(PrivateNamespace("*", "_-rK:_-03W#0"), "_-Wl")
+  trait slot QName(PrivateNamespace("*", "_-rK:_-03W/instance"), "_-2m") type QName(PackageNamespace(""), "Boolean") end
+  trait method QName(PrivateNamespace("*", "_-rK:_-03W/instance"), "_-Wl")
    method
-    refid "_-rK:_-03W/_-Wl"
+    refid "_-rK:_-03W/instance/_-rK:_-03W/instance/_-Wl"
     param QName(PackageNamespace("_-01H"), "_-f7")
     body
      maxstack 4
@@ -116,7 +116,7 @@ L60:
       getlocal1
       getproperty         QName(PackageNamespace(""), "_-Zd")
       pushstring          "isOverlayEnabled"
-      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "_-rK:_-03W#0"), PackageNamespace(""), PrivateNamespace("*", "_-rK:_-03W#1"), PackageNamespace("_-rK"), PackageInternalNs("_-rK"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-"), StaticProtectedNs("_-0-"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "_-rK:_-03W/instance"), PackageNamespace(""), PrivateNamespace("*", "_-rK:_-03W/instance/_-rK:_-03W/instance"), PackageNamespace("_-rK"), PackageInternalNs("_-rK"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-"), StaticProtectedNs("_-0-"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
       not
       coerce_a
       dup
@@ -125,7 +125,7 @@ L60:
       pop
       getlocal1
       getproperty         QName(PackageNamespace(""), "_-Zd")
-      callproperty        Multiname("isOverlayEnabled", [PrivateNamespace("*", "_-rK:_-03W#0"), PackageNamespace(""), PrivateNamespace("*", "_-rK:_-03W#1"), PackageNamespace("_-rK"), PackageInternalNs("_-rK"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-"), StaticProtectedNs("_-0-"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+      callproperty        Multiname("isOverlayEnabled", [PrivateNamespace("*", "_-rK:_-03W/instance"), PackageNamespace(""), PrivateNamespace("*", "_-rK:_-03W/instance/_-rK:_-03W/instance"), PackageNamespace("_-rK"), PackageInternalNs("_-rK"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-"), StaticProtectedNs("_-0-"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
       coerce_a
 L15:
       returnvalue
@@ -133,9 +133,9 @@ L15:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-rK:_-03W#0"), "onAddedToStage")
+  trait method QName(PrivateNamespace("*", "_-rK:_-03W/instance"), "onAddedToStage")
    method
-    refid "_-rK:_-03W/onAddedToStage"
+    refid "_-rK:_-03W/instance/_-rK:_-03W/instance/onAddedToStage"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -151,7 +151,7 @@ L15:
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-rK:_-03W#0"), "onAddedToStage")
+      getproperty         QName(PrivateNamespace("*", "_-rK:_-03W/instance"), "onAddedToStage")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
       getlex              QName(PackageNamespace(""), "parent")
@@ -168,9 +168,9 @@ L15:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-rK:_-03W#0"), "_-nK")
+  trait method QName(PrivateNamespace("*", "_-rK:_-03W/instance"), "_-nK")
    method
-    refid "_-rK:_-03W/_-nK"
+    refid "_-rK:_-03W/instance/_-rK:_-03W/instance/_-nK"
     param QName(PackageNamespace("_-zo"), "_-8C")
     returns QName(PackageNamespace(""), "void")
     body
@@ -191,14 +191,14 @@ L15:
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "CANCEL")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-rK:_-03W#0"), "onCancel")
+      getproperty         QName(PrivateNamespace("*", "_-rK:_-03W/instance"), "onCancel")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       getlocal2
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "COMPLETE")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-rK:_-03W#0"), "onComplete")
+      getproperty         QName(PrivateNamespace("*", "_-rK:_-03W/instance"), "onComplete")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       getlocal2
@@ -218,7 +218,7 @@ L15:
       pushstring          " "
       getlocal0
       getlocal2
-      callproperty        QName(PrivateNamespace("*", "_-rK:_-03W#0"), "_-V7"), 1
+      callproperty        QName(PrivateNamespace("*", "_-rK:_-03W/instance"), "_-V7"), 1
       add
       setproperty         QName(PackageNamespace(""), "_-QW")
 
@@ -246,9 +246,9 @@ L15:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-rK:_-03W#0"), "_-V7")
+  trait method QName(PrivateNamespace("*", "_-rK:_-03W/instance"), "_-V7")
    method
-    refid "_-rK:_-03W/_-V7"
+    refid "_-rK:_-03W/instance/_-rK:_-03W/instance/_-V7"
     param QName(PackageNamespace("_-00g"), "_-0Hi")
     returns QName(PackageNamespace(""), "String")
     body
@@ -272,7 +272,7 @@ L15:
 
       getlocal2
       pushbyte            0
-      getproperty         MultinameL([PrivateNamespace("*", "_-rK:_-03W#0"), PackageNamespace(""), PrivateNamespace("*", "_-rK:_-03W#1"), PackageNamespace("_-rK"), PackageInternalNs("_-rK"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-"), StaticProtectedNs("_-0-"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-rK:_-03W/instance"), PackageNamespace(""), PrivateNamespace("*", "_-rK:_-03W/instance/_-rK:_-03W/instance"), PackageNamespace("_-rK"), PackageInternalNs("_-rK"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0-"), StaticProtectedNs("_-0-"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       getproperty         QName(PackageNamespace(""), "currency_")
       coerce_s
       jump                L17
@@ -285,9 +285,9 @@ L17:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-rK:_-03W#0"), "onComplete")
+  trait method QName(PrivateNamespace("*", "_-rK:_-03W/instance"), "onComplete")
    method
-    refid "_-rK:_-03W/onComplete"
+    refid "_-rK:_-03W/instance/_-rK:_-03W/instance/onComplete"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -313,9 +313,9 @@ L17:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-rK:_-03W#0"), "onCancel")
+  trait method QName(PrivateNamespace("*", "_-rK:_-03W/instance"), "onCancel")
    method
-    refid "_-rK:_-03W/onCancel"
+    refid "_-rK:_-03W/instance/_-rK:_-03W/instance/onCancel"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -338,7 +338,7 @@ L17:
   end ; trait
  end ; instance
  cinit
-  refid "_-rK:_-03W/cinit"
+  refid "_-rK:_-03W/class/init"
   body
    maxstack 3
    localcount 1

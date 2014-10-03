@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-gP")
   iinit
-   refid "_-0LC:_-qM/iinit"
+   refid "_-0LC:_-qM/instance/init"
    param QName(PackageNamespace(""), "String")
    body
     maxstack 8
@@ -29,16 +29,16 @@ class
      getlex              QName(PackageNamespace("_-0LC"), "_-qO")
      getproperty         QName(PackageNamespace(""), "BUTTON1_EVENT")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-0LC:_-qM"), "onDialogComplete")
+     getproperty         QName(PrivateNamespace("*", "_-0LC:_-qM/instance/init"), "onDialogComplete")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait method QName(PrivateNamespace("*", "_-0LC:_-qM"), "onDialogComplete")
+  trait method QName(PrivateNamespace("*", "_-0LC:_-qM/instance/init"), "onDialogComplete")
    method
-    refid "_-0LC:_-qM/onDialogComplete"
+    refid "_-0LC:_-qM/instance/_-0LC:_-qM/instance/init/onDialogComplete"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -68,7 +68,7 @@ L10:
   end ; trait
  end ; instance
  cinit
-  refid "_-0LC:_-qM/cinit"
+  refid "_-0LC:_-qM/class/init"
   body
    maxstack 3
    localcount 1

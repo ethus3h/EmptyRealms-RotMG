@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-Hk")
   iinit
-   refid "_-Zh:_-BR/iinit"
+   refid "_-Zh:_-BR/instance/init"
    body
     maxstack 3
     localcount 3
@@ -25,7 +25,7 @@ class
   end ; method
   trait method QName(PackageNamespace(""), "execute") flag OVERRIDE
    method
-    refid "_-Zh:_-BR/execute"
+    refid "_-Zh:_-BR/instance/execute"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 6
@@ -56,20 +56,20 @@ class
 
       getlocal2
       getproperty         QName(PackageNamespace(""), "_-nq")
-      getproperty         Multiname("mtx", [PrivateNamespace("*", "_-Zh:_-BR"), PackageNamespace(""), PackageNamespace("_-Zh"), PrivateNamespace("*", "_-Zh:_-BR/execute"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Hk"), StaticProtectedNs("_-Hk"), StaticProtectedNs("_-QU")])
+      getproperty         Multiname("mtx", [PrivateNamespace("*", "_-Zh:_-BR/instance/execute#0"), PackageNamespace(""), PackageNamespace("_-Zh"), PrivateNamespace("*", "_-Zh:_-BR/instance/execute#1"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Hk"), StaticProtectedNs("_-Hk"), StaticProtectedNs("_-QU")])
       getlocal1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Zh:_-BR"), "_-D")
-      callpropvoid        Multiname("purchaseItems", [PrivateNamespace("*", "_-Zh:_-BR"), PackageNamespace(""), PackageNamespace("_-Zh"), PrivateNamespace("*", "_-Zh:_-BR/execute"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Hk"), StaticProtectedNs("_-Hk"), StaticProtectedNs("_-QU")]), 2
+      getproperty         QName(PrivateNamespace("*", "_-Zh:_-BR/instance/execute#0"), "_-D")
+      callpropvoid        Multiname("purchaseItems", [PrivateNamespace("*", "_-Zh:_-BR/instance/execute#0"), PackageNamespace(""), PackageNamespace("_-Zh"), PrivateNamespace("*", "_-Zh:_-BR/instance/execute#1"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Hk"), StaticProtectedNs("_-Hk"), StaticProtectedNs("_-QU")]), 2
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Zh:_-BR"), "_-D")
+  trait method QName(PrivateNamespace("*", "_-Zh:_-BR/instance/execute#0"), "_-D")
    method
-    refid "_-Zh:_-BR/_-D"
+    refid "_-Zh:_-BR/instance/_-Zh:_-BR/instance/execute/_-D"
     param QName(PackageNamespace(""), "Object")
     returns QName(PackageNamespace(""), "void")
     body
@@ -95,7 +95,7 @@ L6:
   end ; trait
  end ; instance
  cinit
-  refid "_-Zh:_-BR/cinit"
+  refid "_-Zh:_-BR/class/init"
   body
    maxstack 3
    localcount 1

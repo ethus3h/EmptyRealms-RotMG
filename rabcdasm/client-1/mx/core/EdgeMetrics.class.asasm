@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("mx.core:EdgeMetrics")
   iinit
-   refid "mx.core:EdgeMetrics/iinit"
+   refid "mx.core:EdgeMetrics/instance/init"
    param QName(PackageNamespace(""), "Number")
    param QName(PackageNamespace(""), "Number")
    param QName(PackageNamespace(""), "Number")
@@ -54,7 +54,7 @@ class
   trait slot QName(PackageNamespace(""), "top") type QName(PackageNamespace(""), "Number") end
   trait method QName(PackageNamespace(""), "clone")
    method
-    refid "mx.core:EdgeMetrics/clone"
+    refid "mx.core:EdgeMetrics/instance/clone"
     returns QName(PackageNamespace("mx.core"), "EdgeMetrics")
     body
      maxstack 5
@@ -82,7 +82,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "mx.core:EdgeMetrics/cinit"
+  refid "mx.core:EdgeMetrics/class/init"
   body
    maxstack 6
    localcount 1

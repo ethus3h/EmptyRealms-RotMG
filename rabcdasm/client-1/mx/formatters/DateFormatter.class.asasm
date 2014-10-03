@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("mx.formatters:DateFormatter")
   iinit
-   refid "mx.formatters:DateFormatter/iinit"
+   refid "mx.formatters:DateFormatter/instance/init"
    body
     maxstack 1
     localcount 1
@@ -27,7 +27,7 @@ class
   trait slot QName(PrivateNamespace("*", "mx.formatters:DateFormatter"), "formatStringOverride") type QName(PackageNamespace(""), "String") end
   trait getter QName(PackageNamespace(""), "formatString")
    method
-    refid "mx.formatters:DateFormatter/formatString/getter"
+    refid "mx.formatters:DateFormatter/instance/formatString/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -47,7 +47,7 @@ class
   end ; trait
   trait setter QName(PackageNamespace(""), "formatString")
    method
-    refid "mx.formatters:DateFormatter/formatString/setter"
+    refid "mx.formatters:DateFormatter/instance/formatString/setter"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -88,7 +88,7 @@ L17:
   end ; trait
   trait method QName(ProtectedNamespace("mx.formatters:DateFormatter"), "resourcesChanged") flag OVERRIDE
    method
-    refid "mx.formatters:DateFormatter:resourcesChanged"
+    refid "mx.formatters:DateFormatter/instance/mx.formatters:DateFormatter:resourcesChanged"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -113,7 +113,7 @@ L17:
   end ; trait
   trait method QName(PackageNamespace(""), "format") flag OVERRIDE
    method
-    refid "mx.formatters:DateFormatter/format"
+    refid "mx.formatters:DateFormatter/instance/format"
     param QName(PackageNamespace(""), "Object")
     returns QName(PackageNamespace(""), "String")
     body
@@ -321,7 +321,7 @@ L131:
   end ; trait
  end ; instance
  cinit
-  refid "mx.formatters:DateFormatter/cinit"
+  refid "mx.formatters:DateFormatter/class/init"
   body
    maxstack 2
    localcount 1
@@ -347,7 +347,7 @@ L131:
  trait const QName(PrivateNamespace("*", "mx.formatters:DateFormatter"), "VALID_PATTERN_CHARS") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("Y,M,D,A,E,H,J,K,L,N,S,Q") end
  trait method QName(PackageNamespace(""), "parseDateString") flag FINAL dispid 3
   method
-   refid "mx.formatters:DateFormatter/parseDateString"
+   refid "mx.formatters:DateFormatter/class/parseDateString"
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace(""), "Date")
    body
@@ -609,7 +609,7 @@ L180:
      getlex              QName(PackageNamespace("mx.formatters"), "DateBase")
      getproperty         QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "defaultStringKey")
      getlocal            16
-     getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:DateFormatter"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("mx.formatters"), PrivateNamespace("*", "mx.formatters:DateFormatter/parseDateString"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateFormatter"), StaticProtectedNs("mx.formatters:DateFormatter"), StaticProtectedNs("mx.formatters:Formatter")])
+     getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:DateFormatter"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("mx.formatters"), PrivateNamespace("*", "mx.formatters:DateFormatter/class/parseDateString"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateFormatter"), StaticProtectedNs("mx.formatters:DateFormatter"), StaticProtectedNs("mx.formatters:Formatter")])
      callproperty        QName(PackageNamespace(""), "String"), 1
      coerce_s
      dup

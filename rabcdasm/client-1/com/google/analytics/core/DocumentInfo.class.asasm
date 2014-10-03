@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("com.google.analytics.core:DocumentInfo")
   iinit
-   refid "com.google.analytics.core:DocumentInfo/iinit"
+   refid "com.google.analytics.core:DocumentInfo/instance/init"
    param QName(PackageNamespace("com.google.analytics.v4"), "Configuration")
    param QName(PackageNamespace("com.google.analytics.utils"), "Environment")
    param QName(PackageNamespace(""), "String")
@@ -27,35 +27,35 @@ class
      getlocal0
      constructsuper      0
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_config")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_config")
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_config")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_config")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_info")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_info")
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_info")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_info")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_utmr")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_utmr")
      getlocal3
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_utmr")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_utmr")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_pageURL")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_pageURL")
      getlocal            4
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_pageURL")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_pageURL")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_adSense")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_adSense")
      getlocal            5
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_adSense")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_adSense")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_pageURL") type QName(PackageNamespace(""), "String") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_utmr") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_pageURL") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_utmr") type QName(PackageNamespace(""), "String") end
   trait getter QName(PackageNamespace(""), "utmr")
    method
-    refid "com.google.analytics.core:DocumentInfo/utmr/getter"
+    refid "com.google.analytics.core:DocumentInfo/instance/utmr/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -66,14 +66,14 @@ class
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_utmr")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_utmr")
       iftrue              L6
 
       pushstring          "-"
       returnvalue
 
 L6:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_utmr")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_utmr")
       returnvalue
      end ; code
     end ; body
@@ -81,7 +81,7 @@ L6:
   end ; trait
   trait method QName(PackageNamespace(""), "toURLString")
    method
-    refid "com.google.analytics.core:DocumentInfo/toURLString"
+    refid "com.google.analytics.core:DocumentInfo/instance/toURLString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -104,10 +104,10 @@ L6:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_config") type QName(PackageNamespace("com.google.analytics.v4"), "Configuration") end
-  trait method QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_renderPageURL")
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_config") type QName(PackageNamespace("com.google.analytics.v4"), "Configuration") end
+  trait method QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_renderPageURL")
    method
-    refid "com.google.analytics.core:DocumentInfo/_renderPageURL"
+    refid "com.google.analytics.core:DocumentInfo/instance/com.google.analytics.core:DocumentInfo/instance/_renderPageURL"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "String")
     flag HAS_OPTIONAL
@@ -121,12 +121,12 @@ L6:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_info")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_info")
       getproperty         QName(PackageNamespace(""), "locationPath")
       coerce_s
       setlocal2
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_info")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_info")
       getproperty         QName(PackageNamespace(""), "locationSearch")
       coerce_s
       setlocal3
@@ -165,11 +165,11 @@ L31:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_adSense") type QName(PackageNamespace("com.google.analytics.external"), "AdSenseGlobals") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_info") type QName(PackageNamespace("com.google.analytics.utils"), "Environment") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_adSense") type QName(PackageNamespace("com.google.analytics.external"), "AdSenseGlobals") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_info") type QName(PackageNamespace("com.google.analytics.utils"), "Environment") end
   trait getter QName(PackageNamespace(""), "utmp")
    method
-    refid "com.google.analytics.core:DocumentInfo/utmp/getter"
+    refid "com.google.analytics.core:DocumentInfo/instance/utmp/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 2
@@ -180,9 +180,9 @@ L31:
       getlocal0
       pushscope
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_renderPageURL")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_pageURL")
-      callproperty        QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_renderPageURL"), 1
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_renderPageURL")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_pageURL")
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_renderPageURL"), 1
       returnvalue
      end ; code
     end ; body
@@ -190,7 +190,7 @@ L31:
   end ; trait
   trait getter QName(PackageNamespace(""), "utmhid")
    method
-    refid "com.google.analytics.core:DocumentInfo/utmhid/getter"
+    refid "com.google.analytics.core:DocumentInfo/instance/utmhid/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 2
@@ -202,17 +202,17 @@ L31:
       pushscope
 
       findpropstrict      QName(PackageNamespace(""), "String")
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_generateHitId")
-      callproperty        QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_generateHitId"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_generateHitId")
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_generateHitId"), 0
       callproperty        QName(PackageNamespace(""), "String"), 1
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_generateHitId")
+  trait method QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_generateHitId")
    method
-    refid "com.google.analytics.core:DocumentInfo/_generateHitId"
+    refid "com.google.analytics.core:DocumentInfo/instance/com.google.analytics.core:DocumentInfo/instance/_generateHitId"
     returns QName(PackageNamespace(""), "Number")
     body
      maxstack 3
@@ -226,14 +226,14 @@ L31:
       pushnan
       setlocal1
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_adSense")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_adSense")
       getproperty         QName(PackageNamespace(""), "hid")
       convert_b
       dup
       iffalse             L15
 
       pop
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_adSense")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_adSense")
       getproperty         QName(PackageNamespace(""), "hid")
       pushstring          ""
       equals
@@ -242,7 +242,7 @@ L15:
       iffalse             L23
 
       findpropstrict      QName(PackageNamespace(""), "Number")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_adSense")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_adSense")
       getproperty         QName(PackageNamespace(""), "hid")
       callproperty        QName(PackageNamespace(""), "Number"), 1
       convert_d
@@ -260,7 +260,7 @@ L23:
       convert_d
       setlocal1
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_adSense")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_adSense")
       findpropstrict      QName(PackageNamespace(""), "String")
       getlocal1
       callproperty        QName(PackageNamespace(""), "String"), 1
@@ -275,7 +275,7 @@ L36:
   end ; trait
   trait method QName(PackageNamespace(""), "toVariables")
    method
-    refid "com.google.analytics.core:DocumentInfo/toVariables"
+    refid "com.google.analytics.core:DocumentInfo/instance/toVariables"
     returns QName(PackageNamespace("com.google.analytics.utils"), "Variables")
     body
      maxstack 2
@@ -295,7 +295,7 @@ L36:
       pushtrue
       setproperty         QName(PackageNamespace(""), "URIencode")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_config")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_config")
       getproperty         QName(PackageNamespace(""), "detectTitle")
       convert_b
       dup
@@ -311,20 +311,20 @@ L19:
 
       getlocal1
       getlex              QName(PackageNamespace(""), "utmdt")
-      setproperty         Multiname("utmdt", [PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/toVariables"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:DocumentInfo"), StaticProtectedNs("com.google.analytics.core:DocumentInfo"), StaticProtectedNs("Object")])
+      setproperty         Multiname("utmdt", [PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance/toVariables"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:DocumentInfo"), StaticProtectedNs("com.google.analytics.core:DocumentInfo"), StaticProtectedNs("Object")])
 
 L23:
       getlocal1
       getlex              QName(PackageNamespace(""), "utmhid")
-      setproperty         Multiname("utmhid", [PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/toVariables"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:DocumentInfo"), StaticProtectedNs("com.google.analytics.core:DocumentInfo"), StaticProtectedNs("Object")])
+      setproperty         Multiname("utmhid", [PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance/toVariables"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:DocumentInfo"), StaticProtectedNs("com.google.analytics.core:DocumentInfo"), StaticProtectedNs("Object")])
 
       getlocal1
       getlex              QName(PackageNamespace(""), "utmr")
-      setproperty         Multiname("utmr", [PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/toVariables"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:DocumentInfo"), StaticProtectedNs("com.google.analytics.core:DocumentInfo"), StaticProtectedNs("Object")])
+      setproperty         Multiname("utmr", [PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance/toVariables"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:DocumentInfo"), StaticProtectedNs("com.google.analytics.core:DocumentInfo"), StaticProtectedNs("Object")])
 
       getlocal1
       getlex              QName(PackageNamespace(""), "utmp")
-      setproperty         Multiname("utmp", [PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/toVariables"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:DocumentInfo"), StaticProtectedNs("com.google.analytics.core:DocumentInfo"), StaticProtectedNs("Object")])
+      setproperty         Multiname("utmp", [PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance/toVariables"), PackageNamespace("com.google.analytics.core"), PackageInternalNs("com.google.analytics.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.core:DocumentInfo"), StaticProtectedNs("com.google.analytics.core:DocumentInfo"), StaticProtectedNs("Object")])
 
       getlocal1
       returnvalue
@@ -334,7 +334,7 @@ L23:
   end ; trait
   trait getter QName(PackageNamespace(""), "utmdt")
    method
-    refid "com.google.analytics.core:DocumentInfo/utmdt/getter"
+    refid "com.google.analytics.core:DocumentInfo/instance/utmdt/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -345,7 +345,7 @@ L23:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo"), "_info")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:DocumentInfo/instance"), "_info")
       getproperty         QName(PackageNamespace(""), "documentTitle")
       returnvalue
      end ; code
@@ -354,7 +354,7 @@ L23:
   end ; trait
  end ; instance
  cinit
-  refid "com.google.analytics.core:DocumentInfo/cinit"
+  refid "com.google.analytics.core:DocumentInfo/class/init"
   body
    maxstack 1
    localcount 1

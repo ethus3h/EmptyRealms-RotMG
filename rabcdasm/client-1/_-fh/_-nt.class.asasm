@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-0K8")
   iinit
-   refid "_-fh:_-nt/iinit"
+   refid "_-fh:_-nt/instance/init"
    param QName(PackageNamespace("com.company.assembleegameclient.map"), "_-Xl")
    body
     maxstack 6
@@ -34,7 +34,7 @@ class
   trait slot QName(PackageNamespace(""), "map_") type QName(PackageNamespace("com.company.assembleegameclient.map"), "_-Xl") end
   trait method QName(PackageNamespace(""), "refreshToolTip")
    method
-    refid "_-fh:_-nt/refreshToolTip"
+    refid "_-fh:_-nt/instance/refreshToolTip"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 6
@@ -50,7 +50,7 @@ class
       getlex              QName(PackageNamespace(""), "go_")
       findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
       callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
-      callproperty        QName(PrivateNamespace("*", "_-fh:_-nt"), "getToolTip"), 2
+      callproperty        QName(PrivateNamespace("*", "_-fh:_-nt/instance"), "getToolTip"), 2
       callpropvoid        QName(ProtectedNamespace("_-0EB"), "_-VB"), 1
 
       returnvoid
@@ -60,7 +60,7 @@ class
   end ; trait
   trait method QName(ProtectedNamespace("_-0K8"), "onMouseOver") flag OVERRIDE
    method
-    refid "_-fh:_-nt/_-0K8:onMouseOver"
+    refid "_-fh:_-nt/instance/_-0K8:onMouseOver"
     param QName(PackageNamespace("flash.events"), "MouseEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -85,7 +85,7 @@ class
   end ; trait
   trait method QName(ProtectedNamespace("_-0K8"), "onMouseOut") flag OVERRIDE
    method
-    refid "_-fh:_-nt/_-0K8:onMouseOut"
+    refid "_-fh:_-nt/instance/_-0K8:onMouseOut"
     param QName(PackageNamespace("flash.events"), "MouseEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -108,9 +108,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-fh:_-nt"), "getToolTip")
+  trait method QName(PrivateNamespace("*", "_-fh:_-nt/instance"), "getToolTip")
    method
-    refid "_-fh:_-nt/getToolTip"
+    refid "_-fh:_-nt/instance/_-fh:_-nt/instance/getToolTip"
     param QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace("_-E7"), "for ")
@@ -143,7 +143,7 @@ L12:
 L15:
       getlocal0
       getlocal2
-      callproperty        QName(PrivateNamespace("*", "_-fh:_-nt"), "_-01"), 1
+      callproperty        QName(PrivateNamespace("*", "_-fh:_-nt/instance"), "_-01"), 1
       iffalse             L23
 
       findpropstrict      QName(PackageNamespace("_-E7"), "_-ap")
@@ -154,7 +154,7 @@ L15:
 L23:
       getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
       getproperty         QName(PackageNamespace(""), "data_")
-      getproperty         Multiname("showQuestPortraits", [PrivateNamespace("*", "_-fh:_-nt"), PackageNamespace(""), PrivateNamespace("*", "_-fh:_-nt/getToolTip"), PackageNamespace("_-fh"), PackageInternalNs("_-fh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0K8"), StaticProtectedNs("_-0K8"), StaticProtectedNs("_-0EB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("showQuestPortraits", [PrivateNamespace("*", "_-fh:_-nt/instance"), PackageNamespace(""), PrivateNamespace("*", "_-fh:_-nt/instance/_-fh:_-nt/instance/getToolTip"), PackageNamespace("_-fh"), PackageInternalNs("_-fh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0K8"), StaticProtectedNs("_-0K8"), StaticProtectedNs("_-0EB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       iffalse             L31
 
       findpropstrict      QName(PackageNamespace("_-E7"), "_-C8")
@@ -169,9 +169,9 @@ L31:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-fh:_-nt"), "_-01")
+  trait method QName(PrivateNamespace("*", "_-fh:_-nt/instance"), "_-01")
    method
-    refid "_-fh:_-nt/_-01"
+    refid "_-fh:_-nt/instance/_-fh:_-nt/instance/_-01"
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace(""), "Boolean")
     body
@@ -207,7 +207,7 @@ L16:
   end ; trait
   trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
    method
-    refid "_-fh:_-nt/draw"
+    refid "_-fh:_-nt/instance/draw"
     param QName(PackageNamespace(""), "int")
     param QName(PackageNamespace("com.company.assembleegameclient.map"), "_-0Dv")
     returns QName(PackageNamespace(""), "void")
@@ -246,7 +246,7 @@ L16:
       getlocal0
       getlocal3
       getlocal1
-      callproperty        QName(PrivateNamespace("*", "_-fh:_-nt"), "getToolTip"), 2
+      callproperty        QName(PrivateNamespace("*", "_-fh:_-nt/instance"), "getToolTip"), 2
       callpropvoid        QName(ProtectedNamespace("_-0EB"), "_-VB"), 1
 
       jump                L47
@@ -263,7 +263,7 @@ L26:
 
       getlocal0
       getlocal1
-      callproperty        QName(PrivateNamespace("*", "_-fh:_-nt"), "_-01"), 1
+      callproperty        QName(PrivateNamespace("*", "_-fh:_-nt/instance"), "_-01"), 1
       convert_b
       setlocal            5
 
@@ -275,7 +275,7 @@ L26:
       getlocal0
       getlocal3
       getlocal1
-      callproperty        QName(PrivateNamespace("*", "_-fh:_-nt"), "getToolTip"), 2
+      callproperty        QName(PrivateNamespace("*", "_-fh:_-nt/instance"), "getToolTip"), 2
       callpropvoid        QName(ProtectedNamespace("_-0EB"), "_-VB"), 1
 
 L47:
@@ -290,7 +290,7 @@ L47:
   end ; trait
  end ; instance
  cinit
-  refid "_-fh:_-nt/cinit"
+  refid "_-fh:_-nt/class/init"
   body
    maxstack 3
    localcount 1

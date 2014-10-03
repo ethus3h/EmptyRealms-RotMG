@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("com.google.analytics.debug:Alert")
   iinit
-   refid "com.google.analytics.debug:Alert/iinit"
+   refid "com.google.analytics.debug:Alert/instance/init"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "Array")
    param QName(PackageNamespace(""), "String")
@@ -81,9 +81,9 @@ L16:
      getlocal            7
      initproperty        QName(PackageNamespace(""), "actionOnNextLine")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Alert#0"), "_actions")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#0"), "_actions")
      newarray            0
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Alert#0"), "_actions")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#0"), "_actions")
 
      pushbyte            0
      setlocal            8
@@ -94,14 +94,14 @@ L47:
      label
      getlocal2
      getlocal            8
-     getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.debug:Alert#0"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.debug:Alert#1"), PackageInternalNs("com.google.analytics.debug"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Label"), StaticProtectedNs("com.google.analytics.debug:UISprite"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#0"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#1"), PackageInternalNs("com.google.analytics.debug"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Label"), StaticProtectedNs("com.google.analytics.debug:UISprite"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
      getlocal0
-     setproperty         Multiname("container", [PrivateNamespace("*", "com.google.analytics.debug:Alert#0"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.debug:Alert#1"), PackageInternalNs("com.google.analytics.debug"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Label"), StaticProtectedNs("com.google.analytics.debug:UISprite"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     setproperty         Multiname("container", [PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#0"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#1"), PackageInternalNs("com.google.analytics.debug"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Label"), StaticProtectedNs("com.google.analytics.debug:UISprite"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
 
-     getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Alert#0"), "_actions")
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#0"), "_actions")
      getlocal2
      getlocal            8
-     getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.debug:Alert#0"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.debug:Alert#1"), PackageInternalNs("com.google.analytics.debug"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Label"), StaticProtectedNs("com.google.analytics.debug:UISprite"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#0"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#1"), PackageInternalNs("com.google.analytics.debug"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Label"), StaticProtectedNs("com.google.analytics.debug:UISprite"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
      inclocal_i          8
@@ -115,9 +115,9 @@ L59:
     end ; code
    end ; body
   end ; method
-  trait method QName(PrivateNamespace("*", "com.google.analytics.debug:Alert#0"), "_defineActions")
+  trait method QName(PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#0"), "_defineActions")
    method
-    refid "com.google.analytics.debug:Alert/_defineActions"
+    refid "com.google.analytics.debug:Alert/instance/com.google.analytics.debug:Alert/instance/_defineActions"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 3
@@ -168,9 +168,9 @@ L18:
 
 L28:
       label
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Alert#0"), "_actions")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#0"), "_actions")
       getlocal            4
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.debug:Alert#0"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.debug:Alert#1"), PackageInternalNs("com.google.analytics.debug"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Label"), StaticProtectedNs("com.google.analytics.debug:UISprite"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#0"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#1"), PackageInternalNs("com.google.analytics.debug"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Label"), StaticProtectedNs("com.google.analytics.debug:UISprite"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
       coerce              QName(PackageNamespace("com.google.analytics.debug"), "AlertAction")
       setlocal3
 
@@ -191,7 +191,7 @@ L28:
       inclocal_i          4
 L48:
       getlocal            4
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Alert#0"), "_actions")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#0"), "_actions")
       getproperty         QName(PackageNamespace(""), "length")
       iflt                L28
 
@@ -215,7 +215,7 @@ L48:
   end ; trait
   trait method QName(ProtectedNamespace("com.google.analytics.debug:Alert"), "isValidAction")
    method
-    refid "com.google.analytics.debug:Alert:isValidAction"
+    refid "com.google.analytics.debug:Alert/instance/com.google.analytics.debug:Alert:isValidAction"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "Boolean")
     body
@@ -235,10 +235,10 @@ L48:
 L5:
       label
       getlocal1
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Alert#0"), "_actions")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#0"), "_actions")
       getlocal2
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.debug:Alert#0"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.debug:Alert#1"), PackageInternalNs("com.google.analytics.debug"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Label"), StaticProtectedNs("com.google.analytics.debug:UISprite"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      getproperty         Multiname("activator", [PrivateNamespace("*", "com.google.analytics.debug:Alert#0"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.debug:Alert#1"), PackageInternalNs("com.google.analytics.debug"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Label"), StaticProtectedNs("com.google.analytics.debug:UISprite"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#0"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#1"), PackageInternalNs("com.google.analytics.debug"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Label"), StaticProtectedNs("com.google.analytics.debug:UISprite"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("activator", [PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#0"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#1"), PackageInternalNs("com.google.analytics.debug"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Label"), StaticProtectedNs("com.google.analytics.debug:UISprite"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
       ifne                L14
 
       pushtrue
@@ -248,7 +248,7 @@ L14:
       inclocal_i          2
 L15:
       getlocal2
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Alert#0"), "_actions")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#0"), "_actions")
       getproperty         QName(PackageNamespace(""), "length")
       iflt                L5
 
@@ -261,7 +261,7 @@ L15:
   trait slot QName(PackageNamespace(""), "autoClose") type QName(PackageNamespace(""), "Boolean") value True() end
   trait method QName(ProtectedNamespace("com.google.analytics.debug:Alert"), "layout") flag OVERRIDE
    method
-    refid "com.google.analytics.debug:Alert:layout"
+    refid "com.google.analytics.debug:Alert/instance/com.google.analytics.debug:Alert:layout"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 1
@@ -274,8 +274,8 @@ L15:
 
       getlocal0
       callsupervoid       QName(ProtectedNamespace("com.google.analytics.debug:Label"), "layout"), 0
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.debug:Alert#0"), "_defineActions")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.debug:Alert#0"), "_defineActions"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#0"), "_defineActions")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#0"), "_defineActions"), 0
 
       returnvoid
      end ; code
@@ -285,7 +285,7 @@ L15:
   trait slot QName(PackageNamespace(""), "actionOnNextLine") type QName(PackageNamespace(""), "Boolean") value True() end
   trait method QName(ProtectedNamespace("com.google.analytics.debug:Alert"), "getAction")
    method
-    refid "com.google.analytics.debug:Alert:getAction"
+    refid "com.google.analytics.debug:Alert/instance/com.google.analytics.debug:Alert:getAction"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace("com.google.analytics.debug"), "AlertAction")
     body
@@ -305,22 +305,22 @@ L15:
 L5:
       label
       getlocal1
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Alert#0"), "_actions")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#0"), "_actions")
       getlocal2
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.debug:Alert#0"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.debug:Alert#1"), PackageInternalNs("com.google.analytics.debug"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Label"), StaticProtectedNs("com.google.analytics.debug:UISprite"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      getproperty         Multiname("activator", [PrivateNamespace("*", "com.google.analytics.debug:Alert#0"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.debug:Alert#1"), PackageInternalNs("com.google.analytics.debug"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Label"), StaticProtectedNs("com.google.analytics.debug:UISprite"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#0"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#1"), PackageInternalNs("com.google.analytics.debug"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Label"), StaticProtectedNs("com.google.analytics.debug:UISprite"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("activator", [PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#0"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#1"), PackageInternalNs("com.google.analytics.debug"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Label"), StaticProtectedNs("com.google.analytics.debug:UISprite"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
       ifne                L16
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Alert#0"), "_actions")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#0"), "_actions")
       getlocal2
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.debug:Alert#0"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.debug:Alert#1"), PackageInternalNs("com.google.analytics.debug"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Label"), StaticProtectedNs("com.google.analytics.debug:UISprite"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#0"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#1"), PackageInternalNs("com.google.analytics.debug"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Alert"), StaticProtectedNs("com.google.analytics.debug:Label"), StaticProtectedNs("com.google.analytics.debug:UISprite"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
       returnvalue
 
 L16:
       inclocal_i          2
 L17:
       getlocal2
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Alert#0"), "_actions")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#0"), "_actions")
       getproperty         QName(PackageNamespace(""), "length")
       iflt                L5
 
@@ -332,7 +332,7 @@ L17:
   end ; trait
   trait method QName(ProtectedNamespace("com.google.analytics.debug:Alert"), "spaces")
    method
-    refid "com.google.analytics.debug:Alert:spaces"
+    refid "com.google.analytics.debug:Alert/instance/com.google.analytics.debug:Alert:spaces"
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace(""), "String")
     body
@@ -379,7 +379,7 @@ L16:
   end ; trait
   trait method QName(PackageNamespace(""), "onLink") flag OVERRIDE
    method
-    refid "com.google.analytics.debug:Alert/onLink"
+    refid "com.google.analytics.debug:Alert/instance/onLink"
     param QName(PackageNamespace("flash.events"), "TextEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -427,10 +427,10 @@ L24:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Alert#0"), "_actions") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Alert/instance#0"), "_actions") type QName(PackageNamespace(""), "Array") end
   trait method QName(PackageNamespace(""), "close")
    method
-    refid "com.google.analytics.debug:Alert/close"
+    refid "com.google.analytics.debug:Alert/instance/close"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -457,7 +457,7 @@ L8:
   end ; trait
  end ; instance
  cinit
-  refid "com.google.analytics.debug:Alert/cinit"
+  refid "com.google.analytics.debug:Alert/class/init"
   body
    maxstack 1
    localcount 1

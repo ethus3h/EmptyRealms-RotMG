@@ -7,7 +7,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-FJ")
   iinit
-   refid "_-08G:_-kB/iinit"
+   refid "_-08G:_-kB/instance/init"
    body
     maxstack 5
     localcount 3
@@ -21,7 +21,7 @@ class
      getlex              QName(PackageNamespace("_-03T"), "_-078")
      getlex              QName(PackageNamespace("_-08G"), "_-kB")
      callproperty        QName(PackageNamespace(""), "create"), 1
-     initproperty        QName(PrivateNamespace("*", "_-08G:_-kB"), "_-ul")
+     initproperty        QName(PrivateNamespace("*", "_-08G:_-kB/instance"), "_-ul")
 
      getlocal0
      constructsuper      0
@@ -30,12 +30,12 @@ class
     end ; code
    end ; body
   end ; method
-  trait const QName(PrivateNamespace("*", "_-08G:_-kB"), "_-ul") type QName(PackageNamespace(""), "String") end
-  trait slot QName(PrivateNamespace("*", "_-08G:_-kB"), "_-vz") type QName(PackageNamespace("_-eZ"), "_-08b") end
-  trait slot QName(PrivateNamespace("*", "_-08G:_-kB"), "_-eo") type QName(PackageNamespace("_-0-p"), "_-Q5") end
+  trait const QName(PrivateNamespace("*", "_-08G:_-kB/instance"), "_-ul") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "_-08G:_-kB/instance"), "_-vz") type QName(PackageNamespace("_-eZ"), "_-08b") end
+  trait slot QName(PrivateNamespace("*", "_-08G:_-kB/instance"), "_-eo") type QName(PackageNamespace("_-0-p"), "_-Q5") end
   trait method QName(PackageNamespace(""), "extend")
    method
-    refid "_-08G:_-kB/extend"
+    refid "_-08G:_-kB/instance/extend"
     param QName(PackageNamespace("_-0-p"), "_-Ly")
     returns QName(PackageNamespace(""), "void")
     body
@@ -50,20 +50,20 @@ class
       getlocal0
       getlocal1
       getproperty         QName(Namespace("_-06J"), "_-OR")
-      initproperty        QName(PrivateNamespace("*", "_-08G:_-kB"), "_-vz")
+      initproperty        QName(PrivateNamespace("*", "_-08G:_-kB/instance"), "_-vz")
 
       getlocal0
       getlocal1
       getlocal0
       callproperty        QName(Namespace("_-06J"), "_-0H4"), 1
-      initproperty        QName(PrivateNamespace("*", "_-08G:_-kB"), "_-eo")
+      initproperty        QName(PrivateNamespace("*", "_-08G:_-kB/instance"), "_-eo")
 
       getlocal1
       findpropstrict      QName(PackageNamespace("_-g3"), "instanceOf")
       getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
       callproperty        QName(PackageNamespace("_-g3"), "instanceOf"), 1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-08G:_-kB"), "_-uI")
+      getproperty         QName(PrivateNamespace("*", "_-08G:_-kB/instance"), "_-uI")
       callpropvoid        QName(Namespace("_-06J"), "_-ty"), 2
 
       returnvoid
@@ -73,7 +73,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "toString")
    method
-    refid "_-08G:_-kB/toString"
+    refid "_-08G:_-kB/instance/toString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -85,15 +85,15 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-08G:_-kB"), "_-ul")
+      getproperty         QName(PrivateNamespace("*", "_-08G:_-kB/instance"), "_-ul")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-08G:_-kB"), "_-uI")
+  trait method QName(PrivateNamespace("*", "_-08G:_-kB/instance"), "_-uI")
    method
-    refid "_-08G:_-kB/_-uI"
+    refid "_-08G:_-kB/instance/_-08G:_-kB/instance/_-uI"
     param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
     returns QName(PackageNamespace(""), "void")
     body
@@ -106,13 +106,13 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-08G:_-kB"), "_-vz")
+      getproperty         QName(PrivateNamespace("*", "_-08G:_-kB/instance"), "_-vz")
       getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
       callproperty        QName(PackageNamespace(""), "_-d6"), 1
       iffalse             L14
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-08G:_-kB"), "_-eo")
+      getproperty         QName(PrivateNamespace("*", "_-08G:_-kB/instance"), "_-eo")
       pushstring          "A contextView has already been mapped, ignoring {0}"
       getlocal1
       newarray            1
@@ -122,14 +122,14 @@ class
 
 L14:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-08G:_-kB"), "_-eo")
+      getproperty         QName(PrivateNamespace("*", "_-08G:_-kB/instance"), "_-eo")
       pushstring          "Mapping {0} as contextView"
       getlocal1
       newarray            1
       callpropvoid        QName(Namespace("_-4t"), "debug"), 2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-08G:_-kB"), "_-vz")
+      getproperty         QName(PrivateNamespace("*", "_-08G:_-kB/instance"), "_-vz")
       getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
       callproperty        QName(PackageNamespace(""), "map"), 1
       getlocal1
@@ -143,7 +143,7 @@ L26:
   end ; trait
  end ; instance
  cinit
-  refid "_-08G:_-kB/cinit"
+  refid "_-08G:_-kB/class/init"
   body
    maxstack 3
    localcount 1

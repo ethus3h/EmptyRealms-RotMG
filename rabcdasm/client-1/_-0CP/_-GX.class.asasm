@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-Jx")
   iinit
-   refid "_-0CP:_-GX/iinit"
+   refid "_-0CP:_-GX/instance/init"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "String")
@@ -33,21 +33,21 @@ class
      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
      getproperty         QName(PackageNamespace(""), "data_")
      getlex              QName(PackageNamespace(""), "_-WY")
-     getproperty         MultinameL([PrivateNamespace("*", "_-0CP:_-GX#0"), PackageNamespace("_-0CP"), PackageNamespace(""), PrivateNamespace("*", "_-0CP:_-GX#1"), PackageInternalNs("_-0CP"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Jx"), StaticProtectedNs("_-Jx"), StaticProtectedNs("_-hV"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getproperty         MultinameL([PrivateNamespace("*", "_-0CP:_-GX/instance#0"), PackageNamespace("_-0CP"), PackageNamespace(""), PrivateNamespace("*", "_-0CP:_-GX/instance#1"), PackageInternalNs("_-0CP"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Jx"), StaticProtectedNs("_-Jx"), StaticProtectedNs("_-hV"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
      constructprop       QName(PackageNamespace("_-0CP"), "_-N9"), 1
-     initproperty        QName(PrivateNamespace("*", "_-0CP:_-GX#0"), "_-wK")
+     initproperty        QName(PrivateNamespace("*", "_-0CP:_-GX/instance#0"), "_-wK")
 
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-0CP:_-GX#0"), "_-wK")
+     getproperty         QName(PrivateNamespace("*", "_-0CP:_-GX/instance#0"), "_-wK")
      getlex              QName(PackageNamespace("flash.events"), "Event")
      getproperty         QName(PackageNamespace(""), "CHANGE")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-0CP:_-GX#0"), "_-bR")
+     getproperty         QName(PrivateNamespace("*", "_-0CP:_-GX/instance#0"), "_-bR")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-0CP:_-GX#0"), "_-wK")
+     getproperty         QName(PrivateNamespace("*", "_-0CP:_-GX/instance#0"), "_-wK")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
      getlocal0
@@ -58,11 +58,11 @@ class
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-0CP:_-GX#0"), "_-wK") type QName(PackageNamespace("_-0CP"), "_-N9") end
-  trait slot QName(PrivateNamespace("*", "_-0CP:_-GX#0"), "_-0FN") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "_-0CP:_-GX/instance#0"), "_-wK") type QName(PackageNamespace("_-0CP"), "_-N9") end
+  trait slot QName(PrivateNamespace("*", "_-0CP:_-GX/instance#0"), "_-0FN") type QName(PackageNamespace(""), "Boolean") end
   trait method QName(PackageNamespace(""), "_-Jr")
    method
-    refid "_-0CP:_-GX/_-Jr"
+    refid "_-0CP:_-GX/instance/_-Jr"
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
     body
@@ -76,11 +76,11 @@ class
 
       getlocal0
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "_-0CP:_-GX#0"), "_-0FN")
+      initproperty        QName(PrivateNamespace("*", "_-0CP:_-GX/instance#0"), "_-0FN")
 
       getlex              QName(PackageNamespace(""), "transform")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0CP:_-GX#0"), "_-0FN")
+      getproperty         QName(PrivateNamespace("*", "_-0CP:_-GX/instance#0"), "_-0FN")
       iffalse             L13
 
       getlex              QName(PackageNamespace("com.company.util"), "MoreColorUtil")
@@ -97,13 +97,13 @@ L16:
 
       findproperty        QName(PackageNamespace(""), "mouseEnabled")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0CP:_-GX#0"), "_-0FN")
+      getproperty         QName(PrivateNamespace("*", "_-0CP:_-GX/instance#0"), "_-0FN")
       not
       initproperty        QName(PackageNamespace(""), "mouseEnabled")
 
       findproperty        QName(PackageNamespace(""), "mouseChildren")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0CP:_-GX#0"), "_-0FN")
+      getproperty         QName(PrivateNamespace("*", "_-0CP:_-GX/instance#0"), "_-0FN")
       not
       initproperty        QName(PackageNamespace(""), "mouseChildren")
 
@@ -114,7 +114,7 @@ L16:
   end ; trait
   trait method QName(PackageNamespace(""), "refresh") flag OVERRIDE
    method
-    refid "_-0CP:_-GX/refresh"
+    refid "_-0CP:_-GX/instance/refresh"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 5
@@ -126,11 +126,11 @@ L16:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0CP:_-GX#0"), "_-wK")
+      getproperty         QName(PrivateNamespace("*", "_-0CP:_-GX/instance#0"), "_-wK")
       getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
       getproperty         QName(PackageNamespace(""), "data_")
       getlex              QName(PackageNamespace(""), "_-WY")
-      getproperty         MultinameL([PrivateNamespace("*", "_-0CP:_-GX#0"), PackageNamespace("_-0CP"), PackageNamespace(""), PrivateNamespace("*", "_-0CP:_-GX#1"), PackageInternalNs("_-0CP"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Jx"), StaticProtectedNs("_-Jx"), StaticProtectedNs("_-hV"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-0CP:_-GX/instance#0"), PackageNamespace("_-0CP"), PackageNamespace(""), PrivateNamespace("*", "_-0CP:_-GX/instance#1"), PackageInternalNs("_-0CP"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Jx"), StaticProtectedNs("_-Jx"), StaticProtectedNs("_-hV"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       callpropvoid        QName(PackageNamespace(""), "_-09q"), 1
 
       returnvoid
@@ -138,9 +138,9 @@ L16:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-0CP:_-GX#0"), "_-bR")
+  trait method QName(PrivateNamespace("*", "_-0CP:_-GX/instance#0"), "_-bR")
    method
-    refid "_-0CP:_-GX/_-bR"
+    refid "_-0CP:_-GX/instance/_-0CP:_-GX/instance/_-bR"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -155,7 +155,7 @@ L16:
       getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
       getlex              QName(PackageNamespace(""), "_-WY")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0CP:_-GX#0"), "_-wK")
+      getproperty         QName(PrivateNamespace("*", "_-0CP:_-GX/instance#0"), "_-wK")
       callproperty        QName(PackageNamespace(""), "value"), 0
       callpropvoid        QName(PackageNamespace(""), "setKey"), 2
 
@@ -169,7 +169,7 @@ L16:
   end ; trait
  end ; instance
  cinit
-  refid "_-0CP:_-GX/cinit"
+  refid "_-0CP:_-GX/class/init"
   body
    maxstack 3
    localcount 1

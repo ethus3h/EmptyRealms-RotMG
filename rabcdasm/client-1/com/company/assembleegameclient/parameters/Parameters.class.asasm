@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-0LD")
   iinit
-   refid "com.company.assembleegameclient.parameters:Parameters/iinit"
+   refid "com.company.assembleegameclient.parameters:Parameters/instance/init"
    body
     maxstack 3
     localcount 3
@@ -25,7 +25,7 @@ class
   end ; method
  end ; instance
  cinit
-  refid "com.company.assembleegameclient.parameters:Parameters/cinit"
+  refid "com.company.assembleegameclient.parameters:Parameters/class/init"
   body
    maxstack 5
    localcount 3
@@ -223,14 +223,14 @@ class
     add
     initproperty        QName(PackageNamespace(""), "_-sa")
 
-    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-ZU")
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-ZU")
     pushnull
-    setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-ZU")
+    setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-ZU")
 
-    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-Co")
+    findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-Co")
     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
-    setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-Co")
+    setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-Co")
 
     returnvoid
    end ; code
@@ -249,7 +249,7 @@ class
  trait slot QName(PackageNamespace(""), "root") slotid 9 type QName(PackageNamespace("flash.display"), "DisplayObject") end
  trait method QName(PackageNamespace(""), "_-02Q") flag FINAL dispid 3
   method
-   refid "com.company.assembleegameclient.parameters:Parameters/_-02Q"
+   refid "com.company.assembleegameclient.parameters:Parameters/class/_-02Q"
    returns QName(PackageNamespace(""), "String")
    body
     maxstack 4
@@ -297,7 +297,7 @@ L23:
  end ; trait
  trait method QName(PackageNamespace(""), "_-IO") flag FINAL dispid 4
   method
-   refid "com.company.assembleegameclient.parameters:Parameters/_-IO"
+   refid "com.company.assembleegameclient.parameters:Parameters/class/_-IO"
    returns QName(PackageNamespace(""), "Boolean")
    body
     maxstack 8
@@ -368,7 +368,7 @@ L39:
  end ; trait
  trait method QName(PackageNamespace(""), "_-fK") flag FINAL dispid 5
   method
-   refid "com.company.assembleegameclient.parameters:Parameters/_-fK"
+   refid "com.company.assembleegameclient.parameters:Parameters/class/_-fK"
    returns QName(PackageNamespace(""), "String")
    body
     maxstack 3
@@ -384,7 +384,7 @@ L39:
  end ; trait
  trait method QName(PackageNamespace(""), "_-05w") flag FINAL dispid 6
   method
-   refid "com.company.assembleegameclient.parameters:Parameters/_-05w"
+   refid "com.company.assembleegameclient.parameters:Parameters/class/_-05w"
    returns QName(PackageNamespace(""), "String")
    body
     maxstack 3
@@ -426,10 +426,10 @@ L39:
  trait const QName(PackageNamespace(""), "RANDOM1") slotid 35 type QName(PackageNamespace(""), "String") value Utf8("311f80691451c71b09a13a2a6e") end
  trait const QName(PackageNamespace(""), "RANDOM2") slotid 36 type QName(PackageNamespace(""), "String") value Utf8("72c5583cafb6818995cbd74b80") end
  trait const QName(PackageNamespace(""), "_-sa") slotid 37 type QName(PackageNamespace(""), "String") end
- trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-ZU") slotid 38 type QName(PackageNamespace("flash.net"), "SharedObject") value Null() end
+ trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-ZU") slotid 38 type QName(PackageNamespace("flash.net"), "SharedObject") value Null() end
  trait method QName(PackageNamespace(""), "load") flag FINAL dispid 7
   method
-   refid "com.company.assembleegameclient.parameters:Parameters/load"
+   refid "com.company.assembleegameclient.parameters:Parameters/class/load"
    returns QName(PackageNamespace(""), "void")
    flag NEED_ACTIVATION
    body
@@ -448,15 +448,15 @@ L39:
      pushscope
 
 L6:
-     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-ZU")
+     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-ZU")
      getlex              QName(PackageNamespace("flash.net"), "SharedObject")
      pushstring          "AssembleeGameClientOptions"
      pushstring          "/"
      callproperty        QName(PackageNamespace(""), "getLocal"), 2
-     setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-ZU")
+     setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-ZU")
 
      findproperty        QName(PackageNamespace(""), "data_")
-     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-ZU")
+     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-ZU")
      getproperty         QName(PackageNamespace(""), "data")
      setproperty         QName(PackageNamespace(""), "data_")
 
@@ -502,7 +502,7 @@ L34:
  end ; trait
  trait method QName(PackageNamespace(""), "save") flag FINAL dispid 8
   method
-   refid "com.company.assembleegameclient.parameters:Parameters/save"
+   refid "com.company.assembleegameclient.parameters:Parameters/class/save"
    returns QName(PackageNamespace(""), "void")
    body
     maxstack 5
@@ -514,11 +514,11 @@ L34:
      pushscope
 
 L2:
-     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-ZU")
+     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-ZU")
      pushnull
      ifeq                L7
 
-     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-ZU")
+     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-ZU")
      callpropvoid        QName(PackageNamespace(""), "flush"), 0
 
 L7:
@@ -547,10 +547,10 @@ L19:
    end ; body
   end ; method
  end ; trait
- trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-Co") slotid 39 type QName(PackageNamespace("flash.utils"), "Dictionary") end
- trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la") flag FINAL dispid 9
+ trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-Co") slotid 39 type QName(PackageNamespace("flash.utils"), "Dictionary") end
+ trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la") flag FINAL dispid 9
   method
-   refid "com.company.assembleegameclient.parameters:Parameters/_-la"
+   refid "com.company.assembleegameclient.parameters:Parameters/class/com.company.assembleegameclient.parameters:Parameters/class/_-la"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "uint")
    returns QName(PackageNamespace(""), "void")
@@ -571,13 +571,13 @@ L19:
      getlex              QName(PackageNamespace(""), "data_")
      getlocal1
      getlocal2
-     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
 
 L10:
-     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-Co")
+     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-Co")
      getlocal1
      pushtrue
-     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
 
      returnvoid
     end ; code
@@ -586,7 +586,7 @@ L10:
  end ; trait
  trait method QName(PackageNamespace(""), "setKey") flag FINAL dispid 10
   method
-   refid "com.company.assembleegameclient.parameters:Parameters/setKey"
+   refid "com.company.assembleegameclient.parameters:Parameters/class/setKey"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "uint")
    returns QName(PackageNamespace(""), "void")
@@ -606,7 +606,7 @@ L10:
      pushbyte            0
      setlocal            4
 
-     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-Co")
+     getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-Co")
      coerce_a
      setlocal            5
 
@@ -622,7 +622,7 @@ L11:
 
      getlex              QName(PackageNamespace(""), "data_")
      getlocal3
-     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
      getlocal2
      ifne                L27
 
@@ -630,7 +630,7 @@ L11:
      getlocal3
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "_-0Fr")
-     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
 
 L27:
      hasnext2            5, 4
@@ -641,16 +641,16 @@ L27:
      getlex              QName(PackageNamespace(""), "data_")
      getlocal1
      getlocal2
-     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
 
      returnvoid
     end ; code
    end ; body
   end ; method
  end ; trait
- trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw") flag FINAL dispid 11
+ trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw") flag FINAL dispid 11
   method
-   refid "com.company.assembleegameclient.parameters:Parameters/_-iw"
+   refid "com.company.assembleegameclient.parameters:Parameters/class/com.company.assembleegameclient.parameters:Parameters/class/_-iw"
    param QName(PackageNamespace(""), "String")
    param null
    returns QName(PackageNamespace(""), "void")
@@ -671,7 +671,7 @@ L27:
      getlex              QName(PackageNamespace(""), "data_")
      getlocal1
      getlocal2
-     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
+     setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
 
 L10:
      returnvoid
@@ -681,7 +681,7 @@ L10:
  end ; trait
  trait method QName(PackageNamespace(""), "_-fX") flag FINAL dispid 12
   method
-   refid "com.company.assembleegameclient.parameters:Parameters/_-fX"
+   refid "com.company.assembleegameclient.parameters:Parameters/class/_-fX"
    returns QName(PackageNamespace(""), "void")
    body
     maxstack 6
@@ -692,244 +692,244 @@ L10:
      getlocal0
      pushscope
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "moveLeft"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "A")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "moveRight"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "D")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "moveUp"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "W")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "moveDown"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "S")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "rotateLeft"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "Q")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "rotateRight"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "E")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "useSpecial"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "SPACE")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "interact"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "NUMBER_0")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "useInvSlot1"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "NUMBER_1")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "useInvSlot2"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "NUMBER_2")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "useInvSlot3"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "NUMBER_3")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "useInvSlot4"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "NUMBER_4")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "useInvSlot5"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "NUMBER_5")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "useInvSlot6"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "NUMBER_6")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "useInvSlot7"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "NUMBER_7")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "useInvSlot8"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "NUMBER_8")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "escapeToNexus"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "_-SS")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "escapeToNexus2"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "F5")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "autofireToggle"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "I")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "scrollChatUp"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "_-R0")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "scrollChatDown"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "_-xs")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "miniMapZoomOut"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "_-0FK")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "miniMapZoomIn"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "_-0Ef")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "resetToDefaultCameraAngle"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "R")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "togglePerformanceStats"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "_-0Fr")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "options"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "O")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "toggleCentering"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "_-0Fr")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "chat"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "ENTER")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "chatCommand"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "_-jE")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "tell"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "TAB")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "guildChat"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "G")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la")
      pushstring          "toggleFullscreen"
      getlex              QName(PackageNamespace("com.company.util"), "_-HV")
      getproperty         QName(PackageNamespace(""), "_-0Fr")
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-la"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-la"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "playerObjectType"
      pushshort           782
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "playMusic"
      pushtrue
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "playSFX"
      pushtrue
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "playPewPew"
      pushtrue
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "centerOnPlayer"
      pushtrue
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "preferredServer"
      pushnull
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "needsTutorial"
      pushtrue
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "needsNexusTutorial"
      pushtrue
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "needsRandomRealm"
      pushtrue
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "cameraAngle"
      pushbyte            7
      getlex              QName(PackageNamespace(""), "Math")
@@ -937,9 +937,9 @@ L10:
      multiply
      pushbyte            4
      divide
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "defaultCameraAngle"
      pushbyte            7
      getlex              QName(PackageNamespace(""), "Math")
@@ -947,113 +947,113 @@ L10:
      multiply
      pushbyte            4
      divide
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "showQuestPortraits"
      pushtrue
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "fullscreenMode"
      pushfalse
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "showProtips"
      pushtrue
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "protipIndex"
      pushbyte            0
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "joinDate"
      getlex              QName(PackageNamespace("com.company.util"), "_-0As")
      callproperty        QName(PackageNamespace(""), "_-mP"), 0
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "lastDailyAnalytics"
      pushnull
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "allowRotation"
      pushfalse
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "charIdUseMap"
      newobject           0
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "drawShadows"
      pushtrue
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "textBubbles"
      pushtrue
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "showTradePopup"
      pushtrue
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "paymentMethod"
      pushnull
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "filterLanguage"
      pushtrue
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "showGuildInvitePopup"
      pushtrue
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "showBeginnersOffer"
      pushfalse
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "beginnersOfferTimeLeft"
      pushbyte            0
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "beginnersOfferShowNow"
      pushfalse
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "beginnersOfferShowNowTime"
      pushbyte            0
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "watchForTutorialExit"
      pushfalse
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "contextualClick"
      pushtrue
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
-     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw")
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw")
      pushstring          "clickForGold"
      pushfalse
-     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), "_-iw"), 2
+     callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), "_-iw"), 2
 
      getlex              QName(PackageNamespace(""), "data_")
      pushstring          "needsSurvey"
@@ -1062,8 +1062,8 @@ L10:
 
      getlex              QName(PackageNamespace(""), "data_")
      getlex              QName(PackageNamespace(""), "data_")
-     getproperty         Multiname("needsTutorial", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
-     setproperty         Multiname("needsSurvey", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
+     getproperty         Multiname("needsTutorial", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
+     setproperty         Multiname("needsSurvey", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
 
      jump                L401
 
@@ -1071,17 +1071,17 @@ L310:
      label
      getlex              QName(PackageNamespace(""), "data_")
      pushbyte            0
-     setproperty         Multiname("surveyDate", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
+     setproperty         Multiname("surveyDate", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
 
      getlex              QName(PackageNamespace(""), "data_")
      pushbyte            5
      pushbyte            60
      multiply
-     setproperty         Multiname("playTimeLeftTillSurvey", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
+     setproperty         Multiname("playTimeLeftTillSurvey", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
 
      getlex              QName(PackageNamespace(""), "data_")
      pushstring          "5MinPlaytime"
-     setproperty         Multiname("surveyGroup", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
+     setproperty         Multiname("surveyGroup", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
 
      jump                L436
 
@@ -1089,17 +1089,17 @@ L323:
      label
      getlex              QName(PackageNamespace(""), "data_")
      pushbyte            0
-     setproperty         Multiname("surveyDate", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
+     setproperty         Multiname("surveyDate", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
 
      getlex              QName(PackageNamespace(""), "data_")
      pushbyte            10
      pushbyte            60
      multiply
-     setproperty         Multiname("playTimeLeftTillSurvey", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
+     setproperty         Multiname("playTimeLeftTillSurvey", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
 
      getlex              QName(PackageNamespace(""), "data_")
      pushstring          "10MinPlaytime"
-     setproperty         Multiname("surveyGroup", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
+     setproperty         Multiname("surveyGroup", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
 
      jump                L436
 
@@ -1107,17 +1107,17 @@ L336:
      label
      getlex              QName(PackageNamespace(""), "data_")
      pushbyte            0
-     setproperty         Multiname("surveyDate", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
+     setproperty         Multiname("surveyDate", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
 
      getlex              QName(PackageNamespace(""), "data_")
      pushbyte            30
      pushbyte            60
      multiply
-     setproperty         Multiname("playTimeLeftTillSurvey", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
+     setproperty         Multiname("playTimeLeftTillSurvey", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
 
      getlex              QName(PackageNamespace(""), "data_")
      pushstring          "30MinPlaytime"
-     setproperty         Multiname("surveyGroup", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
+     setproperty         Multiname("surveyGroup", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
 
      jump                L436
 
@@ -1137,17 +1137,17 @@ L349:
      pushbyte            7
      multiply
      add
-     setproperty         Multiname("surveyDate", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
+     setproperty         Multiname("surveyDate", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
 
      getlex              QName(PackageNamespace(""), "data_")
      pushbyte            2
      pushbyte            60
      multiply
-     setproperty         Multiname("playTimeLeftTillSurvey", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
+     setproperty         Multiname("playTimeLeftTillSurvey", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
 
      getlex              QName(PackageNamespace(""), "data_")
      pushstring          "1WeekRealtime"
-     setproperty         Multiname("surveyGroup", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
+     setproperty         Multiname("surveyGroup", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
 
      jump                L436
 
@@ -1167,17 +1167,17 @@ L374:
      pushbyte            14
      multiply
      add
-     setproperty         Multiname("surveyDate", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
+     setproperty         Multiname("surveyDate", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
 
      getlex              QName(PackageNamespace(""), "data_")
      pushbyte            2
      pushbyte            60
      multiply
-     setproperty         Multiname("playTimeLeftTillSurvey", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
+     setproperty         Multiname("playTimeLeftTillSurvey", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
 
      getlex              QName(PackageNamespace(""), "data_")
      pushstring          "2WeekRealtime"
-     setproperty         Multiname("surveyGroup", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
+     setproperty         Multiname("surveyGroup", [PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.parameters"), PrivateNamespace("*", "com.company.assembleegameclient.parameters:Parameters/class#1"), PackageInternalNs("com.company.assembleegameclient.parameters"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0LD"), StaticProtectedNs("_-0LD")])
 
      jump                L436
 

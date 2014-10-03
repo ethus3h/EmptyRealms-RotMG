@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-0BV")
   iinit
-   refid "_-Z6:JSONParseError/iinit"
+   refid "_-Z6:JSONParseError/instance/init"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "int")
    param QName(PackageNamespace(""), "String")
@@ -33,21 +33,21 @@ class
 
      getlocal0
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "_-Z6:JSONParseError"), "_location")
+     initproperty        QName(PrivateNamespace("*", "_-Z6:JSONParseError/instance"), "_location")
 
      getlocal0
      getlocal3
-     initproperty        QName(PrivateNamespace("*", "_-Z6:JSONParseError"), "_text")
+     initproperty        QName(PrivateNamespace("*", "_-Z6:JSONParseError/instance"), "_text")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-Z6:JSONParseError"), "_location") type QName(PackageNamespace(""), "int") end
-  trait slot QName(PrivateNamespace("*", "_-Z6:JSONParseError"), "_text") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "_-Z6:JSONParseError/instance"), "_location") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "_-Z6:JSONParseError/instance"), "_text") type QName(PackageNamespace(""), "String") end
   trait getter QName(PackageNamespace(""), "location")
    method
-    refid "_-Z6:JSONParseError/location/getter"
+    refid "_-Z6:JSONParseError/instance/location/getter"
     returns QName(PackageNamespace(""), "int")
     body
      maxstack 3
@@ -59,7 +59,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Z6:JSONParseError"), "_location")
+      getproperty         QName(PrivateNamespace("*", "_-Z6:JSONParseError/instance"), "_location")
       returnvalue
      end ; code
     end ; body
@@ -67,7 +67,7 @@ class
   end ; trait
   trait getter QName(PackageNamespace(""), "text")
    method
-    refid "_-Z6:JSONParseError/text/getter"
+    refid "_-Z6:JSONParseError/instance/text/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -79,7 +79,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Z6:JSONParseError"), "_text")
+      getproperty         QName(PrivateNamespace("*", "_-Z6:JSONParseError/instance"), "_text")
       returnvalue
      end ; code
     end ; body
@@ -87,7 +87,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-Z6:JSONParseError/cinit"
+  refid "_-Z6:JSONParseError/class/init"
   body
    maxstack 3
    localcount 1

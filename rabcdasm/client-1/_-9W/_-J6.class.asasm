@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-lq")
   iinit
-   refid "_-9W:_-J6/iinit"
+   refid "_-9W:_-J6/instance/init"
    param QName(PackageNamespace("_-0-p"), "_-Ly")
    param QName(PackageNamespace("_-s3"), "_-im")
    body
@@ -22,7 +22,7 @@ class
      getlex              QName(PackageNamespace("_-03T"), "_-078")
      getlex              QName(PackageNamespace("_-9W"), "_-J6")
      callproperty        QName(PackageNamespace(""), "create"), 1
-     initproperty        QName(PrivateNamespace("*", "_-9W:_-J6"), "_-ul")
+     initproperty        QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-ul")
 
      getlocal0
      constructsuper      0
@@ -31,38 +31,38 @@ class
      getlocal1
      getlocal0
      callproperty        QName(Namespace("_-06J"), "_-0H4"), 1
-     initproperty        QName(PrivateNamespace("*", "_-9W:_-J6"), "_-eo")
+     initproperty        QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-eo")
 
      getlocal0
      getlocal1
      getproperty         QName(Namespace("_-06J"), "_-OR")
-     initproperty        QName(PrivateNamespace("*", "_-9W:_-J6"), "_-vz")
+     initproperty        QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-vz")
 
      getlocal0
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "_-9W:_-J6"), "_-yv")
+     initproperty        QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-yv")
 
      getlocal1
      getproperty         QName(Namespace("_-06J"), "_-iL")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "destroy")
+     getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "destroy")
      callpropvoid        QName(Namespace("_-CZ"), "_-kf"), 1
 
      getlocal0
-     callpropvoid        QName(PrivateNamespace("*", "_-9W:_-J6"), "init"), 0
+     callpropvoid        QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "init"), 0
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait const QName(PrivateNamespace("*", "_-9W:_-J6"), "_-ul") type QName(PackageNamespace(""), "String") end
-  trait slot QName(PrivateNamespace("*", "_-9W:_-J6"), "_-eo") type QName(PackageNamespace("_-0-p"), "_-Q5") end
-  trait slot QName(PrivateNamespace("*", "_-9W:_-J6"), "_-vz") type QName(PackageNamespace("_-eZ"), "_-08b") end
-  trait slot QName(PrivateNamespace("*", "_-9W:_-J6"), "_-yv") type QName(PackageNamespace("_-s3"), "_-im") end
-  trait slot QName(PrivateNamespace("*", "_-9W:_-J6"), "_-xO") type QName(PackageNamespace("_-0-p"), "_-Ly") end
+  trait const QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-ul") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-eo") type QName(PackageNamespace("_-0-p"), "_-Q5") end
+  trait slot QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-vz") type QName(PackageNamespace("_-eZ"), "_-08b") end
+  trait slot QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-yv") type QName(PackageNamespace("_-s3"), "_-im") end
+  trait slot QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-xO") type QName(PackageNamespace("_-0-p"), "_-Ly") end
   trait method QName(PackageNamespace(""), "toString")
    method
-    refid "_-9W:_-J6/toString"
+    refid "_-9W:_-J6/instance/toString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -74,15 +74,15 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-ul")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-ul")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-9W:_-J6"), "init")
+  trait method QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "init")
    method
-    refid "_-9W:_-J6/init"
+    refid "_-9W:_-J6/instance/_-9W:_-J6/instance/init"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 5
@@ -101,7 +101,7 @@ class
       setlocal2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-yv")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-yv")
       getproperty         QName(Namespace("_-0Im"), "_-07z")
       coerce_a
       setlocal3
@@ -117,7 +117,7 @@ L13:
       setlocal1
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-eo")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-eo")
       pushstring          "Adding context existence event listener to container {0}"
       getlocal1
       newarray            1
@@ -127,7 +127,7 @@ L13:
       getlex              QName(PackageNamespace("_-9W"), "ModularContextEvent")
       getproperty         QName(PackageNamespace(""), "_-qb")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-R")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-R")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
 L31:
@@ -137,19 +137,19 @@ L31:
       kill                3
       kill                2
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-yv")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-yv")
       getlex              QName(PackageNamespace("_-lo"), "_-nR")
       getproperty         QName(PackageNamespace(""), "_-0Kh")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-wC")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-wC")
       callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "addEventListener"), 2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-yv")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-yv")
       getlex              QName(PackageNamespace("_-lo"), "_-nR")
       getproperty         QName(PackageNamespace(""), "_-mh")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-B8")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-B8")
       callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "addEventListener"), 2
 
       returnvoid
@@ -157,9 +157,9 @@ L31:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-9W:_-J6"), "destroy")
+  trait method QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "destroy")
    method
-    refid "_-9W:_-J6/destroy"
+    refid "_-9W:_-J6/instance/_-9W:_-J6/instance/destroy"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 5
@@ -178,7 +178,7 @@ L31:
       setlocal2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-yv")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-yv")
       getproperty         QName(Namespace("_-0Im"), "_-07z")
       coerce_a
       setlocal3
@@ -194,7 +194,7 @@ L13:
       setlocal1
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-eo")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-eo")
       pushstring          "Removing context existence event listener from container {0}"
       getlocal1
       newarray            1
@@ -204,7 +204,7 @@ L13:
       getlex              QName(PackageNamespace("_-9W"), "ModularContextEvent")
       getproperty         QName(PackageNamespace(""), "_-qb")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-R")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-R")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
 L31:
@@ -214,35 +214,35 @@ L31:
       kill                3
       kill                2
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-yv")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-yv")
       getlex              QName(PackageNamespace("_-lo"), "_-nR")
       getproperty         QName(PackageNamespace(""), "_-0Kh")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-wC")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-wC")
       callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "removeEventListener"), 2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-yv")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-yv")
       getlex              QName(PackageNamespace("_-lo"), "_-nR")
       getproperty         QName(PackageNamespace(""), "_-mh")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-B8")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-B8")
       callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "removeEventListener"), 2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-xO")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-xO")
       iffalse             L64
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-eo")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-eo")
       pushstring          "Unlinking parent injector for child context {0}"
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-xO")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-xO")
       newarray            1
       callpropvoid        QName(Namespace("_-4t"), "debug"), 2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-xO")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-xO")
       getproperty         QName(Namespace("_-06J"), "_-OR")
       pushnull
       setproperty         QName(PackageNamespace(""), "_-k")
@@ -253,9 +253,9 @@ L64:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-9W:_-J6"), "_-wC")
+  trait method QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-wC")
    method
-    refid "_-9W:_-J6/_-wC"
+    refid "_-9W:_-J6/instance/_-9W:_-J6/instance/_-wC"
     param QName(PackageNamespace("_-lo"), "_-nR")
     returns QName(PackageNamespace(""), "void")
     body
@@ -268,7 +268,7 @@ L64:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-eo")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-eo")
       pushstring          "Adding context existence event listener to container {0}"
       getlocal1
       getproperty         QName(PackageNamespace(""), "container")
@@ -280,7 +280,7 @@ L64:
       getlex              QName(PackageNamespace("_-9W"), "ModularContextEvent")
       getproperty         QName(PackageNamespace(""), "_-qb")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-R")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-R")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       returnvoid
@@ -288,9 +288,9 @@ L64:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-9W:_-J6"), "_-B8")
+  trait method QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-B8")
    method
-    refid "_-9W:_-J6/_-B8"
+    refid "_-9W:_-J6/instance/_-9W:_-J6/instance/_-B8"
     param QName(PackageNamespace("_-lo"), "_-nR")
     returns QName(PackageNamespace(""), "void")
     body
@@ -303,7 +303,7 @@ L64:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-eo")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-eo")
       pushstring          "Removing context existence event listener from container {0}"
       getlocal1
       getproperty         QName(PackageNamespace(""), "container")
@@ -315,7 +315,7 @@ L64:
       getlex              QName(PackageNamespace("_-9W"), "ModularContextEvent")
       getproperty         QName(PackageNamespace(""), "_-qb")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-R")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-R")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
       returnvoid
@@ -323,9 +323,9 @@ L64:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-9W:_-J6"), "_-R")
+  trait method QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-R")
    method
-    refid "_-9W:_-J6/_-R"
+    refid "_-9W:_-J6/instance/_-9W:_-J6/instance/_-R"
     param QName(PackageNamespace("_-9W"), "ModularContextEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -343,21 +343,21 @@ L64:
       getlocal0
       getlocal1
       getproperty         QName(PackageNamespace(""), "context")
-      initproperty        QName(PrivateNamespace("*", "_-9W:_-J6"), "_-xO")
+      initproperty        QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-xO")
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-eo")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-eo")
       pushstring          "Context existence event caught. Configuring child context {0}"
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-xO")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-xO")
       newarray            1
       callpropvoid        QName(Namespace("_-4t"), "debug"), 2
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-xO")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-xO")
       getproperty         QName(Namespace("_-06J"), "_-OR")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6"), "_-vz")
+      getproperty         QName(PrivateNamespace("*", "_-9W:_-J6/instance"), "_-vz")
       setproperty         QName(PackageNamespace(""), "_-k")
 
       returnvoid
@@ -367,7 +367,7 @@ L64:
   end ; trait
  end ; instance
  cinit
-  refid "_-9W:_-J6/cinit"
+  refid "_-9W:_-J6/class/init"
   body
    maxstack 3
    localcount 1

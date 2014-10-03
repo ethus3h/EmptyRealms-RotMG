@@ -7,7 +7,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-JP")
   iinit
-   refid "_-MT:_-ON/iinit"
+   refid "_-MT:_-ON/instance/init"
    param QName(PackageNamespace("flash.events"), "IEventDispatcher")
    flag HAS_OPTIONAL
    optional Null()
@@ -24,7 +24,7 @@ class
      getlex              QName(PackageNamespace("_-03T"), "_-078")
      getlex              QName(PackageNamespace("_-MT"), "_-ON")
      callproperty        QName(PackageNamespace(""), "create"), 1
-     initproperty        QName(PrivateNamespace("*", "_-MT:_-ON"), "_-ul")
+     initproperty        QName(PrivateNamespace("*", "_-MT:_-ON/instance"), "_-ul")
 
      getlocal0
      constructsuper      0
@@ -40,17 +40,17 @@ class
      constructprop       QName(PackageNamespace("flash.events"), "EventDispatcher"), 0
      coerce              QName(PackageNamespace("flash.events"), "IEventDispatcher")
 L18:
-     initproperty        QName(PrivateNamespace("*", "_-MT:_-ON"), "_eventDispatcher")
+     initproperty        QName(PrivateNamespace("*", "_-MT:_-ON/instance"), "_eventDispatcher")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait const QName(PrivateNamespace("*", "_-MT:_-ON"), "_-ul") type QName(PackageNamespace(""), "String") end
-  trait slot QName(PrivateNamespace("*", "_-MT:_-ON"), "_eventDispatcher") type QName(PackageNamespace("flash.events"), "IEventDispatcher") end
+  trait const QName(PrivateNamespace("*", "_-MT:_-ON/instance"), "_-ul") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "_-MT:_-ON/instance"), "_eventDispatcher") type QName(PackageNamespace("flash.events"), "IEventDispatcher") end
   trait method QName(PackageNamespace(""), "extend")
    method
-    refid "_-MT:_-ON/extend"
+    refid "_-MT:_-ON/instance/extend"
     param QName(PackageNamespace("_-0-p"), "_-Ly")
     returns QName(PackageNamespace(""), "void")
     body
@@ -67,7 +67,7 @@ L18:
       getlex              QName(PackageNamespace("flash.events"), "IEventDispatcher")
       callproperty        QName(PackageNamespace(""), "map"), 1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-MT:_-ON"), "_eventDispatcher")
+      getproperty         QName(PrivateNamespace("*", "_-MT:_-ON/instance"), "_eventDispatcher")
       callpropvoid        QName(PackageNamespace(""), "_-q3"), 1
 
       returnvoid
@@ -77,7 +77,7 @@ L18:
   end ; trait
   trait method QName(PackageNamespace(""), "toString")
    method
-    refid "_-MT:_-ON/toString"
+    refid "_-MT:_-ON/instance/toString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -89,7 +89,7 @@ L18:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-MT:_-ON"), "_-ul")
+      getproperty         QName(PrivateNamespace("*", "_-MT:_-ON/instance"), "_-ul")
       returnvalue
      end ; code
     end ; body
@@ -97,7 +97,7 @@ L18:
   end ; trait
  end ; instance
  cinit
-  refid "_-MT:_-ON/cinit"
+  refid "_-MT:_-ON/class/init"
   body
    maxstack 3
    localcount 1

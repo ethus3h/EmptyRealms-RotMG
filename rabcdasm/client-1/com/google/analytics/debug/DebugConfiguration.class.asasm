@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("com.google.analytics.debug:DebugConfiguration")
   iinit
-   refid "com.google.analytics.debug:DebugConfiguration/iinit"
+   refid "com.google.analytics.debug:DebugConfiguration/instance/init"
    body
     maxstack 2
     localcount 1
@@ -16,10 +16,10 @@ class
      getlocal0
      pushscope
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_mode")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_mode")
      getlex              QName(PackageNamespace("com.google.analytics.debug"), "VisualDebugMode")
      getproperty         QName(PackageNamespace(""), "basic")
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_mode")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_mode")
 
      findproperty        QName(PackageNamespace(""), "showHideKey")
      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
@@ -39,13 +39,13 @@ class
    end ; body
   end ; method
   trait slot QName(PackageNamespace(""), "showHideKey") type QName(PackageNamespace(""), "Number") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_mode") type QName(PackageNamespace("com.google.analytics.debug"), "VisualDebugMode") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_verbose") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_mode") type QName(PackageNamespace("com.google.analytics.debug"), "VisualDebugMode") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_verbose") type QName(PackageNamespace(""), "Boolean") value False() end
   trait slot QName(PackageNamespace(""), "destroyKey") type QName(PackageNamespace(""), "Number") end
   trait slot QName(PackageNamespace(""), "GIFRequests") type QName(PackageNamespace(""), "Boolean") value False() end
   trait getter QName(PackageNamespace(""), "verbose")
    method
-    refid "com.google.analytics.debug:DebugConfiguration/verbose/getter"
+    refid "com.google.analytics.debug:DebugConfiguration/instance/verbose/getter"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 1
@@ -56,7 +56,7 @@ class
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_verbose")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_verbose")
       returnvalue
      end ; code
     end ; body
@@ -64,7 +64,7 @@ class
   end ; trait
   trait setter QName(PackageNamespace(""), "verbose")
    method
-    refid "com.google.analytics.debug:DebugConfiguration/verbose/setter"
+    refid "com.google.analytics.debug:DebugConfiguration/instance/verbose/setter"
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
     body
@@ -76,9 +76,9 @@ class
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_verbose")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_verbose")
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_verbose")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_verbose")
 
       returnvoid
      end ; code
@@ -87,7 +87,7 @@ class
   end ; trait
   trait setter QName(PackageNamespace(""), "mode")
    method
-    refid "com.google.analytics.debug:DebugConfiguration/mode/setter"
+    refid "com.google.analytics.debug:DebugConfiguration/instance/mode/setter"
     param null
     returns QName(PackageNamespace(""), "void")
     body
@@ -167,9 +167,9 @@ L43:
       lookupswitch        L19, [L7, L13, L19, L19]
 
 L45:
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_mode")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_mode")
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_mode")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_mode")
 
       returnvoid
      end ; code
@@ -179,7 +179,7 @@ L45:
   trait slot QName(PackageNamespace(""), "showInfos") type QName(PackageNamespace(""), "Boolean") value True() end
   trait method QName(PackageNamespace(""), "success")
    method
-    refid "com.google.analytics.debug:DebugConfiguration/success"
+    refid "com.google.analytics.debug:DebugConfiguration/instance/success"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -219,7 +219,7 @@ L16:
   trait slot QName(PackageNamespace(""), "infoTimeout") type QName(PackageNamespace(""), "Number") value Integer(1000) end
   trait getter QName(PackageNamespace(""), "active")
    method
-    refid "com.google.analytics.debug:DebugConfiguration/active/getter"
+    refid "com.google.analytics.debug:DebugConfiguration/instance/active/getter"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 1
@@ -230,15 +230,15 @@ L16:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_active")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_active")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_initializeVisual")
+  trait method QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_initializeVisual")
    method
-    refid "com.google.analytics.debug:DebugConfiguration/_initializeVisual"
+    refid "com.google.analytics.debug:DebugConfiguration/instance/com.google.analytics.debug:DebugConfiguration/instance/_initializeVisual"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -255,9 +255,9 @@ L16:
       getlex              QName(PackageNamespace(""), "layout")
       callpropvoid        QName(Namespace("com.google.analytics.debug:ILayout"), "init"), 0
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_visualInitialized")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_visualInitialized")
       pushtrue
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_visualInitialized")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_visualInitialized")
 
 L9:
       returnvoid
@@ -265,9 +265,9 @@ L9:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_destroyVisual")
+  trait method QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_destroyVisual")
    method
-    refid "com.google.analytics.debug:DebugConfiguration/_destroyVisual"
+    refid "com.google.analytics.debug:DebugConfiguration/instance/com.google.analytics.debug:DebugConfiguration/instance/_destroyVisual"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -284,7 +284,7 @@ L9:
       iffalse             L9
 
       pop
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_visualInitialized")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_visualInitialized")
       convert_b
 L9:
       iffalse             L12
@@ -300,7 +300,7 @@ L12:
   end ; trait
   trait method QName(PackageNamespace(""), "warning")
    method
-    refid "com.google.analytics.debug:DebugConfiguration/warning"
+    refid "com.google.analytics.debug:DebugConfiguration/instance/warning"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace("com.google.analytics.debug"), "VisualDebugMode")
     returns QName(PackageNamespace(""), "void")
@@ -315,9 +315,9 @@ L12:
       getlocal0
       pushscope
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_filter")
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_filter")
       getlocal2
-      callproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_filter"), 1
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_filter"), 1
       iffalse             L7
 
       returnvoid
@@ -357,9 +357,9 @@ L27:
    end ; method
   end ; trait
   trait slot QName(PackageNamespace(""), "minimizedOnStart") type QName(PackageNamespace(""), "Boolean") value False() end
-  trait method QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_filter")
+  trait method QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_filter")
    method
-    refid "com.google.analytics.debug:DebugConfiguration/_filter"
+    refid "com.google.analytics.debug:DebugConfiguration/instance/com.google.analytics.debug:DebugConfiguration/instance/_filter"
     param QName(PackageNamespace("com.google.analytics.debug"), "VisualDebugMode")
     returns QName(PackageNamespace(""), "Boolean")
     flag HAS_OPTIONAL
@@ -395,7 +395,7 @@ L15:
   end ; trait
   trait method QName(PackageNamespace(""), "failure")
    method
-    refid "com.google.analytics.debug:DebugConfiguration/failure"
+    refid "com.google.analytics.debug:DebugConfiguration/instance/failure"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -434,7 +434,7 @@ L16:
   end ; trait
   trait getter QName(PackageNamespace(""), "mode")
    method
-    refid "com.google.analytics.debug:DebugConfiguration/mode/getter"
+    refid "com.google.analytics.debug:DebugConfiguration/instance/mode/getter"
     body
      maxstack 1
      localcount 1
@@ -444,7 +444,7 @@ L16:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_mode")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_mode")
       returnvalue
      end ; code
     end ; body
@@ -452,7 +452,7 @@ L16:
   end ; trait
   trait setter QName(PackageNamespace(""), "active")
    method
-    refid "com.google.analytics.debug:DebugConfiguration/active/setter"
+    refid "com.google.analytics.debug:DebugConfiguration/instance/active/setter"
     param QName(PackageNamespace(""), "Boolean")
     returns QName(PackageNamespace(""), "void")
     body
@@ -464,21 +464,21 @@ L16:
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_active")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_active")
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_active")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_active")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_active")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_active")
       iffalse             L10
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_initializeVisual")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_initializeVisual"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_initializeVisual")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_initializeVisual"), 0
 
       jump                L12
 
 L10:
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_destroyVisual")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_destroyVisual"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_destroyVisual")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_destroyVisual"), 0
 
 L12:
       returnvoid
@@ -486,11 +486,11 @@ L12:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_active") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_active") type QName(PackageNamespace(""), "Boolean") value False() end
   trait slot QName(PackageNamespace(""), "traceOutput") type QName(PackageNamespace(""), "Boolean") value False() end
   trait method QName(ProtectedNamespace("com.google.analytics.debug:DebugConfiguration"), "trace")
    method
-    refid "com.google.analytics.debug:DebugConfiguration:trace"
+    refid "com.google.analytics.debug:DebugConfiguration/instance/com.google.analytics.debug:DebugConfiguration:trace"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -563,7 +563,7 @@ L46:
       label
       getlocal            7
       getlocal            8
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration:trace"), PackageInternalNs("com.google.analytics.debug"), ProtectedNamespace("com.google.analytics.debug:DebugConfiguration"), StaticProtectedNs("com.google.analytics.debug:DebugConfiguration"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance/com.google.analytics.debug:DebugConfiguration:trace"), PackageInternalNs("com.google.analytics.debug"), ProtectedNamespace("com.google.analytics.debug:DebugConfiguration"), StaticProtectedNs("com.google.analytics.debug:DebugConfiguration"), StaticProtectedNs("Object")])
       pushstring          ""
       ifne                L53
 
@@ -578,7 +578,7 @@ L53:
       getlocal3
       getlocal            7
       getlocal            8
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration:trace"), PackageInternalNs("com.google.analytics.debug"), ProtectedNamespace("com.google.analytics.debug:DebugConfiguration"), StaticProtectedNs("com.google.analytics.debug:DebugConfiguration"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance/com.google.analytics.debug:DebugConfiguration:trace"), PackageInternalNs("com.google.analytics.debug"), ProtectedNamespace("com.google.analytics.debug:DebugConfiguration"), StaticProtectedNs("com.google.analytics.debug:DebugConfiguration"), StaticProtectedNs("Object")])
       add
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
@@ -589,7 +589,7 @@ L64:
       getlocal            4
       getlocal            7
       getlocal            8
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration:trace"), PackageInternalNs("com.google.analytics.debug"), ProtectedNamespace("com.google.analytics.debug:DebugConfiguration"), StaticProtectedNs("com.google.analytics.debug:DebugConfiguration"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance/com.google.analytics.debug:DebugConfiguration:trace"), PackageInternalNs("com.google.analytics.debug"), ProtectedNamespace("com.google.analytics.debug:DebugConfiguration"), StaticProtectedNs("com.google.analytics.debug:DebugConfiguration"), StaticProtectedNs("Object")])
       add
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
@@ -626,7 +626,7 @@ L89:
       findpropstrict      QName(PackageNamespace(""), "trace")
       getlocal2
       getlocal            6
-      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration:trace"), PackageInternalNs("com.google.analytics.debug"), ProtectedNamespace("com.google.analytics.debug:DebugConfiguration"), StaticProtectedNs("com.google.analytics.debug:DebugConfiguration"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), PackageNamespace("com.google.analytics.debug"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance/com.google.analytics.debug:DebugConfiguration:trace"), PackageInternalNs("com.google.analytics.debug"), ProtectedNamespace("com.google.analytics.debug:DebugConfiguration"), StaticProtectedNs("com.google.analytics.debug:DebugConfiguration"), StaticProtectedNs("Object")])
       callpropvoid        QName(PackageNamespace(""), "trace"), 1
 
       inclocal_i          6
@@ -643,7 +643,7 @@ L96:
   trait slot QName(PackageNamespace(""), "layout") type QName(PackageNamespace("com.google.analytics.debug"), "ILayout") end
   trait method QName(PackageNamespace(""), "alert")
    method
-    refid "com.google.analytics.debug:DebugConfiguration/alert"
+    refid "com.google.analytics.debug:DebugConfiguration/instance/alert"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -684,7 +684,7 @@ L16:
   trait slot QName(PackageNamespace(""), "javascript") type QName(PackageNamespace(""), "Boolean") value False() end
   trait method QName(PackageNamespace(""), "info")
    method
-    refid "com.google.analytics.debug:DebugConfiguration/info"
+    refid "com.google.analytics.debug:DebugConfiguration/instance/info"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace("com.google.analytics.debug"), "VisualDebugMode")
     returns QName(PackageNamespace(""), "void")
@@ -699,9 +699,9 @@ L16:
       getlocal0
       pushscope
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_filter")
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_filter")
       getlocal2
-      callproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_filter"), 1
+      callproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_filter"), 1
       iffalse             L7
 
       returnvoid
@@ -737,10 +737,10 @@ L23:
    end ; method
   end ; trait
   trait slot QName(PackageNamespace(""), "showWarnings") type QName(PackageNamespace(""), "Boolean") value True() end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_visualInitialized") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration/instance"), "_visualInitialized") type QName(PackageNamespace(""), "Boolean") value False() end
   trait method QName(PackageNamespace(""), "alertGifRequest")
    method
-    refid "com.google.analytics.debug:DebugConfiguration/alertGifRequest"
+    refid "com.google.analytics.debug:DebugConfiguration/instance/alertGifRequest"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace("flash.net"), "URLRequest")
     param QName(PackageNamespace("com.google.analytics.core"), "GIFRequest")
@@ -783,7 +783,7 @@ L18:
   end ; trait
  end ; instance
  cinit
-  refid "com.google.analytics.debug:DebugConfiguration/cinit"
+  refid "com.google.analytics.debug:DebugConfiguration/class/init"
   body
    maxstack 1
    localcount 1

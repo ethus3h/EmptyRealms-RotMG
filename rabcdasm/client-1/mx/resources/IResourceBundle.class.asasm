@@ -4,29 +4,29 @@ class
   flag SEALED
   flag INTERFACE
   iinit
-   refid "mx.resources:IResourceBundle/iinit"
+   refid "mx.resources:IResourceBundle/instance/init"
   end ; method
   trait getter QName(Namespace("mx.resources:IResourceBundle"), "bundleName")
    method
-    refid "mx.resources:IResourceBundle:bundleName/getter"
+    refid "mx.resources:IResourceBundle/instance/mx.resources:IResourceBundle:bundleName/getter"
     returns QName(PackageNamespace(""), "String")
    end ; method
   end ; trait
   trait getter QName(Namespace("mx.resources:IResourceBundle"), "content")
    method
-    refid "mx.resources:IResourceBundle:content/getter"
+    refid "mx.resources:IResourceBundle/instance/mx.resources:IResourceBundle:content/getter"
     returns QName(PackageNamespace(""), "Object")
    end ; method
   end ; trait
   trait getter QName(Namespace("mx.resources:IResourceBundle"), "locale")
    method
-    refid "mx.resources:IResourceBundle:locale/getter"
+    refid "mx.resources:IResourceBundle/instance/mx.resources:IResourceBundle:locale/getter"
     returns QName(PackageNamespace(""), "String")
    end ; method
   end ; trait
  end ; instance
  cinit
-  refid "mx.resources:IResourceBundle/cinit"
+  refid "mx.resources:IResourceBundle/class/init"
   body
    maxstack 0
    localcount 1

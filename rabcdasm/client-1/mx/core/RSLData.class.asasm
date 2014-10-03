@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("mx.core:RSLData")
   iinit
-   refid "mx.core:RSLData/iinit"
+   refid "mx.core:RSLData/instance/init"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "String")
@@ -36,45 +36,45 @@ class
 
      getlocal0
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "mx.core:RSLData"), "_rslURL")
+     initproperty        QName(PrivateNamespace("*", "mx.core:RSLData/instance"), "_rslURL")
 
      getlocal0
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "mx.core:RSLData"), "_policyFileURL")
+     initproperty        QName(PrivateNamespace("*", "mx.core:RSLData/instance"), "_policyFileURL")
 
      getlocal0
      getlocal3
-     initproperty        QName(PrivateNamespace("*", "mx.core:RSLData"), "_digest")
+     initproperty        QName(PrivateNamespace("*", "mx.core:RSLData/instance"), "_digest")
 
      getlocal0
      getlocal            4
-     initproperty        QName(PrivateNamespace("*", "mx.core:RSLData"), "_hashType")
+     initproperty        QName(PrivateNamespace("*", "mx.core:RSLData/instance"), "_hashType")
 
      getlocal0
      getlocal            5
-     initproperty        QName(PrivateNamespace("*", "mx.core:RSLData"), "_isSigned")
+     initproperty        QName(PrivateNamespace("*", "mx.core:RSLData/instance"), "_isSigned")
 
      getlocal0
      getlocal            6
-     initproperty        QName(PrivateNamespace("*", "mx.core:RSLData"), "_verifyDigest")
+     initproperty        QName(PrivateNamespace("*", "mx.core:RSLData/instance"), "_verifyDigest")
 
      getlocal0
      getlocal            7
-     initproperty        QName(PrivateNamespace("*", "mx.core:RSLData"), "_applicationDomainTarget")
+     initproperty        QName(PrivateNamespace("*", "mx.core:RSLData/instance"), "_applicationDomainTarget")
 
      getlocal0
      getlocal0
      getproperty         QName(PackageNamespace(""), "moduleFactory")
-     initproperty        QName(PrivateNamespace("*", "mx.core:RSLData"), "_moduleFactory")
+     initproperty        QName(PrivateNamespace("*", "mx.core:RSLData/instance"), "_moduleFactory")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "mx.core:RSLData"), "_applicationDomainTarget") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "mx.core:RSLData/instance"), "_applicationDomainTarget") type QName(PackageNamespace(""), "String") end
   trait getter QName(PackageNamespace(""), "applicationDomainTarget")
    method
-    refid "mx.core:RSLData/applicationDomainTarget/getter"
+    refid "mx.core:RSLData/instance/applicationDomainTarget/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -86,16 +86,16 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.core:RSLData"), "_applicationDomainTarget")
+      getproperty         QName(PrivateNamespace("*", "mx.core:RSLData/instance"), "_applicationDomainTarget")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "mx.core:RSLData"), "_digest") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "mx.core:RSLData/instance"), "_digest") type QName(PackageNamespace(""), "String") end
   trait getter QName(PackageNamespace(""), "digest")
    method
-    refid "mx.core:RSLData/digest/getter"
+    refid "mx.core:RSLData/instance/digest/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -107,16 +107,16 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.core:RSLData"), "_digest")
+      getproperty         QName(PrivateNamespace("*", "mx.core:RSLData/instance"), "_digest")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "mx.core:RSLData"), "_hashType") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "mx.core:RSLData/instance"), "_hashType") type QName(PackageNamespace(""), "String") end
   trait getter QName(PackageNamespace(""), "hashType")
    method
-    refid "mx.core:RSLData/hashType/getter"
+    refid "mx.core:RSLData/instance/hashType/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -128,16 +128,16 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.core:RSLData"), "_hashType")
+      getproperty         QName(PrivateNamespace("*", "mx.core:RSLData/instance"), "_hashType")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "mx.core:RSLData"), "_isSigned") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "mx.core:RSLData/instance"), "_isSigned") type QName(PackageNamespace(""), "Boolean") end
   trait getter QName(PackageNamespace(""), "isSigned")
    method
-    refid "mx.core:RSLData/isSigned/getter"
+    refid "mx.core:RSLData/instance/isSigned/getter"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 1
@@ -149,16 +149,16 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.core:RSLData"), "_isSigned")
+      getproperty         QName(PrivateNamespace("*", "mx.core:RSLData/instance"), "_isSigned")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "mx.core:RSLData"), "_moduleFactory") type QName(PackageNamespace("mx.core"), "IFlexModuleFactory") end
+  trait slot QName(PrivateNamespace("*", "mx.core:RSLData/instance"), "_moduleFactory") type QName(PackageNamespace("mx.core"), "IFlexModuleFactory") end
   trait getter QName(PackageNamespace(""), "moduleFactory")
    method
-    refid "mx.core:RSLData/moduleFactory/getter"
+    refid "mx.core:RSLData/instance/moduleFactory/getter"
     returns QName(PackageNamespace("mx.core"), "IFlexModuleFactory")
     body
      maxstack 1
@@ -170,7 +170,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.core:RSLData"), "_moduleFactory")
+      getproperty         QName(PrivateNamespace("*", "mx.core:RSLData/instance"), "_moduleFactory")
       returnvalue
      end ; code
     end ; body
@@ -178,7 +178,7 @@ class
   end ; trait
   trait setter QName(PackageNamespace(""), "moduleFactory")
    method
-    refid "mx.core:RSLData/moduleFactory/setter"
+    refid "mx.core:RSLData/instance/moduleFactory/setter"
     param QName(PackageNamespace("mx.core"), "IFlexModuleFactory")
     returns QName(PackageNamespace(""), "void")
     body
@@ -192,17 +192,17 @@ class
 
       getlocal0
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "mx.core:RSLData"), "_moduleFactory")
+      initproperty        QName(PrivateNamespace("*", "mx.core:RSLData/instance"), "_moduleFactory")
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "mx.core:RSLData"), "_policyFileURL") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "mx.core:RSLData/instance"), "_policyFileURL") type QName(PackageNamespace(""), "String") end
   trait getter QName(PackageNamespace(""), "policyFileURL")
    method
-    refid "mx.core:RSLData/policyFileURL/getter"
+    refid "mx.core:RSLData/instance/policyFileURL/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -214,16 +214,16 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.core:RSLData"), "_policyFileURL")
+      getproperty         QName(PrivateNamespace("*", "mx.core:RSLData/instance"), "_policyFileURL")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "mx.core:RSLData"), "_rslURL") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "mx.core:RSLData/instance"), "_rslURL") type QName(PackageNamespace(""), "String") end
   trait getter QName(PackageNamespace(""), "rslURL")
    method
-    refid "mx.core:RSLData/rslURL/getter"
+    refid "mx.core:RSLData/instance/rslURL/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -235,16 +235,16 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.core:RSLData"), "_rslURL")
+      getproperty         QName(PrivateNamespace("*", "mx.core:RSLData/instance"), "_rslURL")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "mx.core:RSLData"), "_verifyDigest") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "mx.core:RSLData/instance"), "_verifyDigest") type QName(PackageNamespace(""), "Boolean") end
   trait getter QName(PackageNamespace(""), "verifyDigest")
    method
-    refid "mx.core:RSLData/verifyDigest/getter"
+    refid "mx.core:RSLData/instance/verifyDigest/getter"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 1
@@ -256,7 +256,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.core:RSLData"), "_verifyDigest")
+      getproperty         QName(PrivateNamespace("*", "mx.core:RSLData/instance"), "_verifyDigest")
       returnvalue
      end ; code
     end ; body
@@ -264,7 +264,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "mx.core:RSLData/cinit"
+  refid "mx.core:RSLData/class/init"
   body
    maxstack 2
    localcount 1

@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("com.google.analytics.core:IdleTimer")
   iinit
-   refid "com.google.analytics.core:IdleTimer/iinit"
+   refid "com.google.analytics.core:IdleTimer/instance/init"
    param QName(PackageNamespace("com.google.analytics.v4"), "Configuration")
    param QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration")
    param QName(PackageNamespace("flash.display"), "DisplayObject")
@@ -38,66 +38,66 @@ class
      convert_d
      setlocal            7
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_loop")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_loop")
      findpropstrict      QName(PackageNamespace("flash.utils"), "Timer")
      getlocal            5
      pushshort           1000
      multiply
      constructprop       QName(PackageNamespace("flash.utils"), "Timer"), 1
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_loop")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_loop")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_session")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_session")
      findpropstrict      QName(PackageNamespace("flash.utils"), "Timer")
      getlocal            7
      pushshort           1000
      multiply
      pushbyte            1
      constructprop       QName(PackageNamespace("flash.utils"), "Timer"), 2
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_session")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_session")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_debug")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_debug")
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_debug")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_debug")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_stage")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_stage")
      getlocal3
      getproperty         QName(PackageNamespace(""), "stage")
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_stage")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_stage")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_buffer")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_buffer")
      getlocal            4
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_buffer")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_buffer")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_lastMove")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_lastMove")
      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_lastMove")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_lastMove")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_inactivity")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_inactivity")
      getlocal            6
      pushshort           1000
      multiply
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_inactivity")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_inactivity")
 
-     getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_loop")
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_loop")
      getlex              QName(PackageNamespace("flash.events"), "TimerEvent")
      getproperty         QName(PackageNamespace(""), "TIMER")
      getlex              QName(PackageNamespace(""), "checkForIdle")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-     getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_session")
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_session")
      getlex              QName(PackageNamespace("flash.events"), "TimerEvent")
      getproperty         QName(PackageNamespace(""), "TIMER_COMPLETE")
      getlex              QName(PackageNamespace(""), "endSession")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-     getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_stage")
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_stage")
      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
      getproperty         QName(PackageNamespace(""), "MOUSE_MOVE")
-     getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "onMouseMove")
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "onMouseMove")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-     getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_debug")
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_debug")
      pushstring          "delay: "
      getlocal            5
      add
@@ -113,19 +113,19 @@ class
      getproperty         QName(PackageNamespace(""), "geek")
      callpropvoid        QName(PackageNamespace(""), "info"), 2
 
-     getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_loop")
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_loop")
      callpropvoid        QName(PackageNamespace(""), "start"), 0
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_stage") type QName(PackageNamespace("flash.display"), "Stage") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_loop") type QName(PackageNamespace("flash.utils"), "Timer") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_lastMove") type QName(PackageNamespace(""), "int") end
-  trait method QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "onMouseMove")
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_stage") type QName(PackageNamespace("flash.display"), "Stage") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_loop") type QName(PackageNamespace("flash.utils"), "Timer") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_lastMove") type QName(PackageNamespace(""), "int") end
+  trait method QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "onMouseMove")
    method
-    refid "com.google.analytics.core:IdleTimer/onMouseMove"
+    refid "com.google.analytics.core:IdleTimer/instance/com.google.analytics.core:IdleTimer/instance/onMouseMove"
     param QName(PackageNamespace("flash.events"), "MouseEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -137,22 +137,22 @@ class
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_lastMove")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_lastMove")
       findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
       callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_lastMove")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_lastMove")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_session")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_session")
       getproperty         QName(PackageNamespace(""), "running")
       iffalse             L16
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_debug")
       pushstring          "session timer reset"
       getlex              QName(PackageNamespace("com.google.analytics.debug"), "VisualDebugMode")
       getproperty         QName(PackageNamespace(""), "geek")
       callpropvoid        QName(PackageNamespace(""), "info"), 2
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_session")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_session")
       callpropvoid        QName(PackageNamespace(""), "reset"), 0
 
 L16:
@@ -161,12 +161,12 @@ L16:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_inactivity") type QName(PackageNamespace(""), "Number") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_debug") type QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_session") type QName(PackageNamespace("flash.utils"), "Timer") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_inactivity") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_debug") type QName(PackageNamespace("com.google.analytics.debug"), "DebugConfiguration") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_session") type QName(PackageNamespace("flash.utils"), "Timer") end
   trait method QName(PackageNamespace(""), "endSession")
    method
-    refid "com.google.analytics.core:IdleTimer/endSession"
+    refid "com.google.analytics.core:IdleTimer/instance/endSession"
     param QName(PackageNamespace("flash.events"), "TimerEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -178,41 +178,41 @@ L16:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_session")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_session")
       getlex              QName(PackageNamespace("flash.events"), "TimerEvent")
       getproperty         QName(PackageNamespace(""), "TIMER_COMPLETE")
       getlex              QName(PackageNamespace(""), "endSession")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_debug")
       pushstring          "session timer end session"
       getlex              QName(PackageNamespace("com.google.analytics.debug"), "VisualDebugMode")
       getproperty         QName(PackageNamespace(""), "geek")
       callpropvoid        QName(PackageNamespace(""), "info"), 2
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_session")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_session")
       callpropvoid        QName(PackageNamespace(""), "reset"), 0
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_buffer")
       callpropvoid        QName(PackageNamespace(""), "resetCurrentSession"), 0
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_debug")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmb")
       callproperty        QName(PackageNamespace(""), "toString"), 0
       getlex              QName(PackageNamespace("com.google.analytics.debug"), "VisualDebugMode")
       getproperty         QName(PackageNamespace(""), "geek")
       callpropvoid        QName(PackageNamespace(""), "info"), 2
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_debug")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_buffer")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_buffer")
       getproperty         QName(PackageNamespace(""), "utmc")
       callproperty        QName(PackageNamespace(""), "toString"), 0
       getlex              QName(PackageNamespace("com.google.analytics.debug"), "VisualDebugMode")
       getproperty         QName(PackageNamespace(""), "geek")
       callpropvoid        QName(PackageNamespace(""), "info"), 2
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_session")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_session")
       getlex              QName(PackageNamespace("flash.events"), "TimerEvent")
       getproperty         QName(PackageNamespace(""), "TIMER_COMPLETE")
       getlex              QName(PackageNamespace(""), "endSession")
@@ -225,7 +225,7 @@ L16:
   end ; trait
   trait method QName(PackageNamespace(""), "checkForIdle")
    method
-    refid "com.google.analytics.core:IdleTimer/checkForIdle"
+    refid "com.google.analytics.core:IdleTimer/instance/checkForIdle"
     param QName(PackageNamespace("flash.events"), "TimerEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -243,22 +243,22 @@ L16:
       setlocal2
 
       getlocal2
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_lastMove")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_lastMove")
       subtract
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_inactivity")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_inactivity")
       ifnge               L21
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_session")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_session")
       getproperty         QName(PackageNamespace(""), "running")
       iftrue              L21
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_debug")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_debug")
       pushstring          "session timer start"
       getlex              QName(PackageNamespace("com.google.analytics.debug"), "VisualDebugMode")
       getproperty         QName(PackageNamespace(""), "geek")
       callpropvoid        QName(PackageNamespace(""), "info"), 2
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_session")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_session")
       callpropvoid        QName(PackageNamespace(""), "start"), 0
 
 L21:
@@ -267,10 +267,10 @@ L21:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer"), "_buffer") type QName(PackageNamespace("com.google.analytics.core"), "Buffer") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.core:IdleTimer/instance"), "_buffer") type QName(PackageNamespace("com.google.analytics.core"), "Buffer") end
  end ; instance
  cinit
-  refid "com.google.analytics.core:IdleTimer/cinit"
+  refid "com.google.analytics.core:IdleTimer/class/init"
   body
    maxstack 1
    localcount 1

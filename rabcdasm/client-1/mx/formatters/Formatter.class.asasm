@@ -7,7 +7,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("mx.formatters:Formatter")
   iinit
-   refid "mx.formatters:Formatter/iinit"
+   refid "mx.formatters:Formatter/instance/init"
    body
     maxstack 6
     localcount 1
@@ -47,7 +47,7 @@ class
   trait slot QName(PrivateNamespace("*", "mx.formatters:Formatter"), "_resourceManager") type QName(PackageNamespace("mx.resources"), "IResourceManager") end
   trait getter QName(ProtectedNamespace("mx.formatters:Formatter"), "resourceManager") flag METADATA
    method
-    refid "mx.formatters:Formatter:resourceManager/getter"
+    refid "mx.formatters:Formatter/instance/mx.formatters:Formatter:resourceManager/getter"
     returns QName(PackageNamespace("mx.resources"), "IResourceManager")
     body
      maxstack 1
@@ -70,7 +70,7 @@ class
   end ; trait
   trait method QName(ProtectedNamespace("mx.formatters:Formatter"), "resourcesChanged")
    method
-    refid "mx.formatters:Formatter:resourcesChanged"
+    refid "mx.formatters:Formatter/instance/mx.formatters:Formatter:resourcesChanged"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 1
@@ -88,7 +88,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "format")
    method
-    refid "mx.formatters:Formatter/format"
+    refid "mx.formatters:Formatter/instance/format"
     param QName(PackageNamespace(""), "Object")
     returns QName(PackageNamespace(""), "String")
     body
@@ -114,7 +114,7 @@ class
   end ; trait
   trait method QName(PrivateNamespace("*", "mx.formatters:Formatter"), "resourceManager_changeHandler")
    method
-    refid "mx.formatters:Formatter/resourceManager_changeHandler"
+    refid "mx.formatters:Formatter/instance/mx.formatters:Formatter/resourceManager_changeHandler"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -136,7 +136,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "mx.formatters:Formatter/cinit"
+  refid "mx.formatters:Formatter/class/init"
   body
    maxstack 2
    localcount 1
@@ -163,7 +163,7 @@ class
  trait slot QName(PrivateNamespace("*", "mx.formatters:Formatter"), "_static_resourceManager") slotid 3 type QName(PackageNamespace("mx.resources"), "IResourceManager") end
  trait getter QName(PrivateNamespace("*", "mx.formatters:Formatter"), "static_resourceManager") flag FINAL dispid 3
   method
-   refid "mx.formatters:Formatter/static_resourceManager/getter"
+   refid "mx.formatters:Formatter/class/mx.formatters:Formatter/static_resourceManager/getter"
    returns QName(PackageNamespace("mx.resources"), "IResourceManager")
    body
     maxstack 2
@@ -193,7 +193,7 @@ L8:
  trait slot QName(PrivateNamespace("*", "mx.formatters:Formatter"), "defaultInvalidFormatErrorOverride") slotid 5 type QName(PackageNamespace(""), "String") end
  trait getter QName(PackageNamespace(""), "defaultInvalidFormatError") flag FINAL dispid 4
   method
-   refid "mx.formatters:Formatter/defaultInvalidFormatError/getter"
+   refid "mx.formatters:Formatter/class/defaultInvalidFormatError/getter"
    returns QName(PackageNamespace(""), "String")
    body
     maxstack 1
@@ -215,7 +215,7 @@ L8:
  end ; trait
  trait setter QName(PackageNamespace(""), "defaultInvalidFormatError") flag FINAL dispid 5
   method
-   refid "mx.formatters:Formatter/defaultInvalidFormatError/setter"
+   refid "mx.formatters:Formatter/class/defaultInvalidFormatError/setter"
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace(""), "void")
    body
@@ -258,7 +258,7 @@ L17:
  trait slot QName(PrivateNamespace("*", "mx.formatters:Formatter"), "defaultInvalidValueErrorOverride") slotid 7 type QName(PackageNamespace(""), "String") end
  trait getter QName(PackageNamespace(""), "defaultInvalidValueError") flag FINAL dispid 6
   method
-   refid "mx.formatters:Formatter/defaultInvalidValueError/getter"
+   refid "mx.formatters:Formatter/class/defaultInvalidValueError/getter"
    returns QName(PackageNamespace(""), "String")
    body
     maxstack 1
@@ -280,7 +280,7 @@ L17:
  end ; trait
  trait setter QName(PackageNamespace(""), "defaultInvalidValueError") flag FINAL dispid 7
   method
-   refid "mx.formatters:Formatter/defaultInvalidValueError/setter"
+   refid "mx.formatters:Formatter/class/defaultInvalidValueError/setter"
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace(""), "void")
    body
@@ -321,7 +321,7 @@ L17:
  end ; trait
  trait method QName(PrivateNamespace("*", "mx.formatters:Formatter"), "initialize") flag FINAL dispid 8
   method
-   refid "mx.formatters:Formatter/initialize"
+   refid "mx.formatters:Formatter/class/mx.formatters:Formatter/initialize"
    returns QName(PackageNamespace(""), "void")
    body
     maxstack 6
@@ -359,7 +359,7 @@ L17:
  end ; trait
  trait method QName(PrivateNamespace("*", "mx.formatters:Formatter"), "static_resourcesChanged") flag FINAL dispid 9
   method
-   refid "mx.formatters:Formatter/static_resourcesChanged"
+   refid "mx.formatters:Formatter/class/mx.formatters:Formatter/static_resourcesChanged"
    returns QName(PackageNamespace(""), "void")
    body
     maxstack 2
@@ -385,7 +385,7 @@ L17:
  end ; trait
  trait method QName(PrivateNamespace("*", "mx.formatters:Formatter"), "static_resourceManager_changeHandler") flag FINAL dispid 10
   method
-   refid "mx.formatters:Formatter/static_resourceManager_changeHandler"
+   refid "mx.formatters:Formatter/class/mx.formatters:Formatter/static_resourceManager_changeHandler"
    param QName(PackageNamespace("flash.events"), "Event")
    returns QName(PackageNamespace(""), "void")
    body

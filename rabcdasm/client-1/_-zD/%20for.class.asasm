@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-GF")
   iinit
-   refid "_-zD: for/iinit"
+   refid "_-zD: for/instance/init"
    body
     maxstack 3
     localcount 3
@@ -41,7 +41,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "initialize") flag OVERRIDE
    method
-    refid "_-zD: for/initialize"
+    refid "_-zD: for/instance/initialize"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -73,7 +73,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "destroy") flag OVERRIDE
    method
-    refid "_-zD: for/destroy"
+    refid "_-zD: for/instance/destroy"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -98,7 +98,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "_-FA")
    method
-    refid "_-zD: for/_-FA"
+    refid "_-zD: for/instance/_-FA"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -115,49 +115,49 @@ class
 L3:
       label
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-zD: for"), "_-04P"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-zD: for/instance"), "_-04P"), 0
 
       jump                L80
 
 L7:
       label
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-zD: for"), "_-0BM"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-zD: for/instance"), "_-0BM"), 0
 
       jump                L80
 
 L11:
       label
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-zD: for"), "_-C0"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-zD: for/instance"), "_-C0"), 0
 
       jump                L80
 
 L15:
       label
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-zD: for"), "_-0A3"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-zD: for/instance"), "_-0A3"), 0
 
       jump                L80
 
 L19:
       label
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-zD: for"), "_-NE"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-zD: for/instance"), "_-NE"), 0
 
       jump                L80
 
 L23:
       label
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-zD: for"), "_-0Er"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-zD: for/instance"), "_-0Er"), 0
 
       jump                L80
 
 L27:
       label
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-zD: for"), "_-uz"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-zD: for/instance"), "_-uz"), 0
 
       jump                L80
 
@@ -243,9 +243,9 @@ L80:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-zD: for"), "_-04P")
+  trait method QName(PrivateNamespace("*", "_-zD: for/instance"), "_-04P")
    method
-    refid "_-zD: for/_-04P"
+    refid "_-zD: for/instance/_-zD: for/instance/_-04P"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 8
@@ -334,7 +334,7 @@ L58:
 L64:
       getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
       getproperty         QName(PackageNamespace(""), "data_")
-      getproperty         Multiname("needsTutorial", [PrivateNamespace("*", "_-zD: for"), PackageNamespace(""), PrivateNamespace("*", "_-zD: for/_-04P"), PackageNamespace("_-zD"), PackageInternalNs("_-zD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GF"), StaticProtectedNs("_-GF"), StaticProtectedNs("_-AB")])
+      getproperty         Multiname("needsTutorial", [PrivateNamespace("*", "_-zD: for/instance"), PackageNamespace(""), PrivateNamespace("*", "_-zD: for/instance/_-zD: for/instance/_-04P"), PackageNamespace("_-zD"), PackageInternalNs("_-zD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GF"), StaticProtectedNs("_-GF"), StaticProtectedNs("_-AB")])
       convert_b
       dup
       iffalse             L77
@@ -352,7 +352,7 @@ L77:
       getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
       getproperty         QName(PackageNamespace(""), "data_")
       pushshort           782
-      setproperty         Multiname("playerObjectType", [PrivateNamespace("*", "_-zD: for"), PackageNamespace(""), PrivateNamespace("*", "_-zD: for/_-04P"), PackageNamespace("_-zD"), PackageInternalNs("_-zD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GF"), StaticProtectedNs("_-GF"), StaticProtectedNs("_-AB")])
+      setproperty         Multiname("playerObjectType", [PrivateNamespace("*", "_-zD: for/instance"), PackageNamespace(""), PrivateNamespace("*", "_-zD: for/instance/_-zD: for/instance/_-04P"), PackageNamespace("_-zD"), PackageInternalNs("_-zD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GF"), StaticProtectedNs("_-GF"), StaticProtectedNs("_-AB")])
 
       getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
       callpropvoid        QName(PackageNamespace(""), "save"), 0
@@ -401,9 +401,9 @@ L113:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-zD: for"), "_-C0")
+  trait method QName(PrivateNamespace("*", "_-zD: for/instance"), "_-C0")
    method
-    refid "_-zD: for/_-C0"
+    refid "_-zD: for/instance/_-zD: for/instance/_-C0"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -425,9 +425,9 @@ L113:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-zD: for"), "_-0BM")
+  trait method QName(PrivateNamespace("*", "_-zD: for/instance"), "_-0BM")
    method
-    refid "_-zD: for/_-0BM"
+    refid "_-zD: for/instance/_-zD: for/instance/_-0BM"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -449,9 +449,9 @@ L113:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-zD: for"), "_-0A3")
+  trait method QName(PrivateNamespace("*", "_-zD: for/instance"), "_-0A3")
    method
-    refid "_-zD: for/_-0A3"
+    refid "_-zD: for/instance/_-zD: for/instance/_-0A3"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 3
@@ -471,9 +471,9 @@ L113:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-zD: for"), "_-NE")
+  trait method QName(PrivateNamespace("*", "_-zD: for/instance"), "_-NE")
    method
-    refid "_-zD: for/_-NE"
+    refid "_-zD: for/instance/_-zD: for/instance/_-NE"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -495,9 +495,9 @@ L113:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-zD: for"), "_-0Er")
+  trait method QName(PrivateNamespace("*", "_-zD: for/instance"), "_-0Er")
    method
-    refid "_-zD: for/_-0Er"
+    refid "_-zD: for/instance/_-zD: for/instance/_-0Er"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -519,9 +519,9 @@ L113:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-zD: for"), "_-uz")
+  trait method QName(PrivateNamespace("*", "_-zD: for/instance"), "_-uz")
    method
-    refid "_-zD: for/_-uz"
+    refid "_-zD: for/instance/_-zD: for/instance/_-uz"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 5
@@ -545,7 +545,7 @@ L113:
   end ; trait
  end ; instance
  cinit
-  refid "_-zD: for/cinit"
+  refid "_-zD: for/class/init"
   body
    maxstack 3
    localcount 1

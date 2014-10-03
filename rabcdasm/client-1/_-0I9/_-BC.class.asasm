@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-K2")
   iinit
-   refid "_-0I9:_-BC/iinit"
+   refid "_-0I9:_-BC/instance/init"
    body
     maxstack 3
     localcount 3
@@ -23,16 +23,16 @@ class
     end ; code
    end ; body
   end ; method
-  trait const QName(PrivateNamespace("*", "_-0I9:_-BC#0"), "_-Y1") type QName(PackageNamespace(""), "String") value Utf8("uncaughtErrorEvents") end
-  trait const QName(PrivateNamespace("*", "_-0I9:_-BC#0"), "_-04") type QName(PackageNamespace(""), "String") value Utf8("uncaughtError") end
+  trait const QName(PrivateNamespace("*", "_-0I9:_-BC/instance"), "_-Y1") type QName(PackageNamespace(""), "String") value Utf8("uncaughtErrorEvents") end
+  trait const QName(PrivateNamespace("*", "_-0I9:_-BC/instance"), "_-04") type QName(PackageNamespace(""), "String") value Utf8("uncaughtError") end
   trait slot QName(PackageNamespace(""), "_-fR") flag METADATA type QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
    metadata "Inject"
    end ; metadata
   end ; trait
-  trait slot QName(PrivateNamespace("*", "_-0I9:_-BC#0"), "loaderInfo") type QName(PackageNamespace("flash.display"), "LoaderInfo") end
+  trait slot QName(PrivateNamespace("*", "_-0I9:_-BC/instance"), "loaderInfo") type QName(PackageNamespace("flash.display"), "LoaderInfo") end
   trait method QName(PackageNamespace(""), "initialize") flag OVERRIDE
    method
-    refid "_-0I9:_-BC/initialize"
+    refid "_-0I9:_-BC/instance/initialize"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -47,14 +47,14 @@ class
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-fR")
       getproperty         QName(PackageNamespace(""), "loaderInfo")
-      initproperty        QName(PrivateNamespace("*", "_-0I9:_-BC#0"), "loaderInfo")
+      initproperty        QName(PrivateNamespace("*", "_-0I9:_-BC/instance"), "loaderInfo")
 
       getlocal0
-      callproperty        QName(PrivateNamespace("*", "_-0I9:_-BC#0"), "_-zV"), 0
+      callproperty        QName(PrivateNamespace("*", "_-0I9:_-BC/instance"), "_-zV"), 0
       iffalse             L12
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-0I9:_-BC#0"), "_-EP"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-0I9:_-BC/instance"), "_-EP"), 0
 
 L12:
       returnvoid
@@ -64,7 +64,7 @@ L12:
   end ; trait
   trait method QName(PackageNamespace(""), "destroy") flag OVERRIDE
    method
-    refid "_-0I9:_-BC/destroy"
+    refid "_-0I9:_-BC/instance/destroy"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 3
@@ -76,11 +76,11 @@ L12:
       pushscope
 
       getlocal0
-      callproperty        QName(PrivateNamespace("*", "_-0I9:_-BC#0"), "_-zV"), 0
+      callproperty        QName(PrivateNamespace("*", "_-0I9:_-BC/instance"), "_-zV"), 0
       iffalse             L7
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-0I9:_-BC#0"), "_-0Es"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-0I9:_-BC/instance"), "_-0Es"), 0
 
 L7:
       returnvoid
@@ -88,9 +88,9 @@ L7:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-0I9:_-BC#0"), "_-zV")
+  trait method QName(PrivateNamespace("*", "_-0I9:_-BC/instance"), "_-zV")
    method
-    refid "_-0I9:_-BC/_-zV"
+    refid "_-0I9:_-BC/instance/_-0I9:_-BC/instance/_-zV"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 4
@@ -102,18 +102,18 @@ L7:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0I9:_-BC#0"), "loaderInfo")
+      getproperty         QName(PrivateNamespace("*", "_-0I9:_-BC/instance"), "loaderInfo")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0I9:_-BC#0"), "_-Y1")
+      getproperty         QName(PrivateNamespace("*", "_-0I9:_-BC/instance"), "_-Y1")
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "hasOwnProperty"), 1
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-0I9:_-BC#0"), "_-EP")
+  trait method QName(PrivateNamespace("*", "_-0I9:_-BC/instance"), "_-EP")
    method
-    refid "_-0I9:_-BC/_-EP"
+    refid "_-0I9:_-BC/instance/_-0I9:_-BC/instance/_-EP"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 5
@@ -126,19 +126,19 @@ L7:
 
       findpropstrict      QName(PackageNamespace("flash.events"), "IEventDispatcher")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0I9:_-BC#0"), "loaderInfo")
+      getproperty         QName(PrivateNamespace("*", "_-0I9:_-BC/instance"), "loaderInfo")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0I9:_-BC#0"), "_-Y1")
-      getproperty         MultinameL([PrivateNamespace("*", "_-0I9:_-BC#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-0I9:_-BC#1"), PackageNamespace("_-0I9"), PackageInternalNs("_-0I9"), ProtectedNamespace("_-K2"), StaticProtectedNs("_-K2"), StaticProtectedNs("_-AB")])
+      getproperty         QName(PrivateNamespace("*", "_-0I9:_-BC/instance"), "_-Y1")
+      getproperty         MultinameL([PrivateNamespace("*", "_-0I9:_-BC/instance"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-0I9:_-BC/instance/_-0I9:_-BC/instance"), PackageNamespace("_-0I9"), PackageInternalNs("_-0I9"), ProtectedNamespace("_-K2"), StaticProtectedNs("_-K2"), StaticProtectedNs("_-AB")])
       callproperty        QName(PackageNamespace("flash.events"), "IEventDispatcher"), 1
       coerce              QName(PackageNamespace("flash.events"), "IEventDispatcher")
       setlocal1
 
       getlocal1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0I9:_-BC#0"), "_-04")
+      getproperty         QName(PrivateNamespace("*", "_-0I9:_-BC/instance"), "_-04")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0I9:_-BC#0"), "_-79")
+      getproperty         QName(PrivateNamespace("*", "_-0I9:_-BC/instance"), "_-79")
       callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "addEventListener"), 2
 
       returnvoid
@@ -146,9 +146,9 @@ L7:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-0I9:_-BC#0"), "_-0Es")
+  trait method QName(PrivateNamespace("*", "_-0I9:_-BC/instance"), "_-0Es")
    method
-    refid "_-0I9:_-BC/_-0Es"
+    refid "_-0I9:_-BC/instance/_-0I9:_-BC/instance/_-0Es"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 5
@@ -161,19 +161,19 @@ L7:
 
       findpropstrict      QName(PackageNamespace("flash.events"), "IEventDispatcher")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0I9:_-BC#0"), "loaderInfo")
+      getproperty         QName(PrivateNamespace("*", "_-0I9:_-BC/instance"), "loaderInfo")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0I9:_-BC#0"), "_-Y1")
-      getproperty         MultinameL([PrivateNamespace("*", "_-0I9:_-BC#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-0I9:_-BC#1"), PackageNamespace("_-0I9"), PackageInternalNs("_-0I9"), ProtectedNamespace("_-K2"), StaticProtectedNs("_-K2"), StaticProtectedNs("_-AB")])
+      getproperty         QName(PrivateNamespace("*", "_-0I9:_-BC/instance"), "_-Y1")
+      getproperty         MultinameL([PrivateNamespace("*", "_-0I9:_-BC/instance"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-0I9:_-BC/instance/_-0I9:_-BC/instance"), PackageNamespace("_-0I9"), PackageInternalNs("_-0I9"), ProtectedNamespace("_-K2"), StaticProtectedNs("_-K2"), StaticProtectedNs("_-AB")])
       callproperty        QName(PackageNamespace("flash.events"), "IEventDispatcher"), 1
       coerce              QName(PackageNamespace("flash.events"), "IEventDispatcher")
       setlocal1
 
       getlocal1
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0I9:_-BC#0"), "_-04")
+      getproperty         QName(PrivateNamespace("*", "_-0I9:_-BC/instance"), "_-04")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-0I9:_-BC#0"), "_-79")
+      getproperty         QName(PrivateNamespace("*", "_-0I9:_-BC/instance"), "_-79")
       callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "removeEventListener"), 2
 
       returnvoid
@@ -181,9 +181,9 @@ L7:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-0I9:_-BC#0"), "_-79")
+  trait method QName(PrivateNamespace("*", "_-0I9:_-BC/instance"), "_-79")
    method
-    refid "_-0I9:_-BC/_-79"
+    refid "_-0I9:_-BC/instance/_-0I9:_-BC/instance/_-79"
     param QName(PackageNamespace("flash.events"), "ErrorEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -201,7 +201,7 @@ L7:
       getlex              QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-vG")
       getlocal1
       pushstring          "error"
-      getproperty         MultinameL([PrivateNamespace("*", "_-0I9:_-BC#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-0I9:_-BC#1"), PackageNamespace("_-0I9"), PackageInternalNs("_-0I9"), ProtectedNamespace("_-K2"), StaticProtectedNs("_-K2"), StaticProtectedNs("_-AB")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-0I9:_-BC/instance"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-0I9:_-BC/instance/_-0I9:_-BC/instance"), PackageNamespace("_-0I9"), PackageInternalNs("_-0I9"), ProtectedNamespace("_-K2"), StaticProtectedNs("_-K2"), StaticProtectedNs("_-AB")])
       callpropvoid        QName(PackageNamespace(""), "_-AU"), 1
 
       returnvoid
@@ -211,7 +211,7 @@ L7:
   end ; trait
  end ; instance
  cinit
-  refid "_-0I9:_-BC/cinit"
+  refid "_-0I9:_-BC/class/init"
   body
    maxstack 3
    localcount 1

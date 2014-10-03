@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-0-U")
   iinit
-   refid "com.hurlant.crypto.rsa:RSAKey/iinit"
+   refid "com.hurlant.crypto.rsa:RSAKey/instance/init"
    param QName(PackageNamespace("com.hurlant.math"), "_-03Q")
    param QName(PackageNamespace(""), "int")
    param QName(PackageNamespace("com.hurlant.math"), "_-03Q")
@@ -116,7 +116,7 @@ L55:
   trait slot QName(ProtectedNamespace("_-0-U"), "canEncrypt") type QName(PackageNamespace(""), "Boolean") end
   trait method QName(PackageNamespace(""), "getBlockSize")
    method
-    refid "com.hurlant.crypto.rsa:RSAKey/getBlockSize"
+    refid "com.hurlant.crypto.rsa:RSAKey/instance/getBlockSize"
     returns QName(PackageNamespace(""), "uint")
     body
      maxstack 2
@@ -141,7 +141,7 @@ L55:
   end ; trait
   trait method QName(PackageNamespace(""), "dispose")
    method
-    refid "com.hurlant.crypto.rsa:RSAKey/dispose"
+    refid "com.hurlant.crypto.rsa:RSAKey/instance/dispose"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -174,7 +174,7 @@ L55:
   end ; trait
   trait method QName(PackageNamespace(""), "encrypt")
    method
-    refid "com.hurlant.crypto.rsa:RSAKey/encrypt"
+    refid "com.hurlant.crypto.rsa:RSAKey/instance/encrypt"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     param QName(PackageNamespace(""), "uint")
@@ -199,7 +199,7 @@ L55:
       getlocal3
       getlocal            4
       pushbyte            2
-      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), "_encrypt"), 6
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance"), "_encrypt"), 6
 
       returnvoid
      end ; code
@@ -208,7 +208,7 @@ L55:
   end ; trait
   trait method QName(PackageNamespace(""), "decrypt")
    method
-    refid "com.hurlant.crypto.rsa:RSAKey/decrypt"
+    refid "com.hurlant.crypto.rsa:RSAKey/instance/decrypt"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     param QName(PackageNamespace(""), "uint")
@@ -233,7 +233,7 @@ L55:
       getlocal3
       getlocal            4
       pushbyte            2
-      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), "_decrypt"), 6
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance"), "_decrypt"), 6
 
       returnvoid
      end ; code
@@ -242,7 +242,7 @@ L55:
   end ; trait
   trait method QName(PackageNamespace(""), "sign")
    method
-    refid "com.hurlant.crypto.rsa:RSAKey/sign"
+    refid "com.hurlant.crypto.rsa:RSAKey/instance/sign"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     param QName(PackageNamespace(""), "uint")
@@ -267,7 +267,7 @@ L55:
       getlocal3
       getlocal            4
       pushbyte            1
-      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), "_encrypt"), 6
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance"), "_encrypt"), 6
 
       returnvoid
      end ; code
@@ -276,7 +276,7 @@ L55:
   end ; trait
   trait method QName(PackageNamespace(""), "verify")
    method
-    refid "com.hurlant.crypto.rsa:RSAKey/verify"
+    refid "com.hurlant.crypto.rsa:RSAKey/instance/verify"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     param QName(PackageNamespace(""), "uint")
@@ -301,16 +301,16 @@ L55:
       getlocal3
       getlocal            4
       pushbyte            1
-      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), "_decrypt"), 6
+      callpropvoid        QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance"), "_decrypt"), 6
 
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), "_encrypt")
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance"), "_encrypt")
    method
-    refid "com.hurlant.crypto.rsa:RSAKey/_encrypt"
+    refid "com.hurlant.crypto.rsa:RSAKey/instance/com.hurlant.crypto.rsa:RSAKey/instance/_encrypt"
     param QName(PackageNamespace(""), "Function")
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     param QName(PackageNamespace("flash.utils"), "ByteArray")
@@ -340,7 +340,7 @@ L55:
       ifne                L15
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), "pkcs1pad")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance"), "pkcs1pad")
       coerce              QName(PackageNamespace(""), "Function")
       setlocal            5
 
@@ -408,9 +408,9 @@ L57:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), "_decrypt")
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance"), "_decrypt")
    method
-    refid "com.hurlant.crypto.rsa:RSAKey/_decrypt"
+    refid "com.hurlant.crypto.rsa:RSAKey/instance/com.hurlant.crypto.rsa:RSAKey/instance/_decrypt"
     param QName(PackageNamespace(""), "Function")
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     param QName(PackageNamespace("flash.utils"), "ByteArray")
@@ -444,7 +444,7 @@ L57:
       ifne                L18
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), "pkcs1unpad")
+      getproperty         QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance"), "pkcs1unpad")
       coerce              QName(PackageNamespace(""), "Function")
       setlocal            5
 
@@ -510,6 +510,7 @@ L37:
       getproperty         QName(PackageNamespace(""), "decode_error")
       constructprop       QName(PackageNamespace("com.hurlant.crypto.tls"), "TLSError"), 2
       throw
+
 L68:
       getlocal3
       getlocal            11
@@ -526,9 +527,9 @@ L71:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), "pkcs1pad")
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance"), "pkcs1pad")
    method
-    refid "com.hurlant.crypto.rsa:RSAKey/pkcs1pad"
+    refid "com.hurlant.crypto.rsa:RSAKey/instance/com.hurlant.crypto.rsa:RSAKey/instance/pkcs1pad"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     param QName(PackageNamespace(""), "int")
     param QName(PackageNamespace(""), "uint")
@@ -604,8 +605,8 @@ L35:
       decrement_i
       setlocal            7
 
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance/com.hurlant.crypto.rsa:RSAKey/instance"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance/com.hurlant.crypto.rsa:RSAKey/instance"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
 
       kill                10
 L52:
@@ -633,7 +634,7 @@ L61:
       setlocal            10
 
       pushbyte            0
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance/com.hurlant.crypto.rsa:RSAKey/instance"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
 
       getlocal            4
       pushbyte            2
@@ -676,7 +677,7 @@ L85:
       setlocal            11
 
       getlocal            9
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance/com.hurlant.crypto.rsa:RSAKey/instance"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
 
       kill                11
 L103:
@@ -702,7 +703,7 @@ L108:
       setlocal            11
 
       pushshort           255
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance/com.hurlant.crypto.rsa:RSAKey/instance"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
 
       kill                11
 L120:
@@ -722,7 +723,7 @@ L123:
       setlocal            11
 
       getlocal            4
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance/com.hurlant.crypto.rsa:RSAKey/instance"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
 
       getlocal            5
       getlocal3
@@ -735,7 +736,7 @@ L123:
       setlocal            12
 
       pushbyte            0
-      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+      setproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance/com.hurlant.crypto.rsa:RSAKey/instance"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
 
       getlocal            5
       returnvalue
@@ -743,9 +744,9 @@ L123:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), "pkcs1unpad")
+  trait method QName(PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance"), "pkcs1unpad")
    method
-    refid "com.hurlant.crypto.rsa:RSAKey/pkcs1unpad"
+    refid "com.hurlant.crypto.rsa:RSAKey/instance/com.hurlant.crypto.rsa:RSAKey/instance/pkcs1unpad"
     param QName(PackageNamespace("com.hurlant.math"), "_-03Q")
     param QName(PackageNamespace(""), "uint")
     param QName(PackageNamespace(""), "uint")
@@ -794,7 +795,7 @@ L18:
       pop
       getlocal            4
       getlocal            6
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance/com.hurlant.crypto.rsa:RSAKey/instance"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
       pushbyte            0
       equals
 L30:
@@ -814,7 +815,7 @@ L30:
       pop
       getlocal            4
       getlocal            6
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance/com.hurlant.crypto.rsa:RSAKey/instance"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
       getlocal3
       equals
       not
@@ -833,9 +834,9 @@ L48:
       add
       getlocal            4
       getlocal            6
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance/com.hurlant.crypto.rsa:RSAKey/instance"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
       pushbyte            16
-      callproperty        Multiname("toString", [PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")]), 1
+      callproperty        Multiname("toString", [PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance/com.hurlant.crypto.rsa:RSAKey/instance"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")]), 1
       add
       callpropvoid        QName(PackageNamespace(""), "trace"), 1
 
@@ -867,9 +868,9 @@ L70:
       getlocal            4
       getlocal            6
       decrement
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance/com.hurlant.crypto.rsa:RSAKey/instance"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
       pushbyte            16
-      callproperty        Multiname("toString", [PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")]), 1
+      callproperty        Multiname("toString", [PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance/com.hurlant.crypto.rsa:RSAKey/instance"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")]), 1
       add
       pushstring          ")"
       add
@@ -881,7 +882,7 @@ L70:
 L97:
       getlocal            4
       getlocal            6
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance/com.hurlant.crypto.rsa:RSAKey/instance"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
       pushbyte            0
       ifne                L70
 
@@ -892,7 +893,7 @@ L103:
       getlocal            5
       getlocal            4
       getlocal            6
-      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#0"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey#1"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance"), PackageNamespace(""), PackageNamespace("com.hurlant.crypto.rsa"), StaticProtectedNs("_-0-U"), ProtectedNamespace("_-0-U"), PrivateNamespace("*", "com.hurlant.crypto.rsa:RSAKey/instance/com.hurlant.crypto.rsa:RSAKey/instance"), PackageInternalNs("com.hurlant.crypto.rsa"), Namespace("http://adobe.com/AS3/2006/builtin")])
       callpropvoid        QName(PackageNamespace(""), "writeByte"), 1
 
 L109:
@@ -918,7 +919,7 @@ L109:
   end ; trait
   trait method QName(PackageNamespace(""), "rawpad")
    method
-    refid "com.hurlant.crypto.rsa:RSAKey/rawpad"
+    refid "com.hurlant.crypto.rsa:RSAKey/instance/rawpad"
     param QName(PackageNamespace("flash.utils"), "ByteArray")
     param QName(PackageNamespace(""), "int")
     param QName(PackageNamespace(""), "uint")
@@ -943,7 +944,7 @@ L109:
   end ; trait
   trait method QName(PackageNamespace(""), "rawunpad")
    method
-    refid "com.hurlant.crypto.rsa:RSAKey/rawunpad"
+    refid "com.hurlant.crypto.rsa:RSAKey/instance/rawunpad"
     param QName(PackageNamespace("com.hurlant.math"), "_-03Q")
     param QName(PackageNamespace(""), "uint")
     param QName(PackageNamespace(""), "uint")
@@ -968,7 +969,7 @@ L109:
   end ; trait
   trait method QName(PackageNamespace(""), "toString")
    method
-    refid "com.hurlant.crypto.rsa:RSAKey/toString"
+    refid "com.hurlant.crypto.rsa:RSAKey/instance/toString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -987,7 +988,7 @@ L109:
   end ; trait
   trait method QName(PackageNamespace(""), "dump")
    method
-    refid "com.hurlant.crypto.rsa:RSAKey/dump"
+    refid "com.hurlant.crypto.rsa:RSAKey/instance/dump"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 4
@@ -1125,7 +1126,7 @@ L109:
   end ; trait
   trait method QName(ProtectedNamespace("_-0-U"), "doPublic")
    method
-    refid "com.hurlant.crypto.rsa:RSAKey/_-0-U:doPublic"
+    refid "com.hurlant.crypto.rsa:RSAKey/instance/_-0-U:doPublic"
     param QName(PackageNamespace("com.hurlant.math"), "_-03Q")
     returns QName(PackageNamespace("com.hurlant.math"), "_-03Q")
     body
@@ -1150,7 +1151,7 @@ L109:
   end ; trait
   trait method QName(ProtectedNamespace("_-0-U"), "doPrivate2")
    method
-    refid "com.hurlant.crypto.rsa:RSAKey/_-0-U:doPrivate2"
+    refid "com.hurlant.crypto.rsa:RSAKey/instance/_-0-U:doPrivate2"
     param QName(PackageNamespace("com.hurlant.math"), "_-03Q")
     returns QName(PackageNamespace("com.hurlant.math"), "_-03Q")
     body
@@ -1253,7 +1254,7 @@ L51:
   end ; trait
   trait method QName(ProtectedNamespace("_-0-U"), "doPrivate")
    method
-    refid "com.hurlant.crypto.rsa:RSAKey/_-0-U:doPrivate"
+    refid "com.hurlant.crypto.rsa:RSAKey/instance/_-0-U:doPrivate"
     param QName(PackageNamespace("com.hurlant.math"), "_-03Q")
     returns QName(PackageNamespace("com.hurlant.math"), "_-03Q")
     body
@@ -1352,7 +1353,7 @@ L51:
   end ; trait
  end ; instance
  cinit
-  refid "com.hurlant.crypto.rsa:RSAKey/cinit"
+  refid "com.hurlant.crypto.rsa:RSAKey/class/init"
   body
    maxstack 1
    localcount 1
@@ -1368,7 +1369,7 @@ L51:
  end ; method
  trait method QName(PackageNamespace(""), "parsePublicKey") flag FINAL dispid 3
   method
-   refid "com.hurlant.crypto.rsa:RSAKey/parsePublicKey"
+   refid "com.hurlant.crypto.rsa:RSAKey/class/parsePublicKey"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace("com.hurlant.crypto.rsa"), "RSAKey")
@@ -1399,7 +1400,7 @@ L51:
  end ; trait
  trait method QName(PackageNamespace(""), "parsePrivateKey") flag FINAL dispid 4
   method
-   refid "com.hurlant.crypto.rsa:RSAKey/parsePrivateKey"
+   refid "com.hurlant.crypto.rsa:RSAKey/class/parsePrivateKey"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "String")
@@ -1495,7 +1496,7 @@ L22:
  end ; trait
  trait method QName(PackageNamespace(""), "generate") flag FINAL dispid 5
   method
-   refid "com.hurlant.crypto.rsa:RSAKey/generate"
+   refid "com.hurlant.crypto.rsa:RSAKey/class/generate"
    param QName(PackageNamespace(""), "uint")
    param QName(PackageNamespace(""), "String")
    returns QName(PackageNamespace("com.hurlant.crypto.rsa"), "RSAKey")
@@ -1750,7 +1751,7 @@ L187:
  end ; trait
  trait method QName(StaticProtectedNs("_-0-U"), "bigRandom") flag FINAL dispid 6
   method
-   refid "com.hurlant.crypto.rsa:RSAKey/_-0-U:bigRandom"
+   refid "com.hurlant.crypto.rsa:RSAKey/class/_-0-U:bigRandom"
    param QName(PackageNamespace(""), "int")
    param QName(PackageNamespace("com.hurlant.crypto.prng"), "Random")
    returns QName(PackageNamespace("com.hurlant.math"), "_-03Q")

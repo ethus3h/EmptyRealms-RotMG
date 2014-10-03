@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-6m")
   iinit
-   refid "_-lo:_-vR/iinit"
+   refid "_-lo:_-vR/instance/init"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace("flash.display"), "DisplayObject")
    flag HAS_OPTIONAL
@@ -28,16 +28,16 @@ class
 
      getlocal0
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "_-lo:_-vR"), "_-0Dw")
+     initproperty        QName(PrivateNamespace("*", "_-lo:_-vR/instance"), "_-0Dw")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-lo:_-vR"), "_-0Dw") type QName(PackageNamespace("flash.display"), "DisplayObject") end
+  trait slot QName(PrivateNamespace("*", "_-lo:_-vR/instance"), "_-0Dw") type QName(PackageNamespace("flash.display"), "DisplayObject") end
   trait getter QName(PackageNamespace(""), "view")
    method
-    refid "_-lo:_-vR/view/getter"
+    refid "_-lo:_-vR/instance/view/getter"
     returns QName(PackageNamespace("flash.display"), "DisplayObject")
     body
      maxstack 3
@@ -49,7 +49,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-lo:_-vR"), "_-0Dw")
+      getproperty         QName(PrivateNamespace("*", "_-lo:_-vR/instance"), "_-0Dw")
       returnvalue
      end ; code
     end ; body
@@ -57,7 +57,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
    method
-    refid "_-lo:_-vR/clone"
+    refid "_-lo:_-vR/instance/clone"
     returns QName(PackageNamespace("flash.events"), "Event")
     body
      maxstack 5
@@ -71,7 +71,7 @@ class
       findpropstrict      QName(PackageNamespace("_-lo"), "_-vR")
       getlex              QName(PackageNamespace(""), "type")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-lo:_-vR"), "_-0Dw")
+      getproperty         QName(PrivateNamespace("*", "_-lo:_-vR/instance"), "_-0Dw")
       constructprop       QName(PackageNamespace("_-lo"), "_-vR"), 2
       returnvalue
      end ; code
@@ -80,7 +80,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-lo:_-vR/cinit"
+  refid "_-lo:_-vR/class/init"
   body
    maxstack 4
    localcount 3

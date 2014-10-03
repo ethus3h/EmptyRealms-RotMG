@@ -9,7 +9,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("mx.core:MovieClipAsset")
   iinit
-   refid "mx.core:MovieClipAsset/iinit"
+   refid "mx.core:MovieClipAsset/instance/init"
    body
     maxstack 2
     localcount 1
@@ -24,20 +24,20 @@ class
 
      getlocal0
      getlex              QName(PackageNamespace(""), "width")
-     initproperty        QName(PrivateNamespace("*", "mx.core:MovieClipAsset"), "_measuredWidth")
+     initproperty        QName(PrivateNamespace("*", "mx.core:MovieClipAsset/instance"), "_measuredWidth")
 
      getlocal0
      getlex              QName(PackageNamespace(""), "height")
-     initproperty        QName(PrivateNamespace("*", "mx.core:MovieClipAsset"), "_measuredHeight")
+     initproperty        QName(PrivateNamespace("*", "mx.core:MovieClipAsset/instance"), "_measuredHeight")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "mx.core:MovieClipAsset"), "_measuredHeight") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace("*", "mx.core:MovieClipAsset/instance"), "_measuredHeight") type QName(PackageNamespace(""), "Number") end
   trait getter QName(PackageNamespace(""), "measuredHeight")
    method
-    refid "mx.core:MovieClipAsset/measuredHeight/getter"
+    refid "mx.core:MovieClipAsset/instance/measuredHeight/getter"
     returns QName(PackageNamespace(""), "Number")
     body
      maxstack 1
@@ -49,16 +49,16 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.core:MovieClipAsset"), "_measuredHeight")
+      getproperty         QName(PrivateNamespace("*", "mx.core:MovieClipAsset/instance"), "_measuredHeight")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "mx.core:MovieClipAsset"), "_measuredWidth") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace("*", "mx.core:MovieClipAsset/instance"), "_measuredWidth") type QName(PackageNamespace(""), "Number") end
   trait getter QName(PackageNamespace(""), "measuredWidth")
    method
-    refid "mx.core:MovieClipAsset/measuredWidth/getter"
+    refid "mx.core:MovieClipAsset/instance/measuredWidth/getter"
     returns QName(PackageNamespace(""), "Number")
     body
      maxstack 1
@@ -70,7 +70,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "mx.core:MovieClipAsset"), "_measuredWidth")
+      getproperty         QName(PrivateNamespace("*", "mx.core:MovieClipAsset/instance"), "_measuredWidth")
       returnvalue
      end ; code
     end ; body
@@ -78,7 +78,7 @@ class
   end ; trait
   trait getter QName(PackageNamespace(""), "borderMetrics")
    method
-    refid "mx.core:MovieClipAsset/borderMetrics/getter"
+    refid "mx.core:MovieClipAsset/instance/borderMetrics/getter"
     returns QName(PackageNamespace("mx.core"), "EdgeMetrics")
     body
      maxstack 7
@@ -125,7 +125,7 @@ L8:
   end ; trait
   trait method QName(PackageNamespace(""), "move")
    method
-    refid "mx.core:MovieClipAsset/move"
+    refid "mx.core:MovieClipAsset/instance/move"
     param QName(PackageNamespace(""), "Number")
     param QName(PackageNamespace(""), "Number")
     returns QName(PackageNamespace(""), "void")
@@ -153,7 +153,7 @@ L8:
   end ; trait
   trait method QName(PackageNamespace(""), "setActualSize")
    method
-    refid "mx.core:MovieClipAsset/setActualSize"
+    refid "mx.core:MovieClipAsset/instance/setActualSize"
     param QName(PackageNamespace(""), "Number")
     param QName(PackageNamespace(""), "Number")
     returns QName(PackageNamespace(""), "void")
@@ -181,7 +181,7 @@ L8:
   end ; trait
  end ; instance
  cinit
-  refid "mx.core:MovieClipAsset/cinit"
+  refid "mx.core:MovieClipAsset/class/init"
   body
    maxstack 2
    localcount 1

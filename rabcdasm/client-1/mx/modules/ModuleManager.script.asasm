@@ -1,6 +1,6 @@
 script ; 1044
  sinit
-  refid "mx.modules:ModuleManager.sinit"
+  refid "mx.modules:ModuleManager/init"
   body
    maxstack 2
    localcount 1
@@ -19,7 +19,7 @@ script ; 1044
     popscope
     initproperty        QName(PackageNamespace("mx.modules"), "ModuleManager")
 
-    findpropstrict      Multiname("ModuleManagerImpl", [PrivateNamespace("*", "mx.modules:ModuleManager#0")])
+    findpropstrict      Multiname("ModuleManagerImpl", [PrivateNamespace("*", "mx.modules:ModuleManager")])
     getlex              QName(PackageNamespace(""), "Object")
     pushscope
 
@@ -30,9 +30,9 @@ script ; 1044
     newclass            "mx.modules:ModuleManager/ModuleManagerImpl"
     popscope
     popscope
-    initproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleManagerImpl")
+    initproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "ModuleManagerImpl")
 
-    findpropstrict      Multiname("ModuleInfo", [PrivateNamespace("*", "mx.modules:ModuleManager#0")])
+    findpropstrict      Multiname("ModuleInfo", [PrivateNamespace("*", "mx.modules:ModuleManager")])
     getlex              QName(PackageNamespace(""), "Object")
     pushscope
 
@@ -43,18 +43,18 @@ script ; 1044
     newclass            "mx.modules:ModuleManager/ModuleInfo"
     popscope
     popscope
-    initproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleInfo")
+    initproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "ModuleInfo")
 
-    findpropstrict      Multiname("FactoryInfo", [PrivateNamespace("*", "mx.modules:ModuleManager#0")])
+    findpropstrict      Multiname("FactoryInfo", [PrivateNamespace("*", "mx.modules:ModuleManager")])
     getlex              QName(PackageNamespace(""), "Object")
     pushscope
 
     getlex              QName(PackageNamespace(""), "Object")
     newclass            "mx.modules:ModuleManager/FactoryInfo"
     popscope
-    initproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "FactoryInfo")
+    initproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "FactoryInfo")
 
-    findpropstrict      Multiname("ModuleInfoProxy", [PrivateNamespace("*", "mx.modules:ModuleManager#0")])
+    findpropstrict      Multiname("ModuleInfoProxy", [PrivateNamespace("*", "mx.modules:ModuleManager")])
     getlex              QName(PackageNamespace(""), "Object")
     pushscope
 
@@ -65,7 +65,7 @@ script ; 1044
     newclass            "mx.modules:ModuleManager/ModuleInfoProxy"
     popscope
     popscope
-    initproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleInfoProxy")
+    initproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "ModuleInfoProxy")
 
     returnvoid
    end ; code
@@ -74,16 +74,16 @@ script ; 1044
  trait class QName(PackageNamespace("mx.modules"), "ModuleManager")
   #include "ModuleManager.class.asasm"
  end ; trait
- trait class QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleManagerImpl")
+ trait class QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "ModuleManagerImpl")
   #include "ModuleManager/ModuleManagerImpl.class.asasm"
  end ; trait
- trait class QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleInfo")
+ trait class QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "ModuleInfo")
   #include "ModuleManager/ModuleInfo.class.asasm"
  end ; trait
- trait class QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "FactoryInfo")
+ trait class QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "FactoryInfo")
   #include "ModuleManager/FactoryInfo.class.asasm"
  end ; trait
- trait class QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleInfoProxy")
+ trait class QName(PrivateNamespace("*", "mx.modules:ModuleManager"), "ModuleInfoProxy")
   #include "ModuleManager/ModuleInfoProxy.class.asasm"
  end ; trait
 end ; script

@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-hC")
   iinit
-   refid "com.company.util:_-9e/iinit"
+   refid "com.company.util:_-9e/instance/init"
    body
     maxstack 3
     localcount 3
@@ -25,7 +25,7 @@ class
   end ; method
  end ; instance
  cinit
-  refid "com.company.util:_-9e/cinit"
+  refid "com.company.util:_-9e/class/init"
   body
    maxstack 12
    localcount 3
@@ -42,7 +42,7 @@ class
 
     findproperty        QName(PackageNamespace(""), "_-H2")
     findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
-    getproperty         Multiname("Vector", [PrivateNamespace("*", "com.company.util:_-9e#0"), PackageNamespace(""), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "com.company.util:_-9e#1"), PackageNamespace("com.company.util"), PackageInternalNs("com.company.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-hC"), StaticProtectedNs("_-hC")])
+    getproperty         Multiname("Vector", [PrivateNamespace("*", "com.company.util:_-9e/class#0"), PackageNamespace(""), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "com.company.util:_-9e/class#1"), PackageNamespace("com.company.util"), PackageInternalNs("com.company.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-hC"), StaticProtectedNs("_-hC")])
     getlex              QName(PackageNamespace(""), "int")
     applytype           1
     pushbyte            4
@@ -95,12 +95,12 @@ class
     constructprop       QName(PackageNamespace("flash.display"), "GraphicsStroke"), 0
     initproperty        QName(PackageNamespace(""), "_-HB")
 
-    findproperty        QName(PrivateNamespace("*", "com.company.util:_-9e#0"), "_-H6")
+    findproperty        QName(PrivateNamespace("*", "com.company.util:_-9e/class#0"), "_-H6")
     pushbyte            2
     getlex              QName(PackageNamespace(""), "Math")
     getproperty         QName(PackageNamespace(""), "PI")
     multiply
-    initproperty        QName(PrivateNamespace("*", "com.company.util:_-9e#0"), "_-H6")
+    initproperty        QName(PrivateNamespace("*", "com.company.util:_-9e/class#0"), "_-H6")
 
     findproperty        QName(PackageNamespace(""), "_-0D3")
     pushtrue
@@ -120,7 +120,7 @@ class
  trait const QName(PackageNamespace(""), "_-HB") slotid 4 type QName(PackageNamespace("flash.display"), "GraphicsStroke") end
  trait method QName(PackageNamespace(""), "_-0L6") flag FINAL dispid 3
   method
-   refid "com.company.util:_-9e/_-0L6"
+   refid "com.company.util:_-9e/class/_-0L6"
    param QName(PackageNamespace("flash.display"), "GraphicsPath")
    returns QName(PackageNamespace(""), "void")
    body
@@ -149,7 +149,7 @@ class
  end ; trait
  trait method QName(PackageNamespace(""), "_-wj") flag FINAL dispid 4
   method
-   refid "com.company.util:_-9e/_-wj"
+   refid "com.company.util:_-9e/class/_-wj"
    param QName(PackageNamespace(""), "int")
    param QName(PackageNamespace(""), "int")
    param QName(PackageNamespace(""), "int")
@@ -167,7 +167,7 @@ class
      findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsPath")
      getlex              QName(PackageNamespace(""), "_-H2")
      findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
-     getproperty         Multiname("Vector", [PrivateNamespace("*", "com.company.util:_-9e#0"), PackageNamespace(""), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "com.company.util:_-9e#1"), PackageNamespace("com.company.util"), PackageInternalNs("com.company.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-hC"), StaticProtectedNs("_-hC")])
+     getproperty         Multiname("Vector", [PrivateNamespace("*", "com.company.util:_-9e/class#0"), PackageNamespace(""), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "com.company.util:_-9e/class#1"), PackageNamespace("com.company.util"), PackageInternalNs("com.company.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-hC"), StaticProtectedNs("_-hC")])
      getlex              QName(PackageNamespace(""), "Number")
      applytype           1
      pushbyte            8
@@ -228,7 +228,7 @@ class
  end ; trait
  trait method QName(PackageNamespace(""), "_-0L0") flag FINAL dispid 5
   method
-   refid "com.company.util:_-9e/_-0L0"
+   refid "com.company.util:_-9e/class/_-0L0"
    param QName(PackageNamespace(""), "Number")
    param QName(PackageNamespace(""), "Number")
    param QName(PackageNamespace(""), "Number")
@@ -269,7 +269,7 @@ class
  end ; trait
  trait method QName(PackageNamespace(""), "drawRect") flag FINAL dispid 6
   method
-   refid "com.company.util:_-9e/drawRect"
+   refid "com.company.util:_-9e/class/drawRect"
    param QName(PackageNamespace(""), "int")
    param QName(PackageNamespace(""), "int")
    param QName(PackageNamespace(""), "int")
@@ -318,10 +318,10 @@ class
    end ; body
   end ; method
  end ; trait
- trait const QName(PrivateNamespace("*", "com.company.util:_-9e#0"), "_-H6") slotid 5 type QName(PackageNamespace(""), "Number") value Double(6.283185307179586) end
+ trait const QName(PrivateNamespace("*", "com.company.util:_-9e/class#0"), "_-H6") slotid 5 type QName(PackageNamespace(""), "Number") value Double(6.283185307179586) end
  trait method QName(PackageNamespace(""), "drawCircle") flag FINAL dispid 7
   method
-   refid "com.company.util:_-9e/drawCircle"
+   refid "com.company.util:_-9e/class/drawCircle"
    param QName(PackageNamespace(""), "Number")
    param QName(PackageNamespace(""), "Number")
    param QName(PackageNamespace(""), "Number")
@@ -381,7 +381,7 @@ class
 
 L32:
      label
-     getlex              QName(PrivateNamespace("*", "com.company.util:_-9e#0"), "_-H6")
+     getlex              QName(PrivateNamespace("*", "com.company.util:_-9e/class#0"), "_-H6")
      getlocal            7
      multiply
      getlocal            5
@@ -389,7 +389,7 @@ L32:
      convert_d
      setlocal            8
 
-     getlex              QName(PrivateNamespace("*", "com.company.util:_-9e#0"), "_-H6")
+     getlex              QName(PrivateNamespace("*", "com.company.util:_-9e/class#0"), "_-H6")
      getlocal            7
      pushdouble          0.5
      subtract
@@ -464,7 +464,7 @@ L96:
  trait const QName(PackageNamespace(""), "_-0D3") slotid 6 type QName(PackageNamespace(""), "Array") end
  trait method QName(PackageNamespace(""), "_-Cm") flag FINAL dispid 8
   method
-   refid "com.company.util:_-9e/_-Cm"
+   refid "com.company.util:_-9e/class/_-Cm"
    param QName(PackageNamespace(""), "int")
    param QName(PackageNamespace(""), "int")
    param QName(PackageNamespace(""), "int")
@@ -484,7 +484,7 @@ L96:
 
      getlocal            6
      pushbyte            0
-     getproperty         MultinameL([PrivateNamespace("*", "com.company.util:_-9e#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.util:_-9e#1"), PackageNamespace("com.company.util"), PackageInternalNs("com.company.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-hC"), StaticProtectedNs("_-hC")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.util:_-9e/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.util:_-9e/class#1"), PackageNamespace("com.company.util"), PackageInternalNs("com.company.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-hC"), StaticProtectedNs("_-hC")])
      pushbyte            0
      ifeq                L20
 
@@ -513,7 +513,7 @@ L20:
 L24:
      getlocal            6
      pushbyte            1
-     getproperty         MultinameL([PrivateNamespace("*", "com.company.util:_-9e#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.util:_-9e#1"), PackageNamespace("com.company.util"), PackageInternalNs("com.company.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-hC"), StaticProtectedNs("_-hC")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.util:_-9e/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.util:_-9e/class#1"), PackageNamespace("com.company.util"), PackageInternalNs("com.company.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-hC"), StaticProtectedNs("_-hC")])
      pushbyte            0
      ifeq                L46
 
@@ -548,7 +548,7 @@ L46:
 L52:
      getlocal            6
      pushbyte            2
-     getproperty         MultinameL([PrivateNamespace("*", "com.company.util:_-9e#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.util:_-9e#1"), PackageNamespace("com.company.util"), PackageInternalNs("com.company.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-hC"), StaticProtectedNs("_-hC")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.util:_-9e/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.util:_-9e/class#1"), PackageNamespace("com.company.util"), PackageInternalNs("com.company.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-hC"), StaticProtectedNs("_-hC")])
      pushbyte            0
      ifeq                L78
 
@@ -589,7 +589,7 @@ L78:
 L86:
      getlocal            6
      pushbyte            3
-     getproperty         MultinameL([PrivateNamespace("*", "com.company.util:_-9e#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.util:_-9e#1"), PackageNamespace("com.company.util"), PackageInternalNs("com.company.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-hC"), StaticProtectedNs("_-hC")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.util:_-9e/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.util:_-9e/class#1"), PackageNamespace("com.company.util"), PackageInternalNs("com.company.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-hC"), StaticProtectedNs("_-hC")])
      pushbyte            0
      ifeq                L108
 
@@ -624,7 +624,7 @@ L108:
 L114:
      getlocal            6
      pushbyte            0
-     getproperty         MultinameL([PrivateNamespace("*", "com.company.util:_-9e#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.util:_-9e#1"), PackageNamespace("com.company.util"), PackageInternalNs("com.company.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-hC"), StaticProtectedNs("_-hC")])
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.util:_-9e/class#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.util:_-9e/class#1"), PackageNamespace("com.company.util"), PackageInternalNs("com.company.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-hC"), StaticProtectedNs("_-hC")])
      pushbyte            0
      ifeq                L126
 
@@ -651,7 +651,7 @@ L130:
  end ; trait
  trait method QName(PackageNamespace(""), "_-00w") flag FINAL dispid 9
   method
-   refid "com.company.util:_-9e/_-00w"
+   refid "com.company.util:_-9e/class/_-00w"
    param QName(PackageNamespace(""), "Number")
    param QName(PackageNamespace(""), "Number")
    param QName(PackageNamespace(""), "Number")

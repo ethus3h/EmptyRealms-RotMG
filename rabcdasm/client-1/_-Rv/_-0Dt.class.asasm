@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-Hv")
   iinit
-   refid "_-Rv:_-0Dt/iinit"
+   refid "_-Rv:_-0Dt/instance/init"
    param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
    body
     maxstack 6
@@ -31,14 +31,14 @@ class
      getlex              QName(PackageNamespace("flash.events"), "Event")
      getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-Rv:_-0Dt"), "onAddedToStage")
+     getproperty         QName(PrivateNamespace("*", "_-Rv:_-0Dt/instance"), "onAddedToStage")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
      findpropstrict      QName(PackageNamespace(""), "addEventListener")
      getlex              QName(PackageNamespace("flash.events"), "Event")
      getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-Rv:_-0Dt"), "onRemovedFromStage")
+     getproperty         QName(PrivateNamespace("*", "_-Rv:_-0Dt/instance"), "onRemovedFromStage")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
      returnvoid
@@ -47,7 +47,7 @@ class
   end ; method
   trait method QName(ProtectedNamespace("_-Hv"), "onButtonClick") flag OVERRIDE
    method
-    refid "_-Rv:_-0Dt/_-Hv:onButtonClick"
+    refid "_-Rv:_-0Dt/instance/_-Hv:onButtonClick"
     param QName(PackageNamespace("flash.events"), "MouseEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -69,9 +69,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Rv:_-0Dt"), "onRemovedFromStage")
+  trait method QName(PrivateNamespace("*", "_-Rv:_-0Dt/instance"), "onRemovedFromStage")
    method
-    refid "_-Rv:_-0Dt/onRemovedFromStage"
+    refid "_-Rv:_-0Dt/instance/_-Rv:_-0Dt/instance/onRemovedFromStage"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -87,7 +87,7 @@ class
       getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
       getproperty         QName(PackageNamespace(""), "KEY_DOWN")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Rv:_-0Dt"), "_-0AY")
+      getproperty         QName(PrivateNamespace("*", "_-Rv:_-0Dt/instance"), "_-0AY")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
       returnvoid
@@ -95,9 +95,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Rv:_-0Dt"), "onAddedToStage")
+  trait method QName(PrivateNamespace("*", "_-Rv:_-0Dt/instance"), "onAddedToStage")
    method
-    refid "_-Rv:_-0Dt/onAddedToStage"
+    refid "_-Rv:_-0Dt/instance/_-Rv:_-0Dt/instance/onAddedToStage"
     param QName(PackageNamespace("flash.events"), "Event")
     returns QName(PackageNamespace(""), "void")
     body
@@ -113,7 +113,7 @@ class
       getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
       getproperty         QName(PackageNamespace(""), "KEY_DOWN")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-Rv:_-0Dt"), "_-0AY")
+      getproperty         QName(PrivateNamespace("*", "_-Rv:_-0Dt/instance"), "_-0AY")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
       returnvoid
@@ -121,9 +121,9 @@ class
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-Rv:_-0Dt"), "_-0AY")
+  trait method QName(PrivateNamespace("*", "_-Rv:_-0Dt/instance"), "_-0AY")
    method
-    refid "_-Rv:_-0Dt/_-0AY"
+    refid "_-Rv:_-0Dt/instance/_-Rv:_-0Dt/instance/_-0AY"
     param QName(PackageNamespace("flash.events"), "KeyboardEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -139,7 +139,7 @@ class
       getproperty         QName(PackageNamespace(""), "keyCode")
       getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
       getproperty         QName(PackageNamespace(""), "data_")
-      getproperty         Multiname("interact", [PrivateNamespace("*", "_-Rv:_-0Dt"), PackageNamespace(""), PrivateNamespace("*", "_-Rv:_-0Dt/_-0AY"), PackageNamespace("_-Rv"), PackageInternalNs("_-Rv"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Hv"), StaticProtectedNs("_-Hv"), StaticProtectedNs("_-gx"), StaticProtectedNs("_-90"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("interact", [PrivateNamespace("*", "_-Rv:_-0Dt/instance"), PackageNamespace(""), PrivateNamespace("*", "_-Rv:_-0Dt/instance/_-Rv:_-0Dt/instance/_-0AY"), PackageNamespace("_-Rv"), PackageInternalNs("_-Rv"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Hv"), StaticProtectedNs("_-Hv"), StaticProtectedNs("_-gx"), StaticProtectedNs("_-90"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       equals
       dup
       iffalse             L14
@@ -164,7 +164,7 @@ L19:
   end ; trait
  end ; instance
  cinit
-  refid "_-Rv:_-0Dt/cinit"
+  refid "_-Rv:_-0Dt/class/init"
   body
    maxstack 3
    localcount 1

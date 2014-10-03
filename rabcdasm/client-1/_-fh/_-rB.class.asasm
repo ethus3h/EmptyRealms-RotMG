@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-0EB")
   iinit
-   refid "_-fh:_-rB/iinit"
+   refid "_-fh:_-rB/instance/init"
    param QName(PackageNamespace(""), "uint")
    param QName(PackageNamespace(""), "uint")
    param QName(PackageNamespace(""), "Boolean")
@@ -20,7 +20,7 @@ class
      pushscope
 
      getlocal0
-     getlex              Multiname("Vector", [PrivateNamespace("*", "_-fh:_-rB#0"), PackageNamespace(""), PrivateNamespace("*", "_-fh:_-rB#1"), PackageNamespace("_-fh"), PackageInternalNs("_-fh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0EB"), StaticProtectedNs("_-0EB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("__AS3__.vec")])
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_-fh:_-rB"), PackageNamespace(""), PrivateNamespace("*", "_-fh:_-rB/instance"), PackageNamespace("_-fh"), PackageInternalNs("_-fh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0EB"), StaticProtectedNs("_-0EB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("__AS3__.vec")])
      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
      applytype           1
      construct           0
@@ -29,12 +29,12 @@ class
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
      constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
-     initproperty        QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-7Q")
+     initproperty        QName(PrivateNamespace("*", "_-fh:_-rB"), "_-7Q")
 
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
      constructprop       QName(PackageNamespace("flash.geom"), "Point"), 0
-     initproperty        QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-0B")
+     initproperty        QName(PrivateNamespace("*", "_-fh:_-rB"), "_-0B")
 
      getlocal0
      constructsuper      0
@@ -49,15 +49,15 @@ class
 
      getlocal0
      getlocal3
-     initproperty        QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-0HM")
+     initproperty        QName(PrivateNamespace("*", "_-fh:_-rB"), "_-0HM")
 
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
-     getproperty         QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-7Q")
+     getproperty         QName(PrivateNamespace("*", "_-fh:_-rB"), "_-7Q")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
      getlocal0
-     callpropvoid        QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-Gk"), 0
+     callpropvoid        QName(PrivateNamespace("*", "_-fh:_-rB"), "_-Gk"), 0
 
      findpropstrict      QName(PackageNamespace(""), "addEventListener")
      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
@@ -105,12 +105,12 @@ class
   trait slot QName(PackageNamespace(""), "go_") type QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject") value Null() end
   trait slot QName(PackageNamespace(""), "_-rM") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")>) end
   trait slot QName(PackageNamespace(""), "_-68") type QName(PackageNamespace(""), "Boolean") value False() end
-  trait slot QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-0HM") type QName(PackageNamespace(""), "Boolean") end
-  trait slot QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-7Q") type QName(PackageNamespace("flash.display"), "Shape") end
+  trait slot QName(PrivateNamespace("*", "_-fh:_-rB"), "_-0HM") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "_-fh:_-rB"), "_-7Q") type QName(PackageNamespace("flash.display"), "Shape") end
   trait slot QName(ProtectedNamespace("_-0EB"), "_-fO") type QName(PackageNamespace("_-E7"), "for ") value Null() end
   trait method QName(ProtectedNamespace("_-0EB"), "onMouseOver")
    method
-    refid "_-fh:_-rB/_-0EB:onMouseOver"
+    refid "_-fh:_-rB/instance/_-0EB:onMouseOver"
     param QName(PackageNamespace("flash.events"), "MouseEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -127,7 +127,7 @@ class
       initproperty        QName(PackageNamespace(""), "_-68")
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-Gk"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-fh:_-rB"), "_-Gk"), 0
 
       returnvoid
      end ; code
@@ -136,7 +136,7 @@ class
   end ; trait
   trait method QName(ProtectedNamespace("_-0EB"), "onMouseOut")
    method
-    refid "_-fh:_-rB/_-0EB:onMouseOut"
+    refid "_-fh:_-rB/instance/_-0EB:onMouseOut"
     param QName(PackageNamespace("flash.events"), "MouseEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -153,7 +153,7 @@ class
       initproperty        QName(PackageNamespace(""), "_-68")
 
       getlocal0
-      callpropvoid        QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-Gk"), 0
+      callpropvoid        QName(PrivateNamespace("*", "_-fh:_-rB"), "_-Gk"), 0
 
       returnvoid
      end ; code
@@ -162,7 +162,7 @@ class
   end ; trait
   trait method QName(ProtectedNamespace("_-0EB"), "onMouseDown")
    method
-    refid "_-fh:_-rB/_-0EB:onMouseDown"
+    refid "_-fh:_-rB/instance/_-0EB:onMouseDown"
     param QName(PackageNamespace("flash.events"), "MouseEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -184,7 +184,7 @@ class
   end ; trait
   trait method QName(ProtectedNamespace("_-0EB"), "_-VB")
    method
-    refid "_-fh:_-rB/_-0EB:_-VB"
+    refid "_-fh:_-rB/instance/_-0EB:_-VB"
     param QName(PackageNamespace("_-E7"), "for ")
     returns QName(PackageNamespace(""), "void")
     body
@@ -216,7 +216,7 @@ class
       getlocal0
       getlocal0
       getproperty         QName(ProtectedNamespace("_-0EB"), "_-fO")
-      callpropvoid        QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-mM"), 1
+      callpropvoid        QName(PrivateNamespace("*", "_-fh:_-rB"), "_-mM"), 1
 
 L19:
       returnvoid
@@ -226,7 +226,7 @@ L19:
   end ; trait
   trait method QName(ProtectedNamespace("_-0EB"), "_-XS")
    method
-    refid "_-fh:_-rB/_-0EB:_-XS"
+    refid "_-fh:_-rB/instance/_-0EB:_-XS"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 4
@@ -268,7 +268,7 @@ L20:
   end ; trait
   trait method QName(ProtectedNamespace("_-0EB"), "_-06R")
    method
-    refid "_-fh:_-rB/_-0EB:_-06R"
+    refid "_-fh:_-rB/instance/_-0EB:_-06R"
     param QName(PackageNamespace("_-0DB"), "Menu")
     returns QName(PackageNamespace(""), "void")
     body
@@ -283,12 +283,12 @@ L20:
       getlocal0
       callpropvoid        QName(ProtectedNamespace("_-0EB"), "_-XS"), 0
 
-      findproperty        QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-0GY")
+      findproperty        QName(PrivateNamespace("*", "_-fh:_-rB"), "_-0GY")
       getlocal1
-      setproperty         QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-0GY")
+      setproperty         QName(PrivateNamespace("*", "_-fh:_-rB"), "_-0GY")
 
       getlex              QName(PackageNamespace(""), "stage")
-      getlex              QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-0GY")
+      getlex              QName(PrivateNamespace("*", "_-fh:_-rB"), "_-0GY")
       callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
       returnvoid
@@ -298,7 +298,7 @@ L20:
   end ; trait
   trait method QName(PackageNamespace(""), "_-bz")
    method
-    refid "_-fh:_-rB/_-bz"
+    refid "_-fh:_-rB/instance/_-bz"
     param QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
     returns QName(PackageNamespace(""), "void")
     body
@@ -342,7 +342,7 @@ L20:
   end ; trait
   trait method QName(PackageNamespace(""), "_-dB")
    method
-    refid "_-fh:_-rB/_-dB"
+    refid "_-fh:_-rB/instance/_-dB"
     param QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
     returns QName(PackageNamespace(""), "void")
     body
@@ -364,10 +364,10 @@ L20:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-0B") type QName(PackageNamespace("flash.geom"), "Point") end
+  trait slot QName(PrivateNamespace("*", "_-fh:_-rB"), "_-0B") type QName(PackageNamespace("flash.geom"), "Point") end
   trait method QName(PackageNamespace(""), "draw")
    method
-    refid "_-fh:_-rB/draw"
+    refid "_-fh:_-rB/instance/draw"
     param QName(PackageNamespace(""), "int")
     param QName(PackageNamespace("com.company.assembleegameclient.map"), "_-0Dv")
     returns QName(PackageNamespace(""), "void")
@@ -406,7 +406,7 @@ L10:
       getproperty         QName(PackageNamespace(""), "go_")
       getproperty         QName(PackageNamespace(""), "_-bY")
       pushbyte            0
-      getproperty         MultinameL([PrivateNamespace("*", "_-fh:_-rB#0"), PackageNamespace(""), PrivateNamespace("*", "_-fh:_-rB#1"), PackageNamespace("_-fh"), PackageInternalNs("_-fh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0EB"), StaticProtectedNs("_-0EB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-fh:_-rB"), PackageNamespace(""), PrivateNamespace("*", "_-fh:_-rB/instance"), PackageNamespace("_-fh"), PackageInternalNs("_-fh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0EB"), StaticProtectedNs("_-0EB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       convert_d
       setlocal            4
 
@@ -414,7 +414,7 @@ L10:
       getproperty         QName(PackageNamespace(""), "go_")
       getproperty         QName(PackageNamespace(""), "_-bY")
       pushbyte            1
-      getproperty         MultinameL([PrivateNamespace("*", "_-fh:_-rB#0"), PackageNamespace(""), PrivateNamespace("*", "_-fh:_-rB#1"), PackageNamespace("_-fh"), PackageInternalNs("_-fh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0EB"), StaticProtectedNs("_-0EB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-fh:_-rB"), PackageNamespace(""), PrivateNamespace("*", "_-fh:_-rB/instance"), PackageNamespace("_-fh"), PackageInternalNs("_-fh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0EB"), StaticProtectedNs("_-0EB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       convert_d
       setlocal            5
 
@@ -426,7 +426,7 @@ L10:
       getlocal            4
       getlocal            5
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-0B")
+      getproperty         QName(PrivateNamespace("*", "_-fh:_-rB"), "_-0B")
       callproperty        QName(PackageNamespace(""), "_-S1"), 6
       iftrue              L50
 
@@ -443,13 +443,13 @@ L10:
 L50:
       findproperty        QName(PackageNamespace(""), "x")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-0B")
+      getproperty         QName(PrivateNamespace("*", "_-fh:_-rB"), "_-0B")
       getproperty         QName(PackageNamespace(""), "x")
       initproperty        QName(PackageNamespace(""), "x")
 
       findproperty        QName(PackageNamespace(""), "y")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-0B")
+      getproperty         QName(PrivateNamespace("*", "_-fh:_-rB"), "_-0B")
       getproperty         QName(PackageNamespace(""), "y")
       initproperty        QName(PackageNamespace(""), "y")
 
@@ -468,7 +468,7 @@ L50:
       setlocal            6
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-0B")
+      getproperty         QName(PrivateNamespace("*", "_-fh:_-rB"), "_-0B")
       getproperty         QName(PackageNamespace(""), "x")
       getlocal3
       getproperty         QName(PackageNamespace(""), "left")
@@ -498,7 +498,7 @@ L93:
 
 L94:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-0B")
+      getproperty         QName(PrivateNamespace("*", "_-fh:_-rB"), "_-0B")
       getproperty         QName(PackageNamespace(""), "x")
       getlocal3
       getproperty         QName(PackageNamespace(""), "right")
@@ -532,7 +532,7 @@ L112:
 
 L118:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-0B")
+      getproperty         QName(PrivateNamespace("*", "_-fh:_-rB"), "_-0B")
       getproperty         QName(PackageNamespace(""), "y")
       getlocal3
       getproperty         QName(PackageNamespace(""), "top")
@@ -562,7 +562,7 @@ L138:
 
 L139:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-0B")
+      getproperty         QName(PrivateNamespace("*", "_-fh:_-rB"), "_-0B")
       getproperty         QName(PackageNamespace(""), "y")
       getlocal3
       getproperty         QName(PackageNamespace(""), "bottom")
@@ -589,7 +589,7 @@ L153:
 
 L159:
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-7Q")
+      getproperty         QName(PrivateNamespace("*", "_-fh:_-rB"), "_-7Q")
       getlocal            6
       setproperty         QName(PackageNamespace(""), "rotation")
 
@@ -601,7 +601,7 @@ L159:
       getlocal0
       getlocal0
       getproperty         QName(ProtectedNamespace("_-0EB"), "_-fO")
-      callpropvoid        QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-mM"), 1
+      callpropvoid        QName(PrivateNamespace("*", "_-fh:_-rB"), "_-mM"), 1
 
 L171:
       findproperty        QName(PackageNamespace(""), "visible")
@@ -613,9 +613,9 @@ L171:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-mM")
+  trait method QName(PrivateNamespace("*", "_-fh:_-rB"), "_-mM")
    method
-    refid "_-fh:_-rB/_-mM"
+    refid "_-fh:_-rB/instance/_-fh:_-rB/_-mM"
     param QName(PackageNamespace("_-E7"), "for ")
     returns QName(PackageNamespace(""), "void")
     body
@@ -634,7 +634,7 @@ L171:
       setlocal            9
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-7Q")
+      getproperty         QName(PrivateNamespace("*", "_-fh:_-rB"), "_-7Q")
       getproperty         QName(PackageNamespace(""), "rotation")
       convert_d
       setlocal2
@@ -853,9 +853,9 @@ L187:
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-Gk")
+  trait method QName(PrivateNamespace("*", "_-fh:_-rB"), "_-Gk")
    method
-    refid "_-fh:_-rB/_-Gk"
+    refid "_-fh:_-rB/instance/_-fh:_-rB/_-Gk"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 5
@@ -867,7 +867,7 @@ L187:
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-7Q")
+      getproperty         QName(PrivateNamespace("*", "_-fh:_-rB"), "_-7Q")
       getproperty         QName(PackageNamespace(""), "graphics")
       coerce              QName(PackageNamespace("flash.display"), "Graphics")
       setlocal1
@@ -876,7 +876,7 @@ L187:
       callpropvoid        QName(PackageNamespace(""), "clear"), 0
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-0HM")
+      getproperty         QName(PrivateNamespace("*", "_-fh:_-rB"), "_-0HM")
       convert_b
       dup
       iftrue              L18
@@ -948,7 +948,7 @@ L24:
   end ; trait
  end ; instance
  cinit
-  refid "_-fh:_-rB/cinit"
+  refid "_-fh:_-rB/class/init"
   body
    maxstack 4
    localcount 3
@@ -970,9 +970,9 @@ L24:
     pushbyte            3
     initproperty        QName(PackageNamespace(""), "_-Kc")
 
-    findproperty        QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-0GY")
+    findproperty        QName(PrivateNamespace("*", "_-fh:_-rB"), "_-0GY")
     pushnull
-    setproperty         QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-0GY")
+    setproperty         QName(PrivateNamespace("*", "_-fh:_-rB"), "_-0GY")
 
     returnvoid
    end ; code
@@ -981,10 +981,10 @@ L24:
  trait const QName(PackageNamespace(""), "_-HR") slotid 1 type QName(PackageNamespace(""), "int") value Integer(8) end
  trait const QName(PackageNamespace(""), "_-C9") slotid 2 type QName(PackageNamespace(""), "int") value Integer(11) end
  trait const QName(PackageNamespace(""), "_-Kc") slotid 3 type QName(PackageNamespace(""), "int") value Integer(3) end
- trait slot QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-0GY") slotid 4 type QName(PackageNamespace("_-0DB"), "Menu") value Null() end
+ trait slot QName(PrivateNamespace("*", "_-fh:_-rB"), "_-0GY") slotid 4 type QName(PackageNamespace("_-0DB"), "Menu") value Null() end
  trait method QName(PackageNamespace(""), "_-7C") flag FINAL dispid 3
   method
-   refid "_-fh:_-rB/_-7C"
+   refid "_-fh:_-rB/class/_-7C"
    returns QName(PackageNamespace(""), "void")
    body
     maxstack 4
@@ -995,24 +995,24 @@ L24:
      getlocal0
      pushscope
 
-     getlex              QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-0GY")
+     getlex              QName(PrivateNamespace("*", "_-fh:_-rB"), "_-0GY")
      pushnull
      ifeq                L16
 
-     getlex              QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-0GY")
+     getlex              QName(PrivateNamespace("*", "_-fh:_-rB"), "_-0GY")
      getproperty         QName(PackageNamespace(""), "parent")
      pushnull
      ifeq                L13
 
-     getlex              QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-0GY")
+     getlex              QName(PrivateNamespace("*", "_-fh:_-rB"), "_-0GY")
      getproperty         QName(PackageNamespace(""), "parent")
-     getlex              QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-0GY")
+     getlex              QName(PrivateNamespace("*", "_-fh:_-rB"), "_-0GY")
      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
 
 L13:
-     findproperty        QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-0GY")
+     findproperty        QName(PrivateNamespace("*", "_-fh:_-rB"), "_-0GY")
      pushnull
-     setproperty         QName(PrivateNamespace("*", "_-fh:_-rB#0"), "_-0GY")
+     setproperty         QName(PrivateNamespace("*", "_-fh:_-rB"), "_-0GY")
 
 L16:
      returnvoid

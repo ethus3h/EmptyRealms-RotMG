@@ -7,7 +7,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-0Mi")
   iinit
-   refid "_-015:_-OP/iinit"
+   refid "_-015:_-OP/instance/init"
    param QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "uint")
@@ -130,10 +130,10 @@ class
   trait slot QName(PackageNamespace(""), "color_") type QName(PackageNamespace(""), "uint") end
   trait slot QName(PackageNamespace(""), "lifetime_") type QName(PackageNamespace(""), "int") end
   trait slot QName(PackageNamespace(""), "_-YQ") type QName(PackageNamespace(""), "int") end
-  trait slot QName(PrivateNamespace("*", "_-015:_-OP"), "startTime_") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(PrivateNamespace("*", "_-015:_-OP/instance/draw#0"), "startTime_") type QName(PackageNamespace(""), "int") value Integer(0) end
   trait method QName(PackageNamespace(""), "draw")
    method
-    refid "_-015:_-OP/draw"
+    refid "_-015:_-OP/instance/draw"
     param QName(PackageNamespace("com.company.assembleegameclient.map"), "_-0Dv")
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace(""), "Boolean")
@@ -150,7 +150,7 @@ class
       setlocal3
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-015:_-OP"), "startTime_")
+      getproperty         QName(PrivateNamespace("*", "_-015:_-OP/instance/draw#0"), "startTime_")
       pushbyte            0
       ifne                L14
 
@@ -159,12 +159,12 @@ class
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-YQ")
       add
-      initproperty        QName(PrivateNamespace("*", "_-015:_-OP"), "startTime_")
+      initproperty        QName(PrivateNamespace("*", "_-015:_-OP/instance/draw#0"), "startTime_")
 
 L14:
       getlocal2
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-015:_-OP"), "startTime_")
+      getproperty         QName(PrivateNamespace("*", "_-015:_-OP/instance/draw#0"), "startTime_")
       ifnlt               L23
 
       findproperty        QName(PackageNamespace(""), "visible")
@@ -177,7 +177,7 @@ L14:
 L23:
       getlocal2
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-015:_-OP"), "startTime_")
+      getproperty         QName(PrivateNamespace("*", "_-015:_-OP/instance/draw#0"), "startTime_")
       subtract
       convert_i
       setlocal3
@@ -248,7 +248,7 @@ L69:
       getproperty         QName(PackageNamespace(""), "go_")
       getproperty         QName(PackageNamespace(""), "_-bY")
       pushbyte            0
-      getproperty         MultinameL([PrivateNamespace("*", "_-015:_-OP"), PackageNamespace(""), PrivateNamespace("*", "_-015:_-OP/draw"), PackageNamespace("_-015"), PackageInternalNs("_-015"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Mi"), StaticProtectedNs("_-0Mi"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-015:_-OP/instance/draw#0"), PackageNamespace(""), PrivateNamespace("*", "_-015:_-OP/instance/draw#1"), PackageNamespace("_-015"), PackageInternalNs("_-015"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Mi"), StaticProtectedNs("_-0Mi"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       coerce_a
       jump                L86
 
@@ -294,7 +294,7 @@ L97:
       getproperty         QName(PackageNamespace(""), "go_")
       getproperty         QName(PackageNamespace(""), "_-bY")
       pushbyte            1
-      getproperty         MultinameL([PrivateNamespace("*", "_-015:_-OP"), PackageNamespace(""), PrivateNamespace("*", "_-015:_-OP/draw"), PackageNamespace("_-015"), PackageInternalNs("_-015"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Mi"), StaticProtectedNs("_-0Mi"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         MultinameL([PrivateNamespace("*", "_-015:_-OP/instance/draw#0"), PackageNamespace(""), PrivateNamespace("*", "_-015:_-OP/instance/draw#1"), PackageNamespace("_-015"), PackageInternalNs("_-015"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Mi"), StaticProtectedNs("_-0Mi"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       coerce_a
       jump                L122
 
@@ -330,7 +330,7 @@ L133:
   end ; trait
  end ; instance
  cinit
-  refid "_-015:_-OP/cinit"
+  refid "_-015:_-OP/class/init"
   body
    maxstack 3
    localcount 1

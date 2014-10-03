@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("com.google.analytics.debug:Label")
   iinit
-   refid "com.google.analytics.debug:Label/iinit"
+   refid "com.google.analytics.debug:Label/instance/init"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace(""), "uint")
@@ -55,23 +55,23 @@ class
      pushfalse
      initproperty        QName(ProtectedNamespace("com.google.analytics.debug:Label"), "selectable")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_background")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_background")
      findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
      constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_background")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_background")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_textField")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_textField")
      findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
      constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_textField")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_textField")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_text")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_text")
      getlocal1
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_text")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_text")
 
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_tag")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_tag")
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_tag")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_tag")
 
      getlocal            4
      pushnull
@@ -101,11 +101,11 @@ L45:
      setlocal3
 
 L58:
-     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_color")
+     findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_color")
      getlocal3
-     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_color")
+     initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_color")
 
-     getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_textField")
+     getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_textField")
      getlex              QName(PackageNamespace("flash.events"), "TextEvent")
      getproperty         QName(PackageNamespace(""), "LINK")
      getlex              QName(PackageNamespace(""), "onLink")
@@ -117,7 +117,7 @@ L58:
   end ; method
   trait getter QName(PackageNamespace(""), "tag")
    method
-    refid "com.google.analytics.debug:Label/tag/getter"
+    refid "com.google.analytics.debug:Label/instance/tag/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -128,15 +128,15 @@ L58:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_tag")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_tag")
       returnvalue
      end ; code
     end ; body
    end ; method
   end ; trait
-  trait method QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_draw")
+  trait method QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_draw")
    method
-    refid "com.google.analytics.debug:Label/_draw"
+    refid "com.google.analytics.debug:Label/instance/com.google.analytics.debug:Label/instance/_draw"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 5
@@ -147,7 +147,7 @@ L58:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_background")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_background")
       getproperty         QName(PackageNamespace(""), "graphics")
       coerce              QName(PackageNamespace("flash.display"), "Graphics")
       setlocal1
@@ -156,15 +156,15 @@ L58:
       callpropvoid        QName(PackageNamespace(""), "clear"), 0
 
       getlocal1
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_color")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_color")
       callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_textField")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_textField")
       getproperty         QName(PackageNamespace(""), "width")
       convert_u
       setlocal2
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_textField")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_textField")
       getproperty         QName(PackageNamespace(""), "height")
       convert_u
       setlocal3
@@ -193,10 +193,10 @@ L25:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_color") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_color") type QName(PackageNamespace(""), "uint") end
   trait getter QName(PackageNamespace(""), "text")
    method
-    refid "com.google.analytics.debug:Label/text/getter"
+    refid "com.google.analytics.debug:Label/instance/text/getter"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 1
@@ -207,7 +207,7 @@ L25:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_textField")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_textField")
       getproperty         QName(PackageNamespace(""), "text")
       returnvalue
      end ; code
@@ -216,7 +216,7 @@ L25:
   end ; trait
   trait method QName(PackageNamespace(""), "appendText")
    method
-    refid "com.google.analytics.debug:Label/appendText"
+    refid "com.google.analytics.debug:Label/instance/appendText"
     param QName(PackageNamespace(""), "String")
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
@@ -247,8 +247,8 @@ L6:
       setlocal2
 
 L12:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_textField")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_textField")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_textField")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_textField")
       getproperty         QName(PackageNamespace(""), "htmlText")
       pushstring          "<span class=\""
       getlocal2
@@ -262,14 +262,14 @@ L12:
       add
       setproperty         QName(PackageNamespace(""), "htmlText")
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_text")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_text")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_text")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_text")
       getlocal1
       add
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_text")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_text")
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_draw")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_draw"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_draw")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_draw"), 0
 
       findpropstrict      QName(PackageNamespace(""), "resize")
       callpropvoid        QName(PackageNamespace(""), "resize"), 0
@@ -281,7 +281,7 @@ L12:
   end ; trait
   trait setter QName(PackageNamespace(""), "text")
    method
-    refid "com.google.analytics.debug:Label/text/setter"
+    refid "com.google.analytics.debug:Label/instance/text/setter"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -297,12 +297,12 @@ L12:
       pushstring          ""
       ifne                L8
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_text")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_text")
       coerce_s
       setlocal1
 
 L8:
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_textField")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_textField")
       pushstring          "<span class=\""
       getlex              QName(PackageNamespace(""), "tag")
       add
@@ -314,12 +314,12 @@ L8:
       add
       setproperty         QName(PackageNamespace(""), "htmlText")
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_text")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_text")
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_text")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_text")
 
-      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_draw")
-      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_draw"), 0
+      findpropstrict      QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_draw")
+      callpropvoid        QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_draw"), 0
 
       findpropstrict      QName(PackageNamespace(""), "resize")
       callpropvoid        QName(PackageNamespace(""), "resize"), 0
@@ -331,7 +331,7 @@ L8:
   end ; trait
   trait method QName(ProtectedNamespace("com.google.analytics.debug:Label"), "layout") flag OVERRIDE
    method
-    refid "com.google.analytics.debug:Label:layout"
+    refid "com.google.analytics.debug:Label/instance/com.google.analytics.debug:Label:layout"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -342,43 +342,43 @@ L8:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_textField")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_textField")
       getlex              QName(PackageNamespace("flash.text"), "TextFieldType")
       getproperty         QName(PackageNamespace(""), "DYNAMIC")
       setproperty         QName(PackageNamespace(""), "type")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_textField")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_textField")
       getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
       getproperty         QName(PackageNamespace(""), "LEFT")
       setproperty         QName(PackageNamespace(""), "autoSize")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_textField")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_textField")
       pushfalse
       setproperty         QName(PackageNamespace(""), "background")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_textField")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_textField")
       getlex              QName(ProtectedNamespace("com.google.analytics.debug:Label"), "selectable")
       setproperty         QName(PackageNamespace(""), "selectable")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_textField")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_textField")
       pushtrue
       setproperty         QName(PackageNamespace(""), "multiline")
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_textField")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_textField")
       getlex              QName(PackageNamespace("com.google.analytics.debug"), "Style")
       getproperty         QName(PackageNamespace(""), "sheet")
       setproperty         QName(PackageNamespace(""), "styleSheet")
 
       getlocal0
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_text")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_text")
       setproperty         QName(PackageNamespace(""), "text")
 
       findpropstrict      QName(PackageNamespace(""), "addChild")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_background")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_background")
       callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
       findpropstrict      QName(PackageNamespace(""), "addChild")
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_textField")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_textField")
       callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
       returnvoid
@@ -386,13 +386,13 @@ L8:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_background") type QName(PackageNamespace("flash.display"), "Shape") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_textField") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_background") type QName(PackageNamespace("flash.display"), "Shape") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_textField") type QName(PackageNamespace("flash.text"), "TextField") end
   trait slot QName(PackageNamespace(""), "stickToEdge") type QName(PackageNamespace(""), "Boolean") end
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_text") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_text") type QName(PackageNamespace(""), "String") end
   trait setter QName(PackageNamespace(""), "tag")
    method
-    refid "com.google.analytics.debug:Label/tag/setter"
+    refid "com.google.analytics.debug:Label/instance/tag/setter"
     param QName(PackageNamespace(""), "String")
     returns QName(PackageNamespace(""), "void")
     body
@@ -404,9 +404,9 @@ L8:
       getlocal0
       pushscope
 
-      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_tag")
+      findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_tag")
       getlocal1
-      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_tag")
+      initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_tag")
 
       findproperty        QName(PackageNamespace(""), "text")
       pushstring          ""
@@ -420,7 +420,7 @@ L8:
   trait slot QName(ProtectedNamespace("com.google.analytics.debug:Label"), "selectable") type QName(PackageNamespace(""), "Boolean") end
   trait method QName(PackageNamespace(""), "onLink")
    method
-    refid "com.google.analytics.debug:Label/onLink"
+    refid "com.google.analytics.debug:Label/instance/onLink"
     param QName(PackageNamespace("flash.events"), "TextEvent")
     returns QName(PackageNamespace(""), "void")
     body
@@ -437,10 +437,10 @@ L8:
     end ; body
    end ; method
   end ; trait
-  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_tag") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_tag") type QName(PackageNamespace(""), "String") end
   trait method QName(ProtectedNamespace("com.google.analytics.debug:Label"), "dispose") flag OVERRIDE
    method
-    refid "com.google.analytics.debug:Label:dispose"
+    refid "com.google.analytics.debug:Label/instance/com.google.analytics.debug:Label:dispose"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 3
@@ -451,7 +451,7 @@ L8:
       getlocal0
       pushscope
 
-      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label"), "_textField")
+      getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Label/instance"), "_textField")
       getlex              QName(PackageNamespace("flash.events"), "TextEvent")
       getproperty         QName(PackageNamespace(""), "LINK")
       getlex              QName(PackageNamespace(""), "onLink")
@@ -466,7 +466,7 @@ L8:
   end ; trait
  end ; instance
  cinit
-  refid "com.google.analytics.debug:Label/cinit"
+  refid "com.google.analytics.debug:Label/class/init"
   body
    maxstack 2
    localcount 1

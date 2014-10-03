@@ -7,7 +7,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-0Ck")
   iinit
-   refid "com.company.assembleegameclient.objects:Merchant/iinit"
+   refid "com.company.assembleegameclient.objects:Merchant/instance/init"
    param QName(PackageNamespace(""), "XML")
    body
     maxstack 8
@@ -48,7 +48,7 @@ class
   trait slot QName(PackageNamespace(""), "alpha_") type QName(PackageNamespace(""), "Number") value Double(1) end
   trait method QName(PackageNamespace(""), "setPrice") flag OVERRIDE
    method
-    refid "com.company.assembleegameclient.objects:Merchant/setPrice"
+    refid "com.company.assembleegameclient.objects:Merchant/instance/setPrice"
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace(""), "void")
     body
@@ -74,7 +74,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "setRankReq") flag OVERRIDE
    method
-    refid "com.company.assembleegameclient.objects:Merchant/setRankReq"
+    refid "com.company.assembleegameclient.objects:Merchant/instance/setRankReq"
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace(""), "void")
     body
@@ -100,7 +100,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "addTo") flag OVERRIDE
    method
-    refid "com.company.assembleegameclient.objects:Merchant/addTo"
+    refid "com.company.assembleegameclient.objects:Merchant/instance/addTo"
     param QName(PackageNamespace("com.company.assembleegameclient.map"), "_-Xl")
     param QName(PackageNamespace(""), "Number")
     param QName(PackageNamespace(""), "Number")
@@ -142,7 +142,7 @@ L10:
   end ; trait
   trait method QName(PackageNamespace(""), "removeFromMap") flag OVERRIDE
    method
-    refid "com.company.assembleegameclient.objects:Merchant/removeFromMap"
+    refid "com.company.assembleegameclient.objects:Merchant/instance/removeFromMap"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 5
@@ -183,7 +183,7 @@ L19:
   end ; trait
   trait method QName(PackageNamespace(""), "_-Si")
    method
-    refid "com.company.assembleegameclient.objects:Merchant/_-Si"
+    refid "com.company.assembleegameclient.objects:Merchant/instance/_-Si"
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace("_-015"), "_-6T")
     body
@@ -211,7 +211,7 @@ L19:
       convert_u
       setlocal            5
 
-      jump                L96
+      jump                L99
 
 L15:
       label
@@ -230,7 +230,7 @@ L15:
       convert_u
       setlocal            5
 
-      jump                L121
+      jump                L124
 
 L28:
       label
@@ -277,7 +277,7 @@ L50:
       convert_u
       setlocal            5
 
-      jump                L121
+      jump                L124
 
 L60:
       label
@@ -299,7 +299,7 @@ L60:
       convert_u
       setlocal            5
 
-      jump                L121
+      jump                L124
 
 L76:
       label
@@ -321,57 +321,59 @@ L76:
       convert_u
       setlocal            5
 
-      jump                L121
+      jump                L124
 
 L92:
       label
       pushnull
       returnvalue
 
-      jump                L121
-
-L96:
+      ; 0x10
+      ; 0x57
+      ; 0x00
+      ; 0x00
+L99:
       getlocal1
       setlocal            6
 
       getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_-5x")
       getlocal            6
-      ifstrictne          L103
+      ifstrictne          L106
 
       pushbyte            0
-      jump                L119
+      jump                L122
 
-L103:
+L106:
       getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_-qV")
       getlocal            6
-      ifstrictne          L108
+      ifstrictne          L111
 
       pushbyte            1
-      jump                L119
+      jump                L122
 
-L108:
+L111:
       getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_-Rs")
       getlocal            6
-      ifstrictne          L113
+      ifstrictne          L116
 
       pushbyte            2
-      jump                L119
+      jump                L122
 
-L113:
+L116:
       getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_-0Dx")
       getlocal            6
-      ifstrictne          L118
+      ifstrictne          L121
 
       pushbyte            3
-      jump                L119
+      jump                L122
 
-L118:
+L121:
       pushbyte            4
-L119:
+L122:
       kill                6
       lookupswitch        L92, [L15, L28, L60, L76, L92]
 
-L121:
+L124:
       findpropstrict      QName(PackageNamespace("_-015"), "_-6T")
       getlocal0
       getlocal2
@@ -393,7 +395,7 @@ L121:
   trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_-01L") type QName(PackageNamespace(""), "int") value Integer(0) end
   trait method QName(PackageNamespace(""), "update") flag OVERRIDE
    method
-    refid "com.company.assembleegameclient.objects:Merchant/update"
+    refid "com.company.assembleegameclient.objects:Merchant/instance/update"
     param QName(PackageNamespace(""), "int")
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace(""), "Boolean")
@@ -627,7 +629,7 @@ L142:
   end ; trait
   trait method QName(PackageNamespace(""), "soldObjectName") flag OVERRIDE
    method
-    refid "com.company.assembleegameclient.objects:Merchant/soldObjectName"
+    refid "com.company.assembleegameclient.objects:Merchant/instance/soldObjectName"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 4
@@ -650,7 +652,7 @@ L142:
   end ; trait
   trait method QName(PackageNamespace(""), "soldObjectInternalName") flag OVERRIDE
    method
-    refid "com.company.assembleegameclient.objects:Merchant/soldObjectInternalName"
+    refid "com.company.assembleegameclient.objects:Merchant/instance/soldObjectInternalName"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 4
@@ -679,7 +681,7 @@ L142:
   end ; trait
   trait method QName(PackageNamespace(""), "getTooltip") flag OVERRIDE
    method
-    refid "com.company.assembleegameclient.objects:Merchant/getTooltip"
+    refid "com.company.assembleegameclient.objects:Merchant/instance/getTooltip"
     returns QName(PackageNamespace("_-E7"), "for ")
     body
      maxstack 7
@@ -710,7 +712,7 @@ L142:
   end ; trait
   trait method QName(PackageNamespace(""), "getIcon") flag OVERRIDE
    method
-    refid "com.company.assembleegameclient.objects:Merchant/getIcon"
+    refid "com.company.assembleegameclient.objects:Merchant/instance/getIcon"
     returns QName(PackageNamespace("flash.display"), "BitmapData")
     body
      maxstack 9
@@ -787,7 +789,7 @@ L50:
   end ; trait
   trait method QName(PackageNamespace(""), "getTex1Id")
    method
-    refid "com.company.assembleegameclient.objects:Merchant/getTex1Id"
+    refid "com.company.assembleegameclient.objects:Merchant/instance/getTex1Id"
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace(""), "int")
     body
@@ -845,7 +847,7 @@ L31:
   end ; trait
   trait method QName(PackageNamespace(""), "getTex2Id")
    method
-    refid "com.company.assembleegameclient.objects:Merchant/getTex2Id"
+    refid "com.company.assembleegameclient.objects:Merchant/instance/getTex2Id"
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace(""), "int")
     body
@@ -904,7 +906,7 @@ L31:
   trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_-4p") type QName(PackageNamespace("flash.geom"), "ColorTransform") end
   trait method QName(ProtectedNamespace("_-0Ck"), "getTexture") flag OVERRIDE
    method
-    refid "com.company.assembleegameclient.objects:Merchant/_-0Ck:getTexture"
+    refid "com.company.assembleegameclient.objects:Merchant/instance/_-0Ck:getTexture"
     param QName(PackageNamespace("com.company.assembleegameclient.map"), "_-0Dv")
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace("flash.display"), "BitmapData")
@@ -973,7 +975,7 @@ L40:
   end ; trait
   trait method QName(PackageNamespace(""), "setMerchandiseType")
    method
-    refid "com.company.assembleegameclient.objects:Merchant/setMerchandiseType"
+    refid "com.company.assembleegameclient.objects:Merchant/instance/setMerchandiseType"
     param QName(PackageNamespace(""), "int")
     returns QName(PackageNamespace(""), "void")
     body
@@ -1005,7 +1007,7 @@ L40:
   end ; trait
  end ; instance
  cinit
-  refid "com.company.assembleegameclient.objects:Merchant/cinit"
+  refid "com.company.assembleegameclient.objects:Merchant/class/init"
   body
    maxstack 5
    localcount 3
@@ -1040,7 +1042,7 @@ L40:
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "T")
 
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_-1U")
-    newfunction         "com.company.assembleegameclient.objects:Merchant/cinit/inline_method"
+    newfunction         "com.company.assembleegameclient.objects:Merchant/class/init/inline_method"
     getglobalscope
     call                0
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:Merchant#0"), "_-1U")

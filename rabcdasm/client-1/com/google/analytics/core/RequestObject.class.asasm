@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("com.google.analytics.core:RequestObject")
   iinit
-   refid "com.google.analytics.core:RequestObject/iinit"
+   refid "com.google.analytics.core:RequestObject/instance/init"
    param QName(PackageNamespace("flash.net"), "URLRequest")
    body
     maxstack 2
@@ -35,7 +35,7 @@ class
   end ; method
   trait method QName(PackageNamespace(""), "hasCompleted")
    method
-    refid "com.google.analytics.core:RequestObject/hasCompleted"
+    refid "com.google.analytics.core:RequestObject/instance/hasCompleted"
     returns QName(PackageNamespace(""), "Boolean")
     body
      maxstack 2
@@ -57,7 +57,7 @@ class
   trait slot QName(PackageNamespace(""), "start") type QName(PackageNamespace(""), "int") end
   trait method QName(PackageNamespace(""), "toString")
    method
-    refid "com.google.analytics.core:RequestObject/toString"
+    refid "com.google.analytics.core:RequestObject/instance/toString"
     returns QName(PackageNamespace(""), "String")
     body
      maxstack 3
@@ -101,7 +101,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "complete")
    method
-    refid "com.google.analytics.core:RequestObject/complete"
+    refid "com.google.analytics.core:RequestObject/instance/complete"
     returns QName(PackageNamespace(""), "void")
     body
      maxstack 2
@@ -125,7 +125,7 @@ class
   trait slot QName(PackageNamespace(""), "end") type QName(PackageNamespace(""), "int") end
   trait getter QName(PackageNamespace(""), "duration")
    method
-    refid "com.google.analytics.core:RequestObject/duration/getter"
+    refid "com.google.analytics.core:RequestObject/instance/duration/getter"
     returns QName(PackageNamespace(""), "int")
     body
      maxstack 2
@@ -155,7 +155,7 @@ L7:
   trait slot QName(PackageNamespace(""), "request") type QName(PackageNamespace("flash.net"), "URLRequest") end
  end ; instance
  cinit
-  refid "com.google.analytics.core:RequestObject/cinit"
+  refid "com.google.analytics.core:RequestObject/class/init"
   body
    maxstack 1
    localcount 1

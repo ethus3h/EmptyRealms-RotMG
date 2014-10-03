@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-2f")
   iinit
-   refid "_-0Dn:_-PI/iinit"
+   refid "_-0Dn:_-PI/instance/init"
    body
     maxstack 3
     localcount 3
@@ -25,7 +25,7 @@ class
   end ; method
  end ; instance
  cinit
-  refid "_-0Dn:_-PI/cinit"
+  refid "_-0Dn:_-PI/class/init"
   body
    maxstack 3
    localcount 1
@@ -39,10 +39,10 @@ class
    end ; code
   end ; body
  end ; method
- trait slot QName(PrivateNamespace("*", "_-0Dn:_-PI"), "_-bh") slotid 1 type QName(PackageNamespace("_-0Dn"), "throw") end
+ trait slot QName(PrivateNamespace("*", "_-0Dn:_-PI/class/_-dJ"), "_-bh") slotid 1 type QName(PackageNamespace("_-0Dn"), "throw") end
  trait method QName(PackageNamespace(""), "_-dJ") flag FINAL dispid 3
   method
-   refid "_-0Dn:_-PI/_-dJ"
+   refid "_-0Dn:_-PI/class/_-dJ"
    returns QName(PackageNamespace("_-0Dn"), "throw")
    body
     maxstack 5
@@ -53,8 +53,8 @@ class
      getlocal0
      pushscope
 
-     findproperty        QName(PrivateNamespace("*", "_-0Dn:_-PI"), "_-bh")
-     getlex              QName(PrivateNamespace("*", "_-0Dn:_-PI"), "_-bh")
+     findproperty        QName(PrivateNamespace("*", "_-0Dn:_-PI/class/_-dJ"), "_-bh")
+     getlex              QName(PrivateNamespace("*", "_-0Dn:_-PI/class/_-dJ"), "_-bh")
      coerce              QName(PackageNamespace("_-0Dn"), "throw")
      dup
      iftrue              L11
@@ -67,7 +67,7 @@ L11:
      dup
      setlocal1
 
-     setproperty         QName(PrivateNamespace("*", "_-0Dn:_-PI"), "_-bh")
+     setproperty         QName(PrivateNamespace("*", "_-0Dn:_-PI/class/_-dJ"), "_-bh")
 
      getlocal1
      kill                1

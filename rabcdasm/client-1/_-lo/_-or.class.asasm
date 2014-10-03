@@ -6,7 +6,7 @@ class
   flag PROTECTEDNS
   protectedns ProtectedNamespace("_-1e")
   iinit
-   refid "_-lo:_-or/iinit"
+   refid "_-lo:_-or/instance/init"
    param QName(PackageNamespace(""), "String")
    param QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
    body
@@ -24,16 +24,16 @@ class
 
      getlocal0
      getlocal2
-     initproperty        QName(PrivateNamespace("*", "_-lo:_-or"), "_-0Jw")
+     initproperty        QName(PrivateNamespace("*", "_-lo:_-or/instance"), "_-0Jw")
 
      returnvoid
     end ; code
    end ; body
   end ; method
-  trait slot QName(PrivateNamespace("*", "_-lo:_-or"), "_-0Jw") type QName(PackageNamespace("flash.display"), "DisplayObjectContainer") end
+  trait slot QName(PrivateNamespace("*", "_-lo:_-or/instance"), "_-0Jw") type QName(PackageNamespace("flash.display"), "DisplayObjectContainer") end
   trait getter QName(PackageNamespace(""), "container")
    method
-    refid "_-lo:_-or/container/getter"
+    refid "_-lo:_-or/instance/container/getter"
     returns QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
     body
      maxstack 3
@@ -45,7 +45,7 @@ class
       pushscope
 
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-lo:_-or"), "_-0Jw")
+      getproperty         QName(PrivateNamespace("*", "_-lo:_-or/instance"), "_-0Jw")
       returnvalue
      end ; code
     end ; body
@@ -53,7 +53,7 @@ class
   end ; trait
   trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
    method
-    refid "_-lo:_-or/clone"
+    refid "_-lo:_-or/instance/clone"
     returns QName(PackageNamespace("flash.events"), "Event")
     body
      maxstack 5
@@ -67,7 +67,7 @@ class
       findpropstrict      QName(PackageNamespace("_-lo"), "_-or")
       getlex              QName(PackageNamespace(""), "type")
       getlocal0
-      getproperty         QName(PrivateNamespace("*", "_-lo:_-or"), "_-0Jw")
+      getproperty         QName(PrivateNamespace("*", "_-lo:_-or/instance"), "_-0Jw")
       constructprop       QName(PackageNamespace("_-lo"), "_-or"), 2
       returnvalue
      end ; code
@@ -76,7 +76,7 @@ class
   end ; trait
  end ; instance
  cinit
-  refid "_-lo:_-or/cinit"
+  refid "_-lo:_-or/class/init"
   body
    maxstack 4
    localcount 3

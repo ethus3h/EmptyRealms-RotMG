@@ -4,18 +4,18 @@ class
   flag SEALED
   flag INTERFACE
   iinit
-   refid "mx.formatters:IFormatter/iinit"
+   refid "mx.formatters:IFormatter/instance/init"
   end ; method
   trait method QName(Namespace("mx.formatters:IFormatter"), "format")
    method
-    refid "mx.formatters:IFormatter:format"
+    refid "mx.formatters:IFormatter/instance/mx.formatters:IFormatter:format"
     param QName(PackageNamespace(""), "Object")
     returns QName(PackageNamespace(""), "String")
    end ; method
   end ; trait
  end ; instance
  cinit
-  refid "mx.formatters:IFormatter/cinit"
+  refid "mx.formatters:IFormatter/class/init"
   body
    maxstack 0
    localcount 1
