@@ -15,46 +15,16 @@ class
     initscopedepth 5
     maxscopedepth 6
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     declocal            2
-     getlocal3
-     typeof
-     istypelate
-     convert_d
-     dup
-L10:
-     setlocal3
-
-     setlocal            4
-
      getlocal0
      pushscope
 
-     getlocal3
-     iftrue              L28
-
      getlocal0
      constructsuper      0
-
-     getlocal            4
-     dup
-     iftrue              L24
-
-     pop
-     getlocal3
-     convert_b
-L24:
-     iffalse             L28
 
      getlocal0
      getlocal1
      initproperty        QName(PrivateNamespace("*", "_-4X:_-03L"), "_-xA")
 
-L28:
      getlocal0
      getlocal2
      initproperty        QName(PrivateNamespace("*", "_-4X:_-03L"), "_-5g")
@@ -75,27 +45,8 @@ L28:
      initscopedepth 5
      maxscopedepth 6
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      astypelate
-      pushfalse
-      increment
-      pushnan
-      not
-      modulo
-L10:
-      setlocal1
-
-      setlocal2
-
       getlocal0
       pushscope
-
-      getlocal2
-      iffalse             L28
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-4X:_-03L"), "_-xA")
@@ -105,14 +56,10 @@ L10:
       getproperty         QName(PrivateNamespace("*", "_-4X:_-03L"), "_-5g")
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "apply"), 2
 
-      getlocal2
-      iffalse             L28
-
       findpropstrict      QName(ProtectedNamespace("_-01A"), "_-Ct")
       pushtrue
       callpropvoid        QName(ProtectedNamespace("_-01A"), "_-Ct"), 1
 
-L28:
       returnvoid
      end ; code
     end ; body

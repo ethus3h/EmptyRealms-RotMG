@@ -12,39 +12,12 @@ class
     initscopedepth 10
     maxscopedepth 11
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     popscope
-     hasnext
-     pushwith
-     coerce_s
-     convert_u
-     nextname
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal2
-     dup
-     iftrue              L20
-
-     pop
-     getlocal2
-     convert_b
-L20:
-     iffalse             L23
 
      getlocal0
      constructsuper      0
 
-L23:
      returnvoid
     end ; code
    end ; body

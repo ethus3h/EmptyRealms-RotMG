@@ -14,27 +14,8 @@ class
     initscopedepth 10
     maxscopedepth 11
     code
-     pushfalse
-     pushtrue
-     setlocal2
-
-     jump                L10
-
-     pushfalse
-     kill                2
-     declocal_i          2
-     kill                2
-     lessthan
-     setlocal2
-
-L10:
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal3
-     iftrue              L24
 
      getlocal0
      getlocal1
@@ -44,10 +25,6 @@ L10:
      pushnull
      constructsuper      5
 
-     getlocal3
-     iftrue              L30
-
-L24:
      findpropstrict      QName(PackageNamespace(""), "addEventListener")
      getlex              QName(PackageNamespace("_-0LC"), "_-qO")
      getproperty         QName(PackageNamespace(""), "BUTTON1_EVENT")
@@ -55,7 +32,6 @@ L24:
      getproperty         QName(PrivateNamespace("*", "_-0LC:_-qM"), "onDialogComplete")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-L30:
      returnvoid
     end ; code
    end ; body
@@ -71,42 +47,20 @@ L30:
      initscopedepth 10
      maxscopedepth 11
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      rshift
-      coerce_s
-      kill                2
-      add_i
-      inclocal_i          2
-      coerce_a
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      iffalse             L21
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "parent")
       pushnull
-      ifeq                L25
+      ifeq                L10
 
-      getlocal3
-      iftrue              L25
-
-L21:
       getlocal0
       getproperty         QName(PackageNamespace(""), "parent")
       getlocal0
       callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
 
-L25:
+L10:
       returnvoid
      end ; code
     end ; body

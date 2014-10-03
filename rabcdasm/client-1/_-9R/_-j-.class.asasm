@@ -19,21 +19,6 @@ class
     initscopedepth 5
     maxscopedepth 6
     code
-     pushfalse
-     pushtrue
-     setlocal            7
-
-     jump                L10
-
-     kill                6
-     declocal            2
-     declocal_i          6
-     inclocal            2
-     kill                3
-     inclocal_i          5
-L10:
-     setlocal            8
-
      getlocal0
      pushscope
 
@@ -41,19 +26,6 @@ L10:
      getlex              QName(PackageNamespace(""), "RECONNECT")
      constructsuper      1
 
-     getlocal            7
-     iffalse             L50
-
-     jump                L25
-
-     kill                7
-     convert_b
-     kill                6
-     setlocal2
-
-     inclocal            3
-     declocal            5
-L25:
      getlocal0
      getlocal1
      initproperty        QName(PackageNamespace(""), "server_")
@@ -74,21 +46,10 @@ L25:
      getlocal            5
      initproperty        QName(PackageNamespace(""), "keyTime_")
 
-     getlocal            8
-     dup
-     iffalse             L46
-
-     pop
-     getlocal1
-     convert_b
-L46:
-     iftrue              L50
-
      getlocal0
      getlocal            6
      initproperty        QName(PackageNamespace(""), "key_")
 
-L50:
      returnvoid
     end ; code
    end ; body
@@ -113,15 +74,6 @@ L50:
       pushscope
 
       findpropstrict      QName(PackageNamespace("_-9R"), "_-j-")
-      jump                L10
-
-      dxnslate
-      nextvalue
-      not
-      dxnslate
-      pushfalse
-      hasnext
-L10:
       getlocal0
       getproperty         QName(PackageNamespace(""), "server_")
       getlocal0
@@ -154,15 +106,6 @@ L10:
       pushscope
 
       findpropstrict      QName(PackageNamespace(""), "formatToString")
-      jump                L10
-
-      dxnslate
-      add_i
-      negate_i
-      subtract_i
-      strictequals
-      multiply_i
-L10:
       getlex              QName(PackageNamespace(""), "RECONNECT")
       pushstring          "server_"
       pushstring          "gameId_"
@@ -184,41 +127,13 @@ L10:
    initscopedepth 4
    maxscopedepth 5
    code
-    pushfalse
-    pushtrue
-    swap
-    jump                L10
-
-    bitor
-    pop
-    equals
-    setlocal2
-
-    increment_i
-    istypelate
-L10:
-    setlocal1
-
-    setlocal2
-
     getlocal0
     pushscope
-
-    getlocal1
-    dup
-    iffalse             L20
-
-    pop
-    getlocal2
-    convert_b
-L20:
-    iftrue              L24
 
     findproperty        QName(PackageNamespace(""), "RECONNECT")
     pushstring          "RECONNECT_EVENT"
     initproperty        QName(PackageNamespace(""), "RECONNECT")
 
-L24:
     returnvoid
    end ; code
   end ; body

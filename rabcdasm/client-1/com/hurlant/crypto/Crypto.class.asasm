@@ -239,7 +239,7 @@ L136:
 
 L143:
      label
-     jump                L215
+     jump                L212
 
 L145:
      getlocal            4
@@ -252,7 +252,7 @@ L145:
      ifstrictne          L154
 
      pushbyte            0
-     jump                L213
+     jump                L210
 
 L154:
      pushstring          "aes"
@@ -260,7 +260,7 @@ L154:
      ifstrictne          L159
 
      pushbyte            1
-     jump                L213
+     jump                L210
 
 L159:
      pushstring          "aes128"
@@ -268,7 +268,7 @@ L159:
      ifstrictne          L164
 
      pushbyte            2
-     jump                L213
+     jump                L210
 
 L164:
      pushstring          "aes192"
@@ -276,7 +276,7 @@ L164:
      ifstrictne          L169
 
      pushbyte            3
-     jump                L213
+     jump                L210
 
 L169:
      pushstring          "aes256"
@@ -284,7 +284,7 @@ L169:
      ifstrictne          L174
 
      pushbyte            4
-     jump                L213
+     jump                L210
 
 L174:
      pushstring          "bf"
@@ -292,7 +292,7 @@ L174:
      ifstrictne          L179
 
      pushbyte            5
-     jump                L213
+     jump                L210
 
 L179:
      pushstring          "blowfish"
@@ -300,7 +300,7 @@ L179:
      ifstrictne          L184
 
      pushbyte            6
-     jump                L213
+     jump                L210
 
 L184:
      pushstring          "des"
@@ -308,7 +308,7 @@ L184:
      ifstrictne          L189
 
      pushbyte            7
-     jump                L213
+     jump                L210
 
 L189:
      pushstring          "3des"
@@ -316,7 +316,7 @@ L189:
      ifstrictne          L194
 
      pushbyte            8
-     jump                L213
+     jump                L210
 
 L194:
      pushstring          "des3"
@@ -324,7 +324,7 @@ L194:
      ifstrictne          L199
 
      pushbyte            9
-     jump                L213
+     jump                L210
 
 L199:
      pushstring          "xtea"
@@ -332,7 +332,7 @@ L199:
      ifstrictne          L204
 
      pushbyte            10
-     jump                L213
+     jump                L210
 
 L204:
      pushstring          "rc4"
@@ -340,21 +340,15 @@ L204:
      ifstrictne          L209
 
      pushbyte            11
-     jump                L213
+     jump                L210
 
 L209:
-     jump                L212
-
      pushbyte            12
-     jump                L213
-
-L212:
-     pushbyte            12
-L213:
+L210:
      kill                6
      lookupswitch        L143, [L11, L38, L38, L38, L38, L61, L61, L74, L110, L110, L123, L136, L143]
 
-L215:
+L212:
      pushnull
      returnvalue
     end ; code
@@ -381,7 +375,7 @@ L215:
      coerce              QName(PackageNamespace(""), "Array")
      setlocal2
 
-     jump                L100
+     jump                L97
 
 L8:
      label
@@ -451,7 +445,7 @@ L50:
      pushbyte            8
      returnvalue
 
-     jump                L74
+     jump                L71
 
 L54:
      getlocal2
@@ -464,7 +458,7 @@ L54:
      ifstrictne          L63
 
      pushbyte            0
-     jump                L72
+     jump                L69
 
 L63:
      pushstring          "ede3"
@@ -472,31 +466,25 @@ L63:
      ifstrictne          L68
 
      pushbyte            1
-     jump                L72
+     jump                L69
 
 L68:
-     jump                L71
-
      pushbyte            2
-     jump                L72
-
-L71:
-     pushbyte            2
-L72:
+L69:
      kill                3
      lookupswitch        L50, [L44, L47, L50]
 
-L74:
+L71:
      label
      pushbyte            24
      returnvalue
 
-L77:
+L74:
      label
      pushbyte            8
      returnvalue
 
-L80:
+L77:
      label
      findpropstrict      QName(PackageNamespace(""), "parseInt")
      getlocal2
@@ -504,7 +492,7 @@ L80:
      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto:Crypto#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto:Crypto#1"), PackageNamespace("com.hurlant.crypto"), PackageInternalNs("com.hurlant.crypto"), ProtectedNamespace("_-op"), StaticProtectedNs("_-op")])
      callproperty        QName(PackageNamespace(""), "parseInt"), 1
      pushbyte            0
-     ifngt               L96
+     ifngt               L93
 
      findpropstrict      QName(PackageNamespace(""), "parseInt")
      getlocal2
@@ -515,15 +503,15 @@ L80:
      divide
      returnvalue
 
-L96:
+L93:
      pushbyte            16
      returnvalue
 
-L98:
+L95:
      label
-     jump                L170
+     jump                L164
 
-L100:
+L97:
      getlocal2
      pushbyte            0
      getproperty         MultinameL([PrivateNamespace("*", "com.hurlant.crypto:Crypto#0"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace(""), PrivateNamespace("*", "com.hurlant.crypto:Crypto#1"), PackageNamespace("com.hurlant.crypto"), PackageInternalNs("com.hurlant.crypto"), ProtectedNamespace("_-op"), StaticProtectedNs("_-op")])
@@ -531,112 +519,106 @@ L100:
 
      pushstring          "simple"
      getlocal3
-     ifstrictne          L109
+     ifstrictne          L106
 
      pushbyte            0
-     jump                L168
+     jump                L162
 
-L109:
+L106:
      pushstring          "aes128"
      getlocal3
-     ifstrictne          L114
+     ifstrictne          L111
 
      pushbyte            1
-     jump                L168
+     jump                L162
 
-L114:
+L111:
      pushstring          "aes192"
      getlocal3
-     ifstrictne          L119
+     ifstrictne          L116
 
      pushbyte            2
-     jump                L168
+     jump                L162
 
-L119:
+L116:
      pushstring          "aes256"
      getlocal3
-     ifstrictne          L124
+     ifstrictne          L121
 
      pushbyte            3
-     jump                L168
+     jump                L162
 
-L124:
+L121:
      pushstring          "aes"
      getlocal3
-     ifstrictne          L129
+     ifstrictne          L126
 
      pushbyte            4
-     jump                L168
+     jump                L162
 
-L129:
+L126:
      pushstring          "bf"
      getlocal3
-     ifstrictne          L134
+     ifstrictne          L131
 
      pushbyte            5
-     jump                L168
+     jump                L162
 
-L134:
+L131:
      pushstring          "blowfish"
      getlocal3
-     ifstrictne          L139
+     ifstrictne          L136
 
      pushbyte            6
-     jump                L168
+     jump                L162
 
-L139:
+L136:
      pushstring          "des"
      getlocal3
-     ifstrictne          L144
+     ifstrictne          L141
 
      pushbyte            7
-     jump                L168
+     jump                L162
 
-L144:
+L141:
      pushstring          "3des"
      getlocal3
-     ifstrictne          L149
+     ifstrictne          L146
 
      pushbyte            8
-     jump                L168
+     jump                L162
 
-L149:
+L146:
      pushstring          "des3"
      getlocal3
-     ifstrictne          L154
+     ifstrictne          L151
 
      pushbyte            9
-     jump                L168
+     jump                L162
 
-L154:
+L151:
      pushstring          "xtea"
      getlocal3
-     ifstrictne          L159
+     ifstrictne          L156
 
      pushbyte            10
-     jump                L168
+     jump                L162
 
-L159:
+L156:
      pushstring          "rc4"
      getlocal3
-     ifstrictne          L164
+     ifstrictne          L161
 
      pushbyte            11
-     jump                L168
+     jump                L162
+
+L161:
+     pushbyte            12
+L162:
+     kill                3
+     lookupswitch        L95, [L8, L17, L20, L23, L26, L37, L37, L40, L71, L71, L74, L77, L95]
 
 L164:
-     jump                L167
-
-     pushbyte            12
-     jump                L168
-
-L167:
-     pushbyte            12
-L168:
-     kill                3
-     lookupswitch        L98, [L8, L17, L20, L23, L26, L37, L37, L40, L74, L74, L77, L80, L98]
-
-L170:
      pushbyte            0
      returnvalue
     end ; code
@@ -722,7 +704,7 @@ L40:
      ifstrictne          L47
 
      pushbyte            0
-     jump                L76
+     jump                L73
 
 L47:
      pushstring          "cfb"
@@ -730,7 +712,7 @@ L47:
      ifstrictne          L52
 
      pushbyte            1
-     jump                L76
+     jump                L73
 
 L52:
      pushstring          "cfb8"
@@ -738,7 +720,7 @@ L52:
      ifstrictne          L57
 
      pushbyte            2
-     jump                L76
+     jump                L73
 
 L57:
      pushstring          "ofb"
@@ -746,7 +728,7 @@ L57:
      ifstrictne          L62
 
      pushbyte            3
-     jump                L76
+     jump                L73
 
 L62:
      pushstring          "ctr"
@@ -754,7 +736,7 @@ L62:
      ifstrictne          L67
 
      pushbyte            4
-     jump                L76
+     jump                L73
 
 L67:
      pushstring          "cbc"
@@ -762,17 +744,11 @@ L67:
      ifstrictne          L72
 
      pushbyte            5
-     jump                L76
+     jump                L73
 
 L72:
-     jump                L75
-
      pushbyte            6
-     jump                L76
-
-L75:
-     pushbyte            6
-L76:
+L73:
      kill                4
      lookupswitch        L34, [L3, L9, L15, L21, L27, L33, L34]
     end ; code
@@ -827,7 +803,7 @@ L19:
 
 L23:
      label
-     jump                L63
+     jump                L60
 
 L25:
      getlocal1
@@ -838,7 +814,7 @@ L25:
      ifstrictne          L32
 
      pushbyte            0
-     jump                L61
+     jump                L58
 
 L32:
      pushstring          "md5"
@@ -846,7 +822,7 @@ L32:
      ifstrictne          L37
 
      pushbyte            1
-     jump                L61
+     jump                L58
 
 L37:
      pushstring          "sha"
@@ -854,7 +830,7 @@ L37:
      ifstrictne          L42
 
      pushbyte            2
-     jump                L61
+     jump                L58
 
 L42:
      pushstring          "sha1"
@@ -862,7 +838,7 @@ L42:
      ifstrictne          L47
 
      pushbyte            3
-     jump                L61
+     jump                L58
 
 L47:
      pushstring          "sha224"
@@ -870,7 +846,7 @@ L47:
      ifstrictne          L52
 
      pushbyte            4
-     jump                L61
+     jump                L58
 
 L52:
      pushstring          "sha256"
@@ -878,21 +854,15 @@ L52:
      ifstrictne          L57
 
      pushbyte            5
-     jump                L61
+     jump                L58
 
 L57:
-     jump                L60
-
      pushbyte            6
-     jump                L61
-
-L60:
-     pushbyte            6
-L61:
+L58:
      kill                2
      lookupswitch        L23, [L3, L7, L11, L11, L15, L19, L23]
 
-L63:
+L60:
      pushnull
      returnvalue
     end ; code
@@ -1060,7 +1030,7 @@ L12:
      ifstrictne          L19
 
      pushbyte            0
-     jump                L28
+     jump                L25
 
 L19:
      pushstring          "pkcs5"
@@ -1068,17 +1038,11 @@ L19:
      ifstrictne          L24
 
      pushbyte            1
-     jump                L28
+     jump                L25
 
 L24:
-     jump                L27
-
      pushbyte            2
-     jump                L28
-
-L27:
-     pushbyte            2
-L28:
+L25:
      kill                2
      lookupswitch        L8, [L3, L7, L8]
     end ; code

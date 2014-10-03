@@ -545,7 +545,7 @@ L91:
       ifstrictne          L98
 
       pushbyte            0
-      jump                L112
+      jump                L109
 
 L98:
       pushbyte            3
@@ -553,7 +553,7 @@ L98:
       ifstrictne          L103
 
       pushbyte            1
-      jump                L112
+      jump                L109
 
 L103:
       pushbyte            2
@@ -561,17 +561,11 @@ L103:
       ifstrictne          L108
 
       pushbyte            2
-      jump                L112
+      jump                L109
 
 L108:
-      jump                L111
-
       pushbyte            3
-      jump                L112
-
-L111:
-      pushbyte            3
-L112:
+L109:
       kill                6
       lookupswitch        L73, [L30, L52, L72, L73]
      end ; code

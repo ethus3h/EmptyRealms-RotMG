@@ -14,32 +14,13 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     setlocal2
-
-     jump                L10
-
-     hasnext
-     inclocal            2
-     declocal_i          2
-     hasnext
-     add
-     divide
-L10:
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal2
-     iffalse             L18
 
      getlocal0
      getlocal1
      constructsuper      1
 
-L18:
      returnvoid
     end ; code
    end ; body
@@ -78,15 +59,6 @@ L18:
       pushscope
 
       findpropstrict      QName(ProtectedNamespace("_-1E"), "formatToString")
-      jump                L10
-
-      checkfilter
-      strictequals
-      swap
-      newactivation
-      modulo
-      lessequals
-L10:
       pushstring          "CANCELTRADE"
       callproperty        QName(ProtectedNamespace("_-1E"), "formatToString"), 1
       returnvalue

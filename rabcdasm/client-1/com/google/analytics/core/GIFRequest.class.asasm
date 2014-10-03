@@ -1137,7 +1137,7 @@ L8:
       coerce_s
       setlocal2
 
-      jump                L95
+      jump                L92
 
 L20:
       label
@@ -1178,7 +1178,7 @@ L37:
       add
       setlocal2
 
-      jump                L95
+      jump                L92
 
 L53:
       label
@@ -1197,7 +1197,7 @@ L54:
       add
       setlocal2
 
-      jump                L95
+      jump                L92
 
 L68:
       getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
@@ -1210,7 +1210,7 @@ L68:
       ifstrictne          L77
 
       pushbyte            0
-      jump                L93
+      jump                L90
 
 L77:
       getlex              QName(PackageNamespace("com.google.analytics.debug"), "VisualDebugMode")
@@ -1219,7 +1219,7 @@ L77:
       ifstrictne          L83
 
       pushbyte            1
-      jump                L93
+      jump                L90
 
 L83:
       getlex              QName(PackageNamespace("com.google.analytics.debug"), "VisualDebugMode")
@@ -1228,21 +1228,15 @@ L83:
       ifstrictne          L89
 
       pushbyte            2
-      jump                L93
+      jump                L90
 
 L89:
-      jump                L92
-
       pushbyte            3
-      jump                L93
-
-L92:
-      pushbyte            3
-L93:
+L90:
       kill                4
       lookupswitch        L54, [L8, L20, L53, L54]
 
-L95:
+L92:
       getlex              QName(PrivateNamespace("*", "com.google.analytics.core:GIFRequest#0"), "_debug")
       getlocal2
       getlocal1

@@ -13,39 +13,12 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     swap
-     multiply
-     urshift
-     convert_o
-     multiply_i
-     bitxor
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal2
-     dup
-     iftrue              L20
-
-     pop
-     getlocal2
-     convert_b
-L20:
-     iffalse             L23
 
      getlocal0
      constructsuper      0
 
-L23:
      returnvoid
     end ; code
    end ; body
@@ -68,34 +41,8 @@ L23:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal1
-
-      jump                L10
-
-      negate_i
-      add
-      convert_s
-      pushscope
-
-      coerce_a
-      pushnan
-L10:
-      setlocal2
-
       getlocal0
       pushscope
-
-      getlocal2
-      dup
-      iffalse             L19
-
-      pop
-      getlocal1
-      convert_b
-L19:
-      iftrue              L25
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "viewManager")
@@ -103,7 +50,6 @@ L19:
       getproperty         QName(PackageNamespace(""), "_-fR")
       callpropvoid        QName(Namespace("_-0Im"), "_-tP"), 1
 
-L25:
       returnvoid
      end ; code
     end ; body

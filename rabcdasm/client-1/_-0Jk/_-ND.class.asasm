@@ -16,33 +16,8 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     setlocal            4
-
-     jump                L10
-
-     popscope
-     inclocal            2
-     convert_d
-     convert_o
-     pushfalse
-     astypelate
-L10:
-     setlocal            5
-
      getlocal0
      pushscope
-
-     getlocal            5
-     dup
-     iffalse             L19
-
-     pop
-     getlocal2
-     convert_b
-L19:
-     iftrue              L27
 
      getlocal0
      pushstring          "ctor"
@@ -52,7 +27,6 @@ L19:
      getlocal3
      constructsuper      5
 
-L27:
      returnvoid
     end ; code
    end ; body
@@ -69,23 +43,6 @@ L27:
      initscopedepth 6
      maxscopedepth 7
      code
-      pushfalse
-      pushtrue
-      setlocal            6
-
-      jump                L10
-
-      bitxor
-      setlocal2
-
-      bitand
-      typeof
-      setlocal            6
-
-      pushfalse
-L10:
-      setlocal            7
-
       getlocal0
       pushscope
 
@@ -101,9 +58,9 @@ L10:
       coerce              QName(PackageNamespace(""), "Array")
       setlocal3
 
-      jump                L265
+      jump                L240
 
-L24:
+L13:
       label
       getlocal1
       getlocal3
@@ -113,19 +70,9 @@ L24:
       coerce              QName(PackageNamespace(""), "Object")
       setlocal            4
 
-      getlocal            7
-      dup
-      iffalse             L38
+      jump                L296
 
-      pop
-      getlocal3
-      convert_b
-L38:
-      iftrue              L402
-
-      jump                L399
-
-L40:
+L22:
       label
       getlocal1
       getlocal3
@@ -138,9 +85,9 @@ L40:
       coerce              QName(PackageNamespace(""), "Object")
       setlocal            4
 
-      jump                L399
+      jump                L296
 
-L52:
+L34:
       label
       getlocal1
       getlocal3
@@ -156,9 +103,9 @@ L52:
       coerce              QName(PackageNamespace(""), "Object")
       setlocal            4
 
-      jump                L399
+      jump                L296
 
-L67:
+L49:
       label
       getlocal1
       getlocal3
@@ -177,9 +124,9 @@ L67:
       coerce              QName(PackageNamespace(""), "Object")
       setlocal            4
 
-      jump                L399
+      jump                L296
 
-L85:
+L67:
       label
       getlocal1
       getlocal3
@@ -201,9 +148,9 @@ L85:
       coerce              QName(PackageNamespace(""), "Object")
       setlocal            4
 
-      jump                L399
+      jump                L296
 
-L106:
+L88:
       label
       getlocal1
       getlocal3
@@ -228,9 +175,9 @@ L106:
       coerce              QName(PackageNamespace(""), "Object")
       setlocal            4
 
-      jump                L399
+      jump                L296
 
-L130:
+L112:
       label
       getlocal1
       getlocal3
@@ -258,9 +205,9 @@ L130:
       coerce              QName(PackageNamespace(""), "Object")
       setlocal            4
 
-      jump                L399
+      jump                L296
 
-L157:
+L139:
       label
       getlocal1
       getlocal3
@@ -291,22 +238,13 @@ L157:
       coerce              QName(PackageNamespace(""), "Object")
       setlocal            4
 
-      jump                L399
+      jump                L296
 
-L187:
+L169:
       label
       getlocal1
       getlocal3
       pushbyte            0
-      jump                L198
-
-      divide
-      multiply_i
-      pushwith
-      pushfalse
-      swap
-      declocal_i          5
-L198:
       getproperty         MultinameL([PrivateNamespace("*", "_-0Jk:_-ND/createInstance#0"), PackageNamespace(""), PrivateNamespace("*", "_-0Jk:_-ND/createInstance#1"), PackageNamespace("_-0Jk"), PackageInternalNs("_-0Jk"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-GM"), StaticProtectedNs("_-GM"), StaticProtectedNs("_-qq"), StaticProtectedNs("_-0IO")])
       getlocal3
       pushbyte            1
@@ -336,9 +274,9 @@ L198:
       coerce              QName(PackageNamespace(""), "Object")
       setlocal            4
 
-      jump                L399
+      jump                L296
 
-L227:
+L202:
       label
       getlocal1
       getlocal3
@@ -375,230 +313,107 @@ L227:
       coerce              QName(PackageNamespace(""), "Object")
       setlocal            4
 
-      jump                L399
+      jump                L296
 
-L263:
+L238:
       label
-      jump                L399
+      jump                L296
 
-L265:
+L240:
       getlocal3
       getproperty         QName(PackageNamespace(""), "length")
       setlocal            5
 
       pushbyte            1
-      getlocal            7
-      dup
-      iffalse             L275
-
-      pop
-      getlocal0
-      convert_b
-L275:
-      iftrue              L286
-
       getlocal            5
-      ifstrictne          L287
+      ifstrictne          L248
 
       pushbyte            0
-      getlocal            6
-      dup
-      iftrue              L285
+      jump                L294
 
-      pop
-      getlocal2
-      convert_b
-L285:
-      iffalse             L392
-
-L286:
-      jump                L397
-
-L287:
+L248:
       pushbyte            2
       getlocal            5
-      ifstrictne          L294
+      ifstrictne          L253
 
       pushbyte            1
-      getlocal            7
-      iftrue              L297
+      jump                L294
 
-      jump                L397
-
-L294:
+L253:
       pushbyte            3
-      getlocal            7
-      iftrue              L342
-
-L297:
       getlocal            5
-      ifstrictne          L315
-
-      getlocal            7
-      dup
-      iffalse             L305
-
-      pop
-      getlocal2
-      convert_b
-L305:
-      iftrue              L365
+      ifstrictne          L258
 
       pushbyte            2
-      getlocal            6
-      dup
-      iftrue              L313
+      jump                L294
 
-      pop
-      getlocal0
-      convert_b
-L313:
-      iffalse             L397
-
-      jump                L397
-
-L315:
+L258:
       pushbyte            4
-      getlocal            6
-      iffalse             L397
-
       getlocal            5
-      ifstrictne          L322
+      ifstrictne          L263
 
       pushbyte            3
-      jump                L397
+      jump                L294
 
-L322:
+L263:
       pushbyte            5
-      getlocal            6
-      dup
-      iftrue              L329
-
-      pop
-      getlocal1
-      convert_b
-L329:
-      iffalse             L368
-
       getlocal            5
-      ifstrictne          L341
+      ifstrictne          L268
 
       pushbyte            4
-      getlocal            6
-      dup
-      iftrue              L339
+      jump                L294
 
-      pop
-      getlocal1
-      convert_b
-L339:
-      iffalse             L392
-
-      jump                L397
-
-L341:
+L268:
       pushbyte            6
-L342:
       getlocal            5
-      ifstrictne          L346
+      ifstrictne          L273
 
       pushbyte            5
-      jump                L397
+      jump                L294
 
-L346:
+L273:
       pushbyte            7
-      getlocal            6
-      iffalse             L361
-
       getlocal            5
-      ifstrictne          L353
+      ifstrictne          L278
 
       pushbyte            6
-      jump                L397
+      jump                L294
 
-L353:
+L278:
       pushbyte            8
-      getlocal            7
-      dup
-      iffalse             L360
-
-      pop
-      getlocal0
-      convert_b
-L360:
-      iftrue              L397
-
-L361:
       getlocal            5
-      ifstrictne          L367
+      ifstrictne          L283
 
-      getlocal            7
-      iftrue              L370
-
-L365:
       pushbyte            7
-      jump                L397
+      jump                L294
 
-L367:
+L283:
       pushbyte            9
-L368:
       getlocal            5
-      ifstrictne          L381
+      ifstrictne          L288
 
-L370:
       pushbyte            8
-      getlocal            7
-      iftrue              L389
+      jump                L294
 
-      jump                L380
-
-      swap
-      declocal_i          4
-      getlocal2
-      greaterthan
-      inclocal_i          4
-      bitor
-L380:
-      jump                L397
-
-L381:
+L288:
       pushbyte            10
-      getlocal            6
-      dup
-      iftrue              L388
-
-      pop
-      getlocal3
-      convert_b
-L388:
-      iffalse             L397
-
-L389:
       getlocal            5
-      ifstrictne          L393
+      ifstrictne          L293
 
       pushbyte            9
-L392:
-      jump                L397
+      jump                L294
 
-L393:
-      jump                L396
-
+L293:
       pushbyte            10
-      jump                L397
-
-L396:
-      pushbyte            10
-L397:
+L294:
       kill                5
-      lookupswitch        L263, [L24, L40, L52, L67, L85, L106, L130, L157, L187, L227, L263]
+      lookupswitch        L238, [L13, L22, L34, L49, L67, L88, L112, L139, L169, L202, L238]
 
-L399:
+L296:
       getlocal3
       pushbyte            0
       setproperty         QName(PackageNamespace(""), "length")
 
-L402:
       getlocal            4
       returnvalue
      end ; code

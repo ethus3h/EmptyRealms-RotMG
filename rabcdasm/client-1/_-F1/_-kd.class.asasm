@@ -14,77 +14,23 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     setlocal3
-
-     inclocal_i          4
-     pop
-     pushfalse
-     pushundefined
-     inclocal_i          4
-L10:
-     setlocal            4
-
-     setlocal            5
-
      getlocal0
      pushscope
-
-     getlocal            5
-     dup
-     iftrue              L20
-
-     pop
-     getlocal1
-     convert_b
-L20:
-     iffalse             L38
 
      getlocal0
      constructsuper      0
 
-     getlocal            5
-     iffalse             L38
-
-     jump                L32
-
-     setlocal3
-
-     kill                4
-     urshift
-     dxnslate
-     pushnull
-     declocal            4
-L32:
      getlocal0
      getlocal1
      construct           0
      initproperty        QName(PrivateNamespace("*", "_-F1:_-kd"), "_-oT")
 
-     getlocal            4
-     iftrue              L50
-
-L38:
      getlocal0
      findpropstrict      QName(PackageNamespace("_-sp"), "_-aJ")
-     jump                L47
-
-     divide
-     not
-     convert_b
-     hasnext
-     inclocal_i          4
-     convert_s
-L47:
      getlex              QName(PackageNamespace("_-F1"), "_-kd")
      constructprop       QName(PackageNamespace("_-sp"), "_-aJ"), 1
      initproperty        QName(PrivateNamespace("*", "_-F1:_-kd"), "_ready")
 
-L50:
      findpropstrict      QName(PackageNamespace("flash.display"), "Loader")
      getlocal0
      getproperty         QName(PrivateNamespace("*", "_-F1:_-kd"), "_-oT")
@@ -99,9 +45,6 @@ L50:
      coerce              QName(PackageNamespace("flash.display"), "LoaderInfo")
      setlocal3
 
-     getlocal            5
-     iffalse             L70
-
      getlocal3
      getlex              QName(PackageNamespace("flash.events"), "Event")
      getproperty         QName(PackageNamespace(""), "COMPLETE")
@@ -109,7 +52,6 @@ L50:
      getproperty         QName(PrivateNamespace("*", "_-F1:_-kd"), "set ")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-L70:
      returnvoid
     end ; code
    end ; body
@@ -128,22 +70,6 @@ L70:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      coerce_s
-      kill                2
-      dup
-      decrement_i
-      pushnull
-      modulo
-L10:
-      setlocal3
-
-      setlocal            4
-
       getlocal0
       pushscope
 
@@ -154,45 +80,13 @@ L10:
       coerce              QName(PackageNamespace("flash.display"), "LoaderInfo")
       setlocal2
 
-      getlocal3
-      jump                L28
-
-      typeof
-      instanceof
-      coerce_a
-      kill                3
-      getlocal2
-      declocal            3
-L28:
-      iftrue              L49
-
       getlocal2
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "COMPLETE")
-      jump                L39
-
-      inclocal_i          3
-      inclocal            2
-      subtract
-      kill                2
-      declocal            3
-      subtract_i
-L39:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-F1:_-kd"), "set ")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
-      getlocal3
-      dup
-      iffalse             L48
-
-      pop
-      getlocal1
-      convert_b
-L48:
-      iftrue              L62
-
-L49:
       getlocal0
       findpropstrict      QName(PackageNamespace("flash.display"), "MovieClip")
       getlocal2
@@ -201,15 +95,11 @@ L49:
       callproperty        QName(PackageNamespace("flash.display"), "MovieClip"), 1
       initproperty        QName(PrivateNamespace("*", "_-F1:_-kd"), "_content")
 
-      getlocal            4
-      iffalse             L62
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-F1:_-kd"), "_ready")
       getlocal0
       callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
 
-L62:
       returnvoid
      end ; code
     end ; body

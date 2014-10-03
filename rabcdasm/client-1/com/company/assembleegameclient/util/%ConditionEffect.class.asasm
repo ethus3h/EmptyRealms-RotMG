@@ -16,96 +16,24 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     setlocal            4
-
-     jump                L10
-
-     inclocal_i          3
-     declocal            4
-     convert_i
-     pushnan
-     decrement_i
-     inclocal            3
-L10:
-     setlocal            5
-
      getlocal0
      pushscope
-
-     getlocal            5
-     iftrue              L58
 
      getlocal0
      constructsuper      0
 
-     getlocal            4
-     dup
-     iftrue              L30
-
-     jump                L27
-
-     inclocal_i          4
-     dxnslate
-     kill                2
-     setlocal            4
-
-     declocal_i          3
-     add_i
-L27:
-     pop
-     getlocal0
-     convert_b
-L30:
-     iffalse             L48
-
-     jump                L38
-
-     multiply
-     getlocal3
-     lessequals
-     setlocal2
-
-     setlocal3
-
-     declocal_i          2
-L38:
      getlocal0
      getlocal1
      initproperty        QName(PackageNamespace(""), "name_")
 
-     getlocal            5
-     dup
-     iffalse             L47
-
-     pop
-     getlocal2
-     convert_b
-L47:
-     iftrue              L61
-
-L48:
      getlocal0
      getlocal2
      initproperty        QName(PackageNamespace(""), "bit_")
 
-     getlocal            4
-     dup
-     iftrue              L57
-
-     pop
-     getlocal2
-     convert_b
-L57:
-     iffalse             L61
-
-L58:
      getlocal0
      getlocal3
      initproperty        QName(PackageNamespace(""), "iconOffsets_")
 
-L61:
      returnvoid
     end ; code
    end ; body
@@ -122,29 +50,8 @@ L61:
    initscopedepth 3
    maxscopedepth 4
    code
-    pushfalse
-    pushtrue
-    swap
-    jump                L10
-
-    lessequals
-    multiply
-    setlocal3
-
-    bitnot
-    setlocal3
-
-    urshift
-L10:
-    setlocal1
-
-    setlocal2
-
     getlocal0
     pushscope
-
-    getlocal1
-    iftrue              L947
 
     findproperty        QName(PackageNamespace(""), "_-0I2")
     pushbyte            0
@@ -158,16 +65,6 @@ L10:
     pushbyte            2
     initproperty        QName(PackageNamespace(""), "_-xc")
 
-    getlocal1
-    dup
-    iffalse             L31
-
-    pop
-    getlocal1
-    convert_b
-L31:
-    iftrue              L253
-
     findproperty        QName(PackageNamespace(""), "_-VH")
     pushbyte            3
     initproperty        QName(PackageNamespace(""), "_-VH")
@@ -176,16 +73,6 @@ L31:
     pushbyte            4
     initproperty        QName(PackageNamespace(""), "_-0DZ")
 
-    getlocal2
-    dup
-    iftrue              L44
-
-    pop
-    getlocal1
-    convert_b
-L44:
-    iffalse             L97
-
     findproperty        QName(PackageNamespace(""), "_-vJ")
     pushbyte            5
     initproperty        QName(PackageNamespace(""), "_-vJ")
@@ -193,9 +80,6 @@ L44:
     findproperty        QName(PackageNamespace(""), "_-030")
     pushbyte            6
     initproperty        QName(PackageNamespace(""), "_-030")
-
-    getlocal1
-    iftrue              L427
 
     findproperty        QName(PackageNamespace(""), "_-VZ")
     pushbyte            7
@@ -208,9 +92,6 @@ L44:
     findproperty        QName(PackageNamespace(""), "_-01n")
     pushbyte            9
     initproperty        QName(PackageNamespace(""), "_-01n")
-
-    getlocal2
-    iffalse             L485
 
     findproperty        QName(PackageNamespace(""), "_-02w")
     pushbyte            10
@@ -232,9 +113,6 @@ L44:
     pushbyte            14
     initproperty        QName(PackageNamespace(""), "_-Tq")
 
-    getlocal2
-    iffalse             L462
-
     findproperty        QName(PackageNamespace(""), "_-KJ")
     pushbyte            15
     initproperty        QName(PackageNamespace(""), "_-KJ")
@@ -247,51 +125,25 @@ L44:
     pushbyte            17
     initproperty        QName(PackageNamespace(""), "_-zx")
 
-    getlocal1
-    dup
-    iffalse             L96
-
-    pop
-    getlocal2
-    convert_b
-L96:
-    iftrue              L348
-
-L97:
     findproperty        QName(PackageNamespace(""), "_-KH")
     pushbyte            18
     initproperty        QName(PackageNamespace(""), "_-KH")
-
-    getlocal2
-    iffalse             L209
 
     findproperty        QName(PackageNamespace(""), "_-wl")
     pushbyte            19
     initproperty        QName(PackageNamespace(""), "_-wl")
 
-    getlocal1
-    iftrue              L442
-
     findproperty        QName(PackageNamespace(""), "_-08Q")
     pushbyte            20
     initproperty        QName(PackageNamespace(""), "_-08Q")
-
-    getlocal2
-    iffalse             L412
 
     findproperty        QName(PackageNamespace(""), "_-q0")
     pushbyte            21
     initproperty        QName(PackageNamespace(""), "_-q0")
 
-    getlocal1
-    iftrue              L652
-
     findproperty        QName(PackageNamespace(""), "_-l0")
     pushbyte            22
     initproperty        QName(PackageNamespace(""), "_-l0")
-
-    getlocal1
-    iftrue              L298
 
     findproperty        QName(PackageNamespace(""), "_-ZA")
     pushbyte            23
@@ -305,16 +157,6 @@ L97:
     pushbyte            25
     initproperty        QName(PackageNamespace(""), "_-0-H")
 
-    getlocal1
-    dup
-    iffalse             L137
-
-    pop
-    getlocal2
-    convert_b
-L137:
-    iftrue              L555
-
     findproperty        QName(PackageNamespace(""), "_-0H7")
     pushbyte            26
     initproperty        QName(PackageNamespace(""), "_-0H7")
@@ -327,739 +169,248 @@ L137:
     pushbyte            28
     initproperty        QName(PackageNamespace(""), "_-tq")
 
-    getlocal1
-    iftrue              L169
-
     findproperty        QName(PackageNamespace(""), "_-r3")
     pushbyte            1
-    getlocal2
-    dup
-    iftrue              L157
-
-    pop
-    getlocal0
-    convert_b
-L157:
-    iffalse             L161
-
     getlex              QName(PackageNamespace(""), "_-em")
     decrement
     lshift
-L161:
     initproperty        QName(PackageNamespace(""), "_-r3")
 
-    getlocal1
-    dup
-    iffalse             L168
-
-    pop
-    getlocal0
-    convert_b
-L168:
-    iftrue              L209
-
-L169:
     findproperty        QName(PackageNamespace(""), "_-IT")
     pushbyte            1
-    getlocal1
-    dup
-    iffalse             L177
-
-    pop
-    getlocal0
-    convert_b
-L177:
-    iftrue              L181
-
     getlex              QName(PackageNamespace(""), "_-xc")
     decrement
     lshift
-L181:
     initproperty        QName(PackageNamespace(""), "_-IT")
-
-    getlocal2
-    iffalse             L374
 
     findproperty        QName(PackageNamespace(""), "_-0Fg")
     pushbyte            1
-    getlocal1
-    iftrue              L191
-
     getlex              QName(PackageNamespace(""), "_-VH")
     decrement
     lshift
-L191:
     initproperty        QName(PackageNamespace(""), "_-0Fg")
-
-    getlocal2
-    dup
-    iftrue              L198
-
-    pop
-    getlocal0
-    convert_b
-L198:
-    iffalse             L485
 
     findproperty        QName(PackageNamespace(""), "_-sm")
     pushbyte            1
-    getlocal2
-    iffalse             L206
-
     getlex              QName(PackageNamespace(""), "_-0DZ")
     decrement
     lshift
-L206:
     initproperty        QName(PackageNamespace(""), "_-sm")
 
-    getlocal2
-    iffalse             L947
-
-L209:
     findproperty        QName(PackageNamespace(""), "_-q-")
     pushbyte            1
-    getlocal1
-    dup
-    iffalse             L217
-
-    pop
-    getlocal1
-    convert_b
-L217:
-    iftrue              L221
-
     getlex              QName(PackageNamespace(""), "_-vJ")
     decrement
     lshift
-L221:
     initproperty        QName(PackageNamespace(""), "_-q-")
 
     findproperty        QName(PackageNamespace(""), "_-02V")
     pushbyte            1
-    getlocal1
-    iftrue              L229
-
     getlex              QName(PackageNamespace(""), "_-030")
     decrement
     lshift
-L229:
     initproperty        QName(PackageNamespace(""), "_-02V")
-
-    getlocal1
-    iftrue              L253
 
     findproperty        QName(PackageNamespace(""), "_-0Gk")
     pushbyte            1
-    getlocal2
-    iffalse             L239
-
     getlex              QName(PackageNamespace(""), "_-VZ")
     decrement
     lshift
-L239:
     initproperty        QName(PackageNamespace(""), "_-0Gk")
 
     findproperty        QName(PackageNamespace(""), "_-Et")
     pushbyte            1
-    getlocal1
-    dup
-    iffalse             L248
-
-    pop
-    getlocal1
-    convert_b
-L248:
-    iftrue              L252
-
     getlex              QName(PackageNamespace(""), "_-2p")
     decrement
     lshift
-L252:
     initproperty        QName(PackageNamespace(""), "_-Et")
 
-L253:
     findproperty        QName(PackageNamespace(""), "_-N6")
     pushbyte            1
-    getlocal1
-    dup
-    iffalse             L261
-
-    pop
-    getlocal0
-    convert_b
-L261:
-    iftrue              L265
-
     getlex              QName(PackageNamespace(""), "_-01n")
     decrement
     lshift
-L265:
     initproperty        QName(PackageNamespace(""), "_-N6")
-
-    getlocal1
-    iftrue              L427
 
     findproperty        QName(PackageNamespace(""), "_-gY")
     pushbyte            1
-    getlocal2
-    iffalse             L275
-
     getlex              QName(PackageNamespace(""), "_-tq")
     decrement
     lshift
-L275:
     initproperty        QName(PackageNamespace(""), "_-gY")
-
-    getlocal2
-    iffalse             L313
 
     findproperty        QName(PackageNamespace(""), "_-0El")
     pushbyte            1
-    getlocal2
-    dup
-    iftrue              L286
-
-    pop
-    getlocal2
-    convert_b
-L286:
-    iffalse             L290
-
     getlex              QName(PackageNamespace(""), "_-02w")
     decrement
     lshift
-L290:
     initproperty        QName(PackageNamespace(""), "_-0El")
 
-    getlocal2
-    dup
-    iftrue              L297
-
-    pop
-    getlocal1
-    convert_b
-L297:
-    iffalse             L520
-
-L298:
     findproperty        QName(PackageNamespace(""), "_-pE")
     pushbyte            1
-    getlocal2
-    dup
-    iftrue              L306
-
-    pop
-    getlocal2
-    convert_b
-L306:
-    iffalse             L310
-
     getlex              QName(PackageNamespace(""), "_-o9")
     decrement
     lshift
-L310:
     initproperty        QName(PackageNamespace(""), "_-pE")
 
-    getlocal1
-    iftrue              L652
-
-L313:
     findproperty        QName(PackageNamespace(""), "_-tY")
     pushbyte            1
-    getlocal2
-    iffalse             L320
-
     getlex              QName(PackageNamespace(""), "_-xn")
     decrement
     lshift
-L320:
     initproperty        QName(PackageNamespace(""), "_-tY")
-
-    getlocal1
-    dup
-    iffalse             L327
-
-    pop
-    getlocal0
-    convert_b
-L327:
-    iftrue              L348
 
     findproperty        QName(PackageNamespace(""), "_-X9")
     pushbyte            1
-    getlocal2
-    dup
-    iftrue              L336
-
-    pop
-    getlocal1
-    convert_b
-L336:
-    iffalse             L340
-
     getlex              QName(PackageNamespace(""), "_-vH")
     decrement
     lshift
-L340:
     initproperty        QName(PackageNamespace(""), "_-X9")
 
-    getlocal1
-    dup
-    iffalse             L347
-
-    pop
-    getlocal2
-    convert_b
-L347:
-    iftrue              L412
-
-L348:
     findproperty        QName(PackageNamespace(""), "_-O3")
     pushbyte            1
-    getlocal1
-    dup
-    iffalse             L356
-
-    pop
-    getlocal0
-    convert_b
-L356:
-    iftrue              L360
-
     getlex              QName(PackageNamespace(""), "_-Tq")
     decrement
     lshift
-L360:
     initproperty        QName(PackageNamespace(""), "_-O3")
 
     findproperty        QName(PackageNamespace(""), "_-c-")
     pushbyte            1
-    getlocal1
-    dup
-    iffalse             L369
-
-    pop
-    getlocal2
-    convert_b
-L369:
-    iftrue              L373
-
     getlex              QName(PackageNamespace(""), "_-KJ")
     decrement
     lshift
-L373:
     initproperty        QName(PackageNamespace(""), "_-c-")
 
-L374:
     findproperty        QName(PackageNamespace(""), "_-UM")
     pushbyte            1
-    getlocal1
-    dup
-    iffalse             L382
-
-    pop
-    getlocal1
-    convert_b
-L382:
-    iftrue              L386
-
     getlex              QName(PackageNamespace(""), "_-iM")
     decrement
     lshift
-L386:
     initproperty        QName(PackageNamespace(""), "_-UM")
-
-    getlocal1
-    dup
-    iffalse             L393
-
-    pop
-    getlocal0
-    convert_b
-L393:
-    iftrue              L963
 
     findproperty        QName(PackageNamespace(""), "_-Qv")
     pushbyte            1
-    getlocal2
-    iffalse             L401
-
     getlex              QName(PackageNamespace(""), "_-zx")
     decrement
     lshift
-L401:
     initproperty        QName(PackageNamespace(""), "_-Qv")
-
-    getlocal1
-    iftrue              L652
 
     findproperty        QName(PackageNamespace(""), "_-4-")
     pushbyte            1
-    getlocal1
-    iftrue              L411
-
     getlex              QName(PackageNamespace(""), "_-KH")
     decrement
     lshift
-L411:
     initproperty        QName(PackageNamespace(""), "_-4-")
 
-L412:
     findproperty        QName(PackageNamespace(""), "_-00L")
     pushbyte            1
-    getlocal2
-    dup
-    iftrue              L420
-
-    pop
-    getlocal0
-    convert_b
-L420:
-    iffalse             L424
-
     getlex              QName(PackageNamespace(""), "_-wl")
     decrement
     lshift
-L424:
     initproperty        QName(PackageNamespace(""), "_-00L")
 
-    getlocal1
-    iftrue              L963
-
-L427:
     findproperty        QName(PackageNamespace(""), "_-XD")
     pushbyte            1
-    getlocal1
-    iftrue              L434
-
     getlex              QName(PackageNamespace(""), "_-08Q")
     decrement
     lshift
-L434:
     initproperty        QName(PackageNamespace(""), "_-XD")
 
-    getlocal2
-    dup
-    iftrue              L441
-
-    pop
-    getlocal1
-    convert_b
-L441:
-    iffalse             L462
-
-L442:
     findproperty        QName(PackageNamespace(""), "_-Zi")
     pushbyte            1
-    getlocal2
-    dup
-    iftrue              L450
-
-    pop
-    getlocal0
-    convert_b
-L450:
-    iffalse             L454
-
     getlex              QName(PackageNamespace(""), "_-q0")
     decrement
     lshift
-L454:
     initproperty        QName(PackageNamespace(""), "_-Zi")
 
-    getlocal1
-    dup
-    iffalse             L461
-
-    pop
-    getlocal1
-    convert_b
-L461:
-    iftrue              L947
-
-L462:
     findproperty        QName(PackageNamespace(""), "_-OY")
     pushbyte            1
-    getlocal2
-    iffalse             L469
-
     getlex              QName(PackageNamespace(""), "_-l0")
     decrement
     lshift
-L469:
     initproperty        QName(PackageNamespace(""), "_-OY")
 
     findproperty        QName(PackageNamespace(""), "_-uK")
-    jump                L478
-
-    dup
-    getlocal3
-    getlocal2
-    urshift
-    negate_i
-    pushwith
-L478:
     pushbyte            1
-    getlocal1
-    iftrue              L484
-
     getlex              QName(PackageNamespace(""), "_-ZA")
     decrement
     lshift
-L484:
     initproperty        QName(PackageNamespace(""), "_-uK")
 
-L485:
     findproperty        QName(PackageNamespace(""), "_-0K-")
     pushbyte            1
-    getlocal1
-    dup
-    iffalse             L493
-
-    pop
-    getlocal2
-    convert_b
-L493:
-    iftrue              L497
-
     getlex              QName(PackageNamespace(""), "_-0-x")
     decrement
     lshift
-L497:
     initproperty        QName(PackageNamespace(""), "_-0K-")
-
-    getlocal2
-    iffalse             L555
 
     findproperty        QName(PackageNamespace(""), "_-cV")
     pushbyte            1
-    getlocal2
-    dup
-    iftrue              L508
-
-    pop
-    getlocal2
-    convert_b
-L508:
-    iffalse             L512
-
     getlex              QName(PackageNamespace(""), "_-0-H")
     decrement
     lshift
-L512:
     initproperty        QName(PackageNamespace(""), "_-cV")
 
-    getlocal2
-    dup
-    iftrue              L519
-
-    pop
-    getlocal1
-    convert_b
-L519:
-    iffalse             L555
-
-L520:
     findproperty        QName(PackageNamespace(""), "_-3M")
     pushbyte            1
-    getlocal2
-    dup
-    iftrue              L528
-
-    pop
-    getlocal1
-    convert_b
-L528:
-    iffalse             L532
-
     getlex              QName(PackageNamespace(""), "_-0H7")
     decrement
     lshift
-L532:
     initproperty        QName(PackageNamespace(""), "_-3M")
-
-    getlocal1
-    iftrue              L652
 
     findproperty        QName(PackageNamespace(""), "if ")
     pushbyte            1
-    getlocal1
-    dup
-    iffalse             L543
-
-    pop
-    getlocal2
-    convert_b
-L543:
-    iftrue              L547
-
     getlex              QName(PackageNamespace(""), "_-qn")
     decrement
     lshift
-L547:
     initproperty        QName(PackageNamespace(""), "if ")
 
-    getlocal2
-    dup
-    iftrue              L554
-
-    pop
-    getlocal1
-    convert_b
-L554:
-    iffalse             L930
-
-L555:
     findproperty        QName(PackageNamespace(""), "_-06j")
     getlex              QName(PackageNamespace(""), "_-IT")
     getlex              QName(PackageNamespace(""), "_-0Fg")
     bitor
     getlex              QName(PackageNamespace(""), "_-sm")
-    getlocal2
-    dup
-    iftrue              L566
-
-    pop
-    getlocal2
-    convert_b
-L566:
-    iffalse             L643
-
     bitor
-    getlocal2
-    dup
-    iftrue              L574
-
-    pop
-    getlocal0
-    convert_b
-L574:
-    iffalse             L640
-
     getlex              QName(PackageNamespace(""), "_-q-")
     bitor
     getlex              QName(PackageNamespace(""), "_-02V")
     bitor
-    getlocal2
-    iffalse             L594
-
     getlex              QName(PackageNamespace(""), "_-0Gk")
-    getlocal2
-    iffalse             L633
-
     bitor
     getlex              QName(PackageNamespace(""), "_-Et")
-    getlocal1
-    dup
-    iffalse             L592
-
-    pop
-    getlocal0
-    convert_b
-L592:
-    iftrue              L643
-
     bitor
-L594:
     getlex              QName(PackageNamespace(""), "_-N6")
-    getlocal2
-    dup
-    iftrue              L601
-
-    pop
-    getlocal0
-    convert_b
-L601:
-    iffalse             L614
-
     bitor
-    getlocal1
-    iftrue              L640
-
     getlex              QName(PackageNamespace(""), "_-0El")
     bitor
     getlex              QName(PackageNamespace(""), "_-pE")
-    getlocal2
-    iffalse             L633
-
     bitor
     getlex              QName(PackageNamespace(""), "_-O3")
-    getlocal2
-    iffalse             L633
-
-L614:
     bitor
     getlex              QName(PackageNamespace(""), "_-c-")
     bitor
-    getlocal1
-    iftrue              L634
-
     getlex              QName(PackageNamespace(""), "_-UM")
     bitor
     getlex              QName(PackageNamespace(""), "_-4-")
-    getlocal2
-    iffalse             L641
-
     bitor
     getlex              QName(PackageNamespace(""), "_-00L")
-    getlocal1
-    dup
-    iffalse             L632
-
-    pop
-    getlocal1
-    convert_b
-L632:
-    iftrue              L635
-
-L633:
     bitor
-L634:
     getlex              QName(PackageNamespace(""), "_-XD")
-L635:
     bitor
     getlex              QName(PackageNamespace(""), "_-cV")
-    getlocal2
-    iffalse             L641
-
     bitor
-L640:
     getlex              QName(PackageNamespace(""), "_-3M")
-L641:
     bitor
     getlex              QName(PackageNamespace(""), "if ")
-L643:
     bitor
     initproperty        QName(PackageNamespace(""), "_-06j")
 
-    getlocal2
-    dup
-    iftrue              L651
-
-    pop
-    getlocal0
-    convert_b
-L651:
-    iffalse             L947
-
-L652:
     findproperty        QName(PackageNamespace(""), "_-TD")
     getlex              QName(PackageNamespace(""), "_-0El")
     getlex              QName(PackageNamespace(""), "_-Et")
     bitor
-    getlocal1
-    dup
-    iffalse             L662
-
-    pop
-    getlocal0
-    convert_b
-L662:
-    iftrue              L665
-
     getlex              QName(PackageNamespace(""), "_-Zi")
     bitor
-L665:
     initproperty        QName(PackageNamespace(""), "_-TD")
 
     findproperty        QName(PackageNamespace(""), "effects_")
@@ -1356,37 +707,14 @@ L665:
 
     setproperty         QName(PackageNamespace(""), "effects_")
 
-L930:
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), "_-K3")
     pushnull
     setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), "_-K3")
 
-    jump                L940
-
-    pushtrue
-    newactivation
-    multiply_i
-    coerce_s
-    setlocal2
-
-    getglobalscope
-L940:
-    getlocal1
-    dup
-    iffalse             L946
-
-    pop
-    getlocal2
-    convert_b
-L946:
-    iftrue              L950
-
-L947:
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), "_-ua")
     pushnull
     setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), "_-ua")
 
-L950:
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), "GLOW_FILTER")
     findpropstrict      QName(PackageNamespace("flash.filters"), "GlowFilter")
     pushbyte            0
@@ -1401,7 +729,6 @@ L950:
     constructprop       QName(PackageNamespace("flash.filters"), "GlowFilter"), 8
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), "GLOW_FILTER")
 
-L963:
     returnvoid
    end ; code
   end ; body
@@ -1478,22 +805,6 @@ L963:
     initscopedepth 3
     maxscopedepth 4
     code
-     pushfalse
-     pushtrue
-     setlocal3
-
-     jump                L10
-
-     istypelate
-     modulo
-     multiply_i
-     setlocal2
-
-     kill                2
-     nextvalue
-L10:
-     setlocal            4
-
      getlocal0
      pushscope
 
@@ -1501,41 +812,22 @@ L10:
      convert_u
      setlocal2
 
-     getlocal3
-     iffalse             L39
-
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), "_-K3")
      pushnull
-     ifne                L76
-
-     getlocal            4
-     iftrue              L36
+     ifne                L32
 
      findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), "_-K3")
      findpropstrict      QName(PackageNamespace(""), "Object")
      constructprop       QName(PackageNamespace(""), "Object"), 0
      setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), "_-K3")
 
-     getlocal            4
-     iftrue              L39
-
-     jump                L36
-
-     pushundefined
-     declocal            3
-     getlocal2
-     inclocal            2
-     getglobalscope
-     declocal_i          2
-L36:
      pushbyte            0
      convert_u
      setlocal2
 
-L39:
-     jump                L72
+     jump                L28
 
-L40:
+L16:
      label
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), "_-K3")
      getlex              QName(PackageNamespace(""), "effects_")
@@ -1545,47 +837,18 @@ L40:
      getlocal2
      setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#1"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Ih"), StaticProtectedNs("_-0Ih")])
 
-     getlocal            4
-     jump                L56
-
-     kill                2
-     declocal_i          2
-     greaterequals
-     instanceof
-     lessequals
-     declocal            3
-L56:
-     iftrue              L76
-
      getlocal2
-     getlocal3
-     iffalse             L73
-
      increment
      convert_u
-     getlocal            4
-     dup
-     iffalse             L68
-
-     pop
-     getlocal0
-     convert_b
-L68:
-     iftrue              L73
-
      setlocal2
 
-     getlocal            4
-     iftrue              L76
-
-L72:
+L28:
      getlocal2
-L73:
      getlex              QName(PackageNamespace(""), "effects_")
      getproperty         QName(PackageNamespace(""), "length")
-     iflt                L40
+     iflt                L16
 
-L76:
+L32:
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), "_-K3")
      getlocal1
      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#1"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Ih"), StaticProtectedNs("_-0Ih")])
@@ -1607,22 +870,6 @@ L76:
     initscopedepth 3
     maxscopedepth 4
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     inclocal            2
-     greaterequals
-     pushwith
-     inclocal            5
-     declocal            7
-     instanceof
-L10:
-     setlocal            7
-
-     setlocal            8
-
      getlocal0
      pushscope
 
@@ -1638,102 +885,23 @@ L10:
      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "BitmapData")>)
      setlocal            6
 
-     jump                L131
+     jump                L43
 
-L24:
+L12:
      label
      getlocal1
-     getlocal            8
-     dup
-     iftrue              L32
-
-     pop
-     getlocal3
-     convert_b
-L32:
-     iffalse             L81
-
      getlocal1
-     getlocal            7
-     dup
-     iffalse             L40
-
-     pop
-     getlocal3
-     convert_b
-L40:
-     iftrue              L72
-
      decrement
      bitand
-     getlocal            8
-     iffalse             L73
-
      convert_u
-     getlocal            7
-     iftrue              L132
-
      setlocal            4
 
-     getlocal            8
-     dup
-     iftrue              L55
-
-     pop
      getlocal1
-     convert_b
-L55:
-     iffalse             L89
-
-     getlocal1
-     jump                L64
-
-     declocal            6
-     dxnslate
-     subtract_i
-     inclocal_i          3
-     modulo
      getlocal            4
-L64:
-     getlocal            8
-     dup
-     iftrue              L70
-
-     pop
-     getlocal2
-     convert_b
-L70:
-     iffalse             L81
-
-     getlocal            4
-L72:
      bitxor
-L73:
      convert_u
-     getlocal            8
-     dup
-     iftrue              L80
-
-     pop
-     getlocal0
-     convert_b
-L80:
-     iffalse             L132
-
-L81:
      setlocal            5
 
-     getlocal            8
-     dup
-     iftrue              L88
-
-     pop
-     getlocal0
-     convert_b
-L88:
-     iffalse             L134
-
-L89:
      findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), "_-xt")
      getlocal            5
      callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), "_-xt"), 1
@@ -1742,63 +910,27 @@ L89:
      setlocal            6
 
      pushnull
-     ifeq                L121
-
-     getlocal            8
-     iffalse             L121
+     ifeq                L40
 
      getlocal2
      getlocal            6
      getlocal3
      getlocal            6
      getproperty         QName(PackageNamespace(""), "length")
-     jump                L111
-
-     typeof
-     declocal_i          5
-     kill                7
-     declocal_i          5
-     setlocal            4
-
-     pushnan
-L111:
      modulo
      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#1"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Ih"), StaticProtectedNs("_-0Ih")])
      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-     getlocal            8
-     dup
-     iftrue              L120
-
-     pop
-     getlocal3
-     convert_b
-L120:
-     iffalse             L131
-
-L121:
+L40:
      getlocal            4
-     getlocal            7
-     dup
-     iffalse             L128
-
-     pop
-     getlocal2
-     convert_b
-L128:
-     iftrue              L130
-
      convert_u
-L130:
      setlocal1
 
-L131:
+L43:
      getlocal1
-L132:
      pushbyte            0
-     ifne                L24
+     ifne                L12
 
-L134:
      returnvoid
     end ; code
    end ; body
@@ -1817,24 +949,6 @@ L134:
     initscopedepth 3
     maxscopedepth 4
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     setlocal            5
-
-     inclocal            2
-     declocal            5
-     setlocal            4
-
-     declocal_i          5
-     urshift
-L10:
-     setlocal            7
-
-     setlocal            8
-
      getlocal0
      pushscope
 
@@ -1857,78 +971,43 @@ L10:
      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
      setlocal            6
 
-     getlocal            7
-     dup
-     iffalse             L34
-
-     pop
-     getlocal3
-     convert_b
-L34:
-     iftrue              L49
-
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), "_-ua")
      pushnull
-     ifne                L203
-
-     getlocal            8
-     dup
-     iftrue              L44
-
-     pop
-     getlocal3
-     convert_b
-L44:
-     iffalse             L49
+     ifne                L116
 
      findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), "_-ua")
      findpropstrict      QName(PackageNamespace(""), "Object")
      constructprop       QName(PackageNamespace(""), "Object"), 0
      setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), "_-ua")
 
-L49:
      findpropstrict      QName(PackageNamespace("flash.geom"), "Matrix")
      constructprop       QName(PackageNamespace("flash.geom"), "Matrix"), 0
      coerce              QName(PackageNamespace("flash.geom"), "Matrix")
      setlocal2
-
-     getlocal            7
-     iftrue              L61
 
      getlocal2
      pushbyte            4
      dup
      callpropvoid        QName(PackageNamespace(""), "translate"), 2
 
-     getlocal            8
-     iffalse             L64
-
-L61:
      pushbyte            0
      convert_u
      setlocal3
 
-L64:
-     jump                L199
+     jump                L112
 
-L65:
+L35:
      label
      pushnull
      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "BitmapData")>)
      setlocal            4
-
-     getlocal            8
-     iffalse             L199
 
      getlex              QName(PackageNamespace(""), "effects_")
      getlocal3
      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#1"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Ih"), StaticProtectedNs("_-0Ih")])
      getproperty         QName(PackageNamespace(""), "iconOffsets_")
      pushnull
-     ifeq                L172
-
-     getlocal            8
-     iffalse             L188
+     ifeq                L101
 
      getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), PackageNamespace(""), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#1"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Ih"), StaticProtectedNs("_-0Ih")])
      getlex              QName(PackageNamespace("flash.display"), "BitmapData")
@@ -1937,53 +1016,12 @@ L65:
      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "BitmapData")>)
      setlocal            4
 
-     getlocal            8
-     dup
-     iftrue              L91
-
-     pop
-     getlocal2
-     convert_b
-L91:
-     iffalse             L115
-
      pushbyte            0
-     jump                L100
-
-     inclocal_i          3
-     kill                2
-     declocal_i          4
-     declocal            7
-     setlocal            6
-
-     declocal            6
-L100:
-     getlocal            7
-     dup
-     iffalse             L106
-
-     pop
-     getlocal1
-     convert_b
-L106:
-     iftrue              L166
-
      setlocal            5
 
-     getlocal            7
-     dup
-     iffalse             L114
+     jump                L94
 
-     pop
-     getlocal3
-     convert_b
-L114:
-     iftrue              L172
-
-L115:
-     jump                L165
-
-L116:
+L54:
      label
      findpropstrict      QName(PackageNamespace("flash.display"), "BitmapData")
      pushbyte            16
@@ -2024,79 +1062,41 @@ L116:
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), "GLOW_FILTER")
      callpropvoid        QName(PackageNamespace(""), "applyFilter"), 4
 
-     getlocal            8
-     iffalse             L165
-
      getlocal            4
      getlocal            6
      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-     getlocal            8
-     dup
-     iftrue              L163
-
-     pop
-     getlocal0
-     convert_b
-L163:
-     iffalse             L165
-
      inclocal_i          5
-L165:
+L94:
      getlocal            5
-L166:
      getlex              QName(PackageNamespace(""), "effects_")
      getlocal3
      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#1"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Ih"), StaticProtectedNs("_-0Ih")])
      getproperty         QName(PackageNamespace(""), "iconOffsets_")
      getproperty         QName(PackageNamespace(""), "length")
-     iflt                L116
+     iflt                L54
 
-L172:
+L101:
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), "_-ua")
      getlex              QName(PackageNamespace(""), "effects_")
      getlocal3
      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#1"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Ih"), StaticProtectedNs("_-0Ih")])
-     jump                L183
-
-     convert_i
-     decrement
-     declocal            3
-     declocal            4
-     kill                5
-     multiply
-L183:
      getproperty         QName(PackageNamespace(""), "bit_")
      getlocal            4
      setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#1"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Ih"), StaticProtectedNs("_-0Ih")])
 
-     getlocal            7
-     iftrue              L199
-
-L188:
      getlocal3
-     getlocal            7
-     dup
-     iffalse             L195
-
-     pop
-     getlocal3
-     convert_b
-L195:
-     iftrue              L198
-
      increment
      convert_u
-L198:
      setlocal3
 
-L199:
+L112:
      getlocal3
      getlex              QName(PackageNamespace(""), "effects_")
      getproperty         QName(PackageNamespace(""), "length")
-     iflt                L65
+     iflt                L35
 
-L203:
+L116:
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), "_-ua")
      getlocal1
      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.util:ConditionEffect#1"), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Ih"), StaticProtectedNs("_-0Ih")])

@@ -419,7 +419,7 @@ L95:
       add
       callpropvoid        QName(PackageNamespace(""), "info"), 1
 
-      jump                L161
+      jump                L158
 
 L110:
       label
@@ -436,7 +436,7 @@ L110:
       add
       callpropvoid        QName(PackageNamespace(""), "info"), 1
 
-      jump                L161
+      jump                L158
 
 L124:
       label
@@ -454,7 +454,7 @@ L125:
       add
       callpropvoid        QName(PackageNamespace(""), "info"), 1
 
-      jump                L161
+      jump                L158
 
 L138:
       getlocal            6
@@ -465,7 +465,7 @@ L138:
       ifstrictne          L145
 
       pushbyte            0
-      jump                L159
+      jump                L156
 
 L145:
       pushbyte            3
@@ -473,7 +473,7 @@ L145:
       ifstrictne          L150
 
       pushbyte            1
-      jump                L159
+      jump                L156
 
 L150:
       pushbyte            2
@@ -481,21 +481,15 @@ L150:
       ifstrictne          L155
 
       pushbyte            2
-      jump                L159
+      jump                L156
 
 L155:
-      jump                L158
-
       pushbyte            3
-      jump                L159
-
-L158:
-      pushbyte            3
-L159:
+L156:
       kill                7
       lookupswitch        L125, [L95, L110, L124, L125]
 
-L161:
+L158:
       getlocal            5
       returnvalue
      end ; code

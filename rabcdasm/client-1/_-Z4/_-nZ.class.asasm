@@ -19,22 +19,6 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     checkfilter
-     declocal_i          3
-     getlocal3
-     inclocal_i          2
-     lshift
-     kill                2
-L10:
-     setlocal            5
-
-     setlocal            6
-
      getlocal0
      pushscope
 
@@ -46,66 +30,27 @@ L10:
      initproperty        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-00-")
 
      getlocal0
-     jump                L27
-
-     pushnan
-     getlocal            5
-     pushwith
-     kill                2
-     setlocal            4
-
-     inclocal_i          5
-L27:
      getlocal2
      initproperty        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-0Eh")
 
      getlocal0
      getlocal3
-     jump                L38
-
-     setlocal2
-
-     setlocal3
-
-     bitand
-     getlocal            5
-     istypelate
-     inclocal_i          5
-L38:
      initproperty        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_name")
-
-     getlocal            5
-     iftrue              L56
 
      getlocal0
      getlocal            4
      initproperty        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-08c")
 
-     getlocal            5
-     dup
-     iffalse             L50
-
-     pop
-     getlocal1
-     convert_b
-L50:
-     iftrue              L61
-
      getlocal0
      pushtrue
      initproperty        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-9X")
 
-     getlocal            5
-     iftrue              L61
-
-L56:
      getlocal0
      findpropstrict      QName(PackageNamespace("_-Y3"), "_-6-")
      getlocal2
      constructprop       QName(PackageNamespace("_-Y3"), "_-6-"), 1
      callpropvoid        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-af"), 1
 
-L61:
      returnvoid
     end ; code
    end ; body
@@ -130,40 +75,14 @@ L61:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal1
-
-      jump                L10
-
-      convert_d
-      bitxor
-      subtract_i
-      instanceof
-      coerce_s
-      convert_b
-L10:
-      setlocal2
-
       getlocal0
       pushscope
-
-      getlocal1
-      dup
-      iftrue              L19
-
-      pop
-      getlocal0
-      convert_b
-L19:
-      iffalse             L24
 
       getlocal0
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-0Eh")
       callpropvoid        QName(PackageNamespace(""), "_-00S"), 1
 
-L24:
       getlocal0
       returnvalue
      end ; code
@@ -181,35 +100,8 @@ L24:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      pushscope
-
-      inclocal            2
-      inclocal_i          2
-      declocal_i          2
-      kill                2
-      pushwith
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      dup
-      iffalse             L20
-
-      pop
-      getlocal0
-      convert_b
-L20:
-      iftrue              L26
 
       getlocal0
       findpropstrict      QName(PackageNamespace("_-Y3"), "_-6-")
@@ -217,7 +109,6 @@ L20:
       constructprop       QName(PackageNamespace("_-Y3"), "_-6-"), 1
       callpropvoid        QName(PackageNamespace(""), "_-0x"), 1
 
-L26:
       getlocal0
       returnvalue
      end ; code
@@ -235,33 +126,8 @@ L26:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      getlocal2
-      inclocal_i          2
-      bitor
-      convert_o
-      getlocal2
-      urshift
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      dup
-      iffalse             L19
-
-      pop
-      getlocal3
-      convert_b
-L19:
-      iftrue              L27
 
       getlocal0
       findpropstrict      QName(PackageNamespace("_-Y3"), "_-uS")
@@ -271,7 +137,6 @@ L19:
       constructprop       QName(PackageNamespace("_-Y3"), "_-uS"), 2
       callpropvoid        QName(PackageNamespace(""), "_-0x"), 1
 
-L27:
       getlocal0
       returnvalue
      end ; code
@@ -289,33 +154,8 @@ L27:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      getlocal2
-      decrement
-      getlocal0
-      decrement
-      getlocal2
-      declocal_i          2
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      dup
-      iffalse             L19
-
-      pop
-      getlocal1
-      convert_b
-L19:
-      iftrue              L25
 
       getlocal0
       findpropstrict      QName(PackageNamespace("_-Y3"), "_-rP")
@@ -323,7 +163,6 @@ L19:
       constructprop       QName(PackageNamespace("_-Y3"), "_-rP"), 1
       callpropvoid        QName(PackageNamespace(""), "_-0x"), 1
 
-L25:
       getlocal0
       returnvalue
      end ; code
@@ -341,24 +180,6 @@ L25:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      pushscope
-
-      declocal_i          2
-      inclocal_i          2
-      inclocal            2
-      setlocal2
-
-      getlocal2
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
 
@@ -366,94 +187,35 @@ L10:
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-05g")
       coerce_a
       dup
-      iffalse             L23
+      iffalse             L11
 
       pop
       getlocal0
       callproperty        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-Do"), 0
       coerce_a
-L23:
+L11:
       pop
-      getlocal2
-      iftrue              L106
-
       getlocal0
       callproperty        QName(PackageNamespace(""), "_-VF"), 0
       convert_b
-      getlocal3
       dup
-      iftrue              L35
+      iffalse             L22
 
       pop
-      getlocal0
-      convert_b
-L35:
-      iffalse             L79
-
-      dup
-      getlocal3
-      dup
-      iftrue              L43
-
-      pop
-      getlocal1
-      convert_b
-L43:
-      iffalse             L67
-
-      iffalse             L66
-
-      getlocal2
-      dup
-      iffalse             L51
-
-      pop
-      getlocal0
-      convert_b
-L51:
-      iftrue              L78
-
-      pop
-      getlocal2
-      iftrue              L76
-
       getlocal1
       pushnull
       equals
-      getlocal2
-      dup
-      iffalse             L64
-
-      pop
-      getlocal3
-      convert_b
-L64:
-      iftrue              L68
-
       not
-L66:
+L22:
       dup
-L67:
-      iffalse             L79
+      iffalse             L28
 
-L68:
       pop
-      jump                L76
-
-      getlocal2
-      dup
-      convert_u
-      setlocal2
-
-      declocal            2
-      greaterthan
-L76:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-9X")
-L78:
       not
-L79:
-      iffalse             L126
+L28:
+      iffalse             L64
 
       findpropstrict      QName(PackageNamespace(""), "trace")
       pushstring          "Warning: Injector already has a mapping for "
@@ -470,25 +232,17 @@ L79:
       add
       callpropvoid        QName(PackageNamespace(""), "trace"), 1
 
-      getlocal3
-      iffalse             L142
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-00-")
-      getlocal2
-      iftrue              L108
-
       getlex              QName(PackageNamespace("_-Z4"), "_-09D")
       getproperty         QName(PackageNamespace(""), "_-PL")
       callproperty        QName(PackageNamespace(""), "hasEventListener"), 1
       dup
-      iffalse             L118
+      iffalse             L63
 
       pop
-L106:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-00-")
-L108:
       findpropstrict      QName(PackageNamespace("_-Z4"), "_-09D")
       getlex              QName(PackageNamespace("_-Z4"), "_-09D")
       getproperty         QName(PackageNamespace(""), "_-PL")
@@ -499,42 +253,12 @@ L108:
       getlocal0
       constructprop       QName(PackageNamespace("_-Z4"), "_-09D"), 4
       callproperty        QName(PackageNamespace(""), "dispatchEvent"), 1
-L118:
+L63:
       pop
-      getlocal3
-      dup
-      iftrue              L125
-
-      pop
-      getlocal1
-      convert_b
-L125:
-      iffalse             L155
-
-L126:
+L64:
       getlocal0
       callpropvoid        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-06U"), 0
 
-      jump                L135
-
-      getlocal0
-      inclocal_i          2
-      kill                2
-      newactivation
-      getlocal2
-      bitnot
-L135:
-      getlocal2
-      dup
-      iffalse             L141
-
-      pop
-      getlocal0
-      convert_b
-L141:
-      iftrue              L155
-
-L142:
       getlocal0
       pushfalse
       initproperty        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-9X")
@@ -543,21 +267,9 @@ L142:
       getlocal1
       callpropvoid        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-af"), 1
 
-      getlocal3
-      dup
-      iftrue              L154
-
-      pop
-      getlocal3
-      convert_b
-L154:
-      iffalse             L157
-
-L155:
       getlocal0
       callpropvoid        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-0IG"), 0
 
-L157:
       getlocal0
       returnvalue
      end ; code
@@ -574,21 +286,6 @@ L157:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      inclocal_i          2
-      inclocal_i          2
-      kill                2
-      kill                2
-      bitor
-      pushwith
-L10:
-      setlocal3
-
       getlocal0
       pushscope
 
@@ -596,139 +293,42 @@ L10:
       coerce              QName(PackageNamespace("_-Y3"), "_-5d")
       setlocal1
 
-      getlocal2
-      dup
-      iftrue              L22
-
-      pop
-      getlocal0
-      convert_b
-L22:
-      iffalse             L61
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-05g")
-      getlocal2
-      dup
-      iftrue              L31
-
-      pop
-      getlocal3
-      convert_b
-L31:
-      iffalse             L63
-
       coerce_a
       dup
-      iffalse             L53
+      iffalse             L14
 
       pop
-      getlocal3
-      dup
-      iffalse             L42
-
-      pop
-      getlocal2
-      convert_b
-L42:
-      iftrue              L61
-
       getlocal0
-      jump                L51
-
-      setlocal2
-
-      lshift
-      greaterthan
-      newactivation
-      declocal            2
-      getlocal1
-L51:
       callproperty        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-Do"), 0
       coerce_a
-L53:
+L14:
       pop
-      getlocal3
-      dup
-      iffalse             L60
-
-      pop
-      getlocal0
-      convert_b
-L60:
-      iftrue              L64
-
-L61:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-Ge")
-L63:
-      iftrue              L108
+      iftrue              L32
 
-L64:
       getlocal0
       callproperty        QName(PackageNamespace(""), "_-LE"), 0
       coerce              QName(PackageNamespace("_-Y3"), "_-5d")
       setlocal1
 
-      getlocal2
-      dup
-      iftrue              L74
-
-      pop
-      getlocal2
-      convert_b
-L74:
-      iffalse             L106
-
       getlocal0
       callpropvoid        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-06U"), 0
-
-      getlocal2
-      dup
-      jump                L86
-
-      add
-      declocal            2
-      pushwith
-      setlocal2
-
-      popscope
-      declocal            2
-L86:
-      iftrue              L90
-
-      pop
-      getlocal1
-      convert_b
-L90:
-      iffalse             L106
 
       getlocal0
       pushtrue
       initproperty        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-Ge")
 
-      getlocal3
-      iftrue              L108
-
       getlocal0
       getlocal1
       callpropvoid        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-af"), 1
 
-      getlocal3
-      dup
-      iffalse             L105
-
-      pop
-      getlocal1
-      convert_b
-L105:
-      iftrue              L108
-
-L106:
       getlocal0
       callpropvoid        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-0IG"), 0
 
-L108:
+L32:
       getlocal0
       returnvalue
      end ; code
@@ -745,130 +345,48 @@ L108:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      convert_o
-      getlocal0
-      kill                2
-      pushundefined
-      greaterthan
-      declocal            2
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
 
-      getlocal2
-      iftrue              L44
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-05g")
-      getlocal2
-      iftrue              L46
-
       coerce_a
       dup
-      iffalse             L29
+      iffalse             L11
 
       pop
-      getlocal2
-      iftrue              L44
-
       getlocal0
       callproperty        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-Do"), 0
       coerce_a
-L29:
+L11:
       pop
-      getlocal2
-      dup
-      iffalse             L43
-
-      jump                L40
-
-      multiply_i
-      inclocal            2
-      decrement_i
-      declocal            2
-      setlocal2
-
-      kill                2
-L40:
-      pop
-      getlocal2
-      convert_b
-L43:
-      iftrue              L51
-
-L44:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-cy")
-L46:
-      iffalse             L51
-
-      getlocal3
-      iffalse             L51
+      iffalse             L17
 
       getlocal0
       returnvalue
 
-L51:
+L17:
       getlocal0
       callproperty        QName(PackageNamespace(""), "_-LE"), 0
       coerce              QName(PackageNamespace("_-Y3"), "_-5d")
       setlocal1
 
-      getlocal3
-      jump                L63
-
-      greaterthan
-      setlocal2
-
-      inclocal            2
-      checkfilter
-      getlocal1
-      nextname
-L63:
-      iffalse             L73
-
       getlocal0
       callpropvoid        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-06U"), 0
-
-      getlocal3
-      iffalse             L73
 
       getlocal0
       pushtrue
       initproperty        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-cy")
 
-      getlocal3
-      iffalse             L83
-
-L73:
       getlocal0
       getlocal1
       callpropvoid        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-af"), 1
 
-      getlocal3
-      dup
-      iftrue              L82
-
-      pop
-      getlocal2
-      convert_b
-L82:
-      iffalse             L85
-
-L83:
       getlocal0
       callpropvoid        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-0IG"), 0
 
-L85:
       getlocal0
       returnvalue
      end ; code
@@ -885,78 +403,26 @@ L85:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal1
-
-      jump                L10
-
-      convert_u
-      pushnull
-      dup
-      pushnan
-      modulo
-      bitnot
-L10:
-      setlocal2
-
       getlocal0
       pushscope
 
-      getlocal2
-      dup
-      iffalse             L19
-
-      pop
-      getlocal1
-      convert_b
-L19:
-      iftrue              L43
-
-      jump                L27
-
-      negate
-      multiply
-      increment
-      swap
-      bitxor
-      getlocal3
-L27:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-05g")
-      iffalse             L43
-
-      getlocal1
-      dup
-      iftrue              L36
-
-      pop
-      getlocal0
-      convert_b
-L36:
-      iffalse             L48
+      iffalse             L9
 
       findpropstrict      QName(PackageNamespace("_-eZ"), "_-Np")
       pushstring          "Mapping is already sealed."
       constructprop       QName(PackageNamespace("_-eZ"), "_-Np"), 1
       throw
-      getlocal2
-      iftrue              L48
-
-L43:
+L9:
       getlocal0
       pushtrue
       initproperty        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-05g")
 
-      getlocal1
-      iffalse             L51
-
-L48:
       getlocal0
       newobject           0
       initproperty        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-A8")
 
-L51:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-A8")
       returnvalue
@@ -975,72 +441,36 @@ L51:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      checkfilter
-      getlocal1
-      multiply_i
-      inclocal_i          2
-      getlocal2
-      lessthan
-L10:
-      setlocal3
-
       getlocal0
       pushscope
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-05g")
-      iftrue              L27
+      iftrue              L9
 
       findpropstrict      QName(PackageNamespace("_-eZ"), "_-Np")
       pushstring          "Can't unseal a non-sealed mapping."
-      jump                L25
-
-      setlocal3
-
-      negate
-      inclocal            2
-      getlocal2
-      convert_u
-      declocal_i          2
-L25:
       constructprop       QName(PackageNamespace("_-eZ"), "_-Np"), 1
       throw
-L27:
+L9:
       getlocal1
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-A8")
-      ifstricteq          L35
+      ifstricteq          L17
 
       findpropstrict      QName(PackageNamespace("_-eZ"), "_-Np")
       pushstring          "Can't unseal mapping without the correct key."
       constructprop       QName(PackageNamespace("_-eZ"), "_-Np"), 1
       throw
-L35:
+L17:
       getlocal0
       pushfalse
       initproperty        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-05g")
-
-      getlocal2
-      dup
-      iftrue              L44
-
-      pop
-      getlocal1
-      convert_b
-L44:
-      iffalse             L48
 
       getlocal0
       pushnull
       initproperty        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-A8")
 
-L48:
       getlocal0
       returnvalue
      end ; code
@@ -1081,15 +511,6 @@ L48:
       pushscope
 
       findpropstrict      QName(PackageNamespace(""), "Boolean")
-      jump                L10
-
-      astypelate
-      bitxor
-      greaterequals
-      subtract_i
-      pushwith
-      decrement
-L10:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-00-")
       getlex              QName(PackageNamespace("_-4u"), "SsInternal")
@@ -1118,28 +539,9 @@ L10:
       pushscope
 
       getlocal0
-      jump                L10
-
-      pushfalse
-      coerce_s
-      coerce_a
-      swap
-      not
-      multiply_i
-L10:
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-00-")
       getlex              QName(PackageNamespace("_-4u"), "SsInternal")
       coerce              QName(PackageNamespace(""), "Namespace")
-      jump                L20
-
-      modulo
-      bitor
-      setlocal3
-
-      equals
-      multiply_i
-      pushfalse
-L20:
       getproperty         RTQName("_-vg")
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-08c")
@@ -1147,9 +549,9 @@ L20:
       coerce              QName(PackageNamespace("_-Y3"), "_-5d")
       setlocal1
 
-      jump                L34
+      jump                L20
 
-L27:
+L13:
       label
       findpropstrict      QName(PackageNamespace("_-Y3"), "_-d5")
       getlocal1
@@ -1158,11 +560,11 @@ L27:
       coerce              QName(PackageNamespace("_-Y3"), "_-5d")
       setlocal1
 
-L34:
+L20:
       getlocal1
       getlex              QName(PackageNamespace("_-Y3"), "_-d5")
       istypelate
-      iftrue              L27
+      iftrue              L13
 
       getlocal1
       returnvalue
@@ -1181,134 +583,43 @@ L34:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal3
-
-      jump                L10
-
-      decrement
-      kill                2
-      subtract
-      declocal_i          2
-      inclocal_i          3
-      checkfilter
-L10:
-      setlocal            4
-
       getlocal0
       pushscope
-
-      getlocal            4
-      dup
-      iffalse             L19
-
-      pop
-      getlocal3
-      convert_b
-L19:
-      iftrue              L57
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-05g")
       coerce_a
       dup
-      iffalse             L43
+      iffalse             L11
 
       pop
-      getlocal3
-      dup
-      iftrue              L32
-
-      pop
-      getlocal0
-      convert_b
-L32:
-      iffalse             L59
-
       getlocal0
       callproperty        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-Do"), 0
-      jump                L42
-
-      declocal            2
-      increment_i
-      declocal            2
-      convert_o
-      setlocal3
-
-      inclocal            3
-L42:
       coerce_a
-L43:
+L11:
       pop
-      getlocal            4
-      dup
-      iffalse             L50
-
-      pop
-      getlocal3
-      convert_b
-L50:
-      iftrue              L59
-
       getlocal1
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-3W")
-      ifne                L59
+      ifne                L18
 
-      getlocal3
-      iffalse             L59
-
-L57:
       getlocal0
       returnvalue
 
-L59:
+L18:
       getlocal0
       callproperty        QName(PackageNamespace(""), "_-LE"), 0
-      jump                L68
-
-      modulo
-      negate
-      declocal_i          2
-      setlocal2
-
-      rshift
-      dxnslate
-L68:
       coerce              QName(PackageNamespace("_-Y3"), "_-5d")
       setlocal2
-
-      getlocal3
-      dup
-      iftrue              L76
-
-      pop
-      getlocal1
-      convert_b
-L76:
-      iffalse             L87
 
       getlocal0
       getlocal1
       initproperty        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-3W")
 
-      getlocal3
-      dup
-      iftrue              L86
-
-      pop
-      getlocal3
-      convert_b
-L86:
-      iffalse             L90
-
-L87:
       getlocal0
       getlocal2
       callpropvoid        QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-af"), 1
 
-L90:
       getlocal0
       returnvalue
      end ; code
@@ -1326,93 +637,34 @@ L90:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      inclocal_i          2
-      declocal            2
-      declocal_i          2
-      declocal            2
-      add_i
-      convert_u
-L10:
-      setlocal3
-
       getlocal0
       pushscope
 
-      getlocal3
-      iftrue              L44
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-Ge")
-      getlocal2
-      iffalse             L41
-
-      iffalse             L39
-
-      getlocal2
-      dup
-      iftrue              L26
-
-      pop
-      getlocal0
-      convert_b
-L26:
-      iffalse             L77
+      iffalse             L10
 
       findpropstrict      QName(PackageNamespace("_-Y3"), "_-yi")
-      jump                L35
-
-      setlocal2
-
-      inclocal_i          2
-      declocal_i          2
-      checkfilter
-      kill                2
-      getlocal2
-L35:
       getlocal1
       constructprop       QName(PackageNamespace("_-Y3"), "_-yi"), 1
       coerce              QName(PackageNamespace("_-Y3"), "_-5d")
       setlocal1
 
-L39:
+L10:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-cy")
-L41:
-      iffalse             L56
+      iffalse             L18
 
-      getlocal3
-      iftrue              L77
-
-L44:
       findpropstrict      QName(PackageNamespace("_-Y3"), "_-Q4")
       getlocal1
       constructprop       QName(PackageNamespace("_-Y3"), "_-Q4"), 1
-      jump                L54
-
-      setlocal2
-
-      inclocal_i          2
-      urshift
-      popscope
-      inclocal_i          2
-      equals
-L54:
       coerce              QName(PackageNamespace("_-Y3"), "_-5d")
       setlocal1
 
-L56:
+L18:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-3W")
-      iffalse             L68
-
-      getlocal2
-      iffalse             L77
+      iffalse             L28
 
       findpropstrict      QName(PackageNamespace("_-Y3"), "_-4c")
       getlocal0
@@ -1422,7 +674,7 @@ L56:
       coerce              QName(PackageNamespace("_-Y3"), "_-5d")
       setlocal1
 
-L68:
+L28:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-00-")
       getlex              QName(PackageNamespace("_-4u"), "SsInternal")
@@ -1433,7 +685,6 @@ L68:
       getlocal1
       setproperty         MultinameL([PrivateNamespace("*", "_-Z4:_-nZ#0"), PackageNamespace(""), PackageNamespace("_-Z4"), PrivateNamespace("*", "_-Z4:_-nZ#1"), PackageInternalNs("_-Z4"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Zl"), StaticProtectedNs("_-Zl")])
 
-L77:
       returnvoid
      end ; code
     end ; body
@@ -1453,15 +704,6 @@ L77:
       pushscope
 
       findpropstrict      QName(PackageNamespace("_-eZ"), "_-Np")
-      jump                L10
-
-      strictequals
-      checkfilter
-      convert_d
-      typeof
-      bitand
-      pushnull
-L10:
       pushstring          "Can't change a sealed mapping"
       constructprop       QName(PackageNamespace("_-eZ"), "_-Np"), 1
       throw
@@ -1479,81 +721,20 @@ L10:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      convert_i
-      pushwith
-      istypelate
-      hasnext
-      getlocal2
-      pushfalse
-L10:
-      setlocal1
-
-      setlocal2
-
       getlocal0
       pushscope
 
-      getlocal2
-      iffalse             L52
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-00-")
-      getlocal2
-      dup
-      iftrue              L31
-
-      pop
-      jump                L29
-
-      setlocal2
-
-      coerce_s
-      coerce_a
-      bitnot
-      checkfilter
-      getlocal0
-L29:
-      getlocal1
-      convert_b
-L31:
-      iffalse             L54
-
       getlex              QName(PackageNamespace("_-Z4"), "_-09D")
       getproperty         QName(PackageNamespace(""), "_-b-")
       callproperty        QName(PackageNamespace(""), "hasEventListener"), 1
-      jump                L42
-
-      greaterequals
-      getlocal0
-      add_i
-      convert_d
-      convert_o
-      setlocal2
-
-L42:
       dup
-      iffalse             L64
+      iffalse             L22
 
       pop
-      getlocal1
-      dup
-      iffalse             L51
-
-      pop
-      getlocal1
-      convert_b
-L51:
-      iftrue              L65
-
-L52:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-00-")
-L54:
       findpropstrict      QName(PackageNamespace("_-Z4"), "_-09D")
       getlex              QName(PackageNamespace("_-Z4"), "_-09D")
       getproperty         QName(PackageNamespace(""), "_-b-")
@@ -1564,9 +745,8 @@ L54:
       getlocal0
       constructprop       QName(PackageNamespace("_-Z4"), "_-09D"), 4
       callproperty        QName(PackageNamespace(""), "dispatchEvent"), 1
-L64:
+L22:
       pop
-L65:
       returnvoid
      end ; code
     end ; body
@@ -1582,85 +762,20 @@ L65:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      coerce_s
-      nextvalue
-      add_i
-      urshift
-      negate_i
-      lessthan
-L10:
-      setlocal1
-
-      setlocal2
-
       getlocal0
       pushscope
 
-      getlocal2
-      dup
-      iftrue              L20
-
-      pop
-      getlocal2
-      convert_b
-L20:
-      iffalse             L70
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-00-")
-      getlocal2
-      dup
-      jump                L32
-
-      istypelate
-      negate_i
-      coerce_a
-      nextvalue
-      dup
-      multiply_i
-L32:
-      iftrue              L36
-
-      pop
-      getlocal2
-      convert_b
-L36:
-      iffalse             L59
-
       getlex              QName(PackageNamespace("_-Z4"), "_-09D")
       getproperty         QName(PackageNamespace(""), "_-yL")
       callproperty        QName(PackageNamespace(""), "hasEventListener"), 1
-      jump                L47
-
-      pushwith
-      urshift
-      nextvalue
-      convert_i
-      subtract
-      bitxor
-L47:
       dup
-      iffalse             L69
+      iffalse             L22
 
       pop
-      getlocal2
-      dup
-      iftrue              L56
-
-      pop
-      getlocal0
-      convert_b
-L56:
-      iffalse             L70
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-Z4:_-nZ#0"), "_-00-")
-L59:
       findpropstrict      QName(PackageNamespace("_-Z4"), "_-09D")
       getlex              QName(PackageNamespace("_-Z4"), "_-09D")
       getproperty         QName(PackageNamespace(""), "_-yL")
@@ -1671,9 +786,8 @@ L59:
       getlocal0
       constructprop       QName(PackageNamespace("_-Z4"), "_-09D"), 4
       callproperty        QName(PackageNamespace(""), "dispatchEvent"), 1
-L69:
+L22:
       pop
-L70:
       returnvoid
      end ; code
     end ; body

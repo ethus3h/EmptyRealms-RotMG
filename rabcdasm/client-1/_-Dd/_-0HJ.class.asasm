@@ -13,22 +13,6 @@ class
     initscopedepth 10
     maxscopedepth 11
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     getlocal3
-     add
-     declocal_i          5
-     convert_d
-     getlocal3
-     kill                6
-L10:
-     setlocal            7
-
-     setlocal            8
-
      getlocal0
      pushscope
 
@@ -43,22 +27,11 @@ L10:
      coerce              QName(PackageInternalNs("_-Dd"), "_-QS")
      setlocal            4
 
-     getlocal            8
-     dup
-     iftrue              L28
-
-     pop
-     getlocal0
-     convert_b
-L28:
-     iffalse             L33
-
      getlocal0
      getlex              QName(PackageNamespace("_-Dd"), "_-Mu")
      getproperty         QName(PackageNamespace(""), "_-6h")
      constructsuper      1
 
-L33:
      getlex              Multiname("Vector", [PrivateNamespace("*", "_-Dd:_-0HJ/iinit#0"), PackageInternalNs("_-Dd"), PackageNamespace("_-Dd"), PackageNamespace(""), PrivateNamespace("*", "_-Dd:_-0HJ/iinit#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-bD"), StaticProtectedNs("_-bD"), StaticProtectedNs("_-1w"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("__AS3__.vec")])
      getlex              QName(PackageNamespace(""), "String")
      applytype           1
@@ -74,9 +47,9 @@ L33:
      coerce_a
      setlocal            6
 
-     jump                L57
+     jump                L36
 
-L46:
+L27:
      label
      getlocal            6
      getlocal            5
@@ -84,88 +57,31 @@ L46:
      coerce_s
      setlocal1
 
-     getlocal            8
-     iffalse             L57
-
      getlocal2
      getlocal1
      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-L57:
+L36:
      hasnext2            6, 5
-     getlocal            8
-     iffalse             L147
-
-     iftrue              L46
-
-     getlocal            8
-     iffalse             L148
+     iftrue              L27
 
      kill                6
-     getlocal            7
-     jump                L72
-
-     increment_i
-     not
-     divide
-     setlocal            6
-
-     negate
-     pushscope
-
-L72:
-     dup
-     iffalse             L77
-
-     pop
-     getlocal2
-     convert_b
-L77:
-     iftrue              L149
-
      kill                5
-     getlocal            8
-     iffalse             L92
-
      getlocal2
      getlex              QName(PackageNamespace("com.company.util"), "_-L2")
      getproperty         QName(PackageNamespace(""), "_-LO")
      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "sort"), 1
 
-     getlocal            8
-     dup
-     iftrue              L91
-
-     pop
-     getlocal2
-     convert_b
-L91:
-     iffalse             L150
-
-L92:
      pushbyte            0
      setlocal            5
-
-     getlocal            8
-     dup
-     iftrue              L100
-
-     pop
-     getlocal1
-     convert_b
-L100:
-     iffalse             L149
 
      getlocal2
      coerce_a
      setlocal            6
 
-     getlocal            7
-     iftrue              L115
+     jump                L73
 
-     jump                L146
-
-L107:
+L50:
      label
      getlocal            6
      getlocal            5
@@ -173,27 +89,13 @@ L107:
      coerce_s
      setlocal1
 
-     getlocal            8
-     iffalse             L128
-
-L115:
      getlex              QName(PackageNamespace("com.company.assembleegameclient.map"), "_-pf")
      getproperty         QName(PackageNamespace(""), "_-pb")
      getlocal1
      getproperty         MultinameL([PrivateNamespace("*", "_-Dd:_-0HJ/iinit#0"), PackageInternalNs("_-Dd"), PackageNamespace("_-Dd"), PackageNamespace(""), PrivateNamespace("*", "_-Dd:_-0HJ/iinit#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-bD"), StaticProtectedNs("_-bD"), StaticProtectedNs("_-1w"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
      convert_i
-     jump                L127
-
-     increment_i
-     greaterthan
-     getlocal1
-     inclocal            5
-     getlocal            7
-     popscope
-L127:
      setlocal3
 
-L128:
      findpropstrict      QName(PackageInternalNs("_-Dd"), "_-QS")
      getlex              QName(PackageNamespace("com.company.assembleegameclient.map"), "_-pf")
      getproperty         QName(PackageNamespace(""), "_-QF")
@@ -203,30 +105,16 @@ L128:
      coerce              QName(PackageInternalNs("_-Dd"), "_-QS")
      setlocal            4
 
-     getlocal            7
-     dup
-     iffalse             L142
-
-     pop
-     getlocal0
-     convert_b
-L142:
-     iftrue              L146
-
      findpropstrict      QName(ProtectedNamespace("_-1w"), "_-08M")
      getlocal            4
      callpropvoid        QName(ProtectedNamespace("_-1w"), "_-08M"), 1
 
-L146:
+L73:
      hasnext2            6, 5
-L147:
-     iftrue              L107
+     iftrue              L50
 
-L148:
      kill                6
-L149:
      kill                5
-L150:
      returnvoid
     end ; code
    end ; body

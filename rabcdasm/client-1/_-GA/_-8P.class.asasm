@@ -13,64 +13,22 @@ class
     initscopedepth 5
     maxscopedepth 6
     code
-     pushfalse
-     pushtrue
-     setlocal1
-
-     jump                L10
-
-     bitxor
-     divide
-     rshift
-     pushscope
-
-     convert_s
-     convert_i
-L10:
-     setlocal2
-
      getlocal0
      pushscope
-
-     jump                L20
-
-     bitand
-     setlocal3
-
-     bitand
-     getlocal1
-     dup
-     convert_i
-L20:
-     getlocal2
-     iftrue              L40
 
      getlocal0
      constructsuper      0
 
-     getlocal1
-     iffalse             L40
-
      getlex              QName(PackageNamespace("_-GA"), "_-8P")
      getproperty         QName(PackageNamespace(""), "_-OR")
-     iftrue              L40
-
-     getlocal1
-     dup
-     iftrue              L35
-
-     pop
-     getlocal0
-     convert_b
-L35:
-     iffalse             L40
+     iftrue              L11
 
      getlex              QName(PackageNamespace("_-GA"), "_-8P")
      getlocal0
      getproperty         QName(PackageNamespace(""), "_-OR")
      setproperty         QName(PackageNamespace(""), "_-OR")
 
-L40:
+L11:
      returnvoid
     end ; code
    end ; body

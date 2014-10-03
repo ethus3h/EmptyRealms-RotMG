@@ -13,32 +13,12 @@ class
     initscopedepth 7
     maxscopedepth 8
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     subtract
-     multiply_i
-     lessthan
-     rshift
-     greaterequals
-     add_i
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal2
-     iffalse             L18
 
      getlocal0
      constructsuper      0
 
-L18:
      returnvoid
     end ; code
    end ; body
@@ -58,69 +38,20 @@ L18:
      initscopedepth 7
      maxscopedepth 8
      code
-      pushfalse
-      pushtrue
-      setlocal3
-
-      jump                L10
-
-      decrement
-      subtract_i
-      inclocal            2
-      modulo
-      subtract
-      convert_d
-L10:
-      setlocal            4
-
       getlocal0
       pushscope
-
-      getlocal3
-      dup
-      jump                L22
-
-      getlocal3
-      getlocal3
-      pushnan
-      newactivation
-      astypelate
-      typeof
-L22:
-      iftrue              L26
-
-      pop
-      getlocal1
-      convert_b
-L26:
-      iffalse             L42
 
       getlocal0
       getlocal1
       initproperty        QName(PrivateNamespace("*", "_-5H:_-Rh"), "_-WA")
 
-      getlocal            4
-      dup
-      iffalse             L36
-
-      pop
-      getlocal3
-      convert_b
-L36:
-      iftrue              L44
-
       getlocal0
       getlocal2
       initproperty        QName(PrivateNamespace("*", "_-5H:_-Rh"), "_height")
 
-      getlocal            4
-      iftrue              L44
-
-L42:
       getlocal0
       callpropvoid        QName(PrivateNamespace("*", "_-5H:_-Rh"), "_-B-"), 0
 
-L44:
       returnvoid
      end ; code
     end ; body
@@ -137,47 +68,16 @@ L44:
      initscopedepth 7
      maxscopedepth 8
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      declocal_i          2
-      subtract_i
-      inclocal            2
-      inclocal_i          2
-      setlocal2
-
-      bitand
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      dup
-      iftrue              L20
-
-      pop
-      getlocal1
-      convert_b
-L20:
-      iffalse             L28
 
       getlocal0
       getlocal1
       initproperty        QName(PrivateNamespace("*", "_-5H:_-Rh"), "_color")
 
-      getlocal2
-      iftrue              L28
-
       getlocal0
       callpropvoid        QName(PrivateNamespace("*", "_-5H:_-Rh"), "_-B-"), 0
 
-L28:
       returnvoid
      end ; code
     end ; body
@@ -193,74 +93,16 @@ L28:
      initscopedepth 7
      maxscopedepth 8
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      nextvalue
-      convert_o
-      pushundefined
-      getglobalscope
-      nextvalue
-      coerce_s
-L10:
-      setlocal1
-
-      setlocal2
-
       getlocal0
       pushscope
-
-      getlocal2
-      iffalse             L67
 
       getlex              QName(PackageNamespace(""), "graphics")
       callpropvoid        QName(PackageNamespace(""), "clear"), 0
-
-      getlocal1
-      dup
-      iffalse             L31
-
-      pop
-      getlocal2
-      jump                L30
-
-      add
-      pushscope
-
-      decrement_i
-      instanceof
-      lshift
-      getlocal0
-L30:
-      convert_b
-L31:
-      iftrue              L65
 
       getlex              QName(PackageNamespace(""), "graphics")
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-5H:_-Rh"), "_color")
       callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
-
-      getlocal2
-      jump                L44
-
-      pushnan
-      rshift
-      bitxor
-      pushwith
-      convert_u
-      divide
-L44:
-      dup
-      iftrue              L49
-
-      pop
-      getlocal0
-      convert_b
-L49:
-      iffalse             L67
 
       getlex              QName(PackageNamespace(""), "graphics")
       pushbyte            0
@@ -271,21 +113,9 @@ L49:
       getproperty         QName(PrivateNamespace("*", "_-5H:_-Rh"), "_height")
       callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
 
-      getlocal2
-      dup
-      iftrue              L64
-
-      pop
-      getlocal0
-      convert_b
-L64:
-      iffalse             L67
-
-L65:
       getlex              QName(PackageNamespace(""), "graphics")
       callpropvoid        QName(PackageNamespace(""), "endFill"), 0
 
-L67:
       returnvoid
      end ; code
     end ; body

@@ -13,65 +13,19 @@ class
     initscopedepth 10
     maxscopedepth 11
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     setlocal3
-
-     equals
-     pushnull
-     divide
-     add
-     subtract
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
      pushscope
-
-     jump                L21
-
-     pushscope
-
-     convert_b
-     bitor
-     hasnext
-     pushfalse
-     decrement
-L21:
-     getlocal1
-     dup
-     iffalse             L27
-
-     pop
-     getlocal0
-     convert_b
-L27:
-     iftrue              L41
 
      getlocal0
      pushstring          "In order to have more than one character slot, "
-     getlocal1
-     iftrue              L36
-
      pushstring          "you must be a registered user."
-     getlocal1
-     iftrue              L37
-
      add
-L36:
      pushstring          "Not Registered"
-L37:
      pushstring          "Cancel"
      pushstring          "Register"
      pushstring          "/charSlotNeedRegister"
      constructsuper      5
 
-L41:
      returnvoid
     end ; code
    end ; body

@@ -18,28 +18,8 @@ class
     initscopedepth 9
     maxscopedepth 10
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     inclocal_i          2
-     setlocal3
-
-     declocal_i          3
-     newactivation
-     declocal_i          4
-     getlocal            5
-L10:
-     setlocal            6
-
-     setlocal            7
-
      getlocal0
      pushscope
-
-     getlocal            6
-     iftrue              L223
 
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
@@ -52,16 +32,6 @@ L10:
      pushbyte            1
      constructprop       QName(PackageNamespace("flash.display"), "GraphicsSolidFill"), 2
      initproperty        QName(PrivateNamespace("*", "_-DH:_-JU"), "outlineFill_")
-
-     getlocal            6
-     dup
-     iffalse             L32
-
-     pop
-     getlocal1
-     convert_b
-L32:
-     iftrue              L396
 
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsStroke")
@@ -85,16 +55,6 @@ L32:
      pushbyte            1
      constructprop       QName(PackageNamespace("flash.display"), "GraphicsSolidFill"), 2
      initproperty        QName(PrivateNamespace("*", "_-DH:_-JU"), "_-vV")
-
-     getlocal            7
-     dup
-     iftrue              L60
-
-     pop
-     getlocal2
-     convert_b
-L60:
-     iffalse             L223
 
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsPath")
@@ -155,16 +115,6 @@ L60:
      getlocal            4
      initproperty        QName(ProtectedNamespace("_-wF"), "bitmapData_")
 
-     getlocal            6
-     dup
-     iffalse             L117
-
-     pop
-     getlocal0
-     convert_b
-L117:
-     iftrue              L185
-
      getlocal0
      findpropstrict      QName(PackageNamespace("com.company.ui"), "SimpleText")
      pushbyte            22
@@ -176,62 +126,22 @@ L117:
      constructprop       QName(PackageNamespace("com.company.ui"), "SimpleText"), 6
      initproperty        QName(ProtectedNamespace("_-wF"), "_-PV")
 
-     getlocal            7
-     dup
-     iftrue              L134
-
-     pop
-     getlocal2
-     convert_b
-L134:
-     iffalse             L259
-
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "_-PV")
-     getlocal            6
-     iftrue              L147
-
      pushtrue
      callpropvoid        QName(PackageNamespace(""), "_-8Y"), 1
 
-     getlocal            6
-     iftrue              L227
-
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "_-PV")
-     getlocal            7
-     iffalse             L167
-
-L147:
      pushstring          "<p align=\"center\">Save</p>"
      setproperty         QName(PackageNamespace(""), "htmlText")
 
-     getlocal            6
-     dup
-     iffalse             L155
-
-     pop
-     getlocal3
-     convert_b
-L155:
-     iftrue              L330
-
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "_-PV")
-     getlocal            6
-     iftrue              L167
-
      callpropvoid        QName(PackageNamespace(""), "updateMetrics"), 0
 
-     getlocal            6
-     iftrue              L511
-
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "_-PV")
-     getlocal            7
-     iffalse             L187
-
-L167:
      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
      pushbyte            0
      dup
@@ -244,32 +154,10 @@ L167:
      newarray            1
      setproperty         QName(PackageNamespace(""), "filters")
 
-     getlocal            6
-     dup
-     iffalse             L184
-
-     pop
-     getlocal0
-     convert_b
-L184:
-     iftrue              L408
-
-L185:
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "_-PV")
-L187:
      pushbyte            4
      setproperty         QName(PackageNamespace(""), "y")
-
-     getlocal            7
-     dup
-     iftrue              L195
-
-     pop
-     getlocal1
-     convert_b
-L195:
-     iffalse             L560
 
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "box_")
@@ -283,54 +171,21 @@ L195:
      constructprop       QName(PackageNamespace("_-DH"), "_-KU"), 1
      initproperty        QName(ProtectedNamespace("_-wF"), "nameText_")
 
-     getlocal            7
-     dup
-     iftrue              L212
-
-     pop
-     getlocal3
-     convert_b
-L212:
-     iffalse             L476
-
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "nameText_")
-     getlocal            6
-     iftrue              L225
-
      pushbyte            20
-     getlocal            7
-     iffalse             L226
-
      setproperty         QName(PackageNamespace(""), "x")
 
-     getlocal            7
-     iffalse             L487
-
-L223:
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "nameText_")
-L225:
      pushbyte            50
-L226:
      setproperty         QName(PackageNamespace(""), "y")
 
-L227:
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "box_")
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "nameText_")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
-
-     getlocal            6
-     dup
-     iffalse             L238
-
-     pop
-     getlocal1
-     convert_b
-L238:
-     iftrue              L324
 
      getlocal0
      findpropstrict      QName(PackageNamespace("_-DH"), "_-0J3")
@@ -338,33 +193,14 @@ L238:
      constructprop       QName(PackageNamespace("_-DH"), "_-0J3"), 1
      initproperty        QName(ProtectedNamespace("_-wF"), "_-92")
 
-     getlocal            6
-     iftrue              L349
-
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "_-92")
-     getlocal            6
-     iftrue              L261
-
      pushbyte            20
-     getlocal            7
-     dup
-     iftrue              L257
-
-     pop
-     getlocal1
-     convert_b
-L257:
-     iffalse             L262
-
      setproperty         QName(PackageNamespace(""), "x")
 
-L259:
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "_-92")
-L261:
      pushshort           180
-L262:
      setproperty         QName(PackageNamespace(""), "y")
 
      getlocal0
@@ -373,18 +209,6 @@ L262:
      getproperty         QName(ProtectedNamespace("_-wF"), "_-92")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
-     getlocal            6
-     iftrue              L286
-
-     jump                L277
-
-     pop
-     inclocal            3
-     declocal_i          5
-     inclocal            4
-     nextname
-     convert_d
-L277:
      getlocal0
      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-7f")
      pushbyte            16
@@ -393,76 +217,24 @@ L277:
      constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-7f"), 3
      initproperty        QName(ProtectedNamespace("_-wF"), "_-Bk")
 
-     getlocal            6
-     iftrue              L429
-
-L286:
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "_-Bk")
-     getlocal            6
-     dup
-     iffalse             L294
-
-     pop
-     getlocal0
-     convert_b
-L294:
-     iftrue              L332
-
      getlex              QName(PrivateNamespace("*", "_-DH:_-JU"), "WIDTH")
-     getlocal            7
-     dup
-     iftrue              L302
-
-     pop
-     getlocal3
-     convert_b
-L302:
-     iffalse             L329
-
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "_-Bk")
      getproperty         QName(PackageNamespace(""), "width")
      subtract
-     getlocal            7
-     dup
-     iftrue              L313
-
-     pop
-     getlocal2
-     convert_b
-L313:
-     iffalse             L316
-
      pushbyte            20
      subtract
-L316:
      setproperty         QName(PackageNamespace(""), "x")
 
-     getlocal            6
-     dup
-     iffalse             L323
-
-     pop
-     getlocal2
-     convert_b
-L323:
-     iftrue              L538
-
-L324:
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "_-Bk")
-     getlocal            7
-     iffalse             L332
-
      pushshort           330
-L329:
      setproperty         QName(PackageNamespace(""), "y")
 
-L330:
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "_-Bk")
-L332:
      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
      getproperty         QName(PackageNamespace(""), "CLICK")
      getlocal0
@@ -475,17 +247,6 @@ L332:
      getproperty         QName(ProtectedNamespace("_-wF"), "_-Bk")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
-     getlocal            7
-     dup
-     iftrue              L348
-
-     pop
-     getlocal0
-     convert_b
-L348:
-     iffalse             L538
-
-L349:
      getlocal0
      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-7f")
      pushbyte            16
@@ -496,63 +257,26 @@ L349:
 
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "_-t3")
-     getlocal            6
-     dup
-     iffalse             L364
-
-     pop
-     getlocal0
-     convert_b
-L364:
-     iftrue              L387
-
      getlex              QName(PrivateNamespace("*", "_-DH:_-JU"), "WIDTH")
-     getlocal            7
-     iffalse             L388
-
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "_-Bk")
      getproperty         QName(PackageNamespace(""), "width")
      subtract
-     getlocal            6
-     iftrue              L382
-
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "_-t3")
      getproperty         QName(PackageNamespace(""), "width")
      subtract
-     getlocal            7
-     iffalse             L382
-
      pushbyte            40
      subtract
-L382:
      setproperty         QName(PackageNamespace(""), "x")
 
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "_-t3")
-     getlocal            7
-     iffalse             L398
-
-L387:
      pushshort           330
-L388:
      setproperty         QName(PackageNamespace(""), "y")
 
-     getlocal            7
-     dup
-     iftrue              L395
-
-     pop
-     getlocal3
-     convert_b
-L395:
-     iffalse             L538
-
-L396:
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "_-t3")
-L398:
      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
      getproperty         QName(PackageNamespace(""), "CLICK")
      getlocal0
@@ -565,7 +289,6 @@ L398:
      getproperty         QName(ProtectedNamespace("_-wF"), "_-t3")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
-L408:
      getlocal0
      findpropstrict      QName(PackageNamespace("com.company.ui"), "SimpleText")
      pushbyte            14
@@ -579,106 +302,33 @@ L408:
 
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "errorText_")
-     getlocal            6
-     dup
-     iffalse             L426
-
-     pop
-     getlocal1
-     convert_b
-L426:
-     iftrue              L455
-
      pushstring          ""
      setproperty         QName(PackageNamespace(""), "text")
 
-L429:
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "errorText_")
-     getlocal            7
-     dup
-     iftrue              L437
-
-     pop
-     getlocal2
-     convert_b
-L437:
-     iffalse             L489
-
      callpropvoid        QName(PackageNamespace(""), "updateMetrics"), 0
 
-     getlocal            6
-     dup
-     iffalse             L445
-
-     pop
-     getlocal3
-     convert_b
-L445:
-     iftrue              L503
-
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "errorText_")
-     getlocal            7
-     dup
-     iftrue              L454
-
-     pop
-     getlocal3
-     convert_b
-L454:
-     iffalse             L489
-
-L455:
      getlex              QName(PrivateNamespace("*", "_-DH:_-JU"), "WIDTH")
-     getlocal            6
-     dup
-     iffalse             L462
-
-     pop
-     getlocal2
-     convert_b
-L462:
-     iftrue              L486
-
      pushbyte            2
      divide
-     getlocal            7
-     iffalse             L473
-
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "errorText_")
      getproperty         QName(PackageNamespace(""), "width")
      pushbyte            2
      divide
      subtract
-L473:
      setproperty         QName(PackageNamespace(""), "x")
 
-     getlocal            6
-     iftrue              L498
-
-L476:
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "errorText_")
-     getlocal            7
-     dup
-     iftrue              L484
-
-     pop
-     getlocal1
-     convert_b
-L484:
-     iffalse             L489
-
      pushshort           290
-L486:
      setproperty         QName(PackageNamespace(""), "y")
 
-L487:
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "errorText_")
-L489:
      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
      pushbyte            0
      dup
@@ -687,17 +337,12 @@ L489:
      newarray            1
      setproperty         QName(PackageNamespace(""), "filters")
 
-     getlocal            6
-     iftrue              L554
-
-L498:
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "box_")
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "errorText_")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
-L503:
      getlocal0
      findpropstrict      QName(PackageNamespace("_-DH"), "_-2V")
      getlocal            5
@@ -705,53 +350,14 @@ L503:
      constructprop       QName(PackageNamespace("_-DH"), "_-2V"), 2
      initproperty        QName(ProtectedNamespace("_-wF"), "_-0Hb")
 
-     getlocal            6
-     iftrue              L560
-
-L511:
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "_-0Hb")
-     getlocal            6
-     dup
-     iffalse             L519
-
-     pop
-     getlocal2
-     convert_b
-L519:
-     iftrue              L540
-
      pushbyte            20
-     getlocal            6
-     dup
-     iffalse             L527
-
-     pop
-     getlocal2
-     convert_b
-L527:
-     iftrue              L541
-
      setproperty         QName(PackageNamespace(""), "x")
 
-     getlocal            6
-     jump                L537
-
-     kill                6
-     coerce_s
-     divide
-     inclocal_i          2
-     getlocal2
-     convert_i
-L537:
-     iftrue              L554
-
-L538:
      getlocal0
      getproperty         QName(ProtectedNamespace("_-wF"), "_-0Hb")
-L540:
      pushbyte            110
-L541:
      setproperty         QName(PackageNamespace(""), "y")
 
      getlocal0
@@ -760,17 +366,6 @@ L541:
      getproperty         QName(ProtectedNamespace("_-wF"), "_-0Hb")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
-     getlocal            7
-     dup
-     iftrue              L553
-
-     pop
-     getlocal0
-     convert_b
-L553:
-     iffalse             L560
-
-L554:
      findpropstrict      QName(PackageNamespace(""), "addEventListener")
      getlex              QName(PackageNamespace("flash.events"), "Event")
      getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
@@ -778,7 +373,6 @@ L554:
      getproperty         QName(PrivateNamespace("*", "_-DH:_-JU"), "onAddedToStage")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-L560:
      returnvoid
     end ; code
    end ; body
@@ -805,119 +399,31 @@ L560:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      getlocal2
-      instanceof
-      setlocal3
-
-      subtract
-      declocal            2
-      pushwith
-L10:
-      setlocal3
-
       getlocal0
       pushscope
 
-      getlocal2
-      iffalse             L59
-
       getlocal0
       getproperty         QName(ProtectedNamespace("_-wF"), "errorText_")
-      getlocal2
-      iffalse             L44
-
       getlocal1
       setproperty         QName(PackageNamespace(""), "text")
 
-      getlocal3
-      dup
-      iffalse             L27
-
-      pop
       getlocal0
-      convert_b
-L27:
-      iftrue              L59
-
-      getlocal0
-      jump                L36
-
-      setlocal2
-
-      bitnot
-      kill                2
-      setlocal2
-
-      getlocal2
-      decrement_i
-L36:
       getproperty         QName(ProtectedNamespace("_-wF"), "errorText_")
-      getlocal3
-      dup
-      iffalse             L43
-
-      pop
-      getlocal0
-      convert_b
-L43:
-      iftrue              L61
-
-L44:
       callpropvoid        QName(PackageNamespace(""), "updateMetrics"), 0
 
-      getlocal3
-      dup
-      iffalse             L58
-
-      jump                L55
-
-      urshift
-      increment
-      inclocal_i          2
-      inclocal            2
-      coerce_s
-      setlocal2
-
-L55:
-      pop
-      getlocal1
-      convert_b
-L58:
-      iftrue              L78
-
-L59:
       getlocal0
       getproperty         QName(ProtectedNamespace("_-wF"), "errorText_")
-L61:
       getlex              QName(PrivateNamespace("*", "_-DH:_-JU"), "WIDTH")
       pushbyte            2
       divide
-      getlocal2
-      dup
-      iftrue              L70
-
-      pop
-      getlocal3
-      convert_b
-L70:
-      iffalse             L77
-
       getlocal0
       getproperty         QName(ProtectedNamespace("_-wF"), "errorText_")
       getproperty         QName(PackageNamespace(""), "width")
       pushbyte            2
       divide
       subtract
-L77:
       setproperty         QName(PackageNamespace(""), "x")
 
-L78:
       returnvoid
      end ; code
     end ; body
@@ -934,33 +440,13 @@ L78:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      greaterthan
-      declocal            2
-      increment_i
-      lessthan
-      convert_s
-      getlocal2
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      iffalse             L19
 
       getlex              QName(PackageNamespace(""), "parent")
       getlocal0
       callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
 
-L19:
       returnvoid
      end ; code
     end ; body
@@ -977,83 +463,35 @@ L19:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      getlocal2
-      getlocal2
-      popscope
-      instanceof
-      popscope
-      setlocal2
-
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      dup
-      iftrue              L19
-
-      pop
-      getlocal1
-      convert_b
-L19:
-      iffalse             L50
 
       getlocal0
       getproperty         QName(ProtectedNamespace("_-wF"), "nameText_")
       callproperty        QName(PackageNamespace(""), "text"), 0
-      jump                L30
-
-      declocal            2
-      getlocal2
-      getlocal2
-      inclocal            2
-      hasnext
-      strictequals
-L30:
       pushstring          ""
-      ifne                L45
+      ifne                L11
 
       getlocal0
       pushstring          "You must set a name"
       callpropvoid        QName(PrivateNamespace("*", "_-DH:_-JU"), "_-0BT"), 1
 
-      getlocal3
-      jump                L43
-
-      istypelate
-      declocal_i          2
-      subtract
-      inclocal_i          2
-      declocal            2
-      declocal_i          2
-L43:
-      iftrue              L45
-
       returnvoid
 
-L45:
+L11:
       getlocal0
       getproperty         QName(ProtectedNamespace("_-wF"), "_-0Hb")
       callproperty        QName(PackageNamespace(""), "getType"), 0
       pushbyte            0
-      ifne                L54
+      ifne                L20
 
-L50:
       getlocal0
       pushstring          "You must select a type"
       callpropvoid        QName(PrivateNamespace("*", "_-DH:_-JU"), "_-0BT"), 1
 
       returnvoid
 
-L54:
+L20:
       getlex              QName(PackageNamespace("com.company.googleanalytics"), "GA")
       callproperty        QName(PackageNamespace(""), "global"), 0
       pushstring          "texture"
@@ -1063,13 +501,9 @@ L54:
       callproperty        QName(PackageNamespace(""), "text"), 0
       callpropvoid        QName(PackageNamespace(""), "trackEvent"), 3
 
-      getlocal3
-      iftrue              L66
-
       getlocal0
       callpropvoid        QName(PrivateNamespace("*", "_-DH:_-JU"), "_-ld"), 0
 
-L66:
       returnvoid
      end ; code
     end ; body
@@ -1085,22 +519,6 @@ L66:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      bitor
-      modulo
-      inclocal            2
-      newactivation
-      declocal            3
-      getlocal3
-L10:
-      setlocal3
-
-      setlocal            4
-
       getlocal0
       pushscope
 
@@ -1116,25 +534,12 @@ L10:
       callproperty        QName(PackageNamespace(""), "guid"), 0
       callpropvoid        QName(PackageNamespace(""), "_-cF"), 2
 
-      getlocal            4
-      iffalse             L85
-
       getlocal1
       pushstring          "password"
       getlex              QName(PackageNamespace("_-qN"), "Account")
       callproperty        QName(PackageNamespace(""), "get"), 0
       callproperty        QName(PackageNamespace(""), "password"), 0
       callpropvoid        QName(PackageNamespace(""), "_-cF"), 2
-
-      getlocal            4
-      dup
-      iftrue              L38
-
-      pop
-      getlocal2
-      convert_b
-L38:
-      iffalse             L85
 
       getlocal1
       pushstring          "secret"
@@ -1143,16 +548,6 @@ L38:
       callproperty        QName(PackageNamespace(""), "secret"), 0
       callpropvoid        QName(PackageNamespace(""), "_-cF"), 2
 
-      getlocal            4
-      dup
-      iftrue              L51
-
-      pop
-      getlocal0
-      convert_b
-L51:
-      iffalse             L65
-
       getlocal1
       pushstring          "name"
       getlocal0
@@ -1160,45 +555,13 @@ L51:
       callproperty        QName(PackageNamespace(""), "text"), 0
       callpropvoid        QName(PackageNamespace(""), "_-cF"), 2
 
-      getlocal3
-      dup
-      iffalse             L64
-
-      pop
-      getlocal0
-      convert_b
-L64:
-      iftrue              L93
-
-L65:
       getlocal1
       pushstring          "dataType"
       getlocal0
       getproperty         QName(ProtectedNamespace("_-wF"), "_-0Hb")
       callproperty        QName(PackageNamespace(""), "getType"), 0
-      jump                L77
-
-      inclocal_i          2
-      inclocal_i          2
-      setlocal2
-
-      lessthan
-      inclocal            2
-      inclocal            2
-L77:
       callpropvoid        QName(PackageNamespace(""), "_-cF"), 2
 
-      getlocal            4
-      dup
-      iftrue              L84
-
-      pop
-      getlocal1
-      convert_b
-L84:
-      iffalse             L93
-
-L85:
       getlocal1
       pushstring          "tags"
       getlocal0
@@ -1206,16 +569,11 @@ L85:
       callproperty        QName(PackageNamespace(""), "text"), 0
       callpropvoid        QName(PackageNamespace(""), "_-cF"), 2
 
-      getlocal            4
-      iffalse             L97
-
-L93:
       getlocal1
       pushstring          "overwrite"
       pushstring          "on"
       callpropvoid        QName(PackageNamespace(""), "_-cF"), 2
 
-L97:
       getlex              QName(PackageNamespace("_-q8"), "_-9l")
       getlocal0
       getproperty         QName(ProtectedNamespace("_-wF"), "bitmapData_")
@@ -1223,17 +581,11 @@ L97:
       coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
       setlocal2
 
-      getlocal            4
-      iffalse             L161
-
       getlocal1
       getlocal2
       pushstring          "Foo.png"
       pushstring          "data"
       callpropvoid        QName(PackageNamespace(""), "_-d"), 3
-
-      getlocal3
-      iftrue              L125
 
       getlocal1
       getlex              QName(PackageNamespace("flash.events"), "Event")
@@ -1242,68 +594,25 @@ L97:
       getproperty         QName(PrivateNamespace("*", "_-DH:_-JU"), "_-053")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-      getlocal            4
-      dup
-      iftrue              L124
-
-      pop
-      getlocal2
-      convert_b
-L124:
-      iffalse             L146
-
-L125:
       getlocal1
       pushstring          "http://"
-      getlocal3
-      iftrue              L143
-
       getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
       callproperty        QName(PackageNamespace(""), "_-fK"), 0
-      jump                L138
-
-      coerce_s
-      inclocal            2
-      kill                3
-      astypelate
-      inclocal_i          2
-      inclocal            2
-L138:
       add
-      getlocal            4
-      iffalse             L143
-
       pushstring          "/picture/save"
       add
-L143:
       callpropvoid        QName(PackageNamespace(""), "load"), 1
 
-      getlocal3
-      iftrue              L157
-
-L146:
       getlocal0
       getproperty         QName(ProtectedNamespace("_-wF"), "_-t3")
       pushfalse
       callpropvoid        QName(PackageNamespace(""), "_-Aw"), 1
 
-      getlocal3
-      dup
-      iffalse             L156
-
-      pop
-      getlocal1
-      convert_b
-L156:
-      iftrue              L161
-
-L157:
       getlocal0
       getproperty         QName(ProtectedNamespace("_-wF"), "_-Bk")
       pushfalse
       callpropvoid        QName(PackageNamespace(""), "_-Aw"), 1
 
-L161:
       returnvoid
      end ; code
     end ; body
@@ -1320,33 +629,13 @@ L161:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      inclocal_i          2
-      modulo
-      modulo
-      getlocal2
-      getlocal2
-      setlocal3
-
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      iffalse             L18
 
       getlex              QName(PackageNamespace(""), "parent")
       getlocal0
       callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
 
-L18:
       returnvoid
      end ; code
     end ; body
@@ -1368,49 +657,13 @@ L18:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      inclocal            2
-      pushtrue
-      multiply
-      coerce_a
-      declocal            2
-      coerce_a
-L10:
-      setlocal3
-
-      setlocal            4
-
       getlocal0
       pushscope
-
-      getlocal            4
-      dup
-      iftrue              L20
-
-      pop
-      getlocal1
-      convert_b
-L20:
-      iffalse             L57
 
       getlex              QName(PackageNamespace("com.company.util"), "_-9e")
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-DH:_-JU"), "path_")
       callpropvoid        QName(PackageNamespace(""), "_-0L6"), 1
-
-      getlocal            4
-      dup
-      iftrue              L31
-
-      pop
-      getlocal2
-      convert_b
-L31:
-      iffalse             L57
 
       getlex              QName(PackageNamespace("com.company.util"), "_-9e")
       pushbyte            0
@@ -1431,31 +684,16 @@ L31:
       getproperty         QName(PrivateNamespace("*", "_-DH:_-JU"), "path_")
       callpropvoid        QName(PackageNamespace(""), "_-Cm"), 7
 
-      getlocal3
-      dup
-      iffalse             L56
-
-      pop
-      getlocal2
-      convert_b
-L56:
-      iftrue              L61
-
-L57:
       getlocal0
       findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
       constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
       initproperty        QName(ProtectedNamespace("_-wF"), "rect_")
 
-L61:
       getlocal0
       getproperty         QName(ProtectedNamespace("_-wF"), "rect_")
       getproperty         QName(PackageNamespace(""), "graphics")
       coerce              QName(PackageNamespace("flash.display"), "Graphics")
       setlocal2
-
-      getlocal            4
-      iffalse             L113
 
       getlocal2
       getlocal0
@@ -1472,16 +710,6 @@ L61:
       getlocal0
       getproperty         QName(ProtectedNamespace("_-wF"), "box_")
       getlex              QName(PackageNamespace(""), "stage")
-      jump                L88
-
-      inclocal_i          2
-      getlocal2
-      inclocal            2
-      getlocal3
-      dup
-      setlocal2
-
-L88:
       getproperty         QName(PackageNamespace(""), "stageWidth")
       pushbyte            2
       divide
@@ -1492,9 +720,6 @@ L88:
       divide
       subtract
       setproperty         QName(PackageNamespace(""), "x")
-
-      getlocal            4
-      iffalse             L132
 
       getlocal0
       getproperty         QName(ProtectedNamespace("_-wF"), "box_")
@@ -1510,7 +735,6 @@ L88:
       subtract
       setproperty         QName(PackageNamespace(""), "y")
 
-L113:
       getlocal0
       getproperty         QName(ProtectedNamespace("_-wF"), "box_")
       findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
@@ -1530,53 +754,25 @@ L113:
       getproperty         QName(ProtectedNamespace("_-wF"), "box_")
       callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
-      getlocal3
-      iftrue              L136
-
-L132:
       getlocal0
       findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
       constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
       initproperty        QName(ProtectedNamespace("_-wF"), "_-Ty")
 
-L136:
       getlocal0
       getproperty         QName(ProtectedNamespace("_-wF"), "_-Ty")
       getproperty         QName(PackageNamespace(""), "graphics")
       coerce              QName(PackageNamespace("flash.display"), "Graphics")
       setlocal2
 
-      getlocal3
-      dup
-      iffalse             L147
-
-      pop
-      getlocal3
-      convert_b
-L147:
-      iftrue              L159
-
       getlocal2
       callpropvoid        QName(PackageNamespace(""), "clear"), 0
 
-      getlocal            4
-      iffalse             L163
-
-      jump                L159
-
-      kill                2
-      getlocal2
-      inclocal_i          3
-      convert_s
-      inclocal_i          3
-      add_i
-L159:
       getlocal2
       pushbyte            0
       pushdouble          0.8
       callpropvoid        QName(PackageNamespace(""), "beginFill"), 2
 
-L163:
       getlocal2
       pushbyte            0
       dup
@@ -1614,33 +810,13 @@ L163:
    initscopedepth 8
    maxscopedepth 9
    code
-    pushfalse
-    pushtrue
-    setlocal1
-
-    jump                L10
-
-    bitor
-    popscope
-    greaterequals
-    multiply_i
-    setlocal2
-
-    instanceof
-L10:
-    setlocal2
-
     getlocal0
     pushscope
-
-    getlocal2
-    iftrue              L18
 
     findproperty        QName(PrivateNamespace("*", "_-DH:_-JU"), "WIDTH")
     pushshort           400
     initproperty        QName(PrivateNamespace("*", "_-DH:_-JU"), "WIDTH")
 
-L18:
     returnvoid
    end ; code
   end ; body

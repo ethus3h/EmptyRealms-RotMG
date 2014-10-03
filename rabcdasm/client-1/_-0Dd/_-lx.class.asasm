@@ -14,22 +14,6 @@ class
     initscopedepth 10
     maxscopedepth 11
     code
-     pushfalse
-     pushtrue
-     setlocal2
-
-     jump                L10
-
-     getglobalscope
-     declocal_i          2
-     astypelate
-     setlocal2
-
-     rshift
-     getlocal2
-L10:
-     setlocal3
-
      getlocal0
      pushscope
 
@@ -39,16 +23,6 @@ L10:
      pushstring          "Create"
      pushstring          "/createGuild"
      constructsuper      4
-
-     getlocal2
-     dup
-     iftrue              L25
-
-     pop
-     getlocal2
-     convert_b
-L25:
-     iffalse             L64
 
      getlocal0
      getlocal1
@@ -62,54 +36,22 @@ L25:
      constructprop       QName(PackageNamespace("_-0Dd"), "_-OI"), 3
      initproperty        QName(PrivateNamespace("*", "_-0Dd:_-lx"), "name_")
 
-     getlocal2
-     iffalse             L83
-
      getlocal0
      getproperty         QName(PrivateNamespace("*", "_-0Dd:_-lx"), "name_")
-     getlocal2
-     dup
-     jump                L49
-
-     add
-     setlocal2
-
-     bitxor
-     inclocal_i          2
-     convert_b
-     increment_i
-L49:
-     iftrue              L53
-
-     pop
-     getlocal1
-     convert_b
-L53:
-     iffalse             L61
-
      getproperty         QName(PackageNamespace(""), "inputText_")
-     getlocal2
-     iffalse             L62
-
      pushstring          "A-Za-z "
      setproperty         QName(PackageNamespace(""), "restrict")
 
      getlocal0
      getproperty         QName(PrivateNamespace("*", "_-0Dd:_-lx"), "name_")
-L61:
      getproperty         QName(PackageNamespace(""), "inputText_")
-L62:
      pushbyte            20
      setproperty         QName(PackageNamespace(""), "maxChars")
 
-L64:
      findpropstrict      QName(PackageNamespace(""), "_-vO")
      getlocal0
      getproperty         QName(PrivateNamespace("*", "_-0Dd:_-lx"), "name_")
      callpropvoid        QName(PackageNamespace(""), "_-vO"), 1
-
-     getlocal3
-     iftrue              L105
 
      findpropstrict      QName(PackageNamespace(""), "_-0DI")
      pushstring          "Maximum 20 characters"
@@ -117,32 +59,11 @@ L64:
 
      findpropstrict      QName(PackageNamespace(""), "_-0DI")
      pushstring          "No numbers or punctuation"
-     jump                L82
-
-     declocal_i          2
-     kill                2
-     dxnslate
-     multiply_i
-     setlocal3
-
-     subtract
-L82:
      callpropvoid        QName(PackageNamespace(""), "_-0DI"), 1
 
-L83:
      findpropstrict      QName(PackageNamespace(""), "_-0DI")
      pushstring          "Racism or profanity gets your guild banned"
      callpropvoid        QName(PackageNamespace(""), "_-0DI"), 1
-
-     getlocal2
-     dup
-     iftrue              L92
-
-     pop
-     getlocal1
-     convert_b
-L92:
-     iffalse             L105
 
      getlex              QName(PackageNamespace(""), "_-MH")
      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
@@ -158,7 +79,6 @@ L92:
      getproperty         QName(PrivateNamespace("*", "_-0Dd:_-lx"), "_-Up")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-L105:
      returnvoid
     end ; code
    end ; body
@@ -176,33 +96,8 @@ L105:
      initscopedepth 10
      maxscopedepth 11
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      dxnslate
-      kill                2
-      kill                2
-      inclocal_i          2
-      kill                2
-      declocal_i          2
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      dup
-      iftrue              L19
-
-      pop
-      getlocal1
-      convert_b
-L19:
-      iffalse             L26
 
       findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
       findpropstrict      QName(PackageNamespace("flash.events"), "Event")
@@ -211,7 +106,6 @@ L19:
       constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
       callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
 
-L26:
       returnvoid
      end ; code
     end ; body
@@ -228,98 +122,28 @@ L26:
      initscopedepth 10
      maxscopedepth 11
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      convert_s
-      declocal            2
-      negate
-      bitand
-      setlocal2
-
-      kill                2
-L10:
-      setlocal3
-
       getlocal0
       pushscope
 
-      getlocal3
-      dup
-      iffalse             L19
-
-      pop
-      getlocal0
-      convert_b
-L19:
-      iftrue              L55
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-0Dd:_-lx"), "gs_")
-      getlocal3
-      jump                L30
-
-      pushnull
-      getlocal3
-      kill                2
-      getlocal2
-      getlocal3
-      convert_b
-L30:
-      dup
-      iffalse             L35
-
-      pop
-      getlocal1
-      convert_b
-L35:
-      iftrue              L57
-
-      jump                L43
-
-      convert_i
-      inclocal            2
-      typeof
-      increment
-      inclocal            2
-      getlocal2
-L43:
       getlex              QName(PackageNamespace("_-9R"), "_-JF")
       getproperty         QName(PackageNamespace(""), "_-hx")
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-0Dd:_-lx"), "_-0JI")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-      getlocal3
-      dup
-      iffalse             L54
-
-      pop
-      getlocal3
-      convert_b
-L54:
-      iftrue              L66
-
-L55:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-0Dd:_-lx"), "gs_")
-L57:
       getproperty         QName(PackageNamespace(""), "gsc_")
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-0Dd:_-lx"), "name_")
       callproperty        QName(PackageNamespace(""), "text"), 0
       callpropvoid        QName(PackageNamespace(""), "_-SW"), 1
 
-      getlocal3
-      iftrue              L66
-
       findpropstrict      QName(PackageNamespace(""), "_-pW")
       callpropvoid        QName(PackageNamespace(""), "_-pW"), 0
 
-L66:
       returnvoid
      end ; code
     end ; body
@@ -336,28 +160,8 @@ L66:
      initscopedepth 10
      maxscopedepth 11
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      setlocal2
-
-      inclocal            2
-      declocal            2
-      inclocal            2
-      popscope
-      getlocal2
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      iffalse             L72
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-0Dd:_-lx"), "gs_")
@@ -367,42 +171,10 @@ L10:
       getproperty         QName(PrivateNamespace("*", "_-0Dd:_-lx"), "_-0JI")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
-      getlocal2
-      iftrue              L72
-
       getlocal1
-      jump                L33
-
-      not
-      pushtrue
-      setlocal2
-
-      getlocal2
-      declocal_i          2
-      bitor
-L33:
       getproperty         QName(PackageNamespace(""), "success_")
-      iffalse             L63
+      iffalse             L19
 
-      getlocal3
-      dup
-      iftrue              L41
-
-      pop
-      getlocal1
-      convert_b
-L41:
-      iffalse             L70
-
-      jump                L49
-
-      convert_o
-      bitnot
-      inclocal_i          2
-      convert_u
-      newactivation
-      typeof
-L49:
       findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
       findpropstrict      QName(PackageNamespace("flash.events"), "Event")
       getlex              QName(PackageNamespace("flash.events"), "Event")
@@ -410,33 +182,19 @@ L49:
       constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
       callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
 
-      getlocal3
-      dup
-      iftrue              L61
+      jump                L26
 
-      pop
-      getlocal3
-      convert_b
-L61:
-      iffalse             L72
-
-      jump                L72
-
-L63:
+L19:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-0Dd:_-lx"), "name_")
       getlocal1
       getproperty         QName(PackageNamespace(""), "errorText_")
       callpropvoid        QName(PackageNamespace(""), "_-0BT"), 1
 
-      getlocal3
-      iffalse             L72
-
-L70:
       findpropstrict      QName(PackageNamespace(""), "for")
       callpropvoid        QName(PackageNamespace(""), "for"), 0
 
-L72:
+L26:
       returnvoid
      end ; code
     end ; body

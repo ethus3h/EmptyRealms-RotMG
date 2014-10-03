@@ -13,38 +13,12 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     setlocal1
-
-     jump                L10
-
-     strictequals
-     pushnan
-     instanceof
-     dxnslate
-     getglobalscope
-     not
-L10:
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal2
-     dup
-     iffalse             L19
-
-     pop
-     getlocal1
-     convert_b
-L19:
-     iftrue              L22
 
      getlocal0
      constructsuper      0
 
-L22:
      returnvoid
     end ; code
    end ; body

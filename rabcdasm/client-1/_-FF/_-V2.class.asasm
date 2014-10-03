@@ -13,39 +13,12 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     setlocal1
-
-     jump                L10
-
-     pushscope
-
-     lshift
-     getlocal1
-     lessequals
-     typeof
-     increment_i
-L10:
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal2
-     dup
-     iffalse             L19
-
-     pop
-     getlocal0
-     convert_b
-L19:
-     iftrue              L22
 
      getlocal0
      constructsuper      0
 
-L22:
      returnvoid
     end ; code
    end ; body
@@ -68,40 +41,11 @@ L22:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      convert_b
-      modulo
-      greaterequals
-      bitxor
-      newactivation
-      equals
-L10:
-      setlocal1
-
-      setlocal2
-
       getlocal0
       pushscope
 
-      getlocal2
-      iffalse             L30
-
       findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.util"), "loadEmbeds")
       callpropvoid        QName(PackageNamespace("com.company.assembleegameclient.util"), "loadEmbeds"), 0
-
-      getlocal1
-      dup
-      iffalse             L24
-
-      pop
-      getlocal2
-      convert_b
-L24:
-      iftrue              L30
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-T-")
@@ -109,7 +53,6 @@ L24:
       callproperty        QName(PrivateNamespace("*", "_-FF:_-V2"), "_-0EM"), 0
       callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
 
-L30:
       returnvoid
      end ; code
     end ; body
@@ -125,48 +68,26 @@ L30:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      lessequals
-      add
-      strictequals
-      pushfalse
-      nextname
-      pop
-L10:
-      setlocal1
-
-      setlocal2
-
       getlocal0
       pushscope
-
-      getlocal2
-      pop
-      pushfalse
-      iffalse             L24
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "domain")
       callproperty        QName(PackageNamespace(""), "_-FN"), 0
       pop
       pushtrue
-      iffalse             L28
+      iffalse             L12
 
-L24:
       findpropstrict      QName(PackageNamespace("_-F1"), "_-Er")
       constructprop       QName(PackageNamespace("_-F1"), "_-Er"), 0
       coerce              QName(PackageNamespace("flash.display"), "Sprite")
-      jump                L31
+      jump                L15
 
-L28:
+L12:
       findpropstrict      QName(PackageNamespace("_-0I9"), "_-05b")
       constructprop       QName(PackageNamespace("_-0I9"), "_-05b"), 0
       coerce              QName(PackageNamespace("flash.display"), "Sprite")
-L31:
+L15:
       returnvalue
      end ; code
     end ; body

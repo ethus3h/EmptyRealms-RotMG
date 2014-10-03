@@ -13,23 +13,6 @@ class
     initscopedepth 7
     maxscopedepth 8
     code
-     pushfalse
-     pushtrue
-     setlocal1
-
-     jump                L10
-
-     setlocal3
-
-     setlocal3
-
-     not
-     pushundefined
-     convert_b
-     pushfalse
-L10:
-     setlocal2
-
      getlocal0
      pushscope
 
@@ -69,16 +52,6 @@ L10:
      pushshort           600
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.map:_-M9"), "s")
-     jump                L55
-
-     pushscope
-
-     not
-     instanceof
-     increment_i
-     rshift
-     bitor
-L55:
      subtract
      pushbyte            2
      divide
@@ -101,9 +74,6 @@ L55:
      callproperty        QName(PackageNamespace(""), "_-wj"), 4
      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.map:_-M9"), "_-006")
 
-     getlocal1
-     iffalse             L109
-
      getlocal0
      findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
      getproperty         Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.map:_-M9"), PackageNamespace(""), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "com.company.assembleegameclient.map:_-M9/iinit"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-g4"), StaticProtectedNs("_-g4"), StaticProtectedNs("flash.display:Shape"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
@@ -113,15 +83,6 @@ L55:
      construct           1
      dup
      pushbyte            0
-     jump                L93
-
-     typeof
-     convert_s
-     coerce_a
-     coerce_s
-     dxnslate
-     swap
-L93:
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.map:_-M9"), "_-UG")
      setproperty         MultinameL([PackageNamespace("")])
@@ -143,7 +104,6 @@ L93:
      getlocal0
      constructsuper      0
 
-L109:
      getlex              QName(PackageNamespace(""), "graphics")
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.map:_-M9"), "_-0BY")

@@ -14,23 +14,6 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     getlocal            5
-     setlocal2
-
-     inclocal            5
-     inclocal            4
-     pushfalse
-     inclocal_i          2
-L10:
-     setlocal            5
-
-     setlocal            6
-
      getlocal0
      pushscope
 
@@ -48,16 +31,6 @@ L10:
      callproperty        QName(PackageNamespace(""), "int"), 1
      initproperty        QName(PackageNamespace(""), "bulletType_")
 
-     getlocal            5
-     dup
-     iffalse             L31
-
-     pop
-     getlocal1
-     convert_b
-L31:
-     iftrue              L92
-
      getlocal0
      getlocal1
      getproperty         Multiname("ObjectId", [PrivateNamespace("*", "com.company.assembleegameclient.objects:_-Od/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-Od/iinit#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-V"), StaticProtectedNs("_-V")])
@@ -70,9 +43,6 @@ L31:
      callproperty        QName(PackageNamespace(""), "int"), 1
      initproperty        QName(PackageNamespace(""), "lifetime_")
 
-     getlocal            5
-     iftrue              L99
-
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "int")
      getlocal1
@@ -80,48 +50,28 @@ L31:
      callproperty        QName(PackageNamespace(""), "int"), 1
      initproperty        QName(PackageNamespace(""), "speed_")
 
-     getlocal            5
-     iftrue              L99
-
      getlocal0
-     getlocal            5
-     dup
-     iffalse             L59
-
-     pop
-     getlocal1
-     convert_b
-L59:
-     iftrue              L64
-
      getlocal1
      pushstring          "Size"
      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.objects:_-Od/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-Od/iinit#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-V"), StaticProtectedNs("_-V")]), 1
-     iffalse             L72
+     iffalse             L40
 
-L64:
      findpropstrict      QName(PackageNamespace(""), "Number")
      getlocal1
      getproperty         Multiname("Size", [PrivateNamespace("*", "com.company.assembleegameclient.objects:_-Od/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-Od/iinit#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-V"), StaticProtectedNs("_-V")])
      callproperty        QName(PackageNamespace(""), "Number"), 1
      convert_i
-     getlocal            6
-     iffalse             L73
+     jump                L41
 
-     jump                L73
-
-L72:
+L40:
      pushbyte            255
-L73:
+L41:
      initproperty        QName(PackageNamespace(""), "size_")
-
-     getlocal            6
-     iffalse             L92
 
      getlocal1
      pushstring          "Damage"
      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.objects:_-Od/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-Od/iinit#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-V"), StaticProtectedNs("_-V")]), 1
-     iffalse             L93
+     iffalse             L59
 
      getlocal0
      getlocal0
@@ -138,10 +88,9 @@ L73:
      kill                3
      initproperty        QName(PackageNamespace(""), "minDamage_")
 
-L92:
-     jump                L105
+     jump                L71
 
-L93:
+L59:
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "int")
      getlocal1
@@ -149,7 +98,6 @@ L93:
      callproperty        QName(PackageNamespace(""), "int"), 1
      initproperty        QName(PackageNamespace(""), "minDamage_")
 
-L99:
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "int")
      getlocal1
@@ -157,7 +105,7 @@ L99:
      callproperty        QName(PackageNamespace(""), "int"), 1
      initproperty        QName(PackageNamespace(""), "maxDamage_")
 
-L105:
+L71:
      pushbyte            0
      setlocal3
 
@@ -166,9 +114,9 @@ L105:
      coerce_a
      setlocal            4
 
-     jump                L164
+     jump                L102
 
-L112:
+L78:
      label
      getlocal            4
      getlocal3
@@ -176,58 +124,19 @@ L112:
      coerce              QName(PackageNamespace(""), "XML")
      setlocal2
 
-     getlocal            6
-     dup
-     iftrue              L124
-
-     pop
-     getlocal1
-     convert_b
-L124:
-     iffalse             L156
-
      getlocal0
      getproperty         QName(PackageNamespace(""), "effects_")
      pushnull
-     ifne                L156
-
-     getlocal            5
-     dup
-     iffalse             L135
-
-     pop
-     getlocal0
-     convert_b
-L135:
-     iftrue              L164
+     ifne                L94
 
      getlocal0
      getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.objects:_-Od/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-Od/iinit#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-V"), StaticProtectedNs("_-V"), PackageNamespace("__AS3__.vec")])
      getlex              QName(PackageNamespace(""), "uint")
      applytype           1
-     jump                L147
-
-     pushnull
-     popscope
-     bitand
-     kill                2
-     pushnan
-     divide
-L147:
      construct           0
      initproperty        QName(PackageNamespace(""), "effects_")
 
-     getlocal            6
-     dup
-     iftrue              L155
-
-     pop
-     getlocal0
-     convert_b
-L155:
-     iffalse             L164
-
-L156:
+L94:
      getlocal0
      getproperty         QName(PackageNamespace(""), "effects_")
      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "ConditionEffect")
@@ -237,9 +146,9 @@ L156:
      callproperty        QName(PackageNamespace(""), "_-0IW"), 1
      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-L164:
+L102:
      hasnext2            4, 3
-     iftrue              L112
+     iftrue              L78
 
      kill                4
      kill                3
@@ -285,147 +194,63 @@ L164:
      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.objects:_-Od/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-Od/iinit#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-V"), StaticProtectedNs("_-V")]), 1
      initproperty        QName(PackageNamespace(""), "_-0La")
 
-     getlocal            6
-     dup
-     iftrue              L209
-
-     pop
-     getlocal1
-     convert_b
-L209:
-     iffalse             L265
-
      getlocal0
-     getlocal            5
-     dup
-     iffalse             L217
-
-     pop
-     getlocal2
-     convert_b
-L217:
-     iftrue              L222
-
      getlocal1
      pushstring          "Amplitude"
      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.objects:_-Od/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-Od/iinit#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-V"), StaticProtectedNs("_-V")]), 1
-     iffalse             L230
+     iffalse             L152
 
-L222:
      findpropstrict      QName(PackageNamespace(""), "Number")
      getlocal1
      getproperty         Multiname("Amplitude", [PrivateNamespace("*", "com.company.assembleegameclient.objects:_-Od/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-Od/iinit#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-V"), StaticProtectedNs("_-V")])
      callproperty        QName(PackageNamespace(""), "Number"), 1
      convert_d
-     getlocal            5
-     iftrue              L238
+     jump                L154
 
-     jump                L239
-
-L230:
+L152:
      pushdouble          0
-     getlocal            6
-     dup
-     iftrue              L237
-
-     pop
-     getlocal0
-     convert_b
-L237:
-     iffalse             L239
-
-L238:
      convert_d
-L239:
+L154:
      initproperty        QName(PackageNamespace(""), "_-D2")
 
-     getlocal            6
-     iffalse             L300
-
      getlocal0
-     getlocal            5
-     iftrue              L249
-
      getlocal1
      pushstring          "Frequency"
      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.objects:_-Od/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-Od/iinit#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-V"), StaticProtectedNs("_-V")]), 1
-     iffalse             L262
+     iffalse             L166
 
-L249:
      findpropstrict      QName(PackageNamespace(""), "Number")
      getlocal1
      getproperty         Multiname("Frequency", [PrivateNamespace("*", "com.company.assembleegameclient.objects:_-Od/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-Od/iinit#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-V"), StaticProtectedNs("_-V")])
      callproperty        QName(PackageNamespace(""), "Number"), 1
      convert_d
-     getlocal            6
-     dup
-     iftrue              L260
+     jump                L168
 
-     pop
-     getlocal0
-     convert_b
-L260:
-     iffalse             L264
-
-     jump                L264
-
-L262:
+L166:
      pushbyte            1
      convert_d
-L264:
+L168:
      initproperty        QName(PackageNamespace(""), "_-0Ft")
 
-L265:
      getlocal0
-     getlocal            5
-     dup
-     iffalse             L279
-
-     pop
-     jump                L277
-
-     not
-     multiply_i
-     inclocal_i          4
-     getlocal3
-     declocal            2
-     kill                3
-L277:
-     getlocal2
-     convert_b
-L279:
-     iftrue              L284
-
      getlocal1
      pushstring          "Magnitude"
      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.objects:_-Od/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-Od/iinit#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-V"), StaticProtectedNs("_-V")]), 1
-     iffalse             L297
+     iffalse             L180
 
-L284:
      findpropstrict      QName(PackageNamespace(""), "Number")
      getlocal1
      getproperty         Multiname("Magnitude", [PrivateNamespace("*", "com.company.assembleegameclient.objects:_-Od/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-Od/iinit#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-V"), StaticProtectedNs("_-V")])
      callproperty        QName(PackageNamespace(""), "Number"), 1
      convert_d
-     getlocal            5
-     dup
-     iffalse             L295
+     jump                L182
 
-     pop
-     getlocal0
-     convert_b
-L295:
-     iftrue              L299
-
-     jump                L299
-
-L297:
+L180:
      pushbyte            3
      convert_d
-L299:
+L182:
      initproperty        QName(PackageNamespace(""), "_-qP")
 
-L300:
      returnvoid
     end ; code
    end ; body

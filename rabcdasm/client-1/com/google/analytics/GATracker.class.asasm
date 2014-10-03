@@ -1344,7 +1344,7 @@ L27:
       coerce              QName(PackageNamespace("com.google.analytics.v4"), "GoogleAnalyticsAPI")
       setlocal1
 
-      jump                L60
+      jump                L57
 
 L33:
       label
@@ -1355,7 +1355,7 @@ L34:
       coerce              QName(PackageNamespace("com.google.analytics.v4"), "GoogleAnalyticsAPI")
       setlocal1
 
-      jump                L60
+      jump                L57
 
 L40:
       getlex              QName(PackageNamespace(""), "mode")
@@ -1367,7 +1367,7 @@ L40:
       ifstrictne          L48
 
       pushbyte            0
-      jump                L58
+      jump                L55
 
 L48:
       getlex              QName(PackageNamespace("com.google.analytics.core"), "TrackerMode")
@@ -1376,24 +1376,18 @@ L48:
       ifstrictne          L54
 
       pushbyte            1
-      jump                L58
+      jump                L55
 
 L54:
-      jump                L57
-
       pushbyte            2
-      jump                L58
-
-L57:
-      pushbyte            2
-L58:
+L55:
       kill                3
       lookupswitch        L34, [L27, L33, L34]
 
-L60:
+L57:
       getlocal2
       callproperty        QName(PackageNamespace(""), "isEmpty"), 0
-      iftrue              L68
+      iftrue              L65
 
       getlocal2
       getlocal1
@@ -1402,7 +1396,7 @@ L60:
       getlocal2
       callpropvoid        QName(PackageNamespace(""), "flush"), 0
 
-L68:
+L65:
       findproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")
       getlocal1
       initproperty        QName(PrivateNamespace("*", "com.google.analytics:GATracker"), "_tracker")

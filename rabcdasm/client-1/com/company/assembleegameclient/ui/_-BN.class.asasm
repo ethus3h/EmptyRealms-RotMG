@@ -14,24 +14,6 @@ class
     initscopedepth 9
     maxscopedepth 10
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     declocal_i          2
-     setlocal2
-
-     multiply_i
-     decrement_i
-     setlocal2
-
-     getlocal2
-L10:
-     setlocal2
-
-     setlocal3
-
      getlocal0
      pushscope
 
@@ -49,28 +31,8 @@ L10:
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "bitmap_")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
-     getlocal2
-     dup
-     iffalse             L31
-
-     pop
-     getlocal2
-     convert_b
-L31:
-     iftrue              L83
-
      getlocal0
      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-7f")
-     jump                L41
-
-     inclocal            2
-     nextname
-     setlocal2
-
-     inclocal            2
-     lessthan
-     subtract
-L41:
      pushbyte            16
      pushstring          "Save"
      constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-7f"), 2
@@ -81,9 +43,6 @@ L41:
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "_-Bk")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
-     getlocal3
-     iffalse             L57
-
      getlocal0
      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-7f")
      pushbyte            16
@@ -91,30 +50,10 @@ L41:
      constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-7f"), 2
      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "_-zF")
 
-L57:
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
-     jump                L66
-
-     urshift
-     getlocal2
-     divide
-     add
-     getlocal2
-     kill                2
-L66:
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "_-zF")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
-
-     getlocal3
-     dup
-     iftrue              L74
-
-     pop
-     getlocal0
-     convert_b
-L74:
-     iffalse             L83
 
      findpropstrict      QName(PackageNamespace(""), "addEventListener")
      getlex              QName(PackageNamespace("flash.events"), "Event")
@@ -123,10 +62,6 @@ L74:
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "onAddedToStage")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-     getlocal3
-     iffalse             L89
-
-L83:
      findpropstrict      QName(PackageNamespace(""), "addEventListener")
      getlex              QName(PackageNamespace("flash.events"), "Event")
      getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
@@ -134,7 +69,6 @@ L83:
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "onRemovedFromStage")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-L89:
      returnvoid
     end ; code
    end ; body
@@ -153,75 +87,25 @@ L89:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      inclocal            2
-      pop
-      pushundefined
-      greaterthan
-      checkfilter
-      setlocal2
-
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "_-Bk")
-      getlocal2
-      dup
-      iffalse             L22
-
-      pop
-      getlocal1
-      convert_b
-L22:
-      iftrue              L135
-
       getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
       getproperty         QName(PackageNamespace(""), "CLICK")
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "_-na")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-      getlocal2
-      iftrue              L64
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "_-zF")
-      getlocal3
-      dup
-      iftrue              L38
-
-      pop
-      getlocal0
-      convert_b
-L38:
-      iffalse             L95
-
       getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
       getproperty         QName(PackageNamespace(""), "CLICK")
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "_-of")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-      getlocal3
-      dup
-      iftrue              L50
-
-      pop
-      getlocal3
-      convert_b
-L50:
-      iffalse             L64
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "bitmap_")
       getlex              QName(PackageNamespace(""), "stage")
@@ -236,7 +120,6 @@ L50:
       subtract
       setproperty         QName(PackageNamespace(""), "x")
 
-L64:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "bitmap_")
       getlex              QName(PackageNamespace(""), "stage")
@@ -246,37 +129,13 @@ L64:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "bitmap_")
       getproperty         QName(PackageNamespace(""), "height")
-      jump                L80
-
-      setlocal2
-
-      negate
-      kill                2
-      kill                2
-      inclocal_i          2
-      kill                2
-L80:
       pushbyte            2
       divide
       subtract
       setproperty         QName(PackageNamespace(""), "y")
 
-      getlocal3
-      dup
-      iftrue              L90
-
-      pop
-      getlocal3
-      convert_b
-L90:
-      iffalse             L166
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "_-zF")
-      getlocal3
-      iffalse             L109
-
-L95:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "bitmap_")
       getproperty         QName(PackageNamespace(""), "x")
@@ -292,7 +151,6 @@ L95:
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "_-zF")
-L109:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "bitmap_")
       getproperty         QName(PackageNamespace(""), "y")
@@ -304,56 +162,21 @@ L109:
       add
       setproperty         QName(PackageNamespace(""), "y")
 
-      getlocal2
-      dup
-      iffalse             L125
-
-      pop
-      getlocal0
-      convert_b
-L125:
-      iftrue              L166
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "_-Bk")
-      getlocal2
-      dup
-      iffalse             L134
-
-      pop
-      getlocal3
-      convert_b
-L134:
-      iftrue              L156
-
-L135:
       getlocal0
-      jump                L143
-
-      declocal            2
-      kill                2
-      declocal_i          2
-      getlocal1
-      getlocal2
-      inclocal            2
-L143:
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "_-zF")
       getproperty         QName(PackageNamespace(""), "x")
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "_-Bk")
       getproperty         QName(PackageNamespace(""), "width")
       subtract
-      getlocal2
-      iftrue              L153
-
       pushbyte            10
       subtract
-L153:
       setproperty         QName(PackageNamespace(""), "x")
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "_-Bk")
-L156:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "bitmap_")
       getproperty         QName(PackageNamespace(""), "y")
@@ -365,7 +188,6 @@ L156:
       add
       setproperty         QName(PackageNamespace(""), "y")
 
-L166:
       returnvoid
      end ; code
     end ; body
@@ -382,38 +204,8 @@ L166:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      inclocal            2
-      declocal_i          2
-      inclocal_i          2
-      setlocal3
-
-      bitnot
-      setlocal2
-
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      jump                L22
-
-      inclocal_i          2
-      popscope
-      inclocal_i          2
-      dxnslate
-      inclocal_i          2
-      dup
-L22:
-      iffalse             L37
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "_-Bk")
@@ -423,17 +215,6 @@ L22:
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "_-na")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
-      getlocal3
-      dup
-      iftrue              L36
-
-      pop
-      getlocal1
-      convert_b
-L36:
-      iffalse             L44
-
-L37:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "_-zF")
       getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
@@ -442,7 +223,6 @@ L37:
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-BN"), "_-of")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
-L44:
       returnvoid
      end ; code
     end ; body
@@ -459,34 +239,8 @@ L44:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      kill                2
-      bitnot
-      setlocal2
-
-      negate_i
-      convert_o
-      inclocal_i          2
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      dup
-      iftrue              L19
-
-      pop
-      getlocal3
-      convert_b
-L19:
-      iffalse             L29
 
       findpropstrict      QName(PackageNamespace("flash.net"), "FileReference")
       constructprop       QName(PackageNamespace("flash.net"), "FileReference"), 0
@@ -498,7 +252,6 @@ L19:
       pushstring          "map.png"
       callpropvoid        QName(PackageNamespace(""), "save"), 2
 
-L29:
       returnvoid
      end ; code
     end ; body
@@ -515,46 +268,18 @@ L29:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      bitxor
-      getlocal1
-      subtract_i
-      subtract_i
-      declocal            2
-      getlocal2
-L10:
-      setlocal3
-
       getlocal0
       pushscope
 
-      getlocal2
-      iffalse             L28
-
       getlex              QName(PackageNamespace(""), "parent")
       pushnull
-      ifeq                L28
-
-      getlocal2
-      dup
-      iftrue              L24
-
-      pop
-      getlocal1
-      convert_b
-L24:
-      iffalse             L28
+      ifeq                L8
 
       getlex              QName(PackageNamespace(""), "parent")
       getlocal0
       callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
 
-L28:
+L8:
       returnvoid
      end ; code
     end ; body

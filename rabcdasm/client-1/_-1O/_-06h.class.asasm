@@ -14,26 +14,8 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     setlocal1
-
-     jump                L10
-
-     nextname
-     convert_s
-     convert_d
-     coerce_a
-     increment
-     bitand
-L10:
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal1
-     iffalse             L29
 
      getlocal0
      getlex              QName(PackageNamespace("_-03T"), "_-078")
@@ -41,20 +23,9 @@ L10:
      callproperty        QName(PackageNamespace(""), "create"), 1
      initproperty        QName(PrivateNamespace("*", "_-1O:_-06h"), "_-ul")
 
-     getlocal2
-     dup
-     iffalse             L26
-
-     pop
-     getlocal1
-     convert_b
-L26:
-     iftrue              L29
-
      getlocal0
      constructsuper      0
 
-L29:
      returnvoid
     end ; code
    end ; body
@@ -73,21 +44,6 @@ L29:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      inclocal            2
-      convert_b
-      convert_i
-      increment_i
-      decrement_i
-      inclocal_i          2
-L10:
-      setlocal3
-
       getlocal0
       pushscope
 
@@ -97,117 +53,44 @@ L10:
       initproperty        QName(PrivateNamespace("*", "_-1O:_-06h"), "_-vz")
 
       findproperty        QName(PrivateNamespace("*", "_-1O:_-06h"), "_-mT")
-      getlocal3
-      dup
-      iffalse             L24
-
-      pop
-      getlocal1
-      convert_b
-L24:
-      iftrue              L30
-
       getlex              QName(PrivateNamespace("*", "_-1O:_-06h"), "_-mT")
       coerce              QName(PackageNamespace("_-lo"), "_-t5")
       dup
-      iftrue              L33
+      iftrue              L15
 
       pop
-L30:
       findpropstrict      QName(PackageNamespace("_-lo"), "_-t5")
       constructprop       QName(PackageNamespace("_-lo"), "_-t5"), 0
       coerce              QName(PackageNamespace("_-lo"), "_-t5")
-L33:
+L15:
       setproperty         QName(PrivateNamespace("*", "_-1O:_-06h"), "_-mT")
-
-      getlocal3
-      iftrue              L80
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-1O:_-06h"), "_-vz")
-      jump                L45
-
-      declocal            2
-      swap
-      inclocal_i          2
-      pushtrue
-      declocal_i          2
-      pushnan
-L45:
-      getlocal3
-      dup
-      iffalse             L51
-
-      pop
-      getlocal2
-      convert_b
-L51:
-      iftrue              L62
-
       getlex              QName(PackageNamespace("_-lo"), "_-t5")
       callproperty        QName(PackageNamespace(""), "map"), 1
-      getlocal2
-      iffalse             L64
-
       getlex              QName(PrivateNamespace("*", "_-1O:_-06h"), "_-mT")
       callpropvoid        QName(PackageNamespace(""), "_-q3"), 1
 
-      getlocal2
-      iffalse             L80
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-1O:_-06h"), "_-vz")
-L62:
       getlex              QName(PackageNamespace("_-s3"), "_-im")
       callproperty        QName(PackageNamespace(""), "map"), 1
-L64:
       getlex              QName(PackageNamespace("_-lo"), "_-5u")
       callpropvoid        QName(PackageNamespace(""), "_-00S"), 1
 
-      getlocal3
-      jump                L74
-
-      lessequals
-      newactivation
-      add_i
-      inclocal_i          2
-      kill                2
-      not
-L74:
-      dup
-      iffalse             L79
-
-      pop
-      getlocal1
-      convert_b
-L79:
-      iftrue              L97
-
-L80:
       getlocal1
       getproperty         QName(Namespace("_-06J"), "_-iL")
-      getlocal2
-      dup
-      iftrue              L88
-
-      pop
-      getlocal1
-      convert_b
-L88:
-      iffalse             L94
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-1O:_-06h"), "_-0Ct")
       callpropvoid        QName(Namespace("_-CZ"), "_-0Ct"), 1
 
       getlocal1
       getproperty         QName(Namespace("_-06J"), "_-iL")
-L94:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-1O:_-06h"), "_-kf")
       callpropvoid        QName(Namespace("_-CZ"), "_-kf"), 1
 
-L97:
       returnvoid
      end ; code
     end ; body
@@ -243,33 +126,8 @@ L97:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal1
-
-      jump                L10
-
-      pushnull
-      astypelate
-      dup
-      instanceof
-      coerce_s
-      newactivation
-L10:
-      setlocal2
-
       getlocal0
       pushscope
-
-      getlocal2
-      dup
-      iffalse             L19
-
-      pop
-      getlocal0
-      convert_b
-L19:
-      iftrue              L26
 
       getlocal0
       getlocal0
@@ -278,7 +136,6 @@ L19:
       callproperty        QName(PackageNamespace(""), "getInstance"), 1
       initproperty        QName(PrivateNamespace("*", "_-1O:_-06h"), "_-yv")
 
-L26:
       returnvoid
      end ; code
     end ; body
@@ -294,78 +151,23 @@ L26:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal1
-
-      jump                L10
-
-      subtract
-      lshift
-      multiply_i
-      setlocal2
-
-      modulo
-      bitor
-L10:
-      setlocal2
-
       getlocal0
       pushscope
-
-      getlocal1
-      iffalse             L45
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-1O:_-06h"), "_-yv")
       callpropvoid        QName(Namespace("_-0Im"), "_-FP"), 0
 
-      jump                L25
-
-      astypelate
-      setlocal2
-
-      newactivation
-      pushfalse
-      swap
-      popscope
-L25:
-      getlocal1
-      dup
-      iftrue              L31
-
-      pop
-      getlocal0
-      convert_b
-L31:
-      iffalse             L49
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-1O:_-06h"), "_-vz")
-      getlocal1
-      iffalse             L47
-
       getlex              QName(PackageNamespace("_-s3"), "_-im")
       callpropvoid        QName(PackageNamespace(""), "_-1Y"), 1
 
-      getlocal1
-      dup
-      iftrue              L44
-
-      pop
-      getlocal1
-      convert_b
-L44:
-      iffalse             L49
-
-L45:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-1O:_-06h"), "_-vz")
-L47:
       getlex              QName(PackageNamespace("_-lo"), "_-t5")
       callpropvoid        QName(PackageNamespace(""), "_-1Y"), 1
 
-L49:
       returnvoid
      end ; code
     end ; body

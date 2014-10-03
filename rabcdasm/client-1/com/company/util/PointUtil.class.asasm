@@ -14,33 +14,12 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     declocal_i          2
-     rshift
-     setlocal2
-
-     urshift
-     lessthan
-     lessthan
-L10:
-     setlocal2
-
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal3
-     iffalse             L18
 
      getlocal0
      constructsuper      0
 
-L18:
      returnvoid
     end ; code
    end ; body
@@ -54,27 +33,8 @@ L18:
    initscopedepth 3
    maxscopedepth 4
    code
-    pushfalse
-    pushtrue
-    swap
-    jump                L10
-
-    nextvalue
-    strictequals
-    nextname
-    pushtrue
-    getlocal3
-    getlocal2
-L10:
-    setlocal1
-
-    setlocal2
-
     getlocal0
     pushscope
-
-    getlocal2
-    iffalse             L22
 
     findproperty        QName(PackageNamespace(""), "_-P5")
     findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
@@ -83,7 +43,6 @@ L10:
     constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
     initproperty        QName(PackageNamespace(""), "_-P5")
 
-L22:
     returnvoid
    end ; code
   end ; body
@@ -100,22 +59,6 @@ L22:
     initscopedepth 3
     maxscopedepth 4
     code
-     pushfalse
-     pushtrue
-     setlocal3
-
-     jump                L10
-
-     pushscope
-
-     coerce_s
-     swap
-     inclocal            2
-     kill                3
-     declocal_i          3
-L10:
-     setlocal            4
-
      getlocal0
      pushscope
 
@@ -124,26 +67,6 @@ L10:
      coerce              QName(PackageNamespace("flash.geom"), "Point")
      setlocal2
 
-     getlocal3
-     dup
-     jump                L26
-
-     pop
-     getlocal2
-     lessequals
-     inclocal_i          2
-     setlocal2
-
-     pushwith
-L26:
-     iftrue              L30
-
-     pop
-     getlocal1
-     convert_b
-L30:
-     iffalse             L44
-
      getlocal2
      getlex              QName(PackageNamespace(""), "Math")
      getlocal2
@@ -151,17 +74,6 @@ L30:
      callproperty        QName(PackageNamespace(""), "round"), 1
      setproperty         QName(PackageNamespace(""), "x")
 
-     getlocal3
-     dup
-     iftrue              L43
-
-     pop
-     getlocal1
-     convert_b
-L43:
-     iffalse             L50
-
-L44:
      getlocal2
      getlex              QName(PackageNamespace(""), "Math")
      getlocal2
@@ -169,7 +81,6 @@ L44:
      callproperty        QName(PackageNamespace(""), "round"), 1
      setproperty         QName(PackageNamespace(""), "y")
 
-L50:
      getlocal2
      returnvalue
     end ; code
@@ -192,15 +103,6 @@ L50:
      pushscope
 
      findpropstrict      QName(PackageNamespace(""), "_-bm")
-     jump                L10
-
-     hasnext
-     convert_i
-     getlocal2
-     multiply
-     add_i
-     add
-L10:
      getlocal1
      getproperty         QName(PackageNamespace(""), "x")
      getlocal1
@@ -229,122 +131,28 @@ L10:
     initscopedepth 3
     maxscopedepth 4
     code
-     pushfalse
-     pushtrue
-     setlocal            7
-
-     jump                L10
-
-     kill                5
-     convert_s
-     inclocal_i          4
-     convert_o
-     inclocal_i          2
-     convert_d
-L10:
-     setlocal            8
-
      getlocal0
      pushscope
 
      getlocal3
-     getlocal            7
-     dup
-     iftrue              L20
-
-     pop
-     getlocal0
-     convert_b
-L20:
-     iffalse             L26
-
      getlocal1
      subtract
-     getlocal            7
-     iffalse             L26
-
      convert_d
-L26:
      setlocal            5
 
      getlocal            4
-     getlocal            7
-     dup
-     jump                L37
-
-     setlocal            6
-
-     convert_o
-     negate_i
-     lessthan
-     declocal            2
-     getlocal            6
-L37:
-     iftrue              L41
-
-     pop
-     getlocal0
-     convert_b
-L41:
-     iffalse             L58
-
      getlocal2
      subtract
-     getlocal            7
-     dup
-     iftrue              L57
-
-     pop
-     getlocal2
-     convert_b
-     jump                L57
-
-     setlocal2
-
-     setlocal            6
-
-     pushnull
-     getlocal            6
-     setlocal2
-
-     getlocal3
-L57:
-     iffalse             L59
-
-L58:
      convert_d
-L59:
      setlocal            6
 
      getlocal            5
-     getlocal            7
-     dup
-     iftrue              L67
-
-     pop
-     getlocal1
-     convert_b
-L67:
-     iffalse             L80
-
      getlocal            5
-     getlocal            7
-     iffalse             L77
-
      multiply
-     getlocal            7
-     iffalse             L80
-
      getlocal            6
-     getlocal            7
-     iffalse             L79
-
-L77:
      getlocal            6
      multiply
-L79:
      add
-L80:
      returnvalue
     end ; code
    end ; body
@@ -364,65 +172,19 @@ L80:
     initscopedepth 3
     maxscopedepth 4
     code
-     pushfalse
-     pushtrue
-     setlocal            7
-
-     jump                L10
-
-     getlocal0
-     inclocal            6
-     getlocal            4
-     getlocal            7
-     convert_b
-     kill                4
-L10:
-     setlocal            8
-
      getlocal0
      pushscope
 
      getlocal3
-     getlocal            7
-     dup
-     iftrue              L27
-
-     pop
-     getlocal0
-     jump                L26
-
-     getlocal3
-     getlocal3
-     inclocal_i          6
-     setlocal2
-
-     declocal_i          2
-     inclocal            6
-L26:
-     convert_b
-L27:
-     iffalse             L33
-
      getlocal1
      subtract
-     getlocal            7
-     iffalse             L33
-
      convert_d
-L33:
      setlocal            5
 
      getlocal            4
-     getlocal            7
-     iffalse             L42
-
      getlocal2
      subtract
-     getlocal            8
-     iftrue              L42
-
      convert_d
-L42:
      setlocal            6
 
      getlex              QName(PackageNamespace(""), "Math")
@@ -458,16 +220,6 @@ L42:
      pushscope
 
      findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
-     jump                L10
-
-     bitxor
-     modulo
-     setlocal            4
-
-     inclocal            3
-     inclocal_i          2
-     declocal_i          4
-L10:
      getlocal1
      getlocal3
      getlocal1
@@ -504,15 +256,6 @@ L10:
      pushscope
 
      getlex              QName(PackageNamespace(""), "Math")
-     jump                L10
-
-     astypelate
-     negate_i
-     rshift
-     subtract_i
-     istypelate
-     equals
-L10:
      getlocal2
      getproperty         QName(PackageNamespace(""), "y")
      getlocal1
@@ -542,21 +285,6 @@ L10:
     initscopedepth 3
     maxscopedepth 4
     code
-     pushfalse
-     pushtrue
-     setlocal            5
-
-     jump                L10
-
-     convert_d
-     declocal            4
-     declocal_i          5
-     pop
-     getlocal3
-     bitor
-L10:
-     setlocal            6
-
      getlocal0
      pushscope
 
@@ -567,15 +295,6 @@ L10:
      setlocal            4
 
      getlocal1
-     jump                L26
-
-     inclocal            5
-     declocal_i          4
-     declocal_i          5
-     kill                5
-     getlocal1
-     urshift
-L26:
      getproperty         QName(PackageNamespace(""), "x")
      getlocal3
      getlex              QName(PackageNamespace(""), "Math")
@@ -584,16 +303,6 @@ L26:
      multiply
      add
      setproperty         QName(PackageNamespace(""), "x")
-
-     getlocal            5
-     dup
-     iftrue              L40
-
-     pop
-     getlocal3
-     convert_b
-L40:
-     iffalse             L51
 
      getlocal            4
      getlocal1
@@ -606,7 +315,6 @@ L40:
      add
      setproperty         QName(PackageNamespace(""), "y")
 
-L51:
      getlocal            4
      returnvalue
     end ; code

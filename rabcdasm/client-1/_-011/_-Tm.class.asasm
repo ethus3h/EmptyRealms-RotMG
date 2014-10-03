@@ -14,63 +14,18 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     setlocal2
-
-     jump                L10
-
-     getlocal2
-     inclocal            2
-     getlocal2
-     rshift
-     negate
-     kill                2
-L10:
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal3
-     jump                L21
-
-     popscope
-     modulo
-     kill                2
-     greaterthan
-     coerce_a
-     kill                2
-L21:
-     dup
-     iffalse             L26
-
-     pop
-     getlocal0
-     convert_b
-L26:
-     iftrue              L41
 
      getlocal0
      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.net.messages.data"), "_-Q0")
      constructprop       QName(PackageNamespace("com.company.assembleegameclient.net.messages.data"), "_-Q0"), 0
      initproperty        QName(PackageNamespace(""), "startingPos_")
 
-     getlocal2
-     dup
-     iftrue              L37
-
-     pop
-     getlocal3
-     convert_b
-L37:
-     iffalse             L41
-
      getlocal0
      getlocal1
      constructsuper      1
 
-L41:
      returnvoid
     end ; code
    end ; body
@@ -92,22 +47,6 @@ L41:
      initscopedepth 6
      maxscopedepth 7
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      declocal            2
-      greaterthan
-      setlocal2
-
-      strictequals
-      pushfalse
-      increment_i
-L10:
-      setlocal3
-
       getlocal0
       pushscope
 
@@ -116,26 +55,6 @@ L10:
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readUnsignedByte"), 0
       initproperty        QName(PackageNamespace(""), "bulletId_")
 
-      getlocal2
-      dup
-      iftrue              L30
-
-      pop
-      getlocal1
-      convert_b
-      jump                L30
-
-      pushscope
-
-      declocal            2
-      declocal            2
-      setlocal2
-
-      getlocal2
-      not
-L30:
-      iffalse             L67
-
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
@@ -143,15 +62,6 @@ L30:
 
       getlocal0
       getlocal1
-      jump                L44
-
-      declocal            2
-      kill                2
-      decrement_i
-      declocal_i          2
-      multiply_i
-      checkfilter
-L44:
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readShort"), 0
       initproperty        QName(PackageNamespace(""), "containerType_")
 
@@ -160,31 +70,16 @@ L44:
       getlocal1
       callpropvoid        QName(PackageNamespace(""), "parseFromInput"), 1
 
-      getlocal3
-      iftrue              L63
-
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readFloat"), 0
       initproperty        QName(PackageNamespace(""), "angle_")
 
-      getlocal3
-      dup
-      iffalse             L62
-
-      pop
-      getlocal3
-      convert_b
-L62:
-      iftrue              L67
-
-L63:
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readShort"), 0
       initproperty        QName(PackageNamespace(""), "damage_")
 
-L67:
       returnvoid
      end ; code
     end ; body
@@ -204,15 +99,6 @@ L67:
       pushscope
 
       findpropstrict      QName(ProtectedNamespace("_-1E"), "formatToString")
-      jump                L10
-
-      not
-      getlocal2
-      bitnot
-      astypelate
-      divide
-      bitxor
-L10:
       pushstring          "SHOOT"
       pushstring          "bulletId_"
       pushstring          "ownerId_"

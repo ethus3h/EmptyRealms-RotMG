@@ -13,21 +13,6 @@ class
     initscopedepth 10
     maxscopedepth 11
     code
-     pushfalse
-     pushtrue
-     setlocal1
-
-     jump                L10
-
-     negate_i
-     convert_d
-     coerce_s
-     modulo
-     swap
-     getlocal1
-L10:
-     setlocal2
-
      getlocal0
      pushscope
 
@@ -46,16 +31,6 @@ L10:
      constructprop       QName(PackageNamespace("_-0Dd"), "_-OI"), 3
      initproperty        QName(PackageNamespace(""), "password_")
 
-     getlocal1
-     dup
-     iftrue              L32
-
-     pop
-     getlocal2
-     convert_b
-L32:
-     iffalse             L62
-
      findpropstrict      QName(PackageNamespace(""), "_-vO")
      getlocal0
      getproperty         QName(PackageNamespace(""), "password_")
@@ -64,15 +39,6 @@ L32:
      getlocal0
      findpropstrict      QName(PackageNamespace("_-0Dd"), "_-OI")
      pushstring          "New Password"
-     jump                L47
-
-     lessequals
-     dxnslate
-     pop
-     istypelate
-     negate_i
-     increment_i
-L47:
      pushtrue
      pushstring          ""
      constructprop       QName(PackageNamespace("_-0Dd"), "_-OI"), 3
@@ -83,17 +49,6 @@ L47:
      getproperty         QName(PackageNamespace(""), "_-sY")
      callpropvoid        QName(PackageNamespace(""), "_-vO"), 1
 
-     getlocal1
-     dup
-     iftrue              L61
-
-     pop
-     getlocal1
-     convert_b
-L61:
-     iffalse             L101
-
-L62:
      getlocal0
      findpropstrict      QName(PackageNamespace("_-0Dd"), "_-OI")
      pushstring          "Retype New Password"
@@ -101,26 +56,6 @@ L62:
      pushstring          ""
      constructprop       QName(PackageNamespace("_-0Dd"), "_-OI"), 3
      initproperty        QName(PackageNamespace(""), "_-a9")
-
-     getlocal2
-     dup
-     jump                L78
-
-     astypelate
-     rshift
-     pushundefined
-     setlocal3
-
-     coerce_a
-     pushwith
-L78:
-     iffalse             L82
-
-     pop
-     getlocal1
-     convert_b
-L82:
-     iftrue              L101
 
      findpropstrict      QName(PackageNamespace(""), "_-vO")
      getlocal0
@@ -134,9 +69,6 @@ L82:
      getproperty         QName(PrivateNamespace("*", "_-QA:_-ag"), "onCancel")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-     getlocal1
-     iffalse             L101
-
      getlex              QName(PackageNamespace(""), "_-uu")
      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
      getproperty         QName(PackageNamespace(""), "CLICK")
@@ -144,7 +76,6 @@ L82:
      getproperty         QName(PrivateNamespace("*", "_-QA:_-ag"), "_-bR")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-L101:
      returnvoid
     end ; code
    end ; body
@@ -163,28 +94,8 @@ L101:
      initscopedepth 10
      maxscopedepth 11
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      setlocal2
-
-      checkfilter
-      getlocal2
-      declocal_i          2
-      bitnot
-      dxnslate
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      iftrue              L22
 
       findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
       findpropstrict      QName(PackageInternalNs("_-QA"), "_-nJ")
@@ -193,7 +104,6 @@ L10:
       constructprop       QName(PackageInternalNs("_-QA"), "_-nJ"), 1
       callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
 
-L22:
       returnvoid
      end ; code
     end ; body
@@ -210,132 +120,47 @@ L22:
      initscopedepth 10
      maxscopedepth 11
      code
-      pushfalse
-      pushtrue
-      setlocal3
-
-      jump                L10
-
-      setlocal3
-
-      increment_i
-      declocal            3
-      not
-      declocal            3
-      hasnext
-L10:
-      setlocal            4
-
       getlocal0
       pushscope
 
-      getlocal            4
-      dup
-      iffalse             L19
-
-      pop
-      getlocal3
-      convert_b
-L19:
-      iftrue              L85
-
       getlocal0
       getproperty         QName(PackageNamespace(""), "password_")
-      getlocal3
-      iffalse             L32
-
       callproperty        QName(PackageNamespace(""), "text"), 0
-      getlocal3
-      iffalse             L59
-
       getproperty         QName(PackageNamespace(""), "length")
       pushbyte            5
-      ifnlt               L42
+      ifnlt               L13
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "password_")
-L32:
       pushstring          "Incorrect password"
       callpropvoid        QName(PackageNamespace(""), "_-0BT"), 1
 
       returnvoid
 
-      getlocal3
-      dup
-      iftrue              L41
-
-      pop
-      getlocal1
-      convert_b
-L41:
-      iffalse             L64
-
-L42:
+L13:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-sY")
-      getlocal            4
-      dup
-      iffalse             L50
-
-      pop
-      getlocal1
-      convert_b
-L50:
-      iftrue              L75
-
       callproperty        QName(PackageNamespace(""), "text"), 0
-      getlocal            4
-      dup
-      iffalse             L58
-
-      pop
-      getlocal0
-      convert_b
-L58:
-      iftrue              L81
-
-L59:
       getproperty         QName(PackageNamespace(""), "length")
       pushbyte            5
-      ifnlt               L78
+      ifnlt               L24
 
-      getlocal            4
-      iftrue              L85
-
-L64:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-sY")
-      jump                L73
-
-      equals
-      getlocal2
-      setlocal2
-
-      increment_i
-      kill                2
-      getlocal2
-L73:
-      getlocal            4
-      iftrue              L80
-
-L75:
       pushstring          "Password too short"
       callpropvoid        QName(PackageNamespace(""), "_-0BT"), 1
 
       returnvoid
 
-L78:
+L24:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-sY")
-L80:
       callproperty        QName(PackageNamespace(""), "text"), 0
-L81:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-a9")
       callproperty        QName(PackageNamespace(""), "text"), 0
-      ifeq                L90
+      ifeq                L36
 
-L85:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-a9")
       pushstring          "Password does not match"
@@ -343,7 +168,7 @@ L85:
 
       returnvoid
 
-L90:
+L36:
       findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0Bu")
       getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
       callproperty        QName(PackageNamespace(""), "_-fK"), 0
@@ -353,25 +178,12 @@ L90:
       coerce              QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0Bu")
       setlocal2
 
-      getlocal3
-      iffalse             L133
-
       getlocal2
       getlex              QName(PackageNamespace("_-zo"), "_-8C")
       getproperty         QName(PackageNamespace(""), "GENERIC_DATA")
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-QA:_-ag"), "_-0KH")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
-
-      getlocal            4
-      dup
-      iffalse             L112
-
-      pop
-      getlocal2
-      convert_b
-L112:
-      iftrue              L153
 
       getlocal2
       getlex              QName(PackageNamespace("_-zo"), "_-mS")
@@ -380,26 +192,6 @@ L112:
       getproperty         QName(PrivateNamespace("*", "_-QA:_-ag"), "_-1X")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-      getlocal            4
-      dup
-      iffalse             L132
-
-      pop
-      jump                L130
-
-      inclocal            2
-      greaterthan
-      declocal_i          2
-      convert_o
-      getlocal3
-      multiply
-L130:
-      getlocal3
-      convert_b
-L132:
-      iftrue              L153
-
-L133:
       getlocal2
       pushstring          "changePassword"
       pushstring          "guid"
@@ -417,13 +209,9 @@ L133:
       newobject           3
       callpropvoid        QName(PackageNamespace(""), "sendRequest"), 2
 
-      getlocal            4
-      iftrue              L153
-
       findpropstrict      QName(PackageNamespace(""), "_-pW")
       callpropvoid        QName(PackageNamespace(""), "_-pW"), 0
 
-L153:
       returnvoid
      end ; code
     end ; body
@@ -440,43 +228,8 @@ L153:
      initscopedepth 10
      maxscopedepth 11
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      coerce_a
-      getlocal2
-      nextname
-      modulo
-      popscope
-      setlocal2
-
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      dup
-      iffalse             L27
-
-      pop
-      getlocal0
-      convert_b
-      jump                L27
-
-      declocal_i          2
-      getlocal2
-      declocal_i          2
-      modulo
-      convert_u
-      inclocal_i          2
-L27:
-      iftrue              L35
 
       getlex              QName(PackageNamespace("com.company.googleanalytics"), "GA")
       callproperty        QName(PackageNamespace(""), "global"), 0
@@ -484,10 +237,6 @@ L27:
       pushstring          "passwordChanged"
       callpropvoid        QName(PackageNamespace(""), "trackEvent"), 2
 
-      getlocal2
-      iftrue              L47
-
-L35:
       getlex              QName(PackageNamespace("_-qN"), "Account")
       callproperty        QName(PackageNamespace(""), "get"), 0
       getlex              QName(PackageNamespace("_-qN"), "Account")
@@ -499,10 +248,6 @@ L35:
       pushnull
       callpropvoid        QName(PackageNamespace(""), "modify"), 3
 
-      getlocal2
-      iftrue              L53
-
-L47:
       findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
       findpropstrict      QName(PackageInternalNs("_-QA"), "_-nJ")
       getlex              QName(PackageInternalNs("_-QA"), "_-nJ")
@@ -510,7 +255,6 @@ L47:
       constructprop       QName(PackageInternalNs("_-QA"), "_-nJ"), 1
       callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
 
-L53:
       returnvoid
      end ; code
     end ; body
@@ -527,27 +271,8 @@ L53:
      initscopedepth 10
      maxscopedepth 11
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      inclocal            2
-      strictequals
-      negate
-      greaterthan
-      add_i
-      declocal            2
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      iftrue              L25
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "password_")
@@ -555,13 +280,9 @@ L10:
       getproperty         QName(PackageNamespace(""), "text_")
       callpropvoid        QName(PackageNamespace(""), "_-0BT"), 1
 
-      getlocal2
-      iftrue              L25
-
       findpropstrict      QName(PackageNamespace(""), "for")
       callpropvoid        QName(PackageNamespace(""), "for"), 0
 
-L25:
       returnvoid
      end ; code
     end ; body

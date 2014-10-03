@@ -14,33 +14,13 @@ class
     initscopedepth 5
     maxscopedepth 6
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     lessthan
-     declocal            2
-     kill                2
-     pushfalse
-     getlocal2
-     bitand
-L10:
-     setlocal2
-
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal2
-     iftrue              L19
 
      getlocal0
      getlocal1
      constructsuper      1
 
-L19:
      returnvoid
     end ; code
    end ; body
@@ -56,23 +36,6 @@ L19:
      initscopedepth 5
      maxscopedepth 6
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      strictequals
-      setlocal2
-
-      setlocal2
-
-      decrement_i
-      decrement
-      coerce_a
-L10:
-      setlocal3
-
       getlocal0
       pushscope
 
@@ -82,22 +45,11 @@ L10:
       coerce              QName(PackageNamespace("_-0-p"), "_-IY")
       setlocal1
 
-      getlocal3
-      dup
-      iffalse             L24
-
-      pop
-      getlocal1
-      convert_b
-L24:
-      iftrue              L29
-
       getlocal1
       getlocal0
       getproperty         QName(PackageNamespace(""), "error")
       setproperty         QName(PackageNamespace(""), "error")
 
-L29:
       getlocal1
       returnvalue
      end ; code
@@ -113,42 +65,12 @@ L29:
    initscopedepth 4
    maxscopedepth 5
    code
-    pushfalse
-    pushtrue
-    swap
-    jump                L10
-
-    divide
-    setlocal3
-
-    astypelate
-    lessequals
-    convert_s
-    add_i
-L10:
-    setlocal1
-
-    setlocal2
-
     getlocal0
     pushscope
-
-    getlocal2
-    dup
-    iftrue              L20
-
-    pop
-    getlocal2
-    convert_b
-L20:
-    iffalse             L94
 
     findproperty        QName(PackageNamespace(""), "ERROR")
     pushstring          "error"
     initproperty        QName(PackageNamespace(""), "ERROR")
-
-    getlocal1
-    iftrue              L91
 
     findproperty        QName(PackageNamespace(""), "_-Wi")
     pushstring          "preInitialize"
@@ -162,24 +84,9 @@ L20:
     pushstring          "postInitialize"
     initproperty        QName(PackageNamespace(""), "_-wv")
 
-    getlocal1
-    iftrue              L94
-
-    jump                L44
-
-    popscope
-    pushnull
-    add
-    coerce_a
-    typeof
-    popscope
-L44:
     findproperty        QName(PackageNamespace(""), "_-7J")
     pushstring          "preSuspend"
     initproperty        QName(PackageNamespace(""), "_-7J")
-
-    getlocal2
-    iffalse             L91
 
     findproperty        QName(PackageNamespace(""), "_-05j")
     pushstring          "suspend"
@@ -189,27 +96,8 @@ L44:
     pushstring          "postSuspend"
     initproperty        QName(PackageNamespace(""), "_-mx")
 
-    getlocal1
-    dup
-    iffalse             L61
-
-    pop
-    getlocal1
-    convert_b
-L61:
-    iftrue              L91
-
     findproperty        QName(PackageNamespace(""), "_-ob")
     pushstring          "preResume"
-    jump                L71
-
-    multiply_i
-    getglobalscope
-    divide
-    checkfilter
-    convert_s
-    checkfilter
-L71:
     initproperty        QName(PackageNamespace(""), "_-ob")
 
     findproperty        QName(PackageNamespace(""), "_-x8")
@@ -224,26 +112,14 @@ L71:
     pushstring          "preDestroy"
     initproperty        QName(PackageNamespace(""), "_-0GZ")
 
-    getlocal2
-    dup
-    iftrue              L87
-
-    pop
-    getlocal1
-    convert_b
-L87:
-    iffalse             L94
-
     findproperty        QName(PackageNamespace(""), "_-8Z")
     pushstring          "destroy"
     initproperty        QName(PackageNamespace(""), "_-8Z")
 
-L91:
     findproperty        QName(PackageNamespace(""), "_-0KI")
     pushstring          "postDestroy"
     initproperty        QName(PackageNamespace(""), "_-0KI")
 
-L94:
     returnvoid
    end ; code
   end ; body

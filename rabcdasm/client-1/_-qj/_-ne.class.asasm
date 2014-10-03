@@ -13,46 +13,15 @@ class
     initscopedepth 5
     maxscopedepth 6
     code
-     pushfalse
-     pushtrue
-     setlocal1
-
-     jump                L10
-
-     greaterequals
-     getlocal0
-     setlocal3
-
-     instanceof
-     coerce_a
-     swap
-L10:
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal1
-     iffalse             L24
 
      getlocal0
      constructsuper      0
 
-     getlocal2
-     dup
-     iffalse             L23
-
-     pop
-     getlocal0
-     convert_b
-L23:
-     iftrue              L26
-
-L24:
      getlocal0
      callpropvoid        QName(PackageNamespace(""), "clear"), 0
 
-L26:
      returnvoid
     end ; code
    end ; body
@@ -69,35 +38,8 @@ L26:
      initscopedepth 5
      maxscopedepth 6
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      convert_u
-      setlocal2
-
-      inclocal_i          2
-      declocal            2
-      declocal            2
-      inclocal_i          2
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      dup
-      iffalse             L20
-
-      pop
-      getlocal1
-      convert_b
-L20:
-      iftrue              L29
 
       getlocal0
       getlocal0
@@ -108,7 +50,6 @@ L20:
       add
       initproperty        QName(PrivateNamespace("*", "_-qj:_-ne"), "_-Fp")
 
-L29:
       returnvoid
      end ; code
     end ; body
@@ -124,33 +65,13 @@ L29:
      initscopedepth 5
      maxscopedepth 6
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      swap
-      pushtrue
-      decrement
-      negate_i
-      newactivation
-      typeof
-L10:
-      setlocal1
-
-      setlocal2
-
       getlocal0
       pushscope
-
-      getlocal2
-      iffalse             L19
 
       getlocal0
       pushstring          ""
       initproperty        QName(PrivateNamespace("*", "_-qj:_-ne"), "_-Fp")
 
-L19:
       returnvoid
      end ; code
     end ; body
@@ -207,15 +128,6 @@ L19:
      pushscope
 
      getlocal0
-     jump                L10
-
-     negate_i
-     coerce_s
-     getlocal3
-     swap
-     pop
-     nextvalue
-L10:
      construct           0
      getlocal1
      callproperty        QName(PackageNamespace(""), "_-ka"), 1

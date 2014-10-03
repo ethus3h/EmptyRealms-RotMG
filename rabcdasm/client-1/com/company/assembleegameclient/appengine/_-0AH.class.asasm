@@ -14,46 +14,16 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     multiply
-     greaterequals
-     not
-     getlocal3
-     istypelate
-     bitxor
-L10:
-     setlocal2
-
-     setlocal3
-
      getlocal0
      pushscope
 
-     getlocal2
-     dup
-     iffalse             L20
-
-     pop
-     getlocal0
-     convert_b
-L20:
-     iftrue              L28
-
      getlocal0
      constructsuper      0
-
-     getlocal3
-     iffalse             L28
 
      getlocal0
      getlocal1
      initproperty        QName(PackageNamespace(""), "_-0Lu")
 
-L28:
      returnvoid
     end ; code
    end ; body
@@ -73,15 +43,6 @@ L28:
       pushscope
 
       getlocal0
-      jump                L10
-
-      coerce_s
-      instanceof
-      newactivation
-      instanceof
-      getlocal0
-      greaterthan
-L10:
       getproperty         QName(PackageNamespace(""), "_-0Lu")
       getproperty         Multiname("BestLevel", [PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-0AH#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-0AH#1"), PackageNamespace("com.company.assembleegameclient.appengine"), PackageInternalNs("com.company.assembleegameclient.appengine"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0JJ"), StaticProtectedNs("_-0JJ")])
       returnvalue
@@ -103,16 +64,6 @@ L10:
       pushscope
 
       getlocal0
-      jump                L10
-
-      pushscope
-
-      bitor
-      newactivation
-      nextvalue
-      strictequals
-      convert_d
-L10:
       getproperty         QName(PackageNamespace(""), "_-0Lu")
       getproperty         Multiname("BestFame", [PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-0AH#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-0AH#1"), PackageNamespace("com.company.assembleegameclient.appengine"), PackageInternalNs("com.company.assembleegameclient.appengine"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0JJ"), StaticProtectedNs("_-0JJ")])
       returnvalue
@@ -134,15 +85,6 @@ L10:
       pushscope
 
       getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-ZB")
-      jump                L10
-
-      pushtrue
-      typeof
-      convert_i
-      convert_b
-      add
-      bitor
-L10:
       findpropstrict      QName(PackageNamespace(""), "int")
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-0Lu")

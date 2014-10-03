@@ -102,7 +102,7 @@ class
       getlocal1
       getlex              QName(PackageNamespace(""), "String")
       istypelate
-      iffalse             L48
+      iffalse             L45
 
       jump                L25
 
@@ -113,7 +113,7 @@ L7:
       coerce_a
       setlocal1
 
-      jump                L48
+      jump                L45
 
 L13:
       label
@@ -122,7 +122,7 @@ L13:
       coerce_a
       setlocal1
 
-      jump                L48
+      jump                L45
 
 L19:
       label
@@ -131,7 +131,7 @@ L19:
       coerce_a
       setlocal1
 
-      jump                L48
+      jump                L45
 
 L25:
       getlocal1
@@ -142,7 +142,7 @@ L25:
       ifstrictne          L32
 
       pushbyte            0
-      jump                L46
+      jump                L43
 
 L32:
       pushstring          "advanced"
@@ -150,29 +150,23 @@ L32:
       ifstrictne          L37
 
       pushbyte            1
-      jump                L46
+      jump                L43
 
 L37:
-      jump                L40
-
-      pushbyte            2
-      jump                L46
-
-L40:
       pushstring          "basic"
       getlocal2
-      ifstrictne          L45
+      ifstrictne          L42
 
       pushbyte            3
-      jump                L46
+      jump                L43
 
-L45:
+L42:
       pushbyte            2
-L46:
+L43:
       kill                2
       lookupswitch        L19, [L7, L13, L19, L19]
 
-L48:
+L45:
       findproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_mode")
       getlocal1
       initproperty        QName(PrivateNamespace("*", "com.google.analytics.debug:DebugConfiguration"), "_mode")

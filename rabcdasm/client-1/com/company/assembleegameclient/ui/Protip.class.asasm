@@ -13,34 +13,8 @@ class
     initscopedepth 9
     maxscopedepth 10
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     getlocal2
-     inclocal_i          3
-     coerce_a
-     inclocal            3
-     declocal_i          3
-     increment_i
-L10:
-     setlocal3
-
-     setlocal            4
-
      getlocal0
      pushscope
-
-     getlocal3
-     dup
-     iffalse             L20
-
-     pop
-     getlocal0
-     convert_b
-L20:
-     iftrue              L40
 
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.utils"), "Timer")
@@ -48,40 +22,15 @@ L20:
      constructprop       QName(PackageNamespace("flash.utils"), "Timer"), 1
      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip"), "timer1_")
 
-     getlocal            4
-     dup
-     iftrue              L32
-
-     pop
-     getlocal3
-     convert_b
-L32:
-     iffalse             L49
-
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.utils"), "Timer")
      pushshort           10000
      constructprop       QName(PackageNamespace("flash.utils"), "Timer"), 1
      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip"), "timer2_")
 
-     getlocal3
-     iftrue              L49
-
-L40:
      getlocal0
      constructsuper      0
 
-     getlocal3
-     dup
-     iffalse             L48
-
-     pop
-     getlocal0
-     convert_b
-L48:
-     iftrue              L60
-
-L49:
      findproperty        QName(PackageNamespace(""), "filters")
      findpropstrict      QName(PackageNamespace("flash.filters"), "GlowFilter")
      pushbyte            0
@@ -94,7 +43,6 @@ L49:
      newarray            1
      initproperty        QName(PackageNamespace(""), "filters")
 
-L60:
      findpropstrict      QName(PackageNamespace(""), "int")
      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
      getproperty         QName(PackageNamespace(""), "data_")
@@ -103,50 +51,22 @@ L60:
      convert_i
      setlocal1
 
-     getlocal            4
-     iffalse             L83
-
      getlocal1
-     getlocal3
-     iftrue              L84
-
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip"), "protipsXML")
      getproperty         Multiname("Protip", [PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip/iinit"), PackageNamespace("com.company.assembleegameclient.ui"), PackageInternalNs("com.company.assembleegameclient.ui"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-oe"), StaticProtectedNs("_-oe"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
      callproperty        Multiname("length", [PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip/iinit"), PackageNamespace("com.company.assembleegameclient.ui"), PackageInternalNs("com.company.assembleegameclient.ui"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-oe"), StaticProtectedNs("_-oe"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
-     ifnge               L85
+     ifnge               L39
 
-     getlocal3
-     dup
-     iffalse             L82
-
-     pop
-     getlocal2
-     convert_b
-L82:
-     iftrue              L85
-
-L83:
      pushbyte            0
-L84:
      setlocal1
 
-L85:
+L39:
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip"), "protipsXML")
      getproperty         Multiname("Protip", [PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip/iinit"), PackageNamespace("com.company.assembleegameclient.ui"), PackageInternalNs("com.company.assembleegameclient.ui"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-oe"), StaticProtectedNs("_-oe"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
      getlocal1
      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip/iinit"), PackageNamespace("com.company.assembleegameclient.ui"), PackageInternalNs("com.company.assembleegameclient.ui"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-oe"), StaticProtectedNs("_-oe"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
      coerce_s
      setlocal2
-
-     getlocal            4
-     dup
-     iftrue              L97
-
-     pop
-     getlocal1
-     convert_b
-L97:
-     iffalse             L172
 
      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
      getproperty         QName(PackageNamespace(""), "data_")
@@ -171,23 +91,9 @@ L97:
 
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip"), "text_")
-     getlocal3
-     iftrue              L222
-
      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
      pushbyte            0
      dup
-     jump                L130
-
-     inclocal_i          2
-     declocal            3
-     greaterequals
-     declocal            2
-     setlocal3
-
-     setlocal2
-
-L130:
      dup
      pushbyte            1
      pushbyte            4
@@ -199,30 +105,9 @@ L130:
 
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip"), "text_")
-     getlocal3
-     dup
-     iffalse             L146
-
-     pop
-     getlocal1
-     convert_b
-L146:
-     iftrue              L186
-
      pushstring          "Tip: "
-     getlocal            4
-     dup
-     iftrue              L154
-
-     pop
-     getlocal0
-     convert_b
-L154:
-     iffalse             L157
-
      getlocal2
      add
-L157:
      setproperty         QName(PackageNamespace(""), "text")
 
      findpropstrict      QName(PackageNamespace(""), "addChild")
@@ -230,76 +115,21 @@ L157:
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip"), "text_")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
-     getlocal3
-     dup
-     iffalse             L168
-
-     pop
-     getlocal0
-     convert_b
-L168:
-     iftrue              L172
-
      findproperty        QName(PackageNamespace(""), "mouseEnabled")
      pushfalse
      initproperty        QName(PackageNamespace(""), "mouseEnabled")
 
-L172:
      findproperty        QName(PackageNamespace(""), "mouseChildren")
      pushfalse
      initproperty        QName(PackageNamespace(""), "mouseChildren")
 
-     getlocal            4
-     dup
-     iftrue              L181
-
-     pop
-     getlocal1
-     convert_b
-L181:
-     iffalse             L245
-
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip"), "text_")
-     getlocal3
-     iftrue              L222
-
-L186:
      callpropvoid        QName(PackageNamespace(""), "updateMetrics"), 0
 
-     getlocal            4
-     dup
-     iftrue              L193
-
-     pop
-     getlocal0
-     convert_b
-L193:
-     iffalse             L267
-
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip"), "text_")
-     getlocal            4
-     dup
-     iftrue              L202
-
-     pop
-     getlocal1
-     convert_b
-L202:
-     iffalse             L222
-
      pushshort           300
-     getlocal            4
-     dup
-     iftrue              L210
-
-     pop
-     getlocal3
-     convert_b
-L210:
-     iffalse             L223
-
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip"), "text_")
      getproperty         QName(PackageNamespace(""), "_-c9")
@@ -308,25 +138,10 @@ L210:
      subtract
      setproperty         QName(PackageNamespace(""), "x")
 
-     getlocal            4
-     iffalse             L264
-
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip"), "text_")
-L222:
      pushbyte            125
-L223:
      setproperty         QName(PackageNamespace(""), "y")
-
-     getlocal3
-     dup
-     iffalse             L230
-
-     pop
-     getlocal3
-     convert_b
-L230:
-     iftrue              L255
 
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip"), "timer1_")
@@ -334,34 +149,12 @@ L230:
      getproperty         QName(PackageNamespace(""), "TIMER")
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip"), "onTimer1")
-     jump                L244
-
-     inclocal            3
-     bitxor
-     coerce_s
-     inclocal_i          2
-     setlocal2
-
-     urshift
-L244:
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-L245:
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip"), "timer1_")
      callpropvoid        QName(PackageNamespace(""), "start"), 0
 
-     getlocal3
-     dup
-     iffalse             L254
-
-     pop
-     getlocal1
-     convert_b
-L254:
-     iftrue              L264
-
-L255:
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip"), "timer2_")
      getlex              QName(PackageNamespace("flash.events"), "TimerEvent")
@@ -370,15 +163,10 @@ L255:
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip"), "onTimer2")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-     getlocal3
-     iftrue              L267
-
-L264:
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip"), "timer2_")
      callpropvoid        QName(PackageNamespace(""), "start"), 0
 
-L267:
      returnvoid
     end ; code
    end ; body
@@ -401,15 +189,6 @@ L267:
       pushscope
 
       findpropstrict      QName(PackageNamespace("_-05R"), "GTween")
-      jump                L10
-
-      hasnext
-      convert_i
-      hasnext
-      convert_d
-      rshift
-      coerce_s
-L10:
       getlocal0
       pushbyte            5
       pushstring          "alpha"
@@ -435,64 +214,18 @@ L10:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      getlocal2
-      getlocal2
-      convert_b
-      inclocal_i          2
-      inclocal_i          2
-      getlocal2
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
 
-      jump                L21
-
-      declocal            2
-      dxnslate
-      kill                2
-      inclocal            2
-      declocal_i          2
-      convert_o
-L21:
-      getlocal3
-      dup
-      iftrue              L27
-
-      pop
-      getlocal3
-      convert_b
-L27:
-      iffalse             L38
-
       getlex              QName(PackageNamespace(""), "parent")
       pushnull
-      ifeq                L41
+      ifeq                L8
 
-      getlocal3
-      dup
-      iftrue              L37
-
-      pop
-      getlocal3
-      convert_b
-L37:
-      iffalse             L41
-
-L38:
       getlex              QName(PackageNamespace(""), "parent")
       getlocal0
       callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
 
-L41:
+L8:
       returnvoid
      end ; code
     end ; body
@@ -507,27 +240,8 @@ L41:
    initscopedepth 8
    maxscopedepth 9
    code
-    pushfalse
-    pushtrue
-    setlocal1
-
-    jump                L10
-
-    dxnslate
-    convert_s
-    istypelate
-    add
-    nextvalue
-    pushscope
-
-L10:
-    setlocal2
-
     getlocal0
     pushscope
-
-    getlocal2
-    iftrue              L20
 
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip"), "protipsXML")
     getlex              QName(PackageNamespace(""), "XML")
@@ -535,7 +249,6 @@ L10:
     construct           1
     setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Protip"), "protipsXML")
 
-L20:
     returnvoid
    end ; code
   end ; body

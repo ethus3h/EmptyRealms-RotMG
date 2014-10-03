@@ -14,22 +14,6 @@ class
     initscopedepth 9
     maxscopedepth 10
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     subtract_i
-     inclocal_i          3
-     inclocal_i          3
-     lshift
-     inclocal            3
-     declocal_i          2
-L10:
-     setlocal            6
-
-     setlocal            7
-
      getlocal0
      pushscope
 
@@ -41,32 +25,12 @@ L10:
      coerce              QName(PackageNamespace("flash.display"), "Graphics")
      setlocal3
 
-     getlocal            6
-     dup
-     iffalse             L26
-
-     pop
-     getlocal2
-     convert_b
-L26:
-     iftrue              L55
-
      getlocal0
      getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Tutorial#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Tutorial#1"), PackageNamespace("com.company.assembleegameclient.tutorial"), PackageInternalNs("com.company.assembleegameclient.tutorial"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Wj"), StaticProtectedNs("_-Wj"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("__AS3__.vec")])
      getlex              QName(PackageNamespace("com.company.assembleegameclient.tutorial"), "Step")
      applytype           1
      construct           0
      initproperty        QName(PackageNamespace(""), "_-Jy")
-
-     getlocal            6
-     dup
-     iffalse             L39
-
-     pop
-     getlocal1
-     convert_b
-L39:
-     iftrue              L55
 
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
@@ -78,17 +42,6 @@ L39:
      constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Tutorial#0"), "_-Bo")
 
-     getlocal            7
-     dup
-     iftrue              L54
-
-     pop
-     getlocal2
-     convert_b
-L54:
-     iffalse             L63
-
-L55:
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
      constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
@@ -97,15 +50,10 @@ L55:
      getlocal0
      constructsuper      0
 
-     getlocal            7
-     iffalse             L66
-
-L63:
      getlocal0
      getlocal1
      initproperty        QName(PackageNamespace(""), "gs_")
 
-L66:
      pushbyte            0
      setlocal            4
 
@@ -115,36 +63,15 @@ L66:
      coerce_a
      setlocal            5
 
-     jump                L100
+     jump                L51
 
-L74:
+L39:
      label
      getlocal            5
      getlocal            4
      nextvalue
      coerce              QName(PackageNamespace(""), "XML")
      setlocal2
-
-     getlocal            6
-     jump                L88
-
-     pushundefined
-     setlocal2
-
-     setlocal            4
-
-     not
-     declocal_i          2
-     lessthan
-L88:
-     dup
-     iffalse             L93
-
-     pop
-     getlocal3
-     convert_b
-L93:
-     iftrue              L100
 
      getlocal0
      getproperty         QName(PackageNamespace(""), "_-Jy")
@@ -153,37 +80,22 @@ L93:
      constructprop       QName(PackageNamespace("com.company.assembleegameclient.tutorial"), "Step"), 1
      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-L100:
+L51:
      hasnext2            5, 4
-     iftrue              L74
+     iftrue              L39
 
      kill                5
      kill                4
-     getlocal            7
-     dup
-     iftrue              L110
-
-     pop
-     getlocal0
-     convert_b
-L110:
-     iffalse             L117
-
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Tutorial#0"), "_-Bo")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
-     getlocal            7
-     iffalse             L121
-
-L117:
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Tutorial#0"), "break")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
-L121:
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Tutorial#0"), "_-Ty")
      getproperty         QName(PackageNamespace(""), "graphics")
@@ -193,25 +105,11 @@ L121:
      getlocal3
      callpropvoid        QName(PackageNamespace(""), "clear"), 0
 
-     getlocal            7
-     dup
-     iftrue              L134
-
-     pop
-     getlocal1
-     convert_b
-L134:
-     iffalse             L141
-
      getlocal3
      pushbyte            0
      pushdouble          0.1
      callpropvoid        QName(PackageNamespace(""), "beginFill"), 2
 
-     getlocal            7
-     iffalse             L147
-
-L141:
      getlocal3
      pushbyte            0
      dup
@@ -219,41 +117,17 @@ L141:
      pushshort           600
      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
 
-L147:
      getlocal3
      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
-
-     getlocal            6
-     dup
-     iffalse             L162
-
-     pop
-     jump                L160
-
-     swap
-     pushnan
-     inclocal            5
-     kill                3
-     declocal_i          6
-     bitor
-L160:
-     getlocal0
-     convert_b
-L162:
-     iftrue              L183
 
      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
      getproperty         QName(PackageNamespace(""), "data_")
      pushfalse
      setproperty         Multiname("needsTutorial", [PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Tutorial#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Tutorial#1"), PackageNamespace("com.company.assembleegameclient.tutorial"), PackageInternalNs("com.company.assembleegameclient.tutorial"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Wj"), StaticProtectedNs("_-Wj"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
 
-     getlocal            6
-     iftrue              L171
-
      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
      callpropvoid        QName(PackageNamespace(""), "save"), 0
 
-L171:
      findpropstrict      QName(PackageNamespace(""), "addEventListener")
      getlex              QName(PackageNamespace("flash.events"), "Event")
      getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
@@ -268,7 +142,6 @@ L171:
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Tutorial#0"), "onRemovedFromStage")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-L183:
      returnvoid
     end ; code
    end ; body
@@ -291,27 +164,8 @@ L183:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      inclocal            2
-      getlocal2
-      modulo
-      declocal_i          2
-      inclocal_i          2
-      setlocal2
-
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      iftrue              L23
 
       findpropstrict      QName(PackageNamespace(""), "addEventListener")
       getlex              QName(PackageNamespace("flash.events"), "Event")
@@ -320,14 +174,9 @@ L10:
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Tutorial#0"), "onEnterFrame")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-      getlocal3
-      iftrue              L25
-
-L23:
       getlocal0
       callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Tutorial#0"), "draw"), 0
 
-L25:
       returnvoid
      end ; code
     end ; body
@@ -344,35 +193,8 @@ L25:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      kill                2
-      setlocal2
-
-      convert_o
-      newactivation
-      typeof
-      getlocal3
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      dup
-      iftrue              L20
-
-      pop
-      getlocal0
-      convert_b
-L20:
-      iffalse             L27
 
       findpropstrict      QName(PackageNamespace(""), "removeEventListener")
       getlex              QName(PackageNamespace("flash.events"), "Event")
@@ -381,7 +203,6 @@ L20:
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Tutorial#0"), "onEnterFrame")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
-L27:
       returnvoid
      end ; code
     end ; body
@@ -398,21 +219,6 @@ L27:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      setlocal            18
-
-      jump                L10
-
-      nextvalue
-      instanceof
-      declocal            6
-      kill                10
-      convert_b
-      nextvalue
-L10:
-      setlocal            19
-
       getlocal0
       pushscope
 
@@ -463,16 +269,6 @@ L10:
       convert_d
       setlocal2
 
-      getlocal            18
-      dup
-      iftrue              L55
-
-      pop
-      getlocal1
-      convert_b
-L55:
-      iffalse             L94
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Tutorial#0"), "_-Bo")
       findpropstrict      QName(PackageNamespace("flash.filters"), "BlurFilter")
@@ -490,44 +286,22 @@ L55:
       newarray            1
       setproperty         QName(PackageNamespace(""), "filters")
 
-      getlocal            18
-      dup
-      iftrue              L78
-
-      pop
-      getlocal0
-      convert_b
-L78:
-      iffalse             L90
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Tutorial#0"), "break")
       getproperty         QName(PackageNamespace(""), "graphics")
       callpropvoid        QName(PackageNamespace(""), "clear"), 0
 
-      getlocal            18
-      dup
-      iftrue              L89
-
-      pop
-      getlocal3
-      convert_b
-L89:
-      iffalse             L94
-
-L90:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Tutorial#0"), "_-Bo")
       getproperty         QName(PackageNamespace(""), "graphics")
       callpropvoid        QName(PackageNamespace(""), "clear"), 0
 
-L94:
       pushbyte            0
       setlocal3
 
-      jump                L490
+      jump                L274
 
-L97:
+L65:
       label
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-Jy")
@@ -537,35 +311,19 @@ L97:
       setlocal            4
 
       pushtrue
-      getlocal            18
-      iffalse             L346
-
       setlocal            5
 
       pushbyte            0
-      getlocal            19
-      iftrue              L437
-
       setlocal            14
-
-      getlocal            19
-      dup
-      iffalse             L118
-
-      pop
-      getlocal0
-      convert_b
-L118:
-      iftrue              L481
 
       getlocal            4
       getproperty         QName(PackageNamespace(""), "_-I2")
       coerce_a
       setlocal            15
 
-      jump                L323
+      jump                L178
 
-L124:
+L81:
       label
       getlocal            15
       getlocal            14
@@ -580,37 +338,14 @@ L124:
       coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")
       setlocal            10
 
-      getlocal            18
-      dup
-      iftrue              L142
+      jump                L167
 
-      pop
-      getlocal0
-      convert_b
-L142:
-      iffalse             L323
-
-      jump                L300
-
-L144:
+L94:
       label
       pushfalse
       setlocal            11
 
-      getlocal            19
-      dup
-      iffalse             L153
-
-      pop
-      getlocal3
-      convert_b
-L153:
-      iftrue              L323
-
       pushbyte            0
-      getlocal            19
-      iftrue              L322
-
       setlocal            16
 
       getlocal0
@@ -620,9 +355,9 @@ L153:
       coerce_a
       setlocal            17
 
-      jump                L278
+      jump                L156
 
-L165:
+L106:
       label
       getlocal            17
       getlocal            16
@@ -635,107 +370,32 @@ L165:
       getlocal            6
       getproperty         QName(PackageNamespace(""), "objectType_")
       equals
-      getlocal            19
-      iftrue              L234
-
       not
       dup
-      getlocal            18
-      dup
-      iftrue              L186
+      iftrue              L135
 
       pop
-      getlocal3
-      convert_b
-L186:
-      iffalse             L218
-
-      iftrue              L235
-
-      getlocal            19
-      dup
-      iffalse             L194
-
-      pop
-      getlocal1
-      convert_b
-L194:
-      iftrue              L216
-
-      pop
-      getlocal            19
-      iftrue              L275
-
       getlocal            6
       getproperty         QName(PackageNamespace(""), "_-Ow")
-      getlocal            19
-      dup
-      iffalse             L206
-
-      pop
-      getlocal2
-      convert_b
-L206:
-      iftrue              L231
-
       pushstring          ""
       equals
-      getlocal            18
-      dup
-      iftrue              L215
-
-      pop
-      getlocal0
-      convert_b
-L215:
-      iffalse             L234
-
-L216:
       not
       dup
-L218:
-      iffalse             L235
-
-      getlocal            18
-      iffalse             L234
+      iffalse             L135
 
       pop
-      getlocal            18
-      dup
-      iftrue              L228
-
-      pop
-      getlocal1
-      convert_b
-L228:
-      iffalse             L275
-
       getlocal            12
       getproperty         QName(PackageNamespace(""), "name_")
-L231:
       getlocal            6
       getproperty         QName(PackageNamespace(""), "_-Ow")
       equals
-L234:
       not
-L235:
-      iffalse             L246
+L135:
+      iffalse             L137
 
-      getlocal            18
-      jump                L244
+      jump                L156
 
-      declocal_i          16
-      decrement_i
-      kill                14
-      convert_o
-      getlocal            12
-      istypelate
-L244:
-      iffalse             L277
-
-      jump                L278
-
-L246:
+L137:
       getlex              QName(PackageNamespace("com.company.util"), "PointUtil")
       getlocal            12
       getproperty         QName(PackageNamespace(""), "x_")
@@ -746,215 +406,103 @@ L246:
       getlocal            10
       getproperty         QName(PackageNamespace(""), "y_")
       callproperty        QName(PackageNamespace(""), "_-RO"), 4
-      getlocal            19
-      iftrue              L261
-
       convert_d
-      getlocal            19
-      iftrue              L270
-
-L261:
       dup
-      getlocal            18
-      dup
-      iftrue              L268
-
-      pop
-      getlocal0
-      convert_b
-L268:
-      iffalse             L272
-
       setlocal            13
 
-L270:
       getlocal            6
       getproperty         QName(PackageNamespace(""), "radius_")
-L272:
-      ifnle               L278
+      ifnle               L156
 
-      getlocal            18
-      iffalse             L277
-
-L275:
       pushtrue
       setlocal            11
 
-L277:
-      jump                L280
+      jump                L158
 
-L278:
+L156:
       hasnext2            17, 16
-      iftrue              L165
+      iftrue              L106
 
-L280:
+L158:
       kill                17
       kill                16
-      getlocal            18
-      iffalse             L297
-
       getlocal            11
-      getlocal            19
-      dup
-      iffalse             L291
-
-      pop
-      getlocal1
-      convert_b
-L291:
-      iftrue              L296
-
-      iftrue              L297
-
-      getlocal            19
-      iftrue              L297
+      iftrue              L164
 
       pushfalse
-L296:
       setlocal            5
 
-L297:
-      jump                L323
+L164:
+      jump                L178
 
-L298:
+L165:
       label
-      jump                L323
+      jump                L178
 
-L300:
+L167:
       getlocal            6
       getproperty         QName(PackageNamespace(""), "type_")
       setlocal            16
 
-      getlocal            19
-      dup
-      iffalse             L309
-
-      pop
-      getlocal1
-      convert_b
-L309:
-      iftrue              L313
-
       getlex              QName(PackageNamespace(""), "_-67")
       getlocal            16
-      ifstrictne          L317
+      ifstrictne          L175
 
-L313:
       pushbyte            0
-      getlocal            18
-      iffalse             L321
+      jump                L176
 
-      jump                L321
-
-L317:
-      jump                L320
-
+L175:
       pushbyte            1
-      jump                L321
-
-L320:
-      pushbyte            1
-L321:
+L176:
       kill                16
-L322:
-      lookupswitch        L298, [L144, L298]
+      lookupswitch        L165, [L94, L165]
 
-L323:
+L178:
       hasnext2            15, 14
-      getlocal            18
-      dup
-      iftrue              L330
-
-      pop
-      getlocal3
-      convert_b
-L330:
-      iffalse             L479
-
-      iftrue              L124
-
-      getlocal            18
-      iffalse             L480
+      iftrue              L81
 
       kill                15
-      getlocal            18
-      iffalse             L440
-
       kill                14
-      getlocal            19
-      dup
-      iffalse             L344
-
-      pop
-      getlocal3
-      convert_b
-L344:
-      iftrue              L489
-
       getlocal            5
-L346:
-      iftrue              L351
+      iftrue              L188
 
       getlocal            4
       pushbyte            0
       setproperty         QName(PackageNamespace(""), "_-n")
 
-      jump                L489
+      jump                L273
 
-L351:
+L188:
       getlocal            4
       getproperty         QName(PackageNamespace(""), "_-n")
-      getlocal            18
-      iffalse             L380
-
       pushbyte            0
-      ifne                L361
+      ifne                L196
 
       getlocal            4
       findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
       callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
       setproperty         QName(PackageNamespace(""), "_-n")
 
-L361:
+L196:
       findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
       callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
       getlocal            4
       getproperty         QName(PackageNamespace(""), "_-n")
       subtract
       convert_i
-      getlocal            18
-      dup
-      iftrue              L373
-
-      pop
-      getlocal1
-      convert_b
-L373:
-      iffalse             L437
-
       setlocal            7
 
-      getlocal            18
-      iffalse             L436
-
       pushbyte            0
-      getlocal            18
-      iffalse             L437
-
-L380:
       setlocal            14
-
-      getlocal            19
-      iftrue              L428
 
       getlocal            4
       getproperty         QName(PackageNamespace(""), "_-0Jb")
       coerce_a
       setlocal            15
 
-      jump                L414
+      jump                L234
 
-L388:
+L210:
       label
       getlocal            15
       getlocal            14
@@ -972,9 +520,6 @@ L388:
       getlocal            7
       callpropvoid        QName(PackageNamespace(""), "draw"), 3
 
-      getlocal            19
-      iftrue              L414
-
       getlocal            8
       pushbyte            6
       getlocal2
@@ -985,56 +530,23 @@ L388:
       getlocal            7
       callpropvoid        QName(PackageNamespace(""), "draw"), 3
 
-L414:
+L234:
       hasnext2            15, 14
-      getlocal            18
-      dup
-      iftrue              L421
-
-      pop
-      getlocal1
-      convert_b
-L421:
-      iffalse             L479
-
-      iftrue              L388
-
-      getlocal            18
-      iffalse             L480
+      iftrue              L210
 
       kill                15
-      getlocal            18
-      iffalse             L481
-
-L428:
       kill                14
-      getlocal            19
-      dup
-      iffalse             L435
-
-      pop
-      getlocal0
-      convert_b
-L435:
-      iftrue              L490
-
-L436:
       pushbyte            0
-L437:
       setlocal            14
 
-      getlocal            19
-      iftrue              L481
-
-L440:
       getlocal            4
       getproperty         QName(PackageNamespace(""), "_-06F")
       coerce_a
       setlocal            15
 
-      jump                L478
+      jump                L269
 
-L445:
+L245:
       label
       getlocal            15
       getlocal            14
@@ -1052,21 +564,9 @@ L445:
       getlocal            7
       callpropvoid        QName(PackageNamespace(""), "draw"), 3
 
-      getlocal            19
-      iftrue              L478
-
       getlocal            9
       pushbyte            6
       getlocal2
-      jump                L472
-
-      pushnan
-      kill                8
-      declocal            17
-      lessequals
-      getglobalscope
-      kill                5
-L472:
       multiply
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Tutorial#0"), "_-Bo")
@@ -1074,33 +574,20 @@ L472:
       getlocal            7
       callpropvoid        QName(PackageNamespace(""), "draw"), 3
 
-L478:
+L269:
       hasnext2            15, 14
-L479:
-      iftrue              L445
+      iftrue              L245
 
-L480:
       kill                15
-L481:
       kill                14
-      getlocal            18
-      dup
-      iftrue              L488
-
-      pop
-      getlocal1
-      convert_b
-L488:
-      iffalse             L490
-
-L489:
+L273:
       inclocal_i          3
-L490:
+L274:
       getlocal3
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-Jy")
       getproperty         QName(PackageNamespace(""), "length")
-      iflt                L97
+      iflt                L65
 
       returnvoid
      end ; code
@@ -1118,22 +605,6 @@ L490:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      setlocal            12
-
-      jump                L10
-
-      kill                11
-      getlocal            7
-      getglobalscope
-      subtract_i
-      setlocal2
-
-      declocal            6
-L10:
-      setlocal            13
-
       getlocal0
       pushscope
 
@@ -1155,37 +626,16 @@ L10:
       pushnan
       setlocal            7
 
-      getlocal            12
-      dup
-      iftrue              L32
-
-      pop
-      getlocal3
-      convert_b
-L32:
-      iffalse             L46
-
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-vW")
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-Jy")
       getproperty         QName(PackageNamespace(""), "length")
-      ifnge               L47
+      ifnge               L22
 
-      getlocal            12
-      dup
-      iftrue              L45
-
-      pop
-      getlocal1
-      convert_b
-L45:
-      iffalse             L47
-
-L46:
       returnvoid
 
-L47:
+L22:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-Jy")
       getlocal0
@@ -1194,20 +644,14 @@ L47:
       coerce              QName(PackageNamespace("com.company.assembleegameclient.tutorial"), "Step")
       setlocal2
 
-      getlocal            12
-      iffalse             L63
-
       getlocal1
       getlocal2
       getproperty         QName(PackageNamespace(""), "action_")
-      ifeq                L63
-
-      getlocal            12
-      iffalse             L63
+      ifeq                L34
 
       returnvoid
 
-L63:
+L34:
       pushbyte            0
       setlocal            8
 
@@ -1216,9 +660,9 @@ L63:
       coerce_a
       setlocal            9
 
-      jump                L269
+      jump                L134
 
-L70:
+L41:
       label
       getlocal            9
       getlocal            8
@@ -1233,38 +677,14 @@ L70:
       coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")
       setlocal            4
 
-      getlocal            13
-      iftrue              L95
+      jump                L118
 
-      jump                L218
-
-L85:
+L54:
       label
       pushfalse
       setlocal            5
 
-      getlocal            13
-      dup
-      iffalse             L94
-
-      pop
-      getlocal3
-      convert_b
-L94:
-      iftrue              L269
-
-L95:
       pushbyte            0
-      getlocal            12
-      dup
-      iftrue              L102
-
-      pop
-      getlocal3
-      convert_b
-L102:
-      iffalse             L268
-
       setlocal            10
 
       getlocal0
@@ -1274,9 +694,9 @@ L102:
       coerce_a
       setlocal            11
 
-      jump                L174
+      jump                L97
 
-L111:
+L66:
       label
       getlocal            11
       getlocal            10
@@ -1288,21 +708,11 @@ L111:
       getproperty         QName(PackageNamespace(""), "objectType_")
       getlocal3
       getproperty         QName(PackageNamespace(""), "objectType_")
-      ifeq                L130
+      ifeq                L78
 
-      getlocal            12
-      dup
-      iftrue              L128
+      jump                L97
 
-      pop
-      getlocal0
-      convert_b
-L128:
-      iffalse             L171
-
-      jump                L174
-
-L130:
+L78:
       getlex              QName(PackageNamespace("com.company.util"), "PointUtil")
       getlocal            6
       getproperty         QName(PackageNamespace(""), "x_")
@@ -1313,99 +723,35 @@ L130:
       getlocal            4
       getproperty         QName(PackageNamespace(""), "y_")
       callproperty        QName(PackageNamespace(""), "_-RO"), 4
-      getlocal            12
-      iffalse             L145
-
       convert_d
-      getlocal            13
-      iftrue              L161
-
-L145:
       dup
-      getlocal            13
-      dup
-      jump                L155
-
-      popscope
-      declocal_i          4
-      convert_u
-      astypelate
-      subtract
-      istypelate
-L155:
-      iffalse             L159
-
-      pop
-      getlocal2
-      convert_b
-L159:
-      iftrue              L163
-
       setlocal            7
 
-L161:
       getlocal3
       getproperty         QName(PackageNamespace(""), "radius_")
-L163:
-      ifnle               L174
+      ifnle               L97
 
-      getlocal            12
-      dup
-      iftrue              L170
-
-      pop
-      getlocal0
-      convert_b
-L170:
-      iffalse             L173
-
-L171:
       pushtrue
       setlocal            5
 
-L173:
-      jump                L176
+      jump                L99
 
-L174:
+L97:
       hasnext2            11, 10
-      iftrue              L111
+      iftrue              L66
 
-L176:
+L99:
       kill                11
       kill                10
-      getlocal            13
-      iftrue              L189
-
       getlocal            5
-      iftrue              L197
+      iftrue              L104
 
-      getlocal            13
-      dup
-      iffalse             L188
-
-      pop
-      getlocal3
-      convert_b
-L188:
-      iftrue              L197
-
-L189:
       returnvoid
 
-      getlocal            12
-      dup
-      iftrue              L196
+L104:
+      jump                L134
 
-      pop
-      getlocal2
-      convert_b
-L196:
-      iffalse             L215
-
-L197:
-      jump                L269
-
-L198:
+L105:
       label
       getlocal            4
       getproperty         QName(PackageNamespace(""), "_-zq")
@@ -1414,179 +760,66 @@ L198:
       getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Tutorial#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Tutorial#1"), PackageNamespace("com.company.assembleegameclient.tutorial"), PackageInternalNs("com.company.assembleegameclient.tutorial"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Wj"), StaticProtectedNs("_-Wj"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       getlocal3
       getproperty         QName(PackageNamespace(""), "objectType_")
-      ifeq                L215
-
-      getlocal            12
-      dup
-      iftrue              L213
-
-      pop
-      getlocal3
-      convert_b
-L213:
-      iffalse             L215
+      ifeq                L115
 
       returnvoid
 
-L215:
-      jump                L269
+L115:
+      jump                L134
 
-L216:
+L116:
       label
-      jump                L269
+      jump                L134
 
-L218:
+L118:
       getlocal3
       getproperty         QName(PackageNamespace(""), "type_")
       setlocal            10
 
-      getlocal            13
-      dup
-      iffalse             L227
-
-      pop
-      getlocal3
-      convert_b
-L227:
-      iftrue              L242
-
       getlex              QName(PackageNamespace(""), "_-67")
-      getlocal            12
-      dup
-      iftrue              L235
-
-      pop
-      getlocal2
-      convert_b
-L235:
-      iffalse             L252
-
       getlocal            10
-      getlocal            12
-      iffalse             L253
+      ifstrictne          L126
 
-      ifstrictne          L251
-
-      getlocal            12
-      iffalse             L254
-
-L242:
       pushbyte            0
-      getlocal            12
-      dup
-      iftrue              L249
+      jump                L132
 
-      pop
-      getlocal3
-      convert_b
-L249:
-      iffalse             L262
-
-      jump                L267
-
-L251:
+L126:
       getlex              QName(PackageNamespace(""), "_-BH")
-L252:
       getlocal            10
-L253:
-      ifstrictne          L263
+      ifstrictne          L131
 
-L254:
       pushbyte            1
-      getlocal            13
-      dup
-      iffalse             L261
+      jump                L132
 
-      pop
-      getlocal2
-      convert_b
-L261:
-      iftrue              L267
-
-L262:
-      jump                L267
-
-L263:
-      jump                L266
-
+L131:
       pushbyte            2
-      jump                L267
-
-L266:
-      pushbyte            2
-L267:
+L132:
       kill                10
-L268:
-      lookupswitch        L216, [L85, L198, L216]
+      lookupswitch        L116, [L54, L105, L116]
 
-L269:
+L134:
       hasnext2            9, 8
-      iftrue              L70
+      iftrue              L41
 
       kill                9
       kill                8
-      getlocal            12
-      dup
-      iftrue              L279
-
-      pop
-      getlocal1
-      convert_b
-L279:
-      iffalse             L316
-
       getlocal0
       dup
       setlocal            8
 
       getproperty         QName(PackageNamespace(""), "_-vW")
-      getlocal            13
-      dup
-      jump                L293
-
-      convert_o
-      declocal_i          5
-      negate_i
-      inclocal            11
-      istypelate
-      increment
-L293:
-      iffalse             L297
-
-      pop
-      getlocal0
-      convert_b
-L297:
-      iftrue              L299
-
       increment_i
-L299:
       setlocal            9
-
-      getlocal            13
-      dup
-      iffalse             L306
-
-      pop
-      getlocal0
-      convert_b
-L306:
-      iftrue              L310
 
       getlocal            8
       getlocal            9
       setproperty         QName(PackageNamespace(""), "_-vW")
 
-L310:
       kill                9
       kill                8
-      getlocal            13
-      iftrue              L316
-
       getlocal0
       callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Tutorial#0"), "draw"), 0
 
-L316:
       returnvoid
      end ; code
     end ; body
@@ -1606,16 +839,6 @@ L316:
       pushscope
 
       pushnull
-      jump                L10
-
-      getlocal2
-      setlocal2
-
-      getlocal2
-      getlocal2
-      popscope
-      getlocal2
-L10:
       coerce              QName(PackageNamespace("com.company.assembleegameclient.tutorial"), "UIDrawBox")
       setlocal3
 
@@ -1635,31 +858,12 @@ L10:
    initscopedepth 8
    maxscopedepth 9
    code
-    pushfalse
-    pushtrue
-    swap
-    jump                L10
-
-    negate
-    istypelate
-    nextname
-    not
-    pushnull
-    getlocal2
-L10:
-    setlocal1
-
-    setlocal2
-
     getlocal0
     pushscope
 
     findproperty        QName(PackageNamespace(""), "_-KO")
     pushstring          "Next"
     initproperty        QName(PackageNamespace(""), "_-KO")
-
-    getlocal2
-    iffalse             L111
 
     findproperty        QName(PackageNamespace(""), "_-04m")
     pushstring          "MoveForward"
@@ -1677,60 +881,17 @@ L10:
     pushstring          "RotateRight"
     initproperty        QName(PackageNamespace(""), "_-95")
 
-    getlocal2
-    dup
-    iftrue              L37
-
-    pop
-    getlocal2
-    convert_b
-L37:
-    iffalse             L65
-
     findproperty        QName(PackageNamespace(""), "_-SB")
     pushstring          "MoveLeft"
     initproperty        QName(PackageNamespace(""), "_-SB")
 
-    getlocal1
-    dup
-    iffalse             L47
-
-    pop
-    getlocal1
-    convert_b
-L47:
-    iftrue              L114
-
     findproperty        QName(PackageNamespace(""), "_-0Aj")
     pushstring          "MoveRight"
-    jump                L57
-
-    getlocal3
-    increment
-    nextname
-    convert_s
-    convert_s
-    increment
-L57:
     initproperty        QName(PackageNamespace(""), "_-0Aj")
 
-    getlocal1
-    dup
-    iffalse             L64
-
-    pop
-    getlocal2
-    convert_b
-L64:
-    iftrue              L103
-
-L65:
     findproperty        QName(PackageNamespace(""), "_-xX")
     pushstring          "Update"
     initproperty        QName(PackageNamespace(""), "_-xX")
-
-    getlocal1
-    iftrue              L103
 
     findproperty        QName(PackageNamespace(""), "_-9Z")
     pushstring          "Attack"
@@ -1744,58 +905,22 @@ L65:
     pushstring          "Kill"
     initproperty        QName(PackageNamespace(""), "_-05O")
 
-    getlocal1
-    dup
-    iffalse             L85
-
-    pop
-    getlocal1
-    convert_b
-L85:
-    iftrue              L103
-
     findproperty        QName(PackageNamespace(""), "_-07B")
     pushstring          "ShowLoot"
     initproperty        QName(PackageNamespace(""), "_-07B")
 
-    getlocal2
-    jump                L97
-
-    divide
-    popscope
-    astypelate
-    astypelate
-    nextvalue
-    popscope
-L97:
-    dup
-    iftrue              L102
-
-    pop
-    getlocal1
-    convert_b
-L102:
-    iffalse             L108
-
-L103:
     findproperty        QName(PackageNamespace(""), "_-XI")
     pushstring          "Text"
     initproperty        QName(PackageNamespace(""), "_-XI")
 
-    getlocal1
-    iftrue              L114
-
-L108:
     findproperty        QName(PackageNamespace(""), "_-r8")
     pushstring          "ShowPortal"
     initproperty        QName(PackageNamespace(""), "_-r8")
 
-L111:
     findproperty        QName(PackageNamespace(""), "_-Y5")
     pushstring          "EnterPortal"
     initproperty        QName(PackageNamespace(""), "_-Y5")
 
-L114:
     findproperty        QName(PackageNamespace(""), "_-67")
     pushstring          "Near"
     initproperty        QName(PackageNamespace(""), "_-67")

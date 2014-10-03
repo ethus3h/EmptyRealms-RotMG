@@ -15,110 +15,35 @@ class
     initscopedepth 7
     maxscopedepth 8
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     not
-     newactivation
-     kill                2
-     inclocal_i          2
-     kill                2
-     declocal            2
-L10:
-     setlocal2
-
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal3
-     iffalse             L70
 
      getlocal0
      getlocal1
      constructsuper      1
 
-     getlocal2
-     dup
-     iffalse             L25
-
-     pop
-     getlocal2
-     convert_b
-L25:
-     iftrue              L70
-
      findproperty        QName(PackageNamespace(""), "price_")
-     jump                L34
-
-     greaterthan
-     getlocal1
-     getlocal2
-     getlocal2
-     kill                2
-     setlocal2
-
-L34:
      findpropstrict      QName(PackageNamespace(""), "int")
      getlocal1
      getproperty         Multiname("Price", [PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-AM"), StaticProtectedNs("_-AM"), StaticProtectedNs("_-VP"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
      callproperty        QName(PackageNamespace(""), "int"), 1
      initproperty        QName(PackageNamespace(""), "price_")
 
-     getlocal2
-     dup
-     iffalse             L52
-
-     pop
-     getlocal3
-     jump                L51
-
-     setlocal2
-
-     setlocal3
-
-     negate_i
-     inclocal            2
-     lessequals
-     multiply
-L51:
-     convert_b
-L52:
-     iftrue              L70
-
      findproperty        QName(PackageNamespace(""), "currency_")
      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "Currency")
      getproperty         QName(PackageNamespace(""), "_-Ah")
      initproperty        QName(PackageNamespace(""), "currency_")
-
-     getlocal2
-     dup
-     iffalse             L63
-
-     pop
-     getlocal2
-     convert_b
-L63:
-     iftrue              L70
 
      getlocal0
      getlocal1
      getproperty         Multiname("Description", [PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-AM"), StaticProtectedNs("_-AM"), StaticProtectedNs("_-VP"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
      initproperty        QName(PackageNamespace(""), "description_")
 
-     getlocal3
-     iffalse             L74
-
-L70:
      findproperty        QName(PackageNamespace(""), "_-0FS")
      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-07E")
      getproperty         QName(PackageNamespace(""), "_-tS")
      initproperty        QName(PackageNamespace(""), "_-0FS")
 
-L74:
      returnvoid
     end ; code
    end ; body
@@ -138,15 +63,6 @@ L74:
       pushscope
 
       getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
-      jump                L10
-
-      convert_s
-      coerce_a
-      lessthan
-      rshift
-      convert_b
-      newactivation
-L10:
       getproperty         QName(PackageNamespace(""), "_-0DN")
       getlex              QName(PackageNamespace(""), "objectType_")
       getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-AM"), StaticProtectedNs("_-AM"), StaticProtectedNs("_-VP"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
@@ -169,15 +85,6 @@ L10:
       pushscope
 
       getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
-      jump                L10
-
-      strictequals
-      not
-      bitor
-      convert_d
-      hasnext
-      bitnot
-L10:
       getproperty         QName(PackageNamespace(""), "_-QF")
       getlex              QName(PackageNamespace(""), "objectType_")
       getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-AM"), StaticProtectedNs("_-AM"), StaticProtectedNs("_-VP"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
@@ -206,15 +113,6 @@ L10:
       pushscope
 
       findpropstrict      QName(PackageNamespace("_-E7"), "_-aS")
-      jump                L10
-
-      negate_i
-      not
-      getlocal1
-      bitand
-      pushnan
-      strictequals
-L10:
       pushint             3552822
       pushint             10197915
       getlocal0
@@ -246,16 +144,6 @@ L10:
       pushscope
 
       getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
-      jump                L10
-
-      setlocal2
-
-      typeof
-      coerce_s
-      bitnot
-      multiply_i
-      instanceof
-L10:
       getlex              QName(PackageNamespace(""), "objectType_")
       pushbyte            80
       pushtrue

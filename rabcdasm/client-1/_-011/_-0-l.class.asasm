@@ -14,44 +14,8 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     setlocal2
-
-     jump                L10
-
-     inclocal            2
-     inclocal_i          2
-     convert_d
-     setlocal2
-
-     inclocal_i          2
-     popscope
-L10:
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal2
-     dup
-     jump                L22
-
-     add
-     setlocal2
-
-     getlocal2
-     getlocal2
-     declocal_i          2
-     instanceof
-L22:
-     iftrue              L26
-
-     pop
-     getlocal2
-     convert_b
-L26:
-     iffalse             L43
 
      getlocal0
      getlex              Multiname("Vector", [PrivateNamespace("*", "_-011:_-0-l#0"), PrivateNamespace("*", "_-011:_-0-l#1"), PackageNamespace(""), PackageNamespace("_-011"), PackageInternalNs("_-011"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-pZ"), StaticProtectedNs("_-pZ"), StaticProtectedNs("_-0Cg"), StaticProtectedNs("_-1E"), PackageNamespace("__AS3__.vec")])
@@ -60,21 +24,10 @@ L26:
      construct           0
      initproperty        QName(PackageNamespace(""), "statuses_")
 
-     getlocal3
-     dup
-     iffalse             L39
-
-     pop
-     getlocal1
-     convert_b
-L39:
-     iftrue              L43
-
      getlocal0
      getlocal1
      constructsuper      1
 
-L43:
      returnvoid
     end ; code
    end ; body
@@ -93,108 +46,36 @@ L43:
      initscopedepth 6
      maxscopedepth 7
      code
-      pushfalse
-      pushtrue
-      setlocal            4
-
-      jump                L10
-
-      inclocal_i          4
-      strictequals
-      setlocal2
-
-      urshift
-      newactivation
-      setlocal3
-
-L10:
-      setlocal            5
-
       getlocal0
       pushscope
 
       pushbyte            0
       setlocal3
 
-      getlocal            4
-      dup
-      iftrue              L21
-
-      pop
-      getlocal3
-      convert_b
-L21:
-      iffalse             L33
-
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
       initproperty        QName(PackageNamespace(""), "tickId_")
 
-      getlocal            5
-      dup
-      iffalse             L32
-
-      pop
-      getlocal2
-      convert_b
-L32:
-      iftrue              L37
-
-L33:
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
       initproperty        QName(PackageNamespace(""), "tickTime_")
 
-L37:
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readShort"), 0
       convert_i
       setlocal2
 
-      getlocal            5
-      dup
-      iffalse             L47
-
-      pop
-      getlocal0
-      convert_b
-L47:
-      iftrue              L58
-
       getlocal2
-      getlocal            5
-      dup
-      iffalse             L55
-
-      pop
-      getlocal1
-      convert_b
-L55:
-      iftrue              L57
-
       convert_i
-L57:
       setlocal3
 
-L58:
-      jump                L74
+      jump                L28
 
-L59:
+L20:
       label
       getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-wW")
-      jump                L68
-
-      inclocal            3
-      setlocal3
-
-      setlocal            4
-
-      pushnull
-      increment_i
-      add_i
-L68:
       getlocal0
       getproperty         QName(PackageNamespace(""), "statuses_")
       getlocal3
@@ -202,25 +83,12 @@ L68:
       callpropvoid        QName(PackageNamespace(""), "_-ay"), 1
 
       inclocal_i          3
-L74:
+L28:
       getlocal3
-      getlocal            4
-      dup
-      iftrue              L81
-
-      pop
-      getlocal0
-      convert_b
-L81:
-      iffalse             L140
-
       getlocal0
       getproperty         QName(PackageNamespace(""), "statuses_")
       getproperty         QName(PackageNamespace(""), "length")
-      iflt                L59
-
-      getlocal            4
-      iffalse             L130
+      iflt                L20
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "statuses_")
@@ -232,9 +100,9 @@ L81:
       callproperty        QName(PackageNamespace(""), "min"), 2
       setproperty         QName(PackageNamespace(""), "length")
 
-      jump                L107
+      jump                L52
 
-L98:
+L43:
       label
       getlocal0
       getproperty         QName(PackageNamespace(""), "statuses_")
@@ -245,45 +113,19 @@ L98:
       astypelate
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-L107:
+L52:
       getlocal0
       getproperty         QName(PackageNamespace(""), "statuses_")
       getproperty         QName(PackageNamespace(""), "length")
       getlocal2
-      iflt                L98
+      iflt                L43
 
-      jump                L119
-
-      pushscope
-
-      setlocal3
-
-      inclocal_i          4
-      setlocal3
-
-      getlocal3
-      getlocal            4
-L119:
       pushbyte            0
-      getlocal            4
-      dup
-      iftrue              L126
-
-      pop
-      getlocal0
-      convert_b
-L126:
-      iffalse             L140
-
       setlocal3
 
-      getlocal            5
-      iftrue              L138
+      jump                L68
 
-L130:
-      jump                L139
-
-L131:
+L60:
       label
       getlocal0
       getproperty         QName(PackageNamespace(""), "statuses_")
@@ -292,13 +134,11 @@ L131:
       getlocal1
       callpropvoid        QName(PackageNamespace(""), "parseFromInput"), 1
 
-L138:
       inclocal_i          3
-L139:
+L68:
       getlocal3
-L140:
       getlocal2
-      iflt                L131
+      iflt                L60
 
       returnvoid
      end ; code
@@ -319,15 +159,6 @@ L140:
       pushscope
 
       findpropstrict      QName(ProtectedNamespace("_-1E"), "formatToString")
-      jump                L10
-
-      convert_u
-      checkfilter
-      convert_u
-      coerce_a
-      swap
-      lessequals
-L10:
       pushstring          "NEW_TICK"
       pushstring          "tickId_"
       pushstring          "tickTime_"

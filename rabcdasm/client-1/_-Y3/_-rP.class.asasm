@@ -15,39 +15,16 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     setlocal2
-
-     jump                L10
-
-     getlocal2
-     declocal            2
-     getlocal2
-     inclocal            2
-     declocal            2
-     setlocal2
-
-L10:
-     setlocal3
-
      getlocal0
      pushscope
 
-     getlocal2
-     iffalse             L22
-
      getlocal0
      constructsuper      0
-
-     getlocal3
-     iftrue              L22
 
      getlocal0
      getlocal1
      initproperty        QName(PrivateNamespace("*", "_-Y3:_-rP"), "_value")
 
-L22:
      returnvoid
     end ; code
    end ; body

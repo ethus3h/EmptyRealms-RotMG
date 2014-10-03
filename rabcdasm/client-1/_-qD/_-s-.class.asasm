@@ -15,77 +15,23 @@ class
     initscopedepth 9
     maxscopedepth 10
     code
-     pushfalse
-     pushtrue
-     setlocal3
-
-     jump                L10
-
-     pushwith
-     declocal            2
-     declocal_i          3
-     getlocal3
-     getglobalscope
-     kill                3
-L10:
-     setlocal            4
-
      getlocal0
      pushscope
-
-     getlocal3
-     dup
-     iftrue              L26
-
-     pop
-     jump                L24
-
-     add_i
-     setlocal3
-
-     istypelate
-     swap
-     decrement
-     subtract
-L24:
-     getlocal2
-     convert_b
-L26:
-     iffalse             L36
 
      getlocal0
      constructsuper      0
 
-     getlocal3
-     dup
-     iftrue              L35
-
-     pop
-     getlocal0
-     convert_b
-L35:
-     iffalse             L41
-
-L36:
      getlocal0
      getlocal1
      initproperty        QName(PackageNamespace(""), "size_")
 
-     getlocal            4
-     iftrue              L48
-
-L41:
      getlocal0
      getlocal2
      initproperty        QName(PrivateNamespace("*", "_-qD:_-s-"), "_-Mb")
 
-     getlocal            4
-     iftrue              L48
-
      getlocal0
      callpropvoid        QName(PackageNamespace(""), "redraw"), 0
 
-L48:
      returnvoid
     end ; code
    end ; body
@@ -104,53 +50,14 @@ L48:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      bitxor
-      declocal            2
-      kill                3
-      popscope
-      getlocal2
-      inclocal_i          3
-L10:
-      setlocal3
-
-      setlocal            4
-
       getlocal0
       pushscope
 
-      getlocal            4
-      dup
-      iftrue              L27
-
-      pop
-      getlocal1
-      jump                L26
-
-      getlocal2
-      kill                3
-      getlocal2
-      kill                3
-      inclocal            2
-      getglobalscope
-L26:
-      convert_b
-L27:
-      iffalse             L49
-
       getlocal0
-      getlocal3
-      iftrue              L34
-
       getlocal1
       pushnull
-      ifeq                L44
+      ifeq                L16
 
-L34:
       getlocal0
       getlocal1
       callproperty        QName(PackageNamespace(""), "clone"), 0
@@ -162,22 +69,17 @@ L34:
       getlocal2
       kill                2
       coerce              QName(PackageNamespace("_-4x"), "_-0Iy")
-      jump                L46
+      jump                L18
 
-L44:
+L16:
       pushnull
       coerce              QName(PackageNamespace("_-4x"), "_-0Iy")
-L46:
+L18:
       initproperty        QName(PackageNamespace(""), "_-Ud")
 
-      getlocal3
-      iftrue              L51
-
-L49:
       getlocal0
       callpropvoid        QName(PackageNamespace(""), "redraw"), 0
 
-L51:
       returnvoid
      end ; code
     end ; body
@@ -193,61 +95,20 @@ L51:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      setlocal1
-
-      jump                L10
-
-      newactivation
-      popscope
-      bitand
-      modulo
-      urshift
-      bitand
-L10:
-      setlocal2
-
       getlocal0
       pushscope
-
-      getlocal1
-      dup
-      iftrue              L26
-
-      pop
-      getlocal2
-      convert_b
-      jump                L26
-
-      pushnan
-      newactivation
-      setlocal2
-
-      convert_s
-      negate
-      multiply
-L26:
-      iffalse             L32
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-Ud")
       pushnull
       equals
-      iffalse             L39
+      iffalse             L10
 
-L32:
       pushbyte            0
-      getlocal2
-      iftrue              L50
-
       convert_u
-      getlocal1
-      iffalse             L51
+      jump                L22
 
-      jump                L51
-
-L39:
+L10:
       getlex              QName(PackageNamespace("com.company.util"), "MoreColorUtil")
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-Ud")
@@ -259,9 +120,8 @@ L39:
       getproperty         QName(PackageNamespace(""), "_-Ud")
       getproperty         QName(PackageNamespace(""), "_-fz")
       callproperty        QName(PackageNamespace(""), "_-nL"), 3
-L50:
       convert_u
-L51:
+L22:
       returnvalue
      end ; code
     end ; body
@@ -277,85 +137,38 @@ L51:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      greaterequals
-      pushnan
-      pushundefined
-      getglobalscope
-      bitor
-      strictequals
-L10:
-      setlocal1
-
-      setlocal2
-
       getlocal0
       pushscope
 
       getlex              QName(PackageNamespace(""), "graphics")
       callpropvoid        QName(PackageNamespace(""), "clear"), 0
 
-      getlocal1
-      iftrue              L22
-
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-Ud")
       pushnull
-      ifne                L48
+      ifne                L20
 
-L22:
       getlex              QName(PackageNamespace(""), "graphics")
       pushbyte            0
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-qD:_-s-"), "_-Mb")
-      iffalse             L37
+      iffalse             L16
 
       pushdouble          0
       convert_d
-      jump                L39
+      jump                L18
 
-      jump                L37
-
-      multiply
-      pushundefined
-      strictequals
-      negate_i
-      getlocal1
-      equals
-L37:
+L16:
       pushbyte            1
       convert_d
-L39:
+L18:
       callpropvoid        QName(PackageNamespace(""), "beginFill"), 2
 
-      getlocal1
-      dup
-      iffalse             L46
+      jump                L33
 
-      pop
-      getlocal2
-      convert_b
-L46:
-      iftrue              L80
-
-      jump                L68
-
-L48:
+L20:
       getlex              QName(PackageNamespace(""), "graphics")
       getlex              QName(PackageNamespace("com.company.util"), "MoreColorUtil")
-      jump                L57
-
-      add
-      convert_d
-      multiply_i
-      multiply_i
-      popscope
-      modulo
-L57:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-Ud")
       getproperty         QName(PackageNamespace(""), "h_")
@@ -368,7 +181,7 @@ L57:
       callproperty        QName(PackageNamespace(""), "_-nL"), 3
       callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
 
-L68:
+L33:
       getlex              QName(PackageNamespace(""), "graphics")
       pushbyte            0
       dup
@@ -378,13 +191,9 @@ L68:
       getproperty         QName(PackageNamespace(""), "size_")
       callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
 
-      getlocal1
-      iftrue              L80
-
       getlex              QName(PackageNamespace(""), "graphics")
       callpropvoid        QName(PackageNamespace(""), "endFill"), 0
 
-L80:
       returnvoid
      end ; code
     end ; body

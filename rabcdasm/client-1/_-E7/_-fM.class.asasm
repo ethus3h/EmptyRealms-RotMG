@@ -13,32 +13,12 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     setlocal3
-
-     jump                L10
-
-     checkfilter
-     setlocal2
-
-     inclocal            3
-     inclocal            3
-     declocal_i          3
-     inclocal_i          2
-L10:
-     setlocal            4
-
      getlocal0
      pushscope
-
-     getlocal3
-     iffalse             L17
 
      getlocal0
      constructsuper      0
 
-L17:
      findpropstrict      QName(PackageNamespace("_-05H"), "_-09A")
      constructprop       QName(PackageNamespace("_-05H"), "_-09A"), 0
      coerce              QName(PackageNamespace("_-05H"), "_-09A")
@@ -49,22 +29,9 @@ L17:
      coerce              QName(PackageNamespace("_-05H"), "_-MK")
      setlocal2
 
-     getlocal            4
-     dup
-     iffalse             L31
-
-     pop
-     getlocal2
-     convert_b
-L31:
-     iftrue              L143
-
      getlocal0
      newobject           0
      initproperty        QName(PrivateNamespace("*", "_-E7:_-fM#0"), "hash")
-
-     getlocal            4
-     iftrue              L209
 
      getlocal0
      getproperty         QName(PrivateNamespace("*", "_-E7:_-fM#0"), "hash")
@@ -87,9 +54,6 @@ L31:
      getlocal1
      setproperty         MultinameL([PrivateNamespace("*", "_-E7:_-fM#0"), PackageNamespace(""), PrivateNamespace("*", "_-E7:_-fM#1"), PackageNamespace("_-E7"), PackageInternalNs("_-E7"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1i"), StaticProtectedNs("_-1i")])
 
-     getlocal3
-     iffalse             L86
-
      getlocal0
      getproperty         QName(PrivateNamespace("*", "_-E7:_-fM#0"), "hash")
      getlex              QName(PackageNamespace("com.company.assembleegameclient.ui"), "Slot")
@@ -106,9 +70,6 @@ L31:
      constructprop       QName(PackageNamespace("_-05H"), "_-zr"), 0
      setproperty         MultinameL([PrivateNamespace("*", "_-E7:_-fM#0"), PackageNamespace(""), PrivateNamespace("*", "_-E7:_-fM#1"), PackageNamespace("_-E7"), PackageInternalNs("_-E7"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1i"), StaticProtectedNs("_-1i")])
 
-     getlocal            4
-     iftrue              L161
-
      getlocal0
      getproperty         QName(PrivateNamespace("*", "_-E7:_-fM#0"), "hash")
      getlex              QName(PackageNamespace("com.company.assembleegameclient.ui"), "Slot")
@@ -116,17 +77,6 @@ L31:
      getlocal2
      setproperty         MultinameL([PrivateNamespace("*", "_-E7:_-fM#0"), PackageNamespace(""), PrivateNamespace("*", "_-E7:_-fM#1"), PackageNamespace("_-E7"), PackageInternalNs("_-E7"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1i"), StaticProtectedNs("_-1i")])
 
-     getlocal3
-     dup
-     iftrue              L85
-
-     pop
-     getlocal2
-     convert_b
-L85:
-     iffalse             L100
-
-L86:
      getlocal0
      getproperty         QName(PrivateNamespace("*", "_-E7:_-fM#0"), "hash")
      getlex              QName(PackageNamespace("com.company.assembleegameclient.ui"), "Slot")
@@ -141,24 +91,11 @@ L86:
      getlocal1
      setproperty         MultinameL([PrivateNamespace("*", "_-E7:_-fM#0"), PackageNamespace(""), PrivateNamespace("*", "_-E7:_-fM#1"), PackageNamespace("_-E7"), PackageInternalNs("_-E7"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1i"), StaticProtectedNs("_-1i")])
 
-     getlocal3
-     iffalse             L216
-
-L100:
      getlocal0
      getproperty         QName(PrivateNamespace("*", "_-E7:_-fM#0"), "hash")
      getlex              QName(PackageNamespace("com.company.assembleegameclient.ui"), "Slot")
      getproperty         QName(PackageNamespace(""), "_-3n")
      findpropstrict      QName(PackageNamespace("_-05H"), "_-04E")
-     jump                L112
-
-     urshift
-     inclocal            3
-     dxnslate
-     inclocal            2
-     astypelate
-     getlocal2
-L112:
      constructprop       QName(PackageNamespace("_-05H"), "_-04E"), 0
      setproperty         MultinameL([PrivateNamespace("*", "_-E7:_-fM#0"), PackageNamespace(""), PrivateNamespace("*", "_-E7:_-fM#1"), PackageNamespace("_-E7"), PackageInternalNs("_-E7"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1i"), StaticProtectedNs("_-1i")])
 
@@ -178,16 +115,6 @@ L112:
      constructprop       QName(PackageNamespace("_-05H"), "_-Lm"), 0
      setproperty         MultinameL([PrivateNamespace("*", "_-E7:_-fM#0"), PackageNamespace(""), PrivateNamespace("*", "_-E7:_-fM#1"), PackageNamespace("_-E7"), PackageInternalNs("_-E7"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1i"), StaticProtectedNs("_-1i")])
 
-     getlocal3
-     dup
-     iftrue              L134
-
-     pop
-     getlocal0
-     convert_b
-L134:
-     iffalse             L143
-
      getlocal0
      getproperty         QName(PrivateNamespace("*", "_-E7:_-fM#0"), "hash")
      getlex              QName(PackageNamespace("com.company.assembleegameclient.ui"), "Slot")
@@ -195,10 +122,6 @@ L134:
      getlocal2
      setproperty         MultinameL([PrivateNamespace("*", "_-E7:_-fM#0"), PackageNamespace(""), PrivateNamespace("*", "_-E7:_-fM#1"), PackageNamespace("_-E7"), PackageInternalNs("_-E7"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1i"), StaticProtectedNs("_-1i")])
 
-     getlocal3
-     iffalse             L223
-
-L143:
      getlocal0
      getproperty         QName(PrivateNamespace("*", "_-E7:_-fM#0"), "hash")
      getlex              QName(PackageNamespace("com.company.assembleegameclient.ui"), "Slot")
@@ -206,9 +129,6 @@ L143:
      findpropstrict      QName(PackageNamespace("_-05H"), "_-Fo")
      constructprop       QName(PackageNamespace("_-05H"), "_-Fo"), 0
      setproperty         MultinameL([PrivateNamespace("*", "_-E7:_-fM#0"), PackageNamespace(""), PrivateNamespace("*", "_-E7:_-fM#1"), PackageNamespace("_-E7"), PackageInternalNs("_-E7"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1i"), StaticProtectedNs("_-1i")])
-
-     getlocal3
-     iffalse             L167
 
      getlocal0
      getproperty         QName(PrivateNamespace("*", "_-E7:_-fM#0"), "hash")
@@ -218,10 +138,6 @@ L143:
      constructprop       QName(PackageNamespace("_-05H"), "_-oE"), 0
      setproperty         MultinameL([PrivateNamespace("*", "_-E7:_-fM#0"), PackageNamespace(""), PrivateNamespace("*", "_-E7:_-fM#1"), PackageNamespace("_-E7"), PackageInternalNs("_-E7"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1i"), StaticProtectedNs("_-1i")])
 
-     getlocal3
-     iffalse             L167
-
-L161:
      getlocal0
      getproperty         QName(PrivateNamespace("*", "_-E7:_-fM#0"), "hash")
      getlex              QName(PackageNamespace("com.company.assembleegameclient.ui"), "Slot")
@@ -229,7 +145,6 @@ L161:
      getlocal1
      setproperty         MultinameL([PrivateNamespace("*", "_-E7:_-fM#0"), PackageNamespace(""), PrivateNamespace("*", "_-E7:_-fM#1"), PackageNamespace("_-E7"), PackageInternalNs("_-E7"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1i"), StaticProtectedNs("_-1i")])
 
-L167:
      getlocal0
      getproperty         QName(PrivateNamespace("*", "_-E7:_-fM#0"), "hash")
      getlex              QName(PackageNamespace("com.company.assembleegameclient.ui"), "Slot")
@@ -237,16 +152,6 @@ L167:
      findpropstrict      QName(PackageNamespace("_-05H"), "_-J5")
      constructprop       QName(PackageNamespace("_-05H"), "_-J5"), 0
      setproperty         MultinameL([PrivateNamespace("*", "_-E7:_-fM#0"), PackageNamespace(""), PrivateNamespace("*", "_-E7:_-fM#1"), PackageNamespace("_-E7"), PackageInternalNs("_-E7"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1i"), StaticProtectedNs("_-1i")])
-
-     getlocal            4
-     dup
-     iffalse             L180
-
-     pop
-     getlocal2
-     convert_b
-L180:
-     iftrue              L209
 
      getlocal0
      getproperty         QName(PrivateNamespace("*", "_-E7:_-fM#0"), "hash")
@@ -264,26 +169,6 @@ L180:
      constructprop       QName(PackageNamespace("_-05H"), "_-X7"), 0
      setproperty         MultinameL([PrivateNamespace("*", "_-E7:_-fM#0"), PackageNamespace(""), PrivateNamespace("*", "_-E7:_-fM#1"), PackageNamespace("_-E7"), PackageInternalNs("_-E7"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1i"), StaticProtectedNs("_-1i")])
 
-     getlocal            4
-     dup
-     iffalse             L208
-
-     pop
-     getlocal0
-     jump                L207
-
-     checkfilter
-     bitnot
-     declocal            3
-     istypelate
-     dup
-     kill                3
-L207:
-     convert_b
-L208:
-     iftrue              L230
-
-L209:
      getlocal0
      getproperty         QName(PrivateNamespace("*", "_-E7:_-fM#0"), "hash")
      getlex              QName(PackageNamespace("com.company.assembleegameclient.ui"), "Slot")
@@ -292,7 +177,6 @@ L209:
      constructprop       QName(PackageNamespace("_-05H"), "_-vD"), 0
      setproperty         MultinameL([PrivateNamespace("*", "_-E7:_-fM#0"), PackageNamespace(""), PrivateNamespace("*", "_-E7:_-fM#1"), PackageNamespace("_-E7"), PackageInternalNs("_-E7"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1i"), StaticProtectedNs("_-1i")])
 
-L216:
      getlocal0
      getproperty         QName(PrivateNamespace("*", "_-E7:_-fM#0"), "hash")
      getlex              QName(PackageNamespace("com.company.assembleegameclient.ui"), "Slot")
@@ -301,7 +185,6 @@ L216:
      constructprop       QName(PackageNamespace("_-05H"), "_-5q"), 0
      setproperty         MultinameL([PrivateNamespace("*", "_-E7:_-fM#0"), PackageNamespace(""), PrivateNamespace("*", "_-E7:_-fM#1"), PackageNamespace("_-E7"), PackageInternalNs("_-E7"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1i"), StaticProtectedNs("_-1i")])
 
-L223:
      getlocal0
      getproperty         QName(PrivateNamespace("*", "_-E7:_-fM#0"), "hash")
      getlex              QName(PackageNamespace("com.company.assembleegameclient.ui"), "Slot")
@@ -310,7 +193,6 @@ L223:
      constructprop       QName(PackageNamespace("_-05H"), "_-WC"), 0
      setproperty         MultinameL([PrivateNamespace("*", "_-E7:_-fM#0"), PackageNamespace(""), PrivateNamespace("*", "_-E7:_-fM#1"), PackageNamespace("_-E7"), PackageInternalNs("_-E7"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-1i"), StaticProtectedNs("_-1i")])
 
-L230:
      returnvoid
     end ; code
    end ; body
@@ -328,22 +210,6 @@ L230:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal            6
-
-      jump                L10
-
-      kill                3
-      declocal            3
-      setlocal            6
-
-      kill                5
-      negate
-      declocal_i          6
-L10:
-      setlocal            7
-
       getlocal0
       pushscope
 
@@ -366,85 +232,31 @@ L10:
       coerce              QName(PackageNamespace("_-E7"), "_-RN")
       setlocal            5
 
-      getlocal            7
-      dup
-      iffalse             L42
-
-      pop
-      getlocal1
-      jump                L41
-
-      getlocal            6
-      rshift
-      getlocal            6
-      inclocal_i          3
-      inclocal            3
-      kill                6
-L41:
-      convert_b
-L42:
-      iftrue              L83
-
       getlocal            4
       pushnull
-      ifeq                L87
-
-      getlocal            7
-      iftrue              L87
+      ifeq                L37
 
       getlocal            4
       getlocal1
       getlocal2
       callpropvoid        QName(PackageNamespace(""), "_-NQ"), 2
 
-      getlocal            7
-      dup
-      iffalse             L65
-
-      pop
-      getlocal0
-      convert_b
-      jump                L65
-
-      popscope
-      strictequals
-      getlocal            6
-      dup
-      declocal            5
-      getlocal            6
-L65:
-      iftrue              L83
-
       getlocal            5
       getlocal            4
       getproperty         QName(PackageNamespace(""), "_-t4")
       setproperty         QName(PackageNamespace(""), "text")
-
-      getlocal            6
-      dup
-      iftrue              L76
-
-      pop
-      getlocal0
-      convert_b
-L76:
-      iffalse             L83
 
       getlocal            5
       getlocal            4
       getproperty         QName(PackageNamespace(""), "_-5n")
       setproperty         QName(PackageNamespace(""), "_-5n")
 
-      getlocal            7
-      iftrue              L87
-
-L83:
       getlocal            5
       getlocal            4
       getproperty         QName(PackageNamespace(""), "_-P3")
       setproperty         QName(PackageNamespace(""), "_-P3")
 
-L87:
+L37:
       getlocal            5
       returnvalue
      end ; code

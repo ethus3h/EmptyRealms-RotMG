@@ -414,7 +414,7 @@ L94:
       add
       initproperty        QName(PackageNamespace(""), "y")
 
-      jump                L326
+      jump                L323
 
 L111:
       label
@@ -439,7 +439,7 @@ L111:
       subtract
       initproperty        QName(PackageNamespace(""), "y")
 
-      jump                L326
+      jump                L323
 
 L132:
       label
@@ -460,7 +460,7 @@ L132:
       subtract
       initproperty        QName(PackageNamespace(""), "y")
 
-      jump                L326
+      jump                L323
 
 L149:
       label
@@ -485,7 +485,7 @@ L149:
       subtract
       initproperty        QName(PackageNamespace(""), "y")
 
-      jump                L326
+      jump                L323
 
 L170:
       label
@@ -509,7 +509,7 @@ L170:
       subtract
       initproperty        QName(PackageNamespace(""), "y")
 
-      jump                L326
+      jump                L323
 
 L190:
       label
@@ -527,7 +527,7 @@ L190:
       add
       initproperty        QName(PackageNamespace(""), "y")
 
-      jump                L326
+      jump                L323
 
 L204:
       label
@@ -549,7 +549,7 @@ L204:
       add
       initproperty        QName(PackageNamespace(""), "y")
 
-      jump                L326
+      jump                L323
 
 L222:
       label
@@ -571,7 +571,7 @@ L222:
       subtract
       initproperty        QName(PackageNamespace(""), "y")
 
-      jump                L326
+      jump                L323
 
 L240:
       label
@@ -597,11 +597,11 @@ L240:
       subtract
       initproperty        QName(PackageNamespace(""), "y")
 
-      jump                L326
+      jump                L323
 
 L262:
       label
-      jump                L326
+      jump                L323
 
 L264:
       getlocal1
@@ -613,7 +613,7 @@ L264:
       ifstrictne          L272
 
       pushbyte            0
-      jump                L324
+      jump                L321
 
 L272:
       getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
@@ -622,7 +622,7 @@ L272:
       ifstrictne          L278
 
       pushbyte            1
-      jump                L324
+      jump                L321
 
 L278:
       getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
@@ -631,7 +631,7 @@ L278:
       ifstrictne          L284
 
       pushbyte            2
-      jump                L324
+      jump                L321
 
 L284:
       getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
@@ -640,7 +640,7 @@ L284:
       ifstrictne          L290
 
       pushbyte            3
-      jump                L324
+      jump                L321
 
 L290:
       getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
@@ -649,7 +649,7 @@ L290:
       ifstrictne          L296
 
       pushbyte            4
-      jump                L324
+      jump                L321
 
 L296:
       getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
@@ -658,7 +658,7 @@ L296:
       ifstrictne          L302
 
       pushbyte            5
-      jump                L324
+      jump                L321
 
 L302:
       getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
@@ -667,7 +667,7 @@ L302:
       ifstrictne          L308
 
       pushbyte            6
-      jump                L324
+      jump                L321
 
 L308:
       getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
@@ -676,7 +676,7 @@ L308:
       ifstrictne          L314
 
       pushbyte            7
-      jump                L324
+      jump                L321
 
 L314:
       getlex              QName(PackageNamespace("com.google.analytics.debug"), "Align")
@@ -685,25 +685,19 @@ L314:
       ifstrictne          L320
 
       pushbyte            8
-      jump                L324
+      jump                L321
 
 L320:
-      jump                L323
-
       pushbyte            9
-      jump                L324
-
-L323:
-      pushbyte            9
-L324:
+L321:
       kill                8
       lookupswitch        L262, [L94, L111, L132, L149, L170, L190, L204, L222, L240, L262]
 
-L326:
+L323:
       getlex              QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "listenResize")
       not
       dup
-      iffalse             L336
+      iffalse             L333
 
       pop
       getlocal1
@@ -711,8 +705,8 @@ L326:
       getproperty         QName(PackageNamespace(""), "none")
       equals
       not
-L336:
-      iffalse             L348
+L333:
+      iffalse             L345
 
       getlocal2
       getlex              QName(PackageNamespace("flash.events"), "Event")
@@ -727,7 +721,7 @@ L336:
       pushtrue
       initproperty        QName(ProtectedNamespace("com.google.analytics.debug:UISprite"), "listenResize")
 
-L348:
+L345:
       getlocal0
       getlocal1
       setproperty         QName(PackageNamespace(""), "alignement")

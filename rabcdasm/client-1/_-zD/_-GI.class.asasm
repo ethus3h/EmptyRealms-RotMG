@@ -13,38 +13,12 @@ class
     initscopedepth 5
     maxscopedepth 6
     code
-     pushfalse
-     pushtrue
-     setlocal1
-
-     jump                L10
-
-     modulo
-     typeof
-     subtract
-     convert_d
-     urshift
-     pushnan
-L10:
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal2
-     dup
-     iffalse             L19
-
-     pop
-     getlocal0
-     convert_b
-L19:
-     iftrue              L22
 
      getlocal0
      constructsuper      0
 
-L22:
      returnvoid
     end ; code
    end ; body
@@ -67,34 +41,8 @@ L22:
      initscopedepth 5
      maxscopedepth 6
      code
-      pushfalse
-      pushtrue
-      setlocal1
-
-      jump                L10
-
-      equals
-      rshift
-      istypelate
-      setlocal3
-
-      pushfalse
-      getlocal0
-L10:
-      setlocal2
-
       getlocal0
       pushscope
-
-      getlocal1
-      dup
-      iftrue              L19
-
-      pop
-      getlocal0
-      convert_b
-L19:
-      iffalse             L26
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "view")
@@ -103,7 +51,6 @@ L19:
       getproperty         QName(PrivateNamespace("*", "_-zD:_-GI"), "_-8b")
       callpropvoid        QName(PackageNamespace(""), "add"), 1
 
-L26:
       returnvoid
      end ; code
     end ; body
@@ -119,36 +66,8 @@ L26:
      initscopedepth 5
      maxscopedepth 6
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      strictequals
-      pushfalse
-      setlocal3
-
-      pushscope
-
-      strictequals
-      coerce_a
-L10:
-      setlocal1
-
-      setlocal2
-
       getlocal0
       pushscope
-
-      getlocal1
-      dup
-      iffalse             L20
-
-      pop
-      getlocal0
-      convert_b
-L20:
-      iftrue              L27
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "view")
@@ -157,7 +76,6 @@ L20:
       getproperty         QName(PrivateNamespace("*", "_-zD:_-GI"), "_-8b")
       callpropvoid        QName(PackageNamespace(""), "remove"), 1
 
-L27:
       returnvoid
      end ; code
     end ; body
@@ -173,27 +91,8 @@ L27:
      initscopedepth 5
      maxscopedepth 6
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      strictequals
-      bitand
-      coerce_a
-      pushnull
-      astypelate
-      greaterequals
-L10:
-      setlocal1
-
-      setlocal2
-
       getlocal0
       pushscope
-
-      getlocal2
-      iffalse             L21
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-0-b")
@@ -201,7 +100,6 @@ L10:
       constructprop       QName(PackageNamespace("_-F1"), "_-0H2"), 0
       callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
 
-L21:
       returnvoid
      end ; code
     end ; body

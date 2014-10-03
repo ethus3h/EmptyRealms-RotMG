@@ -14,91 +14,28 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     inclocal            2
-     astypelate
-     declocal            2
-     declocal_i          2
-     inclocal            2
-     getglobalscope
-L10:
-     setlocal2
-
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal3
-     iffalse             L58
 
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "String")
      constructprop       QName(PackageNamespace(""), "String"), 0
      initproperty        QName(PackageNamespace(""), "name_")
 
-     jump                L27
-
-     newactivation
-     lessthan
-     divide
-     getlocal2
-     not
-     setlocal2
-
-L27:
-     getlocal3
-     dup
-     iftrue              L40
-
-     pop
-     jump                L38
-
-     getlocal2
-     pushundefined
-     declocal            2
-     pushnull
-     getlocal1
-     convert_s
-L38:
-     getlocal3
-     convert_b
-L40:
-     iffalse             L61
-
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "String")
      constructprop       QName(PackageNamespace(""), "String"), 0
      initproperty        QName(PackageNamespace(""), "text_")
-
-     getlocal3
-     dup
-     iftrue              L51
-
-     pop
-     getlocal2
-     convert_b
-L51:
-     iffalse             L61
 
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "String")
      constructprop       QName(PackageNamespace(""), "String"), 0
      initproperty        QName(PackageNamespace(""), "cleanText_")
 
-     getlocal2
-     iftrue              L61
-
-L58:
      getlocal0
      getlocal1
      constructsuper      1
 
-L61:
      returnvoid
     end ; code
    end ; body
@@ -121,21 +58,6 @@ L61:
      initscopedepth 6
      maxscopedepth 7
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      inclocal            2
-      getlocal2
-      bitnot
-      getlocal2
-      coerce_a
-      multiply_i
-L10:
-      setlocal3
-
       getlocal0
       pushscope
 
@@ -149,72 +71,31 @@ L10:
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
       initproperty        QName(PackageNamespace(""), "objectId_")
 
-      getlocal3
-      iftrue              L64
-
       getlocal0
-      jump                L31
-
-      bitand
-      declocal            2
-      newactivation
-      hasnext
-      istypelate
-      declocal_i          2
-L31:
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
       initproperty        QName(PackageNamespace(""), "numStars_")
 
-      getlocal2
-      iffalse             L68
-
       getlocal0
       getlocal1
-      jump                L45
-
-      inclocal            2
-      setlocal2
-
-      declocal            2
-      instanceof
-      inclocal            2
-      inclocal_i          2
-L45:
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readUnsignedByte"), 0
       initproperty        QName(PackageNamespace(""), "bubbleTime_")
-
-      getlocal3
-      iftrue              L60
 
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readUTF"), 0
       initproperty        QName(PackageNamespace(""), "recipient_")
 
-      getlocal3
-      dup
-      iffalse             L59
-
-      pop
-      getlocal1
-      convert_b
-L59:
-      iftrue              L64
-
-L60:
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readUTF"), 0
       initproperty        QName(PackageNamespace(""), "text_")
 
-L64:
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readUTF"), 0
       initproperty        QName(PackageNamespace(""), "cleanText_")
 
-L68:
       returnvoid
      end ; code
     end ; body
@@ -234,15 +115,6 @@ L68:
       pushscope
 
       findpropstrict      QName(ProtectedNamespace("_-1E"), "formatToString")
-      jump                L10
-
-      getglobalscope
-      subtract_i
-      pop
-      convert_u
-      popscope
-      bitnot
-L10:
       pushstring          "TEXT"
       pushstring          "name_"
       pushstring          "objectId_"

@@ -16,135 +16,48 @@ class
     initscopedepth 5
     maxscopedepth 6
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     declocal_i          4
-     kill                3
-     increment_i
-     declocal            3
-     getlocal3
-     setlocal            4
-
-L10:
-     setlocal            4
-
-     setlocal            5
-
      getlocal0
      pushscope
 
-     getlocal            4
-     iftrue              L30
-
      getlocal0
      constructsuper      0
-
-     getlocal            4
-     dup
-     iffalse             L24
-
-     pop
-     getlocal3
-     convert_b
-L24:
-     iftrue              L87
 
      getlocal0
      getlocal1
      initproperty        QName(PackageNamespace(""), "_-fD")
 
-     getlocal            4
-     iftrue              L69
-
-L30:
      getlocal0
-     getlocal            4
-     dup
-     jump                L40
-
-     declocal_i          3
-     swap
-     setlocal3
-
-     getglobalscope
-     pushtrue
-     add_i
-L40:
-     iffalse             L44
-
-     pop
-     getlocal0
-     convert_b
-L44:
-     iftrue              L48
-
      getlocal2
      pushnull
-     ifeq                L52
+     ifeq                L15
 
-L48:
      getlocal2
      callproperty        QName(PackageNamespace(""), "clone"), 0
      coerce              QName(PackageNamespace("_-4x"), "_-0Iy")
-     jump                L54
+     jump                L17
 
-L52:
+L15:
      pushnull
      coerce              QName(PackageNamespace("_-4x"), "_-0Iy")
-L54:
+L17:
      initproperty        QName(PackageNamespace(""), "_-0-a")
 
-     getlocal            5
-     dup
-     jump                L64
-
-     convert_o
-     typeof
-     subtract_i
-     add_i
-     inclocal_i          3
-     inclocal_i          3
-L64:
-     iftrue              L68
-
-     pop
-     getlocal2
-     convert_b
-L68:
-     iffalse             L87
-
-L69:
      getlocal0
-     getlocal            5
-     dup
-     iftrue              L76
-
-     pop
-     getlocal2
-     convert_b
-L76:
-     iffalse             L80
-
      getlocal3
      pushnull
-     ifeq                L84
+     ifeq                L26
 
-L80:
      getlocal3
      callproperty        QName(PackageNamespace(""), "clone"), 0
      coerce              QName(PackageNamespace("_-4x"), "_-0Iy")
-     jump                L86
+     jump                L28
 
-L84:
+L26:
      pushnull
      coerce              QName(PackageNamespace("_-4x"), "_-0Iy")
-L86:
+L28:
      initproperty        QName(PackageNamespace(""), "_-00t")
 
-L87:
      returnvoid
     end ; code
    end ; body
@@ -162,26 +75,8 @@ L87:
      initscopedepth 5
      maxscopedepth 6
      code
-      pushfalse
-      pushtrue
-      setlocal1
-
-      jump                L10
-
-      decrement
-      rshift
-      multiply
-      coerce_a
-      hasnext
-      pushnan
-L10:
-      setlocal2
-
       getlocal0
       pushscope
-
-      getlocal2
-      iftrue              L20
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-fD")
@@ -189,7 +84,6 @@ L10:
       getproperty         QName(PackageNamespace(""), "_-00t")
       callpropvoid        QName(PackageNamespace(""), "_-LV"), 1
 
-L20:
       returnvoid
      end ; code
     end ; body
@@ -205,28 +99,8 @@ L20:
      initscopedepth 5
      maxscopedepth 6
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      add_i
-      getlocal2
-      istypelate
-      negate_i
-      not
-      setlocal2
-
-L10:
-      setlocal1
-
-      setlocal2
-
       getlocal0
       pushscope
-
-      getlocal1
-      iftrue              L21
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-fD")
@@ -234,7 +108,6 @@ L10:
       getproperty         QName(PackageNamespace(""), "_-0-a")
       callpropvoid        QName(PackageNamespace(""), "_-LV"), 1
 
-L21:
       returnvoid
      end ; code
     end ; body

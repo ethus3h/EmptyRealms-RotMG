@@ -14,84 +14,23 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     setlocal3
-
-     jump                L10
-
-     declocal_i          2
-     popscope
-     convert_i
-     setlocal2
-
-     not
-     declocal            3
-L10:
-     setlocal            4
-
      getlocal0
      pushscope
-
-     getlocal            4
-     iftrue              L17
 
      getlocal0
      constructsuper      0
 
-L17:
      getlex              QName(PackageNamespace("com.company.util"), "ConversionUtil")
      getlocal1
      callproperty        QName(PackageNamespace(""), "_-b3"), 1
      coerce              QName(PackageNamespace(""), "Array")
      setlocal2
 
-     getlocal3
-     dup
-     jump                L31
-
-     pushfalse
-     inclocal            2
-     setlocal2
-
-     bitxor
-     pushscope
-
-     inclocal_i          3
-L31:
-     iftrue              L35
-
-     pop
-     getlocal2
-     convert_b
-L35:
-     iffalse             L68
-
      getlocal0
      getlocal2
-     jump                L45
-
-     declocal_i          3
-     astypelate
-     negate
-     setlocal3
-
-     greaterthan
-     getlocal3
-L45:
      pushbyte            0
      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.tutorial:UIDrawArrow/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.tutorial:UIDrawArrow/iinit#1"), PackageNamespace("com.company.assembleegameclient.tutorial"), PackageInternalNs("com.company.assembleegameclient.tutorial"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Aj"), StaticProtectedNs("_-Aj")])
      initproperty        QName(PackageNamespace(""), "p0_")
-
-     getlocal            4
-     dup
-     iffalse             L54
-
-     pop
-     getlocal1
-     convert_b
-L54:
-     iftrue              L62
 
      getlocal0
      getlocal2
@@ -99,10 +38,6 @@ L54:
      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.tutorial:UIDrawArrow/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.tutorial:UIDrawArrow/iinit#1"), PackageNamespace("com.company.assembleegameclient.tutorial"), PackageInternalNs("com.company.assembleegameclient.tutorial"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Aj"), StaticProtectedNs("_-Aj")])
      initproperty        QName(PackageNamespace(""), "p1_")
 
-     getlocal3
-     iffalse             L68
-
-L62:
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "uint")
      getlocal1
@@ -110,7 +45,6 @@ L62:
      callproperty        QName(PackageNamespace(""), "uint"), 1
      initproperty        QName(PackageNamespace(""), "color_")
 
-L68:
      returnvoid
     end ; code
    end ; body
@@ -132,23 +66,6 @@ L68:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal            7
-
-      jump                L10
-
-      strictequals
-      inclocal_i          6
-      pushscope
-
-      setlocal3
-
-      getlocal2
-      add_i
-L10:
-      setlocal            8
-
       getlocal0
       pushscope
 
@@ -164,10 +81,7 @@ L10:
       getlocal3
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-c5")
-      ifnlt               L70
-
-      getlocal            8
-      iftrue              L44
+      ifnlt               L50
 
       getlocal            4
       getlocal0
@@ -188,7 +102,6 @@ L10:
       add
       setproperty         QName(PackageNamespace(""), "x")
 
-L44:
       getlocal            4
       getlocal0
       getproperty         QName(PackageNamespace(""), "p0_")
@@ -208,58 +121,27 @@ L44:
       add
       setproperty         QName(PackageNamespace(""), "y")
 
-      getlocal            7
-      dup
-      iftrue              L68
+      jump                L60
 
-      pop
-      getlocal1
-      convert_b
-L68:
-      iffalse             L75
-
-      jump                L87
-
-L70:
+L50:
       getlocal            4
       getlocal0
       getproperty         QName(PackageNamespace(""), "p1_")
       getproperty         QName(PackageNamespace(""), "x")
       setproperty         QName(PackageNamespace(""), "x")
 
-L75:
       getlocal            4
       getlocal0
       getproperty         QName(PackageNamespace(""), "p1_")
       getproperty         QName(PackageNamespace(""), "y")
-      jump                L86
-
-      setlocal            4
-
-      kill                3
-      getlocal2
-      bitnot
-      decrement
-      declocal            7
-L86:
       setproperty         QName(PackageNamespace(""), "y")
 
-L87:
+L60:
       getlocal2
       getlocal1
       getlocal0
       getproperty         QName(PackageNamespace(""), "color_")
       callpropvoid        QName(PackageNamespace(""), "lineStyle"), 2
-
-      getlocal            8
-      dup
-      iffalse             L98
-
-      pop
-      getlocal0
-      convert_b
-L98:
-      iftrue              L109
 
       getlocal2
       getlocal0
@@ -270,10 +152,6 @@ L98:
       getproperty         QName(PackageNamespace(""), "y")
       callpropvoid        QName(PackageNamespace(""), "moveTo"), 2
 
-      getlocal            8
-      iftrue              L115
-
-L109:
       getlocal2
       getlocal            4
       getproperty         QName(PackageNamespace(""), "x")
@@ -281,17 +159,12 @@ L109:
       getproperty         QName(PackageNamespace(""), "y")
       callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
 
-L115:
       getlex              QName(PackageNamespace("com.company.util"), "PointUtil")
       getlocal            4
       getlocal0
       getproperty         QName(PackageNamespace(""), "p0_")
       callproperty        QName(PackageNamespace(""), "_-Cq"), 2
-      getlocal            8
-      iftrue              L123
-
       convert_d
-L123:
       setlocal            5
 
       getlex              QName(PackageNamespace("com.company.util"), "PointUtil")
@@ -307,9 +180,6 @@ L123:
       coerce              QName(PackageNamespace("flash.geom"), "Point")
       setlocal            6
 
-      getlocal            7
-      iffalse             L144
-
       getlocal2
       getlocal            6
       getproperty         QName(PackageNamespace(""), "x")
@@ -317,21 +187,11 @@ L123:
       getproperty         QName(PackageNamespace(""), "y")
       callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
 
-L144:
       getlex              QName(PackageNamespace("com.company.util"), "PointUtil")
       getlocal            4
       getlocal            5
       getlex              QName(PackageNamespace(""), "Math")
       getproperty         QName(PackageNamespace(""), "PI")
-      jump                L156
-
-      getlocal2
-      getlocal            6
-      pushfalse
-      kill                2
-      inclocal            4
-      rshift
-L156:
       pushbyte            8
       divide
       subtract
@@ -340,9 +200,6 @@ L156:
       coerce              QName(PackageNamespace("flash.geom"), "Point")
       setlocal            6
 
-      getlocal            7
-      iffalse             L173
-
       getlocal2
       getlocal            4
       getproperty         QName(PackageNamespace(""), "x")
@@ -350,10 +207,6 @@ L156:
       getproperty         QName(PackageNamespace(""), "y")
       callpropvoid        QName(PackageNamespace(""), "moveTo"), 2
 
-      getlocal            7
-      iffalse             L179
-
-L173:
       getlocal2
       getlocal            6
       getproperty         QName(PackageNamespace(""), "x")
@@ -361,7 +214,6 @@ L173:
       getproperty         QName(PackageNamespace(""), "y")
       callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
 
-L179:
       returnvoid
      end ; code
     end ; body

@@ -14,35 +14,8 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     kill                2
-     declocal            2
-     setlocal2
-
-     nextvalue
-     getlocal2
-     getlocal2
-L10:
-     setlocal2
-
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal2
-     dup
-     iffalse             L20
-
-     pop
-     getlocal1
-     convert_b
-L20:
-     iftrue              L72
 
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "String")
@@ -51,21 +24,8 @@ L20:
 
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "String")
-     jump                L34
-
-     setlocal2
-
-     add_i
-     inclocal            2
-     equals
-     kill                2
-     instanceof
-L34:
      constructprop       QName(PackageNamespace(""), "String"), 0
      initproperty        QName(PackageNamespace(""), "guid_")
-
-     getlocal3
-     iffalse             L72
 
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "String")
@@ -75,50 +35,22 @@ L34:
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "String")
      constructprop       QName(PackageNamespace(""), "String"), 0
-     jump                L52
-
-     coerce_a
-     kill                2
-     setlocal2
-
-     getlocal2
-     astypelate
-     bitand
-L52:
      initproperty        QName(PackageNamespace(""), "secret_")
-
-     getlocal3
-     iffalse             L75
 
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
      constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
      initproperty        QName(PackageNamespace(""), "key_")
 
-     getlocal3
-     iffalse             L75
-
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "String")
      constructprop       QName(PackageNamespace(""), "String"), 0
      initproperty        QName(PackageNamespace(""), "_-2B")
 
-     getlocal3
-     dup
-     iftrue              L71
-
-     pop
-     getlocal3
-     convert_b
-L71:
-     iffalse             L75
-
-L72:
      getlocal0
      getlocal1
      constructsuper      1
 
-L75:
      returnvoid
     end ; code
    end ; body
@@ -146,27 +78,8 @@ L75:
      initscopedepth 6
      maxscopedepth 7
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      setlocal2
-
-      rshift
-      getlocal2
-      getlocal2
-      kill                2
-      getlocal2
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      iffalse             L33
 
       getlocal1
       getlocal0
@@ -188,17 +101,10 @@ L10:
       getproperty         QName(PackageNamespace(""), "password_")
       callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeUTF"), 1
 
-      getlocal2
-      iffalse             L109
-
-L33:
       getlocal1
       getlocal0
       getproperty         QName(PackageNamespace(""), "secret_")
       callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeUTF"), 1
-
-      getlocal3
-      iftrue              L101
 
       getlocal1
       getlocal0
@@ -206,18 +112,6 @@ L33:
       callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeInt"), 1
 
       getlocal1
-      jump                L51
-
-      equals
-      popscope
-      inclocal            2
-      setlocal2
-
-      setlocal2
-
-      setlocal3
-
-L51:
       getlocal0
       getproperty         QName(PackageNamespace(""), "key_")
       getproperty         QName(PackageNamespace(""), "length")
@@ -228,77 +122,37 @@ L51:
       getproperty         QName(PackageNamespace(""), "key_")
       callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeBytes"), 1
 
-      getlocal2
-      iffalse             L73
-
       getlocal1
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-2B")
       getproperty         QName(PackageNamespace(""), "length")
       callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeInt"), 1
 
-      getlocal2
-      dup
-      iftrue              L72
-
-      pop
-      getlocal0
-      convert_b
-L72:
-      iffalse             L109
-
-L73:
       getlocal1
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-2B")
       callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeUTFBytes"), 1
-
-      getlocal2
-      dup
-      jump                L86
-
-      inclocal            2
-      setlocal2
-
-      kill                2
-      multiply
-      greaterthan
-      getlocal3
-L86:
-      iftrue              L90
-
-      pop
-      getlocal3
-      convert_b
-L90:
-      iffalse             L101
 
       getlocal1
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-8U")
       callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeUTF"), 1
 
-      getlocal2
-      iffalse             L105
-
       getlocal1
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-yt")
       callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeUTF"), 1
 
-L101:
       getlocal1
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-Jk")
       callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeUTF"), 1
 
-L105:
       getlocal1
       getlocal0
       getproperty         QName(PackageNamespace(""), "playPlatform")
       callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeUTF"), 1
 
-L109:
       returnvoid
      end ; code
     end ; body
@@ -318,15 +172,6 @@ L109:
       pushscope
 
       findpropstrict      QName(ProtectedNamespace("_-1E"), "formatToString")
-      jump                L10
-
-      swap
-      lessequals
-      convert_d
-      typeof
-      pushundefined
-      increment
-L10:
       pushstring          "HELLO"
       pushstring          "buildVersion_"
       pushstring          "gameId_"

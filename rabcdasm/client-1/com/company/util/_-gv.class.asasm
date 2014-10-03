@@ -13,31 +13,12 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     setlocal1
-
-     jump                L10
-
-     strictequals
-     pushnull
-     pushundefined
-     checkfilter
-     pop
-     coerce_a
-L10:
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal1
-     iffalse             L17
 
      getlocal0
      constructsuper      0
 
-L17:
      returnvoid
     end ; code
    end ; body
@@ -72,15 +53,6 @@ L17:
      pushscope
 
      findpropstrict      QName(PrivateNamespace("*", "com.company.util:_-gv"), "_-Nc")
-     jump                L10
-
-     pushtrue
-     add
-     astypelate
-     add
-     negate
-     bitxor
-L10:
      pushstring          "avHardwareDisable"
      callproperty        QName(PrivateNamespace("*", "com.company.util:_-gv"), "_-Nc"), 1
      findpropstrict      QName(PrivateNamespace("*", "com.company.util:_-gv"), "_-Nc")
@@ -124,15 +96,6 @@ L10:
      callproperty        QName(PrivateNamespace("*", "com.company.util:_-gv"), "_-Nc"), 1
      add
      findpropstrict      QName(PrivateNamespace("*", "com.company.util:_-gv"), "_-Nc")
-     jump                L60
-
-     convert_b
-     bitnot
-     coerce_s
-     convert_s
-     bitor
-     bitand
-L60:
      pushstring          "hasStreamingVideo"
      callproperty        QName(PrivateNamespace("*", "com.company.util:_-gv"), "_-Nc"), 1
      add
@@ -169,15 +132,6 @@ L60:
      callproperty        QName(PrivateNamespace("*", "com.company.util:_-gv"), "_-Nc"), 1
      add
      findpropstrict      QName(PrivateNamespace("*", "com.company.util:_-gv"), "_-Nc")
-     jump                L103
-
-     greaterequals
-     nextvalue
-     hasnext
-     dup
-     hasnext
-     pushnan
-L103:
      pushstring          "playerType"
      callproperty        QName(PrivateNamespace("*", "com.company.util:_-gv"), "_-Nc"), 1
      add
@@ -217,66 +171,18 @@ L103:
     initscopedepth 3
     maxscopedepth 4
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     getlocal2
-     not
-     getlocal2
-     decrement
-     swap
-     getlocal2
-L10:
-     setlocal2
-
-     setlocal3
-
      getlocal0
      pushscope
 
      getlocal1
-     jump                L22
-
-     add_i
-     setlocal2
-
-     kill                2
-     setlocal2
-
-     getlocal2
-     inclocal_i          2
-L22:
      pushstring          ": "
      add
-     getlocal2
-     dup
-     iffalse             L30
-
-     pop
-     getlocal1
-     convert_b
-L30:
-     iftrue              L44
-
      getlex              QName(PackageNamespace("flash.system"), "Capabilities")
      getlocal1
      getproperty         MultinameL([PrivateNamespace("*", "com.company.util:_-gv"), PackageNamespace(""), PrivateNamespace("*", "com.company.util:_-gv/_-Nc"), PackageNamespace("com.company.util"), PackageInternalNs("com.company.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Ad"), StaticProtectedNs("_-0Ad")])
      add
-     getlocal2
-     dup
-     iffalse             L41
-
-     pop
-     getlocal2
-     convert_b
-L41:
-     iftrue              L44
-
      pushstring          "\n"
      add
-L44:
      returnvalue
     end ; code
    end ; body

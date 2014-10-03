@@ -14,27 +14,8 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     decrement
-     getlocal0
-     multiply
-     istypelate
-     rshift
-     nextname
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal2
-     iffalse             L26
 
      getlocal0
      getlex              Multiname("Vector", [PrivateNamespace("*", "_-03T:_-h0"), PackageNamespace(""), PackageNamespace("_-03T"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-03T:_-h0/iinit"), PackageInternalNs("_-03T"), ProtectedNamespace("_-Kl"), StaticProtectedNs("_-Kl"), PackageNamespace("__AS3__.vec")])
@@ -43,13 +24,9 @@ L10:
      construct           0
      initproperty        QName(PrivateNamespace("*", "_-03T:_-h0"), "_-nW")
 
-     getlocal1
-     iftrue              L26
-
      getlocal0
      constructsuper      0
 
-L26:
      returnvoid
     end ; code
    end ; body
@@ -86,34 +63,13 @@ L26:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      pushwith
-      subtract_i
-      inclocal_i          2
-      setlocal2
-
-      equals
-      declocal_i          2
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      iffalse             L19
 
       getlocal0
       getlocal1
       initproperty        QName(PrivateNamespace("*", "_-03T:_-h0"), "_-0AN")
 
-L19:
       returnvoid
      end ; code
     end ; body
@@ -135,16 +91,6 @@ L19:
       pushscope
 
       findpropstrict      QName(PackageNamespace("_-03T"), "_-0BF")
-      jump                L10
-
-      lshift
-      negate
-      lessequals
-      setlocal2
-
-      negate
-      equals
-L10:
       getlocal1
       getlocal0
       constructprop       QName(PackageNamespace("_-03T"), "_-0BF"), 2
@@ -164,34 +110,14 @@ L10:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      newactivation
-      inclocal_i          2
-      getlocal2
-      declocal_i          2
-      getlocal2
-      convert_i
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      iftrue              L20
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-03T:_-h0"), "_-nW")
       getlocal1
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-L20:
       returnvoid
      end ; code
     end ; body
@@ -214,21 +140,6 @@ L20:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal            9
-
-      jump                L10
-
-      negate
-      getlocal0
-      declocal_i          7
-      declocal            7
-      declocal_i          5
-      getlocal2
-L10:
-      setlocal            10
-
       getlocal0
       pushscope
 
@@ -236,56 +147,15 @@ L10:
       coerce              QName(PackageNamespace("_-0-p"), "_-fq")
       setlocal            6
 
-      getlocal            10
-      dup
-      iffalse             L22
-
-      pop
-      getlocal1
-      convert_b
-L22:
-      iftrue              L41
-
       getlocal2
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-03T:_-h0"), "_-0AN")
-      jump                L33
+      ifngt               L10
 
-      checkfilter
-      inclocal_i          2
-      setlocal3
-
-      astypelate
-      inclocal            9
-      kill                2
-L33:
-      ifngt               L42
-
-      getlocal            9
-      dup
-      iftrue              L40
-
-      pop
-      getlocal0
-      convert_b
-L40:
-      iffalse             L42
-
-L41:
       returnvoid
 
-L42:
+L10:
       pushbyte            0
-      jump                L50
-
-      newactivation
-      inclocal_i          6
-      convert_o
-      setlocal            8
-
-      greaterthan
-      negate_i
-L50:
       setlocal            7
 
       getlocal0
@@ -293,9 +163,9 @@ L50:
       coerce_a
       setlocal            8
 
-      jump                L69
+      jump                L30
 
-L56:
+L17:
       label
       getlocal            8
       getlocal            7
@@ -311,9 +181,9 @@ L56:
       getlocal            5
       callpropvoid        QName(Namespace("_-0Fn"), "log"), 5
 
-L69:
+L30:
       hasnext2            8, 7
-      iftrue              L56
+      iftrue              L17
 
       kill                8
       kill                7

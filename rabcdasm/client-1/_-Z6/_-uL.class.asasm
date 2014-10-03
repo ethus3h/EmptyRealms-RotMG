@@ -18,46 +18,20 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     setlocal3
-
-     jump                L10
-
-     inclocal            3
-     setlocal3
-
-     decrement
-     kill                2
-     getlocal3
-     coerce_a
-L10:
-     setlocal            4
-
      getlocal0
      pushscope
 
-     getlocal3
-     iffalse             L27
-
      getlocal0
      constructsuper      0
-
-     getlocal            4
-     iftrue              L27
 
      getlocal0
      getlocal1
      initproperty        QName(PrivateNamespace("*", "_-Z6:_-uL"), "_-0Eh")
 
-     getlocal3
-     iffalse             L27
-
      getlocal0
      getlocal2
      initproperty        QName(PrivateNamespace("*", "_-Z6:_-uL"), "_value")
 
-L27:
      returnvoid
     end ; code
    end ; body
@@ -95,39 +69,13 @@ L27:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      kill                2
-      getlocal2
-      nextvalue
-      add
-      getlocal3
-      checkfilter
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      dup
-      iftrue              L19
-
-      pop
-      getlocal2
-      convert_b
-L19:
-      iffalse             L23
 
       getlocal0
       getlocal1
       initproperty        QName(PrivateNamespace("*", "_-Z6:_-uL"), "_-0Eh")
 
-L23:
       returnvoid
      end ; code
     end ; body
@@ -164,33 +112,13 @@ L23:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      divide
-      convert_o
-      convert_b
-      multiply
-      modulo
-      decrement
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      iftrue              L19
 
       getlocal0
       getlocal1
       initproperty        QName(PrivateNamespace("*", "_-Z6:_-uL"), "_value")
 
-L19:
       returnvoid
      end ; code
     end ; body

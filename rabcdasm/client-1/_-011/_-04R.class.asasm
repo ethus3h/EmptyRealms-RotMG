@@ -14,47 +14,18 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     setlocal2
-
-     jump                L10
-
-     pushtrue
-     checkfilter
-     inclocal_i          2
-     convert_o
-     inclocal            2
-     equals
-L10:
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal2
-     iffalse             L29
 
      getlocal0
      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.net.messages.data"), "_-Q0")
      constructprop       QName(PackageNamespace("com.company.assembleegameclient.net.messages.data"), "_-Q0"), 0
      initproperty        QName(PackageNamespace(""), "pos_")
 
-     getlocal2
-     dup
-     iftrue              L25
-
-     pop
-     getlocal2
-     convert_b
-L25:
-     iffalse             L29
-
      getlocal0
      getlocal1
      constructsuper      1
 
-L29:
      returnvoid
     end ; code
    end ; body
@@ -72,49 +43,19 @@ L29:
      initscopedepth 6
      maxscopedepth 7
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      bitnot
-      swap
-      greaterthan
-      inclocal            2
-      setlocal2
-
-      pushfalse
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      iftrue              L30
 
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
       initproperty        QName(PackageNamespace(""), "objectId_")
 
-      getlocal3
-      dup
-      iffalse             L25
-
-      pop
-      getlocal2
-      convert_b
-L25:
-      iftrue              L30
-
       getlocal0
       getproperty         QName(PackageNamespace(""), "pos_")
       getlocal1
       callpropvoid        QName(PackageNamespace(""), "parseFromInput"), 1
 
-L30:
       returnvoid
      end ; code
     end ; body
@@ -134,15 +75,6 @@ L30:
       pushscope
 
       findpropstrict      QName(ProtectedNamespace("_-1E"), "formatToString")
-      jump                L10
-
-      checkfilter
-      istypelate
-      add_i
-      greaterequals
-      negate
-      instanceof
-L10:
       pushstring          "GOTO"
       pushstring          "objectId_"
       pushstring          "pos_"

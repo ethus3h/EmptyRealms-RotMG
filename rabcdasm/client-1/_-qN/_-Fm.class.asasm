@@ -14,65 +14,17 @@ class
     initscopedepth 5
     maxscopedepth 6
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     setlocal2
-
-     convert_i
-     dup
-     declocal            2
-     setlocal2
-
-     multiply_i
-L10:
-     setlocal2
-
-     setlocal3
-
      getlocal0
      pushscope
-
-     jump                L21
-
-     nextvalue
-     inclocal_i          2
-     swap
-     greaterthan
-     kill                2
-     pushfalse
-L21:
-     getlocal2
-     dup
-     iffalse             L27
-
-     pop
-     getlocal2
-     convert_b
-L27:
-     iftrue              L41
 
      getlocal0
      getlex              QName(PackageNamespace(""), "ACCOUNT_TEXT_EVENT")
      constructsuper      1
 
-     getlocal3
-     dup
-     iftrue              L37
-
-     pop
-     getlocal0
-     convert_b
-L37:
-     iffalse             L41
-
      getlocal0
      getlocal1
      initproperty        QName(PackageNamespace(""), "_-Qj")
 
-L41:
      returnvoid
     end ; code
    end ; body
@@ -87,39 +39,13 @@ L41:
    initscopedepth 4
    maxscopedepth 5
    code
-    pushfalse
-    pushtrue
-    setlocal1
-
-    jump                L10
-
-    strictequals
-    strictequals
-    equals
-    bitnot
-    pushfalse
-    equals
-L10:
-    setlocal2
-
     getlocal0
     pushscope
-
-    getlocal2
-    dup
-    iffalse             L19
-
-    pop
-    getlocal0
-    convert_b
-L19:
-    iftrue              L23
 
     findproperty        QName(PackageNamespace(""), "ACCOUNT_TEXT_EVENT")
     pushstring          "ACCOUNT_TEXT_EVENT"
     initproperty        QName(PackageNamespace(""), "ACCOUNT_TEXT_EVENT")
 
-L23:
     returnvoid
    end ; code
   end ; body

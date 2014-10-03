@@ -13,21 +13,6 @@ class
     initscopedepth 10
     maxscopedepth 11
     code
-     pushfalse
-     pushtrue
-     setlocal            5
-
-     jump                L10
-
-     inclocal            5
-     convert_b
-     bitnot
-     declocal            3
-     multiply
-     bitxor
-L10:
-     setlocal            6
-
      getlocal0
      pushscope
 
@@ -39,23 +24,11 @@ L10:
      coerce              QName(PackageNamespace("_-Dd"), "_-0Ew")
      setlocal2
 
-     getlocal            5
-     iffalse             L32
-
      getlocal0
      getlex              QName(PackageNamespace("_-Dd"), "_-Mu")
      getproperty         QName(PackageNamespace(""), "_-0Gm")
      constructsuper      1
 
-     jump                L32
-
-     instanceof
-     subtract
-     bitnot
-     bitand
-     declocal            2
-     inclocal_i          4
-L32:
      pushbyte            0
      setlocal3
 
@@ -64,20 +37,11 @@ L32:
      coerce_a
      setlocal            4
 
-     jump                L67
+     jump                L33
 
-L39:
+L19:
      label
      getlocal            4
-     jump                L48
-
-     kill                4
-     inclocal            5
-     divide
-     inclocal_i          3
-     getlocal1
-     nextvalue
-L48:
      getlocal3
      nextvalue
      coerce              QName(PackageNamespace(""), "XML")
@@ -89,23 +53,13 @@ L48:
      coerce              QName(PackageNamespace("_-Dd"), "_-0Ew")
      setlocal2
 
-     getlocal            5
-     dup
-     iftrue              L63
-
-     pop
-     getlocal3
-     convert_b
-L63:
-     iffalse             L67
-
      findpropstrict      QName(ProtectedNamespace("_-1w"), "_-08M")
      getlocal2
      callpropvoid        QName(ProtectedNamespace("_-1w"), "_-08M"), 1
 
-L67:
+L33:
      hasnext2            4, 3
-     iftrue              L39
+     iftrue              L19
 
      kill                4
      kill                3

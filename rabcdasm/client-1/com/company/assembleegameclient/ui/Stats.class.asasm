@@ -15,22 +15,6 @@ class
     initscopedepth 9
     maxscopedepth 10
     code
-     pushfalse
-     pushtrue
-     setlocal            7
-
-     jump                L10
-
-     getlocal            6
-     pop
-     istypelate
-     newactivation
-     setlocal            4
-
-     subtract
-L10:
-     setlocal            8
-
      getlocal0
      pushscope
 
@@ -42,18 +26,12 @@ L10:
      coerce              QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Stats#1"), "Stat")
      setlocal            4
 
-     getlocal            8
-     iftrue              L54
-
      getlocal0
      getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.ui:Stats#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.ui:Stats#1"), PackageNamespace("com.company.assembleegameclient.ui"), PackageInternalNs("com.company.assembleegameclient.ui"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Lc"), StaticProtectedNs("_-Lc"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("__AS3__.vec")])
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Stats#1"), "Stat")
      applytype           1
      construct           0
      initproperty        QName(PackageNamespace(""), "_-086")
-
-     getlocal            7
-     iffalse             L54
 
      getlocal0
      findpropstrict      QName(PackageNamespace("_-E7"), "_-aS")
@@ -65,36 +43,17 @@ L10:
      constructprop       QName(PackageNamespace("_-E7"), "_-aS"), 5
      initproperty        QName(PackageNamespace(""), "toolTip_")
 
-     getlocal            8
-     dup
-     iffalse             L44
-
-     pop
-     getlocal0
-     convert_b
-L44:
-     iftrue              L49
-
      getlocal0
      constructsuper      0
 
-     getlocal            7
-     iffalse             L57
-
-L49:
      getlocal0
      getlocal1
      initproperty        QName(PackageNamespace(""), "w_")
 
-     getlocal            7
-     iffalse             L57
-
-L54:
      getlocal0
      getlocal2
      initproperty        QName(PackageNamespace(""), "h_")
 
-L57:
      pushbyte            0
      setlocal            5
 
@@ -103,9 +62,9 @@ L57:
      coerce_a
      setlocal            6
 
-     jump                L155
+     jump                L105
 
-L64:
+L38:
      label
      getlocal            6
      getlocal            5
@@ -130,20 +89,7 @@ L64:
 
      pushbyte            8
      pushbyte            26
-     jump                L93
-
-     inclocal_i          5
-     not
-     nextvalue
-     pop
-     getlocal3
-     setlocal            6
-
-L93:
      add
-     getlocal            7
-     iffalse             L111
-
      findpropstrict      QName(PackageNamespace(""), "int")
      getlocal0
      getproperty         QName(PackageNamespace(""), "_-086")
@@ -159,18 +105,7 @@ L93:
      subtract
      multiply
      add
-L111:
      setproperty         QName(PackageNamespace(""), "x")
-
-     getlocal            8
-     dup
-     iffalse             L118
-
-     pop
-     getlocal1
-     convert_b
-L118:
-     iftrue              L146
 
      getlocal            4
      pushbyte            8
@@ -179,9 +114,6 @@ L118:
      pushbyte            6
      divide
      add
-     getlocal            8
-     iftrue              L143
-
      findpropstrict      QName(PackageNamespace(""), "int")
      getlocal0
      getproperty         QName(PackageNamespace(""), "_-086")
@@ -192,58 +124,26 @@ L118:
      getlocal0
      getproperty         QName(PackageNamespace(""), "h_")
      multiply
-     getlocal            8
-     iftrue              L142
-
      pushbyte            3
      divide
-L142:
      add
-L143:
      setproperty         QName(PackageNamespace(""), "y")
 
-     getlocal            8
-     iftrue              L151
-
-L146:
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal            4
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
-     getlocal            8
-     iftrue              L155
-
-L151:
      getlocal0
      getproperty         QName(PackageNamespace(""), "_-086")
      getlocal            4
      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-L155:
+L105:
      hasnext2            6, 5
-     iftrue              L64
+     iftrue              L38
 
      kill                6
      kill                5
-     getlocal            7
-     dup
-     iftrue              L172
-
-     jump                L169
-
-     declocal_i          7
-     declocal_i          7
-     declocal            5
-     getlocal0
-     nextname
-     multiply_i
-L169:
-     pop
-     getlocal3
-     convert_b
-L172:
-     iffalse             L186
-
      findpropstrict      QName(PackageNamespace(""), "addEventListener")
      getlex              QName(PackageNamespace("flash.events"), "Event")
      getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
@@ -251,17 +151,6 @@ L172:
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Stats#0"), "onAddedToStage")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-     getlocal            7
-     dup
-     iftrue              L185
-
-     pop
-     getlocal1
-     convert_b
-L185:
-     iffalse             L192
-
-L186:
      findpropstrict      QName(PackageNamespace(""), "addEventListener")
      getlex              QName(PackageNamespace("flash.events"), "Event")
      getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
@@ -269,7 +158,6 @@ L186:
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Stats#0"), "onRemovedFromStage")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-L192:
      returnvoid
     end ; code
    end ; body
@@ -289,22 +177,6 @@ L192:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      kill                2
-      convert_o
-      setlocal2
-
-      declocal_i          2
-      astypelate
-      declocal            2
-L10:
-      setlocal3
-
       getlocal0
       pushscope
 
@@ -332,25 +204,6 @@ L10:
       getproperty         QName(PackageNamespace(""), "_-0BS")
       callpropvoid        QName(PackageNamespace(""), "draw"), 3
 
-      getlocal2
-      dup
-      iftrue              L41
-
-      pop
-      getlocal0
-      convert_b
-L41:
-      iffalse             L73
-
-      jump                L49
-
-      bitnot
-      negate
-      pop
-      declocal_i          2
-      increment_i
-      popscope
-L49:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-086")
       getlex              QName(PackageNamespace(""), "_-yl")
@@ -375,20 +228,7 @@ L49:
       getproperty         QName(PackageNamespace(""), "_-07C")
       callpropvoid        QName(PackageNamespace(""), "draw"), 3
 
-      getlocal2
-      iffalse             L93
-
-L73:
       getlocal0
-      jump                L81
-
-      kill                2
-      pushfalse
-      negate_i
-      not
-      pushnull
-      checkfilter
-L81:
       getproperty         QName(PackageNamespace(""), "_-086")
       getlex              QName(PackageNamespace(""), "_-a")
       getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.ui:Stats#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.ui:Stats#1"), PackageNamespace("com.company.assembleegameclient.ui"), PackageInternalNs("com.company.assembleegameclient.ui"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Lc"), StaticProtectedNs("_-Lc"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
@@ -400,10 +240,6 @@ L81:
       getproperty         QName(PackageNamespace(""), "_-Ns")
       callpropvoid        QName(PackageNamespace(""), "draw"), 3
 
-      getlocal3
-      iftrue              L104
-
-L93:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-086")
       getlex              QName(PackageNamespace(""), "_-SL")
@@ -416,7 +252,6 @@ L93:
       getproperty         QName(PackageNamespace(""), "_-05Q")
       callpropvoid        QName(PackageNamespace(""), "draw"), 3
 
-L104:
       returnvoid
      end ; code
     end ; body
@@ -433,22 +268,6 @@ L104:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      declocal            4
-      kill                2
-      kill                4
-      kill                5
-      declocal            3
-      bitxor
-L10:
-      setlocal            5
-
-      setlocal            6
-
       getlocal0
       pushscope
 
@@ -464,45 +283,16 @@ L10:
       coerce_a
       setlocal            4
 
-      jump                L70
+      jump                L30
 
-L24:
+L12:
       label
       getlocal            4
       getlocal3
-      jump                L34
-
-      getlocal2
-      getlocal3
-      declocal            2
-      getlocal            4
-      typeof
-      strictequals
-L34:
       nextvalue
       coerce              QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Stats#1"), "Stat")
       setlocal2
 
-      getlocal            6
-      dup
-      iftrue              L43
-
-      pop
-      getlocal2
-      convert_b
-L43:
-      iffalse             L64
-
-      jump                L51
-
-      getlocal2
-      kill                2
-      declocal            5
-      declocal_i          3
-      urshift
-      pushscope
-
-L51:
       getlocal2
       getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
       getproperty         QName(PackageNamespace(""), "MOUSE_OVER")
@@ -510,17 +300,6 @@ L51:
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Stats#0"), "onMouseOver")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-      getlocal            6
-      dup
-      iftrue              L63
-
-      pop
-      getlocal2
-      convert_b
-L63:
-      iffalse             L70
-
-L64:
       getlocal2
       getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
       getproperty         QName(PackageNamespace(""), "MOUSE_OUT")
@@ -528,9 +307,9 @@ L64:
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Stats#0"), "onMouseOut")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-L70:
+L30:
       hasnext2            4, 3
-      iftrue              L24
+      iftrue              L12
 
       kill                4
       kill                3
@@ -550,23 +329,6 @@ L70:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      greaterthan
-      declocal            4
-      getlocal            5
-      inclocal            2
-      setlocal3
-
-      dxnslate
-L10:
-      setlocal            5
-
-      setlocal            6
-
       getlocal0
       pushscope
 
@@ -574,52 +336,20 @@ L10:
       coerce              QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Stats#1"), "Stat")
       setlocal2
 
-      getlocal            5
-      dup
-      iffalse             L23
-
-      pop
-      getlocal0
-      convert_b
-L23:
-      iftrue              L51
-
       getlocal0
       getproperty         QName(PackageNamespace(""), "toolTip_")
-      getlocal            6
-      dup
-      iftrue              L32
-
-      pop
-      getlocal1
-      convert_b
-L32:
-      iffalse             L47
-
       getproperty         QName(PackageNamespace(""), "parent")
       pushnull
-      ifeq                L51
-
-      getlocal            5
-      iftrue              L51
+      ifeq                L16
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "toolTip_")
-      jump                L47
-
-      pushnan
-      inclocal            3
-      declocal            3
-      kill                2
-      inclocal            2
-      bitnot
-L47:
       getproperty         QName(PackageNamespace(""), "parent")
       getlocal0
       getproperty         QName(PackageNamespace(""), "toolTip_")
       callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
 
-L51:
+L16:
       pushbyte            0
       setlocal3
 
@@ -628,9 +358,9 @@ L51:
       coerce_a
       setlocal            4
 
-      jump                L97
+      jump                L41
 
-L58:
+L23:
       label
       getlocal            4
       getlocal3
@@ -638,25 +368,6 @@ L58:
       coerce              QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Stats#1"), "Stat")
       setlocal2
 
-      getlocal            6
-      dup
-      iftrue              L70
-
-      pop
-      getlocal0
-      convert_b
-L70:
-      iffalse             L91
-
-      jump                L78
-
-      instanceof
-      declocal_i          2
-      bitand
-      getlocal3
-      inclocal_i          4
-      kill                3
-L78:
       getlocal2
       getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
       getproperty         QName(PackageNamespace(""), "MOUSE_OVER")
@@ -664,17 +375,6 @@ L78:
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Stats#0"), "onMouseOver")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-      getlocal            5
-      dup
-      iffalse             L90
-
-      pop
-      getlocal1
-      convert_b
-L90:
-      iftrue              L97
-
-L91:
       getlocal2
       getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
       getproperty         QName(PackageNamespace(""), "MOUSE_OUT")
@@ -682,9 +382,9 @@ L91:
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Stats#0"), "onMouseOut")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-L97:
+L41:
       hasnext2            4, 3
-      iftrue              L58
+      iftrue              L23
 
       kill                4
       kill                3
@@ -704,23 +404,6 @@ L97:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      lessequals
-      subtract
-      setlocal2
-
-      kill                2
-      inclocal            2
-      convert_i
-L10:
-      setlocal3
-
-      setlocal            4
-
       getlocal0
       pushscope
 
@@ -731,92 +414,30 @@ L10:
       coerce              QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Stats#1"), "Stat")
       setlocal2
 
-      getlocal3
-      dup
-      iffalse             L26
-
-      pop
-      getlocal0
-      convert_b
-L26:
-      iftrue              L76
-
       getlocal0
       getproperty         QName(PackageNamespace(""), "toolTip_")
-      getlocal            4
-      jump                L37
-
-      declocal            3
-      swap
-      pushfalse
-      instanceof
-      add_i
-      multiply
-L37:
-      dup
-      iftrue              L42
-
-      pop
-      getlocal3
-      convert_b
-L42:
-      iffalse             L59
-
       getlocal2
       getproperty         QName(PackageNamespace(""), "fullName_")
-      getlocal3
-      iftrue              L61
-
       callpropvoid        QName(PackageNamespace(""), "_-Nk"), 1
 
-      getlocal            4
-      iffalse             L64
-
-      jump                L57
-
-      inclocal_i          2
-      inclocal            2
-      setlocal3
-
-      decrement
-      nextname
-      negate
-L57:
       getlocal0
       getproperty         QName(PackageNamespace(""), "toolTip_")
-L59:
       getlocal2
       getproperty         QName(PackageNamespace(""), "description_")
-L61:
       callpropvoid        QName(PackageNamespace(""), "_-02C"), 1
 
-      getlocal            4
-      iffalse             L80
-
-L64:
       getlex              QName(PackageNamespace(""), "stage")
       getlocal0
       getproperty         QName(PackageNamespace(""), "toolTip_")
       callproperty        QName(PackageNamespace(""), "contains"), 1
-      iftrue              L80
+      iftrue              L27
 
-      getlocal            4
-      dup
-      iftrue              L75
-
-      pop
-      getlocal3
-      convert_b
-L75:
-      iffalse             L80
-
-L76:
       getlex              QName(PackageNamespace(""), "stage")
       getlocal0
       getproperty         QName(PackageNamespace(""), "toolTip_")
       callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
-L80:
+L27:
       returnvoid
      end ; code
     end ; body
@@ -833,22 +454,6 @@ L80:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      setlocal3
-
-      jump                L10
-
-      kill                2
-      pop
-      setlocal3
-
-      subtract
-      add_i
-      kill                2
-L10:
-      setlocal            4
-
       getlocal0
       pushscope
 
@@ -859,71 +464,20 @@ L10:
       coerce              QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Stats#1"), "Stat")
       setlocal2
 
-      getlocal            4
-      dup
-      iffalse             L32
-
-      jump                L29
-
-      declocal            3
-      inclocal            2
-      nextvalue
-      popscope
-      inclocal            2
-      pop
-L29:
-      pop
-      getlocal0
-      convert_b
-L32:
-      iftrue              L59
-
       getlocal0
       getproperty         QName(PackageNamespace(""), "toolTip_")
-      jump                L42
-
-      declocal            2
-      add_i
-      inclocal_i          3
-      convert_o
-      setlocal3
-
-      pushtrue
-L42:
-      getlocal            4
-      dup
-      iffalse             L48
-
-      pop
-      getlocal0
-      convert_b
-L48:
-      iftrue              L61
-
       getproperty         QName(PackageNamespace(""), "parent")
       pushnull
-      ifeq                L65
+      ifeq                L19
 
-      getlocal            4
-      dup
-      iffalse             L58
-
-      pop
-      getlocal0
-      convert_b
-L58:
-      iftrue              L65
-
-L59:
       getlocal0
       getproperty         QName(PackageNamespace(""), "toolTip_")
-L61:
       getproperty         QName(PackageNamespace(""), "parent")
       getlocal0
       getproperty         QName(PackageNamespace(""), "toolTip_")
       callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
 
-L65:
+L19:
       returnvoid
      end ; code
     end ; body
@@ -938,22 +492,6 @@ L65:
    initscopedepth 8
    maxscopedepth 9
    code
-    pushfalse
-    pushtrue
-    swap
-    jump                L10
-
-    greaterthan
-    strictequals
-    pushundefined
-    decrement
-    dup
-    modulo
-L10:
-    setlocal1
-
-    setlocal2
-
     getlocal0
     pushscope
 
@@ -963,32 +501,16 @@ L10:
 
     findproperty        QName(PackageNamespace(""), "_-DO")
     pushbyte            1
-    jump                L26
-
-    pushundefined
-    decrement_i
-    newactivation
-    instanceof
-    convert_i
-    increment_i
-L26:
     initproperty        QName(PackageNamespace(""), "_-DO")
 
     findproperty        QName(PackageNamespace(""), "_-yl")
     pushbyte            2
     initproperty        QName(PackageNamespace(""), "_-yl")
 
-    getlocal2
-    iffalse             L37
-
     findproperty        QName(PackageNamespace(""), "_-0FW")
     pushbyte            3
     initproperty        QName(PackageNamespace(""), "_-0FW")
 
-    getlocal1
-    iftrue              L46
-
-L37:
     findproperty        QName(PackageNamespace(""), "_-a")
     pushbyte            4
     initproperty        QName(PackageNamespace(""), "_-a")
@@ -1001,7 +523,6 @@ L37:
     pushbyte            6
     initproperty        QName(PackageNamespace(""), "_-7Z")
 
-L46:
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:Stats#0"), "_-xj")
     getlex              QName(PackageNamespace(""), "XML")
     pushstring          "<Stats>\r\n\x09<Stat>\r\n\x09\x09<Abbr>ATT</Abbr>\r\n\x09\x09<Name>Attack</Name>\r\n\x09\x09<Description>This stat increases the amount of damage done.</Description>\r\n\x09\x09<RedOnZero/>\r\n\x09</Stat>\r\n\x09<Stat>\r\n\x09\x09<Abbr>DEF</Abbr>\r\n\x09\x09<Name>Defense</Name>\r\n\x09\x09<Description>This stat decreases the amount of damage taken.</Description>\r\n\x09</Stat>\r\n\x09<Stat>\r\n\x09\x09<Abbr>SPD</Abbr>\r\n\x09\x09<Name>Speed</Name>\r\n\x09\x09<Description>This stat increases the speed at which the character moves.</Description>\r\n\x09\x09<RedOnZero/>\r\n\x09</Stat>\r\n\x09<Stat>\r\n\x09\x09<Abbr>DEX</Abbr>\r\n\x09\x09<Name>Dexterity</Name>\r\n\x09\x09<Description>This stat increases the speed at which the character attacks.</Description>\r\n\x09\x09<RedOnZero/>\r\n\x09</Stat>\r\n\x09<Stat>\r\n\x09\x09<Abbr>VIT</Abbr>\r\n\x09\x09<Name>Vitality</Name>\r\n\x09\x09<Description>This stat increases the speed at which hit points are recovered.</Description>\r\n\x09\x09<RedOnZero/>\r\n\x09</Stat>\r\n\x09<Stat>\r\n\x09\x09<Abbr>WIS</Abbr>\r\n\x09\x09<Name>Wisdom</Name>\r\n\x09\x09<Description>This stat increases the speed at which magic points are recovered.</Description>\r\n\x09\x09<RedOnZero/>\r\n\x09</Stat>\r\n</Stats>"

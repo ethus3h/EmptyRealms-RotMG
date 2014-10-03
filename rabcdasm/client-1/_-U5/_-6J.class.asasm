@@ -13,31 +13,12 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     setlocal1
-
-     jump                L10
-
-     modulo
-     strictequals
-     lshift
-     not
-     convert_d
-     increment_i
-L10:
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal2
-     iftrue              L17
 
      getlocal0
      constructsuper      0
 
-L17:
      returnvoid
     end ; code
    end ; body

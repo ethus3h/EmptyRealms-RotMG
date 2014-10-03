@@ -15,39 +15,17 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     setlocal2
-
-     jump                L10
-
-     coerce_s
-     dup
-     astypelate
-     declocal            2
-     lshift
-     decrement_i
-L10:
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal3
-     iftrue              L23
 
      getlocal0
      getlocal1
      constructsuper      1
 
-     getlocal3
-     iftrue              L23
-
      findproperty        QName(PackageNamespace(""), "_-064")
      pushtrue
      initproperty        QName(PackageNamespace(""), "_-064")
 
-L23:
      returnvoid
     end ; code
    end ; body
@@ -67,15 +45,6 @@ L23:
       pushscope
 
       findpropstrict      QName(PackageNamespace("_-Rv"), "_-f")
-      jump                L10
-
-      equals
-      pop
-      subtract_i
-      pushtrue
-      negate_i
-      istypelate
-L10:
       getlocal1
       constructprop       QName(PackageNamespace("_-Rv"), "_-f"), 1
       returnvalue

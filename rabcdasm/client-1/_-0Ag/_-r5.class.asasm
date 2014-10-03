@@ -14,34 +14,13 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     setlocal2
-
-     jump                L10
-
-     declocal_i          2
-     convert_b
-     inclocal_i          2
-     setlocal2
-
-     setlocal2
-
-     inclocal            2
-L10:
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal2
-     iffalse             L18
 
      getlocal0
      getlocal1
      constructsuper      1
 
-L18:
      returnvoid
     end ; code
    end ; body
@@ -58,41 +37,14 @@ L18:
      initscopedepth 6
      maxscopedepth 7
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      setlocal2
-
-      convert_o
-      rshift
-      inclocal            2
-      declocal_i          2
-      kill                2
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      dup
-      iffalse             L19
-
-      pop
-      getlocal1
-      convert_b
-L19:
-      iftrue              L24
 
       getlocal1
       getlocal0
       getproperty         QName(PackageNamespace(""), "charId_")
       callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeInt"), 1
 
-L24:
       returnvoid
      end ; code
     end ; body
@@ -112,15 +64,6 @@ L24:
       pushscope
 
       findpropstrict      QName(ProtectedNamespace("_-1E"), "formatToString")
-      jump                L10
-
-      negate_i
-      lessequals
-      greaterthan
-      getglobalscope
-      not
-      greaterequals
-L10:
       pushstring          "LOAD"
       pushstring          "charId_"
       callproperty        QName(ProtectedNamespace("_-1E"), "formatToString"), 2

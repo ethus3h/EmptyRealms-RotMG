@@ -14,27 +14,8 @@ class
     initscopedepth 11
     maxscopedepth 12
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     getlocal2
-     inclocal_i          2
-     declocal_i          2
-     modulo
-     hasnext
-     inclocal            2
-L10:
-     setlocal2
-
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal3
-     iffalse             L21
 
      getlocal0
      getlocal1
@@ -42,7 +23,6 @@ L10:
      pushstring          "View"
      constructsuper      3
 
-L21:
      returnvoid
     end ; code
    end ; body
@@ -58,67 +38,19 @@ L21:
      initscopedepth 11
      maxscopedepth 12
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      setlocal2
-
-      checkfilter
-      equals
-      getlocal2
-      typeof
-      inclocal_i          2
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      jump                L21
-
-      bitor
-      kill                2
-      setlocal2
-
-      convert_i
-      multiply
-      inclocal            2
-L21:
-      dup
-      iffalse             L26
-
-      pop
-      getlocal3
-      convert_b
-L26:
-      iftrue              L37
 
       getlex              QName(PackageNamespace(""), "gs_")
       getproperty         QName(PackageNamespace(""), "mui_")
       callpropvoid        QName(PackageNamespace(""), "clearInput"), 0
 
-      getlocal3
-      dup
-      iffalse             L36
-
-      pop
-      getlocal3
-      convert_b
-L36:
-      iftrue              L42
-
-L37:
       getlex              QName(PackageNamespace(""), "gs_")
       findpropstrict      QName(PackageNamespace("_-sP"), "_-07x")
       getlex              QName(PackageNamespace(""), "gs_")
       constructprop       QName(PackageNamespace("_-sP"), "_-07x"), 1
       callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
-L42:
       returnvoid
      end ; code
     end ; body

@@ -13,33 +13,12 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     setlocal3
-
-     pop
-     subtract_i
-     getlocal1
-     convert_u
-     add
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal1
-     iftrue              L18
 
      getlocal0
      constructsuper      0
 
-L18:
      returnvoid
     end ; code
    end ; body
@@ -71,21 +50,6 @@ L18:
     initscopedepth 3
     maxscopedepth 4
     code
-     pushfalse
-     pushtrue
-     setlocal2
-
-     jump                L10
-
-     lessthan
-     increment_i
-     nextvalue
-     convert_s
-     inclocal_i          2
-     newactivation
-L10:
-     setlocal3
-
      getlocal0
      pushscope
 
@@ -93,18 +57,10 @@ L10:
      callproperty        QName(PackageNamespace(""), "random"), 0
      getlocal1
      multiply
-     getlocal2
-     iffalse             L23
-
      pushbyte            2
      multiply
-     getlocal2
-     iffalse             L25
-
-L23:
      getlocal1
      subtract
-L25:
      returnvalue
     end ; code
    end ; body
@@ -125,15 +81,6 @@ L25:
      pushscope
 
      getlex              QName(PackageNamespace(""), "Math")
-     jump                L10
-
-     subtract_i
-     subtract
-     decrement_i
-     popscope
-     strictequals
-     getlocal0
-L10:
      getlocal1
      pushbyte            60
      dup

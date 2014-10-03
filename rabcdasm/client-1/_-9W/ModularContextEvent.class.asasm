@@ -15,26 +15,8 @@ class
     initscopedepth 5
     maxscopedepth 6
     code
-     pushfalse
-     pushtrue
-     setlocal3
-
-     jump                L10
-
-     inclocal            2
-     decrement
-     instanceof
-     getlocal2
-     inclocal            2
-     inclocal_i          2
-L10:
-     setlocal            4
-
      getlocal0
      pushscope
-
-     getlocal3
-     iffalse             L27
 
      getlocal0
      getlocal1
@@ -42,22 +24,10 @@ L10:
      pushtrue
      constructsuper      3
 
-     getlocal            4
-     dup
-     iffalse             L26
-
-     pop
-     getlocal2
-     convert_b
-L26:
-     iftrue              L30
-
-L27:
      getlocal0
      getlocal2
      initproperty        QName(PrivateNamespace("*", "_-9W:ModularContextEvent"), "_-rA")
 
-L30:
      returnvoid
     end ; code
    end ; body
@@ -97,15 +67,6 @@ L30:
       pushscope
 
       findpropstrict      QName(PackageNamespace("_-9W"), "ModularContextEvent")
-      jump                L10
-
-      rshift
-      getlocal1
-      getlocal0
-      coerce_a
-      swap
-      nextvalue
-L10:
       getlex              QName(PackageNamespace(""), "type")
       getlocal0
       getproperty         QName(PackageNamespace(""), "context")
@@ -129,15 +90,6 @@ L10:
       pushscope
 
       findpropstrict      QName(PackageNamespace(""), "formatToString")
-      jump                L10
-
-      multiply_i
-      convert_i
-      divide
-      add_i
-      dxnslate
-      not
-L10:
       pushstring          "ModularContextEvent"
       pushstring          "context"
       callproperty        QName(PackageNamespace(""), "formatToString"), 2
@@ -155,48 +107,17 @@ L10:
    initscopedepth 4
    maxscopedepth 5
    code
-    pushfalse
-    pushtrue
-    swap
-    jump                L10
-
-    pushscope
-
-    urshift
-    not
-    convert_d
-    checkfilter
-    coerce_s
-L10:
-    setlocal1
-
-    setlocal2
-
     getlocal0
     pushscope
-
-    getlocal1
-    dup
-    iffalse             L20
-
-    pop
-    getlocal2
-    convert_b
-L20:
-    iftrue              L29
 
     findproperty        QName(PackageNamespace(""), "_-qb")
     pushstring          "contextAdd"
     initproperty        QName(PackageNamespace(""), "_-qb")
 
-    getlocal1
-    iftrue              L29
-
     findproperty        QName(PackageNamespace(""), "_-LD")
     pushstring          "contextRemove"
     initproperty        QName(PackageNamespace(""), "_-LD")
 
-L29:
     returnvoid
    end ; code
   end ; body

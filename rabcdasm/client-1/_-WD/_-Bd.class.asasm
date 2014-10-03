@@ -13,39 +13,12 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     multiply
-     checkfilter
-     pushtrue
-     convert_o
-     convert_i
-     getlocal0
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal1
-     dup
-     iffalse             L20
-
-     pop
-     getlocal2
-     convert_b
-L20:
-     iftrue              L23
 
      getlocal0
      constructsuper      0
 
-L23:
      returnvoid
     end ; code
    end ; body
@@ -65,22 +38,6 @@ L23:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal1
-
-      jump                L10
-
-      negate
-      getlocal1
-      setlocal2
-
-      getlocal2
-      popscope
-      dup
-L10:
-      setlocal2
-
       getlocal0
       pushscope
 
@@ -89,18 +46,7 @@ L10:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-WD:_-Bd#0"), "_-CJ")
       equals
-      getlocal2
-      dup
-      iffalse             L24
-
-      pop
-      getlocal1
-      convert_b
-L24:
-      iftrue              L26
-
       not
-L26:
       returnvalue
      end ; code
     end ; body
@@ -120,15 +66,6 @@ L26:
       pushscope
 
       getlex              QName(PackageNamespace("flash.system"), "Capabilities")
-      jump                L10
-
-      convert_u
-      strictequals
-      decrement_i
-      subtract
-      coerce_s
-      negate
-L10:
       getproperty         QName(PackageNamespace(""), "playerType")
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-WD:_-Bd#0"), "_-CJ")
@@ -148,57 +85,20 @@ L10:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      kill                2
-      declocal            2
-      declocal            2
-      negate
-      setlocal2
-
-      istypelate
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
 
-      jump                L21
-
-      convert_o
-      inclocal_i          2
-      declocal_i          2
-      pop
-      getlocal2
-      getglobalscope
-L21:
       findproperty        QName(PrivateNamespace("*", "_-WD:_-Bd#0"), "platform")
-      getlocal3
-      dup
-      iftrue              L28
-
-      pop
-      getlocal2
-      convert_b
-L28:
-      iffalse             L34
-
       getlex              QName(PrivateNamespace("*", "_-WD:_-Bd#0"), "platform")
       coerce              QName(PackageNamespace("_-WD"), "_-0Iz")
       dup
-      iftrue              L37
+      iftrue              L11
 
       pop
-L34:
       getlocal0
       callproperty        QName(PrivateNamespace("*", "_-WD:_-Bd#0"), "_-gQ"), 0
       coerce              QName(PackageNamespace("_-WD"), "_-0Iz")
-L37:
+L11:
       dup
       setlocal1
 
@@ -221,22 +121,6 @@ L37:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      bitor
-      inclocal            2
-      bitor
-      newactivation
-      greaterthan
-      add_i
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
 
@@ -254,89 +138,33 @@ L10:
       getlocal0
       getlocal1
       callproperty        QName(PrivateNamespace("*", "_-WD:_-Bd#0"), "_-PR"), 1
-      getlocal3
-      dup
-      iftrue              L40
-
-      pop
-      getlocal3
-      convert_b
-      jump                L40
-
-      inclocal            2
-      nextvalue
-      kill                2
-      getlocal3
-      swap
-      not
-L40:
-      iffalse             L64
-
-      iffalse             L47
-
-      getlocal3
-      iffalse             L65
+      iffalse             L19
 
       getlex              QName(PackageNamespace("_-WD"), "_-0Iz")
       getproperty         QName(PackageNamespace(""), "_-0Ci")
       returnvalue
 
-L47:
+L19:
       getlocal0
       getlocal1
       callproperty        QName(PrivateNamespace("*", "_-WD:_-Bd#0"), "_-0Jx"), 1
-      getlocal2
-      dup
-      iffalse             L63
+      iffalse             L26
 
-      pop
-      getlocal1
-      convert_b
-      jump                L63
-
-      rshift
-      declocal_i          2
-      astypelate
-      subtract
-      setlocal2
-
-      subtract_i
-L63:
-      iftrue              L78
-
-L64:
-      iffalse             L75
-
-L65:
       getlex              QName(PackageNamespace("_-WD"), "_-0Iz")
       getproperty         QName(PackageNamespace(""), "_-I6")
       returnvalue
 
-      getlocal2
-      dup
-      iffalse             L74
-
-      pop
-      getlocal2
-      convert_b
-L74:
-      iftrue              L84
-
-L75:
+L26:
       getlocal0
       getlocal1
       callproperty        QName(PrivateNamespace("*", "_-WD:_-Bd#0"), "_-8w"), 1
-L78:
-      iffalse             L84
-
-      getlocal3
-      iffalse             L84
+      iffalse             L33
 
       getlex              QName(PackageNamespace("_-WD"), "_-0Iz")
       getproperty         QName(PackageNamespace(""), "_-nB")
       returnvalue
 
-L84:
+L33:
       getlex              QName(PackageNamespace("_-WD"), "_-0Iz")
       getproperty         QName(PackageNamespace(""), "_-kj")
       returnvalue
@@ -355,23 +183,6 @@ L84:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      declocal            2
-      nextvalue
-      setlocal2
-
-      lessthan
-      bitxor
-      inclocal            2
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
 
@@ -379,18 +190,7 @@ L10:
       getproperty         Multiname("kongregate_api_path", [PrivateNamespace("*", "_-WD:_-Bd#0"), PackageNamespace(""), PackageNamespace("_-WD"), PrivateNamespace("*", "_-WD:_-Bd#1"), PackageInternalNs("_-WD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-G1"), StaticProtectedNs("_-G1")])
       pushnull
       equals
-      getlocal2
-      dup
-      iffalse             L24
-
-      pop
-      getlocal3
-      convert_b
-L24:
-      iftrue              L26
-
       not
-L26:
       returnvalue
      end ; code
     end ; body
@@ -407,21 +207,6 @@ L26:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      greaterthan
-      negate
-      getlocal2
-      convert_d
-      declocal            2
-      popscope
-L10:
-      setlocal3
-
       getlocal0
       pushscope
 
@@ -429,11 +214,7 @@ L10:
       getproperty         Multiname("steam_api_path", [PrivateNamespace("*", "_-WD:_-Bd#0"), PackageNamespace(""), PackageNamespace("_-WD"), PrivateNamespace("*", "_-WD:_-Bd#1"), PackageInternalNs("_-WD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-G1"), StaticProtectedNs("_-G1")])
       pushnull
       equals
-      getlocal2
-      iffalse             L20
-
       not
-L20:
       returnvalue
      end ; code
     end ; body
@@ -450,22 +231,6 @@ L20:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      inclocal_i          2
-      lessequals
-      declocal_i          2
-      kill                2
-      declocal_i          2
-      inclocal_i          2
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
 
@@ -473,18 +238,7 @@ L10:
       getproperty         Multiname("kabam_signed_request", [PrivateNamespace("*", "_-WD:_-Bd#0"), PackageNamespace(""), PackageNamespace("_-WD"), PrivateNamespace("*", "_-WD:_-Bd#1"), PackageInternalNs("_-WD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-G1"), StaticProtectedNs("_-G1")])
       pushnull
       equals
-      getlocal2
-      dup
-      iffalse             L24
-
-      pop
-      getlocal1
-      convert_b
-L24:
-      iftrue              L26
-
       not
-L26:
       returnvalue
      end ; code
     end ; body

@@ -14,40 +14,13 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     getlocal2
-     greaterthan
-     greaterthan
-     pushundefined
-     kill                2
-     inclocal_i          2
-L10:
-     setlocal2
-
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal3
-     dup
-     iftrue              L20
-
-     pop
-     getlocal3
-     convert_b
-L20:
-     iffalse             L24
 
      getlocal0
      getlocal1
      constructsuper      1
 
-L24:
      returnvoid
     end ; code
    end ; body
@@ -65,50 +38,19 @@ L24:
      initscopedepth 6
      maxscopedepth 7
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      negate
-      getlocal2
-      inclocal            2
-      nextvalue
-      inclocal_i          2
-      negate_i
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      dup
-      iffalse             L20
-
-      pop
-      getlocal3
-      convert_b
-L20:
-      iftrue              L27
 
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
       initproperty        QName(PackageNamespace(""), "result_")
 
-      getlocal3
-      iffalse             L31
-
-L27:
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readUTF"), 0
       initproperty        QName(PackageNamespace(""), "resultString_")
 
-L31:
       returnvoid
      end ; code
     end ; body
@@ -128,15 +70,6 @@ L31:
       pushscope
 
       findpropstrict      QName(ProtectedNamespace("_-1E"), "formatToString")
-      jump                L10
-
-      not
-      convert_i
-      convert_s
-      instanceof
-      decrement
-      dup
-L10:
       pushstring          "BUYRESULT"
       pushstring          "result_"
       pushstring          "resultString_"
@@ -155,22 +88,6 @@ L10:
    initscopedepth 5
    maxscopedepth 6
    code
-    pushfalse
-    pushtrue
-    swap
-    jump                L10
-
-    convert_b
-    increment_i
-    greaterequals
-    dxnslate
-    newactivation
-    popscope
-L10:
-    setlocal1
-
-    setlocal2
-
     getlocal0
     pushscope
 
@@ -182,41 +99,9 @@ L10:
     pushbyte            0
     initproperty        QName(PackageNamespace(""), "_-dV")
 
-    jump                L27
-
-    lessequals
-    setlocal2
-
-    getlocal3
-    equals
-    pushundefined
-    astypelate
-L27:
-    getlocal1
-    iftrue              L55
-
     findproperty        QName(PackageNamespace(""), "_-4E")
     pushbyte            1
-    jump                L38
-
-    swap
-    convert_i
-    add_i
-    istypelate
-    bitand
-    equals
-L38:
     initproperty        QName(PackageNamespace(""), "_-4E")
-
-    getlocal2
-    dup
-    iftrue              L45
-
-    pop
-    getlocal0
-    convert_b
-L45:
-    iffalse             L52
 
     findproperty        QName(PackageNamespace(""), "_-o1")
     pushbyte            2
@@ -226,12 +111,10 @@ L45:
     pushbyte            3
     initproperty        QName(PackageNamespace(""), "_-7a")
 
-L52:
     findproperty        QName(PackageNamespace(""), "_-Xu")
     pushbyte            4
     initproperty        QName(PackageNamespace(""), "_-Xu")
 
-L55:
     findproperty        QName(PackageNamespace(""), "_-mI")
     pushbyte            5
     initproperty        QName(PackageNamespace(""), "_-mI")

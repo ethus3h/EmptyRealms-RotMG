@@ -248,7 +248,7 @@ L9:
      ifstrictne          L16
 
      pushbyte            0
-     jump                L40
+     jump                L37
 
 L16:
      pushstring          "\x09"
@@ -256,7 +256,7 @@ L16:
      ifstrictne          L21
 
      pushbyte            1
-     jump                L40
+     jump                L37
 
 L21:
      pushstring          "\r"
@@ -264,7 +264,7 @@ L21:
      ifstrictne          L26
 
      pushbyte            2
-     jump                L40
+     jump                L37
 
 L26:
      pushstring          "\n"
@@ -272,7 +272,7 @@ L26:
      ifstrictne          L31
 
      pushbyte            3
-     jump                L40
+     jump                L37
 
 L31:
      pushstring          "\x0C"
@@ -280,17 +280,11 @@ L31:
      ifstrictne          L36
 
      pushbyte            4
-     jump                L40
+     jump                L37
 
 L36:
-     jump                L39
-
      pushbyte            5
-     jump                L40
-
-L39:
-     pushbyte            5
-L40:
+L37:
      kill                2
      lookupswitch        L6, [L3, L3, L3, L3, L3, L6]
     end ; code

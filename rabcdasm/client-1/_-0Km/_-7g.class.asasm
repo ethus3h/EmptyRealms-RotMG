@@ -14,34 +14,8 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     setlocal2
-
-     jump                L10
-
-     setlocal2
-
-     getlocal2
-     getlocal0
-     kill                2
-     declocal            2
-     inclocal            2
-L10:
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal3
-     dup
-     iffalse             L19
-
-     pop
-     getlocal0
-     convert_b
-L19:
-     iftrue              L88
 
      getlocal0
      constructsuper      0
@@ -60,16 +34,7 @@ L19:
      getlocal1
      pushstring          "Size"
      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "_-0Km:_-7g/iinit#0"), PrivateNamespace("*", "_-0Km:_-7g/iinit#1"), PackageNamespace(""), PackageNamespace("_-0Km"), PackageInternalNs("_-0Km"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-p8"), StaticProtectedNs("_-p8")]), 1
-     jump                L41
-
-     inclocal            2
-     declocal            2
-     kill                2
-     kill                2
-     popscope
-     inclocal            2
-L41:
-     iffalse             L48
+     iffalse             L23
 
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "Number")
@@ -78,11 +43,11 @@ L41:
      callproperty        QName(PackageNamespace(""), "Number"), 1
      initproperty        QName(PackageNamespace(""), "size_")
 
-L48:
+L23:
      getlocal1
      pushstring          "Z"
      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "_-0Km:_-7g/iinit#0"), PrivateNamespace("*", "_-0Km:_-7g/iinit#1"), PackageNamespace(""), PackageNamespace("_-0Km"), PackageInternalNs("_-0Km"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-p8"), StaticProtectedNs("_-p8")]), 1
-     iffalse             L65
+     iffalse             L33
 
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "Number")
@@ -91,20 +56,11 @@ L48:
      callproperty        QName(PackageNamespace(""), "Number"), 1
      initproperty        QName(PackageNamespace(""), "z_")
 
-     jump                L65
-
-     urshift
-     kill                2
-     inclocal_i          2
-     setlocal2
-
-     declocal            2
-     getlocal2
-L65:
+L33:
      getlocal1
      pushstring          "Duration"
      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "_-0Km:_-7g/iinit#0"), PrivateNamespace("*", "_-0Km:_-7g/iinit#1"), PackageNamespace(""), PackageNamespace("_-0Km"), PackageInternalNs("_-0Km"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-p8"), StaticProtectedNs("_-p8")]), 1
-     iffalse             L77
+     iffalse             L43
 
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "Number")
@@ -113,17 +69,11 @@ L65:
      callproperty        QName(PackageNamespace(""), "Number"), 1
      initproperty        QName(PackageNamespace(""), "duration_")
 
-     getlocal3
-     iftrue              L88
-
-L77:
+L43:
      getlocal1
      pushstring          "Animation"
      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "_-0Km:_-7g/iinit#0"), PrivateNamespace("*", "_-0Km:_-7g/iinit#1"), PackageNamespace(""), PackageNamespace("_-0Km"), PackageInternalNs("_-0Km"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-p8"), StaticProtectedNs("_-p8")]), 1
-     iffalse             L88
-
-     getlocal3
-     iftrue              L88
+     iffalse             L52
 
      getlocal0
      findpropstrict      QName(PackageNamespace("_-0-P"), "_-0F7")
@@ -131,7 +81,7 @@ L77:
      constructprop       QName(PackageNamespace("_-0-P"), "_-0F7"), 1
      initproperty        QName(PackageNamespace(""), "_-fe")
 
-L88:
+L52:
      returnvoid
     end ; code
    end ; body

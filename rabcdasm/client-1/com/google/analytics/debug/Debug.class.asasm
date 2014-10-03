@@ -239,7 +239,7 @@ L6:
       coerce              QName(PackageNamespace(""), "Array")
       setlocal2
 
-      jump                L46
+      jump                L43
 
 L13:
       label
@@ -249,7 +249,7 @@ L13:
       coerce              QName(PackageNamespace(""), "Array")
       setlocal2
 
-      jump                L46
+      jump                L43
 
 L20:
       label
@@ -257,7 +257,7 @@ L20:
       coerce              QName(PackageNamespace(""), "Array")
       setlocal2
 
-      jump                L46
+      jump                L43
 
 L25:
       getlocal1
@@ -270,7 +270,7 @@ L25:
       ifstrictne          L34
 
       pushbyte            0
-      jump                L44
+      jump                L41
 
 L34:
       getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
@@ -279,28 +279,22 @@ L34:
       ifstrictne          L40
 
       pushbyte            1
-      jump                L44
+      jump                L41
 
 L40:
-      jump                L43
-
       pushbyte            2
-      jump                L44
-
-L43:
-      pushbyte            2
-L44:
+L41:
       kill                3
       lookupswitch        L20, [L6, L13, L20]
 
-L46:
+L43:
       getlocal2
       pushnull
-      ifne                L50
+      ifne                L47
 
       returnvoid
 
-L50:
+L47:
       findproperty        QName(PackageNamespace(""), "text")
       getlocal2
       pushstring          "\n"

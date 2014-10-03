@@ -14,35 +14,8 @@ class
     initscopedepth 11
     maxscopedepth 12
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     lessequals
-     setlocal2
-
-     inclocal_i          2
-     bitnot
-     nextvalue
-     kill                2
-L10:
-     setlocal2
-
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal3
-     dup
-     iftrue              L20
-
-     pop
-     getlocal1
-     convert_b
-L20:
-     iffalse             L26
 
      getlocal0
      getlocal1
@@ -50,7 +23,6 @@ L20:
      pushstring          "Change"
      constructsuper      3
 
-L26:
      returnvoid
     end ; code
    end ; body
@@ -66,36 +38,8 @@ L26:
      initscopedepth 11
      maxscopedepth 12
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      declocal            2
-      modulo
-      setlocal2
-
-      pushnull
-      setlocal2
-
-      inclocal_i          2
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      dup
-      iftrue              L20
-
-      pop
-      getlocal2
-      convert_b
-L20:
-      iffalse             L27
 
       getlex              QName(PackageNamespace(""), "gs_")
       findpropstrict      QName(PackageNamespace("flash.events"), "Event")
@@ -104,7 +48,6 @@ L20:
       constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
       callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
 
-L27:
       returnvoid
      end ; code
     end ; body

@@ -14,39 +14,12 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     istypelate
-     decrement
-     urshift
-     newactivation
-     lshift
-     getlocal1
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal2
-     dup
-     iftrue              L20
-
-     pop
-     getlocal2
-     convert_b
-L20:
-     iffalse             L23
 
      getlocal0
      constructsuper      0
 
-L23:
      returnvoid
     end ; code
    end ; body
@@ -84,34 +57,14 @@ L23:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      inclocal_i          3
-      not
-      kill                3
-      kill                2
-      greaterthan
-      pushfalse
-L10:
-      setlocal            4
-
-      setlocal            5
-
       getlocal0
       pushscope
-
-      getlocal            5
-      iffalse             L20
 
       getlocal1
       getlocal2
       getlocal3
       callpropvoid        QName(Namespace("http://crypto.hurlant.com/BigInteger"), "_-G8"), 2
 
-L20:
       returnvoid
      end ; code
     end ; body
@@ -129,33 +82,13 @@ L20:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal3
-
-      jump                L10
-
-      multiply_i
-      declocal            2
-      multiply_i
-      kill                2
-      getlocal1
-      setlocal2
-
-L10:
-      setlocal            4
-
       getlocal0
       pushscope
-
-      getlocal3
-      iffalse             L18
 
       getlocal1
       getlocal2
       callpropvoid        QName(Namespace("http://crypto.hurlant.com/BigInteger"), "_-Ro"), 1
 
-L18:
       returnvoid
      end ; code
     end ; body

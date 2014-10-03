@@ -13,62 +13,20 @@ class
     initscopedepth 9
     maxscopedepth 10
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     modulo
-     divide
-     setlocal3
-
-     istypelate
-     kill                2
-     setlocal2
-
-L10:
-     setlocal3
-
-     setlocal            4
-
      getlocal0
      pushscope
-
-     getlocal            4
-     iffalse             L18
 
      getlocal0
      constructsuper      0
 
-L18:
      findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
      constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
      coerce              QName(PackageNamespace("flash.display"), "Shape")
-     jump                L28
-
-     popscope
-     kill                3
-     multiply_i
-     setlocal3
-
-     kill                2
-     declocal_i          3
-L28:
      setlocal1
 
      getlocal1
      getproperty         QName(PackageNamespace(""), "graphics")
      coerce              QName(PackageNamespace("flash.display"), "Graphics")
-     jump                L39
-
-     declocal_i          3
-     getlocal1
-     inclocal            3
-     kill                2
-     convert_s
-     setlocal2
-
-L39:
      setlocal2
 
      getlocal2
@@ -115,21 +73,6 @@ L39:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      setlocal            4
-
-      jump                L10
-
-      declocal            2
-      istypelate
-      pushwith
-      lessequals
-      convert_o
-      pushwith
-L10:
-      setlocal            5
-
       getlocal0
       pushscope
 
@@ -152,93 +95,42 @@ L10:
       getproperty         QName(PrivateNamespace("*", "_-L7:_-OZ"), "onComplete")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-      getlocal            4
-      iffalse             L61
-
       getlocal2
       findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.util.offer"), "Offers")
       findpropstrict      QName(PackageNamespace(""), "XML")
       getlocal1
       getproperty         QName(PackageNamespace(""), "data_")
-      jump                L43
-
-      getlocal            4
-      setlocal            4
-
-      newactivation
-      declocal_i          2
-      kill                3
-      inclocal_i          2
-L43:
       callproperty        QName(PackageNamespace(""), "XML"), 1
       constructprop       QName(PackageNamespace("com.company.assembleegameclient.util.offer"), "Offers"), 1
       setproperty         QName(PackageNamespace(""), "_-0JE")
-
-      getlocal            5
-      dup
-      iffalse             L52
-
-      pop
-      getlocal2
-      convert_b
-L52:
-      iftrue              L77
 
       getlocal2
       pushstring          ""
       setproperty         QName(PackageNamespace(""), "_-yI")
 
-      getlocal            4
-      iffalse             L61
-
       getlocal2
       pushstring          " Kreds"
       setproperty         QName(PackageNamespace(""), "_-QW")
 
-L61:
       getlocal2
-      jump                L69
-
-      declocal_i          2
-      kill                2
-      declocal_i          4
-      convert_d
-      add
-      declocal_i          2
-L69:
       pushfalse
       setproperty         QName(PackageNamespace(""), "_-02Z")
-
-      getlocal            4
-      iffalse             L77
 
       getlocal2
       findpropstrict      QName(PackageNamespace("_-Zh"), "_-BR")
       constructprop       QName(PackageNamespace("_-Zh"), "_-BR"), 0
       setproperty         QName(PackageNamespace(""), "_-04Z")
 
-L77:
       findpropstrict      QName(PackageNamespace("_-0Dd"), "_-AR")
       getlocal2
       constructprop       QName(PackageNamespace("_-0Dd"), "_-AR"), 1
       coerce              QName(PackageNamespace("_-0Dd"), "_-AR")
       setlocal3
 
-      getlocal            5
-      dup
-      iffalse             L88
-
-      pop
-      getlocal1
-      convert_b
-L88:
-      iftrue              L92
-
       findpropstrict      QName(PackageNamespace(""), "addChild")
       getlocal3
       callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
-L92:
       returnvoid
      end ; code
     end ; body
@@ -255,40 +147,18 @@ L92:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      pop
-      subtract
-      declocal            2
-      inclocal            2
-      inclocal_i          2
-      getlocal2
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      iffalse             L24
 
       findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
       findpropstrict      QName(PackageNamespace("_-9R"), "_-Bw")
       constructprop       QName(PackageNamespace("_-9R"), "_-Bw"), 0
       callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
 
-      getlocal3
-      iftrue              L24
-
       getlex              QName(PackageNamespace(""), "parent")
       getlocal0
       callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
 
-L24:
       returnvoid
      end ; code
     end ; body
@@ -305,34 +175,13 @@ L24:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      pushscope
-
-      kill                2
-      strictequals
-      equals
-      setlocal2
-
-      inclocal            2
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      iffalse             L18
 
       getlex              QName(PackageNamespace(""), "parent")
       getlocal0
       callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
 
-L18:
       returnvoid
      end ; code
     end ; body

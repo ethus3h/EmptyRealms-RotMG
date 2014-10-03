@@ -13,27 +13,8 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     negate
-     pop
-     nextname
-     greaterthan
-     increment
-     dup
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal1
-     iftrue              L24
 
      getlocal0
      getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.util:_-x2#0"), PrivateNamespace("*", "com.company.assembleegameclient.util:_-x2#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-D0"), StaticProtectedNs("_-D0"), PackageNamespace("__AS3__.vec")])
@@ -42,14 +23,9 @@ L10:
      construct           0
      initproperty        QName(PackageNamespace(""), "_-Wu")
 
-     getlocal2
-     iffalse             L26
-
-L24:
      getlocal0
      constructsuper      0
 
-L26:
      returnvoid
     end ; code
    end ; body
@@ -69,23 +45,6 @@ L26:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal            8
-
-      jump                L10
-
-      setlocal            4
-
-      pushwith
-      multiply_i
-      declocal_i          6
-      setlocal            6
-
-      inclocal_i          7
-L10:
-      setlocal            9
-
       getlocal0
       pushscope
 
@@ -104,27 +63,14 @@ L10:
       coerce              QName(PackageNamespace("com.company.util"), "_-kp")
       setlocal            6
 
-      getlocal            9
-      iftrue              L30
-
       getlocal2
       pushnull
-      ifeq                L46
+      ifeq                L26
 
-L30:
       findpropstrict      QName(PackageNamespace("com.company.util"), "_-kp")
       constructprop       QName(PackageNamespace("com.company.util"), "_-kp"), 0
       coerce              QName(PackageNamespace("com.company.util"), "_-kp")
       dup
-      jump                L41
-
-      kill                6
-      urshift
-      inclocal            5
-      convert_s
-      getlocal            7
-      coerce_a
-L41:
       setlocal            6
 
       getlocal2
@@ -132,13 +78,13 @@ L41:
       getlocal            4
       callpropvoid        QName(PackageNamespace(""), "addFromBitmapData"), 3
 
-L46:
+L26:
       pushbyte            0
       setlocal            7
 
-      jump                L83
+      jump                L52
 
-L49:
+L29:
       label
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-Wu")
@@ -148,48 +94,32 @@ L49:
       getlocal            7
       getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:_-x2#0"), PrivateNamespace("*", "com.company.assembleegameclient.util:_-x2#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-D0"), StaticProtectedNs("_-D0")])
       getlocal            6
-      jump                L65
-
-      declocal            6
-      bitnot
-      inclocal            5
-      getlocal1
-      declocal_i          7
-      equals
-L65:
       pushnull
       equals
-      iffalse             L71
+      iffalse             L44
 
       pushnull
       coerce              QName(PackageNamespace("flash.display"), "BitmapData")
-      jump                L76
+      jump                L49
 
-L71:
+L44:
       getlocal            6
       getproperty         QName(PackageNamespace(""), "_-Wu")
       getlocal            7
       getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:_-x2#0"), PrivateNamespace("*", "com.company.assembleegameclient.util:_-x2#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-D0"), StaticProtectedNs("_-D0")])
       coerce              QName(PackageNamespace("flash.display"), "BitmapData")
-L76:
+L49:
       constructprop       QName(PackageNamespace("com.company.assembleegameclient.util"), "_-JH"), 2
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-      getlocal            9
-      iftrue              L88
-
       inclocal_i          7
-      getlocal            8
-      iffalse             L88
-
-L83:
+L52:
       getlocal            7
       getlocal            5
       getproperty         QName(PackageNamespace(""), "_-Wu")
       getproperty         QName(PackageNamespace(""), "length")
-      iflt                L49
+      iflt                L29
 
-L88:
       returnvoid
      end ; code
     end ; body
@@ -208,26 +138,8 @@ L88:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal            4
-
-      jump                L10
-
-      declocal_i          2
-      instanceof
-      declocal            3
-      pushnan
-      declocal            2
-      subtract_i
-L10:
-      setlocal            5
-
       getlocal0
       pushscope
-
-      getlocal            4
-      iffalse             L23
 
       getlocal0
       getlocal1
@@ -238,7 +150,6 @@ L10:
       getlocal3
       callpropvoid        QName(PackageNamespace(""), "addFromBitmapData"), 4
 
-L23:
       returnvoid
      end ; code
     end ; body

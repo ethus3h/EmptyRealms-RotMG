@@ -14,47 +14,18 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     setlocal2
-
-     jump                L10
-
-     inclocal            2
-     getlocal0
-     negate
-     popscope
-     declocal_i          2
-     getlocal2
-L10:
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal3
-     dup
-     iffalse             L19
-
-     pop
-     getlocal2
-     convert_b
-L19:
-     iftrue              L29
 
      getlocal0
      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.net.messages.data"), "_-Q0")
      constructprop       QName(PackageNamespace("com.company.assembleegameclient.net.messages.data"), "_-Q0"), 0
      initproperty        QName(PackageNamespace(""), "startingPos_")
 
-     getlocal3
-     iftrue              L29
-
      getlocal0
      getlocal1
      constructsuper      1
 
-L29:
      returnvoid
     end ; code
    end ; body
@@ -78,22 +49,6 @@ L29:
      initscopedepth 6
      maxscopedepth 7
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      pushfalse
-      astypelate
-      multiply_i
-      greaterthan
-      add
-      kill                2
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
 
@@ -102,18 +57,11 @@ L10:
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readUnsignedByte"), 0
       initproperty        QName(PackageNamespace(""), "bulletId_")
 
-      getlocal3
-      iffalse             L26
-
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
       initproperty        QName(PackageNamespace(""), "ownerId_")
 
-      getlocal2
-      iftrue              L41
-
-L26:
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readUnsignedByte"), 0
@@ -122,25 +70,12 @@ L26:
       getlocal0
       getproperty         QName(PackageNamespace(""), "startingPos_")
       getlocal1
-      jump                L40
-
-      kill                2
-      increment
-      coerce_a
-      inclocal            2
-      declocal            2
-      kill                2
-L40:
       callpropvoid        QName(PackageNamespace(""), "parseFromInput"), 1
 
-L41:
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readFloat"), 0
       initproperty        QName(PackageNamespace(""), "angle_")
-
-      getlocal2
-      iftrue              L86
 
       getlocal0
       getlocal1
@@ -150,54 +85,30 @@ L41:
       getlocal1
       getproperty         QName(Namespace("flash.utils:IDataInput"), "bytesAvailable")
       pushbyte            0
-      ifngt               L73
+      ifngt               L39
 
       getlocal0
-      jump                L63
-
-      setlocal2
-
-      kill                2
-      instanceof
-      pushtrue
-      kill                2
-      subtract
-L63:
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readUnsignedByte"), 0
       initproperty        QName(PackageNamespace(""), "numShots_")
-
-      getlocal3
-      iffalse             L72
 
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readFloat"), 0
       initproperty        QName(PackageNamespace(""), "angleInc_")
 
-L72:
-      jump                L86
+      jump                L45
 
-L73:
+L39:
       getlocal0
       pushbyte            1
       initproperty        QName(PackageNamespace(""), "numShots_")
-
-      getlocal3
-      dup
-      iftrue              L82
-
-      pop
-      getlocal3
-      convert_b
-L82:
-      iffalse             L86
 
       getlocal0
       pushbyte            0
       initproperty        QName(PackageNamespace(""), "angleInc_")
 
-L86:
+L45:
       returnvoid
      end ; code
     end ; body
@@ -217,15 +128,6 @@ L86:
       pushscope
 
       findpropstrict      QName(ProtectedNamespace("_-1E"), "formatToString")
-      jump                L10
-
-      rshift
-      multiply_i
-      decrement_i
-      pushwith
-      bitand
-      pushnull
-L10:
       pushstring          "SHOOT"
       pushstring          "bulletId_"
       pushstring          "ownerId_"

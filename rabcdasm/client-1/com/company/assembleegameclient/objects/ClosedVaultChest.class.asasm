@@ -14,40 +14,13 @@ class
     initscopedepth 7
     maxscopedepth 8
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     dup
-     nextname
-     add
-     increment_i
-     declocal            2
-     inclocal            2
-L10:
-     setlocal2
-
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal3
-     dup
-     iftrue              L20
-
-     pop
-     getlocal3
-     convert_b
-L20:
-     iffalse             L24
 
      getlocal0
      getlocal1
      constructsuper      1
 
-L24:
      returnvoid
     end ; code
    end ; body
@@ -100,21 +73,6 @@ L24:
      initscopedepth 7
      maxscopedepth 8
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      inclocal_i          2
-      inclocal_i          2
-      pushnan
-      popscope
-      add
-      declocal_i          2
-L10:
-      setlocal3
-
       getlocal0
       pushscope
 
@@ -124,12 +82,8 @@ L10:
       getlocal0
       callproperty        QName(PackageNamespace(""), "soldObjectName"), 0
       pushstring          "A chest that will safely store 8 items and is "
-      getlocal2
-      iffalse             L23
-
       pushstring          "accessible by all of your characters."
       add
-L23:
       pushshort           200
       constructprop       QName(PackageNamespace("_-E7"), "_-aS"), 5
       coerce              QName(PackageNamespace("_-E7"), "for ")
@@ -155,15 +109,6 @@ L23:
       pushscope
 
       getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
-      jump                L10
-
-      rshift
-      convert_u
-      add_i
-      newactivation
-      multiply
-      pop
-L10:
       getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
       getproperty         QName(PackageNamespace(""), "_-pb")
       pushstring          "Vault Chest"

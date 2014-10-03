@@ -13,38 +13,12 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     setlocal1
-
-     jump                L10
-
-     lessequals
-     negate
-     dup
-     coerce_a
-     decrement_i
-     multiply
-L10:
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal2
-     dup
-     iffalse             L19
-
-     pop
-     getlocal2
-     convert_b
-L19:
-     iftrue              L22
 
      getlocal0
      constructsuper      0
 
-L22:
      returnvoid
     end ; code
    end ; body
@@ -58,67 +32,20 @@ L22:
    initscopedepth 3
    maxscopedepth 4
    code
-    pushfalse
-    pushtrue
-    setlocal1
-
-    jump                L10
-
-    urshift
-    hasnext
-    divide
-    setlocal3
-
-    bitor
-    getlocal1
-L10:
-    setlocal2
-
     getlocal0
     pushscope
-
-    getlocal2
-    dup
-    jump                L22
-
-    instanceof
-    pushnan
-    dup
-    greaterthan
-    bitand
-    pushnull
-L22:
-    iffalse             L26
-
-    pop
-    getlocal1
-    convert_b
-L26:
-    iftrue              L38
 
     findproperty        QName(PackageNamespace(""), "_-0Hk")
     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
     setproperty         QName(PackageNamespace(""), "_-0Hk")
 
-    getlocal1
-    dup
-    iftrue              L37
-
-    pop
-    getlocal1
-    convert_b
-L37:
-    iffalse             L43
-
-L38:
     findproperty        QName(PrivateNamespace("*", "_-vf:_-5T#0"), "_-04b")
     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
     pushtrue
     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 1
     setproperty         QName(PrivateNamespace("*", "_-vf:_-5T#0"), "_-04b")
 
-L43:
     returnvoid
    end ; code
   end ; body
@@ -136,21 +63,6 @@ L43:
     initscopedepth 3
     maxscopedepth 4
     code
-     pushfalse
-     pushtrue
-     setlocal            4
-
-     jump                L10
-
-     declocal_i          2
-     hasnext
-     pushwith
-     astypelate
-     coerce_s
-     coerce_a
-L10:
-     setlocal            5
-
      getlocal0
      pushscope
 
@@ -160,35 +72,20 @@ L10:
      coerce              QName(PackageNamespace("flash.media"), "Sound")
      setlocal2
 
-     getlocal            5
-     iftrue              L27
-
      getlocal2
      pushnull
-     ifeq                L27
-
-     getlocal            5
-     iftrue              L27
+     ifeq                L12
 
      getlocal2
      returnvalue
 
-L27:
+L12:
      findpropstrict      QName(PackageNamespace("flash.net"), "URLRequest")
      pushstring          "http://"
      pushstring          "dl.dropboxusercontent.com/u/6436787"
      add
      pushstring          "/sfx/"
      add
-     jump                L40
-
-     popscope
-     equals
-     declocal            2
-     lessequals
-     kill                2
-     add_i
-L40:
      getlocal1
      add
      pushstring          ".mp3"
@@ -202,55 +99,21 @@ L40:
      coerce              QName(PackageNamespace("flash.media"), "Sound")
      setlocal2
 
-     getlocal            4
-     iffalse             L86
-
      getlocal2
      getlex              QName(PackageNamespace("flash.events"), "IOErrorEvent")
      getproperty         QName(PackageNamespace(""), "IO_ERROR")
      getlex              QName(PackageNamespace(""), "onIOError")
-     jump                L64
-
-     inclocal            3
-     negate
-     kill                2
-     setlocal3
-
-     nextvalue
-     inclocal_i          4
-L64:
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
-
-     getlocal            5
-     dup
-     iffalse             L71
-
-     pop
-     getlocal3
-     convert_b
-L71:
-     iftrue              L86
 
      getlocal2
      getlocal3
      callpropvoid        QName(PackageNamespace(""), "load"), 1
-
-     getlocal            4
-     dup
-     iftrue              L81
-
-     pop
-     getlocal0
-     convert_b
-L81:
-     iffalse             L86
 
      getlex              QName(PackageNamespace(""), "_-0Hk")
      getlocal1
      getlocal2
      setproperty         MultinameL([PrivateNamespace("*", "_-vf:_-5T#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-5T#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("use "), StaticProtectedNs("use ")])
 
-L86:
      getlocal2
      returnvalue
     end ; code
@@ -274,23 +137,6 @@ L86:
     initscopedepth 4
     maxscopedepth 9
     code
-     pushfalse
-     pushtrue
-     setlocal            6
-
-     jump                L10
-
-     declocal_i          6
-     setlocal3
-
-     hasnext
-     kill                2
-     setlocal3
-
-     inclocal_i          5
-L10:
-     setlocal            7
-
      getlocal0
      pushscope
 
@@ -302,100 +148,31 @@ L10:
 
      getscopeobject      1
      pushnan
-     getlocal            6
-     dup
-     iftrue              L25
-
-     pop
-     getlocal2
-     convert_b
-L25:
-     iffalse             L63
-
      setslot             5
 
      getscopeobject      1
      pushnull
-     getlocal            7
-     dup
-     iffalse             L35
-
-     pop
-     getlocal3
-     convert_b
-L35:
-     iftrue              L49
-
      coerce              QName(PackageNamespace("flash.media"), "SoundTransform")
      setslot             6
 
-     getlocal            6
-     dup
-     iftrue              L44
-
-     pop
-     getlocal1
-     convert_b
-L44:
-     iffalse             L81
-
      getscopeobject      1
-     getlocal            7
-     iftrue              L52
-
      pushnull
-L49:
      coerce              QName(PackageNamespace("flash.media"), "SoundChannel")
      setslot             7
 
      getscopeobject      1
-L52:
      getlocal1
      setslot             1
 
-     getlocal            6
-     dup
-     iftrue              L60
-
-     pop
-     getlocal0
-     convert_b
-L60:
-     iffalse             L64
-
      getscopeobject      1
      getlocal2
-L63:
      setslot             2
 
-L64:
      getscopeobject      1
-     getlocal            6
-     dup
-     iftrue              L71
-
-     pop
-     getlocal2
-     convert_b
-L71:
-     iffalse             L82
-
      getlocal3
      setslot             3
 
-     getlocal            7
-     dup
-     iffalse             L80
-
-     pop
-     getlocal1
-     convert_b
-L80:
-     iftrue              L88
-
-L81:
      getscopeobject      1
-L82:
      findpropstrict      QName(PackageNamespace(""), "load")
      getscopeobject      1
      getslot             1
@@ -403,121 +180,33 @@ L82:
      coerce              QName(PackageNamespace("flash.media"), "Sound")
      setslot             4
 
-L88:
+L33:
      getscopeobject      1
      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
      getproperty         QName(PackageNamespace(""), "data_")
      getproperty         Multiname("playSFX", [PrivateNamespace("*", "_-vf:_-5T#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-5T#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("use "), StaticProtectedNs("use ")])
      coerce_a
      convert_b
-     getlocal            7
-     iftrue              L124
-
      dup
-     getlocal            7
-     dup
-     iffalse             L103
+     iffalse             L46
 
      pop
-     getlocal2
-     convert_b
-L103:
-     iftrue              L143
-
-     iffalse             L133
-
-     getlocal            6
-     dup
-     iftrue              L111
-
-     pop
-     getlocal0
-     convert_b
-L111:
-     iffalse             L144
-
-     pop
-     getlocal            7
-     dup
-     iffalse             L119
-
-     pop
-     getlocal1
-     convert_b
-L119:
-     iftrue              L246
-
      getscopeobject      1
-     getlocal            7
-     iftrue              L185
-
      getslot             3
-L124:
      coerce_a
      convert_b
-     getlocal            6
+L46:
      dup
-     iftrue              L132
+     iftrue              L62
 
      pop
-     getlocal3
-     convert_b
-L132:
-     iffalse             L164
-
-L133:
-     dup
-     jump                L141
-
-     setlocal            6
-
-     getlocal1
-     setlocal            4
-
-     increment_i
-     strictequals
-     getlocal            4
-L141:
-     getlocal            7
-     iftrue              L165
-
-L143:
-     iftrue              L174
-
-L144:
-     pop
-     getlocal            7
-     dup
-     iffalse             L151
-
-     pop
-     getlocal0
-     convert_b
-L151:
-     iftrue              L213
-
      getscopeobject      1
-     getlocal            6
-     dup
-     iftrue              L159
-
-     pop
-     getlocal0
-     convert_b
-L159:
-     iffalse             L235
-
      getslot             3
      not
      coerce_a
      convert_b
-L164:
      dup
-L165:
-     iffalse             L174
-
-     getlocal            6
-     iffalse             L174
+     iffalse             L62
 
      pop
      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
@@ -525,67 +214,22 @@ L165:
      getproperty         Multiname("playPewPew", [PrivateNamespace("*", "_-vf:_-5T#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-5T#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("use "), StaticProtectedNs("use ")])
      coerce_a
      convert_b
-L174:
-     iffalse             L202
-
-     getlocal            6
-     iffalse             L213
+L62:
+     iffalse             L67
 
      getscopeobject      1
-     getlocal            7
-     dup
-     iffalse             L184
-
-     pop
-     getlocal2
-     convert_b
-L184:
-     iftrue              L235
-
-L185:
      getslot             2
-     getlocal            6
-     dup
-     iftrue              L192
-
-     pop
-     getlocal0
-     convert_b
-L192:
-     iffalse             L207
-
      convert_d
-     getlocal            6
-     dup
-     iftrue              L200
+     jump                L69
 
-     pop
-     getlocal2
-     convert_b
-L200:
-     iffalse             L206
-
-     jump                L206
-
-L202:
+L67:
      pushbyte            0
      convert_d
-     getlocal            7
-     iftrue              L207
-
-L206:
+L69:
      convert_d
-L207:
      setslot             5
 
-     getlocal            7
-     iftrue              L274
-
      getscopeobject      1
-     getlocal            6
-     iffalse             L234
-
-L213:
      findpropstrict      QName(PackageNamespace("flash.media"), "SoundTransform")
      getscopeobject      1
      getslot             5
@@ -593,30 +237,8 @@ L213:
      coerce              QName(PackageNamespace("flash.media"), "SoundTransform")
      setslot             6
 
-     getlocal            6
-     dup
-     iftrue              L225
-
-     pop
-     getlocal2
-     convert_b
-L225:
-     iffalse             L268
-
      getscopeobject      1
-     getlocal            6
-     dup
-     iftrue              L233
-
-     pop
-     getlocal1
-     convert_b
-L233:
-     iffalse             L246
-
-L234:
      getscopeobject      1
-L235:
      getslot             4
      pushbyte            0
      dup
@@ -626,11 +248,7 @@ L235:
      coerce              QName(PackageNamespace("flash.media"), "SoundChannel")
      setslot             7
 
-     getlocal            7
-     iftrue              L274
-
      getscopeobject      1
-L246:
      getslot             7
      getlex              QName(PackageNamespace("flash.events"), "Event")
      getproperty         QName(PackageNamespace(""), "SOUND_COMPLETE")
@@ -640,26 +258,6 @@ L246:
      pushtrue
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
 
-     getlocal            7
-     dup
-     iffalse             L267
-
-     pop
-     jump                L265
-
-     multiply
-     increment
-     declocal            5
-     inclocal            2
-     inclocal_i          3
-     subtract
-L265:
-     getlocal1
-     convert_b
-L267:
-     iftrue              L274
-
-L268:
      getlex              QName(PrivateNamespace("*", "_-vf:_-5T#0"), "_-04b")
      getscopeobject      1
      getslot             7
@@ -667,10 +265,10 @@ L268:
      getslot             2
      setproperty         MultinameL([PrivateNamespace("*", "_-vf:_-5T#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-5T#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("use "), StaticProtectedNs("use ")])
 
-L274:
-     jump                L288
+L103:
+     jump                L117
 
-L275:
+L104:
      getlocal0
      pushscope
 
@@ -689,10 +287,10 @@ L275:
 
      popscope
      kill                5
-L288:
+L117:
      returnvoid
     end ; code
-    try from L88 to L274 target L275 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "error") end
+    try from L33 to L103 target L104 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "error") end
     trait slot QName(PackageInternalNs("_-vf"), "name") slotid 1 type QName(PackageNamespace(""), "String") end
     trait slot QName(PackageInternalNs("_-vf"), "volume") slotid 2 type QName(PackageNamespace(""), "Number") value Double(1) end
     trait slot QName(PackageInternalNs("_-vf"), "isFX") slotid 3 type QName(PackageNamespace(""), "Boolean") value True() end
@@ -714,22 +312,6 @@ L288:
     initscopedepth 3
     maxscopedepth 4
     code
-     pushfalse
-     pushtrue
-     setlocal3
-
-     jump                L10
-
-     dup
-     inclocal_i          3
-     pushtrue
-     setlocal2
-
-     greaterthan
-     kill                2
-L10:
-     setlocal            4
-
      getlocal0
      pushscope
 
@@ -740,21 +322,10 @@ L10:
      coerce              QName(PackageNamespace("flash.media"), "SoundChannel")
      setlocal2
 
-     getlocal3
-     dup
-     iftrue              L25
-
-     pop
-     getlocal3
-     convert_b
-L25:
-     iffalse             L30
-
      getlex              QName(PrivateNamespace("*", "_-vf:_-5T#0"), "_-04b")
      getlocal2
      deleteproperty      MultinameL([PrivateNamespace("*", "_-vf:_-5T#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-5T#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("use "), StaticProtectedNs("use ")])
      pop
-L30:
      returnvoid
     end ; code
    end ; body
@@ -770,22 +341,6 @@ L30:
     initscopedepth 3
     maxscopedepth 4
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     strictequals
-     getlocal3
-     pop
-     modulo
-     increment
-     inclocal_i          4
-L10:
-     setlocal            5
-
-     setlocal            6
-
      getlocal0
      pushscope
 
@@ -804,21 +359,12 @@ L10:
      coerce_a
      setlocal            4
 
-     jump                L75
+     jump                L40
 
-L26:
+L14:
      label
      getlocal            4
      getlocal3
-     jump                L36
-
-     pushwith
-     inclocal            5
-     getlocal2
-     declocal            3
-     getlocal2
-     not
-L36:
      nextvalue
      coerce              QName(PackageNamespace("flash.media"), "SoundChannel")
      setlocal1
@@ -828,53 +374,31 @@ L36:
      coerce              QName(PackageNamespace("flash.media"), "SoundTransform")
      setlocal2
 
-     getlocal            6
-     iffalse             L75
-
      getlocal2
      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
      getproperty         QName(PackageNamespace(""), "data_")
      getproperty         Multiname("playSFX", [PrivateNamespace("*", "_-vf:_-5T#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-5T#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("use "), StaticProtectedNs("use ")])
-     jump                L56
-
-     swap
-     inclocal_i          4
-     inclocal_i          5
-     multiply_i
-     inclocal_i          2
-     dup
-L56:
-     iffalse             L62
+     iffalse             L34
 
      getlex              QName(PrivateNamespace("*", "_-vf:_-5T#0"), "_-04b")
      getlocal1
      getproperty         MultinameL([PrivateNamespace("*", "_-vf:_-5T#0"), PackageNamespace(""), PrivateNamespace("*", "_-vf:_-5T#1"), PackageNamespace("_-vf"), PackageInternalNs("_-vf"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("use "), StaticProtectedNs("use ")])
      convert_d
-     jump                L64
+     jump                L36
 
-L62:
+L34:
      pushbyte            0
      convert_d
-L64:
+L36:
      setproperty         QName(PackageNamespace(""), "volume")
-
-     getlocal            6
-     dup
-     iftrue              L71
-
-     pop
-     getlocal0
-     convert_b
-L71:
-     iffalse             L75
 
      getlocal1
      getlocal2
      setproperty         QName(PackageNamespace(""), "soundTransform")
 
-L75:
+L40:
      hasnext2            4, 3
-     iftrue              L26
+     iftrue              L14
 
      kill                4
      kill                3

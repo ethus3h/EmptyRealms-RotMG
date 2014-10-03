@@ -18,65 +18,19 @@ class
     initscopedepth 7
     maxscopedepth 8
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     declocal_i          2
-     declocal_i          3
-     convert_s
-     setlocal            6
-
-     subtract
-     pushfalse
-L10:
-     setlocal            6
-
-     setlocal            7
-
      getlocal0
      pushscope
 
-     getlocal            6
-     dup
-     iffalse             L27
-
-     pop
-     getlocal1
-     jump                L26
-
-     declocal_i          2
-     setlocal            6
-
-     declocal            4
-     convert_i
-     urshift
-     decrement_i
-L26:
-     convert_b
-L27:
-     iftrue              L51
-
      getlocal0
      constructsuper      0
-
-     getlocal            6
-     iftrue              L51
 
      getlocal0
      getlocal1
      initproperty        QName(PackageNamespace(""), "_-IX")
 
-     getlocal            7
-     iffalse             L48
-
      findproperty        QName(PackageNamespace(""), "size_")
      getlocal2
      initproperty        QName(PackageNamespace(""), "size_")
-
-     getlocal            6
-     iftrue              L48
 
      getlocal0
      getlocal3
@@ -86,12 +40,10 @@ L27:
      getlocal            4
      initproperty        QName(PackageNamespace(""), "angle_")
 
-L48:
      getlocal0
      getlocal            5
      initproperty        QName(PackageNamespace(""), "speed_")
 
-L51:
      returnvoid
     end ; code
    end ; body
@@ -112,21 +64,6 @@ L51:
      initscopedepth 7
      maxscopedepth 8
      code
-      pushfalse
-      pushtrue
-      setlocal            8
-
-      jump                L10
-
-      inclocal            3
-      greaterequals
-      declocal            8
-      modulo
-      increment_i
-      declocal            3
-L10:
-      setlocal            9
-
       getlocal0
       pushscope
 
@@ -138,46 +75,20 @@ L10:
       coerce              QName(PackageNamespace("_-0Km"), "Particle")
       setlocal            7
 
-      getlocal            9
-      dup
-      iffalse             L25
-
-      pop
-      getlocal0
-      convert_b
-L25:
-      iftrue              L40
-
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-IX")
       getproperty         QName(PackageNamespace(""), "length")
       pushbyte            0
-      ifne                L40
-
-      getlocal            8
-      dup
-      iftrue              L37
-
-      pop
-      getlocal0
-      convert_b
-L37:
-      iffalse             L40
+      ifne                L15
 
       pushfalse
       returnvalue
 
-L40:
+L15:
       getlocal0
       getproperty         QName(PackageNamespace(""), "speed_")
-      getlocal            9
-      iftrue              L63
-
       pushshort           600
       divide
-      getlocal            8
-      iffalse             L63
-
       getlex              QName(PackageNamespace(""), "Math")
       getlocal0
       getproperty         QName(PackageNamespace(""), "angle_")
@@ -186,54 +97,13 @@ L40:
       add
       callproperty        QName(PackageNamespace(""), "cos"), 1
       multiply
-      getlocal            9
-      dup
-      iffalse             L62
-
-      pop
-      getlocal0
-      convert_b
-L62:
-      iftrue              L64
-
-L63:
       convert_d
-L64:
       setlocal3
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "speed_")
-      getlocal            9
-      dup
-      iffalse             L73
-
-      pop
-      getlocal3
-      convert_b
-L73:
-      iftrue              L100
-
       pushshort           600
       divide
-      getlocal            9
-      dup
-      iffalse             L89
-
-      pop
-      getlocal0
-      jump                L88
-
-      pushtrue
-      inclocal_i          4
-      urshift
-      inclocal            2
-      pushnull
-      bitand
-L88:
-      convert_b
-L89:
-      iftrue              L101
-
       getlex              QName(PackageNamespace(""), "Math")
       getlocal0
       getproperty         QName(PackageNamespace(""), "angle_")
@@ -242,20 +112,15 @@ L89:
       add
       callproperty        QName(PackageNamespace(""), "sin"), 1
       multiply
-      getlocal            8
-      iffalse             L101
-
-L100:
       convert_d
-L101:
       setlocal            4
 
       pushbyte            0
       setlocal            5
 
-      jump                L178
+      jump                L96
 
-L105:
+L46:
       label
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-IX")
@@ -270,16 +135,6 @@ L105:
       getproperty         MultinameL([PrivateNamespace("*", "_-0Km:HitEffect/update"), PackageNamespace(""), PackageNamespace("_-0Km"), PrivateNamespace("*", "_-0Km:HitEffect"), PackageInternalNs("_-0Km"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-aP"), StaticProtectedNs("_-aP"), StaticProtectedNs("_-2g"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
       convert_u
       setlocal            6
-
-      getlocal            9
-      dup
-      iffalse             L125
-
-      pop
-      getlocal1
-      convert_b
-L125:
-      iftrue              L182
 
       findpropstrict      QName(PrivateNamespace("*", "_-0Km:HitEffect"), "HitParticle")
       getlocal            6
@@ -308,28 +163,9 @@ L125:
       multiply
       add
       pushbyte            0
-      jump                L160
-
-      getlocal3
-      typeof
-      bitor
-      coerce_a
-      inclocal            5
-      declocal            6
-L160:
       constructprop       QName(PrivateNamespace("*", "_-0Km:HitEffect"), "HitParticle"), 7
       coerce              QName(PackageNamespace("_-0Km"), "Particle")
       setlocal            7
-
-      getlocal            8
-      dup
-      iftrue              L169
-
-      pop
-      getlocal1
-      convert_b
-L169:
-      iffalse             L178
 
       getlex              QName(PackageNamespace(""), "map_")
       getlocal            7
@@ -337,17 +173,13 @@ L169:
       getlex              QName(PackageNamespace(""), "y_")
       callpropvoid        QName(PackageNamespace(""), "addObj"), 3
 
-      getlocal            8
-      iffalse             L178
-
       inclocal_i          5
-L178:
+L96:
       getlocal            5
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-td")
-      iflt                L105
+      iflt                L46
 
-L182:
       pushfalse
       returnvalue
      end ; code

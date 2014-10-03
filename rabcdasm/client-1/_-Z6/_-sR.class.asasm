@@ -13,40 +13,12 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     instanceof
-     typeof
-     checkfilter
-     newactivation
-     bitnot
-     setlocal2
-
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal1
-     dup
-     iffalse             L20
-
-     pop
-     getlocal1
-     convert_b
-L20:
-     iftrue              L23
 
      getlocal0
      constructsuper      0
 
-L23:
      returnvoid
     end ; code
    end ; body
@@ -82,15 +54,6 @@ L23:
      pushscope
 
      findpropstrict      QName(PackageNamespace("_-Z6"), "_-mW")
-     jump                L10
-
-     divide
-     subtract
-     pushwith
-     not
-     pushwith
-     pushtrue
-L10:
      getlocal1
      constructprop       QName(PackageNamespace("_-Z6"), "_-mW"), 1
      coerce              QName(PackageNamespace("_-Z6"), "_-mW")
@@ -117,15 +80,6 @@ L10:
      pushscope
 
      findpropstrict      QName(PackageNamespace("_-Z6"), "_-0IK")
-     jump                L10
-
-     pushfalse
-     bitand
-     multiply
-     getlocal2
-     bitor
-     subtract_i
-L10:
      getlocal1
      constructprop       QName(PackageNamespace("_-Z6"), "_-0IK"), 1
      coerce              QName(PackageNamespace("_-Z6"), "_-0IK")

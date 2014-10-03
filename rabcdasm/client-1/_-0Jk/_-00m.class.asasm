@@ -13,34 +13,8 @@ class
     initscopedepth 7
     maxscopedepth 8
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     convert_i
-     dup
-     convert_o
-     pushtrue
-     pushwith
-     pushundefined
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal2
-     dup
-     iftrue              L20
-
-     pop
-     getlocal0
-     convert_b
-L20:
-     iffalse             L26
 
      getlocal0
      newarray            0
@@ -48,7 +22,6 @@ L20:
      getlex              QName(PackageNamespace(""), "injectParameters")
      constructsuper      3
 
-L26:
      returnvoid
     end ; code
    end ; body

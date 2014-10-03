@@ -14,83 +14,25 @@ class
     initscopedepth 9
     maxscopedepth 10
     code
-     pushfalse
-     pushtrue
-     setlocal2
-
-     jump                L10
-
-     inclocal            2
-     kill                2
-     setlocal3
-
-     getglobalscope
-     instanceof
-     inclocal            2
-L10:
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal3
-     iftrue              L51
 
      getlocal0
      constructsuper      0
 
-     getlocal3
-     iftrue              L51
-
-     jump                L26
-
-     inclocal_i          2
-     setlocal2
-
-     equals
-     pushtrue
-     kill                2
-     setlocal2
-
-L26:
      getlocal0
      getlocal1
      initproperty        QName(PrivateNamespace("*", "_-0Dd:_-mo#0"), "_-bW")
 
-     getlocal2
-     dup
-     iftrue              L35
-
-     pop
-     getlocal3
-     convert_b
-L35:
-     iffalse             L51
-
      getlocal0
      callpropvoid        QName(PrivateNamespace("*", "_-0Dd:_-mo#0"), "_-nm"), 0
-
-     getlocal3
-     dup
-     iffalse             L44
-
-     pop
-     getlocal3
-     convert_b
-L44:
-     iftrue              L49
 
      getlocal0
      callpropvoid        QName(PrivateNamespace("*", "_-0Dd:_-mo#0"), "_-hT"), 0
 
-     getlocal2
-     iffalse             L51
-
-L49:
      getlocal0
      callpropvoid        QName(PrivateNamespace("*", "_-0Dd:_-mo#0"), "_-Yo"), 0
 
-L51:
      returnvoid
     end ; code
    end ; body
@@ -109,34 +51,14 @@ L51:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      popscope
-      getlocal2
-      hasnext
-      equals
-      inclocal_i          2
-      increment
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      iftrue              L20
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-0Dd:_-mo#0"), "_-rF")
       getlocal1
       callpropvoid        QName(PackageNamespace(""), "setSelected"), 1
 
-L20:
       returnvoid
      end ; code
     end ; body
@@ -156,15 +78,6 @@ L20:
       pushscope
 
       getlocal0
-      jump                L10
-
-      negate_i
-      dup
-      multiply_i
-      rshift
-      popscope
-      nextvalue
-L10:
       getproperty         QName(PrivateNamespace("*", "_-0Dd:_-mo#0"), "_-rF")
       callproperty        QName(PackageNamespace(""), "_-rq"), 0
       callproperty        QName(Namespace("_-w4"), "getValue"), 0
@@ -183,22 +96,6 @@ L10:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      setlocal3
-
-      jump                L10
-
-      nextname
-      multiply_i
-      getlocal1
-      setlocal2
-
-      inclocal_i          3
-      lshift
-L10:
-      setlocal            4
-
       getlocal0
       pushscope
 
@@ -208,9 +105,6 @@ L10:
       convert_i
       setlocal1
 
-      getlocal3
-      iffalse             L35
-
       getlocal0
       getlex              Multiname("Vector", [PrivateNamespace("*", "_-0Dd:_-mo#0"), PackageNamespace("__AS3__.vec"), PackageNamespace(""), PrivateNamespace("*", "_-0Dd:_-mo#1"), PackageNamespace("_-0Dd"), PackageInternalNs("_-0Dd"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-3t"), StaticProtectedNs("_-3t"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       getlex              QName(PackageNamespace("_-0Dd"), "_-TI")
@@ -218,75 +112,32 @@ L10:
       getlocal1
       pushtrue
       construct           2
-      jump                L34
-
-      inclocal_i          2
-      kill                3
-      astypelate
-      setlocal3
-
-      declocal_i          2
-      setlocal2
-
-L34:
       initproperty        QName(PrivateNamespace("*", "_-0Dd:_-mo#0"), "_-jf")
 
-L35:
       pushbyte            0
       setlocal2
 
-      jump                L71
+      jump                L30
 
-L38:
+L18:
       label
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-0Dd:_-mo#0"), "_-jf")
       getlocal2
       getlocal0
       getlocal0
-      jump                L51
-
-      not
-      setlocal3
-
-      inclocal_i          2
-      declocal            2
-      convert_d
-      negate
-L51:
       getproperty         QName(PrivateNamespace("*", "_-0Dd:_-mo#0"), "_-bW")
       getlocal2
       getproperty         MultinameL([PrivateNamespace("*", "_-0Dd:_-mo#0"), PackageNamespace(""), PrivateNamespace("*", "_-0Dd:_-mo#1"), PackageNamespace("_-0Dd"), PackageInternalNs("_-0Dd"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-3t"), StaticProtectedNs("_-3t"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       callproperty        QName(PrivateNamespace("*", "_-0Dd:_-mo#0"), "_-w0"), 1
       setproperty         MultinameL([PrivateNamespace("*", "_-0Dd:_-mo#0"), PackageNamespace(""), PrivateNamespace("*", "_-0Dd:_-mo#1"), PackageNamespace("_-0Dd"), PackageInternalNs("_-0Dd"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-3t"), StaticProtectedNs("_-3t"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
 
-      getlocal            4
-      dup
-      iffalse             L62
-
-      pop
-      getlocal0
-      convert_b
-L62:
-      iftrue              L74
-
       inclocal_i          2
-      getlocal3
-      dup
-      iftrue              L70
-
-      pop
-      getlocal2
-      convert_b
-L70:
-      iffalse             L74
-
-L71:
+L30:
       getlocal2
       getlocal1
-      iflt                L38
+      iflt                L18
 
-L74:
       returnvoid
      end ; code
     end ; body
@@ -303,24 +154,6 @@ L74:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      inclocal            2
-      bitand
-      setlocal3
-
-      getglobalscope
-      add
-      pushscope
-
-L10:
-      setlocal3
-
-      setlocal            4
-
       getlocal0
       pushscope
 
@@ -328,27 +161,7 @@ L10:
       getlocal1
       constructprop       QName(PackageNamespace("_-0Dd"), "_-TI"), 1
       coerce              QName(PackageNamespace("_-0Dd"), "_-TI")
-      jump                L25
-
-      declocal_i          3
-      declocal            3
-      convert_u
-      multiply
-      pushnan
       setlocal2
-
-L25:
-      setlocal2
-
-      getlocal3
-      dup
-      iffalse             L32
-
-      pop
-      getlocal2
-      convert_b
-L32:
-      iftrue              L49
 
       getlocal2
       getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
@@ -357,21 +170,10 @@ L32:
       getproperty         QName(PrivateNamespace("*", "_-0Dd:_-mo#0"), "_-0AU")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-      getlocal3
-      dup
-      iffalse             L45
-
-      pop
-      getlocal1
-      convert_b
-L45:
-      iftrue              L49
-
       findpropstrict      QName(PackageNamespace(""), "addChild")
       getlocal2
       callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
-L49:
       getlocal2
       returnvalue
      end ; code
@@ -389,22 +191,6 @@ L49:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      inclocal_i          2
-      instanceof
-      convert_i
-      declocal_i          2
-      declocal_i          3
-      declocal            2
-L10:
-      setlocal3
-
-      setlocal            4
-
       getlocal0
       pushscope
 
@@ -415,16 +201,12 @@ L10:
       coerce              QName(PackageNamespace("_-5H"), "_-xY")
       setlocal2
 
-      getlocal            4
-      iffalse             L27
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-0Dd:_-mo#0"), "_-rF")
       getlocal2
       callproperty        QName(Namespace("_-w4"), "getValue"), 0
       callpropvoid        QName(PackageNamespace(""), "setSelected"), 1
 
-L27:
       returnvoid
      end ; code
     end ; body
@@ -440,34 +222,9 @@ L27:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      setlocal3
-
-      jump                L10
-
-      negate_i
-      setlocal2
-
-      declocal            2
-      kill                2
-      inclocal            3
-      inclocal_i          3
-L10:
-      setlocal            4
-
       getlocal0
       pushscope
 
-      jump                L20
-
-      instanceof
-      pushtrue
-      urshift
-      astypelate
-      declocal            3
-      inclocal            2
-L20:
       getlocal0
       callproperty        QName(PrivateNamespace("*", "_-0Dd:_-mo#0"), "_-gg"), 0
       coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "DisplayObject")>)
@@ -479,21 +236,10 @@ L20:
       coerce              QName(PackageNamespace("_-mv"), "_-F8")
       setlocal2
 
-      getlocal3
-      dup
-      iftrue              L35
-
-      pop
-      getlocal2
-      convert_b
-L35:
-      iffalse             L39
-
       getlocal2
       getlocal1
       callpropvoid        QName(Namespace("_-59"), "layout"), 1
 
-L39:
       returnvoid
      end ; code
     end ; body
@@ -509,22 +255,6 @@ L39:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      declocal_i          2
-      inclocal_i          3
-      declocal            4
-      pushundefined
-      declocal            4
-      declocal_i          4
-L10:
-      setlocal            4
-
-      setlocal            5
-
       getlocal0
       pushscope
 
@@ -540,70 +270,30 @@ L10:
       applytype           1
       pushbyte            0
       construct           1
-      jump                L32
-
-      bitor
-      inclocal            3
-      declocal_i          4
-      setlocal3
-
-      not
-      declocal            4
-L32:
       coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "DisplayObject")>)
       setlocal2
 
       pushbyte            0
       setlocal3
 
-      jump                L67
+      jump                L27
 
-L37:
+L18:
       label
       getlocal2
       getlocal3
       getlocal0
-      jump                L48
-
-      multiply
-      declocal            3
-      add
-      inclocal_i          2
-      convert_o
-      kill                4
-L48:
       getproperty         QName(PrivateNamespace("*", "_-0Dd:_-mo#0"), "_-jf")
       getlocal3
       getproperty         MultinameL([PrivateNamespace("*", "_-0Dd:_-mo#0"), PackageNamespace(""), PrivateNamespace("*", "_-0Dd:_-mo#1"), PackageNamespace("_-0Dd"), PackageInternalNs("_-0Dd"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-3t"), StaticProtectedNs("_-3t"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       setproperty         MultinameL([PrivateNamespace("*", "_-0Dd:_-mo#0"), PackageNamespace(""), PrivateNamespace("*", "_-0Dd:_-mo#1"), PackageNamespace("_-0Dd"), PackageInternalNs("_-0Dd"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-3t"), StaticProtectedNs("_-3t"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
 
-      getlocal            5
-      dup
-      iftrue              L58
-
-      pop
-      getlocal1
-      convert_b
-L58:
-      iffalse             L67
-
       inclocal_i          3
-      getlocal            4
-      dup
-      iffalse             L66
-
-      pop
-      getlocal3
-      convert_b
-L66:
-      iftrue              L70
-
-L67:
+L27:
       getlocal3
       getlocal1
-      iflt                L37
+      iflt                L18
 
-L70:
       getlocal2
       returnvalue
      end ; code
@@ -620,42 +310,13 @@ L70:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      lessequals
-      inclocal_i          2
-      convert_o
-      convert_o
-      kill                2
-      declocal_i          2
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
 
       getlocal0
       callproperty        QName(PrivateNamespace("*", "_-0Dd:_-mo#0"), "_-GS"), 0
       coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("_-5H"), "_-xY")>)
-      jump                L24
-
-      strictequals
-      inclocal            2
-      inclocal_i          2
-      bitor
-      getlocal2
-      setlocal2
-
-L24:
       setlocal1
-
-      getlocal2
-      iftrue              L39
 
       getlocal0
       findpropstrict      QName(PackageNamespace("_-5H"), "_-5P")
@@ -663,17 +324,6 @@ L24:
       constructprop       QName(PackageNamespace("_-5H"), "_-5P"), 1
       initproperty        QName(PrivateNamespace("*", "_-0Dd:_-mo#0"), "_-rF")
 
-      getlocal2
-      dup
-      iffalse             L38
-
-      pop
-      getlocal3
-      convert_b
-L38:
-      iftrue              L47
-
-L39:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-0Dd:_-mo#0"), "_-rF")
       getlocal0
@@ -683,7 +333,6 @@ L39:
       callproperty        QName(PackageNamespace(""), "getValue"), 0
       callpropvoid        QName(PackageNamespace(""), "setSelected"), 1
 
-L47:
       returnvoid
      end ; code
     end ; body
@@ -699,23 +348,6 @@ L47:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      setlocal            4
-
-      inclocal_i          2
-      inclocal_i          2
-      rshift
-      convert_u
-      declocal_i          3
-L10:
-      setlocal            4
-
-      setlocal            5
-
       getlocal0
       pushscope
 
@@ -726,29 +358,10 @@ L10:
       setlocal1
 
       findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
-      jump                L27
-
-      kill                3
-      modulo
-      negate
-      lshift
-      declocal_i          3
-      declocal            3
-L27:
       getproperty         Multiname("Vector", [PrivateNamespace("*", "_-0Dd:_-mo#0"), PackageNamespace("__AS3__.vec"), PackageNamespace(""), PrivateNamespace("*", "_-0Dd:_-mo#1"), PackageNamespace("_-0Dd"), PackageInternalNs("_-0Dd"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-3t"), StaticProtectedNs("_-3t"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       getlex              QName(PackageNamespace("_-5H"), "_-xY")
       applytype           1
       pushbyte            0
-      jump                L38
-
-      add_i
-      getglobalscope
-      getlocal0
-      declocal            4
-      inclocal_i          4
-      setlocal3
-
-L38:
       construct           1
       coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("_-5H"), "_-xY")>)
       setlocal2
@@ -756,9 +369,9 @@ L38:
       pushbyte            0
       setlocal3
 
-      jump                L57
+      jump                L27
 
-L44:
+L18:
       label
       getlocal2
       getlocal3
@@ -768,19 +381,12 @@ L44:
       getproperty         MultinameL([PrivateNamespace("*", "_-0Dd:_-mo#0"), PackageNamespace(""), PrivateNamespace("*", "_-0Dd:_-mo#1"), PackageNamespace("_-0Dd"), PackageInternalNs("_-0Dd"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-3t"), StaticProtectedNs("_-3t"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
       setproperty         MultinameL([PrivateNamespace("*", "_-0Dd:_-mo#0"), PackageNamespace(""), PrivateNamespace("*", "_-0Dd:_-mo#1"), PackageNamespace("_-0Dd"), PackageInternalNs("_-0Dd"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-3t"), StaticProtectedNs("_-3t"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
 
-      getlocal            5
-      iffalse             L57
-
       inclocal_i          3
-      getlocal            5
-      iffalse             L60
-
-L57:
+L27:
       getlocal3
       getlocal1
-      iflt                L44
+      iflt                L18
 
-L60:
       getlocal2
       returnvalue
      end ; code

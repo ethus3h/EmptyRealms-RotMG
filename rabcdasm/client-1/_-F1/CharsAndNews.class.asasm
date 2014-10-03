@@ -15,22 +15,6 @@ class
     initscopedepth 9
     maxscopedepth 10
     code
-     pushfalse
-     pushtrue
-     setlocal            5
-
-     jump                L10
-
-     declocal_i          4
-     getlocal0
-     getlocal3
-     pushscope
-
-     pushnan
-     strictequals
-L10:
-     setlocal            6
-
      getlocal0
      pushscope
 
@@ -68,30 +52,15 @@ L10:
      pushshort           320
      setproperty         QName(PackageNamespace(""), "x")
 
-     getlocal            6
-     iftrue              L56
-
      findpropstrict      QName(PackageNamespace(""), "addChild")
-     jump                L50
-
-     setlocal2
-
-     getlocal            5
-     coerce_a
-     decrement
-     getlocal            4
-     setlocal3
-
-L50:
      getlocal0
      getproperty         QName(PackageNamespace(""), "_-tZ")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
      getlex              QName(PackageNamespace(""), "height")
      pushshort           400
-     ifngt               L106
+     ifngt               L61
 
-L56:
      findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
      constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
      coerce              QName(PackageNamespace("flash.display"), "Shape")
@@ -106,9 +75,6 @@ L56:
      pushbyte            0
      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
 
-     getlocal            6
-     iftrue              L103
-
      getlocal            4
      pushbyte            0
      dup
@@ -116,53 +82,18 @@ L56:
      getlex              QName(PackageNamespace(""), "HEIGHT")
      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
 
-     getlocal            6
-     jump                L83
-
-     kill                5
-     declocal            2
-     setlocal3
-
-     setlocal2
-
-     declocal_i          5
-     greaterthan
-L83:
-     dup
-     iffalse             L88
-
-     pop
-     getlocal0
-     convert_b
-L88:
-     iftrue              L106
-
      getlocal            4
      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
-
-     getlocal            5
-     dup
-     iftrue              L97
-
-     pop
-     getlocal2
-     convert_b
-L97:
-     iffalse             L103
 
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal3
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
-     getlocal            6
-     iftrue              L106
-
-L103:
      findproperty        QName(PackageNamespace(""), "mask")
      getlocal3
      initproperty        QName(PackageNamespace(""), "mask")
 
-L106:
+L61:
      returnvoid
     end ; code
    end ; body
@@ -180,50 +111,19 @@ L106:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      getlocal2
-      declocal            2
-      inclocal_i          2
-      greaterequals
-      checkfilter
-      istypelate
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      dup
-      iftrue              L20
-
-      pop
-      getlocal3
-      convert_b
-L20:
-      iffalse             L27
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "charRectList_")
       getlocal1
       setproperty         QName(PackageNamespace(""), "y")
 
-      getlocal2
-      iftrue              L31
-
-L27:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-tZ")
       getlocal1
       setproperty         QName(PackageNamespace(""), "y")
 
-L31:
       returnvoid
      end ; code
     end ; body
@@ -238,41 +138,17 @@ L31:
    initscopedepth 8
    maxscopedepth 9
    code
-    pushfalse
-    pushtrue
-    swap
-    jump                L10
-
-    instanceof
-    convert_s
-    multiply_i
-    pushnull
-    rshift
-    increment
-L10:
-    setlocal1
-
-    setlocal2
-
     getlocal0
     pushscope
-
-    getlocal1
-    iftrue              L21
 
     findproperty        QName(PackageNamespace(""), "WIDTH")
     pushshort           760
     initproperty        QName(PackageNamespace(""), "WIDTH")
 
-    getlocal1
-    iftrue              L24
-
-L21:
     findproperty        QName(PackageNamespace(""), "HEIGHT")
     pushshort           430
     initproperty        QName(PackageNamespace(""), "HEIGHT")
 
-L24:
     returnvoid
    end ; code
   end ; body

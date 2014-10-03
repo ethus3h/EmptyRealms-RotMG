@@ -13,33 +13,12 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     getglobalscope
-     setlocal2
-
-     convert_o
-     increment_i
-     pushnull
-     getlocal3
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal2
-     iffalse             L18
 
      getlocal0
      constructsuper      0
 
-L18:
      returnvoid
     end ; code
    end ; body
@@ -53,21 +32,6 @@ L18:
    initscopedepth 3
    maxscopedepth 4
    code
-    pushfalse
-    pushtrue
-    setlocal1
-
-    jump                L10
-
-    checkfilter
-    nextname
-    dup
-    getlocal1
-    lessequals
-    typeof
-L10:
-    setlocal2
-
     getlocal0
     pushscope
 
@@ -75,59 +39,19 @@ L10:
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-OA")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-QN")
 
-    getlocal2
-    dup
-    iffalse             L22
-
-    pop
-    getlocal2
-    convert_b
-L22:
-    iftrue              L203
-
     findproperty        QName(PackageNamespace(""), "_-Rk")
     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-QN")
     constructprop       QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-QN"), 0
     newarray            1
     initproperty        QName(PackageNamespace(""), "_-Rk")
 
-    getlocal2
-    dup
-    iffalse             L34
-
-    pop
-    getlocal0
-    convert_b
-L34:
-    iftrue              L120
-
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-dv")
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-ah")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-dv")
 
-    getlocal1
-    dup
-    iftrue              L44
-
-    pop
-    getlocal2
-    convert_b
-L44:
-    iffalse             L112
-
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-0If")
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-y8")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-0If")
-
-    getlocal2
-    dup
-    iffalse             L54
-
-    pop
-    getlocal0
-    convert_b
-L54:
-    iftrue              L91
 
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-Rp")
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-wQ")
@@ -149,9 +73,6 @@ L54:
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-Tr")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-84")
 
-    getlocal2
-    iftrue              L192
-
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-0Lx")
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-Gu")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-0Lx")
@@ -168,17 +89,10 @@ L54:
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-xT")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-h9")
 
-    getlocal1
-    iffalse             L195
-
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-0JO")
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-ip")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-0JO")
 
-    getlocal2
-    iftrue              L123
-
-L91:
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-7d")
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-XM")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-7d")
@@ -186,9 +100,6 @@ L91:
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-xf")
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-VE")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-xf")
-
-    getlocal1
-    iffalse             L298
 
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-SU")
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-bx")
@@ -198,34 +109,18 @@ L91:
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-sW")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-0Gc")
 
-    getlocal1
-    dup
-    iftrue              L111
-
-    pop
-    getlocal2
-    convert_b
-L111:
-    iffalse             L198
-
-L112:
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-py")
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-1p")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-py")
-
-    getlocal2
-    iftrue              L298
 
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-tJ")
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-00F")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-tJ")
 
-L120:
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-gA")
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-kt")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-gA")
 
-L123:
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-hL")
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-OL")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-hL")
@@ -238,29 +133,10 @@ L123:
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-P0")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-bp")
 
-    getlocal1
-    dup
-    iftrue              L138
-
-    pop
-    getlocal0
-    convert_b
-L138:
-    iffalse             L155
-
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-m3")
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-0BU")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-m3")
 
-    jump                L149
-
-    bitand
-    modulo
-    pushtrue
-    divide
-    pushnull
-    not
-L149:
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-Yb")
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-nj")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-Yb")
@@ -269,7 +145,6 @@ L149:
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-08p")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-Ls")
 
-L155:
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "package")
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-1o")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "package")
@@ -286,61 +161,30 @@ L155:
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "const")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-0Ka")
 
-    getlocal2
-    dup
-    iffalse             L173
-
-    pop
-    getlocal1
-    convert_b
-L173:
-    iftrue              L189
-
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-5o")
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-BS")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-5o")
-
-    getlocal1
-    dup
-    iftrue              L183
-
-    pop
-    getlocal2
-    convert_b
-L183:
-    iffalse             L285
 
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-0-K")
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-bg")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-0-K")
 
-    getlocal1
-    iffalse             L203
-
-L189:
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-x6")
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-l9")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-x6")
 
-L192:
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-00b")
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-0MN")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-00b")
 
-L195:
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-00T")
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-Cx")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-00T")
 
-L198:
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-xE")
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-yq")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-xE")
 
-    getlocal2
-    iftrue              L295
-
-L203:
     findproperty        QName(PackageNamespace(""), "use")
     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-dv")
     constructprop       QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-dv"), 0
@@ -412,22 +256,9 @@ L203:
     constructprop       QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-00T"), 0
     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-xE")
     constructprop       QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-xE"), 0
-    jump                L281
-
-    convert_s
-    lshift
-    not
-    coerce_a
-    greaterthan
-    nextname
-L281:
     newarray            35
     initproperty        QName(PackageNamespace(""), "use")
 
-    getlocal2
-    iftrue              L298
-
-L285:
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-uX")
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-Gz")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-uX")
@@ -438,15 +269,10 @@ L285:
     newarray            1
     initproperty        QName(PackageNamespace(""), "_-l5")
 
-    getlocal2
-    iftrue              L298
-
-L295:
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-JT")
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-Gh")
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-JT")
 
-L298:
     findproperty        QName(PackageNamespace(""), "_-3H")
     findpropstrict      QName(PackageNamespace(""), "XML")
     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:_-Hf"), "_-JT")

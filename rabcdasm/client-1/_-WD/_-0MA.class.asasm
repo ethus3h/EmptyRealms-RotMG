@@ -13,39 +13,12 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     greaterequals
-     convert_d
-     pushnan
-     getlocal2
-     lessthan
-     convert_s
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal1
-     dup
-     iffalse             L20
-
-     pop
-     getlocal0
-     convert_b
-L20:
-     iftrue              L23
 
      getlocal0
      constructsuper      0
 
-L23:
      returnvoid
     end ; code
    end ; body
@@ -73,39 +46,12 @@ L23:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      getlocal3
-      increment
-      instanceof
-      nextvalue
-      divide
-      istypelate
-L10:
-      setlocal1
-
-      setlocal2
-
       getlocal0
       pushscope
 
       getlocal0
       callproperty        QName(PackageNamespace(""), "_-Bz"), 0
-      getlocal2
-      dup
-      iftrue              L22
-
-      pop
-      getlocal2
-      convert_b
-L22:
-      iffalse             L24
-
       not
-L24:
       returnvalue
      end ; code
     end ; body
@@ -121,82 +67,22 @@ L24:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal1
-
-      jump                L10
-
-      strictequals
-      convert_s
-      convert_b
-      pushscope
-
-      hasnext
-      convert_o
-L10:
-      setlocal2
-
       getlocal0
       pushscope
 
-      getlocal2
-      dup
-      iffalse             L19
-
-      pop
-      getlocal0
-      convert_b
-L19:
-      iftrue              L40
-
-      jump                L27
-
-      add
-      modulo
-      astypelate
-      urshift
-      getglobalscope
-      pushnull
-L27:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-0Ky")
       callproperty        QName(PackageNamespace(""), "_-Hz"), 0
-      getlocal2
-      dup
-      iffalse             L36
+      iffalse             L9
 
-      pop
-      getlocal0
-      convert_b
-L36:
-      iftrue              L53
-
-      iffalse             L50
-
-      getlocal1
-      iffalse             L50
-
-L40:
       getlocal0
       callproperty        QName(PrivateNamespace("*", "_-WD:_-0MA"), "_-0BP"), 0
-      getlocal1
-      dup
-      iftrue              L48
-
-      pop
-      getlocal0
-      convert_b
-L48:
-      iffalse             L53
-
       returnvalue
 
-L50:
+L9:
       getlocal0
       getproperty         QName(PackageNamespace(""), "domain")
       callproperty        QName(PackageNamespace(""), "_-Hn"), 0
-L53:
       returnvalue
      end ; code
     end ; body
@@ -216,15 +102,6 @@ L53:
       pushscope
 
       getlocal0
-      jump                L10
-
-      nextname
-      greaterequals
-      dxnslate
-      getlocal0
-      typeof
-      getglobalscope
-L10:
       getproperty         QName(PackageNamespace(""), "root")
       getproperty         QName(PackageNamespace(""), "loaderInfo")
       coerce              QName(PackageNamespace("flash.display"), "LoaderInfo")

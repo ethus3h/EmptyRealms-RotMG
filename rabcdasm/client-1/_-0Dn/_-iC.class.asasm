@@ -14,40 +14,12 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     pushtrue
-     greaterequals
-     getglobalscope
-     coerce_s
-     setlocal2
-
-     rshift
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal2
-     dup
-     iftrue              L20
-
-     pop
-     getlocal0
-     convert_b
-L20:
-     iffalse             L23
 
      getlocal0
      constructsuper      0
 
-L23:
      returnvoid
     end ; code
    end ; body
@@ -67,16 +39,6 @@ L23:
       pushscope
 
       getlex              QName(PackageNamespace("_-Z6"), "_-sR")
-      jump                L10
-
-      getlocal0
-      negate_i
-      convert_o
-      instanceof
-      pushscope
-
-      multiply_i
-L10:
       getlocal1
       callproperty        QName(PackageNamespace(""), "encode"), 1
       returnvalue
@@ -99,15 +61,6 @@ L10:
       pushscope
 
       getlex              QName(PackageNamespace("_-Z6"), "_-sR")
-      jump                L10
-
-      urshift
-      convert_i
-      subtract
-      bitnot
-      dxnslate
-      urshift
-L10:
       getlocal1
       callproperty        QName(PackageNamespace(""), "decode"), 1
       returnvalue

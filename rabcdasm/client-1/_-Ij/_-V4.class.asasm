@@ -14,32 +14,12 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     modulo
-     negate
-     convert_b
-     popscope
-     newactivation
-     modulo
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal1
-     iftrue              L18
 
      getlocal0
      constructsuper      0
 
-L18:
      returnvoid
     end ; code
    end ; body
@@ -66,143 +46,44 @@ L18:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal1
-
-      jump                L10
-
-      add_i
-      pushundefined
-      newactivation
-      getlocal3
-      getlocal1
-      getlocal0
-L10:
-      setlocal2
-
       getlocal0
       pushscope
 
-      getlocal2
-      iftrue              L98
-
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-OR")
-      getlocal2
-      dup
-      iffalse             L23
-
-      pop
-      getlocal1
-      convert_b
-L23:
-      iftrue              L37
-
       getlex              QName(PackageNamespace("_-0Mm"), "_-j5")
       callproperty        QName(PackageNamespace(""), "map"), 1
-      getlocal2
-      dup
-      iffalse             L32
-
-      pop
-      getlocal1
-      convert_b
-L32:
-      iftrue              L39
-
       getlex              QName(PackageNamespace("_-0Mm"), "_-0Ev")
       callpropvoid        QName(PackageNamespace(""), "_-00S"), 1
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-OR")
-L37:
       getlex              QName(PackageNamespace("_-0Mm"), "_-00V")
       callproperty        QName(PackageNamespace(""), "map"), 1
-L39:
       getlex              QName(PackageNamespace("_-0Mm"), "_-Ee")
       callpropvoid        QName(PackageNamespace(""), "_-00S"), 1
 
       getlocal0
-      jump                L49
-
-      convert_o
-      subtract
-      pushwith
-      convert_o
-      hasnext
-      lessthan
-L49:
       getproperty         QName(PackageNamespace(""), "mediatorMap")
-      getlocal2
-      iftrue              L67
-
       getlex              QName(PackageNamespace("_-nA"), "_-ax")
       callproperty        QName(Namespace("_-Lh"), "map"), 1
-      getlocal1
-      dup
-      iftrue              L60
-
-      pop
-      getlocal0
-      convert_b
-L60:
-      iffalse             L83
-
       getlex              QName(PackageNamespace("_-nA"), "_-bN")
       callpropvoid        QName(Namespace("_-7j"), "_-Yu"), 1
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "mediatorMap")
-      getlocal2
-      iftrue              L94
-
-L67:
       getlex              QName(PackageNamespace("_-nA"), "_-0FU")
       callproperty        QName(Namespace("_-Lh"), "map"), 1
-      getlocal1
-      dup
-      iftrue              L82
-
-      pop
-      getlocal1
-      jump                L81
-
-      pushnan
-      multiply
-      pushnull
-      nextvalue
-      bitand
-      urshift
-L81:
-      convert_b
-L82:
-      iffalse             L96
-
-L83:
       getlex              QName(PackageNamespace("_-nA"), "_-07N")
       callpropvoid        QName(Namespace("_-7j"), "_-Yu"), 1
 
-      getlocal1
-      dup
-      iftrue              L91
-
-      pop
-      getlocal1
-      convert_b
-L91:
-      iffalse             L98
-
       getlocal0
       getproperty         QName(PackageNamespace(""), "mediatorMap")
-L94:
       getlex              QName(PackageNamespace("_-nA"), "_-Og")
       callproperty        QName(Namespace("_-Lh"), "map"), 1
-L96:
       getlex              QName(PackageNamespace("_-nA"), "_-Vy")
       callpropvoid        QName(Namespace("_-7j"), "_-Yu"), 1
 
-L98:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-1G")
       getlex              QName(PackageNamespace("_-PE"), "_-W2")

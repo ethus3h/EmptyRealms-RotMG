@@ -13,42 +13,17 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     bitand
-     convert_i
-     pushfalse
-     pop
-     pushscope
-
-     pushundefined
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal2
-     iffalse             L21
 
      getlocal0
      getlex              QName(PackageNamespace("_-8Q"), "_-1l")
      constructsuper      1
 
-     getlocal2
-     iffalse             L24
-
-L21:
      findproperty        QName(PackageNamespace(""), "instance")
      getlocal0
      setproperty         QName(PackageNamespace(""), "instance")
 
-L24:
      returnvoid
     end ; code
    end ; body

@@ -14,45 +14,8 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     setlocal2
-
-     jump                L10
-
-     declocal_i          2
-     checkfilter
-     setlocal2
-
-     inclocal_i          2
-     bitand
-     setlocal3
-
-L10:
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal3
-     dup
-     jump                L22
-
-     setlocal2
-
-     kill                2
-     getlocal2
-     dxnslate
-     declocal_i          2
-     getlocal2
-L22:
-     iffalse             L26
-
-     pop
-     getlocal2
-     convert_b
-L26:
-     iftrue              L43
 
      getlocal0
      getlex              Multiname("Vector", [PrivateNamespace("*", "_-011:_-ZJ/iinit#0"), PrivateNamespace("*", "_-011:_-ZJ/iinit#1"), PackageNamespace(""), PackageNamespace("_-011"), PackageInternalNs("_-011"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-02v"), StaticProtectedNs("_-02v"), StaticProtectedNs("_-0Cg"), StaticProtectedNs("_-1E"), PackageNamespace("__AS3__.vec")])
@@ -61,21 +24,10 @@ L26:
      construct           0
      initproperty        QName(PackageNamespace(""), "offer_")
 
-     getlocal2
-     dup
-     iftrue              L39
-
-     pop
-     getlocal1
-     convert_b
-L39:
-     iffalse             L43
-
      getlocal0
      getlocal1
      constructsuper      1
 
-L43:
      returnvoid
     end ; code
    end ; body
@@ -92,72 +44,25 @@ L43:
      initscopedepth 6
      maxscopedepth 7
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      getlocal3
-      lessequals
-      declocal            3
-      getlocal2
-      urshift
-      increment
-L10:
-      setlocal            4
-
-      setlocal            5
-
       getlocal0
       pushscope
 
-      getlocal            5
-      dup
-      iftrue              L20
-
-      pop
-      getlocal2
-      convert_b
-L20:
-      iffalse             L32
-
       getlocal0
-      jump                L29
-
-      kill                4
-      declocal_i          4
-      kill                2
-      strictequals
-      kill                4
-      setlocal            4
-
-L29:
       getproperty         QName(PackageNamespace(""), "offer_")
       pushbyte            0
       setproperty         QName(PackageNamespace(""), "length")
 
-L32:
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readShort"), 0
       convert_i
-      jump                L42
-
-      inclocal            2
-      setlocal2
-
-      kill                3
-      kill                4
-      add_i
-      kill                3
-L42:
       setlocal2
 
       pushbyte            0
       setlocal3
 
-      jump                L62
+      jump                L20
 
-L46:
+L13:
       label
       getlocal0
       getproperty         QName(PackageNamespace(""), "offer_")
@@ -165,26 +70,12 @@ L46:
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readBoolean"), 0
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-      getlocal            4
-      iftrue              L65
-
       inclocal_i          3
-      getlocal            4
-      dup
-      iffalse             L61
-
-      pop
-      getlocal1
-      convert_b
-L61:
-      iftrue              L65
-
-L62:
+L20:
       getlocal3
       getlocal2
-      iflt                L46
+      iflt                L13
 
-L65:
       returnvoid
      end ; code
     end ; body
@@ -204,15 +95,6 @@ L65:
       pushscope
 
       findpropstrict      QName(ProtectedNamespace("_-1E"), "formatToString")
-      jump                L10
-
-      greaterequals
-      equals
-      rshift
-      lessthan
-      convert_o
-      convert_s
-L10:
       pushstring          "TRADECHANGED"
       pushstring          "offer_"
       callproperty        QName(ProtectedNamespace("_-1E"), "formatToString"), 2

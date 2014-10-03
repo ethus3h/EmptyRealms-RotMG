@@ -15,23 +15,6 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     urshift
-     declocal            2
-     kill                2
-     convert_u
-     setlocal2
-
-     kill                2
-L10:
-     setlocal2
-
-     setlocal3
-
      getlocal0
      pushscope
 
@@ -43,23 +26,11 @@ L10:
      constructprop       QName(PackageNamespace("com.hurlant.math"), "_-03Q"), 0
      initproperty        QName(PrivateNamespace("*", "com.hurlant.math:_-gb"), "_-7o")
 
-     getlocal3
-     iffalse             L72
-
      getlocal0
      findpropstrict      QName(PackageNamespace("com.hurlant.math"), "_-03Q")
      constructprop       QName(PackageNamespace("com.hurlant.math"), "_-03Q"), 0
      initproperty        QName(PrivateNamespace("*", "com.hurlant.math:_-gb"), "_-6W")
 
-     jump                L33
-
-     getlocal0
-     divide
-     getlocal2
-     declocal            2
-     inclocal_i          2
-     convert_d
-L33:
      getlex              QName(PackageNamespace("com.hurlant.math"), "_-03Q")
      getproperty         QName(PackageNamespace(""), "override")
      pushbyte            2
@@ -70,26 +41,6 @@ L33:
      getproperty         QName(PrivateNamespace("*", "com.hurlant.math:_-gb"), "_-7o")
      callpropvoid        QName(Namespace("http://crypto.hurlant.com/BigInteger"), "_-6"), 2
 
-     jump                L49
-
-     getlocal2
-     negate_i
-     newactivation
-     greaterequals
-     setlocal2
-
-     kill                2
-L49:
-     getlocal3
-     dup
-     iftrue              L55
-
-     pop
-     getlocal3
-     convert_b
-L55:
-     iffalse             L69
-
      getlocal0
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.hurlant.math:_-gb"), "_-7o")
@@ -97,22 +48,10 @@ L55:
      callproperty        QName(PackageNamespace(""), "_-jd"), 1
      initproperty        QName(PrivateNamespace("*", "com.hurlant.math:_-gb"), "_-6Q")
 
-     getlocal3
-     dup
-     iftrue              L68
-
-     pop
-     getlocal0
-     convert_b
-L68:
-     iffalse             L72
-
-L69:
      getlocal0
      getlocal1
      initproperty        QName(PrivateNamespace("*", "com.hurlant.math:_-gb"), "m")
 
-L72:
      returnvoid
     end ; code
    end ; body
@@ -154,65 +93,18 @@ L72:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal            4
-
-      jump                L10
-
-      getlocal2
-      getlocal3
-      bitxor
-      rshift
-      negate
-      declocal_i          2
-L10:
-      setlocal            5
-
       getlocal0
       pushscope
-
-      getlocal            4
-      jump                L21
-
-      convert_b
-      declocal            3
-      setlocal3
-
-      declocal_i          3
-      decrement_i
-      declocal            2
-L21:
-      dup
-      iftrue              L26
-
-      pop
-      getlocal2
-      convert_b
-L26:
-      iffalse             L38
 
       getlocal1
       getlocal2
       getlocal3
       callpropvoid        QName(Namespace("http://crypto.hurlant.com/BigInteger"), "_-G8"), 2
 
-      getlocal            4
-      dup
-      iftrue              L37
-
-      pop
-      getlocal2
-      convert_b
-L37:
-      iffalse             L41
-
-L38:
       getlocal0
       getlocal3
       callpropvoid        QName(PackageNamespace(""), "_-031"), 1
 
-L41:
       returnvoid
      end ; code
     end ; body
@@ -230,49 +122,17 @@ L41:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      inclocal_i          3
-      setlocal2
-
-      inclocal_i          3
-      bitnot
-      multiply_i
-      convert_d
-L10:
-      setlocal3
-
-      setlocal            4
-
       getlocal0
       pushscope
-
-      getlocal            4
-      dup
-      iftrue              L20
-
-      pop
-      getlocal2
-      convert_b
-L20:
-      iffalse             L26
 
       getlocal1
       getlocal2
       callpropvoid        QName(Namespace("http://crypto.hurlant.com/BigInteger"), "_-Ro"), 1
 
-      getlocal            4
-      iffalse             L29
-
-L26:
       getlocal0
       getlocal2
       callpropvoid        QName(PackageNamespace(""), "_-031"), 1
 
-L29:
       returnvoid
      end ; code
     end ; body
@@ -289,23 +149,6 @@ L29:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      setlocal3
-
-      greaterthan
-      declocal_i          2
-      kill                3
-      convert_b
-      newactivation
-L10:
-      setlocal3
-
-      setlocal            4
-
       getlocal0
       pushscope
 
@@ -313,107 +156,24 @@ L10:
       coerce              QName(PackageNamespace("com.hurlant.math"), "_-03Q")
       setlocal2
 
-      getlocal3
-      dup
-      iffalse             L23
-
-      pop
-      getlocal0
-      convert_b
-L23:
-      iftrue              L108
-
       getlocal1
       getproperty         QName(Namespace("http://crypto.hurlant.com/BigInteger"), "s")
-      getlocal            4
-      dup
-      iftrue              L32
-
-      pop
-      getlocal1
-      convert_b
-L32:
-      iffalse             L72
-
       pushbyte            0
-      getlocal            4
-      dup
-      iftrue              L40
-
-      pop
-      getlocal3
-      convert_b
-L40:
-      iffalse             L75
-
       lessthan
-      getlocal3
       dup
-      iffalse             L48
+      iftrue              L20
 
       pop
-      getlocal1
-      convert_b
-L48:
-      iftrue              L53
-
-      dup
-      iftrue              L80
-
-      getlocal3
-      iftrue              L80
-
-L53:
-      pop
-      getlocal3
-      iftrue              L95
-
       getlocal1
       getproperty         QName(PackageNamespace(""), "t")
-      getlocal            4
-      dup
-      iftrue              L71
-
-      jump                L68
-
-      coerce_s
-      declocal            2
-      declocal            3
-      setlocal2
-
-      not
-      setlocal3
-
-L68:
-      pop
-      getlocal0
-      convert_b
-L71:
-      iffalse             L99
-
-L72:
       pushbyte            2
-      getlocal3
-      iftrue              L100
-
-L75:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.hurlant.math:_-gb"), "m")
       getproperty         QName(PackageNamespace(""), "t")
       multiply
       greaterthan
-L80:
-      iffalse             L95
-
-      getlocal            4
-      dup
-      iftrue              L87
-
-      pop
-      getlocal3
-      convert_b
-L87:
-      iffalse             L95
+L20:
+      iffalse             L26
 
       getlocal1
       getlocal0
@@ -421,78 +181,31 @@ L87:
       callproperty        QName(PackageNamespace(""), "_-ln"), 1
       returnvalue
 
-      getlocal3
-      iftrue              L110
-
-L95:
+L26:
       getlocal1
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.hurlant.math:_-gb"), "m")
       callproperty        QName(PackageNamespace(""), "_-YU"), 1
-L99:
       pushbyte            0
-L100:
-      ifnlt               L110
+      ifnlt               L34
 
-      getlocal            4
-      dup
-      iftrue              L107
-
-      pop
-      getlocal0
-      convert_b
-L107:
-      iffalse             L110
-
-L108:
       getlocal1
       returnvalue
 
-L110:
+L34:
       findpropstrict      QName(PackageNamespace("com.hurlant.math"), "_-03Q")
       constructprop       QName(PackageNamespace("com.hurlant.math"), "_-03Q"), 0
-      jump                L119
-
-      inclocal_i          2
-      inclocal            3
-      declocal_i          2
-      increment
-      increment_i
-      negate_i
-L119:
       coerce              QName(PackageNamespace("com.hurlant.math"), "_-03Q")
       setlocal2
-
-      getlocal            4
-      dup
-      iftrue              L127
-
-      pop
-      getlocal2
-      convert_b
-L127:
-      iffalse             L138
 
       getlocal1
       getlocal2
       callpropvoid        QName(Namespace("http://crypto.hurlant.com/BigInteger"), "copyTo"), 1
 
-      getlocal3
-      dup
-      iffalse             L137
-
-      pop
-      getlocal3
-      convert_b
-L137:
-      iftrue              L141
-
-L138:
       getlocal0
       getlocal2
       callpropvoid        QName(PackageNamespace(""), "_-031"), 1
 
-L141:
       getlocal2
       returnvalue
      end ; code
@@ -510,22 +223,6 @@ L141:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal3
-
-      jump                L10
-
-      kill                3
-      setlocal2
-
-      increment_i
-      inclocal_i          3
-      declocal_i          3
-      inclocal_i          3
-L10:
-      setlocal            4
-
       getlocal0
       pushscope
 
@@ -551,7 +248,7 @@ L10:
       getproperty         QName(PackageNamespace(""), "t")
       pushbyte            1
       add
-      ifngt               L57
+      ifngt               L32
 
       getlocal2
       getlocal0
@@ -561,30 +258,10 @@ L10:
       add
       setproperty         QName(PackageNamespace(""), "t")
 
-      getlocal            4
-      dup
-      iffalse             L47
-
-      pop
-      getlocal3
-      convert_b
-L47:
-      iftrue              L57
-
       getlocal2
       callpropvoid        QName(Namespace("http://crypto.hurlant.com/BigInteger"), "_-Fb"), 0
 
-      getlocal3
-      dup
-      iftrue              L56
-
-      pop
-      getlocal1
-      convert_b
-L56:
-      iffalse             L83
-
-L57:
+L32:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.hurlant.math:_-gb"), "_-6Q")
       getlocal0
@@ -592,32 +269,12 @@ L57:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.hurlant.math:_-gb"), "m")
       getproperty         QName(PackageNamespace(""), "t")
-      jump                L71
-
-      bitor
-      kill                3
-      declocal_i          2
-      inclocal_i          2
-      inclocal            2
-      getlocal2
-L71:
       pushbyte            1
       add
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.hurlant.math:_-gb"), "_-6W")
       callpropvoid        QName(Namespace("http://crypto.hurlant.com/BigInteger"), "_-Tt"), 3
 
-      getlocal            4
-      dup
-      iffalse             L82
-
-      pop
-      getlocal1
-      convert_b
-L82:
-      iftrue              L95
-
-L83:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.hurlant.math:_-gb"), "m")
       getlocal0
@@ -631,10 +288,9 @@ L83:
       getproperty         QName(PrivateNamespace("*", "com.hurlant.math:_-gb"), "_-7o")
       callpropvoid        QName(Namespace("http://crypto.hurlant.com/BigInteger"), "_-0Eg"), 3
 
-L95:
-      jump                L107
+      jump                L66
 
-L96:
+L57:
       label
       getlocal2
       pushbyte            1
@@ -645,34 +301,13 @@ L96:
       add
       callpropvoid        QName(Namespace("http://crypto.hurlant.com/BigInteger"), "_-u"), 2
 
-      getlocal3
-      iffalse             L148
-
-L107:
+L66:
       getlocal2
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.hurlant.math:_-gb"), "_-7o")
       callproperty        QName(PackageNamespace(""), "_-YU"), 1
-      getlocal            4
-      iftrue              L146
-
       pushbyte            0
-      getlocal3
-      iffalse             L147
-
-      iflt                L96
-
-      getlocal            4
-      jump                L125
-
-      getlocal2
-      inclocal_i          2
-      modulo
-      dxnslate
-      getlocal2
-      declocal_i          2
-L125:
-      iftrue              L142
+      iflt                L57
 
       getlocal2
       getlocal0
@@ -680,12 +315,9 @@ L125:
       getlocal2
       callpropvoid        QName(Namespace("http://crypto.hurlant.com/BigInteger"), "_-kA"), 2
 
-      getlocal3
-      iffalse             L148
+      jump                L84
 
-      jump                L142
-
-L134:
+L78:
       label
       getlocal2
       getlocal0
@@ -693,20 +325,14 @@ L134:
       getlocal2
       callpropvoid        QName(Namespace("http://crypto.hurlant.com/BigInteger"), "_-kA"), 2
 
-      getlocal3
-      iffalse             L148
-
-L142:
+L84:
       getlocal2
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.hurlant.math:_-gb"), "m")
       callproperty        QName(PackageNamespace(""), "_-YU"), 1
-L146:
       pushbyte            0
-L147:
-      ifge                L134
+      ifge                L78
 
-L148:
       returnvoid
      end ; code
     end ; body

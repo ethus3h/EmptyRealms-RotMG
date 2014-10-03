@@ -14,26 +14,8 @@ class
     initscopedepth 10
     maxscopedepth 11
     code
-     pushfalse
-     pushtrue
-     setlocal3
-
-     jump                L10
-
-     inclocal_i          3
-     pushnan
-     declocal            3
-     bitnot
-     declocal            2
-     not
-L10:
-     setlocal            4
-
      getlocal0
      pushscope
-
-     getlocal            4
-     iftrue              L27
 
      getlocal0
      pushstring          "Buying Character Slot..."
@@ -43,62 +25,26 @@ L10:
      pushstring          "/buyingCharSlot"
      constructsuper      5
 
-     getlocal            4
-     iftrue              L27
-
      getlocal0
      getlocal1
      initproperty        QName(PackageNamespace(""), "price_")
 
-L27:
      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0Bu")
      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
      callproperty        QName(PackageNamespace(""), "_-fK"), 0
      pushstring          "/account"
      pushtrue
-     jump                L39
-
-     multiply
-     getlocal3
-     setlocal2
-
-     lessthan
-     greaterequals
-     subtract
-L39:
      pushbyte            2
      constructprop       QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0Bu"), 4
      coerce              QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0Bu")
      setlocal2
 
-     getlocal            4
-     dup
-     iffalse             L49
-
-     pop
-     getlocal0
-     convert_b
-L49:
-     iftrue              L78
-
      getlocal2
      getlex              QName(PackageNamespace("_-zo"), "_-8C")
      getproperty         QName(PackageNamespace(""), "GENERIC_DATA")
      getlocal0
-     jump                L61
-
-     inclocal            3
-     kill                2
-     declocal_i          2
-     inclocal_i          2
-     declocal            3
-     inclocal_i          3
-L61:
      getproperty         QName(PrivateNamespace("*", "_-0LC:_-0Gy"), "_-FQ")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
-
-     getlocal            4
-     iftrue              L78
 
      getlocal2
      getlex              QName(PackageNamespace("_-zo"), "_-mS")
@@ -107,17 +53,6 @@ L61:
      getproperty         QName(PrivateNamespace("*", "_-0LC:_-0Gy"), "_-ix")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-     getlocal3
-     dup
-     iftrue              L77
-
-     pop
-     getlocal1
-     convert_b
-L77:
-     iffalse             L84
-
-L78:
      getlocal2
      pushstring          "purchaseCharSlot"
      getlex              QName(PackageNamespace("_-qN"), "Account")
@@ -125,7 +60,6 @@ L78:
      callproperty        QName(PackageNamespace(""), "credentials"), 0
      callpropvoid        QName(PackageNamespace(""), "sendRequest"), 2
 
-L84:
      returnvoid
     end ; code
    end ; body
@@ -142,37 +76,8 @@ L84:
      initscopedepth 10
      maxscopedepth 11
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      kill                2
-      bitor
-      astypelate
-      inclocal            2
-      subtract_i
-      kill                2
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
-      jump                L20
-
-      inclocal            2
       pushscope
-
-      instanceof
-      getlocal2
-      convert_i
-      convert_u
-L20:
-      pushscope
-
-      getlocal2
-      iftrue              L39
 
       getlex              QName(PackageNamespace("com.company.googleanalytics"), "GA")
       callproperty        QName(PackageNamespace(""), "global"), 0
@@ -183,9 +88,6 @@ L20:
       getproperty         QName(PackageNamespace(""), "price_")
       callpropvoid        QName(PackageNamespace(""), "trackEvent"), 4
 
-      getlocal2
-      iftrue              L39
-
       findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
       findpropstrict      QName(PackageNamespace("flash.events"), "Event")
       getlex              QName(PackageNamespace("flash.events"), "Event")
@@ -193,7 +95,6 @@ L20:
       constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
       callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
 
-L39:
       returnvoid
      end ; code
     end ; body
@@ -210,35 +111,14 @@ L39:
      initscopedepth 10
      maxscopedepth 11
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      setlocal2
-
-      nextname
-      inclocal            2
-      negate_i
-      bitor
-      inclocal_i          2
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      iffalse             L20
 
       findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
       getlocal1
       callproperty        QName(PackageNamespace(""), "clone"), 0
       callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
 
-L20:
       returnvoid
      end ; code
     end ; body

@@ -14,44 +14,8 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     convert_d
-     equals
-     getlocal1
-     negate_i
-     convert_b
-     pushundefined
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
      pushscope
-
-     jump                L21
-
-     setlocal2
-
-     bitand
-     getglobalscope
-     equals
-     swap
-     swap
-L21:
-     getlocal2
-     dup
-     iftrue              L27
-
-     pop
-     getlocal1
-     convert_b
-L27:
-     iffalse             L42
 
      getlocal0
      getlex              QName(PackageNamespace("_-03T"), "_-078")
@@ -59,20 +23,9 @@ L27:
      callproperty        QName(PackageNamespace(""), "create"), 1
      initproperty        QName(PrivateNamespace("*", "_-IV:_-Cg"), "_-ul")
 
-     getlocal2
-     dup
-     iftrue              L39
-
-     pop
-     getlocal0
-     convert_b
-L39:
-     iffalse             L42
-
      getlocal0
      constructsuper      0
 
-L42:
      returnvoid
     end ; code
    end ; body
@@ -89,34 +42,8 @@ L42:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      subtract_i
-      kill                2
-      declocal_i          2
-      lshift
-      kill                2
-      inclocal            2
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      dup
-      iffalse             L20
-
-      pop
-      getlocal0
-      convert_b
-L20:
-      iftrue              L26
 
       getlocal1
       findpropstrict      QName(PackageNamespace("_-TY"), "_-4A")
@@ -124,7 +51,6 @@ L20:
       constructprop       QName(PackageNamespace("_-TY"), "_-4A"), 1
       callpropvoid        QName(Namespace("_-06J"), "_-J3"), 1
 
-L26:
       returnvoid
      end ; code
     end ; body

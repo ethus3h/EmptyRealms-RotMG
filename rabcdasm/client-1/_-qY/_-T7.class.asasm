@@ -16,105 +16,25 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     decrement_i
-     getlocal0
-     getlocal2
-     lshift
-     convert_u
-     inclocal            3
-L10:
-     setlocal3
-
-     setlocal            4
-
      getlocal0
      pushscope
-
-     getlocal            4
-     dup
-     iftrue              L20
-
-     pop
-     getlocal2
-     convert_b
-L20:
-     iffalse             L46
 
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
      constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
-     jump                L31
-
-     setlocal2
-
-     bitxor
-     setlocal2
-
-     hasnext
-     inclocal            2
-     declocal_i          3
-L31:
      initproperty        QName(PrivateNamespace("*", "_-qY:_-T7#0"), "_-2I")
 
-     getlocal            4
-     dup
-     iftrue              L45
-
-     pop
-     getlocal0
-     convert_b
-     jump                L45
-
-     negate_i
-     kill                3
-     setlocal3
-
-     kill                3
-     hasnext
-     inclocal            3
-L45:
-     iffalse             L55
-
-L46:
      getlocal0
      constructsuper      0
 
-     getlocal            4
-     dup
-     iftrue              L54
-
-     pop
-     getlocal2
-     convert_b
-L54:
-     iffalse             L65
-
-L55:
      getlocal0
      getlocal1
      initproperty        QName(PrivateNamespace("*", "_-qY:_-T7#0"), "_-vz")
 
-     getlocal            4
-     dup
-     iftrue              L64
-
-     pop
-     getlocal1
-     convert_b
-L64:
-     iffalse             L68
-
-L65:
      getlocal0
      getlocal2
      initproperty        QName(PrivateNamespace("*", "_-qY:_-T7#0"), "_-4U")
 
-L68:
      returnvoid
     end ; code
    end ; body
@@ -140,34 +60,15 @@ L68:
       pushscope
 
       getlocal0
-      jump                L10
-
-      lshift
-      urshift
-      inclocal            2
-      instanceof
-      inclocal            2
-      add_i
-L10:
       getproperty         QName(PrivateNamespace("*", "_-qY:_-T7#0"), "_-2I")
       getlocal1
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-qY:_-T7#0"), "_-2I")
       getlocal1
-      jump                L22
-
-      modulo
-      declocal_i          3
-      greaterequals
-      setlocal3
-
-      lessequals
-      kill                3
-L22:
       getproperty         MultinameL([PrivateNamespace("*", "_-qY:_-T7#0"), PrivateNamespace("*", "_-qY:_-T7#1"), PackageNamespace(""), PackageNamespace("_-qY"), PackageInternalNs("_-qY"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-do"), StaticProtectedNs("_-do")])
       coerce_a
       dup
-      iftrue              L32
+      iftrue              L18
 
       pop
       getlocal0
@@ -175,7 +76,7 @@ L22:
       getlocal2
       callproperty        QName(PrivateNamespace("*", "_-qY:_-T7#0"), "_-Fq"), 2
       coerce_a
-L32:
+L18:
       dup
       setlocal            4
 
@@ -210,16 +111,6 @@ L32:
       pushscope
 
       getlocal0
-      jump                L10
-
-      setlocal3
-
-      greaterequals
-      decrement
-      decrement_i
-      getlocal1
-      bitxor
-L10:
       getproperty         QName(PrivateNamespace("*", "_-qY:_-T7#0"), "_-4U")
       getlocal0
       getlocal1
@@ -248,15 +139,6 @@ L10:
       pushscope
 
       findpropstrict      QName(PackageNamespace("_-qY"), "_-02O")
-      jump                L10
-
-      urshift
-      getlocal1
-      pushnull
-      checkfilter
-      hasnext
-      pushnan
-L10:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-qY:_-T7#0"), "_-vz")
       getlocal1
@@ -282,16 +164,6 @@ L10:
       pushscope
 
       getlocal0
-      jump                L10
-
-      instanceof
-      pushnan
-      setlocal2
-
-      swap
-      urshift
-      dxnslate
-L10:
       getproperty         QName(PrivateNamespace("*", "_-qY:_-T7#0"), "_-2I")
       getlocal1
       getproperty         MultinameL([PrivateNamespace("*", "_-qY:_-T7#0"), PrivateNamespace("*", "_-qY:_-T7#1"), PackageNamespace(""), PackageNamespace("_-qY"), PackageInternalNs("_-qY"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-do"), StaticProtectedNs("_-do")])

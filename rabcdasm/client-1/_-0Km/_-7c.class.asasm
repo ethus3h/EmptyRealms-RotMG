@@ -18,22 +18,6 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     decrement
-     astypelate
-     inclocal            3
-     negate
-     declocal            5
-     declocal            3
-L10:
-     setlocal            8
-
-     setlocal            9
-
      getlocal0
      pushscope
 
@@ -42,9 +26,6 @@ L10:
      pushbyte            0
      getlocal1
      constructsuper      3
-
-     getlocal            8
-     iftrue              L33
 
      getlocal0
      getlocal0
@@ -62,7 +43,6 @@ L10:
      getlocal1
      initproperty        QName(PackageNamespace(""), "initialSize_")
 
-L33:
      getlocal0
      getlocal            4
      initproperty        QName(PackageNamespace(""), "start_")
@@ -71,9 +51,6 @@ L33:
      getlocal            5
      initproperty        QName(PackageNamespace(""), "end_")
 
-     getlocal            9
-     iffalse             L88
-
      getlocal0
      getlocal0
      getproperty         QName(PackageNamespace(""), "end_")
@@ -82,35 +59,12 @@ L33:
      getproperty         QName(PackageNamespace(""), "start_")
      getproperty         QName(PackageNamespace(""), "x")
      subtract
-     getlocal            9
-     dup
-     iftrue              L55
-
-     pop
-     getlocal2
-     convert_b
-L55:
-     iffalse             L59
-
      getlocal0
      getproperty         QName(PackageNamespace(""), "timeLeft_")
      divide
-L59:
      initproperty        QName(PackageNamespace(""), "dx_")
 
-     getlocal            8
-     iftrue              L88
-
      getlocal0
-     jump                L70
-
-     equals
-     inclocal_i          4
-     declocal            8
-     subtract_i
-     add
-     declocal            4
-L70:
      getlocal0
      getproperty         QName(PackageNamespace(""), "end_")
      getproperty         QName(PackageNamespace(""), "y")
@@ -118,23 +72,11 @@ L70:
      getproperty         QName(PackageNamespace(""), "start_")
      getproperty         QName(PackageNamespace(""), "y")
      subtract
-     getlocal            8
-     dup
-     iffalse             L83
-
-     pop
-     getlocal1
-     convert_b
-L83:
-     iftrue              L87
-
      getlocal0
      getproperty         QName(PackageNamespace(""), "timeLeft_")
      divide
-L87:
      initproperty        QName(PackageNamespace(""), "dy_")
 
-L88:
      getlex              QName(PackageNamespace("flash.geom"), "Point")
      getlocal            4
      getlocal            5
@@ -142,29 +84,8 @@ L88:
      getlocal0
      getproperty         QName(PackageNamespace(""), "timeLeft_")
      divide
-     getlocal            9
-     dup
-     iftrue              L101
-
-     pop
-     getlocal3
-     convert_b
-L101:
-     iffalse             L103
-
      convert_d
-L103:
      setlocal            6
-
-     getlocal            8
-     dup
-     iffalse             L110
-
-     pop
-     getlocal3
-     convert_b
-L110:
-     iftrue              L147
 
      getlocal0
      findproperty        QName(PackageNamespace(""), "x_")
@@ -172,16 +93,6 @@ L110:
      getproperty         QName(PackageNamespace(""), "start_")
      getproperty         QName(PackageNamespace(""), "x")
      dup
-     jump                L124
-
-     swap
-     pushscope
-
-     add
-     declocal_i          7
-     istypelate
-     getlocal            8
-L124:
      setlocal            7
 
      initproperty        QName(PackageNamespace(""), "x_")
@@ -189,16 +100,6 @@ L124:
      getlocal            7
      kill                7
      initproperty        QName(PackageNamespace(""), "pathX_")
-
-     getlocal            9
-     dup
-     iftrue              L135
-
-     pop
-     getlocal3
-     convert_b
-L135:
-     iffalse             L147
 
      getlocal0
      findproperty        QName(PackageNamespace(""), "y_")
@@ -214,7 +115,6 @@ L135:
      kill                7
      initproperty        QName(PackageNamespace(""), "pathY_")
 
-L147:
      returnvoid
     end ; code
    end ; body
@@ -240,33 +140,8 @@ L147:
      initscopedepth 6
      maxscopedepth 7
      code
-      pushfalse
-      pushtrue
-      setlocal3
-
-      jump                L10
-
-      inclocal_i          2
-      getlocal3
-      declocal_i          3
-      inclocal_i          3
-      inclocal            2
-      newactivation
-L10:
-      setlocal            4
-
       getlocal0
       pushscope
-
-      getlocal            4
-      dup
-      iffalse             L19
-
-      pop
-      getlocal1
-      convert_b
-L19:
-      iftrue              L131
 
       getlocal0
       getlocal0
@@ -275,99 +150,33 @@ L19:
       subtract
       initproperty        QName(PackageNamespace(""), "timeLeft_")
 
-      getlocal            4
-      dup
-      iffalse             L32
-
-      pop
-      getlocal2
-      convert_b
-L32:
-      iftrue              L41
-
       getlocal0
       getproperty         QName(PackageNamespace(""), "timeLeft_")
       pushbyte            0
-      ifnle               L41
+      ifnle               L14
 
       pushfalse
-      getlocal            4
-      iftrue              L132
-
       returnvalue
 
-L41:
+L14:
       getlocal0
       getlocal0
       getproperty         QName(PackageNamespace(""), "pathX_")
-      getlocal3
-      dup
-      iftrue              L50
-
-      pop
-      getlocal1
-      convert_b
-L50:
-      iffalse             L70
-
       getlocal0
       getproperty         QName(PackageNamespace(""), "dx_")
-      getlocal3
-      dup
-      iftrue              L66
-
-      jump                L63
-
-      pop
-      multiply_i
-      nextvalue
-      typeof
-      subtract
-      strictequals
-L63:
-      pop
-      getlocal3
-      convert_b
-L66:
-      iffalse             L69
-
       getlocal2
       multiply
-L69:
       add
-L70:
       initproperty        QName(PackageNamespace(""), "pathX_")
 
       getlocal0
       getlocal0
       getproperty         QName(PackageNamespace(""), "pathY_")
-      getlocal3
-      dup
-      iftrue              L80
-
-      pop
-      getlocal3
-      convert_b
-L80:
-      iffalse             L93
-
       getlocal0
       getproperty         QName(PackageNamespace(""), "dy_")
-      getlocal            4
-      dup
-      iffalse             L89
-
-      pop
-      getlocal0
-      convert_b
-L89:
-      iftrue              L92
-
       getlocal2
       multiply
-L92:
       add
-L93:
       initproperty        QName(PackageNamespace(""), "pathY_")
 
       findpropstrict      QName(PackageNamespace(""), "moveTo")
@@ -377,19 +186,6 @@ L93:
       getproperty         QName(PackageNamespace(""), "pathY_")
       callpropvoid        QName(PackageNamespace(""), "moveTo"), 2
 
-      getlocal3
-      iffalse             L131
-
-      jump                L109
-
-      kill                2
-      setlocal3
-
-      kill                3
-      convert_i
-      kill                2
-      declocal            2
-L109:
       getlex              QName(PackageNamespace(""), "map_")
       findpropstrict      QName(PackageNamespace("_-0Km"), "_-06s")
       pushbyte            100
@@ -413,9 +209,7 @@ L109:
       getproperty         QName(PackageNamespace(""), "pathY_")
       callpropvoid        QName(PackageNamespace(""), "addObj"), 3
 
-L131:
       pushtrue
-L132:
       returnvalue
      end ; code
     end ; body

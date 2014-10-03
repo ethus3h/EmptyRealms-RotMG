@@ -14,23 +14,6 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     declocal            3
-     subtract_i
-     lshift
-     rshift
-     declocal_i          2
-     setlocal            4
-
-L10:
-     setlocal            5
-
-     setlocal            6
-
      getlocal0
      pushscope
 
@@ -44,10 +27,7 @@ L10:
      getlocal1
      pushstring          "Texture"
      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Ch"), StaticProtectedNs("_-0Ch")]), 1
-     iffalse             L34
-
-     getlocal            5
-     iftrue              L58
+     iffalse             L18
 
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "XML")
@@ -56,19 +36,13 @@ L10:
      callproperty        QName(PackageNamespace(""), "XML"), 1
      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#0"), "parse"), 1
 
-     getlocal            5
-     iftrue              L89
+     jump                L54
 
-     jump                L93
-
-L34:
+L18:
      getlocal1
      pushstring          "AnimatedTexture"
      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Ch"), StaticProtectedNs("_-0Ch")]), 1
-     iffalse             L54
-
-     getlocal            6
-     iffalse             L83
+     iffalse             L29
 
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "XML")
@@ -77,25 +51,14 @@ L34:
      callproperty        QName(PackageNamespace(""), "XML"), 1
      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#0"), "parse"), 1
 
-     getlocal            5
-     dup
-     iffalse             L52
+     jump                L54
 
-     pop
-     getlocal1
-     convert_b
-L52:
-     iftrue              L58
-
-     jump                L93
-
-L54:
+L29:
      getlocal1
      pushstring          "RemoteTexture"
      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Ch"), StaticProtectedNs("_-0Ch")]), 1
-     iffalse             L65
+     iffalse             L40
 
-L58:
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "XML")
      getlocal1
@@ -103,35 +66,14 @@ L58:
      callproperty        QName(PackageNamespace(""), "XML"), 1
      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#0"), "parse"), 1
 
-     jump                L93
+     jump                L54
 
-L65:
+L40:
      getlocal1
      pushstring          "RandomTexture"
      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Ch"), StaticProtectedNs("_-0Ch")]), 1
-     iffalse             L90
+     iffalse             L51
 
-     getlocal            5
-     jump                L77
-
-     declocal            5
-     pushnull
-     setlocal2
-
-     bitnot
-     kill                2
-     newactivation
-L77:
-     dup
-     iffalse             L82
-
-     pop
-     getlocal1
-     convert_b
-L82:
-     iftrue              L93
-
-L83:
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "XML")
      getlocal1
@@ -139,15 +81,14 @@ L83:
      callproperty        QName(PackageNamespace(""), "XML"), 1
      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#0"), "parse"), 1
 
-L89:
-     jump                L93
+     jump                L54
 
-L90:
+L51:
      getlocal0
      getlocal1
      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#0"), "parse"), 1
 
-L93:
+L54:
      pushbyte            0
      setlocal3
 
@@ -156,9 +97,9 @@ L93:
      coerce_a
      setlocal            4
 
-     jump                L111
+     jump                L70
 
-L100:
+L61:
      label
      getlocal            4
      getlocal3
@@ -166,74 +107,34 @@ L100:
      coerce              QName(PackageNamespace(""), "XML")
      setlocal2
 
-     getlocal            6
-     iffalse             L111
-
      getlocal0
      getlocal2
      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#0"), "parse"), 1
 
-L111:
+L70:
      hasnext2            4, 3
-     iftrue              L100
+     iftrue              L61
 
      kill                4
      kill                3
-     getlocal            5
-     iftrue              L128
-
      getlocal1
      pushstring          "Mask"
      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Ch"), StaticProtectedNs("_-0Ch")]), 1
-     iffalse             L148
+     iffalse             L84
 
-     getlocal            6
-     dup
-     iftrue              L127
-
-     pop
-     getlocal3
-     convert_b
-L127:
-     iffalse             L160
-
-L128:
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "XML")
-     jump                L137
-
-     pushwith
-     inclocal            2
-     subtract_i
-     getlocal0
-     convert_d
-     kill                4
-L137:
      getlocal1
      getproperty         Multiname("Mask", [PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Ch"), StaticProtectedNs("_-0Ch")])
      callproperty        QName(PackageNamespace(""), "XML"), 1
      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#0"), "parse"), 1
 
-     getlocal            5
-     dup
-     iffalse             L147
-
-     pop
-     getlocal3
-     convert_b
-L147:
-     iftrue              L154
-
-L148:
+L84:
      getlocal1
      pushstring          "Effect"
      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Ch"), StaticProtectedNs("_-0Ch")]), 1
-     iffalse             L160
+     iffalse             L94
 
-     getlocal            6
-     iffalse             L160
-
-L154:
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "XML")
      getlocal1
@@ -241,7 +142,7 @@ L154:
      callproperty        QName(PackageNamespace(""), "XML"), 1
      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#0"), "parse"), 1
 
-L160:
+L94:
      returnvoid
     end ; code
    end ; body
@@ -266,53 +167,19 @@ L160:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal3
-
-      jump                L10
-
-      getlocal3
-      rshift
-      declocal            3
-      decrement
-      istypelate
-      lshift
-L10:
-      setlocal            4
-
       getlocal0
       pushscope
 
-      getlocal            4
-      iftrue              L28
-
-      jump                L22
-
-      setlocal3
-
-      getlocal2
-      checkfilter
-      declocal_i          2
-      pushscope
-
-      setlocal3
-
-L22:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-07-")
       pushnull
-      ifne                L31
+      ifne                L9
 
-      getlocal3
-      iffalse             L31
-
-L28:
       getlocal0
       getproperty         QName(PackageNamespace(""), "texture_")
       returnvalue
 
-L31:
+L9:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-07-")
       getlocal1
@@ -343,66 +210,18 @@ L31:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      inclocal_i          2
-      kill                2
-      convert_b
-      getlocal2
-      setlocal2
-
-      declocal_i          2
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      dup
-      jump                L23
-
-      istypelate
-      inclocal            2
-      declocal_i          2
-      inclocal_i          2
-      setlocal3
-
-      declocal_i          2
-L23:
-      iftrue              L27
-
-      pop
-      getlocal2
-      convert_b
-L27:
-      iffalse             L39
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-VN")
       pushnull
-      ifne                L41
+      ifne                L8
 
-      getlocal3
-      dup
-      iftrue              L38
-
-      pop
-      getlocal3
-      convert_b
-L38:
-      iffalse             L41
-
-L39:
       pushnull
       returnvalue
 
-L41:
+L8:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-VN")
       getlocal1
@@ -423,22 +242,6 @@ L41:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      inclocal_i          6
-      urshift
-      pushwith
-      pushtrue
-      declocal            4
-      declocal_i          4
-L10:
-      setlocal            7
-
-      setlocal            8
-
       getlocal0
       pushscope
 
@@ -454,9 +257,9 @@ L10:
       coerce              QName(PackageNamespace(""), "XML")
       setlocal            4
 
-      jump                L279
+      jump                L169
 
-L24:
+L12:
       label
       getlocal0
       getlex              QName(PackageNamespace("com.company.util"), "AssetLibrary")
@@ -471,12 +274,9 @@ L24:
       callproperty        QName(PackageNamespace(""), "_-xK"), 2
       initproperty        QName(PackageNamespace(""), "texture_")
 
-      getlocal            7
-      iftrue              L60
+      jump                L211
 
-      jump                L337
-
-L40:
+L26:
       label
       getlocal0
       getlex              QName(PackageNamespace("com.company.util"), "AssetLibrary")
@@ -491,20 +291,9 @@ L40:
       callproperty        QName(PackageNamespace(""), "_-xK"), 2
       initproperty        QName(PackageNamespace(""), "mask_")
 
-      getlocal            7
-      dup
-      iffalse             L59
+      jump                L211
 
-      pop
-      getlocal0
-      convert_b
-L59:
-      iftrue              L337
-
-L60:
-      jump                L337
-
-L61:
+L40:
       label
       getlocal0
       findpropstrict      QName(PackageNamespace("_-0Km"), "_-DJ")
@@ -512,12 +301,9 @@ L61:
       constructprop       QName(PackageNamespace("_-0Km"), "_-DJ"), 1
       initproperty        QName(PackageNamespace(""), "_-0LG")
 
-      getlocal            8
-      iffalse             L337
+      jump                L211
 
-      jump                L337
-
-L70:
+L47:
       label
       getlocal0
       getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-0Bc")
@@ -532,16 +318,6 @@ L70:
       callproperty        QName(PackageNamespace(""), "_-Jv"), 2
       initproperty        QName(PackageNamespace(""), "_-yN")
 
-      getlocal            7
-      dup
-      iffalse             L89
-
-      pop
-      getlocal0
-      convert_b
-L89:
-      iftrue              L337
-
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-yN")
       pushbyte            0
@@ -552,39 +328,19 @@ L89:
       coerce              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-JH")
       setlocal2
 
-      getlocal            8
-      dup
-      iftrue              L105
-
-      pop
-      getlocal2
-      convert_b
-L105:
-      iffalse             L143
-
       getlocal0
       getlocal2
       getproperty         QName(PackageNamespace(""), "image_")
       initproperty        QName(PackageNamespace(""), "texture_")
-
-      getlocal            8
-      dup
-      iftrue              L116
-
-      pop
-      getlocal3
-      convert_b
-L116:
-      iffalse             L262
 
       getlocal0
       getlocal2
       getproperty         QName(PackageNamespace(""), "mask_")
       initproperty        QName(PackageNamespace(""), "mask_")
 
-      jump                L337
+      jump                L211
 
-L122:
+L78:
       label
       getlocal0
       getlex              QName(PackageNamespace("com.company.util"), "AssetLibrary")
@@ -593,26 +349,12 @@ L122:
       callproperty        QName(PackageNamespace(""), "_-xK"), 2
       initproperty        QName(PackageNamespace(""), "texture_")
 
-      getlocal            8
-      dup
-      iftrue              L135
-
-      pop
-      getlocal1
-      convert_b
-L135:
-      iffalse             L262
-
       getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
       callproperty        QName(PackageNamespace(""), "_-IO"), 0
       pop
       pushtrue
-      iffalse             L169
+      iffalse             L102
 
-      getlocal            8
-      iffalse             L262
-
-L143:
       findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.appengine"), "RemoteTexture")
       getlocal1
       getproperty         Multiname("Id", [PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Ch"), StaticProtectedNs("_-0Ch")])
@@ -624,77 +366,31 @@ L143:
       coerce              QName(PackageNamespace("com.company.assembleegameclient.appengine"), "RemoteTexture")
       setlocal3
 
-      getlocal            8
-      dup
-      iftrue              L166
-
-      pop
-      getlocal0
-      convert_b
-      jump                L166
-
-      getlocal2
-      declocal_i          3
-      declocal_i          6
-      subtract
-      declocal            2
-      hasnext
-L166:
-      iffalse             L169
-
       getlocal3
       callpropvoid        QName(PackageNamespace(""), "run"), 0
 
-L169:
+L102:
       getlocal0
-      getlocal            7
-      iftrue              L176
-
       getlocal1
       pushstring          "Right"
       callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Ch"), StaticProtectedNs("_-0Ch")]), 1
-      iffalse             L189
+      iffalse             L111
 
-L176:
       getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-lJ")
       getproperty         QName(PackageNamespace(""), "RIGHT")
-      getlocal            7
-      iftrue              L198
-
       convert_i
-      getlocal            7
-      dup
-      iffalse             L187
+      jump                L114
 
-      pop
-      getlocal1
-      convert_b
-L187:
-      iftrue              L199
-
-      jump                L199
-
-L189:
+L111:
       getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-lJ")
       getproperty         QName(PackageNamespace(""), "DOWN")
-      getlocal            7
-      dup
-      iffalse             L197
-
-      pop
-      getlocal0
-      convert_b
-L197:
-      iftrue              L199
-
-L198:
       convert_i
-L199:
+L114:
       initproperty        QName(PackageNamespace(""), "_-0Y")
 
-      jump                L337
+      jump                L211
 
-L201:
+L116:
       label
       getlocal0
       getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Ch"), StaticProtectedNs("_-0Ch"), PackageNamespace("__AS3__.vec")])
@@ -703,53 +399,23 @@ L201:
       construct           0
       initproperty        QName(PackageNamespace(""), "_-07-")
 
-      getlocal            8
-      dup
-      iftrue              L214
-
-      pop
-      getlocal2
-      convert_b
-L214:
-      iffalse             L254
-
       pushbyte            0
       setlocal            5
-
-      getlocal            7
-      dup
-      iffalse             L223
-
-      pop
-      getlocal1
-      convert_b
-L223:
-      iftrue              L251
 
       getlocal1
       callproperty        Multiname("children", [PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Ch"), StaticProtectedNs("_-0Ch")]), 0
       coerce_a
       setlocal            6
 
-      jump                L248
+      jump                L142
 
-L229:
+L130:
       label
       getlocal            6
       getlocal            5
       nextvalue
       coerce              QName(PackageNamespace(""), "XML")
       setlocal            4
-
-      getlocal            7
-      dup
-      iffalse             L241
-
-      pop
-      getlocal1
-      convert_b
-L241:
-      iftrue              L248
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-07-")
@@ -758,36 +424,27 @@ L241:
       constructprop       QName(PackageNamespace("com.company.assembleegameclient.objects"), "_-ZH"), 1
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-L248:
+L142:
       hasnext2            6, 5
-      iftrue              L229
+      iftrue              L130
 
       kill                6
-L251:
       kill                5
-      getlocal            7
-      iftrue              L262
+      jump                L211
 
-L254:
-      jump                L337
-
-L255:
+L147:
       label
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-VN")
       pushnull
-      ifne                L266
+      ifne                L156
 
-      getlocal            7
-      iftrue              L266
-
-L262:
       getlocal0
       findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
       constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
       initproperty        QName(PackageNamespace(""), "_-VN")
 
-L266:
+L156:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-VN")
       findpropstrict      QName(PackageNamespace(""), "int")
@@ -799,13 +456,13 @@ L266:
       constructprop       QName(PackageNamespace("com.company.assembleegameclient.objects"), "_-ZH"), 1
       setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Ch"), StaticProtectedNs("_-0Ch")])
 
-      jump                L337
+      jump                L211
 
-L277:
+L167:
       label
-      jump                L337
+      jump                L211
 
-L279:
+L169:
       getlocal1
       callproperty        Multiname("name", [PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Ch"), StaticProtectedNs("_-0Ch")]), 0
       callproperty        Multiname("toString", [PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:_-ZH#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0Ch"), StaticProtectedNs("_-0Ch")]), 0
@@ -813,94 +470,66 @@ L279:
 
       pushstring          "Texture"
       getlocal            5
-      ifstrictne          L290
+      ifstrictne          L178
 
       pushbyte            0
-      getlocal            7
-      iftrue              L325
+      jump                L209
 
-      jump                L335
-
-L290:
+L178:
       pushstring          "Mask"
       getlocal            5
-      ifstrictne          L295
+      ifstrictne          L183
 
       pushbyte            1
-      jump                L335
+      jump                L209
 
-L295:
+L183:
       pushstring          "Effect"
       getlocal            5
-      ifstrictne          L300
+      ifstrictne          L188
 
       pushbyte            2
-      jump                L335
+      jump                L209
 
-L300:
+L188:
       pushstring          "AnimatedTexture"
       getlocal            5
-      ifstrictne          L314
+      ifstrictne          L193
 
       pushbyte            3
-      getlocal            7
-      iftrue              L318
+      jump                L209
 
-      jump                L335
-
-      jump                L314
-
-      inclocal_i          4
-      declocal            3
-      setlocal            7
-
-      instanceof
-      setlocal2
-
-      getlocal            4
-L314:
+L193:
       pushstring          "RemoteTexture"
       getlocal            5
-      ifstrictne          L319
+      ifstrictne          L198
 
       pushbyte            4
-L318:
-      jump                L335
+      jump                L209
 
-L319:
+L198:
       pushstring          "RandomTexture"
       getlocal            5
-      ifstrictne          L326
-
-      getlocal            8
-      iffalse             L329
+      ifstrictne          L203
 
       pushbyte            5
-L325:
-      jump                L335
+      jump                L209
 
-L326:
+L203:
       pushstring          "AltTexture"
       getlocal            5
-      ifstrictne          L331
+      ifstrictne          L208
 
-L329:
       pushbyte            6
-      jump                L335
+      jump                L209
 
-L331:
-      jump                L334
-
+L208:
       pushbyte            7
-      jump                L335
-
-L334:
-      pushbyte            7
-L335:
+L209:
       kill                5
-      lookupswitch        L277, [L24, L40, L61, L70, L122, L201, L255, L277]
+      lookupswitch        L167, [L12, L26, L40, L47, L78, L116, L147, L167]
 
-L337:
+L211:
       returnvoid
      end ; code
     end ; body
@@ -917,48 +546,13 @@ L337:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      popscope
-      declocal_i          2
-      bitxor
-      kill                2
-      getlocal1
-      bitor
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      dup
-      iftrue              L19
-
-      pop
-      getlocal3
-      convert_b
-L19:
-      iffalse             L62
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "width")
       pushbyte            16
-      ifngt               L95
-
-      getlocal3
-      dup
-      iffalse             L30
-
-      pop
-      getlocal0
-      convert_b
-L30:
-      iftrue              L77
+      ifngt               L40
 
       getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-0Bc")
       pushstring          "remoteTexture"
@@ -968,15 +562,6 @@ L30:
       getproperty         QName(PackageNamespace(""), "width")
       pushbyte            7
       divide
-      jump                L46
-
-      pushfalse
-      declocal            2
-      getlocal2
-      kill                2
-      inclocal_i          2
-      pushnull
-L46:
       getlocal1
       getproperty         QName(PackageNamespace(""), "height")
       getlocal1
@@ -987,17 +572,6 @@ L46:
       getproperty         QName(PackageNamespace(""), "_-0Y")
       callpropvoid        QName(PackageNamespace(""), "add"), 8
 
-      getlocal3
-      dup
-      iffalse             L61
-
-      pop
-      getlocal3
-      convert_b
-L61:
-      iftrue              L98
-
-L62:
       getlocal0
       getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-0Bc")
       pushstring          "remoteTexture"
@@ -1005,19 +579,6 @@ L62:
       callproperty        QName(PackageNamespace(""), "_-Jv"), 2
       initproperty        QName(PackageNamespace(""), "_-yN")
 
-      jump                L75
-
-      declocal            2
-      bitxor
-      newactivation
-      inclocal_i          2
-      declocal            2
-      inclocal            2
-L75:
-      getlocal2
-      iffalse             L98
-
-L77:
       getlocal0
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-yN")
@@ -1029,24 +590,14 @@ L77:
       getproperty         QName(PackageNamespace(""), "image_")
       initproperty        QName(PackageNamespace(""), "texture_")
 
-      getlocal3
-      dup
-      iffalse             L93
+      jump                L43
 
-      pop
-      getlocal3
-      convert_b
-L93:
-      iftrue              L98
-
-      jump                L98
-
-L95:
+L40:
       getlocal0
       getlocal1
       initproperty        QName(PackageNamespace(""), "texture_")
 
-L98:
+L43:
       returnvoid
      end ; code
     end ; body

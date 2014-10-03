@@ -14,33 +14,8 @@ class
     initscopedepth 11
     maxscopedepth 12
     code
-     pushfalse
-     pushtrue
-     setlocal2
-
-     jump                L10
-
-     increment
-     add
-     negate_i
-     declocal_i          2
-     pushnan
-     kill                2
-L10:
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal2
-     dup
-     iftrue              L19
-
-     pop
-     getlocal0
-     convert_b
-L19:
-     iffalse             L25
 
      getlocal0
      getlocal1
@@ -48,7 +23,6 @@ L19:
      pushstring          "View"
      constructsuper      3
 
-L25:
      returnvoid
     end ; code
    end ; body
@@ -64,56 +38,22 @@ L25:
      initscopedepth 11
      maxscopedepth 12
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      getlocal3
-      equals
-      getlocal3
-      hasnext
-      subtract_i
-      declocal            2
-L10:
-      setlocal3
-
-      setlocal            4
-
       getlocal0
       pushscope
 
       getlex              QName(PackageNamespace(""), "gs_")
       getproperty         QName(PackageNamespace(""), "map_")
-      jump                L23
-
-      inclocal            2
-      pop
-      declocal            2
-      popscope
-      declocal            3
-      typeof
-L23:
       getproperty         QName(PackageNamespace(""), "player_")
       coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")
       setlocal2
 
-      getlocal            4
-      iffalse             L45
-
       getlocal2
       pushnull
-      ifne                L36
-
-      getlocal            4
-      iffalse             L45
+      ifne                L11
 
       returnvoid
 
-      getlocal3
-      iftrue              L45
-
-L36:
+L11:
       getlex              QName(PackageNamespace(""), "gs_")
       findpropstrict      QName(PackageNamespace("_-6e"), "_-4L")
       getlocal2
@@ -124,7 +64,6 @@ L36:
       constructprop       QName(PackageNamespace("_-6e"), "_-4L"), 1
       callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
-L45:
       returnvoid
      end ; code
     end ; body

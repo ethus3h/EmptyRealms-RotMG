@@ -14,33 +14,8 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     setlocal2
-
-     jump                L10
-
-     kill                2
-     inclocal            2
-     inclocal_i          2
-     kill                2
-     inclocal_i          2
-     negate_i
-L10:
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal3
-     dup
-     iffalse             L19
-
-     pop
-     getlocal1
-     convert_b
-L19:
-     iftrue              L26
 
      getlocal0
      getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-0I4#0"), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-0I4#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-7B"), StaticProtectedNs("_-7B")])
@@ -49,28 +24,13 @@ L19:
      construct           0
      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-0I4#0"), "data_")
 
-L26:
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsPath")
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-0I4#0"), "_-xW")
-     jump                L36
-
-     bitnot
-     getlocal2
-     pushscope
-
-     negate_i
-     setlocal2
-
-     subtract
-L36:
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-0I4#0"), "data_")
      constructprop       QName(PackageNamespace("flash.display"), "GraphicsPath"), 2
      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-0I4#0"), "path_")
-
-     getlocal3
-     iftrue              L75
 
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsBitmapFill")
@@ -78,29 +38,9 @@ L36:
      findpropstrict      QName(PackageNamespace("flash.geom"), "Matrix")
      constructprop       QName(PackageNamespace("flash.geom"), "Matrix"), 0
      pushfalse
-     jump                L55
-
-     inclocal_i          2
-     setlocal2
-
-     kill                2
-     greaterthan
-     equals
-     kill                2
-L55:
      pushfalse
      constructprop       QName(PackageNamespace("flash.display"), "GraphicsBitmapFill"), 4
      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-0I4#0"), "bitmapFill_")
-
-     getlocal3
-     dup
-     iffalse             L64
-
-     pop
-     getlocal1
-     convert_b
-L64:
-     iftrue              L73
 
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsSolidFill")
@@ -109,14 +49,9 @@ L64:
      constructprop       QName(PackageNamespace("flash.display"), "GraphicsSolidFill"), 2
      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-0I4#0"), "_-Ne")
 
-     getlocal2
-     iffalse             L75
-
-L73:
      getlocal0
      constructsuper      0
 
-L75:
      getlocal0
      getlocal1
      initproperty        QName(PackageNamespace(""), "size_")
@@ -142,33 +77,13 @@ L75:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      setlocal2
-
-      convert_s
-      pushnan
-      astypelate
-      kill                2
-      declocal            2
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      iftrue              L18
 
       getlocal0
       getlocal1
       initproperty        QName(PackageNamespace(""), "size_")
 
-L18:
       returnvoid
      end ; code
     end ; body
@@ -193,21 +108,6 @@ L18:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal            13
-
-      jump                L10
-
-      kill                9
-      greaterthan
-      inclocal            7
-      bitand
-      inclocal            4
-      kill                13
-L10:
-      setlocal            14
-
       getlocal0
       pushscope
 
@@ -221,9 +121,6 @@ L10:
       coerce              QName(PackageNamespace("flash.geom"), "Matrix")
       setlocal            12
 
-      getlocal            13
-      iffalse             L38
-
       getlocal0
       getlex              QName(PackageNamespace("flash.geom"), "Utils3D")
       getlocal            4
@@ -231,22 +128,15 @@ L10:
       callproperty        QName(PackageNamespace(""), "projectVector"), 2
       initproperty        QName(PackageNamespace(""), "_-bY")
 
-      getlocal            14
-      iftrue              L37
-
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-bY")
       getproperty         QName(PackageNamespace(""), "w")
       pushbyte            0
-      ifnlt               L38
+      ifnlt               L21
 
-      getlocal            13
-      iffalse             L38
-
-L37:
       returnvoid
 
-L38:
+L21:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-bY")
       getproperty         QName(PackageNamespace(""), "w")
@@ -261,57 +151,15 @@ L38:
       multiply
       callproperty        QName(PackageNamespace(""), "sin"), 1
       multiply
-      getlocal            14
-      dup
-      iffalse             L58
-
-      pop
-      getlocal0
-      convert_b
-L58:
-      iftrue              L60
-
       convert_d
-L60:
       setlocal            8
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "size_")
-      getlocal            14
-      dup
-      iffalse             L69
-
-      pop
-      getlocal2
-      convert_b
-L69:
-      iftrue              L80
-
       getlocal            8
       divide
-      getlocal            13
-      dup
-      iftrue              L78
-
-      pop
-      getlocal3
-      convert_b
-L78:
-      iffalse             L80
-
       convert_d
-L80:
       setlocal            9
-
-      getlocal            13
-      dup
-      iftrue              L87
-
-      pop
-      getlocal2
-      convert_b
-L87:
-      iffalse             L174
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-0I4#0"), "data_")
@@ -319,28 +167,8 @@ L87:
       setproperty         QName(PackageNamespace(""), "length")
 
       getlocal3
-      getlocal            14
-      dup
-      iffalse             L99
-
-      pop
-      getlocal3
-      convert_b
-L99:
-      iftrue              L178
-
       pushbyte            0
-      ifne                L160
-
-      getlocal            13
-      dup
-      iftrue              L108
-
-      pop
-      getlocal2
-      convert_b
-L108:
-      iffalse             L159
+      ifne                L94
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-0I4#0"), "data_")
@@ -386,66 +214,20 @@ L108:
       add
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 8
 
-      getlocal            14
-      dup
-      iffalse             L158
+      jump                L203
 
-      pop
-      getlocal0
-      convert_b
-L158:
-      iftrue              L174
-
-L159:
-      jump                L294
-
-L160:
+L94:
       getlex              QName(PackageNamespace(""), "Math")
       getlocal3
       callproperty        QName(PackageNamespace(""), "cos"), 1
       convert_d
-      getlocal            13
-      dup
-      iftrue              L170
-
-      pop
-      getlocal0
-      convert_b
-L170:
-      iffalse             L178
-
       setlocal            10
 
-      getlocal            14
-      iftrue              L294
-
-L174:
       getlex              QName(PackageNamespace(""), "Math")
       getlocal3
       callproperty        QName(PackageNamespace(""), "sin"), 1
       convert_d
-L178:
       setlocal            11
-
-      jump                L186
-
-      setlocal3
-
-      decrement_i
-      increment_i
-      pop
-      bitand
-      convert_d
-L186:
-      getlocal            14
-      dup
-      iffalse             L192
-
-      pop
-      getlocal0
-      convert_b
-L192:
-      iftrue              L303
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-0I4#0"), "data_")
@@ -547,24 +329,16 @@ L192:
       add
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 8
 
-      getlocal            14
-      iftrue              L297
-
-L294:
+L203:
       getlocal            6
       pushnull
-      ifeq                L362
+      ifeq                L253
 
-L297:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-0I4#0"), "bitmapFill_")
       getlocal            6
       setproperty         QName(PackageNamespace(""), "bitmapData")
 
-      getlocal            14
-      iftrue              L372
-
-L303:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-0I4#0"), "bitmapFill_")
       getproperty         QName(PackageNamespace(""), "matrix")
@@ -573,9 +347,6 @@ L303:
       setlocal            12
 
       callpropvoid        QName(PackageNamespace(""), "identity"), 0
-
-      getlocal            14
-      iftrue              L343
 
       getlocal            12
       pushbyte            2
@@ -612,48 +383,25 @@ L303:
       getproperty         QName(PackageNamespace(""), "y")
       callpropvoid        QName(PackageNamespace(""), "translate"), 2
 
-L343:
       getlocal1
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-0I4#0"), "bitmapFill_")
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-      getlocal            14
-      dup
-      jump                L356
+      jump                L261
 
-      kill                2
-      declocal            6
-      increment_i
-      inclocal            3
-      convert_u
-      convert_u
-L356:
-      iffalse             L360
-
-      pop
-      getlocal0
-      convert_b
-L360:
-      iftrue              L379
-
-      jump                L372
-
-L362:
+L253:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-0I4#0"), "_-Ne")
       getlocal            7
       setproperty         QName(PackageNamespace(""), "color")
-
-      getlocal            13
-      iffalse             L372
 
       getlocal1
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-0I4#0"), "_-Ne")
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-L372:
+L261:
       getlocal1
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-0I4#0"), "path_")
@@ -663,7 +411,6 @@ L372:
       getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-0I4#0"), "END_FILL")
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-L379:
       returnvoid
      end ; code
     end ; body
@@ -678,47 +425,12 @@ L379:
    initscopedepth 3
    maxscopedepth 4
    code
-    pushfalse
-    pushtrue
-    swap
-    jump                L10
-
-    dup
-    dxnslate
-    lessthan
-    decrement
-    astypelate
-    getlocal0
-L10:
-    setlocal1
-
-    setlocal2
-
     getlocal0
     pushscope
-
-    getlocal2
-    dup
-    iftrue              L20
-
-    pop
-    getlocal2
-    convert_b
-L20:
-    iffalse             L65
 
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-0I4#0"), "_-xW")
     findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
     getproperty         Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-0I4#0"), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-0I4#1"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-7B"), StaticProtectedNs("_-7B")])
-    jump                L31
-
-    greaterequals
-    pop
-    pushfalse
-    decrement
-    strictequals
-    pushtrue
-L31:
     getlex              QName(PackageNamespace(""), "int")
     applytype           1
     pushbyte            4
@@ -727,15 +439,6 @@ L31:
     pushbyte            0
     getlex              QName(PackageNamespace("flash.display"), "GraphicsPathCommand")
     getproperty         QName(PackageNamespace(""), "MOVE_TO")
-    jump                L46
-
-    negate
-    convert_d
-    bitxor
-    pushundefined
-    multiply
-    pop
-L46:
     setproperty         MultinameL([PackageNamespace("")])
 
     dup
@@ -758,16 +461,11 @@ L46:
 
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-0I4#0"), "_-xW")
 
-    getlocal1
-    iftrue              L69
-
-L65:
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-0I4#0"), "END_FILL")
     findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsEndFill")
     constructprop       QName(PackageNamespace("flash.display"), "GraphicsEndFill"), 0
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-0I4#0"), "END_FILL")
 
-L69:
     returnvoid
    end ; code
   end ; body

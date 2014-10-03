@@ -107,11 +107,11 @@ L3:
       findpropstrict      QName(PackageNamespace(""), "close")
       callpropvoid        QName(PackageNamespace(""), "close"), 0
 
-      jump                L23
+      jump                L20
 
 L7:
       label
-      jump                L23
+      jump                L20
 
 L9:
       getlocal1
@@ -123,21 +123,15 @@ L9:
       ifstrictne          L17
 
       pushbyte            0
-      jump                L21
+      jump                L18
 
 L17:
-      jump                L20
-
       pushbyte            1
-      jump                L21
-
-L20:
-      pushbyte            1
-L21:
+L18:
       kill                2
       lookupswitch        L7, [L3, L7]
 
-L23:
+L20:
       returnvoid
      end ; code
     end ; body

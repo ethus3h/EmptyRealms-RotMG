@@ -13,43 +13,8 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     dxnslate
-     bitxor
-     increment
-     convert_u
-     increment
-     getlocal0
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
      pushscope
-
-     jump                L21
-
-     convert_d
-     checkfilter
-     decrement
-     subtract_i
-     bitxor
-     lshift
-L21:
-     getlocal2
-     dup
-     iftrue              L27
-
-     pop
-     getlocal1
-     convert_b
-L27:
-     iffalse             L42
 
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
@@ -57,20 +22,9 @@ L27:
      constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 1
      initproperty        QName(PrivateNamespace("*", "_-03T:_-0ES#0"), "_-fY")
 
-     getlocal2
-     dup
-     iftrue              L39
-
-     pop
-     getlocal1
-     convert_b
-L39:
-     iffalse             L42
-
      getlocal0
      constructsuper      0
 
-L42:
      returnvoid
     end ; code
    end ; body
@@ -87,27 +41,8 @@ L42:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      checkfilter
-      inclocal            2
-      pushnan
-      increment_i
-      bitxor
-      convert_i
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      iffalse             L21
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-03T:_-0ES#0"), "_-fY")
@@ -115,7 +50,6 @@ L10:
       pushtrue
       setproperty         MultinameL([PrivateNamespace("*", "_-03T:_-0ES#0"), PrivateNamespace("*", "_-03T:_-0ES#1"), PackageNamespace(""), PackageNamespace("_-03T"), PackageInternalNs("_-03T"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0D1"), StaticProtectedNs("_-0D1")])
 
-L21:
       returnvoid
      end ; code
     end ; body
@@ -132,41 +66,14 @@ L21:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      inclocal_i          2
-      bitnot
-      pushnan
-      getlocal2
-      pushnull
-      bitnot
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      dup
-      iffalse             L20
-
-      pop
-      getlocal0
-      convert_b
-L20:
-      iftrue              L26
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-03T:_-0ES#0"), "_-fY")
       getlocal1
       deleteproperty      MultinameL([PrivateNamespace("*", "_-03T:_-0ES#0"), PrivateNamespace("*", "_-03T:_-0ES#1"), PackageNamespace(""), PackageNamespace("_-03T"), PackageInternalNs("_-03T"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0D1"), StaticProtectedNs("_-0D1")])
       pop
-L26:
       returnvoid
      end ; code
     end ; body
@@ -182,23 +89,6 @@ L26:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal            4
-
-      jump                L10
-
-      declocal_i          3
-      getlocal3
-      kill                3
-      bitor
-      setlocal3
-
-      setlocal            4
-
-L10:
-      setlocal            5
-
       getlocal0
       pushscope
 
@@ -210,23 +100,13 @@ L10:
       setlocal2
 
       getlocal0
-      jump                L26
-
-      rshift
-      setlocal            4
-
-      convert_o
-      greaterequals
-      inclocal            2
-      bitor
-L26:
       getproperty         QName(PrivateNamespace("*", "_-03T:_-0ES#0"), "_-fY")
       coerce_a
       setlocal3
 
-      jump                L48
+      jump                L23
 
-L30:
+L12:
       label
       getlocal3
       getlocal2
@@ -234,24 +114,14 @@ L30:
       coerce              QName(PackageNamespace(""), "Object")
       setlocal1
 
-      getlocal            5
-      dup
-      iffalse             L42
-
-      pop
-      getlocal2
-      convert_b
-L42:
-      iftrue              L48
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-03T:_-0ES#0"), "_-fY")
       getlocal1
       deleteproperty      MultinameL([PrivateNamespace("*", "_-03T:_-0ES#0"), PrivateNamespace("*", "_-03T:_-0ES#1"), PackageNamespace(""), PackageNamespace("_-03T"), PackageInternalNs("_-03T"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0D1"), StaticProtectedNs("_-0D1")])
       pop
-L48:
+L23:
       hasnext2            3, 2
-      iftrue              L30
+      iftrue              L12
 
       kill                3
       kill                2

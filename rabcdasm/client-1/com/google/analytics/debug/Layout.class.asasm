@@ -88,18 +88,18 @@ L3:
       not
       setproperty         QName(PackageNamespace(""), "visible")
 
-      jump                L37
+      jump                L34
 
 L10:
       label
       findpropstrict      QName(PackageNamespace(""), "destroy")
       callpropvoid        QName(PackageNamespace(""), "destroy"), 0
 
-      jump                L37
+      jump                L34
 
 L14:
       label
-      jump                L37
+      jump                L34
 
 L16:
       getlocal1
@@ -112,7 +112,7 @@ L16:
       ifstrictne          L25
 
       pushbyte            0
-      jump                L35
+      jump                L32
 
 L25:
       getlex              QName(PrivateNamespace("*", "com.google.analytics.debug:Layout"), "_debug")
@@ -121,21 +121,15 @@ L25:
       ifstrictne          L31
 
       pushbyte            1
-      jump                L35
+      jump                L32
 
 L31:
-      jump                L34
-
       pushbyte            2
-      jump                L35
-
-L34:
-      pushbyte            2
-L35:
+L32:
       kill                2
       lookupswitch        L14, [L3, L10, L14]
 
-L37:
+L34:
       returnvoid
      end ; code
     end ; body

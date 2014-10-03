@@ -13,32 +13,12 @@ class
     initscopedepth 5
     maxscopedepth 6
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     getglobalscope
-     dup
-     pushwith
-     bitnot
-     subtract
-     astypelate
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal1
-     iftrue              L18
 
      getlocal0
      constructsuper      0
 
-L18:
      returnvoid
     end ; code
    end ; body
@@ -58,15 +38,6 @@ L18:
       pushscope
 
       getlocal0
-      jump                L10
-
-      bitnot
-      istypelate
-      rshift
-      pushnull
-      pushnull
-      pushnull
-L10:
       getlocal1
       findpropstrict      QName(PackageNamespace("_-qj"), "_-hG")
       constructprop       QName(PackageNamespace("_-qj"), "_-hG"), 0
@@ -88,33 +59,14 @@ L10:
      initscopedepth 5
      maxscopedepth 6
      code
-      pushfalse
-      pushtrue
-      setlocal3
-
-      jump                L10
-
-      getlocal2
-      strictequals
-      inclocal_i          3
-      dxnslate
-      convert_u
-      strictequals
-L10:
-      setlocal            4
-
       getlocal0
       pushscope
-
-      getlocal            4
-      iftrue              L19
 
       getlocal0
       getlocal1
       getlocal2
       callpropvoid        QName(ProtectedNamespace("_-Xa"), "matchesOrDescribesMismatch"), 2
 
-L19:
       returnvoid
      end ; code
     end ; body
@@ -136,15 +88,6 @@ L19:
       pushscope
 
       findpropstrict      QName(PackageNamespace("flash.errors"), "IllegalOperationError")
-      jump                L10
-
-      increment
-      dxnslate
-      bitnot
-      greaterequals
-      convert_u
-      bitor
-L10:
       pushstring          "DiagnosingMatcher#matches is abstract and must be overriden in a subclass"
       constructprop       QName(PackageNamespace("flash.errors"), "IllegalOperationError"), 1
       throw

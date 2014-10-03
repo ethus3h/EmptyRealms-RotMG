@@ -14,40 +14,13 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     setlocal2
-
-     jump                L10
-
-     greaterthan
-     setlocal2
-
-     pushtrue
-     bitnot
-     dxnslate
-     declocal_i          2
-L10:
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal3
-     dup
-     iffalse             L19
-
-     pop
-     getlocal1
-     convert_b
-L19:
-     iftrue              L23
 
      getlocal0
      getlocal1
      constructsuper      1
 
-L23:
      returnvoid
     end ; code
    end ; body
@@ -64,40 +37,14 @@ L23:
      initscopedepth 6
      maxscopedepth 7
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      bitor
-      inclocal_i          2
-      getlocal0
-      negate_i
-      lessequals
-      istypelate
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      dup
-      iftrue              L19
-
-      pop
-      getlocal1
-      convert_b
-L19:
-      iffalse             L24
 
       getlocal1
       getlocal0
       getproperty         QName(PackageNamespace(""), "name_")
       callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeUTF"), 1
 
-L24:
       returnvoid
      end ; code
     end ; body
@@ -117,15 +64,6 @@ L24:
       pushscope
 
       findpropstrict      QName(ProtectedNamespace("_-1E"), "formatToString")
-      jump                L10
-
-      pushundefined
-      coerce_a
-      astypelate
-      dup
-      astypelate
-      dup
-L10:
       pushstring          "GUILDREMOVE"
       pushstring          "name_"
       callproperty        QName(ProtectedNamespace("_-1E"), "formatToString"), 2

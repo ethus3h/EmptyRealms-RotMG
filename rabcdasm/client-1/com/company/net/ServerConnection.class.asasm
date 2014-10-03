@@ -16,44 +16,13 @@ class
     initscopedepth 5
     maxscopedepth 6
     code
-     pushfalse
-     pushtrue
-     setlocal2
-
-     jump                L10
-
-     getlocal2
-     subtract_i
-     urshift
-     negate
-     inclocal            2
-     declocal            2
-L10:
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal3
-     iftrue              L50
 
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
      constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
      initproperty        QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-3I")
-
-     getlocal3
-     jump                L27
-
-     convert_i
-     declocal_i          2
-     kill                2
-     declocal            2
-     setlocal2
-
-     getlocal2
-L27:
-     iftrue              L41
 
      getlocal0
      getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.net:ServerConnection#0"), PrivateNamespace("*", "com.company.net:ServerConnection#1"), PackageNamespace(""), PackageNamespace("com.company.net"), PackageInternalNs("com.company.net"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-T0"), StaticProtectedNs("_-T0"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("__AS3__.vec")])
@@ -62,36 +31,13 @@ L27:
      construct           0
      initproperty        QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-aG")
 
-     getlocal2
-     dup
-     iftrue              L40
-
-     pop
-     getlocal3
-     convert_b
-L40:
-     iffalse             L53
-
-L41:
      getlocal0
      constructsuper      0
 
-     getlocal2
-     dup
-     iftrue              L49
-
-     pop
-     getlocal1
-     convert_b
-L49:
-     iffalse             L53
-
-L50:
      getlocal0
      getlocal1
      initproperty        QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-073")
 
-L53:
      returnvoid
     end ; code
    end ; body
@@ -120,36 +66,8 @@ L53:
      initscopedepth 5
      maxscopedepth 6
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      increment_i
-      inclocal            2
-      setlocal2
-
-      convert_b
-      kill                4
-      setlocal            4
-
-L10:
-      setlocal            4
-
-      setlocal            5
-
       getlocal0
       pushscope
-
-      getlocal            4
-      dup
-      iffalse             L20
-
-      pop
-      getlocal2
-      convert_b
-L20:
-      iftrue              L28
 
       getlocal0
       getlex              QName(PackageNamespace("com.hurlant.crypto"), "Crypto")
@@ -159,7 +77,6 @@ L20:
       callproperty        QName(PackageNamespace(""), "getCipher"), 3
       initproperty        QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-0Bo")
 
-L28:
       returnvoid
      end ; code
     end ; body
@@ -180,34 +97,8 @@ L28:
      initscopedepth 5
      maxscopedepth 6
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      convert_d
-      inclocal_i          4
-      declocal_i          2
-      inclocal_i          4
-      convert_b
-      pushundefined
-L10:
-      setlocal            4
-
-      setlocal            5
-
       getlocal0
       pushscope
-
-      getlocal            5
-      dup
-      iftrue              L20
-
-      pop
-      getlocal1
-      convert_b
-L20:
-      iffalse             L28
 
       getlocal0
       getlex              QName(PackageNamespace("com.hurlant.crypto"), "Crypto")
@@ -217,7 +108,6 @@ L20:
       callproperty        QName(PackageNamespace(""), "getCipher"), 3
       initproperty        QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-0ER")
 
-L28:
       returnvoid
      end ; code
     end ; body
@@ -236,34 +126,8 @@ L28:
      initscopedepth 5
      maxscopedepth 6
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      kill                3
-      rshift
-      equals
-      lshift
-      inclocal            4
-      declocal_i          3
-L10:
-      setlocal            4
-
-      setlocal            5
-
       getlocal0
       pushscope
-
-      getlocal            5
-      dup
-      iftrue              L20
-
-      pop
-      getlocal1
-      convert_b
-L20:
-      iffalse             L29
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-3I")
@@ -274,7 +138,6 @@ L20:
       constructprop       QName(PrivateNamespace("*", "com.company.net:ServerConnection#1"), "MessageType"), 2
       setproperty         MultinameL([PrivateNamespace("*", "com.company.net:ServerConnection#0"), PrivateNamespace("*", "com.company.net:ServerConnection#1"), PackageNamespace(""), PackageNamespace("com.company.net"), PackageInternalNs("com.company.net"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-T0"), StaticProtectedNs("_-T0"), StaticProtectedNs("flash.events:EventDispatcher")])
 
-L29:
       returnvoid
      end ; code
     end ; body
@@ -292,53 +155,21 @@ L29:
      initscopedepth 5
      maxscopedepth 6
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      inclocal            2
-      inclocal            3
-      bitnot
-      pushtrue
-      bitand
-      decrement_i
-L10:
-      setlocal3
-
-      setlocal            4
-
       getlocal0
       pushscope
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
       pushnull
-      ifeq                L24
-
-      getlocal3
-      iftrue              L109
+      ifeq                L8
 
       getlocal0
       callpropvoid        QName(PackageNamespace(""), "_-0FG"), 0
 
-      getlocal3
-      iftrue              L109
-
-L24:
+L8:
       getlocal0
       getlocal1
       initproperty        QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "server_")
-
-      getlocal3
-      dup
-      iffalse             L33
-
-      pop
-      getlocal0
-      convert_b
-L33:
-      iftrue              L116
 
       getlocal0
       getlocal2
@@ -353,28 +184,11 @@ L33:
       constructprop       QName(PackageNamespace("flash.net"), "Socket"), 0
       initproperty        QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
 
-      getlocal            4
-      iffalse             L81
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
-      jump                L55
-
-      add_i
-      kill                2
-      declocal            2
-      inclocal_i          3
-      setlocal2
-
-      setlocal3
-
-L55:
       getlocal1
       getlocal2
       callpropvoid        QName(PackageNamespace(""), "connect"), 2
-
-      getlocal3
-      iftrue              L67
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
@@ -384,7 +198,6 @@ L55:
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-ux")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-L67:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
       getlex              QName(PackageNamespace("flash.events"), "Event")
@@ -393,34 +206,11 @@ L67:
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-of")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-      getlocal3
-      dup
-      iffalse             L80
-
-      pop
-      getlocal0
-      convert_b
-L80:
-      iftrue              L116
-
-L81:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
       getlex              QName(PackageNamespace("flash.events"), "ProgressEvent")
       getproperty         QName(PackageNamespace(""), "SOCKET_DATA")
       getlocal0
-      jump                L93
-
-      greaterequals
-      inclocal            2
-      setlocal2
-
-      setlocal2
-
-      setlocal3
-
-      bitxor
-L93:
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-vL")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
@@ -432,17 +222,6 @@ L93:
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "onIOError")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-      getlocal3
-      dup
-      iffalse             L108
-
-      pop
-      getlocal3
-      convert_b
-L108:
-      iftrue              L116
-
-L109:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
       getlex              QName(PackageNamespace("flash.events"), "SecurityErrorEvent")
@@ -451,7 +230,6 @@ L109:
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "onSecurityError")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-L116:
       returnvoid
      end ; code
     end ; body
@@ -467,26 +245,8 @@ L116:
      initscopedepth 5
      maxscopedepth 6
      code
-      pushfalse
-      pushtrue
-      setlocal1
-
-      jump                L10
-
-      urshift
-      bitor
-      pushundefined
-      lessequals
-      pushundefined
-      convert_s
-L10:
-      setlocal2
-
       getlocal0
       pushscope
-
-      getlocal1
-      iffalse             L21
 
       getlocal0
       getlocal0
@@ -495,7 +255,6 @@ L10:
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "port_")
       callpropvoid        QName(PackageNamespace(""), "connect"), 2
 
-L21:
       returnvoid
      end ; code
     end ; body
@@ -511,66 +270,31 @@ L21:
      initscopedepth 5
      maxscopedepth 6
      code
-      pushfalse
-      pushtrue
-      setlocal1
-
-      jump                L10
-
-      pushundefined
-      getlocal0
-      pushundefined
-      multiply
-      setlocal3
-
-      pushscope
-
-L10:
-      setlocal2
-
       getlocal0
       pushscope
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
       pushnull
-      ifne                L20
-
-      getlocal2
-      iftrue              L54
+      ifne                L7
 
       returnvoid
 
-L20:
+L7:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
       getproperty         QName(PackageNamespace(""), "connected")
-      iffalse             L31
-
-      getlocal2
-      iftrue              L91
+      iffalse             L14
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
       callpropvoid        QName(PackageNamespace(""), "close"), 0
 
-      getlocal2
-      iftrue              L87
-
-L31:
+L14:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
       getlex              QName(PackageNamespace("flash.events"), "Event")
       getproperty         QName(PackageNamespace(""), "CONNECT")
-      jump                L42
-
-      popscope
-      pop
-      decrement_i
-      increment
-      negate
-      bitnot
-L42:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-ux")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
@@ -583,10 +307,6 @@ L42:
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-of")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
-      getlocal2
-      iftrue              L87
-
-L54:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
       getlex              QName(PackageNamespace("flash.events"), "ProgressEvent")
@@ -595,15 +315,6 @@ L54:
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-vL")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
-      jump                L68
-
-      swap
-      add
-      urshift
-      lessthan
-      nextname
-      convert_b
-L68:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
       getlex              QName(PackageNamespace("flash.events"), "IOErrorEvent")
@@ -620,20 +331,15 @@ L68:
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "onSecurityError")
       callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
 
-      getlocal1
-      iffalse             L87
-
       getlocal0
       pushnull
       initproperty        QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
 
-L87:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-aG")
       pushbyte            0
       setproperty         QName(PackageNamespace(""), "length")
 
-L91:
       returnvoid
      end ; code
     end ; body
@@ -650,65 +356,17 @@ L91:
      initscopedepth 5
      maxscopedepth 6
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      urshift
-      dup
-      declocal_i          2
-      kill                2
-      getlocal3
-      declocal_i          2
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      jump                L21
-
-      subtract_i
-      setlocal3
-
-      modulo
-      istypelate
-      bitor
-      getlocal2
-L21:
-      getlocal2
-      dup
-      iffalse             L27
-
-      pop
-      getlocal3
-      convert_b
-L27:
-      iftrue              L39
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-aG")
       getlocal1
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-      getlocal2
-      dup
-      iffalse             L38
-
-      pop
-      getlocal0
-      convert_b
-L38:
-      iftrue              L41
-
-L39:
       getlocal0
       callpropvoid        QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-0I3"), 0
 
-L41:
       returnvoid
      end ; code
     end ; body
@@ -724,21 +382,6 @@ L41:
      initscopedepth 5
      maxscopedepth 6
      code
-      pushfalse
-      pushtrue
-      setlocal            5
-
-      jump                L10
-
-      inclocal_i          5
-      inclocal_i          5
-      declocal            2
-      declocal_i          5
-      pushundefined
-      inclocal            2
-L10:
-      setlocal            6
-
       getlocal0
       pushscope
 
@@ -750,75 +393,24 @@ L10:
       coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
       setlocal2
 
-      getlocal            6
-      dup
-      iffalse             L25
-
-      pop
-      getlocal2
-      convert_b
-L25:
-      iftrue              L66
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
       pushnull
       equals
-      getlocal            5
       dup
-      iftrue              L36
+      iftrue              L19
 
       pop
-      getlocal2
-      convert_b
-L36:
-      iffalse             L58
-
-      dup
-      iftrue              L58
-
-      getlocal            5
-      dup
-      iftrue              L45
-
-      pop
-      getlocal2
-      convert_b
-L45:
-      iffalse             L58
-
-      pop
-      getlocal            6
-      dup
-      iffalse             L53
-
-      pop
-      getlocal2
-      convert_b
-L53:
-      iftrue              L66
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
       getproperty         QName(PackageNamespace(""), "connected")
       not
-L58:
-      iffalse             L67
+L19:
+      iffalse             L21
 
-      getlocal            5
-      dup
-      iftrue              L65
-
-      pop
-      getlocal1
-      convert_b
-L65:
-      iffalse             L67
-
-L66:
       returnvoid
 
-L67:
+L21:
       pushbyte            0
       setlocal3
 
@@ -827,9 +419,9 @@ L67:
       coerce_a
       setlocal            4
 
-      jump                L157
+      jump                L74
 
-L74:
+L28:
       label
       getlocal            4
       getlocal3
@@ -842,74 +434,29 @@ L74:
       coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
       setlocal2
 
-      jump                L91
-
-      multiply
-      getlocal1
-      declocal_i          4
-      equals
-      setlocal            4
-
-      negate
-L91:
       getlocal1
       getlocal2
       callpropvoid        QName(PackageNamespace(""), "writeToOutput"), 1
 
-      getlocal            6
-      iftrue              L121
-
       getlocal2
       pushbyte            0
       setproperty         QName(PackageNamespace(""), "position")
 
-      getlocal            5
-      dup
-      iftrue              L105
-
-      pop
-      getlocal2
-      convert_b
-L105:
-      iffalse             L138
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-0Bo")
-      getlocal            5
-      dup
-      iftrue              L114
-
-      pop
-      getlocal1
-      convert_b
-L114:
-      iffalse             L119
-
       pushnull
-      ifeq                L131
+      ifeq                L55
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-0Bo")
-L119:
       getlocal2
       callpropvoid        QName(Namespace("_-8r"), "encrypt"), 1
 
-L121:
       getlocal2
       pushbyte            0
       setproperty         QName(PackageNamespace(""), "position")
 
-      getlocal            6
-      dup
-      iffalse             L130
-
-      pop
-      getlocal1
-      convert_b
-L130:
-      iftrue              L157
-
-L131:
+L55:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
       getlocal2
@@ -918,7 +465,6 @@ L131:
       add
       callpropvoid        QName(PackageNamespace(""), "writeInt"), 1
 
-L138:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
       getlocal1
@@ -930,66 +476,25 @@ L138:
       getlocal2
       callpropvoid        QName(PackageNamespace(""), "writeBytes"), 1
 
-      getlocal            6
-      dup
-      iffalse             L153
-
-      pop
-      getlocal3
-      convert_b
-L153:
-      iftrue              L157
-
       getlocal0
       getlocal1
       callpropvoid        QName(PackageNamespace(""), "_-fj"), 1
 
-L157:
+L74:
       hasnext2            4, 3
-      iftrue              L74
+      iftrue              L28
 
-      jump                L166
-
-      setlocal2
-
-      inclocal_i          4
-      modulo
-      lessequals
-      convert_s
-      pushnull
-L166:
       kill                4
       kill                3
-      getlocal            5
-      dup
-      iftrue              L174
-
-      pop
-      getlocal0
-      convert_b
-L174:
-      iffalse             L189
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
       callpropvoid        QName(PackageNamespace(""), "flush"), 0
-
-      getlocal            5
-      dup
-      iftrue              L184
-
-      pop
-      getlocal3
-      convert_b
-L184:
-      iffalse             L189
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-aG")
       pushbyte            0
       setproperty         QName(PackageNamespace(""), "length")
 
-L189:
       returnvoid
      end ; code
     end ; body
@@ -1006,59 +511,12 @@ L189:
      initscopedepth 5
      maxscopedepth 6
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      divide
-      setlocal2
-
-      declocal            2
-      setlocal2
-
-      setlocal2
-
-      kill                2
-L10:
-      setlocal3
-
       getlocal0
       pushscope
 
-      getlocal3
-      dup
-      iffalse             L19
-
-      pop
-      getlocal1
-      convert_b
-L19:
-      iftrue              L62
-
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-073")
-      iffalse             L62
-
-      getlocal3
-      dup
-      iffalse             L36
-
-      pop
-      jump                L34
-
-      pushnan
-      getlocal3
-      getglobalscope
-      popscope
-      nextvalue
-      pushfalse
-L34:
-      getlocal1
-      convert_b
-L36:
-      iftrue              L56
+      iffalse             L14
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
@@ -1066,54 +524,19 @@ L36:
       pushstring          "utf-8"
       callpropvoid        QName(PackageNamespace(""), "writeMultiByte"), 2
 
-      getlocal2
-      dup
-      jump                L51
-
-      inclocal_i          2
-      getlocal2
-      getlocal2
-      coerce_a
-      setlocal2
-
-      inclocal_i          2
-L51:
-      iftrue              L55
-
-      pop
-      getlocal2
-      convert_b
-L55:
-      iffalse             L62
-
-L56:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
       pushbyte            0
       callpropvoid        QName(PackageNamespace(""), "writeByte"), 1
 
-      getlocal3
-      iftrue              L74
-
-L62:
+L14:
       getlocal0
       callpropvoid        QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-0I3"), 0
-
-      getlocal2
-      dup
-      iftrue              L70
-
-      pop
-      getlocal0
-      convert_b
-L70:
-      iffalse             L74
 
       findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
       getlocal1
       callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
 
-L74:
       returnvoid
      end ; code
     end ; body
@@ -1130,52 +553,13 @@ L74:
      initscopedepth 5
      maxscopedepth 6
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      kill                2
-      pushnan
-      not
-      bitxor
-      subtract_i
-      kill                2
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
-      jump                L20
-
-      convert_i
-      subtract
-      nextvalue
-      getlocal2
-      getlocal3
-      newactivation
-L20:
       pushscope
-
-      getlocal3
-      iffalse             L33
 
       findpropstrict      QName(PackageNamespace(""), "trace")
       pushstring          "Lost connection to server"
       callpropvoid        QName(PackageNamespace(""), "trace"), 1
 
-      getlocal3
-      dup
-      iftrue              L32
-
-      pop
-      getlocal0
-      convert_b
-L32:
-      iffalse             L39
-
-L33:
       findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
       findpropstrict      QName(PackageNamespace("flash.events"), "Event")
       getlex              QName(PackageNamespace("flash.events"), "Event")
@@ -1183,7 +567,6 @@ L33:
       constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
       callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
 
-L39:
       returnvoid
      end ; code
     end ; body
@@ -1200,26 +583,8 @@ L39:
      initscopedepth 5
      maxscopedepth 6
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      declocal_i          2
-      kill                2
-      declocal            2
-      equals
-      inclocal            2
-      inclocal            2
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      iftrue              L42
 
       findpropstrict      QName(PackageNamespace(""), "trace")
       pushstring          "IO Error: "
@@ -1228,37 +593,6 @@ L10:
       add
       callpropvoid        QName(PackageNamespace(""), "trace"), 1
 
-      jump                L28
-
-      getlocal2
-      declocal_i          2
-      setlocal2
-
-      declocal            2
-      setlocal2
-
-      pushwith
-L28:
-      getlocal3
-      dup
-      iffalse             L41
-
-      pop
-      jump                L39
-
-      subtract
-      popscope
-      kill                2
-      inclocal_i          2
-      getlocal3
-      decrement
-L39:
-      getlocal3
-      convert_b
-L41:
-      iftrue              L56
-
-L42:
       findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
       findpropstrict      QName(PackageNamespace("flash.events"), "ErrorEvent")
       getlex              QName(PackageNamespace("flash.events"), "ErrorEvent")
@@ -1272,10 +606,6 @@ L42:
       constructprop       QName(PackageNamespace("flash.events"), "ErrorEvent"), 4
       callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
 
-      getlocal2
-      iffalse             L62
-
-L56:
       findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
       findpropstrict      QName(PackageNamespace("flash.events"), "Event")
       getlex              QName(PackageNamespace("flash.events"), "Event")
@@ -1283,7 +613,6 @@ L56:
       constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
       callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
 
-L62:
       returnvoid
      end ; code
     end ; body
@@ -1300,47 +629,16 @@ L62:
      initscopedepth 5
      maxscopedepth 6
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      getlocal2
-      kill                2
-      inclocal            2
-      istypelate
-      inclocal            2
-      getlocal0
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      iffalse             L30
 
       findpropstrict      QName(PackageNamespace(""), "trace")
       pushstring          "Security Error: "
       getlocal1
-      jump                L25
-
-      kill                2
-      inclocal            2
-      inclocal_i          2
-      kill                2
-      typeof
-      declocal_i          2
-L25:
       getproperty         QName(PackageNamespace(""), "text")
       add
       callpropvoid        QName(PackageNamespace(""), "trace"), 1
 
-      getlocal2
-      iffalse             L44
-
-L30:
       findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
       findpropstrict      QName(PackageNamespace("flash.events"), "ErrorEvent")
       getlex              QName(PackageNamespace("flash.events"), "ErrorEvent")
@@ -1354,10 +652,6 @@ L30:
       constructprop       QName(PackageNamespace("flash.events"), "ErrorEvent"), 4
       callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
 
-      getlocal3
-      iftrue              L50
-
-L44:
       findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
       findpropstrict      QName(PackageNamespace("flash.events"), "Event")
       getlex              QName(PackageNamespace("flash.events"), "Event")
@@ -1365,7 +659,6 @@ L44:
       constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
       callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
 
-L50:
       returnvoid
      end ; code
     end ; body
@@ -1382,24 +675,6 @@ L50:
      initscopedepth 5
      maxscopedepth 6
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      kill                3
-      setlocal            4
-
-      getlocal2
-      checkfilter
-      setlocal3
-
-      inclocal_i          3
-L10:
-      setlocal            4
-
-      setlocal            5
-
       getlocal0
       pushscope
 
@@ -1410,98 +685,55 @@ L10:
       coerce              QName(PrivateNamespace("*", "com.company.net:ServerConnection#1"), "MessageType")
       setlocal2
 
-      getlocal            5
-      iffalse             L27
-
       getlocal2
       pushnull
-      ifne                L31
+      ifne                L13
 
-      getlocal            4
-      iftrue              L31
-
-L27:
       pushnull
-      getlocal            5
-      iffalse             L39
-
       returnvalue
 
-L31:
+L13:
       pushnull
-      jump                L39
-
-      astypelate
-      kill                4
-      greaterequals
-      declocal_i          4
-      kill                2
-      inclocal_i          3
-L39:
       coerce              QName(PackageNamespace("com.company.net"), "_-098")
       setlocal3
-
-      getlocal            4
-      dup
-      iffalse             L47
-
-      pop
-      getlocal2
-      convert_b
-L47:
-      iftrue              L67
 
       getlocal2
       getproperty         QName(PackageNamespace(""), "freeList_")
       getproperty         QName(PackageNamespace(""), "length")
       pushbyte            0
-      ifne                L79
+      ifne                L38
 
-      getlocal            5
-      iffalse             L67
-
-      jump                L62
-
-      setlocal3
-
-      convert_o
-      inclocal            4
-      getlocal2
-      inclocal_i          2
-      increment
-L62:
       getlocal2
       getproperty         QName(PackageNamespace(""), "class_")
       pushnull
       equals
-      iffalse             L72
+      iffalse             L31
 
-L67:
       findpropstrict      QName(PackageNamespace("com.company.net"), "_-098")
       getlocal1
       constructprop       QName(PackageNamespace("com.company.net"), "_-098"), 1
       coerce              QName(PackageNamespace("com.company.net"), "_-098")
-      jump                L76
+      jump                L35
 
-L72:
+L31:
       getlocal2
       getlocal1
       constructprop       QName(PackageNamespace(""), "class_"), 1
       coerce              QName(PackageNamespace("com.company.net"), "_-098")
-L76:
+L35:
       coerce              QName(PackageNamespace("com.company.net"), "_-098")
       setlocal3
 
-      jump                L84
+      jump                L43
 
-L79:
+L38:
       getlocal2
       getproperty         QName(PackageNamespace(""), "freeList_")
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "pop"), 0
       coerce              QName(PackageNamespace("com.company.net"), "_-098")
       setlocal3
 
-L84:
+L43:
       getlocal3
       returnvalue
      end ; code
@@ -1519,33 +751,8 @@ L84:
      initscopedepth 5
      maxscopedepth 6
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      strictequals
-      pushfalse
-      inclocal            2
-      declocal            2
-      hasnext
-      declocal            2
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      dup
-      iffalse             L19
-
-      pop
-      getlocal3
-      convert_b
-L19:
-      iftrue              L28
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-3I")
@@ -1556,7 +763,6 @@ L19:
       getlocal1
       callpropvoid        Multiname("push", [PrivateNamespace("*", "com.company.net:ServerConnection#0"), PrivateNamespace("*", "com.company.net:ServerConnection#1"), PackageNamespace(""), PackageNamespace("com.company.net"), PackageInternalNs("com.company.net"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-T0"), StaticProtectedNs("_-T0"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
 
-L28:
       returnvoid
      end ; code
     end ; body
@@ -1574,22 +780,6 @@ L28:
      initscopedepth 6
      maxscopedepth 11
      code
-      pushfalse
-      pushtrue
-      setlocal            4
-
-      jump                L10
-
-      declocal_i          2
-      getlocal            4
-      kill                4
-      pop
-      setlocal3
-
-      popscope
-L10:
-      setlocal            5
-
       getlocal0
       pushscope
 
@@ -1600,173 +790,70 @@ L10:
       pushscope
 
       getscopeobject      1
-      getlocal            5
-      dup
-      iffalse             L24
-
-      pop
-      getlocal1
-      convert_b
-L24:
-      iftrue              L64
-
       pushbyte            0
       convert_u
       setslot             2
 
-      getlocal            4
-      iffalse             L63
-
       getscopeobject      1
-      getlocal            5
-      dup
-      iffalse             L37
-
-      pop
-      getlocal0
-      convert_b
-L37:
-      iftrue              L58
-
       pushnull
-      getlocal            4
-      dup
-      iftrue              L45
-
-      pop
-      getlocal2
-      convert_b
-L45:
-      iffalse             L59
-
       coerce              QName(PackageNamespace("com.company.net"), "_-098")
       setslot             3
 
-      getlocal            5
-      dup
-      iffalse             L54
-
-      pop
-      getlocal0
-      convert_b
-L54:
-      iftrue              L66
-
       getscopeobject      1
-      getlocal            5
-      iftrue              L64
-
-L58:
       pushnull
-L59:
       coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
       setslot             4
 
-      getlocal            4
-      iffalse             L66
-
-L63:
       getscopeobject      1
-L64:
       getlocal1
       setslot             1
 
-L66:
-      jump                L382
+      jump                L208
 
-L67:
+L22:
       label
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
       pushnull
       equals
-      getlocal            5
       dup
-      iffalse             L78
-
-      pop
-      getlocal0
-      convert_b
-L78:
-      iftrue              L93
-
-      dup
-      iftrue              L93
-
-      getlocal            5
-      dup
-      iffalse             L87
-
-      pop
-      getlocal3
-      convert_b
-L87:
-      iftrue              L93
+      iftrue              L34
 
       pop
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
       getproperty         QName(PackageNamespace(""), "connected")
       not
-L93:
-      iffalse             L97
+L34:
+      iffalse             L36
 
-      getlocal            4
-      iffalse             L286
+      jump                L210
 
-      jump                L384
-
-L97:
+L36:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-05")
-      getlocal            4
-      iffalse             L383
-
       pushbyte            255
-      getlocal            4
-      dup
-      iftrue              L108
-
-      pop
-      getlocal2
-      convert_b
-L108:
-      iffalse             L210
-
-      ifne                L166
+      ifne                L81
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
       getproperty         QName(PackageNamespace(""), "bytesAvailable")
       pushbyte            4
-      ifnlt               L123
+      ifnlt               L46
 
-      getlocal            4
-      dup
-      iftrue              L121
+      jump                L210
 
-      pop
-      getlocal0
-      convert_b
-L121:
-      iffalse             L174
-
-      jump                L384
-
-L123:
+L46:
       getlocal0
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
       callproperty        QName(PackageNamespace(""), "readInt"), 0
       initproperty        QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-05")
 
-      getlocal            5
-      iftrue              L235
+L51:
+      jump                L81
 
-L130:
-      jump                L166
-
-L131:
+L52:
       getlocal0
       pushscope
 
@@ -1795,26 +882,16 @@ L131:
       add
       callpropvoid        QName(PackageNamespace(""), "trace"), 1
 
-      getlocal            4
-      iffalse             L158
-
       findproperty        QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-05")
       pushbyte            255
       initproperty        QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-05")
 
-L158:
       kill                3
       popscope
-      getlocal            5
-      iftrue              L163
-
       kill                3
-L163:
-      jump                L384
+      jump                L210
 
-      popscope
-      kill                3
-L166:
+L81:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
       getproperty         QName(PackageNamespace(""), "bytesAvailable")
@@ -1822,12 +899,11 @@ L166:
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-05")
       pushbyte            4
       subtract
-      ifnlt               L175
+      ifnlt               L90
 
-L174:
-      jump                L384
+      jump                L210
 
-L175:
+L90:
       getscopeobject      1
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
@@ -1836,16 +912,6 @@ L175:
       setslot             2
 
       getscopeobject      1
-      jump                L189
-
-      nextname
-      getlocal3
-      declocal            3
-      setlocal3
-
-      subtract_i
-      inclocal            4
-L189:
       getlocal0
       getscopeobject      1
       getslot             2
@@ -1861,24 +927,10 @@ L189:
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-05")
-      getlocal            4
-      dup
-      iftrue              L208
-
-      pop
-      getlocal1
-      convert_b
-L208:
-      iffalse             L383
-
       pushbyte            5
-L210:
       subtract
       pushbyte            0
-      ifngt               L225
-
-      getlocal            4
-      iffalse             L258
+      ifngt               L124
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-AT")
@@ -1891,7 +943,7 @@ L210:
       subtract
       callpropvoid        QName(PackageNamespace(""), "readBytes"), 3
 
-L225:
+L124:
       getscopeobject      1
       getslot             4
       pushbyte            0
@@ -1899,86 +951,30 @@ L225:
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-0ER")
-      getlocal            5
-      iftrue              L237
-
       pushnull
-      ifeq                L258
+      ifeq                L141
 
-L235:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-0ER")
-L237:
       getscopeobject      1
       getslot             4
       callpropvoid        QName(Namespace("_-8r"), "decrypt"), 1
 
-      getlocal            4
-      dup
-      iftrue              L246
-
-      pop
-      getlocal3
-      convert_b
-L246:
-      iffalse             L299
-
       getscopeobject      1
-      getlocal            4
-      dup
-      iftrue              L254
-
-      pop
-      getlocal1
-      convert_b
-L254:
-      iffalse             L301
-
       getslot             4
       pushbyte            0
       setproperty         QName(PackageNamespace(""), "position")
 
-L258:
+L141:
       getlocal0
       pushbyte            255
       initproperty        QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-05")
 
       getscopeobject      1
-      getlocal            5
-      dup
-      iffalse             L268
-
-      pop
-      getlocal0
-      convert_b
-L268:
-      iftrue              L301
-
       getslot             3
-      getlocal            5
-      dup
-      iffalse             L276
-
-      pop
-      getlocal1
-      convert_b
-L276:
-      iftrue              L302
-
       pushnull
-      ifne                L300
+      ifne                L160
 
-      getlocal            5
-      dup
-      iffalse             L285
-
-      pop
-      getlocal3
-      convert_b
-L285:
-      iftrue              L382
-
-L286:
       findpropstrict      QName(PackageNamespace(""), "trace")
       pushstring          "Unknown message in protocol, bailing"
       callpropvoid        QName(PackageNamespace(""), "trace"), 1
@@ -1993,35 +989,19 @@ L286:
       constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
       callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
 
-      getlocal            5
-      iftrue              L312
+      jump                L210
 
-L299:
-      jump                L384
-
-L300:
+L160:
       getscopeobject      1
-L301:
       getslot             3
-L302:
       getscopeobject      1
       getslot             4
       callpropvoid        QName(PackageNamespace(""), "parseFromInput"), 1
 
-      getlocal            5
-      dup
-      iffalse             L311
+L165:
+      jump                L196
 
-      pop
-      getlocal0
-      convert_b
-L311:
-      iftrue              L378
-
-L312:
-      jump                L363
-
-L313:
+L166:
       getlocal0
       pushscope
 
@@ -2046,23 +1026,9 @@ L313:
       add
       callpropvoid        QName(PackageNamespace(""), "trace"), 1
 
-      getlocal            5
-      dup
-      iffalse             L337
-
-      pop
-      getlocal0
-      convert_b
-L337:
-      iftrue              L342
-
       findpropstrict      QName(PackageNamespace(""), "_-0FG")
       callpropvoid        QName(PackageNamespace(""), "_-0FG"), 0
 
-      getlocal            5
-      iftrue              L348
-
-L342:
       findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
       findpropstrict      QName(PackageNamespace("flash.events"), "Event")
       getlex              QName(PackageNamespace("flash.events"), "Event")
@@ -2070,27 +1036,12 @@ L342:
       constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
       callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
 
-L348:
       kill                3
       popscope
-      getlocal            4
-      iffalse             L353
-
       kill                3
-L353:
-      jump                L384
+      jump                L210
 
-      popscope
-      kill                3
-      jump                L363
-
-      getlocal1
-      not
-      increment_i
-      inclocal_i          4
-      getlocal1
-      getlocal0
-L363:
+L196:
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.net:ServerConnection#0"), "_-3I")
       getscopeobject      1
@@ -2100,32 +1051,20 @@ L363:
       getslot             3
       callpropvoid        Multiname("callback_", [PrivateNamespace("*", "com.company.net:ServerConnection#0"), PrivateNamespace("*", "com.company.net:ServerConnection#1"), PackageNamespace(""), PackageNamespace("com.company.net"), PackageInternalNs("com.company.net"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-T0"), StaticProtectedNs("_-T0"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
 
-      getlocal            4
-      dup
-      iftrue              L377
-
-      pop
-      getlocal1
-      convert_b
-L377:
-      iffalse             L384
-
-L378:
       getlocal0
       getscopeobject      1
       getslot             3
       callpropvoid        QName(PackageNamespace(""), "_-fj"), 1
 
-L382:
+L208:
       pushbyte            1
-L383:
-      iftrue              L67
+      iftrue              L22
 
-L384:
+L210:
       returnvoid
      end ; code
-     try from L123 to L130 target L131 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "error") end
-     try from L300 to L312 target L313 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+     try from L46 to L51 target L52 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "error") end
+     try from L160 to L165 target L166 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
      trait slot QName(PackageInternalNs("com.company.net"), "event") slotid 1 type QName(PackageNamespace("flash.events"), "ProgressEvent") end
      trait slot QName(PackageInternalNs("com.company.net"), "messageId") slotid 2 type QName(PackageNamespace(""), "uint") end
      trait slot QName(PackageInternalNs("com.company.net"), "message") slotid 3 type QName(PackageNamespace("com.company.net"), "_-098") end

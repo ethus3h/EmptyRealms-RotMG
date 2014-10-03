@@ -13,60 +13,16 @@ class
     initscopedepth 5
     maxscopedepth 6
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     lessthan
-     instanceof
-     getlocal2
-     newactivation
-     increment_i
-     convert_u
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
      pushscope
 
-     getlocal1
-     dup
-     iffalse             L20
-
-     pop
-     getlocal1
-     convert_b
-L20:
-     iftrue              L63
-
      getlocal0
-     jump                L29
-
-     convert_d
-     getglobalscope
-     astypelate
-     bitxor
-     subtract_i
-     convert_b
-L29:
      pushstring          "Apple"
      pushstring          "Tortilla"
      pushstring          "Chainsaw"
      pushstring          "Monkey"
      pushstring          "Flotilla"
      pushstring          "Zephyr"
-     jump                L42
-
-     divide
-     negate
-     modulo
-     greaterthan
-     istypelate
-     pushtrue
-L42:
      pushstring          "Ghost"
      pushstring          "Tupac"
      pushstring          "Alluvial"
@@ -82,21 +38,9 @@ L42:
      newarray            18
      initproperty        QName(PrivateNamespace("*", "_-zD:_-B9"), "_-06G")
 
-     getlocal1
-     dup
-     iffalse             L62
-
-     pop
-     getlocal1
-     convert_b
-L62:
-     iftrue              L65
-
-L63:
      getlocal0
      constructsuper      0
 
-L65:
      returnvoid
     end ; code
    end ; body
@@ -135,40 +79,11 @@ L65:
      initscopedepth 5
      maxscopedepth 6
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      greaterequals
-      setlocal2
-
-      newactivation
-      bitxor
-      not
-      setlocal3
-
-L10:
-      setlocal1
-
-      setlocal2
-
       getlocal0
       pushscope
 
-      getlocal1
-      dup
-      iffalse             L20
-
-      pop
-      getlocal1
-      convert_b
-L20:
-      iftrue              L23
-
       getlocal0
       callsupervoid       QName(PackageNamespace(""), "destroy"), 0
-L23:
       returnvoid
      end ; code
     end ; body

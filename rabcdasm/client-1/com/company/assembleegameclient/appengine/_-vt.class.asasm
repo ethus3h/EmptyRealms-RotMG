@@ -18,151 +18,60 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     setlocal            7
-
-     jump                L10
-
-     strictequals
-     setlocal            4
-
-     declocal            3
-     inclocal            4
-     getlocal            4
-     negate_i
-L10:
-     setlocal            8
-
      getlocal0
      pushscope
-
-     getlocal            8
-     iftrue              L17
 
      getlocal0
      constructsuper      0
 
-L17:
-     jump                L32
+     jump                L18
 
-L18:
+L5:
      label
      getlocal0
      findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-vt"), "_-07m")
      callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-vt"), "_-07m"), 0
      initproperty        QName(PackageNamespace(""), "_-5U")
 
-     jump                L93
+     jump                L33
 
-L24:
+L11:
      label
-L25:
+L12:
      label
      getlocal0
      findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-vt"), "_-zK")
      callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-vt"), "_-zK"), 0
      initproperty        QName(PackageNamespace(""), "_-5U")
 
-     jump                L93
+     jump                L33
 
-     jump                L93
-
-L32:
+L18:
      getlocal1
      setlocal            6
 
-     getlocal            8
-     iftrue              L69
-
      pushstring          "fame"
-     getlocal            8
-     iftrue              L67
-
      getlocal            6
-     getlocal            7
-     dup
-     iftrue              L53
-
-     pop
-     getlocal0
-     convert_b
-     jump                L53
-
-     pushtrue
-     pushundefined
-     declocal            5
-     astypelate
-     checkfilter
-     pushfalse
-L53:
-     iffalse             L68
-
-     ifstrictne          L66
-
-     getlocal            8
-     dup
-     iffalse             L61
-
-     pop
-     getlocal0
-     convert_b
-L61:
-     iftrue              L69
+     ifstrictne          L25
 
      pushbyte            0
-     getlocal            7
-     iffalse             L77
+     jump                L31
 
-     jump                L89
-
-L66:
+L25:
      pushstring          "news"
-L67:
      getlocal            6
-L68:
-     ifstrictne          L78
+     ifstrictne          L30
 
-L69:
      pushbyte            1
-     getlocal            7
-     dup
-     iftrue              L76
+     jump                L31
 
-     pop
-     getlocal2
-     convert_b
-L76:
-     iffalse             L89
-
-L77:
-     jump                L89
-
-L78:
-     jump                L81
-
+L30:
      pushbyte            2
-     jump                L89
-
-L81:
-     pushbyte            2
-     jump                L89
-
-     pushwith
-     greaterthan
-     setlocal            7
-
-     kill                3
-     astypelate
-     not
-L89:
+L31:
      kill                6
-     lookupswitch        L25, [L18, L24, L25]
+     lookupswitch        L12, [L5, L11, L12]
 
-     getlocal            8
-     iftrue              L112
-
-L93:
+L33:
      getlocal0
      getlocal2
      initproperty        QName(PackageNamespace(""), "_-Ok")
@@ -175,21 +84,10 @@ L93:
      getlocal            4
      initproperty        QName(PackageNamespace(""), "_-qh")
 
-     getlocal            7
-     dup
-     iftrue              L108
-
-     pop
-     getlocal1
-     convert_b
-L108:
-     iffalse             L112
-
      getlocal0
      getlocal            5
      initproperty        QName(PackageNamespace(""), "_-We")
 
-L112:
      returnvoid
     end ; code
    end ; body
@@ -229,15 +127,6 @@ L112:
      pushscope
 
      getlex              QName(PackageNamespace("com.company.util"), "AssetLibrary")
-     jump                L10
-
-     getlocal2
-     negate
-     pushwith
-     pushtrue
-     swap
-     equals
-L10:
      pushstring          "lofiInterface2"
      pushbyte            4
      callproperty        QName(PackageNamespace(""), "_-xK"), 2
@@ -270,15 +159,6 @@ L10:
      pushscope
 
      getlex              QName(PackageNamespace("com.company.util"), "AssetLibrary")
-     jump                L10
-
-     convert_o
-     increment
-     getlocal1
-     increment
-     coerce_s
-     decrement_i
-L10:
      pushstring          "lofiObj3"
      pushshort           224
      callproperty        QName(PackageNamespace(""), "_-xK"), 2

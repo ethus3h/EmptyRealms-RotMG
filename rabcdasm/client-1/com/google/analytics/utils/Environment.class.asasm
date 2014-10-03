@@ -374,14 +374,14 @@ L6:
       pushstring          "1"
       setlocal1
 
-      jump                L43
+      jump                L40
 
 L10:
       label
       pushstring          "2"
       setlocal1
 
-      jump                L43
+      jump                L40
 
 L14:
       label
@@ -390,7 +390,7 @@ L15:
       pushstring          "24"
       setlocal1
 
-      jump                L43
+      jump                L40
 
 L19:
       getlex              QName(PackageNamespace("flash.system"), "Capabilities")
@@ -402,7 +402,7 @@ L19:
       ifstrictne          L27
 
       pushbyte            0
-      jump                L41
+      jump                L38
 
 L27:
       pushstring          "gray"
@@ -410,7 +410,7 @@ L27:
       ifstrictne          L32
 
       pushbyte            1
-      jump                L41
+      jump                L38
 
 L32:
       pushstring          "color"
@@ -418,34 +418,28 @@ L32:
       ifstrictne          L37
 
       pushbyte            2
-      jump                L41
+      jump                L38
 
 L37:
-      jump                L40
-
       pushbyte            3
-      jump                L41
-
-L40:
-      pushbyte            3
-L41:
+L38:
       kill                3
       lookupswitch        L15, [L6, L10, L14, L15]
 
-L43:
+L40:
       getlex              QName(PrivateNamespace("*", "com.google.analytics.utils:Environment#0"), "_dom")
       getproperty         QName(PackageNamespace(""), "colorDepth")
       coerce_s
       setlocal2
 
       getlocal2
-      iffalse             L52
+      iffalse             L49
 
       getlocal2
       coerce_s
       setlocal1
 
-L52:
+L49:
       getlocal1
       returnvalue
      end ; code
@@ -480,7 +474,7 @@ L52:
 
       getlex              QName(PrivateNamespace("*", "com.google.analytics.utils:Environment#0"), "_url")
       pushstring          ""
-      ifeq                L78
+      ifeq                L75
 
       getlex              QName(PrivateNamespace("*", "com.google.analytics.utils:Environment#0"), "_url")
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
@@ -503,7 +497,7 @@ L26:
       coerce              QName(PackageNamespace("com.google.analytics.utils"), "Protocols")
       setlocal1
 
-      jump                L78
+      jump                L75
 
 L32:
       label
@@ -512,7 +506,7 @@ L32:
       coerce              QName(PackageNamespace("com.google.analytics.utils"), "Protocols")
       setlocal1
 
-      jump                L78
+      jump                L75
 
 L38:
       label
@@ -528,7 +522,7 @@ L38:
       setlocal1
 
 L48:
-      jump                L78
+      jump                L75
 
 L49:
       label
@@ -537,7 +531,7 @@ L49:
       getproperty         QName(PackageNamespace(""), "none")
       initproperty        QName(PrivateNamespace("*", "com.google.analytics.utils:Environment#0"), "_protocol")
 
-      jump                L78
+      jump                L75
 
 L55:
       getlocal            5
@@ -548,7 +542,7 @@ L55:
       ifstrictne          L62
 
       pushbyte            0
-      jump                L76
+      jump                L73
 
 L62:
       pushstring          "http:"
@@ -556,7 +550,7 @@ L62:
       ifstrictne          L67
 
       pushbyte            1
-      jump                L76
+      jump                L73
 
 L67:
       pushstring          "https"
@@ -564,21 +558,15 @@ L67:
       ifstrictne          L72
 
       pushbyte            2
-      jump                L76
+      jump                L73
 
 L72:
-      jump                L75
-
       pushbyte            3
-      jump                L76
-
-L75:
-      pushbyte            3
-L76:
+L73:
       kill                6
       lookupswitch        L49, [L26, L32, L38, L49]
 
-L78:
+L75:
       getlex              QName(PrivateNamespace("*", "com.google.analytics.utils:Environment#0"), "_dom")
       getproperty         QName(PackageNamespace(""), "protocol")
       coerce_s
@@ -596,7 +584,7 @@ L78:
       coerce_a
       convert_b
       dup
-      iffalse             L101
+      iffalse             L98
 
       pop
       getlocal2
@@ -605,15 +593,15 @@ L78:
       not
       coerce_a
       convert_b
-L101:
+L98:
       dup
-      iffalse             L106
+      iffalse             L103
 
       pop
       getlex              QName(PrivateNamespace("*", "com.google.analytics.utils:Environment#0"), "_debug")
       convert_b
-L106:
-      iffalse             L116
+L103:
+      iffalse             L113
 
       getlex              QName(PrivateNamespace("*", "com.google.analytics.utils:Environment#0"), "_debug")
       pushstring          "Protocol mismatch: SWF="
@@ -625,7 +613,7 @@ L106:
       add
       callpropvoid        QName(PackageNamespace(""), "warning"), 1
 
-L116:
+L113:
       findproperty        QName(PrivateNamespace("*", "com.google.analytics.utils:Environment#0"), "_protocol")
       getlocal1
       initproperty        QName(PrivateNamespace("*", "com.google.analytics.utils:Environment#0"), "_protocol")

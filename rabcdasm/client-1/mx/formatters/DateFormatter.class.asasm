@@ -443,7 +443,7 @@ L28:
      coerce_s
      setlocal1
 
-     jump                L482
+     jump                L479
 
 L64:
      label
@@ -467,7 +467,7 @@ L64:
 L80:
      iffalse             L82
 
-     jump                L482
+     jump                L479
 
 L82:
      getlocal            8
@@ -503,7 +503,7 @@ L103:
      coerce              QName(PackageNamespace(""), "Object")
      setlocal            9
 
-     jump                L482
+     jump                L479
 
 L108:
      pushstring          "a"
@@ -532,7 +532,7 @@ L117:
      pushstring          "Z"
      lessequals
 L129:
-     iffalse             L271
+     iffalse             L269
 
      getlocal            8
      coerce_s
@@ -601,7 +601,7 @@ L172:
      pushbyte            0
      setlocal            16
 
-     jump                L264
+     jump                L262
 
 L180:
      label
@@ -632,11 +632,11 @@ L180:
      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
      equals
 L205:
-     iffalse             L263
+     iffalse             L261
 
      getlocal            16
      pushbyte            13
-     ifne                L230
+     ifne                L229
 
      getlocal            5
      pushbyte            12
@@ -649,16 +649,14 @@ L205:
      pushbyte            1
      lessthan
 L218:
-     iffalse             L221
+     iffalse             L220
 
-     jump                L267
+     jump                L265
 
-     jump                L229
-
-L221:
+L220:
      getlocal            5
      pushbyte            12
-     ifnlt               L229
+     ifnlt               L228
 
      getlocal            5
      pushbyte            12
@@ -666,98 +664,96 @@ L221:
      convert_i
      setlocal            5
 
-L229:
-     jump                L262
+L228:
+     jump                L260
 
-L230:
+L229:
      getlocal            16
      pushbyte            12
-     ifne                L251
+     ifne                L249
 
      getlocal            5
      pushbyte            12
      greaterthan
      dup
-     iftrue              L242
+     iftrue              L241
 
      pop
      getlocal            5
      pushbyte            1
      lessthan
-L242:
-     iffalse             L245
+L241:
+     iffalse             L243
 
-     jump                L267
+     jump                L265
 
-     jump                L250
-
-L245:
+L243:
      getlocal            5
      pushbyte            12
-     ifne                L250
+     ifne                L248
 
      pushbyte            0
      setlocal            5
 
-L250:
-     jump                L262
+L248:
+     jump                L260
 
-L251:
+L249:
      getlocal            16
      pushbyte            12
-     ifnlt               L262
+     ifnlt               L260
 
      getlocal3
      pushbyte            0
-     ifnlt               L261
+     ifnlt               L259
 
      getlocal            16
      convert_i
      setlocal3
 
-     jump                L262
+     jump                L260
+
+L259:
+     jump                L265
+
+L260:
+     jump                L265
 
 L261:
-     jump                L267
-
-L262:
-     jump                L267
-
-L263:
      inclocal_i          16
-L264:
+L262:
      getlocal            16
      getlocal            15
      iflt                L180
 
-L267:
+L265:
      pushbyte            0
      coerce              QName(PackageNamespace(""), "Object")
      setlocal            9
 
-     jump                L482
+     jump                L479
 
-L271:
+L269:
      pushstring          "0"
      getlocal            8
      lessequals
      dup
-     iffalse             L280
+     iffalse             L278
 
      pop
      getlocal            8
      pushstring          "9"
      lessequals
-L280:
-     iffalse             L482
+L278:
+     iffalse             L479
 
      getlocal            8
      coerce_s
      setlocal            18
 
-     jump                L292
+     jump                L290
 
-L285:
+L283:
      label
      getlocal            18
      getlocal            8
@@ -766,7 +762,7 @@ L285:
      setlocal            18
 
      inclocal_i          10
-L292:
+L290:
      pushstring          "0"
      getlocal1
      getlocal            10
@@ -781,22 +777,22 @@ L292:
      kill                20
      lessequals
      dup
-     iffalse             L309
+     iffalse             L307
 
      pop
      getlocal            8
      pushstring          "9"
      lessequals
-L309:
+L307:
      dup
-     iffalse             L315
+     iffalse             L313
 
      pop
      getlocal            10
      getlocal            11
      lessthan
-L315:
-     iftrue              L285
+L313:
+     iftrue              L283
 
      findpropstrict      QName(PackageNamespace(""), "int")
      getlocal            18
@@ -806,228 +802,226 @@ L315:
      setlocal            19
 
      pushbyte            70
-     ifnge               L369
+     ifnge               L366
 
      getlocal2
      pushbyte            255
-     ifeq                L329
+     ifeq                L326
 
-     jump                L485
+     jump                L482
 
-     jump                L368
-
-L329:
+L326:
      getlocal            8
      pushstring          " "
      lessequals
      dup
-     iftrue              L338
+     iftrue              L335
 
      pop
      getlocal            8
      pushstring          ","
      equals
-L338:
+L335:
      dup
-     iftrue              L344
+     iftrue              L341
 
      pop
      getlocal            8
      pushstring          "."
      equals
-L344:
+L341:
      dup
-     iftrue              L350
+     iftrue              L347
 
      pop
      getlocal            8
      pushstring          "/"
      equals
-L350:
+L347:
      dup
-     iftrue              L356
+     iftrue              L353
 
      pop
      getlocal            8
      pushstring          "-"
      equals
-L356:
+L353:
      dup
-     iftrue              L362
+     iftrue              L359
 
      pop
      getlocal            10
      getlocal            11
      greaterequals
-L362:
-     iffalse             L367
+L359:
+     iffalse             L364
 
      getlocal            19
      convert_i
      setlocal2
 
-     jump                L368
+     jump                L365
 
-L367:
-     jump                L485
+L364:
+     jump                L482
 
-L368:
-     jump                L479
+L365:
+     jump                L476
 
-L369:
+L366:
      getlocal            8
      pushstring          "/"
      equals
      dup
-     iftrue              L378
+     iftrue              L375
 
      pop
      getlocal            8
      pushstring          "-"
      equals
-L378:
+L375:
      dup
-     iftrue              L384
+     iftrue              L381
 
      pop
      getlocal            8
      pushstring          "."
      equals
-L384:
-     iffalse             L402
+L381:
+     iffalse             L399
 
      getlocal3
      pushbyte            0
-     ifnlt               L393
+     ifnlt               L390
 
      getlocal            19
      decrement
      convert_i
      setlocal3
 
-     jump                L401
+     jump                L398
 
-L393:
+L390:
      getlocal            4
      pushbyte            0
-     ifnlt               L400
+     ifnlt               L397
 
      getlocal            19
      convert_i
      setlocal            4
 
-     jump                L401
+     jump                L398
 
-L400:
-     jump                L485
+L397:
+     jump                L482
 
-L401:
-     jump                L479
+L398:
+     jump                L476
 
-L402:
+L399:
      getlocal            8
      pushstring          ":"
-     ifne                L421
+     ifne                L418
 
      getlocal            5
      pushbyte            0
-     ifnlt               L412
+     ifnlt               L409
 
      getlocal            19
      convert_i
      setlocal            5
 
-     jump                L420
+     jump                L417
 
-L412:
+L409:
      getlocal            6
      pushbyte            0
-     ifnlt               L419
+     ifnlt               L416
 
      getlocal            19
      convert_i
      setlocal            6
 
-     jump                L420
+     jump                L417
 
-L419:
-     jump                L485
+L416:
+     jump                L482
 
-L420:
-     jump                L479
+L417:
+     jump                L476
 
-L421:
+L418:
      getlocal            5
      pushbyte            0
      greaterequals
      dup
-     iffalse             L430
+     iffalse             L427
 
      pop
      getlocal            6
      pushbyte            0
      lessthan
-L430:
-     iffalse             L435
+L427:
+     iffalse             L432
 
      getlocal            19
      convert_i
      setlocal            6
 
-     jump                L479
+     jump                L476
 
-L435:
+L432:
      getlocal            6
      pushbyte            0
      greaterequals
      dup
-     iffalse             L444
+     iffalse             L441
 
      pop
      getlocal            7
      pushbyte            0
      lessthan
-L444:
-     iffalse             L449
+L441:
+     iffalse             L446
 
      getlocal            19
      convert_i
      setlocal            7
 
-     jump                L479
+     jump                L476
 
-L449:
+L446:
      getlocal            4
      pushbyte            0
-     ifnlt               L456
+     ifnlt               L453
 
      getlocal            19
      convert_i
      setlocal            4
 
-     jump                L479
+     jump                L476
 
-L456:
+L453:
      getlocal2
      pushbyte            0
      lessthan
      dup
-     iffalse             L465
+     iffalse             L462
 
      pop
      getlocal3
      pushbyte            0
      greaterequals
-L465:
+L462:
      dup
-     iffalse             L471
+     iffalse             L468
 
      pop
      getlocal            4
      pushbyte            0
      greaterequals
-L471:
-     iffalse             L478
+L468:
+     iffalse             L475
 
      pushshort           2000
      getlocal            19
@@ -1035,87 +1029,87 @@ L471:
      convert_i
      setlocal2
 
-     jump                L479
+     jump                L476
 
-L478:
-     jump                L485
+L475:
+     jump                L482
 
-L479:
+L476:
      pushbyte            0
      coerce              QName(PackageNamespace(""), "Object")
      setlocal            9
 
-L482:
+L479:
      getlocal            10
      getlocal            11
      iflt                L64
 
-L485:
+L482:
      getlocal2
      pushbyte            0
      lessthan
      dup
-     iftrue              L494
+     iftrue              L491
 
      pop
      getlocal3
      pushbyte            0
      lessthan
-L494:
+L491:
      dup
-     iftrue              L500
+     iftrue              L497
 
      pop
      getlocal3
      pushbyte            11
      greaterthan
-L500:
+L497:
      dup
-     iftrue              L506
+     iftrue              L503
 
      pop
      getlocal            4
      pushbyte            1
      lessthan
-L506:
+L503:
      dup
-     iftrue              L512
+     iftrue              L509
 
      pop
      getlocal            4
      pushbyte            31
      greaterthan
-L512:
-     iffalse             L515
+L509:
+     iffalse             L512
 
      pushnull
      returnvalue
 
-L515:
+L512:
      getlocal            7
      pushbyte            0
-     ifnlt               L520
+     ifnlt               L517
 
      pushbyte            0
      setlocal            7
 
-L520:
+L517:
      getlocal            6
      pushbyte            0
-     ifnlt               L525
+     ifnlt               L522
 
      pushbyte            0
      setlocal            6
 
-L525:
+L522:
      getlocal            5
      pushbyte            0
-     ifnlt               L530
+     ifnlt               L527
 
      pushbyte            0
      setlocal            5
 
-L530:
+L527:
      findpropstrict      QName(PackageNamespace(""), "Date")
      getlocal2
      getlocal3
@@ -1133,7 +1127,7 @@ L530:
      equals
      not
      dup
-     iftrue              L553
+     iftrue              L550
 
      pop
      getlocal3
@@ -1141,13 +1135,13 @@ L530:
      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "getMonth"), 0
      equals
      not
-L553:
-     iffalse             L556
+L550:
+     iffalse             L553
 
      pushnull
      returnvalue
 
-L556:
+L553:
      getlocal            13
      returnvalue
     end ; code

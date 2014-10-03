@@ -14,41 +14,11 @@ class
     initscopedepth 9
     maxscopedepth 10
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     nextvalue
-     setlocal2
-
-     add_i
-     declocal            2
-     kill                2
-     equals
-L10:
-     setlocal2
-
-     setlocal3
-
      getlocal0
      pushscope
 
-     getlocal3
-     dup
-     iftrue              L20
-
-     pop
-     getlocal0
-     convert_b
-L20:
-     iffalse             L64
-
      getlocal0
      constructsuper      0
-
-     getlocal2
-     iftrue              L209
 
      getlocal0
      findpropstrict      QName(PackageNamespace("com.company.ui"), "SimpleText")
@@ -61,53 +31,22 @@ L20:
      constructprop       QName(PackageNamespace("com.company.ui"), "SimpleText"), 6
      initproperty        QName(PackageNamespace(""), "nameText_")
 
-     getlocal2
-     iftrue              L43
-
      getlocal0
      getproperty         QName(PackageNamespace(""), "nameText_")
-     getlocal3
-     iffalse             L52
-
      pushtrue
      callpropvoid        QName(PackageNamespace(""), "_-8Y"), 1
 
-L43:
      getlocal0
      getproperty         QName(PackageNamespace(""), "nameText_")
-     getlocal3
-     dup
-     iftrue              L51
-
-     pop
-     getlocal3
-     convert_b
-L51:
-     iffalse             L63
-
-L52:
      pushstring          "Name: "
      setproperty         QName(PackageNamespace(""), "text")
 
      getlocal0
      getproperty         QName(PackageNamespace(""), "nameText_")
-     getlocal3
-     dup
-     iftrue              L62
-
-     pop
-     getlocal2
-     convert_b
-L62:
-     iffalse             L66
-
-L63:
      callpropvoid        QName(PackageNamespace(""), "updateMetrics"), 0
 
-L64:
      getlocal0
      getproperty         QName(PackageNamespace(""), "nameText_")
-L66:
      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
      pushbyte            0
      dup
@@ -115,16 +54,6 @@ L66:
      constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 3
      newarray            1
      setproperty         QName(PackageNamespace(""), "filters")
-
-     getlocal3
-     dup
-     iftrue              L79
-
-     pop
-     getlocal2
-     convert_b
-L79:
-     iffalse             L211
 
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
@@ -144,140 +73,43 @@ L79:
 
      getlocal0
      getproperty         QName(PackageNamespace(""), "inputText_")
-     jump                L103
-
-     lessequals
-     pushtrue
-     bitnot
-     setlocal2
-
-     convert_s
-     kill                2
-L103:
-     getlocal2
-     dup
-     iffalse             L109
-
-     pop
-     getlocal3
-     convert_b
-L109:
-     iftrue              L170
-
      pushbyte            80
-     getlocal3
-     dup
-     iftrue              L117
-
-     pop
-     getlocal1
-     convert_b
-L117:
-     iffalse             L132
-
      setproperty         QName(PackageNamespace(""), "x")
 
      getlocal0
      getproperty         QName(PackageNamespace(""), "inputText_")
-     getlocal3
-     iffalse             L170
-
      pushfalse
      setproperty         QName(PackageNamespace(""), "border")
 
-     getlocal2
-     iftrue              L172
-
      getlocal0
      getproperty         QName(PackageNamespace(""), "inputText_")
-     getlocal2
-     iftrue              L149
-
      pushbyte            32
-L132:
      setproperty         QName(PackageNamespace(""), "maxChars")
 
-     getlocal2
-     dup
-     iffalse             L139
-
-     pop
-     getlocal0
-     convert_b
-L139:
-     iftrue              L213
-
      getlocal0
      getproperty         QName(PackageNamespace(""), "inputText_")
-     getlocal2
-     dup
-     iffalse             L148
-
-     pop
-     getlocal1
-     convert_b
-L148:
-     iftrue              L170
-
-L149:
      pushstring          "a-zA-Z0-9 "
      setproperty         QName(PackageNamespace(""), "restrict")
 
      getlocal0
      getproperty         QName(PackageNamespace(""), "inputText_")
-     getlocal2
-     dup
-     iffalse             L159
-
-     pop
-     getlocal2
-     convert_b
-L159:
-     iftrue              L170
-
      callpropvoid        QName(PackageNamespace(""), "updateMetrics"), 0
-
-     getlocal3
-     dup
-     iftrue              L167
-
-     pop
-     getlocal3
-     convert_b
-L167:
-     iffalse             L213
 
      getlocal0
      getproperty         QName(PackageNamespace(""), "inputText_")
-L170:
      getlocal1
      setproperty         QName(PackageNamespace(""), "text")
 
-L172:
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
      getproperty         QName(PackageNamespace(""), "inputText_")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
-
-     getlocal3
-     iffalse             L203
 
      getlex              QName(PackageNamespace(""), "graphics")
      pushbyte            2
      pushint             4539717
      pushbyte            1
      pushfalse
-     jump                L190
-
-     inclocal_i          2
-     setlocal2
-
-     declocal            2
-     checkfilter
-     inclocal            2
-     pushscope
-
-L190:
      getlex              QName(PackageNamespace("flash.display"), "LineScaleMode")
      getproperty         QName(PackageNamespace(""), "NORMAL")
      getlex              QName(PackageNamespace("flash.display"), "CapsStyle")
@@ -286,15 +118,11 @@ L190:
      getproperty         QName(PackageNamespace(""), "ROUND")
      callpropvoid        QName(PackageNamespace(""), "lineStyle"), 7
 
-     getlocal3
-     iffalse             L209
-
      getlex              QName(PackageNamespace(""), "graphics")
      pushint             3355443
      pushbyte            1
      callpropvoid        QName(PackageNamespace(""), "beginFill"), 2
 
-L203:
      getlex              QName(PackageNamespace(""), "graphics")
      pushbyte            78
      pushbyte            254
@@ -302,15 +130,12 @@ L203:
      pushbyte            30
      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
 
-L209:
      getlex              QName(PackageNamespace(""), "graphics")
      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
 
-L211:
      getlex              QName(PackageNamespace(""), "graphics")
      callpropvoid        QName(PackageNamespace(""), "lineStyle"), 0
 
-L213:
      returnvoid
     end ; code
    end ; body
@@ -332,15 +157,6 @@ L213:
       pushscope
 
       getlocal0
-      jump                L10
-
-      bitand
-      convert_b
-      lessthan
-      greaterequals
-      typeof
-      decrement
-L10:
       getproperty         QName(PackageNamespace(""), "inputText_")
       getproperty         QName(PackageNamespace(""), "text")
       returnvalue
@@ -357,33 +173,13 @@ L10:
    initscopedepth 8
    maxscopedepth 9
    code
-    pushfalse
-    pushtrue
-    setlocal1
-
-    jump                L10
-
-    nextname
-    lshift
-    coerce_a
-    setlocal2
-
-    coerce_a
-    typeof
-L10:
-    setlocal2
-
     getlocal0
     pushscope
-
-    getlocal2
-    iftrue              L18
 
     findproperty        QName(PackageNamespace(""), "HEIGHT")
     pushbyte            88
     initproperty        QName(PackageNamespace(""), "HEIGHT")
 
-L18:
     returnvoid
    end ; code
   end ; body

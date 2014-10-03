@@ -14,41 +14,13 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     declocal_i          2
-     inclocal            2
-     setlocal2
-
-     pushfalse
-     bitnot
-     kill                2
-L10:
-     setlocal2
-
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal3
-     dup
-     iftrue              L20
-
-     pop
-     getlocal2
-     convert_b
-L20:
-     iffalse             L24
 
      getlocal0
      getlocal1
      constructsuper      1
 
-L24:
      returnvoid
     end ; code
    end ; body
@@ -65,21 +37,6 @@ L24:
      initscopedepth 6
      maxscopedepth 7
      code
-      pushfalse
-      pushtrue
-      setlocal            5
-
-      jump                L10
-
-      strictequals
-      declocal_i          5
-      getlocal3
-      urshift
-      inclocal_i          4
-      nextvalue
-L10:
-      setlocal            6
-
       getlocal0
       pushscope
 
@@ -98,24 +55,6 @@ L10:
       coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
       setlocal            4
 
-      getlocal            5
-      dup
-      iftrue              L38
-
-      pop
-      getlocal3
-      convert_b
-      jump                L38
-
-      inclocal            3
-      inclocal_i          4
-      declocal            5
-      getglobalscope
-      swap
-      getlocal3
-L38:
-      iffalse             L62
-
       getlocal1
       getlocal            4
       pushbyte            0
@@ -126,42 +65,12 @@ L38:
       multiply
       callpropvoid        QName(Namespace("flash.utils:IDataInput"), "readBytes"), 3
 
-      getlocal            5
-      dup
-      iftrue              L61
-
-      pop
-      jump                L59
-
-      declocal_i          5
-      dup
-      getlocal            5
-      negate
-      inclocal            5
-      not
-L59:
-      getlocal0
-      convert_b
-L61:
-      iffalse             L82
-
-L62:
       getlocal0
       findpropstrict      QName(PackageNamespace("flash.display"), "BitmapData")
       getlocal2
       getlocal3
       constructprop       QName(PackageNamespace("flash.display"), "BitmapData"), 2
       initproperty        QName(PackageNamespace(""), "bitmapData_")
-
-      getlocal            6
-      dup
-      iffalse             L74
-
-      pop
-      getlocal3
-      convert_b
-L74:
-      iftrue              L82
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "bitmapData_")
@@ -171,7 +80,6 @@ L74:
       getlocal            4
       callpropvoid        QName(PackageNamespace(""), "setPixels"), 2
 
-L82:
       returnvoid
      end ; code
     end ; body
@@ -191,15 +99,6 @@ L82:
       pushscope
 
       findpropstrict      QName(ProtectedNamespace("_-1E"), "formatToString")
-      jump                L10
-
-      lessequals
-      instanceof
-      add
-      bitor
-      coerce_s
-      newactivation
-L10:
       pushstring          "PIC"
       pushstring          "bitmapData_"
       callproperty        QName(ProtectedNamespace("_-1E"), "formatToString"), 2

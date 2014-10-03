@@ -17,73 +17,25 @@ class
     initscopedepth 5
     maxscopedepth 6
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     inclocal_i          4
-     inclocal_i          2
-     inclocal_i          3
-     subtract
-     modulo
-     equals
-L10:
-     setlocal            5
-
-     setlocal            6
-
      getlocal0
      pushscope
 
-     getlocal            6
-     iffalse             L33
-
-     jump                L23
-
-     setlocal            4
-
-     negate
-     declocal            2
-     multiply
-     getlocal3
-     inclocal_i          2
-L23:
      getlocal0
      getlocal1
      constructsuper      1
-
-     getlocal            5
-     iftrue              L43
 
      getlocal0
      getlocal2
      initproperty        QName(PackageNamespace(""), "_-0O")
 
-     getlocal            6
-     iffalse             L43
-
-L33:
      getlocal0
      getlocal3
      initproperty        QName(PackageNamespace(""), "_-KL")
 
-     getlocal            6
-     dup
-     iftrue              L42
-
-     pop
-     getlocal2
-     convert_b
-L42:
-     iffalse             L46
-
-L43:
      getlocal0
      getlocal            4
      initproperty        QName(PackageNamespace(""), "mapping")
 
-L46:
      returnvoid
     end ; code
    end ; body
@@ -105,18 +57,6 @@ L46:
       pushscope
 
       findpropstrict      QName(PackageNamespace("_-Z4"), "_-09D")
-      jump                L10
-
-      astypelate
-      getlocal2
-      setlocal2
-
-      pushscope
-
-      dxnslate
-      setlocal2
-
-L10:
       getlex              QName(PackageNamespace(""), "type")
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-0O")
@@ -139,40 +79,12 @@ L10:
    initscopedepth 4
    maxscopedepth 5
    code
-    pushfalse
-    pushtrue
-    setlocal1
-
-    jump                L10
-
-    istypelate
-    typeof
-    getglobalscope
-    setlocal2
-
-    hasnext
-    pushfalse
-L10:
-    setlocal2
-
     getlocal0
     pushscope
 
     findproperty        QName(PackageNamespace(""), "_-dZ")
     pushstring          "preMappingCreate"
     initproperty        QName(PackageNamespace(""), "_-dZ")
-
-    getlocal1
-    jump                L24
-
-    checkfilter
-    nextname
-    instanceof
-    modulo
-    newactivation
-    istypelate
-L24:
-    iffalse             L31
 
     findproperty        QName(PackageNamespace(""), "_-Su")
     pushstring          "postMappingCreate"
@@ -182,7 +94,6 @@ L24:
     pushstring          "preMappingChange"
     initproperty        QName(PackageNamespace(""), "_-b-")
 
-L31:
     findproperty        QName(PackageNamespace(""), "_-yL")
     pushstring          "postMappingChange"
     initproperty        QName(PackageNamespace(""), "_-yL")
@@ -191,21 +102,10 @@ L31:
     pushstring          "postMappingRemove"
     initproperty        QName(PackageNamespace(""), "_-Ke")
 
-    getlocal1
-    dup
-    iftrue              L43
-
-    pop
-    getlocal1
-    convert_b
-L43:
-    iffalse             L47
-
     findproperty        QName(PackageNamespace(""), "_-PL")
     pushstring          "mappingOverride"
     initproperty        QName(PackageNamespace(""), "_-PL")
 
-L47:
     returnvoid
    end ; code
   end ; body

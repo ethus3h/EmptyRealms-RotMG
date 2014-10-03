@@ -16,28 +16,8 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     setlocal2
-
-     jump                L10
-
-     pushscope
-
-     kill                2
-     kill                2
-     setlocal2
-
-     not
-     increment_i
-L10:
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal2
-     iffalse             L22
 
      getlocal0
      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
@@ -47,7 +27,6 @@ L10:
      getlocal1
      constructsuper      4
 
-L22:
      returnvoid
     end ; code
    end ; body
@@ -62,33 +41,8 @@ L22:
      initscopedepth 6
      maxscopedepth 7
      code
-      pushfalse
-      pushtrue
-      setlocal3
-
-      jump                L10
-
-      dup
-      convert_d
-      decrement
-      declocal_i          3
-      inclocal_i          3
-      pushfalse
-L10:
-      setlocal            4
-
       getlocal0
       pushscope
-
-      getlocal            4
-      dup
-      iffalse             L19
-
-      pop
-      getlocal0
-      convert_b
-L19:
-      iftrue              L26
 
       findpropstrict      QName(PackageNamespace(""), "addEventListener")
       getlex              QName(PackageNamespace("_-zo"), "_-8C")
@@ -97,7 +51,6 @@ L19:
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-2n"), "_-DD")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-L26:
       getlex              QName(PackageNamespace("_-qN"), "Account")
       callproperty        QName(PackageNamespace(""), "get"), 0
       callproperty        QName(PackageNamespace(""), "credentials"), 0
@@ -110,16 +63,6 @@ L26:
       callproperty        QName(PackageNamespace(""), "gameNetworkUserId"), 0
       pushstring          "game_net"
       getlex              QName(PackageNamespace("_-qN"), "Account")
-      jump                L44
-
-      setlocal2
-
-      kill                2
-      inclocal_i          2
-      kill                3
-      subtract_i
-      declocal            2
-L44:
       callproperty        QName(PackageNamespace(""), "get"), 0
       callproperty        QName(PackageNamespace(""), "gameNetwork"), 0
       pushstring          "play_platform"
@@ -133,61 +76,20 @@ L44:
       coerce              QName(PackageNamespace(""), "Object")
       setlocal2
 
-      getlocal            4
-      dup
-      iffalse             L62
-
-      pop
-      getlocal2
-      convert_b
-L62:
-      iftrue              L81
-
       getlex              QName(PackageNamespace("com.company.util"), "_-HU")
       getlocal2
-      jump                L72
-
-      popscope
-      convert_b
-      multiply_i
-      getlocal3
-      inclocal            3
-      getlocal2
-L72:
       getlocal1
       callpropvoid        QName(PackageNamespace(""), "_-t2"), 2
 
-      getlocal            4
-      dup
-      iffalse             L80
-
-      pop
-      getlocal3
-      convert_b
-L80:
-      iftrue              L95
-
-L81:
       findpropstrict      QName(PackageNamespace(""), "sendRequest")
       pushstring          "list"
       getlocal2
       callpropvoid        QName(PackageNamespace(""), "sendRequest"), 2
 
-      getlocal            4
-      dup
-      iffalse             L91
-
-      pop
-      getlocal1
-      convert_b
-L91:
-      iftrue              L95
-
       getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
       pushfalse
       setproperty         QName(PackageNamespace(""), "_-hk")
 
-L95:
       returnvoid
      end ; code
     end ; body
@@ -204,45 +106,16 @@ L95:
      initscopedepth 6
      maxscopedepth 7
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      declocal_i          2
-      inclocal_i          3
-      kill                2
-      inclocal            2
-      declocal_i          3
-      pushwith
-L10:
-      setlocal3
-
-      setlocal            4
-
       getlocal0
       pushscope
 
-      getlocal3
-      iftrue              L29
-
       findpropstrict      QName(PackageNamespace(""), "addEventListener")
       getlex              QName(PackageNamespace("_-zo"), "_-8C")
-      jump                L25
-
-      decrement_i
-      increment_i
-      declocal_i          2
-      kill                3
-      coerce_a
-      newactivation
-L25:
       getproperty         QName(PackageNamespace(""), "GENERIC_DATA")
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-2n"), "_-QM")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-L29:
       pushstring          "charId"
       getlocal1
       pushstring          "reason"
@@ -251,9 +124,6 @@ L29:
       coerce              QName(PackageNamespace(""), "Object")
       setlocal2
 
-      getlocal3
-      iftrue              L50
-
       getlex              QName(PackageNamespace("com.company.util"), "_-HU")
       getlocal2
       getlex              QName(PackageNamespace("_-qN"), "Account")
@@ -261,15 +131,11 @@ L29:
       callproperty        QName(PackageNamespace(""), "credentials"), 0
       callpropvoid        QName(PackageNamespace(""), "_-t2"), 2
 
-      getlocal3
-      iftrue              L50
-
       findpropstrict      QName(PackageNamespace(""), "sendRequest")
       pushstring          "delete"
       getlocal2
       callpropvoid        QName(PackageNamespace(""), "sendRequest"), 2
 
-L50:
       returnvoid
      end ; code
     end ; body
@@ -286,34 +152,8 @@ L50:
      initscopedepth 6
      maxscopedepth 7
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      declocal_i          2
-      pop
-      increment
-      inclocal_i          2
-      declocal_i          2
-      setlocal2
-
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      dup
-      iftrue              L19
-
-      pop
-      getlocal2
-      convert_b
-L19:
-      iffalse             L27
 
       findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
       findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0KR")
@@ -323,7 +163,6 @@ L19:
       constructprop       QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0KR"), 1
       callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
 
-L27:
       returnvoid
      end ; code
     end ; body
@@ -340,35 +179,8 @@ L27:
      initscopedepth 6
      maxscopedepth 7
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      inclocal            2
-      pop
-      inclocal_i          2
-      declocal_i          2
-      setlocal2
-
-      setlocal2
-
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      dup
-      iffalse             L19
-
-      pop
-      getlocal1
-      convert_b
-L19:
-      iftrue              L26
 
       findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
       findpropstrict      QName(PackageNamespace("flash.events"), "Event")
@@ -377,7 +189,6 @@ L19:
       constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
       callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
 
-L26:
       returnvoid
      end ; code
     end ; body

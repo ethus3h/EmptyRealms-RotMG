@@ -14,33 +14,13 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     bitor
-     inclocal            2
-     declocal            2
-     getglobalscope
-     add_i
-     inclocal            2
-L10:
-     setlocal2
-
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal2
-     iftrue              L19
 
      getlocal0
      getlocal1
      constructsuper      1
 
-L19:
      returnvoid
     end ; code
    end ; body
@@ -60,63 +40,24 @@ L19:
      initscopedepth 6
      maxscopedepth 7
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      pop
-      hasnext
-      increment_i
-      add
-      typeof
-      inclocal            2
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
-      jump                L20
-
-      greaterthan
-      getlocal2
-      setlocal2
-
-      subtract
-      setlocal2
-
-      coerce_s
-L20:
       pushscope
-
-      getlocal2
-      iftrue              L29
 
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
       initproperty        QName(PackageNamespace(""), "accountId_")
 
-      getlocal2
-      iftrue              L35
-
-L29:
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
       initproperty        QName(PackageNamespace(""), "charId_")
 
-      getlocal2
-      iftrue              L39
-
-L35:
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readUTF"), 0
       initproperty        QName(PackageNamespace(""), "killedBy_")
 
-L39:
       returnvoid
      end ; code
     end ; body
@@ -136,15 +77,6 @@ L39:
       pushscope
 
       findpropstrict      QName(ProtectedNamespace("_-1E"), "formatToString")
-      jump                L10
-
-      popscope
-      urshift
-      astypelate
-      checkfilter
-      typeof
-      checkfilter
-L10:
       pushstring          "DEATH"
       pushstring          "accountId_"
       pushstring          "charId_"

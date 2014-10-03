@@ -14,28 +14,8 @@ class
     initscopedepth 10
     maxscopedepth 11
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     kill                3
-     setlocal            5
-
-     declocal            4
-     getlocal2
-     declocal_i          6
-     increment_i
-L10:
-     setlocal            6
-
-     setlocal            7
-
      getlocal0
      pushscope
-
-     getlocal            7
-     iffalse             L32
 
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "int")
@@ -44,21 +24,10 @@ L10:
      callproperty        QName(PackageNamespace(""), "int"), 1
      constructsuper      1
 
-     getlocal            6
-     dup
-     iffalse             L28
-
-     pop
-     getlocal2
-     convert_b
-L28:
-     iftrue              L32
-
      getlocal0
      getlocal1
      initproperty        QName(PackageNamespace(""), "_-Ji")
 
-L32:
      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
      getlex              QName(PackageNamespace(""), "type_")
      pushbyte            100
@@ -77,41 +46,15 @@ L32:
      getlex              QName(PackageNamespace(""), "WIDTH")
      pushbyte            4
      subtract
-     getlocal            6
-     iftrue              L67
-
      getlex              QName(PackageNamespace(""), "Math")
      getlocal3
      getproperty         QName(PackageNamespace(""), "width")
      getlocal3
      getproperty         QName(PackageNamespace(""), "height")
-     jump                L62
-
-     kill                5
-     inclocal            4
-     kill                6
-     getlocal            5
-     inclocal            6
-     pushnan
-L62:
      callproperty        QName(PackageNamespace(""), "max"), 2
      divide
-     getlocal            7
-     iffalse             L67
-
      convert_d
-L67:
      setlocal            4
-
-     getlocal            6
-     dup
-     iffalse             L74
-
-     pop
-     getlocal2
-     convert_b
-L74:
-     iftrue              L91
 
      getlocal3
      getlocal3
@@ -125,17 +68,6 @@ L74:
      kill                5
      setproperty         QName(PackageNamespace(""), "scaleX")
 
-     getlocal            6
-     dup
-     iffalse             L90
-
-     pop
-     getlocal2
-     convert_b
-L90:
-     iftrue              L127
-
-L91:
      getlocal3
      getlex              QName(PackageNamespace(""), "WIDTH")
      pushbyte            2
@@ -145,26 +77,7 @@ L91:
      pushbyte            2
      divide
      subtract
-     jump                L107
-
-     declocal_i          4
-     getlocal            6
-     kill                2
-     inclocal            3
-     kill                5
-     inclocal            4
-L107:
      setproperty         QName(PackageNamespace(""), "x")
-
-     getlocal            6
-     dup
-     iffalse             L114
-
-     pop
-     getlocal2
-     convert_b
-L114:
-     iftrue              L130
 
      getlocal3
      getlex              QName(PackageNamespace(""), "HEIGHT")
@@ -177,15 +90,10 @@ L114:
      subtract
      setproperty         QName(PackageNamespace(""), "y")
 
-     getlocal            7
-     iffalse             L130
-
-L127:
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal3
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
-L130:
      returnvoid
     end ; code
    end ; body
@@ -205,15 +113,6 @@ L130:
       pushscope
 
       findpropstrict      QName(PackageNamespace("_-Dd"), "_-9o")
-      jump                L10
-
-      pushfalse
-      getlocal0
-      decrement_i
-      pushundefined
-      greaterequals
-      swap
-L10:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-Ji")
       constructprop       QName(PackageNamespace("_-Dd"), "_-9o"), 1

@@ -13,31 +13,12 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     setlocal1
-
-     jump                L10
-
-     getglobalscope
-     add
-     convert_u
-     pushtrue
-     negate_i
-     istypelate
-L10:
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal1
-     iffalse             L17
 
      getlocal0
      constructsuper      0
 
-L17:
      returnvoid
     end ; code
    end ; body
@@ -74,50 +55,19 @@ L17:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      inclocal_i          2
-      setlocal2
-
-      lessthan
-      setlocal2
-
-      equals
-      kill                2
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      dup
-      iftrue              L19
-
-      pop
-      getlocal3
-      convert_b
-L19:
-      iffalse             L26
 
       getlocal1
       getlocal0
       getproperty         QName(ProtectedNamespace("_-FT"), "_-0Jy")
-      ifstricteq          L29
+      ifstricteq          L9
 
-      getlocal2
-      iffalse             L29
-
-L26:
       getlocal0
       getlocal1
       initproperty        QName(ProtectedNamespace("_-FT"), "_-0Jy")
 
-L29:
+L9:
       returnvoid
      end ; code
     end ; body
@@ -133,106 +83,35 @@ L29:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      equals
-      getglobalscope
-      inclocal_i          2
-      getlocal2
-      nextname
-      declocal            2
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
 
-      getlocal2
-      dup
-      iffalse             L20
-
-      pop
-      getlocal1
-      convert_b
-L20:
-      iftrue              L49
-
       getlocal0
       getproperty         QName(ProtectedNamespace("_-FT"), "_-0Jy")
-      getlocal2
-      dup
-      jump                L32
+      iftrue              L7
 
-      setlocal2
-
-      declocal            2
-      pushfalse
-      declocal            2
-      declocal_i          2
-      convert_s
-L32:
-      iffalse             L36
-
-      pop
-      getlocal0
-      convert_b
-L36:
-      iftrue              L51
-
-      iftrue              L49
-
-      getlocal2
-      iftrue              L49
-
-      jump                L47
-
-      setlocal2
-
-      pushfalse
-      kill                2
-      pushfalse
-      hasnext
-      pushundefined
-L47:
       pushnull
       returnvalue
 
-L49:
+L7:
       getlocal0
       getproperty         QName(ProtectedNamespace("_-FT"), "_-0Jy")
-L51:
       coerce              QName(PackageNamespace("_-Ex"), "_-KT")
       setlocal1
 
-      jump                L66
+      jump                L17
 
-L54:
+L12:
       label
       getlocal1
       getproperty         QName(Namespace("_-0-d"), "next")
-      getlocal3
-      dup
-      iftrue              L63
-
-      pop
-      getlocal1
-      convert_b
-L63:
-      iffalse             L68
-
       coerce              QName(PackageNamespace("_-Ex"), "_-KT")
       setlocal1
 
-L66:
+L17:
       getlocal1
       getproperty         QName(Namespace("_-0-d"), "next")
-L68:
-      iftrue              L54
+      iftrue              L12
 
       getlocal1
       returnvalue
@@ -251,21 +130,6 @@ L68:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal3
-
-      jump                L10
-
-      declocal_i          2
-      decrement_i
-      inclocal            2
-      decrement_i
-      strictequals
-      getlocal2
-L10:
-      setlocal            4
-
       getlocal0
       pushscope
 
@@ -274,104 +138,40 @@ L10:
       coerce              QName(PackageNamespace("_-Ex"), "_-KT")
       setlocal2
 
-      getlocal3
-      dup
-      iftrue              L23
-
-      pop
-      getlocal3
-      convert_b
-L23:
-      iffalse             L45
-
       getlocal2
       getlocal1
-      ifne                L45
-
-      getlocal3
-      dup
-      iftrue              L40
-
-      pop
-      getlocal0
-      jump                L39
-
-      inclocal            3
-      negate_i
-      declocal            3
-      equals
-      dup
-      kill                2
-L39:
-      convert_b
-L40:
-      iffalse             L45
+      ifne                L13
 
       getlocal0
       getlocal1
       getproperty         QName(Namespace("_-0-d"), "next")
       initproperty        QName(ProtectedNamespace("_-FT"), "_-0Jy")
 
-L45:
-      jump                L82
+L13:
+      jump                L27
 
-L46:
+L14:
       label
       getlocal2
       getproperty         QName(Namespace("_-0-d"), "next")
-      getlocal3
-      dup
-      iftrue              L62
-
-      pop
-      getlocal2
-      jump                L61
-
-      inclocal_i          2
-      setlocal2
-
       getlocal1
-      pushnan
-      declocal            3
-      newactivation
-L61:
-      convert_b
-L62:
-      iffalse             L80
-
-      getlocal1
-      ifne                L78
-
-      getlocal            4
-      dup
-      iffalse             L71
-
-      pop
-      getlocal2
-      convert_b
-L71:
-      iftrue              L78
+      ifne                L23
 
       getlocal2
       getlocal1
       getproperty         QName(Namespace("_-0-d"), "next")
       setproperty         QName(Namespace("_-0-d"), "next")
 
-      getlocal            4
-      iftrue              L84
-
-L78:
+L23:
       getlocal2
       getproperty         QName(Namespace("_-0-d"), "next")
-L80:
       coerce              QName(PackageNamespace("_-Ex"), "_-KT")
       setlocal2
 
-L82:
+L27:
       getlocal2
-      iftrue              L46
+      iftrue              L14
 
-L84:
       returnvoid
      end ; code
     end ; body

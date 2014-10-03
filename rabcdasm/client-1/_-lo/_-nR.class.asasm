@@ -19,49 +19,21 @@ class
     initscopedepth 5
     maxscopedepth 6
     code
-     pushfalse
-     pushtrue
-     setlocal            4
-
-     jump                L10
-
-     declocal_i          3
-     strictequals
-     setlocal            4
-
-     setlocal            4
-
-     kill                3
-     inclocal_i          2
-L10:
-     setlocal            5
-
      getlocal0
      pushscope
-
-     getlocal            5
-     iftrue              L25
 
      getlocal0
      getlocal1
      constructsuper      1
 
-     getlocal            4
-     iffalse             L25
-
      getlocal0
      getlocal2
      initproperty        QName(PrivateNamespace("*", "_-lo:_-nR"), "_-0Jw")
 
-     getlocal            5
-     iftrue              L28
-
-L25:
      getlocal0
      getlocal3
      initproperty        QName(PrivateNamespace("*", "_-lo:_-nR"), "_handler")
 
-L28:
      returnvoid
     end ; code
    end ; body
@@ -122,16 +94,6 @@ L28:
       pushscope
 
       findpropstrict      QName(PackageNamespace("_-lo"), "_-nR")
-      jump                L10
-
-      pushwith
-      convert_d
-      add_i
-      increment_i
-      setlocal2
-
-      newactivation
-L10:
       getlex              QName(PackageNamespace(""), "type")
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-lo:_-nR"), "_-0Jw")
@@ -152,73 +114,25 @@ L10:
    initscopedepth 4
    maxscopedepth 5
    code
-    pushfalse
-    pushtrue
-    swap
-    jump                L10
-
-    getlocal1
-    bitxor
-    greaterequals
-    bitnot
-    subtract
-    pushfalse
-L10:
-    setlocal1
-
-    setlocal2
-
     getlocal0
     pushscope
 
-    getlocal1
-    iftrue              L28
-
-    jump                L23
-
-    not
-    convert_s
-    convert_s
-    setlocal2
-
-    increment_i
-    pop
-L23:
     findproperty        QName(PackageNamespace(""), "_-0Kh")
     pushstring          "containerAdd"
     initproperty        QName(PackageNamespace(""), "_-0Kh")
 
-    getlocal1
-    iftrue              L43
-
-L28:
     findproperty        QName(PackageNamespace(""), "_-mh")
     pushstring          "containerRemove"
     initproperty        QName(PackageNamespace(""), "_-mh")
-
-    getlocal2
-    dup
-    iftrue              L37
-
-    pop
-    getlocal1
-    convert_b
-L37:
-    iffalse             L46
 
     findproperty        QName(PackageNamespace(""), "_-MU")
     pushstring          "handlerAdd"
     initproperty        QName(PackageNamespace(""), "_-MU")
 
-    getlocal2
-    iffalse             L46
-
-L43:
     findproperty        QName(PackageNamespace(""), "_-TA")
     pushstring          "handlerRemove"
     initproperty        QName(PackageNamespace(""), "_-TA")
 
-L46:
     returnvoid
    end ; code
   end ; body

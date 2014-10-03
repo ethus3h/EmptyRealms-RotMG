@@ -14,40 +14,13 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     increment
-     getlocal2
-     declocal_i          2
-     nextvalue
-     typeof
-     declocal_i          2
-L10:
-     setlocal2
-
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal3
-     dup
-     iftrue              L20
-
-     pop
-     getlocal3
-     convert_b
-L20:
-     iffalse             L24
 
      getlocal0
      getlocal1
      constructsuper      1
 
-L24:
      returnvoid
     end ; code
    end ; body
@@ -64,42 +37,14 @@ L24:
      initscopedepth 6
      maxscopedepth 7
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      not
-      setlocal2
-
-      pushundefined
-      getlocal2
-      convert_s
-      pushwith
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      dup
-      iftrue              L20
-
-      pop
-      getlocal0
-      convert_b
-L20:
-      iffalse             L25
 
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readUTF"), 0
       initproperty        QName(PackageNamespace(""), "name_")
 
-L25:
       returnvoid
      end ; code
     end ; body
@@ -119,16 +64,6 @@ L25:
       pushscope
 
       findpropstrict      QName(ProtectedNamespace("_-1E"), "formatToString")
-      jump                L10
-
-      pushnan
-      setlocal3
-
-      pushundefined
-      astypelate
-      add_i
-      getlocal3
-L10:
       pushstring          "TRADEREQUESTED"
       pushstring          "name_"
       callproperty        QName(ProtectedNamespace("_-1E"), "formatToString"), 2

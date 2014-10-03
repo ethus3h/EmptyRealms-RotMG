@@ -13,68 +13,22 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     lessthan
-     divide
-     setlocal3
-
-     typeof
-     coerce_s
-     increment
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal1
-     iftrue              L59
 
      getlocal0
      getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageNamespace("__AS3__.vec"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#1"), PackageInternalNs("com.company.assembleegameclient.engine3d"), ProtectedNamespace("_-ME"), StaticProtectedNs("_-ME")])
      getlex              QName(PackageNamespace(""), "Number")
      applytype           1
-     jump                L27
-
-     pushnull
-     negate_i
-     convert_b
-     add
-     pushscope
-
-     decrement_i
-L27:
      construct           0
      initproperty        QName(PackageNamespace(""), "vL_")
 
-     getlocal2
-     iffalse             L61
-
-     jump                L38
-
-     modulo
-     istypelate
-     nextvalue
-     negate
-     coerce_s
-     setlocal3
-
-L38:
      getlocal0
      getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageNamespace("__AS3__.vec"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#1"), PackageInternalNs("com.company.assembleegameclient.engine3d"), ProtectedNamespace("_-ME"), StaticProtectedNs("_-ME")])
      getlex              QName(PackageNamespace(""), "Number")
      applytype           1
      construct           0
      initproperty        QName(PackageNamespace(""), "uvts_")
-
-     getlocal1
-     iftrue              L59
 
      getlocal0
      getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageNamespace("__AS3__.vec"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#1"), PackageInternalNs("com.company.assembleegameclient.engine3d"), ProtectedNamespace("_-ME"), StaticProtectedNs("_-ME")])
@@ -83,21 +37,9 @@ L38:
      construct           0
      initproperty        QName(PackageNamespace(""), "faces_")
 
-     getlocal2
-     dup
-     iftrue              L58
-
-     pop
-     getlocal1
-     convert_b
-L58:
-     iffalse             L61
-
-L59:
      getlocal0
      constructsuper      0
 
-L61:
      returnvoid
     end ; code
    end ; body
@@ -115,230 +57,67 @@ L61:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      getlocal2
-      coerce_s
-      add
-      kill                2
-      add
-      setlocal2
-
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
 
       pushstring          ""
       setlocal1
 
-      getlocal2
-      iftrue              L81
-
       getlocal1
       pushstring          "vL("
-      getlocal3
-      dup
-      iftrue              L26
-
-      pop
-      getlocal1
-      convert_b
-L26:
-      iffalse             L90
-
       getlocal0
       getproperty         QName(PackageNamespace(""), "vL_")
       getproperty         QName(PackageNamespace(""), "length")
       add
       pushstring          "): "
-      getlocal2
-      iftrue              L117
-
       add
-      getlocal2
-      dup
-      iffalse             L41
-
-      pop
-      getlocal3
-      convert_b
-L41:
-      iftrue              L145
-
       getlocal0
       getproperty         QName(PackageNamespace(""), "vL_")
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 0
       add
       pushstring          "\n"
-      getlocal2
-      dup
-      iffalse             L53
-
-      pop
-      getlocal2
-      convert_b
-L53:
-      iftrue              L97
-
       add
-      getlocal2
-      iftrue              L90
-
       add
-      getlocal2
-      dup
-      iffalse             L64
-
-      pop
-      getlocal3
-      convert_b
-L64:
-      iftrue              L121
-
       coerce_s
       setlocal1
 
-      getlocal3
-      dup
-      iftrue              L80
-
-      jump                L77
-
-      hasnext
-      convert_d
-      inclocal            2
-      declocal            2
-      popscope
-      decrement
-L77:
-      pop
-      getlocal2
-      convert_b
-L80:
-      iffalse             L160
-
-L81:
       getlocal1
       pushstring          "uvts("
-      getlocal3
-      dup
-      iftrue              L89
-
-      pop
-      getlocal1
-      convert_b
-L89:
-      iffalse             L127
-
-L90:
       getlocal0
       getproperty         QName(PackageNamespace(""), "uvts_")
       getproperty         QName(PackageNamespace(""), "length")
       add
       pushstring          "): "
-      getlocal2
-      iftrue              L117
-
-L97:
       add
-      getlocal3
-      dup
-      iftrue              L104
-
-      pop
-      getlocal3
-      convert_b
-L104:
-      iffalse             L109
-
       getlocal0
       getproperty         QName(PackageNamespace(""), "uvts_")
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 0
       add
-L109:
       pushstring          "\n"
-      getlocal3
-      dup
-      iftrue              L116
-
-      pop
-      getlocal1
-      convert_b
-L116:
-      iffalse             L148
-
-L117:
       add
       add
-      getlocal3
-      iffalse             L156
-
-L121:
       coerce_s
       setlocal1
-
-      getlocal3
-      iffalse             L160
 
       getlocal1
       pushstring          "faces_("
-L127:
       getlocal0
       getproperty         QName(PackageNamespace(""), "faces_")
       getproperty         QName(PackageNamespace(""), "length")
       add
-      jump                L138
-
-      nextname
-      kill                2
-      getglobalscope
-      swap
-      declocal            2
-      equals
-L138:
-      getlocal2
-      dup
-      iffalse             L144
-
-      pop
-      getlocal2
-      convert_b
-L144:
-      iftrue              L149
-
-L145:
       pushstring          "): "
-      getlocal2
-      iftrue              L154
-
-L148:
       add
-L149:
       getlocal0
       getproperty         QName(PackageNamespace(""), "faces_")
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 0
       add
       pushstring          "\n"
-L154:
       add
       add
-L156:
       coerce_s
-      getlocal3
-      iffalse             L161
-
       setlocal1
 
-L160:
       getlocal1
-L161:
       returnvalue
      end ; code
     end ; body
@@ -354,33 +133,8 @@ L161:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal1
-
-      jump                L10
-
-      bitnot
-      pushundefined
-      dxnslate
-      subtract
-      subtract
-      bitor
-L10:
-      setlocal2
-
       getlocal0
       pushscope
-
-      getlocal2
-      dup
-      iffalse             L19
-
-      pop
-      getlocal2
-      convert_b
-L19:
-      iftrue              L25
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "faces_")
@@ -388,7 +142,6 @@ L19:
       getproperty         QName(PackageNamespace(""), "_-NQ")
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "sort"), 1
 
-L25:
       returnvoid
      end ; code
     end ; body
@@ -403,35 +156,14 @@ L25:
    initscopedepth 3
    maxscopedepth 4
    code
-    pushfalse
-    pushtrue
-    setlocal1
-
-    jump                L10
-
-    increment
-    bitand
-    subtract_i
-    pushscope
-
-    multiply_i
-    setlocal3
-
-L10:
-    setlocal2
-
     getlocal0
     pushscope
-
-    getlocal2
-    iftrue              L19
 
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#0"), "_-kH")
     findpropstrict      QName(PackageNamespace(""), "Object")
     constructprop       QName(PackageNamespace(""), "Object"), 0
     setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#0"), "_-kH")
 
-L19:
     returnvoid
    end ; code
   end ; body
@@ -449,21 +181,6 @@ L19:
     initscopedepth 3
     maxscopedepth 4
     code
-     pushfalse
-     pushtrue
-     setlocal            27
-
-     jump                L10
-
-     greaterthan
-     kill                11
-     add_i
-     subtract_i
-     modulo
-     getlocal            16
-L10:
-     setlocal            28
-
      getlocal0
      pushscope
 
@@ -556,64 +273,36 @@ L10:
      coerce_a
      setlocal            24
 
-     jump                L408
+     jump                L212
 
-L81:
+L70:
      label
      getlocal            24
      getlocal            23
      nextvalue
      coerce_s
-     getlocal            27
-     dup
-     iftrue              L92
-
-     pop
-     getlocal1
-     convert_b
-L92:
-     iffalse             L119
-
      dup
      setlocal            11
-
-     getlocal            27
-     iffalse             L113
 
      pushbyte            0
      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
      pushstring          "#"
      equals
-     getlocal            28
-     iftrue              L116
-
      dup
-     iftrue              L116
-
-     getlocal            27
-     iffalse             L116
+     iftrue              L88
 
      pop
-     getlocal            27
-     iffalse             L117
-
      getlocal            11
-     getlocal            27
-     iffalse             L119
-
-L113:
      getproperty         QName(PackageNamespace(""), "length")
      pushbyte            0
      equals
-L116:
-     iffalse             L118
+L88:
+     iffalse             L90
 
-L117:
-     jump                L408
+     jump                L212
 
-L118:
+L90:
      getlocal            11
-L119:
      getlex              QName(PackageNamespace(""), "RegExp")
      pushstring          "\\s+"
      construct           1
@@ -624,171 +313,86 @@ L119:
 
      getproperty         QName(PackageNamespace(""), "length")
      pushbyte            0
-     ifne                L130
+     ifne                L102
 
-     jump                L408
+     jump                L212
 
-L130:
+L102:
      getlocal            15
      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "shift"), 0
      coerce_s
-     getlocal            27
-     dup
-     iftrue              L139
-
-     pop
-     getlocal2
-     convert_b
-L139:
-     iffalse             L293
-
      dup
      setlocal            16
 
-     getlocal            27
-     iffalse             L293
-
      getproperty         QName(PackageNamespace(""), "length")
      pushbyte            0
-     ifne                L155
+     ifne                L111
 
-     getlocal            27
-     dup
-     iftrue              L153
+     jump                L212
 
-     pop
-     getlocal2
-     convert_b
-L153:
-     iffalse             L279
+L111:
+     jump                L187
 
-     jump                L408
-
-L155:
-     jump                L312
-
-L156:
+L112:
      label
      getlocal            15
      getproperty         QName(PackageNamespace(""), "length")
      pushbyte            3
-     ifeq                L162
+     ifeq                L118
 
      returnvoid
 
-L162:
+L118:
      getlocal            4
      getlocal            15
      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-     getlocal            27
-     dup
-     iftrue              L171
+     jump                L212
 
-     pop
-     getlocal3
-     convert_b
-L171:
-     iffalse             L191
-
-     jump                L408
-
-L173:
+L122:
      label
      getlocal            15
      getproperty         QName(PackageNamespace(""), "length")
      pushbyte            2
-     ifeq                L186
+     ifeq                L128
 
      returnvoid
 
-     getlocal            28
-     dup
-     iffalse             L185
-
-     pop
-     getlocal3
-     convert_b
-L185:
-     iftrue              L197
-
-L186:
+L128:
      getlocal            5
      getlocal            15
      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-     getlocal            27
-     iffalse             L282
+     jump                L212
 
-L191:
-     jump                L408
-
-L192:
+L132:
      label
      getlocal            15
      getproperty         QName(PackageNamespace(""), "length")
      pushbyte            3
-     ifnlt               L200
+     ifnlt               L138
 
-L197:
      returnvoid
 
-     getlocal            28
-     iftrue              L408
-
-L200:
+L138:
      getlocal            8
      getlocal            15
      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
-
-     getlocal            27
-     dup
-     iftrue              L209
-
-     pop
-     getlocal0
-     convert_b
-L209:
-     iffalse             L213
 
      getlocal            10
      getlocal            9
      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-L213:
      pushbyte            0
-     getlocal            27
-     iffalse             L407
-
      setlocal            25
-
-     getlocal            27
-     dup
-     iftrue              L223
-
-     pop
-     getlocal1
-     convert_b
-L223:
-     iffalse             L272
 
      getlocal            15
      coerce_a
      setlocal            26
 
-     getlocal            27
-     dup
-     iftrue              L233
+     jump                L168
 
-     pop
-     getlocal3
-     convert_b
-L233:
-     iffalse             L269
-
-     jump                L269
-
-L235:
+L150:
      label
      getlocal            26
      getlocal            25
@@ -796,23 +400,10 @@ L235:
      coerce_s
      setlocal            17
 
-     getlocal            27
-     iffalse             L266
-
      getlocal            7
      getlocal            17
      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "hasOwnProperty"), 1
-     iftrue              L269
-
-     getlocal            27
-     dup
-     iftrue              L253
-
-     pop
-     getlocal3
-     convert_b
-L253:
-     iffalse             L266
+     iftrue              L168
 
      getlocal            7
      getlocal            17
@@ -820,248 +411,84 @@ L253:
      getproperty         QName(PackageNamespace(""), "length")
      setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#1"), PackageInternalNs("com.company.assembleegameclient.engine3d"), ProtectedNamespace("_-ME"), StaticProtectedNs("_-ME")])
 
-     getlocal            28
-     dup
-     iffalse             L265
-
-     pop
-     getlocal1
-     convert_b
-L265:
-     iftrue              L269
-
-L266:
      getlocal            6
      getlocal            17
      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-L269:
+L168:
      hasnext2            26, 25
-     iftrue              L235
+     iftrue              L150
 
      kill                26
-L272:
      kill                25
-     jump                L408
+     jump                L212
 
-L274:
+L173:
      label
      getlocal            15
      getproperty         QName(PackageNamespace(""), "length")
      pushbyte            1
-     ifeq                L282
+     ifeq                L179
 
-L279:
      returnvoid
 
-     getlocal            28
-     iftrue              L408
-
-L282:
+L179:
      getlocal            15
      pushbyte            0
      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#1"), PackageInternalNs("com.company.assembleegameclient.engine3d"), ProtectedNamespace("_-ME"), StaticProtectedNs("_-ME")])
      coerce_s
-     getlocal            27
-     dup
-     iftrue              L292
-
-     pop
-     getlocal2
-     convert_b
-L292:
-     iffalse             L313
-
-L293:
      setlocal            9
 
-     getlocal            28
-     dup
-     iffalse             L307
+     jump                L212
 
-     pop
-     jump                L305
-
-     greaterthan
-     convert_s
-     declocal            16
-     setlocal2
-
-     declocal            23
-     setlocal2
-
-L305:
-     getlocal0
-     convert_b
-L307:
-     iftrue              L408
-
-     jump                L408
-
-L309:
+L185:
      label
-     jump                L408
+     jump                L212
 
-     jump                L408
-
-L312:
+L187:
      getlocal            16
-L313:
      setlocal            25
 
-     getlocal            27
-     iffalse             L363
-
      pushstring          "v"
-     getlocal            28
-     iftrue              L396
-
      getlocal            25
-     getlocal            28
-     dup
-     iffalse             L326
-
-     pop
-     getlocal3
-     convert_b
-L326:
-     iftrue              L355
-
-     ifstrictne          L344
-
-     getlocal            27
-     dup
-     iftrue              L334
-
-     pop
-     getlocal1
-     convert_b
-L334:
-     iffalse             L398
+     ifstrictne          L194
 
      pushbyte            0
-     getlocal            28
-     dup
-     iffalse             L342
+     jump                L210
 
-     pop
-     getlocal2
-     convert_b
-L342:
-     iftrue              L401
-
-     jump                L406
-
-L344:
+L194:
      pushstring          "vt"
-     getlocal            27
-     dup
-     iftrue              L351
-
-     pop
-     getlocal3
-     convert_b
-L351:
-     iffalse             L380
-
      getlocal            25
-     getlocal            27
-     iffalse             L383
+     ifstrictne          L199
 
-L355:
-     ifstrictne          L372
-
-     getlocal            27
-     dup
-     iftrue              L362
-
-     pop
-     getlocal3
-     convert_b
-L362:
-     iffalse             L398
-
-L363:
      pushbyte            1
-     getlocal            28
-     dup
-     iffalse             L370
+     jump                L210
 
-     pop
-     getlocal2
-     convert_b
-L370:
-     iftrue              L406
-
-     jump                L406
-
-L372:
+L199:
      pushstring          "f"
-     getlocal            28
-     dup
-     iffalse             L379
-
-     pop
-     getlocal1
-     convert_b
-L379:
-     iftrue              L396
-
-L380:
      getlocal            25
-     getlocal            28
-     iftrue              L397
-
-L383:
-     ifstrictne          L395
-
-     getlocal            27
-     iffalse             L398
+     ifstrictne          L204
 
      pushbyte            2
-     getlocal            27
-     dup
-     iftrue              L393
+     jump                L210
 
-     pop
-     getlocal1
-     convert_b
-L393:
-     iffalse             L406
-
-     jump                L406
-
-L395:
+L204:
      pushstring          "usemtl"
-L396:
      getlocal            25
-L397:
-     ifstrictne          L402
+     ifstrictne          L209
 
-L398:
      pushbyte            3
-     getlocal            28
-     iftrue              L406
+     jump                L210
 
-L401:
-     jump                L406
-
-L402:
-     jump                L405
-
+L209:
      pushbyte            4
-     jump                L406
-
-L405:
-     pushbyte            4
-L406:
+L210:
      kill                25
-L407:
-     lookupswitch        L309, [L156, L173, L192, L274, L309]
+     lookupswitch        L185, [L112, L122, L132, L173, L185]
 
-L408:
+L212:
      hasnext2            24, 23
-     iftrue              L81
+     iftrue              L70
 
      kill                24
      kill                23
@@ -1070,37 +497,24 @@ L408:
      coerce              QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "_-B5")
      setlocal            12
 
-     getlocal            27
-     iffalse             L512
-
      pushbyte            0
-     getlocal            27
-     iffalse             L599
-
      setlocal            23
-
-     getlocal            27
-     iffalse             L504
 
      getlocal            6
      coerce_a
      setlocal            24
 
-     jump                L501
+     jump                L286
 
-L428:
+L226:
      label
      getlocal            24
      getlocal            23
      nextvalue
      coerce_s
-     getlocal            28
-     iftrue              L437
-
      dup
      setlocal            13
 
-L437:
      pushstring          "/"
      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
      coerce              QName(PackageNamespace(""), "Array")
@@ -1123,23 +537,9 @@ L437:
      getproperty         QName(PackageNamespace(""), "length")
      pushbyte            1
      greaterthan
-     getlocal            28
-     iftrue              L468
-
      dup
-     iffalse             L475
+     iffalse             L262
 
-     getlocal            27
-     dup
-     iftrue              L467
-
-     pop
-     getlocal1
-     convert_b
-L467:
-     iffalse             L475
-
-L468:
      pop
      getlocal            18
      pushbyte            1
@@ -1147,8 +547,8 @@ L468:
      getproperty         Multiname("length", [PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#1"), PackageInternalNs("com.company.assembleegameclient.engine3d"), ProtectedNamespace("_-ME"), StaticProtectedNs("_-ME")])
      pushbyte            0
      greaterthan
-L475:
-     iffalse             L495
+L262:
+     iffalse             L280
 
      getlex              QName(PackageNamespace("com.company.util"), "ConversionUtil")
      getlocal            5
@@ -1163,17 +563,14 @@ L475:
      getproperty         QName(PackageNamespace(""), "uvts_")
      callpropvoid        QName(PackageNamespace(""), "_-gM"), 2
 
-     getlocal            27
-     iffalse             L501
-
      getlocal            12
      getproperty         QName(PackageNamespace(""), "uvts_")
      pushdouble          0
      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-     jump                L501
+     jump                L286
 
-L495:
+L280:
      getlocal            12
      getproperty         QName(PackageNamespace(""), "uvts_")
      pushdouble          0
@@ -1181,36 +578,18 @@ L495:
      pushdouble          0
      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 3
 
-L501:
+L286:
      hasnext2            24, 23
-     iftrue              L428
+     iftrue              L226
 
      kill                24
-L504:
      kill                23
-     getlocal            28
-     dup
-     iffalse             L511
-
-     pop
-     getlocal1
-     convert_b
-L511:
-     iftrue              L613
-
-L512:
      pushbyte            0
-     getlocal            28
-     iftrue              L599
-
      setlocal            14
 
-     getlocal            27
-     iffalse             L617
+     jump                L347
 
-     jump                L598
-
-L519:
+L293:
      label
      getlocal            8
      getlocal            14
@@ -1218,23 +597,12 @@ L519:
      coerce              QName(PackageNamespace(""), "Array")
      setlocal            19
 
-     getlocal            27
-     dup
-     iftrue              L531
-
-     pop
-     getlocal0
-     convert_b
-L531:
-     iffalse             L537
-
      getlocal            10
      getlocal            14
      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#1"), PackageInternalNs("com.company.assembleegameclient.engine3d"), ProtectedNamespace("_-ME"), StaticProtectedNs("_-ME")])
      coerce_s
      setlocal            20
 
-L537:
      getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageNamespace("__AS3__.vec"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#1"), PackageInternalNs("com.company.assembleegameclient.engine3d"), ProtectedNamespace("_-ME"), StaticProtectedNs("_-ME")])
      getlex              QName(PackageNamespace(""), "int")
      applytype           1
@@ -1242,25 +610,12 @@ L537:
      coerce              TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "int")>)
      setlocal            21
 
-     getlocal            27
-     dup
-     iftrue              L549
-
-     pop
-     getlocal2
-     convert_b
-L549:
-     iffalse             L566
-
      pushbyte            0
-     getlocal            27
-     iffalse             L567
-
      setlocal            22
 
-     jump                L566
+     jump                L322
 
-L555:
+L313:
      label
      getlocal            21
      getlocal            7
@@ -1271,17 +626,12 @@ L555:
      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
      inclocal_i          22
-     getlocal            28
-     iftrue              L570
-
-L566:
+L322:
      getlocal            22
-L567:
      getlocal            19
      getproperty         QName(PackageNamespace(""), "length")
-     iflt                L555
+     iflt                L313
 
-L570:
      getlocal            12
      getproperty         QName(PackageNamespace(""), "faces_")
      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "_-0E6")
@@ -1291,7 +641,7 @@ L570:
      pushnull
      equals
      dup
-     iftrue              L595
+     iftrue              L344
 
      pop
      getlocal            20
@@ -1300,53 +650,26 @@ L570:
      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
      pushstring          "Solid"
      equals
-     jump                L594
-
-     pushscope
-
-     instanceof
-     setlocal            22
-
-     kill                9
-     rshift
-     getlocal0
-L594:
      not
-L595:
+L344:
      constructprop       QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "_-0E6"), 3
      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
      inclocal_i          14
-L598:
+L347:
      getlocal            14
-L599:
      getlocal            8
      getproperty         QName(PackageNamespace(""), "length")
-     iflt                L519
-
-     getlocal            27
-     dup
-     iftrue              L608
-
-     pop
-     getlocal0
-     convert_b
-L608:
-     iffalse             L617
+     iflt                L293
 
      getlocal            12
      callpropvoid        QName(PackageNamespace(""), "_-fU"), 0
 
-     getlocal            28
-     iftrue              L617
-
-L613:
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#0"), "_-kH")
      getlocal1
      getlocal            12
      setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#1"), PackageInternalNs("com.company.assembleegameclient.engine3d"), ProtectedNamespace("_-ME"), StaticProtectedNs("_-ME")])
 
-L617:
      returnvoid
     end ; code
    end ; body
@@ -1367,15 +690,6 @@ L617:
      pushscope
 
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#0"), "_-kH")
-     jump                L10
-
-     greaterthan
-     lessthan
-     getlocal3
-     convert_u
-     add
-     multiply
-L10:
      getlocal1
      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#1"), PackageInternalNs("com.company.assembleegameclient.engine3d"), ProtectedNamespace("_-ME"), StaticProtectedNs("_-ME")])
      returnvalue
@@ -1394,69 +708,23 @@ L10:
     initscopedepth 3
     maxscopedepth 4
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     inclocal_i          2
-     kill                2
-     lessequals
-     kill                2
-     pushnull
-     pushwith
-L10:
-     setlocal3
-
-     setlocal            4
-
      getlocal0
      pushscope
 
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#0"), "_-kH")
      getlocal1
      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-B5#1"), PackageInternalNs("com.company.assembleegameclient.engine3d"), ProtectedNamespace("_-ME"), StaticProtectedNs("_-ME")])
-     jump                L24
-
-     kill                2
-     urshift
-     coerce_a
-     inclocal_i          3
-     setlocal3
-
-     inclocal_i          2
-L24:
      coerce              QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "_-B5")
      setlocal2
 
-     getlocal            4
-     dup
-     iftrue              L32
-
-     pop
-     getlocal3
-     convert_b
-L32:
-     iffalse             L45
-
      getlocal2
      pushnull
-     ifne                L45
-
-     getlocal            4
-     dup
-     iftrue              L42
-
-     pop
-     getlocal1
-     convert_b
-L42:
-     iffalse             L45
+     ifne                L12
 
      pushnull
      returnvalue
 
-L45:
+L12:
      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "_-uZ")
      getlocal2
      constructprop       QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "_-uZ"), 1

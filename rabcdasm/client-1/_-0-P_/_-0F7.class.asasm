@@ -14,32 +14,12 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     getlocal3
-     lessthan
-     kill                5
-     astypelate
-     pushundefined
-     setlocal3
-
-L10:
-     setlocal            5
-
-     setlocal            6
-
      getlocal0
      pushscope
 
      pushnull
      coerce              QName(PackageNamespace(""), "XML")
      setlocal2
-
-     getlocal            6
-     iffalse             L34
 
      getlocal0
      getlex              Multiname("Vector", [PrivateNamespace("*", "_-0-P:_-0F7/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "_-0-P:_-0F7/iinit#1"), PackageNamespace("_-0-P"), PackageInternalNs("_-0-P"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-cx"), StaticProtectedNs("_-cx"), PackageNamespace("__AS3__.vec")])
@@ -48,23 +28,9 @@ L10:
      construct           0
      initproperty        QName(PackageNamespace(""), "_-20")
 
-     getlocal            6
-     jump                L33
-
-     inclocal            5
-     getlocal            4
-     negate
-     not
-     convert_d
-     bitnot
-L33:
-     iffalse             L36
-
-L34:
      getlocal0
      constructsuper      0
 
-L36:
      pushbyte            0
      setlocal3
 
@@ -73,33 +39,15 @@ L36:
      coerce_a
      setlocal            4
 
-     jump                L69
+     jump                L32
 
-     jump                L50
-
-     increment_i
-     getlocal            4
-     inclocal_i          2
-     multiply
-     declocal            4
-     declocal_i          4
-L50:
+L20:
      label
      getlocal            4
      getlocal3
      nextvalue
      coerce              QName(PackageNamespace(""), "XML")
      setlocal2
-
-     getlocal            5
-     dup
-     iffalse             L62
-
-     pop
-     getlocal1
-     convert_b
-L62:
-     iftrue              L69
 
      getlocal0
      getproperty         QName(PackageNamespace(""), "_-20")
@@ -108,9 +56,9 @@ L62:
      constructprop       QName(PackageNamespace("_-0-P"), "_-3Y"), 1
      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-L69:
+L32:
      hasnext2            4, 3
-     iftrue              L50
+     iftrue              L20
 
      kill                4
      kill                3

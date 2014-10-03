@@ -16,23 +16,6 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     declocal            4
-     negate
-     declocal_i          2
-     inclocal            3
-     declocal            2
-     setlocal2
-
-L10:
-     setlocal            5
-
-     setlocal            6
-
      getlocal0
      pushscope
 
@@ -46,16 +29,6 @@ L10:
      applytype           1
      construct           0
      initproperty        QName(PackageNamespace(""), "faces_")
-
-     getlocal            5
-     dup
-     iffalse             L29
-
-     pop
-     getlocal0
-     convert_b
-L29:
-     iftrue              L56
 
      getlocal0
      getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-uZ#0"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-uZ#1"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Xj"), StaticProtectedNs("_-Xj"), PackageNamespace("__AS3__.vec")])
@@ -79,19 +52,14 @@ L29:
      getlocal0
      constructsuper      0
 
-     getlocal            5
-     iftrue              L53
-
      getlocal1
      pushnull
-     ifeq                L117
+     ifeq                L75
 
-L53:
      getlocal0
      getlocal1
      initproperty        QName(PackageNamespace(""), "_-00n")
 
-L56:
      getlocal0
      getlocal0
      getproperty         QName(PackageNamespace(""), "_-00n")
@@ -102,15 +70,6 @@ L56:
      getlocal0
      getproperty         QName(PackageNamespace(""), "_-00n")
      getproperty         QName(PackageNamespace(""), "uvts_")
-     jump                L72
-
-     getlocal            5
-     inclocal            3
-     negate
-     inclocal            3
-     kill                2
-     negate_i
-L72:
      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 0
      initproperty        QName(PackageNamespace(""), "uvts_")
 
@@ -123,25 +82,15 @@ L72:
      coerce_a
      setlocal            4
 
-     jump                L105
+     jump                L70
 
-L82:
+L54:
      label
      getlocal            4
      getlocal3
      nextvalue
      coerce              QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "_-0E6")
      setlocal2
-
-     getlocal            5
-     dup
-     iffalse             L94
-
-     pop
-     getlocal3
-     convert_b
-L94:
-     iftrue              L105
 
      getlocal0
      getproperty         QName(PackageNamespace(""), "faces_")
@@ -154,54 +103,22 @@ L94:
      constructprop       QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "ObjectFace3D"), 3
      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-L105:
+L70:
      hasnext2            4, 3
-     iftrue              L82
+     iftrue              L54
 
      kill                4
      kill                3
-     getlocal            6
-     dup
-     iftrue              L115
+     jump                L87
 
-     pop
-     getlocal0
-     convert_b
-L115:
-     iffalse             L137
-
-     jump                L145
-
-L117:
+L75:
      getlocal0
      getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-uZ#0"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-uZ#1"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Xj"), StaticProtectedNs("_-Xj"), PackageNamespace("__AS3__.vec")])
      getlex              QName(PackageNamespace(""), "Number")
      applytype           1
-     jump                L128
-
-     declocal            5
-     increment
-     setlocal3
-
-     pushscope
-
-     pushundefined
-     inclocal_i          4
-L128:
      construct           0
      initproperty        QName(PackageNamespace(""), "vL_")
 
-     getlocal            6
-     dup
-     iftrue              L136
-
-     pop
-     getlocal2
-     convert_b
-L136:
-     iffalse             L151
-
-L137:
      getlocal0
      getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-uZ#0"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-uZ#1"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Xj"), StaticProtectedNs("_-Xj"), PackageNamespace("__AS3__.vec")])
      getlex              QName(PackageNamespace(""), "Number")
@@ -209,10 +126,7 @@ L137:
      construct           0
      initproperty        QName(PackageNamespace(""), "uvts_")
 
-     getlocal            5
-     iftrue              L151
-
-L145:
+L87:
      getlocal0
      pushbyte            0
      dup
@@ -220,7 +134,6 @@ L145:
      pushbyte            0
      callpropvoid        QName(PackageNamespace(""), "setPosition"), 4
 
-L151:
      returnvoid
     end ; code
    end ; body
@@ -242,21 +155,6 @@ L151:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal            4
-
-      jump                L10
-
-      declocal            4
-      pushundefined
-      inclocal            3
-      declocal            3
-      negate_i
-      declocal            2
-L10:
-      setlocal            5
-
       getlocal0
       pushscope
 
@@ -264,29 +162,14 @@ L10:
       coerce              QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "ObjectFace3D")
       setlocal1
 
-      getlocal            4
-      dup
-      iftrue              L22
-
-      pop
-      getlocal3
-      convert_b
-L22:
-      iffalse             L28
-
       getlocal0
       pushnull
       initproperty        QName(PackageNamespace(""), "vL_")
 
-      getlocal            4
-      iffalse             L31
-
-L28:
       getlocal0
       pushnull
       initproperty        QName(PackageNamespace(""), "uvts_")
 
-L31:
       pushbyte            0
       setlocal2
 
@@ -295,9 +178,9 @@ L31:
       coerce_a
       setlocal3
 
-      jump                L60
+      jump                L26
 
-L38:
+L18:
       label
       getlocal3
       getlocal2
@@ -305,109 +188,36 @@ L38:
       coerce              QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "ObjectFace3D")
       setlocal1
 
-      getlocal            5
-      dup
-      iffalse             L57
-
-      pop
-      jump                L55
-
-      add
-      inclocal_i          2
-      getlocal2
-      declocal            3
-      inclocal_i          3
-      kill                2
-L55:
-      getlocal3
-      convert_b
-L57:
-      iftrue              L60
-
       getlocal1
       callpropvoid        QName(PackageNamespace(""), "dispose"), 0
 
-L60:
+L26:
       hasnext2            3, 2
-      iftrue              L38
+      iftrue              L18
 
       kill                3
       kill                2
-      getlocal            5
-      dup
-      iffalse             L70
-
-      pop
-      getlocal2
-      convert_b
-L70:
-      iftrue              L114
-
       getlocal0
       getproperty         QName(PackageNamespace(""), "faces_")
       pushbyte            0
       setproperty         QName(PackageNamespace(""), "length")
 
-      getlocal            5
-      iftrue              L94
-
       getlocal0
       pushnull
       initproperty        QName(PackageNamespace(""), "faces_")
 
-      getlocal            4
-      dup
-      iftrue              L86
-
-      pop
-      getlocal0
-      convert_b
-L86:
-      iffalse             L114
-
-      jump                L94
-
-      declocal_i          2
-      not
-      getlocal3
-      declocal            3
-      convert_b
-      getlocal0
-L94:
       getlocal0
       pushnull
       initproperty        QName(PackageNamespace(""), "vS_")
-
-      getlocal            5
-      dup
-      iffalse             L103
-
-      pop
-      getlocal2
-      convert_b
-L103:
-      iftrue              L114
 
       getlocal0
       pushnull
       initproperty        QName(PackageNamespace(""), "vW_")
 
-      getlocal            5
-      dup
-      iffalse             L113
-
-      pop
-      getlocal0
-      convert_b
-L113:
-      iftrue              L117
-
-L114:
       getlocal0
       pushnull
       initproperty        QName(PackageNamespace(""), "_-kZ")
 
-L117:
       returnvoid
      end ; code
     end ; body
@@ -427,21 +237,6 @@ L117:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal            8
-
-      jump                L10
-
-      multiply
-      inclocal_i          8
-      declocal_i          2
-      declocal            6
-      strictequals
-      bitand
-L10:
-      setlocal            9
-
       getlocal0
       pushscope
 
@@ -449,50 +244,16 @@ L10:
       coerce              QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "ObjectFace3D")
       setlocal            5
 
-      getlocal            9
-      iftrue              L28
-
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-kZ")
       callpropvoid        QName(PackageNamespace(""), "identity"), 0
 
-      getlocal            9
-      dup
-      iffalse             L27
-
-      pop
-      getlocal0
-      convert_b
-L27:
-      iftrue              L70
-
-L28:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-kZ")
       getlocal            4
       getlex              QName(PackageNamespace("flash.geom"), "Vector3D")
       getproperty         QName(PackageNamespace(""), "Z_AXIS")
       callpropvoid        QName(PackageNamespace(""), "appendRotation"), 2
-
-      jump                L41
-
-      kill                8
-      kill                3
-      pushscope
-
-      declocal            3
-      kill                2
-      inclocal_i          5
-L41:
-      getlocal            9
-      dup
-      iffalse             L47
-
-      pop
-      getlocal3
-      convert_b
-L47:
-      iftrue              L70
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-kZ")
@@ -501,27 +262,14 @@ L47:
       getlocal3
       callpropvoid        QName(PackageNamespace(""), "appendTranslation"), 3
 
-      getlocal            8
-      iffalse             L70
-
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-kZ")
       getlocal0
-      jump                L66
-
-      getlocal            4
-      declocal            4
-      coerce_s
-      getlocal2
-      subtract
-      lessthan
-L66:
       getproperty         QName(PackageNamespace(""), "vL_")
       getlocal0
       getproperty         QName(PackageNamespace(""), "vW_")
       callpropvoid        QName(PackageNamespace(""), "transformVectors"), 2
 
-L70:
       pushbyte            0
       setlocal            6
 
@@ -530,9 +278,9 @@ L70:
       coerce_a
       setlocal            7
 
-      jump                L85
+      jump                L42
 
-L77:
+L34:
       label
       getlocal            7
       getlocal            6
@@ -543,9 +291,9 @@ L77:
 
       callpropvoid        QName(PackageNamespace(""), "_-Jd"), 0
 
-L85:
+L42:
       hasnext2            7, 6
-      iftrue              L77
+      iftrue              L34
 
       kill                7
       kill                6
@@ -565,83 +313,25 @@ L85:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal3
-
-      jump                L10
-
-      rshift
-      inclocal            3
-      dxnslate
-      bitnot
-      inclocal_i          3
-      strictequals
-L10:
-      setlocal            4
-
       getlocal0
       pushscope
 
       getlocal1
-      getlocal3
-      iffalse             L19
-
       pushbyte            3
       multiply
       convert_i
-L19:
       setlocal2
-
-      getlocal            4
-      dup
-      iffalse             L33
-
-      pop
-      getlocal2
-      convert_b
-      jump                L33
-
-      getlocal3
-      checkfilter
-      multiply
-      inclocal_i          2
-      getlocal3
-      nextname
-L33:
-      iftrue              L55
 
       getlocal2
       getlocal0
       getproperty         QName(PackageNamespace(""), "vW_")
       getproperty         QName(PackageNamespace(""), "length")
-      ifnge               L55
-
-      getlocal3
-      dup
-      iftrue              L52
-
-      pop
-      jump                L50
-
-      kill                2
-      getlocal3
-      setlocal3
-
-      setlocal3
-
-      increment_i
-      convert_o
-L50:
-      getlocal2
-      convert_b
-L52:
-      iffalse             L55
+      ifnge               L14
 
       pushnull
       returnvalue
 
-L55:
+L14:
       findpropstrict      QName(PackageNamespace("flash.geom"), "Vector3D")
       getlocal0
       getproperty         QName(PackageNamespace(""), "vW_")
@@ -679,23 +369,6 @@ L55:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      getlocal            8
-      pushnan
-      getlocal0
-      convert_s
-      getlocal0
-      setlocal            8
-
-L10:
-      setlocal            8
-
-      setlocal            9
-
       getlocal0
       pushscope
 
@@ -703,26 +376,7 @@ L10:
       coerce              QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "ObjectFace3D")
       setlocal            5
 
-      getlocal            9
-      dup
-      iftrue              L23
-
-      pop
-      getlocal0
-      convert_b
-L23:
-      iffalse             L48
-
       getlex              QName(PackageNamespace("flash.geom"), "Utils3D")
-      jump                L32
-
-      equals
-      inclocal            7
-      multiply
-      subtract_i
-      increment
-      convert_b
-L32:
       getlocal2
       getproperty         QName(PackageNamespace(""), "wToS_")
       getlocal0
@@ -731,18 +385,8 @@ L32:
       getproperty         QName(PackageNamespace(""), "vS_")
       getlocal0
       getproperty         QName(PackageNamespace(""), "uvts_")
-      jump                L47
-
-      bitand
-      declocal            8
-      not
-      inclocal            3
-      dup
-      kill                2
-L47:
       callpropvoid        QName(PackageNamespace(""), "projectVectors"), 4
 
-L48:
       pushbyte            0
       setlocal            6
 
@@ -751,9 +395,9 @@ L48:
       coerce_a
       setlocal            7
 
-      jump                L66
+      jump                L33
 
-L55:
+L22:
       label
       getlocal            7
       getlocal            6
@@ -767,9 +411,9 @@ L55:
       getlocal            4
       callpropvoid        QName(PackageNamespace(""), "draw"), 3
 
-L66:
+L33:
       hasnext2            7, 6
-      iftrue              L55
+      iftrue              L22
 
       kill                7
       kill                6
@@ -809,15 +453,6 @@ L66:
      pushscope
 
      getlex              QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "_-B5")
-     jump                L10
-
-     pushundefined
-     pushfalse
-     multiply_i
-     hasnext
-     negate_i
-     greaterthan
-L10:
      getlocal1
      callproperty        QName(PackageNamespace(""), "_-e6"), 1
      coerce              QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "_-B5")

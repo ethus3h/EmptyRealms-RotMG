@@ -13,31 +13,12 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     setlocal1
-
-     jump                L10
-
-     pushundefined
-     convert_s
-     pushfalse
-     strictequals
-     convert_b
-     nextname
-L10:
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal2
-     iftrue              L17
 
      getlocal0
      constructsuper      0
 
-L17:
      returnvoid
     end ; code
    end ; body
@@ -73,15 +54,6 @@ L17:
      pushscope
 
      findpropstrict      QName(PackageNamespace("flash.xml"), "XMLDocument")
-     jump                L10
-
-     istypelate
-     lessthan
-     bitxor
-     add
-     astypelate
-     getlocal2
-L10:
      getlocal1
      constructprop       QName(PackageNamespace("flash.xml"), "XMLDocument"), 1
      getproperty         QName(PackageNamespace(""), "firstChild")
@@ -106,16 +78,6 @@ L10:
      pushscope
 
      findpropstrict      QName(PackageNamespace(""), "XML")
-     jump                L10
-
-     multiply_i
-     bitand
-     coerce_s
-     subtract
-     decrement_i
-     pushscope
-
-L10:
      findpropstrict      QName(PackageNamespace("flash.xml"), "XMLNode")
      getlex              QName(PackageNamespace("flash.xml"), "XMLNodeType")
      getproperty         QName(PackageNamespace(""), "TEXT_NODE")

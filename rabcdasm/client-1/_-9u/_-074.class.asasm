@@ -14,32 +14,12 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     setlocal1
-
-     jump                L10
-
-     lshift
-     add_i
-     getlocal2
-     bitnot
-     subtract
-     pushscope
-
-L10:
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal1
-     iffalse             L17
 
      getlocal0
      constructsuper      0
 
-L17:
      returnvoid
     end ; code
    end ; body
@@ -62,27 +42,8 @@ L17:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      checkfilter
-      rshift
-      greaterthan
-      bitnot
-      getglobalscope
-      bitor
-L10:
-      setlocal1
-
-      setlocal2
-
       getlocal0
       pushscope
-
-      getlocal1
-      iftrue              L23
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-OR")
@@ -92,7 +53,6 @@ L10:
       callproperty        QName(PrivateNamespace("*", "_-9u:_-074"), "_-085"), 0
       callpropvoid        QName(PackageNamespace(""), "_-02g"), 1
 
-L23:
       returnvoid
      end ; code
     end ; body
@@ -108,154 +68,74 @@ L23:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      kill                2
-      getlocal3
-      declocal            2
-      kill                2
-      pushfalse
-      add
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
 
-      jump                L34
+      jump                L13
 
-L15:
+L3:
       label
       getlex              QName(PackageNamespace("_-aD"), "_-YZ")
       returnvalue
 
-      getlocal3
-      dup
-      iftrue              L24
-
-      pop
-      getlocal1
-      convert_b
-L24:
-      iffalse             L30
-
-L25:
+L6:
       label
       getlex              QName(PackageNamespace("_-aD"), "_-e3")
       returnvalue
 
-      getlocal2
-      iftrue              L34
-
-L30:
+L9:
       label
-L31:
+L10:
       label
       getlex              QName(PackageNamespace("_-aD"), "_-Ga")
       returnvalue
 
-L34:
+L13:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-0Ky")
       callproperty        QName(PackageNamespace(""), "_-RK"), 0
       setlocal1
 
-      jump                L45
-
-      decrement_i
-      strictequals
-      kill                2
-      rshift
-      declocal_i          2
-      pushtrue
-L45:
-      getlocal2
-      iftrue              L88
-
       getlex              QName(PackageNamespace("_-WD"), "_-0Iz")
       getproperty         QName(PackageNamespace(""), "_-0Ci")
       getlocal1
-      ifstrictne          L57
-
-      getlocal3
-      iffalse             L88
+      ifstrictne          L23
 
       pushbyte            0
-      getlocal2
-      iftrue              L91
+      jump                L42
 
-      jump                L96
-
-L57:
+L23:
       getlex              QName(PackageNamespace("_-WD"), "_-0Iz")
       getproperty         QName(PackageNamespace(""), "_-I6")
       getlocal1
-      ifstrictne          L74
-
-      getlocal2
-      iftrue              L80
+      ifstrictne          L29
 
       pushbyte            1
-      getlocal2
-      iftrue              L96
+      jump                L42
 
-      jump                L96
-
-      jump                L74
-
-      setlocal2
-
-      declocal            2
-      getglobalscope
-      convert_b
-      not
-      nextvalue
-L74:
+L29:
       getlex              QName(PackageNamespace("_-WD"), "_-0Iz")
       getproperty         QName(PackageNamespace(""), "_-nB")
       getlocal1
-      ifstrictne          L84
+      ifstrictne          L35
 
-      getlocal3
-      iffalse             L88
-
-L80:
       pushbyte            2
-      getlocal2
-      iftrue              L96
+      jump                L42
 
-      jump                L96
-
-L84:
+L35:
       getlex              QName(PackageNamespace("_-WD"), "_-0Iz")
       getproperty         QName(PackageNamespace(""), "_-kj")
       getlocal1
-      ifstrictne          L92
+      ifstrictne          L41
 
-L88:
       pushbyte            3
-      getlocal2
-      iftrue              L96
+      jump                L42
 
-L91:
-      jump                L96
-
-L92:
-      jump                L95
-
+L41:
       pushbyte            4
-      jump                L96
-
-L95:
-      pushbyte            4
-L96:
+L42:
       kill                1
-      lookupswitch        L31, [L15, L25, L30, L30, L31]
+      lookupswitch        L10, [L3, L6, L9, L9, L10]
      end ; code
     end ; body
    end ; method

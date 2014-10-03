@@ -14,33 +14,13 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     getlocal2
-     inclocal            2
-     declocal            2
-     getlocal1
-     getlocal2
-     checkfilter
-L10:
-     setlocal2
-
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal2
-     iftrue              L19
 
      getlocal0
      getlocal1
      constructsuper      1
 
-L19:
      returnvoid
     end ; code
    end ; body
@@ -59,27 +39,8 @@ L19:
      initscopedepth 6
      maxscopedepth 7
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      convert_s
-      checkfilter
-      inclocal            2
-      getlocal2
-      setlocal2
-
-      inclocal_i          2
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      iftrue              L27
 
       getlocal1
       getlocal0
@@ -96,7 +57,6 @@ L10:
       getproperty         QName(PackageNamespace(""), "bulletId_")
       callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeByte"), 1
 
-L27:
       returnvoid
      end ; code
     end ; body
@@ -116,15 +76,6 @@ L27:
       pushscope
 
       findpropstrict      QName(ProtectedNamespace("_-1E"), "formatToString")
-      jump                L10
-
-      modulo
-      greaterequals
-      convert_d
-      greaterequals
-      increment
-      getlocal0
-L10:
       pushstring          "VISIBULLET"
       pushstring          "damage_"
       pushstring          "enemyId_"

@@ -157,7 +157,7 @@ L20:
       coerce              QName(PackageNamespace(""), "Array")
       setlocal2
 
-      jump                L79
+      jump                L76
 
 L26:
       label
@@ -167,7 +167,7 @@ L26:
       coerce              QName(PackageNamespace(""), "Array")
       setlocal2
 
-      jump                L79
+      jump                L76
 
 L33:
       label
@@ -178,7 +178,7 @@ L33:
       coerce              QName(PackageNamespace(""), "Array")
       setlocal2
 
-      jump                L79
+      jump                L76
 
 L41:
       label
@@ -192,7 +192,7 @@ L42:
       coerce              QName(PackageNamespace(""), "Array")
       setlocal2
 
-      jump                L79
+      jump                L76
 
 L51:
       getlocal1
@@ -203,7 +203,7 @@ L51:
       ifstrictne          L58
 
       pushbyte            0
-      jump                L77
+      jump                L74
 
 L58:
       pushbyte            2
@@ -211,7 +211,7 @@ L58:
       ifstrictne          L63
 
       pushbyte            1
-      jump                L77
+      jump                L74
 
 L63:
       pushbyte            3
@@ -219,7 +219,7 @@ L63:
       ifstrictne          L68
 
       pushbyte            2
-      jump                L77
+      jump                L74
 
 L68:
       pushbyte            4
@@ -227,21 +227,15 @@ L68:
       ifstrictne          L73
 
       pushbyte            3
-      jump                L77
+      jump                L74
 
 L73:
-      jump                L76
-
       pushbyte            4
-      jump                L77
-
-L76:
-      pushbyte            4
-L77:
+L74:
       kill                3
       lookupswitch        L42, [L20, L26, L33, L41, L42]
 
-L79:
+L76:
       getlocal2
       getlex              QName(PrivateNamespace("*", "com.google.analytics.utils:Version#0"), "_separator")
       callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1

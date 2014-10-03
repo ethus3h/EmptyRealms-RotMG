@@ -14,39 +14,13 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     setlocal2
-
-     jump                L10
-
-     kill                2
-     lshift
-     kill                2
-     declocal            2
-     coerce_a
-     convert_b
-L10:
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal3
-     dup
-     iffalse             L19
-
-     pop
-     getlocal0
-     convert_b
-L19:
-     iftrue              L23
 
      getlocal0
      getlocal1
      constructsuper      1
 
-L23:
      returnvoid
     end ; code
    end ; body
@@ -65,69 +39,24 @@ L23:
      initscopedepth 6
      maxscopedepth 7
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      pushscope
-
-      typeof
-      getlocal2
-      inclocal_i          2
-      setlocal2
-
-      inclocal            2
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      jump                L22
-
-      checkfilter
-      getlocal2
-      bitand
-      hasnext
-      kill                2
-      declocal            2
-L22:
-      iffalse             L40
 
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
       initproperty        QName(PackageNamespace(""), "objectId_")
 
-      getlocal3
-      iffalse             L44
-
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readUTF"), 0
       initproperty        QName(PackageNamespace(""), "text_")
 
-      getlocal3
-      dup
-      iftrue              L39
-
-      pop
-      getlocal3
-      convert_b
-L39:
-      iffalse             L44
-
-L40:
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
       initproperty        QName(PackageNamespace(""), "color_")
 
-L44:
       returnvoid
      end ; code
     end ; body
@@ -147,16 +76,6 @@ L44:
       pushscope
 
       findpropstrict      QName(ProtectedNamespace("_-1E"), "formatToString")
-      jump                L10
-
-      getglobalscope
-      convert_o
-      rshift
-      pushundefined
-      bitxor
-      setlocal2
-
-L10:
       pushstring          "NOTIFICATION"
       pushstring          "objectId_"
       pushstring          "text_"

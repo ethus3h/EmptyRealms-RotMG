@@ -15,66 +15,20 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     setlocal3
-
-     jump                L10
-
-     pushscope
-
-     getlocal2
-     dup
-     getlocal3
-     setlocal2
-
-     hasnext
-L10:
-     setlocal            4
-
      getlocal0
      pushscope
-
-     jump                L20
-
-     add_i
-     pushscope
-
-     convert_s
-     inclocal_i          2
-     declocal            3
-     popscope
-L20:
-     getlocal3
-     iffalse             L26
 
      getlocal0
      constructsuper      0
 
-     getlocal3
-     iffalse             L36
-
-L26:
      getlocal0
      getlocal1
      initproperty        QName(PackageNamespace(""), "image_")
 
-     getlocal            4
-     dup
-     iffalse             L35
-
-     pop
-     getlocal2
-     convert_b
-L35:
-     iftrue              L39
-
-L36:
      getlocal0
      getlocal2
      initproperty        QName(PackageNamespace(""), "mask_")
 
-L39:
      returnvoid
     end ; code
    end ; body
@@ -95,15 +49,6 @@ L39:
       pushscope
 
       getlocal0
-      jump                L10
-
-      instanceof
-      pushundefined
-      pushwith
-      astypelate
-      pushfalse
-      greaterthan
-L10:
       getproperty         QName(PackageNamespace(""), "image_")
       getproperty         QName(PackageNamespace(""), "width")
       returnvalue
@@ -125,16 +70,6 @@ L10:
       pushscope
 
       getlocal0
-      jump                L10
-
-      pushundefined
-      instanceof
-      not
-      pushscope
-
-      increment_i
-      nextname
-L10:
       getproperty         QName(PackageNamespace(""), "image_")
       getproperty         QName(PackageNamespace(""), "height")
       returnvalue
@@ -155,23 +90,6 @@ L10:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      declocal_i          4
-      getlocal            4
-      istypelate
-      pushscope
-
-      inclocal_i          3
-      inclocal_i          2
-L10:
-      setlocal            4
-
-      setlocal            5
-
       getlocal0
       pushscope
 
@@ -183,53 +101,24 @@ L10:
       coerce              QName(PackageNamespace("flash.display"), "BitmapData")
       setlocal2
 
-      jump                L28
-
-      rshift
-      dxnslate
-      divide
-      instanceof
-      dup
-      lshift
-L28:
-      getlocal            5
-      dup
-      iftrue              L41
-
-      pop
-      jump                L39
-
-      increment_i
-      declocal_i          3
-      inclocal            4
-      dup
-      getlocal2
-      convert_b
-L39:
-      getlocal3
-      convert_b
-L41:
-      iffalse             L47
-
       getlocal0
       getproperty         QName(PackageNamespace(""), "mask_")
       pushnull
       equals
-      iffalse             L50
+      iffalse             L17
 
-L47:
       pushnull
       coerce              QName(PackageNamespace("flash.display"), "BitmapData")
-      jump                L56
+      jump                L23
 
-L50:
+L17:
       getlex              QName(PackageNamespace("com.company.util"), "BitmapUtil")
       getlocal0
       getproperty         QName(PackageNamespace(""), "mask_")
       getlocal1
       callproperty        QName(PackageNamespace(""), "mirror"), 2
       coerce              QName(PackageNamespace("flash.display"), "BitmapData")
-L56:
+L23:
       coerce              QName(PackageNamespace("flash.display"), "BitmapData")
       setlocal3
 
@@ -256,15 +145,6 @@ L56:
       pushscope
 
       getlex              QName(PackageNamespace("com.company.util"), "BitmapUtil")
-      jump                L10
-
-      pushnull
-      nextname
-      bitxor
-      getglobalscope
-      pushundefined
-      strictequals
-L10:
       getlocal0
       getproperty         QName(PackageNamespace(""), "image_")
       callproperty        QName(PackageNamespace(""), "_-F9"), 1

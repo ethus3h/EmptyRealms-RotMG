@@ -16,21 +16,6 @@ class
     initscopedepth 9
     maxscopedepth 10
     code
-     pushfalse
-     pushtrue
-     setlocal            13
-
-     jump                L10
-
-     getlocal            5
-     modulo
-     getlocal3
-     kill                7
-     strictequals
-     divide
-L10:
-     setlocal            14
-
      getlocal0
      pushscope
 
@@ -38,107 +23,42 @@ L10:
      coerce              QName(PackageNamespace(""), "XML")
      setlocal            5
 
-     getlocal            14
-     iftrue              L42
-
      getlocal0
      constructsuper      0
-
-     getlocal            14
-     dup
-     iffalse             L26
-
-     pop
-     getlocal2
-     convert_b
-L26:
-     iftrue              L42
 
      getlocal0
      getlocal3
      getproperty         MultinameA("accountId", [PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy/iinit"), PackageNamespace("com.company.assembleegameclient.ui"), PackageInternalNs("com.company.assembleegameclient.ui"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-tV"), StaticProtectedNs("_-tV"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
      initproperty        QName(PackageNamespace(""), "accountId_")
 
-     getlocal            13
-     dup
-     iftrue              L37
-
-     pop
-     getlocal0
-     convert_b
-L37:
-     iffalse             L42
-
      getlocal0
      getlocal3
      getproperty         MultinameA("charId", [PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy/iinit"), PackageNamespace("com.company.assembleegameclient.ui"), PackageInternalNs("com.company.assembleegameclient.ui"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-tV"), StaticProtectedNs("_-tV"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
      initproperty        QName(PackageNamespace(""), "charId_")
 
-L42:
      pushint             16777215
      convert_u
      setlocal            4
 
-     getlocal            14
-     iftrue              L84
-
      getlocal1
-     iffalse             L71
-
-     getlocal            13
-     iffalse             L217
+     iffalse             L24
 
      pushint             16564761
-     getlocal            14
-     iftrue              L82
-
      convert_u
-     getlocal            13
-     dup
-     iftrue              L61
-
-     pop
-     getlocal3
-     convert_b
-L61:
-     iffalse             L83
-
      setlocal            4
 
-     getlocal            13
-     dup
-     iftrue              L69
+     jump                L30
 
-     pop
-     getlocal0
-     convert_b
-L69:
-     iffalse             L133
-
-     jump                L84
-
-L71:
+L24:
      getlocal2
-     getlocal            13
-     dup
-     iftrue              L78
-
-     pop
-     getlocal2
-     convert_b
-L78:
-     iffalse             L82
-
      pushbyte            1
-     ifne                L84
+     ifne                L30
 
      pushint             16646031
-L82:
      convert_u
-L83:
      setlocal            4
 
-L84:
+L30:
      getlocal0
      findpropstrict      QName(PackageNamespace("com.company.ui"), "SimpleText")
      pushbyte            22
@@ -150,117 +70,37 @@ L84:
      constructprop       QName(PackageNamespace("com.company.ui"), "SimpleText"), 6
      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-30")
 
-     getlocal            14
-     dup
-     iffalse             L100
-
-     pop
-     getlocal2
-     convert_b
-L100:
-     iftrue              L165
-
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-30")
-     getlocal            13
-     iffalse             L162
-
      getlocal2
-     getlocal            13
-     dup
-     iftrue              L112
-
-     pop
-     getlocal3
-     convert_b
-L112:
-     iffalse             L156
-
      pushbyte            255
-     getlocal            14
-     dup
-     iffalse             L120
-
-     pop
-     getlocal2
-     convert_b
-L120:
-     iftrue              L207
-
      equals
-     getlocal            13
-     dup
-     iftrue              L128
-
-     pop
-     getlocal3
-     convert_b
-L128:
-     iffalse             L130
-
      not
-L130:
      callpropvoid        QName(PackageNamespace(""), "_-8Y"), 1
 
-     getlocal            14
-     iftrue              L217
-
-L133:
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-30")
-     getlocal            14
-     iftrue              L169
-
      getlocal2
-     getlocal            13
-     iffalse             L206
-
      pushbyte            255
-     getlocal            14
-     iftrue              L207
-
-     ifne                L148
+     ifne                L54
 
      pushstring          "---"
-     getlocal            13
-     iffalse             L159
+     jump                L58
 
-     jump                L159
-
-L148:
+L54:
      getlocal2
-     getlocal            14
-     dup
-     iffalse             L155
-
-     pop
-     getlocal1
-     convert_b
-L155:
-     iftrue              L206
-
-L156:
      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
      pushstring          "."
      add
-L159:
+L58:
      setproperty         QName(PackageNamespace(""), "text")
 
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-30")
-L162:
      callpropvoid        QName(PackageNamespace(""), "_-08S"), 0
 
-     getlocal            14
-     iftrue              L221
-
-L165:
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-30")
-     getlocal            13
-     iffalse             L188
-
-L169:
      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
      pushbyte            0
      dup
@@ -272,67 +112,33 @@ L169:
      newarray            1
      setproperty         QName(PackageNamespace(""), "filters")
 
-     getlocal            13
-     dup
-     iftrue              L185
-
-     pop
-     getlocal2
-     convert_b
-L185:
-     iffalse             L203
-
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-30")
-L188:
      pushbyte            82
-     getlocal            13
-     dup
-     iftrue              L195
-
-     pop
-     getlocal1
-     convert_b
-L195:
-     iffalse             L206
-
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-30")
      getproperty         QName(PackageNamespace(""), "width")
      subtract
-     getlocal            13
-     iffalse             L210
-
      setproperty         QName(PackageNamespace(""), "x")
 
-L203:
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-30")
      getlex              QName(PackageNamespace(""), "HEIGHT")
-L206:
      pushbyte            2
-L207:
      divide
-     getlocal            13
-     iffalse             L216
-
-L210:
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-30")
      getproperty         QName(PackageNamespace(""), "height")
      pushbyte            2
      divide
      subtract
-L216:
      setproperty         QName(PackageNamespace(""), "y")
 
-L217:
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-30")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
-L221:
      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
      getproperty         QName(PackageNamespace(""), "_-QF")
      findpropstrict      QName(PackageNamespace(""), "int")
@@ -368,79 +174,36 @@ L221:
      coerce              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-JH")
      setlocal            7
 
-     getlocal            14
-     iftrue              L259
-
      getlocal3
      pushstring          "Tex1"
      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy/iinit"), PackageNamespace("com.company.assembleegameclient.ui"), PackageInternalNs("com.company.assembleegameclient.ui"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-tV"), StaticProtectedNs("_-tV"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
-     iffalse             L265
+     iffalse             L138
 
-L259:
      getlocal3
      getproperty         Multiname("Tex1", [PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy/iinit"), PackageNamespace("com.company.assembleegameclient.ui"), PackageInternalNs("com.company.assembleegameclient.ui"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-tV"), StaticProtectedNs("_-tV"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
      convert_i
-     getlocal            14
-     iftrue              L273
+     jump                L139
 
-     jump                L273
-
-L265:
+L138:
      pushbyte            0
-     getlocal            13
-     dup
-     iftrue              L272
-
-     pop
-     getlocal2
-     convert_b
-L272:
-     iffalse             L274
-
-L273:
+L139:
      convert_i
-L274:
      setlocal            8
-
-     getlocal            14
-     dup
-     iffalse             L281
-
-     pop
-     getlocal0
-     convert_b
-L281:
-     iftrue              L286
 
      getlocal3
      pushstring          "Tex2"
      callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy/iinit"), PackageNamespace("com.company.assembleegameclient.ui"), PackageInternalNs("com.company.assembleegameclient.ui"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-tV"), StaticProtectedNs("_-tV"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
-     iffalse             L292
+     iffalse             L149
 
-L286:
      getlocal3
      getproperty         Multiname("Tex2", [PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy/iinit"), PackageNamespace("com.company.assembleegameclient.ui"), PackageInternalNs("com.company.assembleegameclient.ui"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-tV"), StaticProtectedNs("_-tV"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
      convert_i
-     getlocal            14
-     iftrue              L301
+     jump                L150
 
-     jump                L300
-
-L292:
+L149:
      pushbyte            0
-     getlocal            13
-     dup
-     iftrue              L299
-
-     pop
-     getlocal3
-     convert_b
-L299:
-     iffalse             L301
-
-L300:
+L150:
      convert_i
-L301:
      setlocal            9
 
      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "TextureRedrawer")
@@ -491,16 +254,6 @@ L301:
      pushbyte            104
      setproperty         QName(PackageNamespace(""), "x")
 
-     getlocal            14
-     dup
-     iffalse             L351
-
-     pop
-     getlocal1
-     convert_b
-L351:
-     iftrue              L389
-
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "bitmap_")
      getlex              QName(PackageNamespace(""), "HEIGHT")
@@ -514,24 +267,12 @@ L351:
      subtract
      pushbyte            2
      subtract
-     jump                L372
-
-     inclocal_i          3
-     lshift
-     declocal            2
-     dxnslate
-     divide
-     inclocal            13
-L372:
      setproperty         QName(PackageNamespace(""), "y")
 
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "bitmap_")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
-
-     getlocal            13
-     iffalse             L421
 
      getlocal0
      findpropstrict      QName(PackageNamespace("com.company.ui"), "SimpleText")
@@ -544,90 +285,23 @@ L372:
      constructprop       QName(PackageNamespace("com.company.ui"), "SimpleText"), 6
      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "nameText_")
 
-L389:
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "nameText_")
-     getlocal            14
-     iftrue              L468
-
      pushtrue
      callpropvoid        QName(PackageNamespace(""), "_-8Y"), 1
 
-     getlocal            14
-     dup
-     iffalse             L401
-
-     pop
-     getlocal1
-     convert_b
-L401:
-     iftrue              L501
-
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "nameText_")
-     getlocal            13
-     dup
-     iftrue              L410
-
-     pop
-     getlocal2
-     convert_b
-L410:
-     iffalse             L430
-
      getlocal3
      getproperty         Multiname("Name", [PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy/iinit"), PackageNamespace("com.company.assembleegameclient.ui"), PackageInternalNs("com.company.assembleegameclient.ui"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-tV"), StaticProtectedNs("_-tV"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
      setproperty         QName(PackageNamespace(""), "text")
 
-     getlocal            14
-     dup
-     iffalse             L420
-
-     pop
-     getlocal0
-     convert_b
-L420:
-     iftrue              L505
-
-L421:
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "nameText_")
-     getlocal            13
-     dup
-     iftrue              L429
-
-     pop
-     getlocal1
-     convert_b
-L429:
-     iffalse             L447
-
-L430:
      callpropvoid        QName(PackageNamespace(""), "_-08S"), 0
 
-     getlocal            13
-     dup
-     iftrue              L437
-
-     pop
-     getlocal3
-     convert_b
-L437:
-     iffalse             L501
-
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "nameText_")
-     getlocal            14
-     dup
-     iffalse             L446
-
-     pop
-     getlocal1
-     convert_b
-L446:
-     iftrue              L479
-
-L447:
      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
      pushbyte            0
      dup
@@ -639,52 +313,22 @@ L447:
      newarray            1
      setproperty         QName(PackageNamespace(""), "filters")
 
-     getlocal            14
-     iftrue              L501
-
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "nameText_")
-     getlocal            14
-     dup
-     iffalse             L467
-
-     pop
-     getlocal1
-     convert_b
-L467:
-     iftrue              L479
-
-L468:
      pushshort           170
-     getlocal            14
-     dup
-     iffalse             L475
-
-     pop
-     getlocal1
-     convert_b
-L475:
-     iftrue              L480
-
      setproperty         QName(PackageNamespace(""), "x")
 
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "nameText_")
-L479:
      getlex              QName(PackageNamespace(""), "HEIGHT")
-L480:
      pushbyte            2
      divide
-     getlocal            14
-     iftrue              L490
-
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "nameText_")
      getproperty         QName(PackageNamespace(""), "height")
      pushbyte            2
      divide
      subtract
-L490:
      setproperty         QName(PackageNamespace(""), "y")
 
      findpropstrict      QName(PackageNamespace(""), "addChild")
@@ -699,13 +343,11 @@ L490:
      callproperty        QName(PackageNamespace(""), "_-04n"), 1
      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-4N")
 
-L501:
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-4N")
      pushbyte            4
      setproperty         QName(PackageNamespace(""), "length")
 
-L505:
      getlex              QName(PackageNamespace("com.company.util"), "ConversionUtil")
      getlocal            5
      getproperty         Multiname("SlotTypes", [PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy/iinit"), PackageNamespace("com.company.assembleegameclient.ui"), PackageInternalNs("com.company.assembleegameclient.ui"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-tV"), StaticProtectedNs("_-tV"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
@@ -716,9 +358,6 @@ L505:
 
      pushbyte            4
      setproperty         QName(PackageNamespace(""), "length")
-
-     getlocal            14
-     iftrue              L619
 
      getlocal0
      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui"), "Inventory")
@@ -731,54 +370,22 @@ L505:
      constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui"), "Inventory"), 6
      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-e9")
 
-     getlocal            14
-     iftrue              L595
-
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-e9")
-     getlocal            13
-     iffalse             L543
-
      pushshort           400
-     getlocal            14
-     dup
-     iffalse             L539
-
-     pop
-     getlocal2
-     convert_b
-L539:
-     iftrue              L544
-
      setproperty         QName(PackageNamespace(""), "x")
 
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-e9")
-L543:
      getlex              QName(PackageNamespace(""), "HEIGHT")
-L544:
      pushbyte            2
      divide
-     getlocal            14
-     dup
-     iffalse             L552
-
-     pop
-     getlocal3
-     convert_b
-L552:
-     iftrue              L558
-
      getlex              QName(PackageNamespace("com.company.assembleegameclient.ui"), "Slot")
      getproperty         QName(PackageNamespace(""), "HEIGHT")
      pushbyte            2
      divide
      subtract
-L558:
      setproperty         QName(PackageNamespace(""), "y")
-
-     getlocal            14
-     iftrue              L619
 
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
@@ -796,54 +403,23 @@ L558:
      constructprop       QName(PackageNamespace("com.company.ui"), "SimpleText"), 6
      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-Da")
 
-     getlocal            14
-     iftrue              L663
-
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-Da")
-     getlocal            14
-     dup
-     iffalse             L585
-
-     pop
-     getlocal0
-     convert_b
-L585:
-     iftrue              L609
-
      pushtrue
      callpropvoid        QName(PackageNamespace(""), "_-8Y"), 1
 
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-Da")
-     getlocal            13
-     iffalse             L628
-
      getlocal3
      getproperty         Multiname("TotalFame", [PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy/iinit"), PackageNamespace("com.company.assembleegameclient.ui"), PackageInternalNs("com.company.assembleegameclient.ui"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-tV"), StaticProtectedNs("_-tV"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
      setproperty         QName(PackageNamespace(""), "text")
 
-L595:
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-Da")
-     getlocal            13
-     dup
-     iftrue              L603
-
-     pop
-     getlocal3
-     convert_b
-L603:
-     iffalse             L628
-
      callpropvoid        QName(PackageNamespace(""), "_-08S"), 0
 
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-Da")
-     getlocal            13
-     iffalse             L640
-
-L609:
      findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
      pushbyte            0
      dup
@@ -855,84 +431,39 @@ L609:
      newarray            1
      setproperty         QName(PackageNamespace(""), "filters")
 
-L619:
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-Da")
-     getlocal            13
-     dup
-     iftrue              L627
-
-     pop
-     getlocal2
-     convert_b
-L627:
-     iffalse             L640
-
-L628:
      pushshort           660
-     getlocal            13
-     iffalse             L641
-
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-Da")
      getproperty         QName(PackageNamespace(""), "width")
      subtract
-     getlocal            13
-     iffalse             L656
-
      setproperty         QName(PackageNamespace(""), "x")
 
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-Da")
-L640:
      getlex              QName(PackageNamespace(""), "HEIGHT")
-L641:
      pushbyte            2
      divide
-     getlocal            14
-     dup
-     iffalse             L649
-
-     pop
-     getlocal2
-     convert_b
-L649:
-     iftrue              L656
-
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-Da")
      getproperty         QName(PackageNamespace(""), "height")
      pushbyte            2
      divide
      subtract
-L656:
      setproperty         QName(PackageNamespace(""), "y")
-
-     getlocal            13
-     iffalse             L663
 
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-Da")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
-L663:
      getlex              QName(PackageNamespace("com.company.util"), "AssetLibrary")
      pushstring          "lofiObj3"
      pushshort           224
      callproperty        QName(PackageNamespace(""), "_-xK"), 2
      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
      setlocal            12
-
-     getlocal            14
-     dup
-     iffalse             L675
-
-     pop
-     getlocal2
-     convert_b
-L675:
-     iftrue              L732
 
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.display"), "Bitmap")
@@ -945,9 +476,6 @@ L675:
      callproperty        QName(PackageNamespace(""), "redraw"), 5
      constructprop       QName(PackageNamespace("flash.display"), "Bitmap"), 1
      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-0H")
-
-     getlocal            13
-     iffalse             L732
 
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-0H")
@@ -967,46 +495,14 @@ L675:
      subtract
      setproperty         QName(PackageNamespace(""), "y")
 
-     getlocal            14
-     dup
-     iffalse             L711
-
-     pop
-     getlocal0
-     convert_b
-L711:
-     iftrue              L744
-
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-0H")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
-     getlocal            13
-     dup
-     iftrue              L729
-
-     pop
-     jump                L727
-
-     setlocal            6
-
-     setlocal            11
-
-     bitxor
-     lessequals
-     getlocal            11
-     declocal_i          9
-L727:
-     getlocal3
-     convert_b
-L729:
-     iffalse             L732
-
      getlocal0
      callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "draw"), 0
 
-L732:
      findpropstrict      QName(PackageNamespace(""), "addEventListener")
      getlex              QName(PackageNamespace("flash.events"), "Event")
      getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
@@ -1021,7 +517,6 @@ L732:
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "onMouseOver")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-L744:
      findpropstrict      QName(PackageNamespace(""), "addEventListener")
      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
      getproperty         QName(PackageNamespace(""), "ROLL_OUT")
@@ -1054,35 +549,8 @@ L744:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      inclocal_i          2
-      getlocal2
-      popscope
-      setlocal2
-
-      greaterthan
-      setlocal2
-
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      dup
-      iffalse             L19
-
-      pop
-      getlocal1
-      convert_b
-L19:
-      iftrue              L25
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-e9")
@@ -1090,7 +558,6 @@ L19:
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "_-4N")
       callpropvoid        QName(PackageNamespace(""), "draw"), 1
 
-L25:
       returnvoid
      end ; code
     end ; body
@@ -1106,86 +573,27 @@ L25:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      urshift
-      multiply
-      decrement
-      rshift
-      urshift
-      dup
-L10:
-      setlocal1
-
-      setlocal2
-
       getlocal0
       pushscope
-
-      getlocal2
-      dup
-      iftrue              L20
-
-      pop
-      getlocal1
-      convert_b
-L20:
-      iffalse             L32
 
       getlex              QName(PackageNamespace(""), "graphics")
       callpropvoid        QName(PackageNamespace(""), "clear"), 0
 
-      jump                L30
-
-      convert_i
-      dup
-      modulo
-      subtract_i
-      pushscope
-
-      getlocal1
-L30:
-      getlocal2
-      iffalse             L65
-
-L32:
       getlex              QName(PackageNamespace(""), "graphics")
       pushbyte            0
       getlocal0
       getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "over_")
-      iffalse             L47
+      iffalse             L12
 
-      jump                L44
-
-      greaterequals
-      pushfalse
-      convert_b
-      lshift
-      getlocal0
-      multiply_i
-L44:
       pushdouble          0.4
       convert_d
-      jump                L49
+      jump                L14
 
-L47:
+L12:
       pushdouble          0.001
       convert_d
-L49:
+L14:
       callpropvoid        QName(PackageNamespace(""), "beginFill"), 2
-
-      getlocal2
-      dup
-      iftrue              L56
-
-      pop
-      getlocal2
-      convert_b
-L56:
-      iffalse             L67
 
       getlex              QName(PackageNamespace(""), "graphics")
       pushbyte            0
@@ -1194,14 +602,9 @@ L56:
       getlex              QName(PackageNamespace(""), "HEIGHT")
       callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
 
-      getlocal1
-      iftrue              L67
-
-L65:
       getlex              QName(PackageNamespace(""), "graphics")
       callpropvoid        QName(PackageNamespace(""), "endFill"), 0
 
-L67:
       returnvoid
      end ; code
     end ; body
@@ -1218,62 +621,16 @@ L67:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      subtract
-      declocal            2
-      declocal_i          2
-      inclocal_i          2
-      bitand
-      declocal            2
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      jump                L20
-
-      setlocal2
-
-      inclocal            2
-      pushwith
-      declocal            2
-      getlocal2
-      astypelate
-L20:
-      getlocal3
-      dup
-      iffalse             L26
-
-      pop
-      getlocal1
-      convert_b
-L26:
-      iftrue              L39
 
       getlocal0
       pushtrue
       initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "over_")
 
-      getlocal2
-      dup
-      iftrue              L36
-
-      pop
-      getlocal0
-      convert_b
-L36:
-      iffalse             L39
-
       getlocal0
       callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "draw"), 0
 
-L39:
       returnvoid
      end ; code
     end ; body
@@ -1290,62 +647,16 @@ L39:
      initscopedepth 9
      maxscopedepth 10
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      pushnull
-      increment
-      declocal            2
-      bitor
-      bitnot
-      decrement
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      jump                L20
-
-      bitor
-      modulo
-      declocal            2
-      inclocal_i          2
-      urshift
-      convert_i
-L20:
-      getlocal3
-      dup
-      iffalse             L26
-
-      pop
-      getlocal3
-      convert_b
-L26:
-      iftrue              L37
 
       getlocal0
       pushfalse
       initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "over_")
 
-      getlocal3
-      dup
-      iffalse             L36
-
-      pop
-      getlocal0
-      convert_b
-L36:
-      iftrue              L39
-
-L37:
       getlocal0
       callpropvoid        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:_-Qy"), "draw"), 0
 
-L39:
       returnvoid
      end ; code
     end ; body
@@ -1360,62 +671,17 @@ L39:
    initscopedepth 8
    maxscopedepth 9
    code
-    pushfalse
-    pushtrue
-    setlocal1
-
-    jump                L10
-
-    astypelate
-    checkfilter
-    astypelate
-    strictequals
-    convert_b
-    increment
-L10:
-    setlocal2
-
     getlocal0
     pushscope
-
-    jump                L20
-
-    dup
-    equals
-    negate
-    istypelate
-    istypelate
-    pushwith
-L20:
-    getlocal2
-    dup
-    iffalse             L26
-
-    pop
-    getlocal0
-    convert_b
-L26:
-    iftrue              L40
 
     findproperty        QName(PackageNamespace(""), "WIDTH")
     pushshort           756
     initproperty        QName(PackageNamespace(""), "WIDTH")
 
-    getlocal2
-    dup
-    iffalse             L36
-
-    pop
-    getlocal0
-    convert_b
-L36:
-    iftrue              L40
-
     findproperty        QName(PackageNamespace(""), "HEIGHT")
     pushbyte            56
     initproperty        QName(PackageNamespace(""), "HEIGHT")
 
-L40:
     returnvoid
    end ; code
   end ; body

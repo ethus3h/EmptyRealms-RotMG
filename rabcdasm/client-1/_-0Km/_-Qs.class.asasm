@@ -16,60 +16,12 @@ class
     initscopedepth 7
     maxscopedepth 8
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     multiply_i
-     urshift
-     astypelate
-     astypelate
-     greaterthan
-     divide
-L10:
-     setlocal            4
-
-     setlocal            5
-
      getlocal0
      pushscope
 
-     getlocal            5
-     dup
-     iftrue              L20
-
-     pop
-     getlocal1
-     convert_b
-L20:
-     iffalse             L62
-
-     jump                L28
-
-     inclocal            2
-     dup
-     setlocal            4
-
-     popscope
-     pushwith
-     getlocal2
-L28:
      getlocal0
      constructsuper      0
 
-     getlocal            5
-     iffalse             L59
-
-     jump                L39
-
-     inclocal            2
-     declocal_i          4
-     declocal_i          2
-     declocal            4
-     inclocal_i          3
-     inclocal_i          4
-L39:
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
      getlocal1
@@ -79,29 +31,14 @@ L39:
      constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
      initproperty        QName(PackageNamespace(""), "start_")
 
-     getlocal            5
-     dup
-     iftrue              L53
-
-     pop
-     getlocal3
-     convert_b
-L53:
-     iffalse             L59
-
      getlocal0
      getlocal2
      initproperty        QName(PackageNamespace(""), "_-0Eu")
 
-     getlocal            5
-     iffalse             L62
-
-L59:
      getlocal0
      getlocal3
      initproperty        QName(PackageNamespace(""), "color_")
 
-L62:
      returnvoid
     end ; code
    end ; body
@@ -121,22 +58,6 @@ L62:
      initscopedepth 7
      maxscopedepth 8
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      increment_i
-      getlocal0
-      convert_b
-      kill                8
-      inclocal_i          5
-      inclocal_i          3
-L10:
-      setlocal            10
-
-      setlocal            11
-
       getlocal0
       pushscope
 
@@ -151,40 +72,18 @@ L10:
       coerce              QName(PackageNamespace("_-0Km"), "Particle")
       setlocal            9
 
-      getlocal            11
-      dup
-      iftrue              L28
-
-      pop
-      getlocal1
-      convert_b
-L28:
-      iffalse             L41
-
       findproperty        QName(PackageNamespace(""), "x_")
       getlocal0
       getproperty         QName(PackageNamespace(""), "start_")
       getproperty         QName(PackageNamespace(""), "x")
       initproperty        QName(PackageNamespace(""), "x_")
 
-      getlocal            10
-      dup
-      iffalse             L40
-
-      pop
-      getlocal0
-      convert_b
-L40:
-      iftrue              L46
-
-L41:
       findproperty        QName(PackageNamespace(""), "y_")
       getlocal0
       getproperty         QName(PackageNamespace(""), "start_")
       getproperty         QName(PackageNamespace(""), "y")
       initproperty        QName(PackageNamespace(""), "y_")
 
-L46:
       pushshort           200
       setlocal3
 
@@ -192,83 +91,31 @@ L46:
       setlocal            4
 
       pushbyte            4
-      getlocal            10
-      iftrue              L61
-
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-0Eu")
-      getlocal            11
-      iffalse             L59
-
       pushbyte            2
       multiply
-L59:
       add
       convert_i
-L61:
       setlocal            5
 
       pushbyte            0
       setlocal            6
 
-      jump                L167
+      jump                L87
 
-L65:
+L35:
       label
       getlocal            6
-      getlocal            10
-      dup
-      iffalse             L73
-
-      pop
-      getlocal2
-      convert_b
-L73:
-      iftrue              L168
-
       pushbyte            2
-      jump                L82
-
-      bitnot
-      negate
-      getlocal0
-      inclocal            7
-      dup
-      add
-L82:
-      getlocal            10
-      iftrue              L169
-
       multiply
-      getlocal            10
-      iftrue              L92
-
       getlex              QName(PackageNamespace(""), "Math")
       getproperty         QName(PackageNamespace(""), "PI")
       multiply
-      getlocal            11
-      iffalse             L96
-
-L92:
       getlocal            5
       divide
-      getlocal            11
-      iffalse             L97
-
-L96:
       convert_d
-L97:
       setlocal            7
-
-      getlocal            11
-      dup
-      iftrue              L104
-
-      pop
-      getlocal1
-      convert_b
-L104:
-      iffalse             L170
 
       findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
       getlocal0
@@ -307,53 +154,18 @@ L104:
       coerce              QName(PackageNamespace("_-0Km"), "Particle")
       setlocal            9
 
-      getlocal            10
-      jump                L148
-
-      modulo
-      pushscope
-
-      increment
-      add_i
-      setlocal            10
-
-      divide
-L148:
-      dup
-      iffalse             L153
-
-      pop
-      getlocal1
-      convert_b
-L153:
-      iftrue              L166
-
       getlex              QName(PackageNamespace(""), "map_")
       getlocal            9
       getlex              QName(PackageNamespace(""), "x_")
       getlex              QName(PackageNamespace(""), "y_")
       callpropvoid        QName(PackageNamespace(""), "addObj"), 3
 
-      getlocal            11
-      dup
-      iftrue              L165
-
-      pop
-      getlocal0
-      convert_b
-L165:
-      iffalse             L167
-
-L166:
       inclocal_i          6
-L167:
+L87:
       getlocal            6
-L168:
       getlocal            5
-L169:
-      iflt                L65
+      iflt                L35
 
-L170:
       pushfalse
       returnvalue
      end ; code

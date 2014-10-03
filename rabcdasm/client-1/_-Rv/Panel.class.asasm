@@ -14,39 +14,16 @@ class
     initscopedepth 9
     maxscopedepth 10
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     inclocal            2
-     inclocal            2
-     inclocal_i          2
-     typeof
-     pushtrue
-     declocal_i          2
-L10:
-     setlocal2
-
-     setlocal3
-
      getlocal0
      pushscope
 
-     getlocal3
-     iffalse             L23
-
      getlocal0
      constructsuper      0
-
-     getlocal2
-     iftrue              L23
 
      getlocal0
      getlocal1
      initproperty        QName(PackageNamespace(""), "gs_")
 
-L23:
      returnvoid
     end ; code
    end ; body
@@ -79,26 +56,8 @@ L23:
    initscopedepth 8
    maxscopedepth 9
    code
-    pushfalse
-    pushtrue
-    setlocal1
-
-    jump                L10
-
-    rshift
-    multiply
-    bitor
-    getlocal2
-    add_i
-    not
-L10:
-    setlocal2
-
     getlocal0
     pushscope
-
-    getlocal2
-    iftrue              L27
 
     findproperty        QName(PackageNamespace(""), "WIDTH")
     pushshort           200
@@ -106,16 +65,12 @@ L10:
     subtract
     initproperty        QName(PackageNamespace(""), "WIDTH")
 
-    getlocal1
-    iffalse             L27
-
     findproperty        QName(PackageNamespace(""), "HEIGHT")
     pushbyte            100
     pushbyte            16
     subtract
     initproperty        QName(PackageNamespace(""), "HEIGHT")
 
-L27:
     returnvoid
    end ; code
   end ; body

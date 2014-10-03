@@ -13,63 +13,16 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     istypelate
-     convert_o
-     not
-     pop
-     urshift
-     convert_d
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
-     jump                L20
-
-     convert_u
-     greaterthan
-     astypelate
-     add_i
-     istypelate
-     pushnull
-L20:
      pushscope
-
-     getlocal2
-     dup
-     iftrue              L27
-
-     pop
-     getlocal2
-     convert_b
-L27:
-     iffalse             L38
 
      getlocal0
      newarray            0
      initproperty        QName(PrivateNamespace("*", "_-03T:ObjectProcessor#1"), "_handlers")
 
-     getlocal1
-     dup
-     iffalse             L37
-
-     pop
-     getlocal2
-     convert_b
-L37:
-     iftrue              L40
-
-L38:
      getlocal0
      constructsuper      0
 
-L40:
      returnvoid
     end ; code
    end ; body
@@ -87,34 +40,8 @@ L40:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      inclocal            2
-      declocal_i          3
-      multiply_i
-      decrement_i
-      inclocal            3
-      kill                2
-L10:
-      setlocal3
-
-      setlocal            4
-
       getlocal0
       pushscope
-
-      getlocal3
-      dup
-      iffalse             L20
-
-      pop
-      getlocal0
-      convert_b
-L20:
-      iftrue              L28
 
       getlocal0
       getproperty         QName(PrivateNamespace("*", "_-03T:ObjectProcessor#1"), "_handlers")
@@ -124,7 +51,6 @@ L20:
       constructprop       QName(PrivateNamespace("*", "_-03T:ObjectProcessor#0"), "ObjectHandler"), 2
       callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-L28:
       returnvoid
      end ; code
     end ; body
@@ -141,21 +67,6 @@ L28:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal            5
-
-      jump                L10
-
-      negate_i
-      divide
-      rshift
-      declocal            4
-      declocal            4
-      inclocal            2
-L10:
-      setlocal            6
-
       getlocal0
       pushscope
 
@@ -163,15 +74,6 @@ L10:
       coerce              QName(PrivateNamespace("*", "_-03T:ObjectProcessor#0"), "ObjectHandler")
       setlocal2
 
-      jump                L23
-
-      inclocal_i          2
-      greaterthan
-      kill                2
-      decrement_i
-      inclocal_i          2
-      swap
-L23:
       pushbyte            0
       setlocal3
 
@@ -180,9 +82,9 @@ L23:
       coerce_a
       setlocal            4
 
-      jump                L41
+      jump                L21
 
-L30:
+L12:
       label
       getlocal            4
       getlocal3
@@ -190,16 +92,13 @@ L30:
       coerce              QName(PrivateNamespace("*", "_-03T:ObjectProcessor#0"), "ObjectHandler")
       setlocal2
 
-      getlocal            5
-      iffalse             L41
-
       getlocal2
       getlocal1
       callpropvoid        QName(PackageNamespace(""), "handle"), 1
 
-L41:
+L21:
       hasnext2            4, 3
-      iftrue              L30
+      iftrue              L12
 
       kill                4
       kill                3

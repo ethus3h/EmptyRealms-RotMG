@@ -13,34 +13,8 @@ class
     initscopedepth 7
     maxscopedepth 8
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     increment_i
-     equals
-     coerce_s
-     subtract
-     hasnext
-     pushwith
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal2
-     dup
-     iftrue              L20
-
-     pop
-     getlocal2
-     convert_b
-L20:
-     iffalse             L94
 
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsGradientFill")
@@ -62,25 +36,6 @@ L20:
      constructprop       QName(PackageNamespace("flash.display"), "GraphicsGradientFill"), 5
      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.map:_-3m"), "_-UG")
 
-     getlocal2
-     jump                L48
-
-     swap
-     increment
-     lshift
-     convert_o
-     not
-     typeof
-L48:
-     dup
-     iftrue              L53
-
-     pop
-     getlocal2
-     convert_b
-L53:
-     iffalse             L100
-
      getlocal0
      getlex              QName(PackageNamespace("com.company.util"), "_-9e")
      pushbyte            0
@@ -101,16 +56,6 @@ L53:
      pushbyte            0
      getlocal0
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.map:_-3m"), "_-UG")
-     jump                L80
-
-     increment_i
-     add_i
-     getlocal1
-     bitxor
-     bitxor
-     pushscope
-
-L80:
      setproperty         MultinameL([PackageNamespace("")])
 
      dup
@@ -127,10 +72,6 @@ L80:
 
      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.map:_-3m"), "_-0BY")
 
-     getlocal1
-     iftrue              L103
-
-L94:
      getlocal0
      constructsuper      0
 
@@ -139,12 +80,10 @@ L94:
      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.map:_-3m"), "_-0BY")
      callpropvoid        QName(PackageNamespace(""), "drawGraphicsData"), 1
 
-L100:
      findproperty        QName(PackageNamespace(""), "visible")
      pushfalse
      initproperty        QName(PackageNamespace(""), "visible")
 
-L103:
      returnvoid
     end ; code
    end ; body

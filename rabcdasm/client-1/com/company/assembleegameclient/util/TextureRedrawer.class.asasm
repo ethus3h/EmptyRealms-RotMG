@@ -13,38 +13,12 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     setlocal1
-
-     jump                L10
-
-     coerce_a
-     strictequals
-     add
-     convert_d
-     convert_s
-     pop
-L10:
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal2
-     dup
-     iffalse             L19
-
-     pop
-     getlocal0
-     convert_b
-L19:
-     iftrue              L22
 
      getlocal0
      constructsuper      0
 
-L22:
      returnvoid
     end ; code
    end ; body
@@ -58,21 +32,6 @@ L22:
    initscopedepth 3
    maxscopedepth 4
    code
-    pushfalse
-    pushtrue
-    setlocal1
-
-    jump                L10
-
-    getlocal3
-    nextvalue
-    bitand
-    multiply_i
-    popscope
-    decrement
-L10:
-    setlocal2
-
     getlocal0
     pushscope
 
@@ -112,27 +71,8 @@ L10:
     constructprop       QName(PackageNamespace("flash.filters"), "GlowFilter"), 8
     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "GLOW_FILTER")
 
-    getlocal1
-    dup
-    iftrue              L51
-
-    pop
-    getlocal1
-    convert_b
-L51:
-    iffalse             L79
-
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "cache_")
     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
-    jump                L61
-
-    add
-    not
-    convert_d
-    modulo
-    popscope
-    bitxor
-L61:
     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
     setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "cache_")
 
@@ -156,57 +96,21 @@ L61:
     constructprop       QName(PackageNamespace("flash.geom"), "Matrix"), 0
     setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "tempMatrix_")
 
-L79:
     findproperty        QName(PackageNamespace(""), "_-rn")
     pushnull
     setproperty         QName(PackageNamespace(""), "_-rn")
-
-    getlocal1
-    dup
-    iftrue              L88
-
-    pop
-    getlocal0
-    convert_b
-L88:
-    iffalse             L94
 
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "textureShaderEmbed_")
     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "TextureRedrawer_textureShaderEmbed_")
     setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "textureShaderEmbed_")
 
-    getlocal1
-    iffalse             L114
-
-L94:
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "textureShaderData_")
     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "textureShaderEmbed_")
     constructprop       QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "textureShaderEmbed_"), 0
     getlex              QName(PackageNamespace("flash.utils"), "ByteArray")
-    jump                L105
-
-    istypelate
-    setlocal2
-
-    convert_i
-    urshift
-    coerce_a
-    pushundefined
-L105:
     astypelate
     setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "textureShaderData_")
 
-    getlocal2
-    dup
-    iffalse             L113
-
-    pop
-    getlocal2
-    convert_b
-L113:
-    iftrue              L121
-
-L114:
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "colorTexture1")
     findpropstrict      QName(PackageNamespace("flash.display"), "BitmapData")
     pushbyte            1
@@ -215,7 +119,6 @@ L114:
     constructprop       QName(PackageNamespace("flash.display"), "BitmapData"), 3
     setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "colorTexture1")
 
-L121:
     findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "colorTexture2")
     findpropstrict      QName(PackageNamespace("flash.display"), "BitmapData")
     pushbyte            1
@@ -257,23 +160,6 @@ L121:
     initscopedepth 3
     maxscopedepth 4
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     inclocal            3
-     declocal_i          6
-     pushnull
-     bitnot
-     pushnull
-     pushscope
-
-L10:
-     setlocal            10
-
-     setlocal            11
-
      getlocal0
      pushscope
 
@@ -285,13 +171,9 @@ L10:
      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
      setlocal            9
 
-     getlocal            11
-     iffalse             L24
-
      getlocal            6
-     iffalse             L61
+     iffalse             L36
 
-L24:
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "cache_")
      getlocal2
      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util"), PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#1"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0A"), StaticProtectedNs("_-0A")])
@@ -300,31 +182,19 @@ L24:
      setlocal            8
 
      pushnull
-     ifne                L49
+     ifne                L26
 
      findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
      constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
      coerce              QName(PackageNamespace("flash.utils"), "Dictionary")
      setlocal            8
 
-     getlocal            10
-     iftrue              L49
-
-     jump                L45
-
-     add
-     kill                6
-     kill                3
-     getlocal            6
-     coerce_s
-     declocal_i          9
-L45:
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "cache_")
      getlocal2
      getlocal            8
      setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util"), PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#1"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0A"), StaticProtectedNs("_-0A")])
 
-L49:
+L26:
      getlocal            8
      getlocal1
      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util"), PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#1"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0A"), StaticProtectedNs("_-0A")])
@@ -333,30 +203,18 @@ L49:
      setlocal            9
 
      pushnull
-     ifeq                L61
-
-     getlocal            11
-     iffalse             L61
+     ifeq                L36
 
      getlocal            9
      returnvalue
 
-L61:
+L36:
      findpropstrict      QName(PackageNamespace(""), "resize")
      getlocal1
      pushnull
      getlocal2
      getlocal3
      pushbyte            0
-     jump                L74
-
-     pushnull
-     greaterthan
-     convert_o
-     pushfalse
-     kill                5
-     popscope
-L74:
      dup
      getlocal            7
      callproperty        QName(PackageNamespace(""), "resize"), 7
@@ -371,22 +229,15 @@ L74:
      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
      setlocal            9
 
-     getlocal            10
-     iftrue              L92
-
      getlocal            6
-     iffalse             L96
+     iffalse             L60
 
-     getlocal            10
-     iftrue              L96
-
-L92:
      getlocal            8
      getlocal1
      getlocal            9
      setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util"), PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#1"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0A"), StaticProtectedNs("_-0A")])
 
-L96:
+L60:
      getlocal            9
      returnvalue
     end ; code
@@ -412,137 +263,32 @@ L96:
     initscopedepth 3
     maxscopedepth 4
     code
-     pushfalse
-     pushtrue
-     setlocal            12
-
-     jump                L10
-
-     declocal_i          11
-     getglobalscope
-     bitor
-     getlocal            4
-     declocal_i          8
-     setlocal2
-
-L10:
-     setlocal            13
-
      getlocal0
      pushscope
-
-     getlocal            12
-     dup
-     iftrue              L19
-
-     pop
-     getlocal1
-     convert_b
-L19:
-     iffalse             L69
 
      getlocal2
      pushnull
      equals
-     getlocal            12
-     iffalse             L39
-
      not
-     getlocal            12
-     iffalse             L66
-
      dup
-     getlocal            13
-     dup
-     iffalse             L35
+     iffalse             L20
 
      pop
-     getlocal0
-     convert_b
-L35:
-     iftrue              L58
-
-     iffalse             L87
-
-     getlocal            13
-     iftrue              L57
-
-L39:
-     pop
-     getlocal            12
-     dup
-     iftrue              L46
-
-     pop
-     getlocal0
-     convert_b
-L46:
-     iffalse             L88
-
      getlocal            5
-     getlocal            12
-     iffalse             L77
-
      pushbyte            0
-     getlocal            12
-     iffalse             L126
-
      equals
-     getlocal            13
-     iftrue              L57
-
      not
-L57:
      dup
-L58:
-     iftrue              L87
-
-     getlocal            13
-     dup
-     iffalse             L65
+     iftrue              L20
 
      pop
-     getlocal0
-     convert_b
-L65:
-     iftrue              L86
-
-L66:
-     pop
-     getlocal            12
-     iffalse             L88
-
-L69:
      getlocal            6
-     getlocal            13
-     dup
-     iffalse             L76
-
-     pop
-     getlocal1
-     convert_b
-L76:
-     iftrue              L135
-
-L77:
      pushbyte            0
-     getlocal            13
-     dup
-     iffalse             L84
-
-     pop
-     getlocal0
-     convert_b
-L84:
-     iftrue              L126
-
      equals
-L86:
      not
-L87:
-     iffalse             L117
+L20:
+     iffalse             L34
 
-L88:
      findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "retexture")
      getlocal1
      getlocal2
@@ -552,87 +298,33 @@ L88:
      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
      setlocal1
 
-     getlocal            13
-     jump                L104
-
-     pushnull
-     rshift
-     declocal_i          10
-     modulo
-     declocal            8
-     greaterequals
-L104:
-     dup
-     iffalse             L109
-
-     pop
-     getlocal0
-     convert_b
-L109:
-     iftrue              L117
-
      getlocal3
-     getlocal            12
-     iffalse             L116
-
      pushbyte            5
      divide
      convert_i
-L116:
      setlocal3
 
-L117:
+L34:
      getlocal            7
-     getlocal            13
-     dup
-     iffalse             L124
-
-     pop
      getlocal3
-     convert_b
-L124:
-     iftrue              L135
-
-     getlocal3
-L126:
      pushbyte            100
      divide
      multiply
-     getlocal            12
-     iffalse             L134
-
      getlocal1
      getproperty         QName(PackageNamespace(""), "width")
      multiply
-L134:
      convert_i
-L135:
      setlocal            8
 
      getlocal            7
-     getlocal            13
-     dup
-     iffalse             L143
-
-     pop
-     getlocal1
-     convert_b
-L143:
-     iftrue              L154
-
      getlocal3
      pushbyte            100
      divide
      multiply
-     getlocal            13
-     iftrue              L153
-
      getlocal1
      getproperty         QName(PackageNamespace(""), "height")
      multiply
-L153:
      convert_i
-L154:
      setlocal            9
 
      findpropstrict      QName(PackageNamespace("flash.geom"), "Matrix")
@@ -651,49 +343,29 @@ L154:
      divide
      callpropvoid        QName(PackageNamespace(""), "scale"), 2
 
-     getlocal            12
-     dup
-     iftrue              L175
-
-     pop
-     getlocal1
-     convert_b
-L175:
-     iffalse             L180
-
      getlocal            10
      pushbyte            12
      dup
      callpropvoid        QName(PackageNamespace(""), "translate"), 2
 
-L180:
      findpropstrict      QName(PackageNamespace("flash.display"), "BitmapData")
      getlocal            8
      pushbyte            12
      add
-     jump                L191
-
-     typeof
-     istypelate
-     getlocal2
-     declocal            7
-     strictequals
-     kill                4
-L191:
      pushbyte            12
      add
      getlocal            9
      getlocal            4
-     iffalse             L199
+     iffalse             L84
 
      pushbyte            12
      coerce_a
-     jump                L201
+     jump                L86
 
-L199:
+L84:
      pushbyte            1
      coerce_a
-L201:
+L86:
      add
      pushbyte            12
      add
@@ -727,22 +399,6 @@ L201:
     initscopedepth 3
     maxscopedepth 4
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     inclocal_i          2
-     kill                3
-     istypelate
-     increment
-     getlocal            5
-     declocal            2
-L10:
-     setlocal            6
-
-     setlocal            7
-
      getlocal0
      pushscope
 
@@ -751,21 +407,8 @@ L10:
      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
      setlocal            4
 
-     getlocal            7
-     iffalse             L60
-
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "tempMatrix_")
      callpropvoid        QName(PackageNamespace(""), "identity"), 0
-
-     getlocal            7
-     dup
-     iftrue              L28
-
-     pop
-     getlocal3
-     convert_b
-L28:
-     iffalse             L60
 
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "tempMatrix_")
      getlocal1
@@ -778,34 +421,14 @@ L28:
      divide
      callpropvoid        QName(PackageNamespace(""), "scale"), 2
 
-     getlocal            7
-     dup
-     iftrue              L45
-
-     pop
-     getlocal0
-     convert_b
-L45:
-     iffalse             L60
-
      getlocal            4
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "gradient_")
-     jump                L55
-
-     inclocal            2
-     convert_d
-     coerce_s
-     convert_s
-     declocal_i          3
-     declocal_i          5
-L55:
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "tempMatrix_")
      pushnull
      getlex              QName(PackageNamespace("flash.display"), "BlendMode")
      getproperty         QName(PackageNamespace(""), "SUBTRACT")
      callpropvoid        QName(PackageNamespace(""), "draw"), 4
 
-L60:
      findpropstrict      QName(PackageNamespace("flash.display"), "Bitmap")
      getlocal1
      constructprop       QName(PackageNamespace("flash.display"), "Bitmap"), 1
@@ -824,51 +447,23 @@ L60:
      getlocal2
      setproperty         QName(PackageNamespace(""), "color")
 
-     getlocal            6
-     dup
-     iffalse             L81
-
-     pop
-     getlocal3
-     convert_b
-L81:
-     iftrue              L115
-
      getlocal            4
      getlocal            4
      getlocal            4
      getproperty         QName(PackageNamespace(""), "rect")
-     jump                L93
-
-     not
-     astypelate
-     inclocal_i          3
-     setlocal2
-
-     declocal            4
-     setlocal3
-
-L93:
      getlex              QName(PackageNamespace("com.company.util"), "PointUtil")
      getproperty         QName(PackageNamespace(""), "_-P5")
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "OUTLINE_FILTER")
      callpropvoid        QName(PackageNamespace(""), "applyFilter"), 4
 
-     getlocal            6
-     iftrue              L107
-
      getlocal3
      pushdouble          4294967295
-     ifeq                L115
-
-     getlocal            7
-     iffalse             L107
+     ifeq                L62
 
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "GLOW_FILTER")
      getlocal3
      setproperty         QName(PackageNamespace(""), "color")
 
-L107:
      getlocal            4
      getlocal            4
      getlocal            4
@@ -878,7 +473,7 @@ L107:
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "GLOW_FILTER")
      callpropvoid        QName(PackageNamespace(""), "applyFilter"), 4
 
-L115:
+L62:
      getlocal            4
      returnvalue
     end ; code
@@ -897,22 +492,6 @@ L115:
     initscopedepth 3
     maxscopedepth 4
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     divide
-     inclocal_i          4
-     getlocal1
-     getlocal3
-     declocal            5
-     declocal_i          2
-L10:
-     setlocal            5
-
-     setlocal            6
-
      getlocal0
      pushscope
 
@@ -922,28 +501,21 @@ L10:
      coerce              QName(PackageNamespace("flash.utils"), "Dictionary")
      setlocal3
 
-     getlocal            5
-     iftrue              L24
-
      getlocal3
      pushnull
-     ifne                L34
+     ifne                L18
 
-L24:
      findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
      constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
      coerce              QName(PackageNamespace("flash.utils"), "Dictionary")
      setlocal3
-
-     getlocal            6
-     iffalse             L34
 
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "cache_")
      getlocal2
      getlocal3
      setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util"), PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#1"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0A"), StaticProtectedNs("_-0A")])
 
-L34:
+L18:
      getlocal3
      getlocal1
      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util"), PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#1"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0A"), StaticProtectedNs("_-0A")])
@@ -952,24 +524,12 @@ L34:
      setlocal            4
 
      pushnull
-     ifeq                L53
-
-     jump                L49
-
-     inclocal            3
-     getlocal3
-     hasnext
-     decrement_i
-     subtract_i
-     kill                5
-L49:
-     getlocal            5
-     iftrue              L53
+     ifeq                L28
 
      getlocal            4
      returnvalue
 
-L53:
+L28:
      findpropstrict      QName(PackageNamespace("flash.display"), "BitmapData")
      getlocal2
      pushbyte            4
@@ -992,25 +552,12 @@ L53:
      pushbyte            4
      dup
      getlocal2
-     jump                L81
-
-     kill                4
-     kill                2
-     setlocal            4
-
-     bitand
-     declocal            2
-     getlocal            5
-L81:
      getlocal2
      constructprop       QName(PackageNamespace("flash.geom"), "Rectangle"), 4
      pushdouble          4278190080
      getlocal1
      bitor
      callpropvoid        QName(PackageNamespace(""), "fillRect"), 2
-
-     getlocal            5
-     iftrue              L99
 
      getlocal            4
      getlocal            4
@@ -1021,16 +568,11 @@ L81:
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "OUTLINE_FILTER")
      callpropvoid        QName(PackageNamespace(""), "applyFilter"), 4
 
-     getlocal            6
-     iffalse             L103
-
-L99:
      getlocal3
      getlocal1
      getlocal            4
      setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util"), PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#1"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0A"), StaticProtectedNs("_-0A")])
 
-L103:
      getlocal            4
      returnvalue
     end ; code
@@ -1047,22 +589,6 @@ L103:
     initscopedepth 3
     maxscopedepth 4
     code
-     pushfalse
-     pushtrue
-     setlocal            8
-
-     jump                L10
-
-     declocal            3
-     nextvalue
-     setlocal            4
-
-     kill                5
-     inclocal_i          5
-     hasnext
-L10:
-     setlocal            9
-
      getlocal0
      pushscope
 
@@ -1085,9 +611,9 @@ L10:
      coerce_a
      setlocal            5
 
-     jump                L63
+     jump                L41
 
-L28:
+L17:
      label
      getlocal            5
      getlocal            4
@@ -1095,29 +621,16 @@ L28:
      coerce              QName(PackageNamespace("flash.utils"), "Dictionary")
      setlocal2
 
-     getlocal            8
-     iffalse             L63
-
      pushbyte            0
      setlocal            6
-
-     getlocal            8
-     dup
-     iftrue              L44
-
-     pop
-     getlocal1
-     convert_b
-L44:
-     iffalse             L62
 
      getlocal2
      coerce_a
      setlocal            7
 
-     jump                L59
+     jump                L37
 
-L49:
+L29:
      label
      getlocal            7
      getlocal            6
@@ -1125,91 +638,36 @@ L49:
      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
      setlocal1
 
-     getlocal            8
-     iffalse             L59
-
      getlocal1
      callpropvoid        QName(PackageNamespace(""), "dispose"), 0
 
-L59:
+L37:
      hasnext2            7, 6
-     iftrue              L49
+     iftrue              L29
 
      kill                7
-L62:
      kill                6
-L63:
+L41:
      hasnext2            5, 4
-     getlocal            8
-     iffalse             L149
-
-     iftrue              L28
-
-     getlocal            8
-     iffalse             L150
+     iftrue              L17
 
      kill                5
-     getlocal            8
-     jump                L78
-
-     setlocal2
-
-     inclocal            3
-     getlocal2
-     declocal_i          7
-     declocal            4
-     setlocal2
-
-L78:
-     dup
-     iftrue              L83
-
-     pop
-     getlocal0
-     convert_b
-L83:
-     iffalse             L107
-
      kill                4
-     getlocal            9
-     dup
-     iffalse             L91
-
-     pop
-     getlocal0
-     convert_b
-L91:
-     iftrue              L163
-
      findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "cache_")
      findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
      constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
      setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "cache_")
 
-     getlocal            8
-     iffalse             L163
-
      pushbyte            0
      setlocal            4
 
-     getlocal            9
-     dup
-     iffalse             L106
-
-     pop
-     getlocal2
-     convert_b
-L106:
-     iftrue              L151
-
-L107:
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "_-1d")
      coerce_a
      setlocal            5
 
-     jump                L148
+     jump                L79
 
-L111:
+L55:
      label
      getlocal            5
      getlocal            4
@@ -1217,22 +675,16 @@ L111:
      coerce              QName(PackageNamespace("flash.utils"), "Dictionary")
      setlocal3
 
-     getlocal            9
-     iftrue              L148
-
      pushbyte            0
      setlocal            6
-
-     getlocal            8
-     iffalse             L147
 
      getlocal3
      coerce_a
      setlocal            7
 
-     jump                L144
+     jump                L75
 
-L127:
+L67:
      label
      getlocal            7
      getlocal            6
@@ -1240,54 +692,26 @@ L127:
      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
      setlocal1
 
-     jump                L140
-
-     pushtrue
-     newactivation
-     setlocal            7
-
-     getlocal            7
-     declocal            4
-     getlocal3
-L140:
-     getlocal            8
-     iffalse             L144
-
      getlocal1
      callpropvoid        QName(PackageNamespace(""), "dispose"), 0
 
-L144:
+L75:
      hasnext2            7, 6
-     iftrue              L127
+     iftrue              L67
 
      kill                7
-L147:
      kill                6
-L148:
+L79:
      hasnext2            5, 4
-L149:
-     iftrue              L111
+     iftrue              L55
 
-L150:
      kill                5
-L151:
      kill                4
-     getlocal            8
-     dup
-     iftrue              L158
-
-     pop
-     getlocal2
-     convert_b
-L158:
-     iffalse             L163
-
      findproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "_-1d")
      findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
      constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
      setproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "_-1d")
 
-L163:
      returnvoid
     end ; code
    end ; body
@@ -1305,91 +729,38 @@ L163:
     initscopedepth 3
     maxscopedepth 4
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     inclocal            2
-     negate_i
-     pushundefined
-     declocal_i          5
-     setlocal3
-
-     equals
-L10:
-     setlocal            5
-
-     setlocal            6
-
      getlocal0
      pushscope
 
-     getlocal            6
-     iffalse             L28
-
      getlocal2
      pushbyte            1
-     ifne                L28
-
-     getlocal            6
-     dup
-     iftrue              L25
-
-     pop
-     getlocal0
-     convert_b
-L25:
-     iffalse             L28
+     ifne                L7
 
      getlocal1
      returnvalue
 
-L28:
+L7:
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "_-1d")
      getlocal2
      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util"), PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#1"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0A"), StaticProtectedNs("_-0A")])
      coerce              QName(PackageNamespace("flash.utils"), "Dictionary")
      setlocal3
 
-     getlocal            6
-     dup
-     iftrue              L39
-
-     pop
-     getlocal0
-     convert_b
-L39:
-     iffalse             L43
-
      getlocal3
      pushnull
-     ifne                L60
+     ifne                L23
 
-L43:
      findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
-     jump                L51
-
-     convert_b
-     negate
-     kill                5
-     decrement
-     inclocal            2
-     checkfilter
-L51:
      constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
      coerce              QName(PackageNamespace("flash.utils"), "Dictionary")
      setlocal3
-
-     getlocal            5
-     iftrue              L60
 
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "_-1d")
      getlocal2
      getlocal3
      setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util"), PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#1"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0A"), StaticProtectedNs("_-0A")])
 
-L60:
+L23:
      getlocal3
      getlocal1
      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util"), PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#1"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0A"), StaticProtectedNs("_-0A")])
@@ -1398,33 +769,14 @@ L60:
      setlocal            4
 
      pushnull
-     ifeq                L77
-
-     getlocal            5
-     dup
-     iffalse             L74
-
-     pop
-     getlocal0
-     convert_b
-L74:
-     iftrue              L77
+     ifeq                L33
 
      getlocal            4
      returnvalue
 
-L77:
+L33:
      getlocal1
      callproperty        QName(PackageNamespace(""), "clone"), 0
-     jump                L86
-
-     pushtrue
-     inclocal_i          5
-     declocal_i          2
-     declocal_i          2
-     pop
-     kill                2
-L86:
      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
      dup
      dup
@@ -1438,22 +790,11 @@ L86:
      constructprop       QName(PackageNamespace("flash.geom"), "ColorTransform"), 3
      callpropvoid        QName(PackageNamespace(""), "colorTransform"), 2
 
-     getlocal            5
-     dup
-     iffalse             L103
-
-     pop
-     getlocal2
-     convert_b
-L103:
-     iftrue              L108
-
      getlocal3
      getlocal1
      getlocal            4
      setproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util"), PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#1"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0A"), StaticProtectedNs("_-0A")])
 
-L108:
      getlocal            4
      returnvalue
     end ; code
@@ -1473,22 +814,6 @@ L108:
     initscopedepth 3
     maxscopedepth 4
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     inclocal            6
-     instanceof
-     declocal            3
-     getlocal            4
-     getglobalscope
-     declocal_i          7
-L10:
-     setlocal            7
-
-     setlocal            8
-
      getlocal0
      pushscope
 
@@ -1497,57 +822,25 @@ L10:
      setlocal3
 
      getlocal1
-     getlocal            7
-     dup
-     iffalse             L24
-
-     pop
-     getlocal0
-     convert_b
-L24:
-     iftrue              L33
-
      pushbyte            24
-     getlocal            8
-     iffalse             L32
-
      rshift
-     getlocal            7
-     iftrue              L33
-
      pushshort           255
-L32:
      bitand
-L33:
      setlocal            4
 
      getlocal1
-     getlocal            8
-     iffalse             L39
-
      pushint             16777215
      bitand
-L39:
      setlocal            5
 
-     jump                L125
+     jump                L56
 
-L41:
+L16:
      label
      getlocal2
      returnvalue
 
-     getlocal            8
-     dup
-     iftrue              L50
-
-     pop
-     getlocal0
-     convert_b
-L50:
-     iffalse             L74
-
-L51:
+L19:
      label
      getlocal2
      pushbyte            0
@@ -1555,20 +848,10 @@ L51:
      getlocal            5
      callpropvoid        QName(PackageNamespace(""), "setPixel"), 3
 
-     getlocal            8
-     dup
-     iftrue              L63
-
-     pop
-     getlocal0
-     convert_b
-L63:
-     iffalse             L249
-
      getlocal2
      returnvalue
 
-L66:
+L27:
      label
      getlex              QName(PackageNamespace("com.company.util"), "AssetLibrary")
      pushstring          "textile4x4"
@@ -1576,10 +859,7 @@ L66:
      callproperty        QName(PackageNamespace(""), "_-xK"), 2
      returnvalue
 
-     getlocal            8
-     iffalse             L123
-
-L74:
+L33:
      label
      getlex              QName(PackageNamespace("com.company.util"), "AssetLibrary")
      pushstring          "textile5x5"
@@ -1587,17 +867,7 @@ L74:
      callproperty        QName(PackageNamespace(""), "_-xK"), 2
      returnvalue
 
-     getlocal            7
-     dup
-     iffalse             L86
-
-     pop
-     getlocal1
-     convert_b
-L86:
-     iftrue              L249
-
-L87:
+L39:
      label
      getlex              QName(PackageNamespace("com.company.util"), "AssetLibrary")
      pushstring          "textile9x9"
@@ -1605,7 +875,7 @@ L87:
      callproperty        QName(PackageNamespace(""), "_-xK"), 2
      returnvalue
 
-L93:
+L45:
      label
      getlex              QName(PackageNamespace("com.company.util"), "AssetLibrary")
      pushstring          "textile10x10"
@@ -1613,242 +883,81 @@ L93:
      callproperty        QName(PackageNamespace(""), "_-xK"), 2
      returnvalue
 
-     getlocal            7
-     dup
-     iffalse             L105
-
-     pop
-     getlocal3
-     convert_b
-L105:
-     iftrue              L249
-
-L106:
+L51:
      label
      getlex              QName(PackageNamespace(""), "_-rn")
      returnvalue
 
-     getlocal            7
-     dup
-     iffalse             L122
-
-     pop
-     getlocal0
-     convert_b
-     jump                L122
-
-     instanceof
-     lessequals
-     inclocal            7
-     hasnext
-     kill                6
-     inclocal            7
-L122:
-     iftrue              L249
-
-L123:
+L54:
      label
-     jump                L249
+     jump                L96
 
-L125:
+L56:
      getlocal            4
-     getlocal            8
-     dup
-     iftrue              L132
-
-     pop
-     getlocal3
-     convert_b
-L132:
-     iffalse             L248
-
      setlocal            6
 
-     getlocal            8
-     dup
-     iftrue              L140
-
-     pop
-     getlocal3
-     convert_b
-L140:
-     iffalse             L191
+     pushbyte            0
+     getlocal            6
+     ifstrictne          L63
 
      pushbyte            0
-     getlocal            8
-     dup
-     iftrue              L148
+     jump                L94
 
-     pop
-     getlocal0
-     convert_b
-L148:
-     iffalse             L206
-
-     getlocal            6
-     ifstrictne          L155
-
-     pushbyte            0
-     getlocal            7
-     iftrue              L199
-
-     jump                L247
-
-L155:
+L63:
      pushbyte            1
      getlocal            6
-     ifstrictne          L167
-
-     getlocal            7
-     dup
-     iffalse             L164
-
-     pop
-     getlocal0
-     convert_b
-L164:
-     iftrue              L191
+     ifstrictne          L68
 
      pushbyte            1
-     jump                L247
+     jump                L94
 
-L167:
+L68:
      pushbyte            4
-     getlocal            7
-     dup
-     iffalse             L174
-
-     pop
-     getlocal0
-     convert_b
-L174:
-     iftrue              L201
-
      getlocal            6
-     getlocal            8
-     dup
-     iftrue              L182
+     ifstrictne          L73
 
-     pop
-     getlocal2
-     convert_b
-L182:
-     iffalse             L209
-
-     ifstrictne          L200
-
-     getlocal            8
-     dup
-     iftrue              L190
-
-     pop
-     getlocal0
-     convert_b
-L190:
-     iffalse             L241
-
-L191:
      pushbyte            2
-     getlocal            7
-     dup
-     iffalse             L198
+     jump                L94
 
-     pop
-     getlocal2
-     convert_b
-L198:
-     iftrue              L230
-
-L199:
-     jump                L247
-
-L200:
+L73:
      pushbyte            5
-L201:
      getlocal            6
-     ifstrictne          L207
-
-     getlocal            7
-     iftrue              L210
+     ifstrictne          L78
 
      pushbyte            3
-L206:
-     jump                L247
+     jump                L94
 
-L207:
+L78:
      pushbyte            9
      getlocal            6
-L209:
-     ifstrictne          L219
+     ifstrictne          L83
 
-L210:
      pushbyte            4
-     getlocal            8
-     dup
-     iftrue              L217
+     jump                L94
 
-     pop
-     getlocal0
-     convert_b
-L217:
-     iffalse             L239
-
-     jump                L247
-
-L219:
+L83:
      pushbyte            10
-     jump                L227
-
-     inclocal            7
-     declocal            5
-     declocal_i          6
-     declocal_i          2
-     setlocal            5
-
-     declocal_i          2
-L227:
      getlocal            6
-     ifstrictne          L231
+     ifstrictne          L88
 
      pushbyte            5
-L230:
-     jump                L247
+     jump                L94
 
-L231:
+L88:
      pushshort           255
-     getlocal            8
-     dup
-     iftrue              L238
-
-     pop
-     getlocal1
-     convert_b
-L238:
-     iffalse             L242
-
-L239:
      getlocal            6
-     ifstrictne          L243
+     ifstrictne          L93
 
-L241:
      pushbyte            6
-L242:
-     jump                L247
+     jump                L94
 
-L243:
-     jump                L246
-
+L93:
      pushbyte            7
-     jump                L247
-
-L246:
-     pushbyte            7
-L247:
+L94:
      kill                6
-L248:
-     lookupswitch        L123, [L41, L51, L66, L74, L87, L93, L106, L123]
+     lookupswitch        L54, [L16, L19, L27, L33, L39, L45, L51, L54]
 
-L249:
+L96:
      pushnull
      returnvalue
     end ; code
@@ -1873,21 +982,6 @@ L249:
     initscopedepth 3
     maxscopedepth 4
     code
-     pushfalse
-     pushtrue
-     setlocal            10
-
-     jump                L10
-
-     kill                3
-     bitor
-     equals
-     inclocal            8
-     getlocal            10
-     getlocal            6
-L10:
-     setlocal            11
-
      getlocal0
      pushscope
 
@@ -1953,26 +1047,6 @@ L10:
      getlocal2
      setproperty         Multiname("input", [PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util"), PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#1"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0A"), StaticProtectedNs("_-0A")])
 
-     jump                L73
-
-     typeof
-     lessequals
-     inclocal            7
-     setlocal            8
-
-     nextname
-     declocal            7
-L73:
-     getlocal            11
-     dup
-     iffalse             L79
-
-     pop
-     getlocal2
-     convert_b
-L79:
-     iftrue              L90
-
      getlocal            9
      getproperty         QName(PackageNamespace(""), "data")
      getproperty         Multiname("texture1", [PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util"), PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#1"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0A"), StaticProtectedNs("_-0A")])
@@ -1985,36 +1059,25 @@ L79:
      getlocal            8
      setproperty         Multiname("input", [PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util"), PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#1"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0A"), StaticProtectedNs("_-0A")])
 
-L90:
      getlocal            9
      getproperty         QName(PackageNamespace(""), "data")
      getproperty         Multiname("texture1Size", [PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util"), PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#1"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0A"), StaticProtectedNs("_-0A")])
      getlocal3
      pushbyte            0
      equals
-     iffalse             L100
+     iffalse             L75
 
      pushbyte            0
      coerce_a
-     jump                L103
+     jump                L78
 
-L100:
+L75:
      getlocal            7
      getproperty         QName(PackageNamespace(""), "width")
      coerce_a
-L103:
+L78:
      newarray            1
      setproperty         Multiname("value", [PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util"), PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#1"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0A"), StaticProtectedNs("_-0A")])
-
-     getlocal            10
-     dup
-     iftrue              L111
-
-     pop
-     getlocal0
-     convert_b
-L111:
-     iffalse             L151
 
      getlocal            9
      getproperty         QName(PackageNamespace(""), "data")
@@ -2022,38 +1085,19 @@ L111:
      getlocal            4
      pushbyte            0
      equals
-     iffalse             L129
+     iffalse             L90
 
      pushbyte            0
      coerce_a
-     jump                L132
+     jump                L93
 
-     jump                L129
-
-     lessequals
-     setlocal2
-
-     coerce_s
-     kill                4
-     declocal_i          4
-     pushundefined
-L129:
+L90:
      getlocal            8
      getproperty         QName(PackageNamespace(""), "width")
      coerce_a
-L132:
+L93:
      newarray            1
      setproperty         Multiname("value", [PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.util"), PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#1"), PackageInternalNs("com.company.assembleegameclient.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0A"), StaticProtectedNs("_-0A")])
-
-     getlocal            10
-     dup
-     iftrue              L140
-
-     pop
-     getlocal2
-     convert_b
-L140:
-     iffalse             L151
 
      getlocal            6
      getlocal            6
@@ -2066,7 +1110,6 @@ L140:
      constructprop       QName(PackageNamespace("flash.filters"), "ShaderFilter"), 1
      callpropvoid        QName(PackageNamespace(""), "applyFilter"), 4
 
-L151:
      getlocal            6
      returnvalue
     end ; code
@@ -2083,23 +1126,6 @@ L151:
     initscopedepth 3
     maxscopedepth 4
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     checkfilter
-     declocal            3
-     inclocal            3
-     popscope
-     declocal            2
-     pushscope
-
-L10:
-     setlocal3
-
-     setlocal            4
-
      getlocal0
      pushscope
 
@@ -2113,9 +1139,6 @@ L10:
      coerce              QName(PackageNamespace("flash.geom"), "Matrix")
      setlocal2
 
-     getlocal            4
-     iffalse             L81
-
      getlocal2
      pushshort           256
      pushshort           256
@@ -2124,20 +1147,8 @@ L10:
      pushbyte            2
      divide
      pushbyte            0
-     jump                L39
-
-     declocal            2
-     inclocal_i          2
-     inclocal            2
-     inclocal_i          2
-     pushfalse
-     getlocal2
-L39:
      dup
      callpropvoid        QName(PackageNamespace(""), "createGradientBox"), 5
-
-     getlocal3
-     iftrue              L84
 
      getlocal1
      getproperty         QName(PackageNamespace(""), "graphics")
@@ -2151,22 +1162,9 @@ L39:
      newarray            2
      pushbyte            127
      pushshort           255
-     jump                L62
-
-     inclocal_i          2
-     declocal_i          2
-     getlocal0
-     inclocal            2
-     kill                3
-     setlocal3
-
-L62:
      newarray            2
      getlocal2
      callpropvoid        QName(PackageNamespace(""), "beginGradientFill"), 5
-
-     getlocal            4
-     iffalse             L84
 
      getlocal1
      getproperty         QName(PackageNamespace(""), "graphics")
@@ -2176,22 +1174,10 @@ L62:
      pushshort           256
      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
 
-     getlocal            4
-     dup
-     iftrue              L80
-
-     pop
-     getlocal1
-     convert_b
-L80:
-     iffalse             L84
-
-L81:
      getlocal1
      getproperty         QName(PackageNamespace(""), "graphics")
      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
 
-L84:
      getlocal1
      returnvalue
     end ; code
@@ -2208,22 +1194,6 @@ L84:
     initscopedepth 3
     maxscopedepth 4
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     astypelate
-     typeof
-     inclocal_i          2
-     declocal            2
-     inclocal_i          2
-     not
-L10:
-     setlocal2
-
-     setlocal3
-
      getlocal0
      pushscope
 
@@ -2232,23 +1202,16 @@ L10:
      coerce              QName(PackageNamespace("flash.geom"), "Matrix")
      setlocal1
 
-     getlocal2
-     iftrue              L30
-
      getlocal1
      pushbyte            8
      dup
      callpropvoid        QName(PackageNamespace(""), "scale"), 2
-
-     getlocal3
-     iffalse             L30
 
      getlocal1
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "BORDER")
      getlex              QName(PrivateNamespace("*", "com.company.assembleegameclient.util:TextureRedrawer#0"), "BORDER")
      callpropvoid        QName(PackageNamespace(""), "translate"), 2
 
-L30:
      getlocal1
      returnvalue
     end ; code

@@ -119,7 +119,7 @@ L49:
 
       findpropstrict      QName(PackageNamespace(""), "isVolatile")
       callproperty        QName(PackageNamespace(""), "isVolatile"), 0
-      iftrue              L78
+      iftrue              L75
 
       getscopeobject      1
       pushnull
@@ -174,7 +174,7 @@ L40:
       getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_onFlushStatus")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-      jump                L78
+      jump                L75
 
 L50:
       label
@@ -182,11 +182,11 @@ L50:
       pushstring          "Value flushed to disk."
       callpropvoid        QName(PackageNamespace(""), "info"), 1
 
-      jump                L78
+      jump                L75
 
 L55:
       label
-      jump                L78
+      jump                L75
 
 L57:
       getscopeobject      1
@@ -199,7 +199,7 @@ L57:
       ifstrictne          L66
 
       pushbyte            0
-      jump                L76
+      jump                L73
 
 L66:
       getlex              QName(PackageNamespace("flash.net"), "SharedObjectFlushStatus")
@@ -208,21 +208,15 @@ L66:
       ifstrictne          L72
 
       pushbyte            1
-      jump                L76
+      jump                L73
 
 L72:
-      jump                L75
-
       pushbyte            2
-      jump                L76
-
-L75:
-      pushbyte            2
-L76:
+L73:
       kill                2
       lookupswitch        L55, [L40, L50, L55]
 
-L78:
+L75:
       returnvoid
      end ; code
      try from L17 to L22 target L23 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
@@ -1081,7 +1075,7 @@ L6:
       pushstring          "User granted permission -- value saved."
       callpropvoid        QName(PackageNamespace(""), "info"), 1
 
-      jump                L38
+      jump                L35
 
 L11:
       label
@@ -1089,11 +1083,11 @@ L11:
       pushstring          "User denied permission -- value not saved."
       callpropvoid        QName(PackageNamespace(""), "info"), 1
 
-      jump                L38
+      jump                L35
 
 L16:
       label
-      jump                L38
+      jump                L35
 
 L18:
       getlocal1
@@ -1106,7 +1100,7 @@ L18:
       ifstrictne          L27
 
       pushbyte            0
-      jump                L36
+      jump                L33
 
 L27:
       pushstring          "SharedObject.Flush.Failed"
@@ -1114,21 +1108,15 @@ L27:
       ifstrictne          L32
 
       pushbyte            1
-      jump                L36
+      jump                L33
 
 L32:
-      jump                L35
-
       pushbyte            2
-      jump                L36
-
-L35:
-      pushbyte            2
-L36:
+L33:
       kill                2
       lookupswitch        L16, [L6, L11, L16]
 
-L38:
+L35:
       getlex              QName(PrivateNamespace("*", "com.google.analytics.core:Buffer#0"), "_SO")
       getlex              QName(PackageNamespace("flash.events"), "NetStatusEvent")
       getproperty         QName(PackageNamespace(""), "NET_STATUS")

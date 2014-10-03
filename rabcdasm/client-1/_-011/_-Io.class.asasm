@@ -14,39 +14,13 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     setlocal2
-
-     jump                L10
-
-     pushnan
-     swap
-     kill                2
-     inclocal_i          2
-     bitand
-     pushnan
-L10:
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal3
-     dup
-     iffalse             L19
-
-     pop
-     getlocal3
-     convert_b
-L19:
-     iftrue              L23
 
      getlocal0
      getlocal1
      constructsuper      1
 
-L23:
      returnvoid
     end ; code
    end ; body
@@ -66,93 +40,29 @@ L23:
      initscopedepth 6
      maxscopedepth 7
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      bitand
-      getlocal2
-      nextvalue
-      getlocal2
-      getglobalscope
-      convert_u
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
 
-      getlocal3
-      dup
-      iftrue              L20
-
-      pop
-      getlocal1
-      convert_b
-L20:
-      iffalse             L58
-
-      jump                L28
-
-      strictequals
-      bitxor
-      declocal_i          2
-      setlocal2
-
-      kill                2
-      inclocal            2
-L28:
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readUnsignedByte"), 0
       initproperty        QName(PackageNamespace(""), "bulletId_")
-
-      jump                L39
-
-      instanceof
-      rshift
-      setlocal3
-
-      increment
-      getlocal2
-      declocal            2
-L39:
-      getlocal2
-      dup
-      iffalse             L45
-
-      pop
-      getlocal2
-      convert_b
-L45:
-      iftrue              L62
 
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
       initproperty        QName(PackageNamespace(""), "ownerId_")
 
-      getlocal3
-      iffalse             L58
-
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readShort"), 0
       initproperty        QName(PackageNamespace(""), "containerType_")
 
-      getlocal3
-      iffalse             L62
-
-L58:
       getlocal0
       getlocal1
       callproperty        QName(Namespace("flash.utils:IDataInput"), "readFloat"), 0
       initproperty        QName(PackageNamespace(""), "angle_")
 
-L62:
       returnvoid
      end ; code
     end ; body
@@ -172,15 +82,6 @@ L62:
       pushscope
 
       findpropstrict      QName(ProtectedNamespace("_-1E"), "formatToString")
-      jump                L10
-
-      getlocal3
-      subtract_i
-      urshift
-      coerce_a
-      lessequals
-      newactivation
-L10:
       pushstring          "ALLYSHOOT"
       pushstring          "bulletId_"
       pushstring          "ownerId_"

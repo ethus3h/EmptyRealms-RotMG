@@ -18,35 +18,14 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     declocal_i          2
-     greaterequals
-     inclocal            3
-     kill                2
-     strictequals
-     setlocal3
-
-L10:
-     setlocal3
-
-     setlocal            4
-
      getlocal0
      pushscope
-
-     getlocal            4
-     iffalse             L20
 
      getlocal0
      getlocal1
      getlocal2
      constructsuper      2
 
-L20:
      returnvoid
     end ; code
    end ; body

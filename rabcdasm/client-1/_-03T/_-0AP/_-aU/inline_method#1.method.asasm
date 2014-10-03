@@ -28,7 +28,9 @@ method
 L15:
    pop
    findpropstrict      QName(PackageInternalNs("_-03T"), "handler")
-   callproplex         QName(PackageInternalNs("_-03T"), "handler"), 0
+   getlocal1
+   getproperty         QName(PackageNamespace(""), "type")
+   callproplex         QName(PackageInternalNs("_-03T"), "handler"), 1
    pop
    returnvoid
   end ; code

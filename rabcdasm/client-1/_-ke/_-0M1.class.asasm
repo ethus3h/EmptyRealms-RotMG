@@ -13,31 +13,12 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     setlocal1
-
-     jump                L10
-
-     decrement
-     increment
-     convert_d
-     pushnan
-     subtract
-     dup
-L10:
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal1
-     iffalse             L17
 
      getlocal0
      constructsuper      0
 
-L17:
      returnvoid
     end ; code
    end ; body
@@ -51,37 +32,9 @@ L17:
    initscopedepth 3
    maxscopedepth 4
    code
-    pushfalse
-    pushtrue
-    swap
-    jump                L10
-
-    add_i
-    swap
-    newactivation
-    pushwith
-    hasnext
-    increment_i
-L10:
-    setlocal1
-
-    setlocal2
-
     getlocal0
     pushscope
 
-    getlocal1
-    iftrue              L34
-
-    jump                L23
-
-    getlocal3
-    modulo
-    convert_d
-    equals
-    increment
-    increment_i
-L23:
     findproperty        QName(PackageNamespace(""), "PLAY")
     pushstring          "PLAY"
     initproperty        QName(PackageNamespace(""), "PLAY")
@@ -94,15 +47,10 @@ L23:
     pushstring          "LEGENDS"
     initproperty        QName(PackageNamespace(""), "LEGENDS")
 
-    getlocal2
-    iffalse             L37
-
-L34:
     findproperty        QName(PackageNamespace(""), "CREDITS")
     pushstring          "CREDITS"
     initproperty        QName(PackageNamespace(""), "CREDITS")
 
-L37:
     findproperty        QName(PackageNamespace(""), "ACCOUNT")
     pushstring          "ACCOUNT"
     initproperty        QName(PackageNamespace(""), "ACCOUNT")

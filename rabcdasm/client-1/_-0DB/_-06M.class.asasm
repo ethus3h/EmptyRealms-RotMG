@@ -15,23 +15,6 @@ class
     initscopedepth 10
     maxscopedepth 11
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     swap
-     declocal            6
-     pushscope
-
-     kill                6
-     kill                2
-     getlocal3
-L10:
-     setlocal            8
-
-     setlocal            9
-
      getlocal0
      pushscope
 
@@ -43,16 +26,6 @@ L10:
      coerce              QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-gV")
      setlocal            5
 
-     getlocal            8
-     dup
-     iffalse             L26
-
-     pop
-     getlocal2
-     convert_b
-L26:
-     iftrue              L40
-
      getlocal0
      getlex              Multiname("Vector", [PrivateNamespace("*", "_-0DB:_-06M"), PrivateNamespace("*", "_-0DB:_-06M/iinit"), PackageNamespace(""), PackageNamespace("_-0DB"), PackageInternalNs("_-0DB"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-tG"), StaticProtectedNs("_-tG"), StaticProtectedNs("_-RI"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("__AS3__.vec")])
      getlex              QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-gV")
@@ -60,56 +33,27 @@ L26:
      construct           0
      initproperty        QName(PrivateNamespace("*", "_-0DB:_-06M"), "_-o2")
 
-     getlocal            9
-     dup
-     iftrue              L39
-
-     pop
-     getlocal1
-     convert_b
-L39:
-     iffalse             L51
-
-L40:
      getlocal0
      pushint             3552822
      pushint             16777215
      constructsuper      2
 
-     getlocal            9
-     dup
-     iftrue              L50
-
-     pop
-     getlocal3
-     convert_b
-L50:
-     iffalse             L60
-
-L51:
      getlocal0
      getlocal1
      initproperty        QName(PackageNamespace(""), "map_")
-
-     getlocal            9
-     iffalse             L60
 
      getlocal0
      getlocal2
      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 0
      initproperty        QName(PackageNamespace(""), "_-nC")
 
-L60:
      pushbyte            4
      setlocal3
 
      getlocal0
      getproperty         QName(PackageNamespace(""), "map_")
      getproperty         QName(PackageNamespace(""), "allowPlayerTeleport_")
-     iffalse             L168
-
-     getlocal            8
-     iftrue              L149
+     iffalse             L79
 
      getlocal0
      findpropstrict      QName(PackageNamespace("_-0DB"), "_-Kh")
@@ -121,59 +65,19 @@ L60:
 
      getlocal0
      getproperty         QName(PackageNamespace(""), "_-Xn")
-     getlocal            9
-     iffalse             L105
-
      pushbyte            8
-     getlocal            9
-     iffalse             L95
-
      setproperty         QName(PackageNamespace(""), "x")
 
-     getlocal            9
-     iffalse             L168
-
      getlocal0
      getproperty         QName(PackageNamespace(""), "_-Xn")
-     getlocal            9
-     dup
-     iftrue              L93
-
-     pop
-     getlocal1
-     convert_b
-L93:
-     iffalse             L105
-
      pushbyte            8
-L95:
      setproperty         QName(PackageNamespace(""), "y")
 
-     getlocal            8
-     dup
-     iffalse             L102
-
-     pop
-     getlocal3
-     convert_b
-L102:
-     iftrue              L155
-
      getlocal0
      getproperty         QName(PackageNamespace(""), "_-Xn")
-L105:
      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
      getproperty         QName(PackageNamespace(""), "CLICK")
      getlocal0
-     jump                L115
-
-     coerce_a
-     rshift
-     inclocal_i          4
-     declocal_i          7
-     checkfilter
-     decrement
-L115:
      getproperty         QName(PrivateNamespace("*", "_-0DB:_-06M"), "_-LH")
      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
@@ -193,65 +97,24 @@ L115:
 
      getlocal0
      getproperty         QName(PackageNamespace(""), "_-6t")
-     getlocal            9
-     iffalse             L151
-
      pushbyte            6
-     getlocal            8
-     dup
-     iffalse             L140
-
-     pop
-     getlocal0
-     convert_b
-L140:
-     iftrue              L152
-
      setproperty         QName(PackageNamespace(""), "x")
 
-     getlocal            8
-     dup
-     iffalse             L148
-
-     pop
-     getlocal0
-     convert_b
-L148:
-     iftrue              L155
-
-L149:
      getlocal0
      getproperty         QName(PackageNamespace(""), "_-6t")
-L151:
      pushbyte            40
-L152:
      setproperty         QName(PackageNamespace(""), "y")
 
-     getlocal            8
-     iftrue              L168
-
-L155:
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal0
      getproperty         QName(PackageNamespace(""), "_-6t")
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
      pushbyte            52
-     getlocal            9
-     dup
-     iftrue              L166
-
-     pop
-     getlocal2
-     convert_b
-L166:
-     iffalse             L169
-
      setlocal3
 
-L168:
+L79:
      pushbyte            0
-L169:
      setlocal            6
 
      getlocal0
@@ -259,9 +122,9 @@ L169:
      coerce_a
      setlocal            7
 
-     jump                L233
+     jump                L117
 
-L175:
+L86:
      label
      getlocal            7
      getlocal            6
@@ -281,69 +144,28 @@ L175:
      pushbyte            0
      setproperty         QName(PackageNamespace(""), "x")
 
-     getlocal            8
-     iftrue              L198
-
      getlocal            5
      getlocal3
      setproperty         QName(PackageNamespace(""), "y")
 
-     getlocal            9
-     iffalse             L203
-
-L198:
      findpropstrict      QName(PackageNamespace(""), "addChild")
      getlocal            5
      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
-     getlocal            9
-     iffalse             L233
-
-L203:
      getlocal0
      getproperty         QName(PrivateNamespace("*", "_-0DB:_-06M"), "_-o2")
      getlocal            5
      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-     jump                L214
-
-     getlocal            5
-     declocal_i          2
-     bitor
-     kill                4
-     newactivation
-     convert_s
-L214:
-     getlocal            8
-     dup
-     iffalse             L220
-
-     pop
-     getlocal0
-     convert_b
-L220:
-     iftrue              L233
-
      getlocal3
-     getlocal            9
-     dup
-     iftrue              L228
-
-     pop
-     getlocal2
-     convert_b
-L228:
-     iffalse             L232
-
      pushbyte            32
      add
      convert_i
-L232:
      setlocal3
 
-L233:
+L117:
      hasnext2            7, 6
-     iftrue              L175
+     iftrue              L86
 
      kill                7
      kill                6
@@ -367,21 +189,6 @@ L233:
      initscopedepth 10
      maxscopedepth 11
      code
-      pushfalse
-      pushtrue
-      setlocal            7
-
-      jump                L10
-
-      kill                5
-      convert_d
-      hasnext
-      getlocal3
-      pushnull
-      negate
-L10:
-      setlocal            8
-
       getlocal0
       pushscope
 
@@ -407,9 +214,9 @@ L10:
       coerce_a
       setlocal            6
 
-      jump                L59
+      jump                L34
 
-L31:
+L20:
       label
       getlocal            6
       getlocal            5
@@ -417,82 +224,35 @@ L31:
       coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")
       setlocal            4
 
-      getlocal            8
-      dup
-      iffalse             L50
-
-      pop
-      getlocal2
-      jump                L49
-
-      equals
-      setlocal2
-
-      getglobalscope
-      kill                6
-      pushnan
-      setlocal2
-
-L49:
-      convert_b
-L50:
-      iftrue              L55
-
       getlocal2
       getlocal            4
       callproperty        QName(PackageNamespace(""), "_-0DX"), 1
-      iffalse             L59
+      iffalse             L34
 
-L55:
       getlocal            4
       coerce              QName(PackageNamespace("com.company.assembleegameclient.objects"), "Player")
       setlocal3
 
-      jump                L61
+      jump                L36
 
-L59:
+L34:
       hasnext2            6, 5
-      iftrue              L31
+      iftrue              L20
 
-L61:
+L36:
       kill                6
       kill                5
-      getlocal            8
-      iftrue              L82
-
       getlocal3
       pushnull
-      ifeq                L88
+      ifeq                L45
 
-      getlocal            7
-      dup
-      iftrue              L74
-
-      pop
-      getlocal2
-      convert_b
-L74:
-      iffalse             L105
-
-      jump                L82
-
-      convert_u
-      greaterthan
-      kill                6
-      istypelate
-      getlocal3
-      swap
-L82:
       getlocal2
       getlocal3
       callpropvoid        QName(PackageNamespace(""), "teleportTo"), 1
 
-      getlocal            8
-      iftrue              L105
+      jump                L53
 
-      jump                L103
-
-L88:
+L45:
       getlocal0
       getproperty         QName(PackageNamespace(""), "map_")
       getproperty         QName(PackageNamespace(""), "gs_")
@@ -502,21 +262,10 @@ L88:
       pushstring          "No players are eligible for teleporting"
       callpropvoid        QName(PackageNamespace(""), "addText"), 2
 
-      getlocal            7
-      dup
-      iftrue              L102
-
-      pop
-      getlocal0
-      convert_b
-L102:
-      iffalse             L105
-
-L103:
+L53:
       findpropstrict      QName(ProtectedNamespace("_-RI"), "remove")
       callpropvoid        QName(ProtectedNamespace("_-RI"), "remove"), 0
 
-L105:
       returnvoid
      end ; code
     end ; body

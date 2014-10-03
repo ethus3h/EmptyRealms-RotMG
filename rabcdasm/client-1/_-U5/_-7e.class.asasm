@@ -13,32 +13,13 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     setlocal1
-
-     jump                L10
-
-     lessthan
-     lshift
-     convert_d
-     convert_b
-     pushnan
-     getlocal2
-L10:
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal1
-     iffalse             L18
 
      getlocal0
      getlex              QName(PackageNamespace("_-02b"), "_-fn")
      constructsuper      1
 
-L18:
      returnvoid
     end ; code
    end ; body

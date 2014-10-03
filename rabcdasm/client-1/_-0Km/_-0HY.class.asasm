@@ -13,32 +13,12 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     convert_i
-     lessequals
-     increment
-     getglobalscope
-     subtract_i
-     convert_o
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal1
-     iftrue              L18
 
      getlocal0
      constructsuper      0
 
-L18:
      returnvoid
     end ; code
    end ; body
@@ -52,33 +32,13 @@ L18:
    initscopedepth 3
    maxscopedepth 4
    code
-    pushfalse
-    pushtrue
-    swap
-    jump                L10
-
-    negate
-    getglobalscope
-    strictequals
-    convert_s
-    bitnot
-    convert_o
-L10:
-    setlocal1
-
-    setlocal2
-
     getlocal0
     pushscope
-
-    getlocal2
-    iffalse             L19
 
     findproperty        QName(PackageNamespace(""), "_-020")
     newobject           0
     initproperty        QName(PackageNamespace(""), "_-020")
 
-L19:
     returnvoid
    end ; code
   end ; body
@@ -95,22 +55,6 @@ L19:
     initscopedepth 3
     maxscopedepth 4
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     getlocal2
-     kill                4
-     getlocal            5
-     declocal            5
-     increment_i
-     greaterthan
-L10:
-     setlocal            5
-
-     setlocal            6
-
      getlocal0
      pushscope
 
@@ -119,15 +63,6 @@ L10:
      setlocal2
 
      pushbyte            0
-     jump                L25
-
-     divide
-     urshift
-     declocal            2
-     pushundefined
-     inclocal_i          4
-     swap
-L25:
      setlocal3
 
      getlocal1
@@ -135,18 +70,15 @@ L25:
      coerce_a
      setlocal            4
 
-     jump                L46
+     jump                L25
 
-L31:
+L12:
      label
      getlocal            4
      getlocal3
      nextvalue
      coerce              QName(PackageNamespace(""), "XML")
      setlocal2
-
-     getlocal            5
-     iftrue              L46
 
      getlex              QName(PackageNamespace(""), "_-020")
      getlocal2
@@ -156,9 +88,9 @@ L31:
      constructprop       QName(PackageNamespace("_-0Km"), "_-7g"), 1
      setproperty         MultinameL([PrivateNamespace("*", "_-0Km:_-0HY/_-nY#0"), PackageNamespace(""), PrivateNamespace("*", "_-0Km:_-0HY/_-nY#1"), PackageNamespace("_-0Km"), PackageInternalNs("_-0Km"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-e0"), StaticProtectedNs("_-e0")])
 
-L46:
+L25:
      hasnext2            4, 3
-     iftrue              L31
+     iftrue              L12
 
      kill                4
      kill                3

@@ -14,42 +14,13 @@ class
     initscopedepth 6
     maxscopedepth 7
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     setlocal2
-
-     setlocal2
-
-     getlocal2
-     declocal            2
-     inclocal            2
-     bitnot
-L10:
-     setlocal2
-
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal3
-     dup
-     iftrue              L20
-
-     pop
-     getlocal2
-     convert_b
-L20:
-     iffalse             L24
 
      getlocal0
      getlocal1
      constructsuper      1
 
-L24:
      returnvoid
     end ; code
    end ; body
@@ -67,65 +38,19 @@ L24:
      initscopedepth 6
      maxscopedepth 7
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      add_i
-      inclocal_i          2
-      declocal_i          2
-      add
-      add
-      lshift
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      jump                L21
-
-      lessequals
-      convert_u
-      setlocal2
-
-      kill                2
-      inclocal_i          2
-      bitxor
-L21:
-      dup
-      iftrue              L26
-
-      pop
-      getlocal1
-      convert_b
-L26:
-      iffalse             L42
 
       getlocal1
       getlocal0
       getproperty         QName(PackageNamespace(""), "serial_")
       callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeInt"), 1
 
-      getlocal3
-      dup
-      iffalse             L37
-
-      pop
-      getlocal1
-      convert_b
-L37:
-      iftrue              L42
-
       getlocal1
       getlocal0
       getproperty         QName(PackageNamespace(""), "time_")
       callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeInt"), 1
 
-L42:
       returnvoid
      end ; code
     end ; body
@@ -145,15 +70,6 @@ L42:
       pushscope
 
       findpropstrict      QName(ProtectedNamespace("_-1E"), "formatToString")
-      jump                L10
-
-      typeof
-      nextvalue
-      getlocal0
-      divide
-      negate_i
-      dxnslate
-L10:
       pushstring          "PONG"
       pushstring          "serial_"
       pushstring          "time_"

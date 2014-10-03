@@ -14,22 +14,6 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     kill                6
-     lessequals
-     inclocal_i          3
-     checkfilter
-     inclocal_i          7
-     inclocal_i          4
-L10:
-     setlocal            7
-
-     setlocal            8
-
      getlocal0
      pushscope
 
@@ -45,18 +29,12 @@ L10:
      coerce              QName(PackageNamespace(""), "XML")
      setlocal            4
 
-     getlocal            8
-     iffalse             L51
-
      getlocal0
      getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Step/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Step/iinit#1"), PackageNamespace("com.company.assembleegameclient.tutorial"), PackageInternalNs("com.company.assembleegameclient.tutorial"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-RM"), StaticProtectedNs("_-RM"), PackageNamespace("__AS3__.vec")])
      getlex              QName(PackageNamespace("com.company.assembleegameclient.tutorial"), "UIDrawBox")
      applytype           1
      construct           0
      initproperty        QName(PackageNamespace(""), "_-0Jb")
-
-     getlocal            7
-     iftrue              L51
 
      getlocal0
      getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Step/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Step/iinit#1"), PackageNamespace("com.company.assembleegameclient.tutorial"), PackageInternalNs("com.company.assembleegameclient.tutorial"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-RM"), StaticProtectedNs("_-RM"), PackageNamespace("__AS3__.vec")])
@@ -65,9 +43,6 @@ L10:
      construct           0
      initproperty        QName(PackageNamespace(""), "_-06F")
 
-     getlocal            8
-     iffalse             L51
-
      getlocal0
      getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Step/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Step/iinit#1"), PackageNamespace("com.company.assembleegameclient.tutorial"), PackageInternalNs("com.company.assembleegameclient.tutorial"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-RM"), StaticProtectedNs("_-RM"), PackageNamespace("__AS3__.vec")])
      getlex              QName(PackageNamespace("com.company.assembleegameclient.tutorial"), "Requirement")
@@ -75,13 +50,9 @@ L10:
      construct           0
      initproperty        QName(PackageNamespace(""), "_-I2")
 
-     getlocal            7
-     iftrue              L51
-
      getlocal0
      constructsuper      0
 
-L51:
      pushbyte            0
      setlocal            5
 
@@ -90,25 +61,15 @@ L51:
      coerce_a
      setlocal            6
 
-     jump                L77
+     jump                L50
 
-L58:
+L38:
      label
      getlocal            6
      getlocal            5
      nextvalue
      coerce              QName(PackageNamespace(""), "XML")
      setlocal2
-
-     getlocal            7
-     dup
-     iffalse             L70
-
-     pop
-     getlocal2
-     convert_b
-L70:
-     iftrue              L77
 
      getlocal0
      getproperty         QName(PackageNamespace(""), "_-0Jb")
@@ -117,79 +78,29 @@ L70:
      constructprop       QName(PackageNamespace("com.company.assembleegameclient.tutorial"), "UIDrawBox"), 1
      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-L77:
+L50:
      hasnext2            6, 5
-     getlocal            7
-     iftrue              L204
-
-     iftrue              L58
-
-     getlocal            8
-     iffalse             L152
+     iftrue              L38
 
      kill                6
-     getlocal            7
-     iftrue              L160
-
      kill                5
-     getlocal            8
-     dup
-     iftrue              L100
-
-     pop
-     getlocal2
-     convert_b
-     jump                L100
-
-     inclocal            2
-     declocal            7
-     kill                2
-     lessthan
-     increment
-     typeof
-L100:
-     iffalse             L207
-
      pushbyte            0
-     getlocal            8
-     dup
-     iftrue              L108
-
-     pop
-     getlocal1
-     convert_b
-L108:
-     iffalse             L169
-
      setlocal            5
-
-     getlocal            7
-     dup
-     iffalse             L116
-
-     pop
-     getlocal3
-     convert_b
-L116:
-     iftrue              L206
 
      getlocal1
      getproperty         Multiname("UIDrawArrow", [PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Step/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Step/iinit#1"), PackageNamespace("com.company.assembleegameclient.tutorial"), PackageInternalNs("com.company.assembleegameclient.tutorial"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-RM"), StaticProtectedNs("_-RM")])
      coerce_a
      setlocal            6
 
-     jump                L136
+     jump                L73
 
-L122:
+L61:
      label
      getlocal            6
      getlocal            5
      nextvalue
      coerce              QName(PackageNamespace(""), "XML")
      setlocal3
-
-     getlocal            8
-     iffalse             L136
 
      getlocal0
      getproperty         QName(PackageNamespace(""), "_-06F")
@@ -198,93 +109,29 @@ L122:
      constructprop       QName(PackageNamespace("com.company.assembleegameclient.tutorial"), "UIDrawArrow"), 1
      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-L136:
+L73:
      hasnext2            6, 5
-     getlocal            7
-     dup
-     iffalse             L143
+     iftrue              L61
 
-     pop
-     getlocal3
-     convert_b
-L143:
-     iftrue              L204
-
-     iftrue              L122
-
-     getlocal            7
-     dup
-     iffalse             L151
-
-     pop
-     getlocal2
-     convert_b
-L151:
-     iftrue              L205
-
-L152:
      kill                6
-     getlocal            8
-     dup
-     iftrue              L159
-
-     pop
-     getlocal3
-     convert_b
-L159:
-     iffalse             L206
-
-L160:
      kill                5
-     getlocal            7
-     dup
-     iffalse             L167
-
-     pop
-     getlocal1
-     convert_b
-L167:
-     iftrue              L207
-
      pushbyte            0
-L169:
      setlocal            5
-
-     getlocal            7
-     iftrue              L206
 
      getlocal1
      getproperty         Multiname("Requirement", [PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Step/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Step/iinit#1"), PackageNamespace("com.company.assembleegameclient.tutorial"), PackageInternalNs("com.company.assembleegameclient.tutorial"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-RM"), StaticProtectedNs("_-RM")])
      coerce_a
      setlocal            6
 
-     jump                L203
+     jump                L96
 
-     jump                L184
-
-     kill                5
-     bitor
-     kill                5
-     declocal            7
-     newactivation
-     kill                6
-L184:
+L84:
      label
      getlocal            6
      getlocal            5
      nextvalue
      coerce              QName(PackageNamespace(""), "XML")
      setlocal            4
-
-     getlocal            7
-     dup
-     iffalse             L196
-
-     pop
-     getlocal0
-     convert_b
-L196:
-     iftrue              L203
 
      getlocal0
      getproperty         QName(PackageNamespace(""), "_-I2")
@@ -293,16 +140,12 @@ L196:
      constructprop       QName(PackageNamespace("com.company.assembleegameclient.tutorial"), "Requirement"), 1
      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
 
-L203:
+L96:
      hasnext2            6, 5
-L204:
-     iftrue              L184
+     iftrue              L84
 
-L205:
      kill                6
-L206:
      kill                5
-L207:
      returnvoid
     end ; code
    end ; body
@@ -323,45 +166,15 @@ L207:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal1
-
-      jump                L10
-
-      newactivation
-      getlocal0
-      istypelate
-      newactivation
-      convert_d
-      decrement
-L10:
-      setlocal2
-
       getlocal0
       pushscope
 
       pushstring          "["
-      getlocal1
-      iffalse             L26
-
       getlocal0
       getproperty         QName(PackageNamespace(""), "text_")
       add
-      getlocal2
-      dup
-      iffalse             L25
-
-      pop
-      getlocal1
-      convert_b
-L25:
-      iftrue              L28
-
-L26:
       pushstring          "]"
       add
-L28:
       returnvalue
      end ; code
     end ; body

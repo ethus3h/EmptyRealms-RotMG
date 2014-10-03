@@ -15,62 +15,16 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     inclocal            2
-     inclocal_i          2
-     istypelate
-     declocal_i          2
-     inclocal_i          2
-     urshift
-L10:
-     setlocal2
-
-     setlocal3
-
      getlocal0
-     jump                L20
-
-     pop
-     declocal_i          2
-     getlocal2
-     getlocal2
-     istypelate
-     getlocal2
-L20:
      pushscope
-
-     getlocal2
-     dup
-     iffalse             L27
-
-     pop
-     getlocal2
-     convert_b
-L27:
-     iftrue              L40
 
      getlocal0
      constructsuper      0
-
-     getlocal2
-     dup
-     iffalse             L36
-
-     pop
-     getlocal2
-     convert_b
-L36:
-     iftrue              L40
 
      getlocal0
      getlocal1
      initproperty        QName(PackageNamespace(""), "padding")
 
-L40:
      returnvoid
     end ; code
    end ; body
@@ -87,23 +41,6 @@ L40:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      instanceof
-      declocal            2
-      instanceof
-      popscope
-      istypelate
-      pushscope
-
-L10:
-      setlocal            6
-
-      setlocal            7
-
       getlocal0
       pushscope
 
@@ -120,47 +57,23 @@ L10:
       setlocal3
 
       pushbyte            0
-      jump                L31
-
-      pop
-      kill                3
-      bitxor
-      decrement
-      lshift
-      convert_o
-L31:
       setlocal            4
 
-      jump                L65
+      jump                L33
 
-L33:
+L14:
       label
       getlocal1
       getlocal            4
       getproperty         MultinameL([PrivateNamespace("*", "_-mv:_-md/layout#0"), PackageNamespace(""), PrivateNamespace("*", "_-mv:_-md/layout#1"), PackageNamespace("_-mv"), PackageInternalNs("_-mv"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-8V"), StaticProtectedNs("_-8V")])
       coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
-      jump                L45
-
-      declocal_i          4
-      subtract
-      inclocal            5
-      inclocal_i          3
-      declocal_i          4
-      greaterthan
-L45:
       dup
       setlocal            5
 
       getlocal2
       setproperty         QName(PackageNamespace(""), "x")
 
-      getlocal            6
-      iftrue              L64
-
       getlocal2
-      getlocal            6
-      iftrue              L61
-
       getlocal            5
       getproperty         QName(PackageNamespace(""), "width")
       getlocal0
@@ -168,18 +81,13 @@ L45:
       add
       add
       convert_i
-L61:
       setlocal2
 
-      getlocal            6
-      iftrue              L65
-
-L64:
       inclocal_i          4
-L65:
+L33:
       getlocal            4
       getlocal3
-      iflt                L33
+      iflt                L14
 
       returnvoid
      end ; code

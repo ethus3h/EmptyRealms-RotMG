@@ -13,31 +13,12 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     setlocal1
-
-     jump                L10
-
-     modulo
-     lessequals
-     convert_b
-     lessequals
-     divide
-     modulo
-L10:
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal2
-     iftrue              L17
 
      getlocal0
      constructsuper      0
 
-L17:
      returnvoid
     end ; code
    end ; body
@@ -72,27 +53,8 @@ L17:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      pushtrue
-      instanceof
-      pushtrue
-      convert_s
-      convert_b
-      typeof
-L10:
-      setlocal1
-
-      setlocal2
-
       getlocal0
       pushscope
-
-      getlocal2
-      iffalse             L43
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-0Is")
@@ -100,89 +62,30 @@ L10:
       getproperty         QName(PackageNamespace(""), "accountId_")
       pushbyte            255
       equals
-      getlocal1
-      iftrue              L56
-
       dup
-      iffalse             L56
-
-      getlocal1
-      dup
-      iffalse             L39
-
-      jump                L36
-
-      typeof
-      subtract
-      convert_o
-      urshift
-      subtract_i
-      convert_i
-L36:
-      pop
-      getlocal1
-      convert_b
-L39:
-      iftrue              L56
+      iffalse             L15
 
       pop
-      getlocal2
-      iffalse             L64
-
-L43:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-0KK")
       getproperty         QName(PackageNamespace(""), "_-sr")
-      getlocal2
-      iffalse             L56
-
       convert_b
-      jump                L56
+L15:
+      iffalse             L19
 
-      getlocal2
-      convert_u
-      pushscope
-
-      istypelate
-      multiply
-      convert_d
-L56:
-      iffalse             L74
-
-      getlocal1
-      dup
-      iffalse             L63
-
-      pop
-      getlocal2
-      convert_b
-L63:
-      iftrue              L79
-
-L64:
       getlocal0
       callpropvoid        QName(PrivateNamespace("*", "_-FF:_-0CO"), "_-04a"), 0
 
-      getlocal2
-      dup
-      iftrue              L72
+      jump                L24
 
-      pop
-      getlocal0
-      convert_b
-L72:
-      iffalse             L79
-
-      jump                L79
-
-L74:
+L19:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-T-")
       findpropstrict      QName(PackageNamespace("_-F1"), "_-UW")
       constructprop       QName(PackageNamespace("_-F1"), "_-UW"), 0
       callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
 
-L79:
+L24:
       returnvoid
      end ; code
     end ; body
@@ -198,76 +101,24 @@ L79:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      convert_s
-      declocal_i          2
-      pushwith
-      inclocal            2
-      bitnot
-      kill                2
-L10:
-      setlocal2
-
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal2
-      iftrue              L20
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-0KK")
       pushtrue
       setproperty         QName(PackageNamespace(""), "_-dA")
 
-L20:
       findpropstrict      QName(PackageNamespace("_-4X"), "_-o8")
       constructprop       QName(PackageNamespace("_-4X"), "_-o8"), 0
       coerce              QName(PackageNamespace("_-4X"), "_-o8")
       setlocal1
 
-      getlocal3
-      iffalse             L74
-
       getlocal1
-      jump                L34
-
-      coerce_s
-      pushfalse
-      inclocal_i          2
-      inclocal_i          2
-      bitnot
-      getlocal2
-L34:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-ys")
       callpropvoid        QName(PackageNamespace(""), "add"), 1
 
-      getlocal2
-      dup
-      iffalse             L43
-
-      pop
-      getlocal2
-      convert_b
-L43:
-      iftrue              L61
-
-      jump                L51
-
-      inclocal_i          2
-      inclocal            2
-      convert_b
-      declocal_i          2
-      setlocal2
-
-      greaterequals
-L51:
       getlocal1
       findpropstrict      QName(PackageNamespace("_-4X"), "_-03L")
       getlocal0
@@ -277,30 +128,14 @@ L51:
       constructprop       QName(PackageNamespace("_-4X"), "_-03L"), 2
       callpropvoid        QName(PackageNamespace(""), "add"), 1
 
-      getlocal3
-      iffalse             L72
-
-L61:
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-Hd")
       getlocal1
       callpropvoid        QName(PackageNamespace(""), "add"), 1
 
-      getlocal2
-      dup
-      iffalse             L71
-
-      pop
-      getlocal3
-      convert_b
-L71:
-      iftrue              L74
-
-L72:
       getlocal1
       callpropvoid        QName(PackageNamespace(""), "start"), 0
 
-L74:
       returnvoid
      end ; code
     end ; body

@@ -14,31 +14,12 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     setlocal1
-
-     jump                L10
-
-     swap
-     getlocal2
-     pushwith
-     convert_o
-     pushtrue
-     subtract
-L10:
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal2
-     iftrue              L17
 
      getlocal0
      constructsuper      0
 
-L17:
      returnvoid
     end ; code
    end ; body
@@ -54,42 +35,8 @@ L17:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal2
-
-      jump                L10
-
-      urshift
-      declocal_i          2
-      declocal_i          2
-      multiply_i
-      swap
-      inclocal            2
-L10:
-      setlocal3
-
       getlocal0
       pushscope
-
-      getlocal3
-      dup
-      iffalse             L26
-
-      pop
-      jump                L24
-
-      declocal_i          2
-      declocal_i          2
-      decrement_i
-      popscope
-      inclocal            2
-      multiply_i
-L24:
-      getlocal0
-      convert_b
-L26:
-      iftrue              L44
 
       getlocal1
       getlex              QName(PackageNamespace("_-IV"), "_-2l")
@@ -107,15 +54,10 @@ L26:
       getlex              QName(PackageNamespace("_-lW"), "_-CT")
       callpropvoid        QName(Namespace("_-06J"), "extend"), 13
 
-      getlocal3
-      iftrue              L47
-
-L44:
       getlocal1
       getlex              QName(PackageNamespace("_-O"), "finally")
       callpropvoid        QName(Namespace("_-06J"), "_-K"), 1
 
-L47:
       returnvoid
      end ; code
     end ; body

@@ -15,46 +15,21 @@ class
     initscopedepth 5
     maxscopedepth 6
     code
-     pushfalse
-     pushtrue
-     setlocal3
-
-     jump                L10
-
-     inclocal            2
-     strictequals
-     astypelate
-     convert_d
-     dup
-     pushnull
-L10:
-     setlocal            4
-
      getlocal0
      pushscope
-
-     getlocal            4
-     iftrue              L28
 
      getlocal0
      getlex              QName(PackageNamespace(""), "_-hx")
      constructsuper      1
 
-     getlocal3
-     iffalse             L28
-
      getlocal0
      getlocal1
      initproperty        QName(PackageNamespace(""), "success_")
-
-     getlocal            4
-     iftrue              L28
 
      getlocal0
      getlocal2
      initproperty        QName(PackageNamespace(""), "errorText_")
 
-L28:
      returnvoid
     end ; code
    end ; body
@@ -75,16 +50,6 @@ L28:
       pushscope
 
       findpropstrict      QName(PackageNamespace(""), "formatToString")
-      jump                L10
-
-      swap
-      nextvalue
-      setlocal2
-
-      nextname
-      decrement
-      greaterequals
-L10:
       pushstring          "GUILDRESULTEVENT"
       pushstring          "success_"
       pushstring          "errorText_"
@@ -103,33 +68,13 @@ L10:
    initscopedepth 4
    maxscopedepth 5
    code
-    pushfalse
-    pushtrue
-    swap
-    jump                L10
-
-    bitor
-    pushtrue
-    pushwith
-    coerce_a
-    pushtrue
-    decrement_i
-L10:
-    setlocal1
-
-    setlocal2
-
     getlocal0
     pushscope
-
-    getlocal2
-    iffalse             L19
 
     findproperty        QName(PackageNamespace(""), "_-hx")
     pushstring          "GUILDRESULTEVENT"
     initproperty        QName(PackageNamespace(""), "_-hx")
 
-L19:
     returnvoid
    end ; code
   end ; body

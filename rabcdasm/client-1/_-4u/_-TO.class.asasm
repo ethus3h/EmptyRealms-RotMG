@@ -15,70 +15,20 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     setlocal3
-
-     jump                L10
-
-     convert_u
-     typeof
-     convert_d
-     inclocal            2
-     getlocal3
-     declocal            3
-L10:
-     setlocal            4
-
      getlocal0
      pushscope
 
-     getlocal            4
-     iftrue              L41
-
-     jump                L22
-
-     declocal            2
-     setlocal3
-
-     kill                2
-     declocal            3
-     pushfalse
-     getlocal3
-L22:
      getlocal0
      constructsuper      0
-
-     getlocal            4
-     dup
-     iffalse             L30
-
-     pop
-     getlocal0
-     convert_b
-L30:
-     iftrue              L44
 
      getlocal0
      getlocal2
      initproperty        QName(PackageNamespace(""), "_-yE")
 
-     getlocal            4
-     dup
-     iffalse             L40
-
-     pop
-     getlocal1
-     convert_b
-L40:
-     iftrue              L44
-
-L41:
      getlocal0
      getlocal1
      initproperty        QName(PrivateNamespace("*", "_-4u:_-TO#0"), "_-07e")
 
-L44:
      returnvoid
     end ; code
    end ; body
@@ -100,15 +50,6 @@ L44:
       pushscope
 
       getlocal0
-      jump                L10
-
-      coerce_a
-      swap
-      bitxor
-      subtract
-      subtract
-      getlocal0
-L10:
       getproperty         QName(PackageNamespace(""), "_-yE")
       getlocal1
       getlocal0
@@ -117,7 +58,7 @@ L10:
       getproperty         MultinameL([PrivateNamespace("*", "_-4u:_-TO#0"), PackageNamespace(""), PrivateNamespace("*", "_-4u:_-TO#1"), PackageNamespace("_-4u"), PackageInternalNs("_-4u"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-VU"), StaticProtectedNs("_-VU")])
       coerce_a
       dup
-      iftrue              L25
+      iftrue              L18
 
       pop
       getlocal0
@@ -125,7 +66,7 @@ L10:
       getlocal1
       callproperty        QName(Namespace("_-vI"), "_-s4"), 1
       coerce_a
-L25:
+L18:
       dup
       setlocal2
 
@@ -150,35 +91,8 @@ L25:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      setlocal3
-
-      jump                L10
-
-      equals
-      multiply_i
-      pushscope
-
-      declocal_i          2
-      setlocal3
-
-      getlocal3
-L10:
-      setlocal            4
-
       getlocal0
       pushscope
-
-      getlocal            4
-      dup
-      iffalse             L19
-
-      pop
-      getlocal2
-      convert_b
-L19:
-      iftrue              L25
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-yE")
@@ -186,7 +100,6 @@ L19:
       getlocal2
       setproperty         MultinameL([PrivateNamespace("*", "_-4u:_-TO#0"), PackageNamespace(""), PrivateNamespace("*", "_-4u:_-TO#1"), PackageNamespace("_-4u"), PackageInternalNs("_-4u"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-VU"), StaticProtectedNs("_-VU")])
 
-L25:
       returnvoid
      end ; code
     end ; body

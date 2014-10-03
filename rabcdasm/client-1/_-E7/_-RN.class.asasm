@@ -13,50 +13,15 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     subtract_i
-     rshift
-     add
-     pushnull
-     convert_o
-     convert_o
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal2
-     jump                L22
-
-     setlocal3
-
-     convert_o
-     newactivation
-     subtract
-     increment
-     getglobalscope
-L22:
-     iffalse             L39
 
      getlocal0
      constructsuper      0
 
-     getlocal2
-     iffalse             L44
-
      getlocal0
      pushstring          ""
      initproperty        QName(PackageNamespace(""), "text")
-
-     getlocal2
-     iffalse             L44
 
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
@@ -64,17 +29,12 @@ L22:
      constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 1
      initproperty        QName(PackageNamespace(""), "_-5n")
 
-     getlocal1
-     iftrue              L44
-
-L39:
      getlocal0
      findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
      pushtrue
      constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 1
      initproperty        QName(PackageNamespace(""), "_-P3")
 
-L44:
      returnvoid
     end ; code
    end ; body

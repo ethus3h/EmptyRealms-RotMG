@@ -14,40 +14,16 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     dup
-     popscope
-     declocal_i          2
-     modulo
-     lessequals
-     getlocal2
-L10:
-     setlocal2
-
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal2
-     iftrue              L20
 
      getlocal0
      constructsuper      0
 
-     getlocal3
-     iffalse             L23
-
-L20:
      getlocal0
      getlocal1
      initproperty        QName(PackageNamespace(""), "position")
 
-L23:
      returnvoid
     end ; code
    end ; body
@@ -62,45 +38,14 @@ L23:
    initscopedepth 3
    maxscopedepth 4
    code
-    pushfalse
-    pushtrue
-    swap
-    jump                L10
-
-    increment_i
-    modulo
-    dup
-    decrement
-    negate_i
-    dxnslate
-L10:
-    setlocal1
-
-    setlocal2
-
     getlocal0
     pushscope
 
-    getlocal2
-    iffalse             L37
-
     findproperty        QName(PackageNamespace(""), "_-MC")
     getlocal0
-    jump                L25
-
-    modulo
-    negate
-    pushtrue
-    rshift
-    lessthan
-    hasnext
-L25:
     pushbyte            0
     construct           1
     initproperty        QName(PackageNamespace(""), "_-MC")
-
-    getlocal1
-    iftrue              L37
 
     findproperty        QName(PackageNamespace(""), "_-h2")
     getlocal0
@@ -108,18 +53,11 @@ L25:
     construct           1
     initproperty        QName(PackageNamespace(""), "_-h2")
 
-    getlocal1
-    iftrue              L49
-
-L37:
     findproperty        QName(PackageNamespace(""), "_-05c")
     getlocal0
     pushbyte            2
     construct           1
     initproperty        QName(PackageNamespace(""), "_-05c")
-
-    getlocal1
-    iftrue              L49
 
     findproperty        QName(PackageNamespace(""), "_-0v")
     getlocal0
@@ -127,7 +65,6 @@ L37:
     construct           1
     initproperty        QName(PackageNamespace(""), "_-0v")
 
-L49:
     returnvoid
    end ; code
   end ; body

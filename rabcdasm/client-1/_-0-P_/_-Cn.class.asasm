@@ -14,42 +14,11 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     setlocal2
-
-     jump                L10
-
-     decrement
-     setlocal2
-
-     inclocal            2
-     instanceof
-     declocal            2
-     swap
-L10:
-     setlocal3
-
      getlocal0
      pushscope
 
-     getlocal2
-     iffalse             L43
-
-     jump                L22
-
-     getlocal3
-     declocal            2
-     declocal_i          2
-     declocal            2
-     kill                2
-     decrement
-L22:
      getlocal0
      constructsuper      0
-
-     getlocal2
-     iffalse             L43
 
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "int")
@@ -62,16 +31,12 @@ L22:
      callproperty        QName(PackageNamespace(""), "int"), 1
      initproperty        QName(PackageNamespace(""), "time_")
 
-     getlocal2
-     iffalse             L43
-
      getlocal0
      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.objects"), "_-ZH")
      getlocal1
      constructprop       QName(PackageNamespace("com.company.assembleegameclient.objects"), "_-ZH"), 1
      initproperty        QName(PackageNamespace(""), "_-YD")
 
-L43:
      returnvoid
     end ; code
    end ; body

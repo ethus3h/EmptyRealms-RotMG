@@ -15,48 +15,16 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     kill                2
-     subtract_i
-     setlocal2
-
-     kill                2
-     dxnslate
-     getlocal3
-L10:
-     setlocal2
-
-     setlocal3
-
      getlocal0
      pushscope
-
-     getlocal3
-     dup
-     iftrue              L20
-
-     pop
-     getlocal0
-     convert_b
-L20:
-     iffalse             L25
 
      getlocal0
      constructsuper      0
 
-     getlocal3
-     iffalse             L28
-
-L25:
      getlocal0
      getlocal1
      initproperty        QName(PackageNamespace(""), "padding")
 
-L28:
      returnvoid
     end ; code
    end ; body
@@ -73,23 +41,6 @@ L28:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      bitand
-      convert_o
-      inclocal            5
-      inclocal_i          3
-      pushscope
-
-      getlocal            5
-L10:
-      setlocal            6
-
-      setlocal            7
-
       getlocal0
       pushscope
 
@@ -108,18 +59,9 @@ L10:
       pushbyte            0
       setlocal            4
 
-      jump                L70
-
       jump                L33
 
-      hasnext
-      declocal_i          2
-      setlocal            6
-
-      lessequals
-      inclocal            4
-      declocal            6
-L33:
+L14:
       label
       getlocal1
       getlocal            4
@@ -131,24 +73,7 @@ L33:
       getlocal2
       setproperty         QName(PackageNamespace(""), "y")
 
-      getlocal            7
-      jump                L50
-
-      inclocal_i          6
-      dup
-      swap
-      setlocal            6
-
-      declocal_i          5
-      setlocal3
-
-L50:
-      iffalse             L69
-
       getlocal2
-      getlocal            7
-      iffalse             L61
-
       getlocal            5
       getproperty         QName(PackageNamespace(""), "height")
       getlocal0
@@ -156,25 +81,13 @@ L50:
       add
       add
       convert_i
-L61:
       setlocal2
 
-      getlocal            7
-      dup
-      iftrue              L68
-
-      pop
-      getlocal3
-      convert_b
-L68:
-      iffalse             L70
-
-L69:
       inclocal_i          4
-L70:
+L33:
       getlocal            4
       getlocal3
-      iflt                L33
+      iflt                L14
 
       returnvoid
      end ; code

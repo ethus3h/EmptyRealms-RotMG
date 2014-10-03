@@ -13,33 +13,12 @@ class
     initscopedepth 4
     maxscopedepth 5
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     convert_d
-     bitand
-     convert_u
-     increment_i
-     coerce_a
-     setlocal2
-
-L10:
-     setlocal1
-
-     setlocal2
-
      getlocal0
      pushscope
-
-     getlocal2
-     iffalse             L18
 
      getlocal0
      constructsuper      0
 
-L18:
      returnvoid
     end ; code
    end ; body
@@ -58,34 +37,8 @@ L18:
      initscopedepth 4
      maxscopedepth 5
      code
-      pushfalse
-      pushtrue
-      swap
-      jump                L10
-
-      nextvalue
-      dxnslate
-      add_i
-      divide
-      subtract_i
-      bitxor
-L10:
-      setlocal1
-
-      setlocal2
-
       getlocal0
       pushscope
-
-      getlocal2
-      dup
-      iftrue              L20
-
-      pop
-      getlocal2
-      convert_b
-L20:
-      iffalse             L27
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-Ql")
@@ -94,7 +47,6 @@ L20:
       constructprop       QName(PackageNamespace("_-nA"), "_-0FU"), 0
       callpropvoid        QName(PackageNamespace(""), "addChild"), 1
 
-L27:
       returnvoid
      end ; code
     end ; body

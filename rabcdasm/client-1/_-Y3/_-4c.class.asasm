@@ -15,48 +15,17 @@ class
     initscopedepth 5
     maxscopedepth 6
     code
-     pushfalse
-     pushtrue
-     swap
-     jump                L10
-
-     inclocal            3
-     subtract_i
-     coerce_s
-     getlocal2
-     getlocal3
-     coerce_s
-L10:
-     setlocal3
-
-     setlocal            4
-
      getlocal0
      pushscope
-
-     getlocal            4
-     dup
-     iftrue              L20
-
-     pop
-     getlocal0
-     convert_b
-L20:
-     iffalse             L26
 
      getlocal0
      getlocal2
      constructsuper      1
 
-     getlocal            4
-     iffalse             L29
-
-L26:
      getlocal0
      getlocal1
      initproperty        QName(PackageNamespace(""), "_-OR")
 
-L29:
      returnvoid
     end ; code
    end ; body
@@ -79,15 +48,6 @@ L29:
       pushscope
 
       getlex              QName(PackageNamespace(""), "provider")
-      jump                L10
-
-      getlocal2
-      getlocal2
-      declocal_i          2
-      checkfilter
-      subtract
-      pushtrue
-L10:
       getlocal1
       getlocal0
       getproperty         QName(PackageNamespace(""), "_-OR")
