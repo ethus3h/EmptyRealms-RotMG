@@ -52,7 +52,6 @@ namespace Server.account
 
             if (query.AllKeys.Length == 0)
             {
-                string querystring = string.Empty;
                 string currurl = context.Request.RawUrl;
                 int iqs = currurl.IndexOf('?');
                 if (iqs >= 0)
@@ -78,7 +77,7 @@ namespace Server.account
                         else
                         {
                             var cmd = db.CreateQuery();
-                            cmd.CommandText = "UPDATE accounts SET uuid=@newUuid, name=@newUuid, password=SHA1(@password), guest=FALSE WHERE uuid=@uuid, name=@name;";
+                            cmd.CommandText = "UPDATE accounts SET uuid=@newUuid, password=SHA1(@password), verified=1, , guest=FALSE WHERE uuid=@uuid, name=@name;";
                             cmd.Parameters.AddWithValue("@uuid", query["guid"]);
                             cmd.Parameters.AddWithValue("@newUuid", query["newGUID"]);
                             cmd.Parameters.AddWithValue("@password", query["newPassword"]);

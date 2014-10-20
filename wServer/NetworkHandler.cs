@@ -72,9 +72,10 @@ namespace wServer
         {
             var s = new NetworkStream(skt);
             NWriter wtr = new NWriter(s);
-            wtr.WriteNullTerminatedString(@"<cross-domain-policy>
-    <allowed-access-from domain=""*"" to-ports=""*"" />
-</cross-domain-policy>");
+            wtr.WriteNullTerminatedString(@"
+            <cross-domain-policy>
+                <allowed-access-from domain=""*"" to-ports=""*"" />
+            </cross-domain-policy>");
             wtr.Write((byte)'\r');
             wtr.Write((byte)'\n');
             parent.Disconnect();

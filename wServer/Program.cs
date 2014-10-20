@@ -31,19 +31,19 @@ namespace wServer
             svrSkt.Bind(new IPEndPoint(IPAddress.Any, gameserverport));
             svrSkt.Listen(0xff);
             svrSkt.BeginAccept(Listen, null);
-            Console.CancelKeyPress += (sender, e) =>
-            {
-                Console.WriteLine("Saving Please Wait...");
-                svrSkt.Close();
-                foreach (var i in RealmManager.Clients.Values.ToArray())
-                {
-                    i.Save();
-                    i.Disconnect();
-                }
-                Console.WriteLine("\nClosing...");
-                Thread.Sleep(500);
-                Environment.Exit(0);
-            };
+            //Console.CancelKeyPress += (sender, e) =>
+            //{
+            //    Console.WriteLine("Saving Please Wait...");
+            //    svrSkt.Close();
+            //    foreach (var i in RealmManager.Clients.Values.ToArray())
+            //    {
+            //        i.Save();
+            //        i.Disconnect();
+            //    }
+            //    Console.WriteLine("\nClosing...");
+            //    Thread.Sleep(500);
+            //    Environment.Exit(0);
+            //};
             
             Console.WriteLine("Starting Game Server on port {0}.", gameserverport);
             Thread.Sleep(5000);
@@ -51,7 +51,7 @@ namespace wServer
 
             HostPolicyServer();
 
-            RealmManager.CoreTickLoop();    //Never returns
+            RealmManager.CoreTickLoop();
         }
 
         static void ServePolicyFile(IAsyncResult ar)
@@ -65,9 +65,10 @@ namespace wServer
                 NWriter wtr = new NWriter(s);
                 if (rdr.ReadNullTerminatedString() == "<policy-file-request/>")
                 {
-                    wtr.WriteNullTerminatedString(@"<cross-domain-policy>
-     <allow-access-from domain=""*"" to-ports=""*"" />
-</cross-domain-policy>");
+                    wtr.WriteNullTerminatedString(@"
+                    <cross-domain-policy>
+                        <allow-access-from domain=""*"" to-ports=""*"" />
+                    </cross-domain-policy>");
                     wtr.Write((byte)'\r');
                     wtr.Write((byte)'\n');
                 }

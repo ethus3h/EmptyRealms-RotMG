@@ -55,6 +55,8 @@ namespace Server.picture
             XmlSerializer serializer = new XmlSerializer(pics.GetType(), new XmlRootAttribute(pics.GetType().Name) { Namespace = "" });
 
             XmlWriterSettings xws = new XmlWriterSettings();
+            xws.Indent = true;
+            xws.IndentChars = "    ";
             xws.OmitXmlDeclaration = true;
             xws.Encoding = Encoding.UTF8;
             XmlWriter xtw = XmlWriter.Create(context.Response.OutputStream, xws);

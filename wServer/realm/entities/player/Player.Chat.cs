@@ -34,10 +34,10 @@ namespace wServer.realm.entities
                 if (txt != "")
                 {
                     string chatColor = "";
-                    if (Client.Account.Rank > 3)
-                        chatColor = "@";
-                    else if (Client.Account.Rank == 3)
+                    if (Client.Account.Rank == 1)
                         chatColor = "#";
+                    else if (Client.Account.Rank == 2)
+                        chatColor = "@";
                     
                     Owner.BroadcastPacket(new TextPacket()
                     {

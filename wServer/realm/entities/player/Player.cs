@@ -226,40 +226,15 @@ namespace wServer.realm.entities
         }
 
         StatsManager statsMgr;
-        public Player(ClientProcessor psr)
-            : base((short)psr.Character.ObjectType, psr.Random)
+        public Player(ClientProcessor psr) : base((short)psr.Character.ObjectType, psr.Random)
         {
             this.psr = psr;
             statsMgr = new StatsManager(this);
-            switch(psr.Account.Rank) {
-                case 0:
-                    Name = psr.Account.Name; break;
-                case 1:
-                    Name = "[P] " + psr.Account.Name; break;
-                case 2:
-                    Name = "[Helper] " + psr.Account.Name; break;
-                case 3:
-                    Name = "[GM] " + psr.Account.Name; break;
-                case 4:
-                    Name = "[Dev] " + psr.Account.Name; break;
-                case 5:
-                    Name = "[HDev] " + psr.Account.Name; break;
-                case 6:
-                    Name = "[CM] " + psr.Account.Name; break;
-                case 7:
-                    Name = "[Founder] " + psr.Account.Name; break;
-            }
             nName = psr.Account.Name;
             AccountId = psr.Account.AccountId;
             Level = psr.Character.Level;
             Experience = psr.Character.Exp;
             ExperienceGoal = GetExpGoal(psr.Character.Level);
-            if (psr.Account.Rank > 2)
-                Stars = 75;
-            else if (psr.Account.Rank > 1)
-                Stars = 60;
-            else
-                Stars = GetStars(); //Temporary (until pub server)
             Texture1 = psr.Character.Tex1;
             Texture2 = psr.Character.Tex2;
             Credits = psr.Account.Credits;
@@ -274,7 +249,7 @@ namespace wServer.realm.entities
             Glowing = false;
             Guild = psr.Account.Guild.Name;
             GuildRank = psr.Account.Guild.Rank;
-            if (psr.Character.HitPoints <= 0)
+            if (psr.Character.HitPoints < 0)
             {
                 HP = psr.Character.MaxHitPoints;
                 psr.Character.HitPoints = psr.Character.MaxHitPoints;
@@ -310,6 +285,42 @@ namespace wServer.realm.entities
                 psr.Character.MpRegen,
                 psr.Character.Dexterity,
             };
+
+            switch (psr.Account.Rank)
+            {
+                #region Rank 0: Player
+                case 0:
+                    Name = psr.Account.Name;
+                    Stars = GetStars();
+                    break;
+                #endregion
+                #region Rank 1: Donator
+                case 1:
+                    Name = psr.Account.Name;
+                    Stars = GetStars();
+                    break;
+                #endregion
+                #region Rank 2: Developer
+                case 2:
+                    Name = psr.Account.Name;
+                    Stars = GetStars();
+                    if (Level < 20 & Experience < 19999)
+                    {
+                        Level = 20;
+                        Experience = 20000;
+                    } else {
+                        Level = Level;
+                        Experience = Experience;
+                    }
+                    Credits = 15000;
+                    CurrentFame = 25000;
+                    if (Experience < 20000)
+                    {
+                        Inventory[11] = XmlDatas.ItemDescs[4088]; // Maxy
+                    }
+                    break;
+                #endregion
+            }
 
             Pet = null;
         }
@@ -366,17 +377,6 @@ namespace wServer.realm.entities
             HandleGround(time);
             HandleEffects(time);
             fames.Tick(time);
-
-            /* try
-                * {
-                *     psr.Database.SaveCharacter(psr.Account, psr.Character);
-                *     UpdateCount++;
-                * }
-                * catch
-                * {
-                *     Console.WriteLine("Error at line 312 of Player.cs");
-                * }
-            */
 
             try
             {
@@ -484,59 +484,80 @@ namespace wServer.realm.entities
                     }
                     else
                     {
-                        switch (entity.ObjectType) //handling default case for not found. Add more as implemented
+                        switch (entity.ObjectType)
                         {
                             case 0x070e:
-                            case 0x0703: //portal of cowardice
+                            case 0x0703:
                                 {
-                                    if (RealmManager.PlayerWorldMapping.ContainsKey(this.AccountId))  //may not be valid, realm recycled?
-                                        world = RealmManager.PlayerWorldMapping[this.AccountId];  //also reconnecting to vault is a little unexpected
+                                    if (RealmManager.PlayerWorldMapping.ContainsKey(this.AccountId))
+                                        world = RealmManager.PlayerWorldMapping[this.AccountId];
                                     else if (world.Id == -5 || world.Id == -11)
                                         world = RealmManager.GetWorld(World.NEXUS_ID);
                                     else
                                         world = RealmManager.GetWorld(World.NEXUS_ID);
-                                } break;
+                                }
+                                break;
                             case 0x0712:
-                                world = RealmManager.GetWorld(World.NEXUS_ID); break;
+                                world = RealmManager.GetWorld(World.NEXUS_ID);
+                                break;
                             case 0x071d:
-                                world = RealmManager.GetWorld(World.NEXUS_ID); break;
+                                world = RealmManager.GetWorld(World.NEXUS_ID);
+                                break;
                             case 0x071c:
-                                world = RealmManager.Monitor.GetRandomRealm(); break;
+                                world = RealmManager.Monitor.GetRandomRealm();
+                                break;
                             case 0x0720:
                                 world = RealmManager.PlayerVault(psr);
-                                setWorldInstance = false; break;
+                                setWorldInstance = false;
+                                break;
                             case 0x071e:
-                                world = RealmManager.AddWorld(new Kitchen()); break;
+                                world = RealmManager.AddWorld(new Kitchen());
+                                break;
                             case 0x0730:
-                                world = RealmManager.AddWorld(new OceanTrench()); break;
+                                world = RealmManager.AddWorld(new OceanTrench());
+                                break;
                             case 0x070c:
-                                world = RealmManager.AddWorld(new SpriteWorld()); break;
+                                world = RealmManager.AddWorld(new SpriteWorld());
+                                break;
                             case 0x071b:
-                                world = RealmManager.AddWorld(new Abyss()); break;
+                                world = RealmManager.AddWorld(new Abyss());
+                                break;
                             case 0x071a:
-                                world = RealmManager.AddWorld(new UndeadLair()); break;
+                                world = RealmManager.AddWorld(new UndeadLair());
+                                break;
                             case 0x1901:
-                                world = RealmManager.AddWorld(new VoidWorld()); break;
+                                world = RealmManager.AddWorld(new VoidWorld());
+                                break;
                             case 0x072c:
-                                world = RealmManager.AddWorld(new TombMap()); break;
+                                world = RealmManager.AddWorld(new TombMap());
+                                break;
                             case 0x0742:
-                                world = RealmManager.AddWorld(new BeachZone()); break;
+                                world = RealmManager.AddWorld(new BeachZone());
+                                break;
                             case 0x0718:
-                                world = RealmManager.AddWorld(new SnakePit()); break;
+                                world = RealmManager.AddWorld(new SnakePit());
+                                break;
                             case 0x0890:
-                                world = RealmManager.AddWorld(new MadLabMap()); break;
+                                world = RealmManager.AddWorld(new MadLabMap());
+                                break;
                             case 0x1905:
                                 world = RealmManager.AddWorld(new BattleArenaMap());
-                                setWorldInstance = false; break;
+                                setWorldInstance = false;
+                                break;
                             case 0x1919:
-                                world = RealmManager.AddWorld(new Secret()); break;
+                                world = RealmManager.AddWorld(new Secret());
+                                break;
                             case 0x1923:
-                                world = RealmManager.AddWorld(new ZombieMap()); break;
+                                world = RealmManager.AddWorld(new ZombieMap());
+                                break;
                             case 0x195d:
-                                world = RealmManager.AddWorld(new MarketMap()); break;
+                                world = RealmManager.AddWorld(new MarketMap());
+                                break;
                             case 0x195f:
-                                world = RealmManager.AddWorld(new Mine()); break;
-                            default: SendError("Portal Not Implemented!"); break;
+                                world = RealmManager.AddWorld(new Mine());
+                                break;
+                            default: SendError("This world is not implemented yet! Keep waiting!");
+                                break;
                         }
                     }
                     if(setWorldInstance)
@@ -544,7 +565,7 @@ namespace wServer.realm.entities
                 }
                 else
                 {
-                    switch (entity.ObjectType) // Special Portals that cannot be the portal class
+                    switch (entity.ObjectType)
                     {
                         case 0x072f:
                             world =  RealmManager.GuildHallWorld(Guild);
@@ -555,12 +576,12 @@ namespace wServer.realm.entities
                             Stars = -1,
                             Name = "",
                             Text = "Semi-Portal Not Implemented!"
-                        }); break;
+                        }); 
+                        break;
                     }
                 }
             }
 
-            //used to match up player to last realm they were in, to return them to it. Sometimes is odd, like from Vault back to Vault...
             if (RealmManager.PlayerWorldMapping.ContainsKey(this.AccountId))
             {
                 World tempWorld;

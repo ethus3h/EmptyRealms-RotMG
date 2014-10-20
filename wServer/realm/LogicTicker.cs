@@ -51,13 +51,7 @@ namespace wServer.realm
                 if (times > 3)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("[INFO] Game Server lagged!");
-                    Console.WriteLine(@"[INFO] Times: " + times + 
-                        " \n[INFO] DT: " + dt +
-                        " \n[INFO] Count: " + count +
-                        " \n[INFO] Time: " + b +
-                        " \n[INFO] TPS: " + count / (b / 1000.0) +
-                        " \n[INFO] End of INFO\n");
+                    Console.WriteLine("[INFO] Gameserver lagged, saved information to LAGGED.log!");
                     Console.ResetColor();
 
                     var _directory = @"logs";

@@ -108,8 +108,11 @@ namespace Server.fame
                     }
                 }
 
-                XmlWriterSettings settings = new XmlWriterSettings();
-                settings.OmitXmlDeclaration = true;
+                XmlWriterSettings xws = new XmlWriterSettings();
+                xws.Indent = true;
+                xws.IndentChars = "    ";
+                xws.OmitXmlDeclaration = true;
+                xws.Encoding = Encoding.UTF8;
                 using (XmlWriter wtr = XmlWriter.Create(context.Response.OutputStream))
                     doc.Save(wtr);
             }

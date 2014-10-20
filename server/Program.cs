@@ -99,6 +99,7 @@ namespace Server
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("[REQUEST] Request incoming.");
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.WriteLine("[TIME] {0}", DateTime.Now);
                 Console.WriteLine("[URL] {0}", context.Request.Url.LocalPath);
                 Console.WriteLine("[IP] {0}", context.Request.RemoteEndPoint);
                 Console.ResetColor();

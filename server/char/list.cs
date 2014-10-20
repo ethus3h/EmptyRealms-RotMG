@@ -79,6 +79,8 @@ namespace Server.@char
                 XmlSerializer serializer = new XmlSerializer(chrs.GetType(), new XmlRootAttribute(chrs.GetType().Name) { Namespace = "" });
 
                 XmlWriterSettings xws = new XmlWriterSettings();
+                xws.Indent = true;
+                xws.IndentChars = "    ";
                 xws.OmitXmlDeclaration = true;
                 xws.Encoding = Encoding.UTF8;
                 XmlWriter xtw = XmlWriter.Create(context.Response.OutputStream, xws);
@@ -108,23 +110,13 @@ namespace Server.@char
                     new ServerItem()
                         {
                             Name = "Empty Realms",
-                            Lat = 57.282,
-                            Long = 43.1076,
-                            DNS = "25.103.23.132",
-                            Usage = 0.2,
+                            Lat = 0.0,
+                            Long = 0.0,
+                            DNS = "127.0.0.1",
+                            Usage = 0.0,
                             AdminOnly = false,
                             RankRequired = 0
-                        },                   
-                        new ServerItem()
-                        {
-                            Name = "Localhost",
-                            Lat = 57.282,
-                            Long = 43.1076,
-                            DNS = "127.0.0.1",
-                            Usage = 0.2,
-                            AdminOnly = false,
-                            RankRequired = 8
-                        }
+                        }                   
                 };
             return Servers;
         }

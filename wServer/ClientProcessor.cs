@@ -275,7 +275,7 @@ namespace wServer
             else
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("Client loading world");
+                Console.WriteLine("{0} tried to load world {1}", account.Name.ToString(), targetWorld.ToString());
                 Console.ForegroundColor = ConsoleColor.White;
                 World world = RealmManager.GetWorld(pkt.GameId);
                 if (world == null)
@@ -288,11 +288,10 @@ namespace wServer
                     Console.WriteLine("Invalid world");
                 }
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("Client joined world " + world.Id.ToString());
+                Console.WriteLine("{0} successfully loaded world {1}", account.Name.ToString(), targetWorld.ToString());
                 Console.ForegroundColor = ConsoleColor.White;
-                if (world.Id == -6) //Test World
+                if (world.Id == -6)
                     (world as realm.worlds.Test).LoadJson(pkt.MapInfo);
-                    
                 else if (world.IsLimbo)
                     world = world.GetInstance(this);
                 var seed = (uint)((long)Environment.TickCount * pkt.GUID.GetHashCode()) % uint.MaxValue;
@@ -375,7 +374,7 @@ namespace wServer
             {
                 var target = RealmManager.Worlds[targetWorld];
                 //Delay to let client load remote texture
-                target.Timers.Add(new WorldTimer(2000, (w, t) =>
+                target.Timers.Add(new WorldTimer(10, (w, t) =>
                 {
                     SendPacket(new CreateResultPacket()
                     {
