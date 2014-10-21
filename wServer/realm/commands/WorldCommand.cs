@@ -146,7 +146,7 @@ namespace wServer.realm.commands
                     return;
                 }
 
-                string[] tags = {"[P]", "[Helper]", "[Dev]", "[HDev]", "[CM]", "[GM]", "[Admin]", "[Founder]"};
+                string[] tags = { "[P]", "[Helper]", "[Dev]", "[HDev]", "[CM]", "[GM]", "[Admin]", "[Founder]" };
                 string playername = args[0].Trim();
                 if (tags.Contains(playername))
                 {
@@ -169,7 +169,7 @@ namespace wServer.realm.commands
                     {
                         foreach (var i in world.Players)
                         {
-                            if (i.Value.nName.ToLower() == args[sindex-1].ToLower().Trim() && i.Value.NameChosen)
+                            if (i.Value.nName.ToLower() == args[sindex - 1].ToLower().Trim() && i.Value.NameChosen)
                             {
                                 player.Client.SendPacket(new TextPacket()
                                 {
@@ -186,7 +186,7 @@ namespace wServer.realm.commands
                                     Stars = player.Stars,
                                     Recipient = i.Value.nName,
                                     Name = player.Name,
-                                    Text = " "+saytext
+                                    Text = " " + saytext
                                 });
                                 return;
                             }
@@ -224,7 +224,7 @@ namespace wServer.realm.commands
                         }
                     }
                 }
-                player.SendInfo(string.Format("Cannot tell, {0} not found!", args[sindex-1].Trim()));
+                player.SendInfo(string.Format("Cannot tell, {0} not found!", args[sindex - 1].Trim()));
             }
             catch
             {
@@ -275,7 +275,7 @@ namespace wServer.realm.commands
     class VisitCommand : ICommand
     {
         public string Command { get { return "visit"; } }
-        public int RequiredRank { get { return 1; } }
+        public int RequiredRank { get { return 2; } }
 
         public bool TryJoin(Player player, GlobalPlayerData iPlayerData, World world, Player i)
         {
@@ -435,7 +435,7 @@ namespace wServer.realm.commands
     class GroupCommand : ICommand
     {
         public string Command { get { return "group"; } }
-        public int RequiredRank { get { return 1; } }
+        public int RequiredRank { get { return 2; } }
 
         public void Execute(Player player, string[] args)
         {
@@ -517,7 +517,7 @@ namespace wServer.realm.commands
     class SoloCommand : ICommand
     {
         public string Command { get { return "solo"; } }
-        public int RequiredRank { get { return 1; } }
+        public int RequiredRank { get { return 2; } }
 
         public void Execute(Player player, string[] args)
         {
@@ -610,492 +610,495 @@ namespace wServer.realm.commands
             });
         }
     }
-       class statsCommand : ICommand
-       {
-           public string Command { get { return "stats"; } }
-           public int RequiredRank { get { return 1; } }
 
-           public void Execute(Player player, string[] args)
-           {
-               foreach (var i in RealmManager.Clients.Values)
-                   i.SendPacket(new NotificationPacket()
-                   {
-                       Color = new ARGB(0xff00ff00),
-                       ObjectId = player.Id,
-                       Text = "HP:" + player.HP + " " + "MP:" + player.MP + " " + "Fame:" + " " + player.Fame
-                   });
-               player.SendInfo("HP:" + player.HP + " " + "MP:" + player.MP + " " + "Att:" + " " + player.Stats[2] + " " + "Def:" + " " + player.Stats[3] + " " + "Spd:" + " " + player.Stats[4] + " " + "Vit:" + " " + player.Stats[5] + " " + "Wis:" + " " + player.Stats[6] + " " + "Dex:" + " " + player.Stats[7]);
-           }
-       }
-       class sayCommand : ICommand
-       {
-           public string Command { get { return "say"; } }
-           public int RequiredRank { get { return 2; } }
+    class PlayerStatsCommand : ICommand
+    {
+        public string Command { get { return "stats"; } }
+        public int RequiredRank { get { return 2; } }
 
-           public void Execute(Player player, string[] args)
-           {
-               if (args.Length == 0)
-               {
-                   player.SendHelp("Usage: /say <saytext>");
-               }
-               else
-               {
-                   string saytext = string.Join(" ", args);
-                   foreach (var i in RealmManager.Clients.Values)
-                       i.SendPacket(new NotificationPacket()
-                       {
-                           Color = new ARGB(0xff00ff00),
-                           ObjectId = player.Id,
-                           Text = saytext
-                       });
-               }
-           }
-       }
-       class AFKCommand : ICommand
-       {
-           public string Command { get { return "afk"; } }
-           public int RequiredRank { get { return 0; } }
+        string statsglobal;
+        string statsinfo;
 
-           public void Execute(Player player, string[] args)
-           {
-               if (player.HasConditionEffect(ConditionEffects.Paused))
-               {
-                   foreach (var i in RealmManager.Clients.Values)
-                       i.SendPacket(new NotificationPacket()
-                       {
-                           Color = new ARGB(0xff00ff00),
-                           ObjectId = player.Id,
-                           Text = "Active"
-                       });
-                   player.ApplyConditionEffect(new ConditionEffect()
-                   {
-                       Effect = ConditionEffectIndex.Paused,
-                       DurationMS = 0
-                   });
-                   player.SendInfo("Active!");
-               }
-               else
-               {
-                   foreach (var i in player.Owner.EnemiesCollision.HitTest(player.X, player.Y, 8).OfType<Enemy>())
-                   {
-                       if (i.ObjectDesc.Enemy)
-                       {
-                           player.SendInfo("Not safe to go AFK.");
-                           return;
-                       }
-                   }
-                   foreach (var i in RealmManager.Clients.Values)
-                       i.SendPacket(new NotificationPacket()
-                       {
-                           Color = new ARGB(0xff00ff00),
-                           ObjectId = player.Id,
-                           Text = "AFK"
-                       });
-                   player.ApplyConditionEffect(new ConditionEffect()
-                   {
-                       Effect = ConditionEffectIndex.Paused,
-                       DurationMS = -1
-                   });
-                   player.SendInfo("AFK!");
-               }
-           }
-       }
+        public void Execute(Player player, string[] args)
+        {
+            statsglobal = String.Format("HP: {0}, MP: {1}, Fame: {2}", player.HP, player.MP, player.Fame);
 
-       class ArenasCommand : ICommand
-       {
-           public string Command { get { return "arenas"; } }
-           public int RequiredRank { get { return 0; } }
+            foreach (var i in RealmManager.Clients.Values)
+                i.SendPacket(new NotificationPacket()
+                {
+                    Color = new ARGB(0xff00ff00),
+                    ObjectId = player.Id,
+                    Text = statsglobal
+                });
 
-           public void Execute(Player player, string[] args)
-           {
-               List<BattleArenaMap> Arenas = new List<BattleArenaMap>();
-               List<string> ArenaTexts = new List<string>();
+            statsinfo = String.Format("HP: {0}, MP: {1}, Attack: {2}, Defense: {3}, Speed: {4}, Dexterity: {5}, Vitality: {6}, Wisdom: {7}", player.HP, player.MP, player.Stats[2], player.Stats[3], player.Stats[4], player.Stats[7], player.Stats[5], player.Stats[6]);
+            player.SendInfo(statsinfo);
+        }
+    }
 
-               ArenaTexts.Add("");
+    class sayCommand : ICommand
+    {
+        public string Command { get { return "say"; } }
+        public int RequiredRank { get { return 2; } }
 
-               foreach (var w in RealmManager.Worlds)
-               {
-                   World world = w.Value;
-                   if (w.Value.Name == "Battle Arena" && w.Value.Players.Count > 0)
-                   {
-                       Arenas.Add(w.Value as BattleArenaMap);
-                   }
-               }
-               if (Arenas.Count > 0)
-               {
-                   foreach (var w in Arenas)
-                   {
-                       string ctext = "Wave " + w.Wave + " - {0} {1}";
-                       List<string> players = new List<string>();
-                       int solo = 0;
-                       foreach (var p in w.Players)
-                       {
-                           players.Add(p.Value.Name);
-                           if (PlayerDataList.GetData(p.Value.Client.Account.Name).Solo)
-                               solo++;
-                       }
-                       if (players.Count > 0)
-                       {
-                           ArenaTexts.Add(string.Format(ctext, string.Join(", ", players.ToArray()), solo == players.Count ? " (SOLO)" : ""));
-                       }
-                   }
-               }
+        public void Execute(Player player, string[] args)
+        {
+            if (args.Length == 0)
+            {
+                player.SendHelp("Usage: /say <saytext>");
+            }
+            else
+            {
+                string saytext = string.Join(" ", args);
+                foreach (var i in RealmManager.Clients.Values)
+                    i.SendPacket(new NotificationPacket()
+                    {
+                        Color = new ARGB(0xff00ff00),
+                        ObjectId = player.Id,
+                        Text = saytext
+                    });
+            }
+        }
+    }
 
-               if (ArenaTexts.Count == 1)
-                   ArenaTexts.Add("None");
+    class AFKCommand : ICommand
+    {
+        public string Command { get { return "afk"; } }
+        public int RequiredRank { get { return 0; } }
 
-               player.Client.SendPacket(new TextBoxPacket()
-               {
-                   Title = "Current Arenas:",
-                   Message = string.Join("\n", ArenaTexts.ToArray()),
-                   Button1 = "Ok"
-               });
-           }
-       }
+        public void Execute(Player player, string[] args)
+        {
+            if (player.HasConditionEffect(ConditionEffects.Paused))
+            {
+                foreach (var i in RealmManager.Clients.Values)
+                    i.SendPacket(new NotificationPacket()
+                    {
+                        Color = new ARGB(0xff00ff00),
+                        ObjectId = player.Id,
+                        Text = "Active"
+                    });
+                player.ApplyConditionEffect(new ConditionEffect()
+                {
+                    Effect = ConditionEffectIndex.Paused,
+                    DurationMS = 0
+                });
+                player.SendInfo("Active!");
+            }
+            else
+            {
+                foreach (var i in player.Owner.EnemiesCollision.HitTest(player.X, player.Y, 8).OfType<Enemy>())
+                {
+                    if (i.ObjectDesc.Enemy)
+                    {
+                        player.SendInfo("Not safe to go AFK.");
+                        return;
+                    }
+                }
+                foreach (var i in RealmManager.Clients.Values)
+                    i.SendPacket(new NotificationPacket()
+                    {
+                        Color = new ARGB(0xff00ff00),
+                        ObjectId = player.Id,
+                        Text = "AFK"
+                    });
+                player.ApplyConditionEffect(new ConditionEffect()
+                {
+                    Effect = ConditionEffectIndex.Paused,
+                    DurationMS = -1
+                });
+                player.SendInfo("AFK!");
+            }
+        }
+    }
 
-       class LeaderboardCommand : ICommand
-       {
-           public string Command { get { return "leaderboard"; } }
-           public int RequiredRank { get { return 0; } }
+    class ArenasCommand : ICommand
+    {
+        public string Command { get { return "arenas"; } }
+        public int RequiredRank { get { return 0; } }
 
-           public void Execute(Player player, string[] args)
-           {
-               string[] leaderboardInfo = new Database().GetArenaLeaderboards();
+        public void Execute(Player player, string[] args)
+        {
+            List<BattleArenaMap> Arenas = new List<BattleArenaMap>();
+            List<string> ArenaTexts = new List<string>();
 
-               player.Client.SendPacket(new TextBoxPacket()
-               {
-                   Title = "Arena Leaderboard",
-                   Message = string.Join("\n", leaderboardInfo),
-                   Button1 = "Ok"
-               });
-           }
-       }
+            ArenaTexts.Add("");
 
-       class GuildLeaderboardCommand : ICommand
-       {
-           public string Command { get { return "gleaderboard"; } }
-           public int RequiredRank { get { return 0; } }
+            foreach (var w in RealmManager.Worlds)
+            {
+                World world = w.Value;
+                if (w.Value.Name == "Battle Arena" && w.Value.Players.Count > 0)
+                {
+                    Arenas.Add(w.Value as BattleArenaMap);
+                }
+            }
+            if (Arenas.Count > 0)
+            {
+                foreach (var w in Arenas)
+                {
+                    string ctext = "Wave " + w.Wave + " - {0} {1}";
+                    List<string> players = new List<string>();
+                    int solo = 0;
+                    foreach (var p in w.Players)
+                    {
+                        players.Add(p.Value.Name);
+                        if (PlayerDataList.GetData(p.Value.Client.Account.Name).Solo)
+                            solo++;
+                    }
+                    if (players.Count > 0)
+                    {
+                        ArenaTexts.Add(string.Format(ctext, string.Join(", ", players.ToArray()), solo == players.Count ? " (SOLO)" : ""));
+                    }
+                }
+            }
 
-           public void Execute(Player player, string[] args)
-           {
-               string[] leaderboardInfo = new Database().GetGuildLeaderboards();
+            if (ArenaTexts.Count == 1)
+                ArenaTexts.Add("None");
 
-               player.Client.SendPacket(new TextBoxPacket()
-               {
-                   Title = "Guilds",
-                   Message = string.Join("\n", leaderboardInfo),
-                   Button1 = "Ok"
-               });
-           }
-       }
+            player.Client.SendPacket(new TextBoxPacket()
+            {
+                Title = "Current Arenas:",
+                Message = string.Join("\n", ArenaTexts.ToArray()),
+                Button1 = "Ok"
+            });
+        }
+    }
+
+    class LeaderboardCommand : ICommand
+    {
+        public string Command { get { return "leaderboard"; } }
+        public int RequiredRank { get { return 0; } }
+
+        public void Execute(Player player, string[] args)
+        {
+            string[] leaderboardInfo = new Database().GetArenaLeaderboards();
+
+            player.Client.SendPacket(new TextBoxPacket()
+            {
+                Title = "Arena Leaderboard",
+                Message = string.Join("\n", leaderboardInfo),
+                Button1 = "Ok"
+            });
+        }
+    }
+
+    class GuildLeaderboardCommand : ICommand
+    {
+        public string Command { get { return "gleaderboard"; } }
+        public int RequiredRank { get { return 0; } }
+
+        public void Execute(Player player, string[] args)
+        {
+            string[] leaderboardInfo = new Database().GetGuildLeaderboards();
+
+            player.Client.SendPacket(new TextBoxPacket()
+            {
+                Title = "Guilds",
+                Message = string.Join("\n", leaderboardInfo),
+                Button1 = "Ok"
+            });
+        }
+    }
 
     class ForgeListCommand : ICommand
-       {
-           public string Command { get { return "forgelist"; } }
-           public int RequiredRank { get { return 0; } }
+    {
+        public string Command { get { return "forgelist"; } }
+        public int RequiredRank { get { return 2; } }
 
-           public void Execute(Player player, string[] args)
-           {
-               if (player.HasSlot(3) && player.Inventory[3].ObjectId == "Forge Amulet")
-               {
-                   List<string> advancedNames = new List<string>();
-                   List<string> itemNames = new List<string>();
-                   Combinations c = new Combinations();
-                   foreach (var i in c.advCombos)
-                   {
-                       string addText = i.Value.Item1;
-                       int requiredItemCount = i.Key.Length;
-                       List<string> sList = i.Key.ToList();
-                       foreach (var e in player.Inventory)
-                       {
-                           try
-                           {
-                               if (sList.Contains(e.ObjectId))
-                                   requiredItemCount--; sList.Remove(e.ObjectId);
-                           }
-                           catch { }
-                       }
-                       if (requiredItemCount <= 0 && i.Value.Item2 <= player.CurrentFame)
-                           addText = "<b>" + addText + "</b>";
+        public void Execute(Player player, string[] args)
+        {
+            if (player.HasSlot(3) && player.Inventory[3].ObjectId == "Forge Amulet")
+            {
+                List<string> advancedNames = new List<string>();
+                List<string> itemNames = new List<string>();
+                Combinations c = new Combinations();
+                foreach (var i in c.advCombos)
+                {
+                    string addText = i.Value.Item1;
+                    int requiredItemCount = i.Key.Length;
+                    List<string> sList = i.Key.ToList();
+                    foreach (var e in player.Inventory)
+                    {
+                        try
+                        {
+                            if (sList.Contains(e.ObjectId))
+                                requiredItemCount--; sList.Remove(e.ObjectId);
+                        }
+                        catch { }
+                    }
+                    if (requiredItemCount <= 0 && i.Value.Item2 <= player.CurrentFame)
+                        addText = "<b>" + addText + "</b>";
 
-                       if (i.Value.Item3)
-                           advancedNames.Add(addText);
-                       else
-                           itemNames.Add(addText);
-                   }
+                    if (i.Value.Item3)
+                        advancedNames.Add(addText);
+                    else
+                        itemNames.Add(addText);
+                }
 
-                   player.Client.SendPacket(new TextBoxPacket()
-                   {
-                       Title = "Forge List",
-                       Message = "<u>ADVANCED COMBOS</u>\n" + string.Join(" | ", advancedNames.ToArray()) + "\n\n<u>REGULAR COMBOS</u>\n" + string.Join(" | ", itemNames.ToArray()),
-                       Button1 = "Ok"
-                   });
-               }
-               else
-               {
-                   List<string> itemNames = new List<string>();
-                   Combinations c = new Combinations();
-                   foreach (var i in c.combos)
-                   {
-                       string addText = i.Value.Item1;
-                       int requiredItemCount = i.Key.Length;
-                       List<string> sList = i.Key.ToList();
-                       foreach (var e in player.Inventory)
-                       {
-                           try
-                           {
-                               if (sList.Contains(e.ObjectId))
-                                   requiredItemCount--; sList.Remove(e.ObjectId);
-                           }
-                           catch { }
-                       }
-                       if (requiredItemCount <= 0 && i.Value.Item2 <= player.CurrentFame)
-                           addText = "<b>" + addText + "</b>";
+                player.Client.SendPacket(new TextBoxPacket()
+                {
+                    Title = "Forge List",
+                    Message = "<u>ADVANCED COMBOS</u>\n" + string.Join(" | ", advancedNames.ToArray()) + "\n\n<u>REGULAR COMBOS</u>\n" + string.Join(" | ", itemNames.ToArray()),
+                    Button1 = "Ok"
+                });
+            }
+            else
+            {
+                List<string> itemNames = new List<string>();
+                Combinations c = new Combinations();
+                foreach (var i in c.combos)
+                {
+                    string addText = i.Value.Item1;
+                    int requiredItemCount = i.Key.Length;
+                    List<string> sList = i.Key.ToList();
+                    foreach (var e in player.Inventory)
+                    {
+                        try
+                        {
+                            if (sList.Contains(e.ObjectId))
+                                requiredItemCount--; sList.Remove(e.ObjectId);
+                        }
+                        catch { }
+                    }
+                    if (requiredItemCount <= 0 && i.Value.Item2 <= player.CurrentFame)
+                        addText = "<b>" + addText + "</b>";
 
-                       itemNames.Add(addText);
-                   }
+                    itemNames.Add(addText);
+                }
 
-                   player.Client.SendPacket(new TextBoxPacket()
-                   {
-                       Title = "Forge List",
-                       Message = string.Join(" | ", itemNames.ToArray()),
-                       Button1 = "Ok"
-                   });
-               }
-           }
-       }
+                player.Client.SendPacket(new TextBoxPacket()
+                {
+                    Title = "Forge List",
+                    Message = string.Join(" | ", itemNames.ToArray()),
+                    Button1 = "Ok"
+                });
+            }
+        }
+    }
 
-       class SellCommand : ICommand
-       {
-           public string Command { get { return "sell"; } }
-           public int RequiredRank { get { return 0; } }
+    class SellCommand : ICommand
+    {
+        public string Command { get { return "sell"; } }
+        public int RequiredRank { get { return 2; } }
 
-           public void Execute(Player player, string[] args)
-           {
-               try
-               {
-                   player.Decision = 0;
-                   player.price = new Prices();
-                   List<int> slotList = new List<int>();
-                   List<int> slotList2 = new List<int>();
-                   for (var i = 0; i < args.Length; i++)
-                       if(!slotList.Contains(Convert.ToInt32(args[i])))
+        public void Execute(Player player, string[] args)
+        {
+            try
+            {
+                player.Decision = 0;
+                player.price = new Prices();
+                List<int> slotList = new List<int>();
+                List<int> slotList2 = new List<int>();
+                for (var i = 0; i < args.Length; i++)
+                    if (!slotList.Contains(Convert.ToInt32(args[i])))
                         slotList.Add(Convert.ToInt32(args[i]));
-                   if (slotList.Count < 1)
-                       throw new Exception();
-                   foreach (var i in slotList)
-                       if (!(i < 0) && !(i > 8))
-                       {
-                           int realslot = i + 3;
-                           if (player.Inventory[realslot] != null)
-                           {
-                               slotList2.Add(realslot);
-                           }
-                       }
-                   player.price.SellSlots = slotList2;
-                   if (!player.price.HasPrices(player))
-                   {
-                       player.SendInfo("No prices for specified items!");
-                   }
-                   else
-                   {
-                       List<int> msgSlots = new List<int>();
-                       foreach (var i in player.price.SellSlots)
-                           try { msgSlots.Add(i - 3); }
-                           catch { }
-                       player.SendInfo("Slots being sold: [" + string.Join(", ", msgSlots) + "]");
-                       player.SendInfo("You gain " + player.price.GetPrices(player).ToString() + " fame from these items. Sell them?\nType /yes or /no");
-                       player.Decision = 2;
-                   }
-               }
-               catch
-               {
-                   player.SendHelp("Usage: /sell <slot #1> <slot #2> etc.");
-               }
-           }
-       }
+                if (slotList.Count < 1)
+                    throw new Exception();
+                foreach (var i in slotList)
+                    if (!(i < 0) && !(i > 8))
+                    {
+                        int realslot = i + 3;
+                        if (player.Inventory[realslot] != null)
+                        {
+                            slotList2.Add(realslot);
+                        }
+                    }
+                player.price.SellSlots = slotList2;
+                if (!player.price.HasPrices(player))
+                {
+                    player.SendInfo("No prices for specified items!");
+                }
+                else
+                {
+                    List<int> msgSlots = new List<int>();
+                    foreach (var i in player.price.SellSlots)
+                        try { msgSlots.Add(i - 3); }
+                        catch { }
+                    player.SendInfo("Slots being sold: [" + string.Join(", ", msgSlots) + "]");
+                    player.SendInfo("You gain " + player.price.GetPrices(player).ToString() + " fame from these items. Sell them?\nType /yes or /no");
+                    player.Decision = 2;
+                }
+            }
+            catch
+            {
+                player.SendHelp("Usage: /sell <slot #1> <slot #2> etc.");
+            }
+        }
+    }
 
-       class ForgeCommand : ICommand
-       {
-           public string Command { get { return "forge"; } }
-           public int RequiredRank { get { return 0; } }
+    class ForgeCommand : ICommand
+    {
+        public string Command { get { return "forge"; } }
+        public int RequiredRank { get { return 2; } }
 
-           public void Execute(Player player, string[] args)
-           {
-               try
-               {
-                   player.Decision = 0;
-                   player.combs = new Combinations();
-                   List<int> slotList = new List<int>();
-                   List<int> slotList2 = new List<int>();
-                   List<string> nameList = new List<string>();
-                   string[] nameArray;
-                   for (var i = 0; i < args.Length; i++)
-                       slotList.Add(Convert.ToInt32(args[i]));
-                   if (slotList.Count < 2)
-                       throw new Exception();
-                   foreach (var i in slotList)
-                       if (!(i < 0) && !(i > 8))
-                       {
-                           int realslot = i + 3;
-                           if (player.Inventory[realslot] != null)
-                           {
-                               slotList2.Add(realslot);
-                               nameList.Add(player.Inventory[realslot].ObjectId);
-                           }
-                           else
-                           {
-                               throw new Exception();
-                           }
-                       }
-                   player.combs.SlotList = slotList2;
-                   nameArray = nameList.ToArray();
-                   player.SendInfo("Researching " + (player.HasSlot(3) && player.Inventory[3].ObjectId == "Forge Amulet" ? "advanced " : "") + "combinations...");
-                   if (!player.combs.SetComboAdv(nameArray, (player.HasSlot(3) && player.Inventory[3].ObjectId == "Forge Amulet")))
-                   {
-                       player.SendInfo("No combination found!");
-                   }
-                   else
-                   {
-                       player.SendInfo("It costs " + (player.combs.Combo.Item2 / (player.HasSlot(3) && player.Inventory[3].ObjectType == 0x193e ? 2 : 1)).ToString() + " fame to forge these items. Are you sure?\nType /yes or /no");
-                       player.Decision = 1;
-                   }
-               }
-               catch
-               {
-                   player.SendHelp("Usage: /forge <slot #1> <slot #2> etc.");
-               }
-           }
-       }
+        public void Execute(Player player, string[] args)
+        {
+            try
+            {
+                player.Decision = 0;
+                player.combs = new Combinations();
+                List<int> slotList = new List<int>();
+                List<int> slotList2 = new List<int>();
+                List<string> nameList = new List<string>();
+                string[] nameArray;
+                for (var i = 0; i < args.Length; i++)
+                    slotList.Add(Convert.ToInt32(args[i]));
+                if (slotList.Count < 2)
+                    throw new Exception();
+                foreach (var i in slotList)
+                    if (!(i < 0) && !(i > 8))
+                    {
+                        int realslot = i + 3;
+                        if (player.Inventory[realslot] != null)
+                        {
+                            slotList2.Add(realslot);
+                            nameList.Add(player.Inventory[realslot].ObjectId);
+                        }
+                        else
+                        {
+                            throw new Exception();
+                        }
+                    }
+                player.combs.SlotList = slotList2;
+                nameArray = nameList.ToArray();
+                player.SendInfo("Researching " + (player.HasSlot(3) && player.Inventory[3].ObjectId == "Forge Amulet" ? "advanced " : "") + "combinations...");
+                if (!player.combs.SetComboAdv(nameArray, (player.HasSlot(3) && player.Inventory[3].ObjectId == "Forge Amulet")))
+                {
+                    player.SendInfo("No combination found!");
+                }
+                else
+                {
+                    player.SendInfo("It costs " + (player.combs.Combo.Item2 / (player.HasSlot(3) && player.Inventory[3].ObjectType == 0x193e ? 2 : 1)).ToString() + " fame to forge these items. Are you sure?\nType /yes or /no");
+                    player.Decision = 1;
+                }
+            }
+            catch
+            {
+                player.SendHelp("Usage: /forge <slot #1> <slot #2> etc.");
+            }
+        }
+    }
 
-       class YesCommand : ICommand
-       {
-           public string Command { get { return "yes"; } }
-           public int RequiredRank { get { return 0; } }
+    class YesCommand : ICommand
+    {
+        public string Command { get { return "yes"; } }
+        public int RequiredRank { get { return 0; } }
 
-           public void Execute(Player player, string[] args)
-           {
-               if (player.Decision == 1)
-               {
-                   if (player.combs.SlotList.Count > 0)
-                   {
-                       if (player.combs.Combo.Item2 / (player.HasSlot(3) && player.Inventory[3].ObjectType == 0x193e ? 2 : 1) <= player.CurrentFame)
-                       {
-                           short resultId;
-                           if (XmlDatas.IdToType.TryGetValue(player.combs.Combo.Item1, out resultId))
-                           {
-                               Item resultItem;
-                               if (XmlDatas.ItemDescs.TryGetValue(resultId, out resultItem))
-                               {
-                                   foreach (var i in player.combs.SlotList)
-                                       player.Inventory[i] = null;
-                                   player.Inventory[player.combs.SlotList[0]] = resultItem;
-                                   player.CurrentFame = player.Client.Account.Stats.Fame = new Database().UpdateFame(player.Client.Account, -(player.combs.Combo.Item2 / (player.HasSlot(3) && player.Inventory[3].ObjectType == 0x193e ? 2 : 1)));
-                                   player.SendInfo("Your items have been forged into a " + player.combs.Combo.Item1 + (player.HasSlot(3) && player.Inventory[3].ObjectType == 0x193e ? ", breaking your Forge Amulet." : "!"));
-                                   if (player.HasSlot(3) && player.Inventory[3].ObjectType == 0x193e)
-                                       player.Inventory[3] = null;
-                                   player.UpdateCount++;
-                               }
-                           }
-                       }
-                       else
-                       {
-                           player.SendInfo("Not enough fame to forge these items!");
-                       }
-                   }
-               }
-               else if (player.Decision == 2)
-               {
-                   if (player.price.HasPrices(player) && player.price.SellSlots.Count > 0)
-                   {
-                       player.CurrentFame = player.Client.Account.Stats.Fame = new Database().UpdateFame(player.Client.Account, player.price.GetPrices(player));
-                       foreach (var i in player.price.SellSlots)
-                           player.Inventory[i] = null;
-                       player.UpdateCount++;
-                       player.SendInfo("Items sold!");
-                   }
-                   else
-                       player.SendInfo("Could not sell.");
-               }
-               player.Decision = 0;
-           }
-       }
+        public void Execute(Player player, string[] args)
+        {
+            if (player.Decision == 1)
+            {
+                if (player.combs.SlotList.Count > 0)
+                {
+                    if (player.combs.Combo.Item2 / (player.HasSlot(3) && player.Inventory[3].ObjectType == 0x193e ? 2 : 1) <= player.CurrentFame)
+                    {
+                        short resultId;
+                        if (XmlDatas.IdToType.TryGetValue(player.combs.Combo.Item1, out resultId))
+                        {
+                            Item resultItem;
+                            if (XmlDatas.ItemDescs.TryGetValue(resultId, out resultItem))
+                            {
+                                foreach (var i in player.combs.SlotList)
+                                    player.Inventory[i] = null;
+                                player.Inventory[player.combs.SlotList[0]] = resultItem;
+                                player.CurrentFame = player.Client.Account.Stats.Fame = new Database().UpdateFame(player.Client.Account, -(player.combs.Combo.Item2 / (player.HasSlot(3) && player.Inventory[3].ObjectType == 0x193e ? 2 : 1)));
+                                player.SendInfo("Your items have been forged into a " + player.combs.Combo.Item1 + (player.HasSlot(3) && player.Inventory[3].ObjectType == 0x193e ? ", breaking your Forge Amulet." : "!"));
+                                if (player.HasSlot(3) && player.Inventory[3].ObjectType == 0x193e)
+                                    player.Inventory[3] = null;
+                                player.UpdateCount++;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        player.SendInfo("Not enough fame to forge these items!");
+                    }
+                }
+            }
+            else if (player.Decision == 2)
+            {
+                if (player.price.HasPrices(player) && player.price.SellSlots.Count > 0)
+                {
+                    player.CurrentFame = player.Client.Account.Stats.Fame = new Database().UpdateFame(player.Client.Account, player.price.GetPrices(player));
+                    foreach (var i in player.price.SellSlots)
+                        player.Inventory[i] = null;
+                    player.UpdateCount++;
+                    player.SendInfo("Items sold!");
+                }
+                else
+                    player.SendInfo("Could not sell.");
+            }
+            player.Decision = 0;
+        }
+    }
 
-       class NoCommand : ICommand
-       {
-           public string Command { get { return "no"; } }
-           public int RequiredRank { get { return 0; } }
+    class NoCommand : ICommand
+    {
+        public string Command { get { return "no"; } }
+        public int RequiredRank { get { return 0; } }
 
-           public void Execute(Player player, string[] args)
-           {
-               if (player.Decision == 1)
-               {
-                   player.SendInfo("Cancelled forging.");
-               }
-               else if (player.Decision == 2)
-               {
-                   player.SendInfo("Cancelled selling.");
-               }
-               player.Decision = 0;
-           }
-       }
+        public void Execute(Player player, string[] args)
+        {
+            if (player.Decision == 1)
+            {
+                player.SendInfo("Cancelled forging.");
+            }
+            else if (player.Decision == 2)
+            {
+                player.SendInfo("Cancelled selling.");
+            }
+            player.Decision = 0;
+        }
+    }
 
-       class PremChat : ICommand
-       {
-           public string Command { get { return "p"; } }
-           public int RequiredRank { get { return 1; } }
+    class PremChat : ICommand
+    {
+        public string Command { get { return "p"; } }
+        public int RequiredRank { get { return 1; } }
 
-           public void Execute(Player player, string[] args)
-           {
-                   if (args.Length == 0 )
-                   {
-                       player.SendHelp("Use /p <text>");
-                   }
-               
-                   else
-               if (player.Client.Account.Rank >= 2)
-               {
+        public void Execute(Player player, string[] args)
+        {
+            if (args.Length == 0)
+            {
+                player.SendHelp("Use /p <text>");
+            }
 
-                   try
-                   {
-                       string saytext = string.Join(" ", args);
+            else
+                if (player.Client.Account.Rank >= 2)
+                {
 
-                       foreach (var w in RealmManager.Worlds)
-                       {
-                           World world = w.Value;
-                           if (w.Key != 0)
-                           {
-                               foreach (var i in world.Players)
-                               {
-                                   if (i.Value.Client.Account.Rank >= 2)
-                                   {
-                                       i.Value.Client.SendPacket(new TextPacket() 
-                                       {
-                                           BubbleTime = 10,
-                                           ObjectId = player.Id,
-                                           Stars = player.Stars,
-                                           Name = "#[Premium] " + player.nName,
-                                           Text = " " + saytext
-                                       });
-                                   }
-                               }
-                           }
-                       }
-                   }
-                   catch
-                   {
-                       player.SendInfo("Cannot premium chat!");
-                   }
-               }
-               else
-                   player.SendInfo("You need to be premium to use this command.");
-           }
-       }
+                    try
+                    {
+                        string saytext = string.Join(" ", args);
 
-
-
-
-
-
-
+                        foreach (var w in RealmManager.Worlds)
+                        {
+                            World world = w.Value;
+                            if (w.Key != 0)
+                            {
+                                foreach (var i in world.Players)
+                                {
+                                    if (i.Value.Client.Account.Rank >= 2)
+                                    {
+                                        i.Value.Client.SendPacket(new TextPacket()
+                                        {
+                                            BubbleTime = 10,
+                                            ObjectId = player.Id,
+                                            Stars = player.Stars,
+                                            Name = "#[Donator] " + player.nName,
+                                            Text = " " + saytext
+                                        });
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    catch
+                    {
+                        player.SendInfo("Cannot premium chat!");
+                    }
+                }
+                else
+                    player.SendInfo("You need to be premium to use this command.");
+        }
+    }
 }

@@ -21,7 +21,7 @@ REM swfbinreplace client.swf 88 client-88.bin
 REM swfbinreplace client.swf 100 client-100.bin
 REM swfbinreplace client.swf 104 client-104.bin
 REM swfbinreplace client.swf 107 client-107.bin
-REM swfbinreplace client.swf 108 client-108.bin
+swfbinreplace client.swf 108 client-108.bin
 REM swfbinreplace client.swf 110 client-110.bin
 REM swfbinreplace client.swf 113 client-113.bin
 REM swfbinreplace client.swf 119 client-119.bin

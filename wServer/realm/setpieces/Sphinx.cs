@@ -39,6 +39,7 @@ namespace wServer.realm.setpieces
         public void RenderSetPiece(World world, IntPoint pos)
         {
             int[,] t = new int[81, 81];
+
             for (int x = 0; x < Size; x++)                      //Flooring
                 for (int y = 0; y < Size; y++)
                 {
