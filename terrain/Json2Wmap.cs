@@ -6,7 +6,7 @@ using System.IO;
 
 namespace terrain
 {
-    public class Json2Wmap
+    public class Json2WmapC
     {
         private struct obj
         {

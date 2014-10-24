@@ -16,7 +16,7 @@ namespace terrain
             {
                 FileInfo fi = new FileInfo(args[0].ToString());
                 if (fi.Exists)
-                    terrain.Json2Wmap.Convert(args[0], args[1]);
+                    terrain.Json2WmapC.Convert(args[0], args[1]);
                 else
                 {
                     Console.WriteLine("input file not found: " + fi.FullName);

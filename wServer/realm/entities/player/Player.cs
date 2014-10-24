@@ -307,17 +307,14 @@ namespace wServer.realm.entities
                     if (Level < 20 & Experience < 19999)
                     {
                         Level = 20;
-                        Experience = 20000;
+                        Experience = 19999;
+
                     } else {
                         Level = Level;
                         Experience = Experience;
                     }
                     Credits = 15000;
                     CurrentFame = 25000;
-                    if (Experience < 20000)
-                    {
-                        Inventory[11] = XmlDatas.ItemDescs[4088]; // Maxy
-                    }
                     break;
                 #endregion
             }
@@ -384,7 +381,7 @@ namespace wServer.realm.entities
             }
             catch { }
 
-            if (HP <= 0)
+            if (HP < 0)
             {
                 Death("Unknown");
                 return;
@@ -740,7 +737,7 @@ namespace wServer.realm.entities
             string killer = enName ??
                     chr.ObjectDesc.DisplayId ??
                     chr.ObjectDesc.ObjectId;
-            if (HP <= 0) Death(killer);
+            if (HP < 0) Death(killer);
         }
 
         bool resurrecting = false;
@@ -792,65 +789,6 @@ namespace wServer.realm.entities
             {
                 case 8:
                     objType = 0x0735; time = null;
-                    /*
-                    if (player.objType = 782) //Wizard
-                    {
-                        objType = 0x0723; time = null;
-                    }
-                    else if (player.objType = 784) //Priest
-                    {
-                        objType = 0x0723; time = null;
-                    }
-                    else if (player.objType = 768) //Rogue
-                    {
-                        objType = 0x0723; time = null;
-                    }
-                    else if (player.objType = 801) //Necromancer
-                    {
-                        objType = 0x0723; time = null;
-                    }
-                    else if (player.objType = 798) //Knight
-                    {
-                        objType = 0x0723; time = null;
-                    }
-                    else if (player.objType = 800) //Assassin
-                    {
-                        objType = 0x0723; time = null;
-                    }
-                    else if (player.objType = 802) //Huntress
-                    {
-                        objType = 0x0723; time = null;
-                    }
-                    else if (player.objType = 804) //Trickster
-                    {
-                        objType = 0x0723; time = null;
-                    }
-                    else if (player.objType = 775)  //Warrior
-                    {
-                        objType = 0x0723; time = null;
-                    }
-                     * 
-                    else if (player.objType = 782)
-                    {
-                        objType = 0x0723; time = null;
-                    }
-                    else if (player.objType = 782)
-                    {
-                        objType = 0x0723; time = null;
-                    }
-                    else if (player.objType = 782)
-                    {
-                        objType = 0x0723; time = null;
-                    }
-                    else if (player.objType = 782)
-                    {
-                        objType = 0x0723; time = null;
-                    }
-                    else if (player.objType = 782)
-                    {
-                        objType = 0x0723; time = null;
-                    }
-                    */
                     break;
                 case 7:
                     objType = 0x0734; time = null;
