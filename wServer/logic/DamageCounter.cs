@@ -2,16 +2,6 @@
 using System.Collections.Generic;
 using wServer.realm.entities;
 using wServer.realm.worlds;
-using wServer.realm.entities.player;
-using db;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using wServer.cliPackets;
-using wServer.logic;
-using wServer.realm.entities.player;
-using wServer.realm.worlds;
-using wServer.svrPackets;
 
 namespace wServer.logic
 {

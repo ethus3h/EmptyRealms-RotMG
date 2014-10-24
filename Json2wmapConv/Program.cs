@@ -9,7 +9,7 @@ namespace terrain
         {
             if (args.Length != 2)
             {
-                Console.WriteLine("usage: Json2wmapConv.exe jsonfile wmapfile");
+                Console.WriteLine("Usage: Json2wmapConv.exe mapname.jm mapname.wmap");
                 return;
             }
             try
@@ -19,13 +19,13 @@ namespace terrain
                     terrain.Json2WmapC.Convert(args[0], args[1]);
                 else
                 {
-                    Console.WriteLine("input file not found: " + fi.FullName);
+                    Console.WriteLine("Can't find file: " + fi.FullName);
                     return;
                 }
             }
             catch (Exception e)
             {
-                Console.WriteLine("Exception : " + e);
+                Console.WriteLine("Exception: " + e);
             }
             Console.WriteLine("done");
         }
