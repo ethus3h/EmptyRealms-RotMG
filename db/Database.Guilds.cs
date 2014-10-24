@@ -157,7 +157,7 @@ namespace db
                     Name = GetGuildName(guildid),
                     Rank = rank
                 };
-                if(guild.Name == "")
+                if (guild.Name == "")
                 {
                     throw new Exception("Guild not found!");
                 }
@@ -232,8 +232,7 @@ namespace db
         public void UpdateGuild(int id)
         {
             GuildStruct guild = GetGuild(id);
-            if (guild == null)
-                throw new Exception("Guild not found!");
+            if (guild == null) throw new Exception("Guild not found!");
             var cmd = CreateQuery();
             cmd.CommandText = "SELECT * FROM accounts WHERE guild=@gid";
             cmd.Parameters.AddWithValue("@gid", id);
@@ -284,8 +283,7 @@ namespace db
                     return rdr.GetString("text");
                 }
             }
-            else
-                throw new Exception("Invalid account.");
+            else throw new Exception("Invalid account.");
         }
 
         public string SetGuildBoard(string text, Account acc)
@@ -303,8 +301,7 @@ namespace db
                 }
                 return text;
             }
-            else
-                return "Error";
+            else return "Error";
         }
 
         public string HTTPGetGuildMembers(int num, int offset, Account acc)
@@ -340,15 +337,20 @@ namespace db
                             switch (rdr.GetInt32("guildRank"))
                             {
                                 case 40:
-                                    Founders.Add(add); break;
+                                    Founders.Add(add);
+                                    break;
                                 case 30:
-                                    Leaders.Add(add); break;
+                                    Leaders.Add(add);
+                                    break;
                                 case 20:
-                                    Officers.Add(add); break;
+                                    Officers.Add(add);
+                                    break;
                                 case 10:
-                                    Members.Add(add); break;
+                                    Members.Add(add);
+                                    break;
                                 case 0:
-                                    Initiates.Add(add); break;
+                                    Initiates.Add(add);
+                                    break;
                             }
                         }
                         else

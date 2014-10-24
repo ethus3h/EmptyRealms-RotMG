@@ -6,8 +6,16 @@ namespace wServer
     {
         private byte[] m_State = new byte[256];
 
-        public int X { get; set; }
-        public int Y { get; set; }
+        public int X
+        {
+            get;
+            set;
+        }
+        public int Y
+        {
+            get;
+            set;
+        }
 
         public byte[] State
         {

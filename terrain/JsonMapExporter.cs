@@ -15,8 +15,7 @@ namespace terrain
 
             public int GetHashCode(TerrainTile obj)
             {
-                return obj.TileId * 13 +
-                    (obj.TileObj == null ? 0 : obj.TileObj.GetHashCode() * obj.Name.GetHashCode() * 29);
+                return obj.TileId * 13 + (obj.TileObj == null ? 0 : obj.TileObj.GetHashCode() * obj.Name.GetHashCode() * 29);
             }
         }
 
@@ -59,21 +58,17 @@ namespace terrain
                         dict.Add(new loc()
                         {
                             ground = TileTypes.id[tile.TileId],
-                            objs = tile.TileObj == null ? null : new obj[]
-                            {
-                                new obj()
-                                {
-                                    id = tile.TileObj,
-                                    name = tile.Name == null ? null : tile.Name
-                                }
-                            },
-                            regions = tile.TileId == TileTypes.Beach ? new obj[]
-                            {
-                                new obj()
-                                {
-                                    id = "Spawn"
-                                }
-                            } : null
+                            objs = tile.TileObj == null ? null : new obj[] {
+                            new obj() {
+                                id = tile.TileObj,
+                                name = tile.Name == null ? null : tile.Name
+                            }
+                        },
+                            regions = tile.TileId == TileTypes.Beach ? new obj[] {
+                            new obj() {
+                                id = "Spawn"
+                            }
+                        } : null
                         });
                     }
                     dat[i + 1] = (byte)(idx & 0xff);

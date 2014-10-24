@@ -22,10 +22,7 @@ namespace Server.account
                 int iqs = currurl.IndexOf('?');
                 if (iqs >= 0)
                 {
-                    query =
-                        HttpUtility.ParseQueryString((iqs < currurl.Length - 1)
-                            ? currurl.Substring(iqs + 1)
-                            : string.Empty);
+                    query = HttpUtility.ParseQueryString((iqs < currurl.Length - 1) ? currurl.Substring(iqs + 1) : string.Empty);
                 }
             }
 
@@ -44,18 +41,15 @@ namespace Server.account
                     cmd.CommandText = "SELECT COUNT(name) FROM accounts WHERE name=@name;";
                     cmd.Parameters.AddWithValue("@name", query["name"]);
                     exescala = cmd.ExecuteScalar();
-                    if (int.Parse(exescala.ToString()) > 0)
-                        status = Encoding.UTF8.GetBytes("<Error>Duplicated name</Error>");
+                    if (int.Parse(exescala.ToString()) > 0) status = Encoding.UTF8.GetBytes("<Error>Duplicated name</Error>");
                     else
                     {
                         cmd = db.CreateQuery();
                         cmd.CommandText = "UPDATE accounts SET name=@name, namechosen=TRUE WHERE id=@accId;";
                         cmd.Parameters.AddWithValue("@accId", acc.AccountId);
                         cmd.Parameters.AddWithValue("@name", query["name"]);
-                        if (cmd.ExecuteNonQuery() != 0)
-                            status = Encoding.UTF8.GetBytes("<Success />");
-                        else
-                            status = Encoding.UTF8.GetBytes("<Error>Internal error</Error>");
+                        if (cmd.ExecuteNonQuery() != 0) status = Encoding.UTF8.GetBytes("<Success />");
+                        else status = Encoding.UTF8.GetBytes("<Error>Internal error</Error>");
                     }
                 }
                 context.Response.OutputStream.Write(status, 0, status.Length);

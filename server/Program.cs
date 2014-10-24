@@ -17,43 +17,46 @@ namespace Server
         static readonly object queueLock = new object();
         static readonly ManualResetEvent queueReady = new ManualResetEvent(false);
 
-        public XmlDatas GameData { get; private set; }
+        public XmlDatas GameData
+        {
+            get;
+            private set;
+        }
 
         const int dataserverport = 8887;
 
         static ILog log = LogManager.GetLogger("Server");
 
-        static void Main(string[] args)
-        {
+        static void Main(string[] args) {
             XmlConfigurator.ConfigureAndWatch(new FileInfo("log4net.config"));
 
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
             Thread.CurrentThread.Name = "Entry";
 
-                listener = new HttpListener();
-                listener.Prefixes.Add("http://*:" + dataserverport + "/");
-                listener.Start();
+            listener = new HttpListener();
+            listener.Prefixes.Add("http://*:" + dataserverport + "/");
+            listener.Start();
 
-                listener.BeginGetContext(ListenerCallback, null);
-                for (var i = 0; i < workers.Length; i++)
-                {
-                    workers[i] = new Thread(Worker) { Name = "Worker " + i };
-                    workers[i].Start();
-                }
-                Console.CancelKeyPress += (sender, e) => e.Cancel = true;
-
-                Console.WriteLine("Starting Data Server on port {0}.", dataserverport);
-                Thread.Sleep(2500);
-                Console.WriteLine("Successfully started Data Server.");
-
-                while (Console.ReadKey(true).Key != ConsoleKey.Escape)
-                {
-                    Console.WriteLine("Terminating...");
-                    listener.Stop();
-                    while (contextQueue.Count > 0)
-                        Thread.Sleep(100);
-                    Environment.Exit(0);
+            listener.BeginGetContext(ListenerCallback, null);
+            for (var i = 0; i < workers.Length; i++) {
+                workers[i] = new Thread(Worker) {
+                    Name = "Worker " + i
                 };
+                workers[i].Start();
+            }
+            Console.CancelKeyPress += (sender, e) => e.Cancel = true;
+
+            Console.WriteLine("Starting Data Server on port {0}.", dataserverport);
+            Thread.Sleep(2500);
+            Console.WriteLine("Successfully started Data Server.");
+
+            while (Console.ReadKey(true).Key != ConsoleKey.Escape) {
+                Console.WriteLine("Terminating...");
+                listener.Stop();
+                while (contextQueue.Count > 0)
+                Thread.Sleep(100);
+                Environment.Exit(0);
+            };
         }
 
         static void ListenerCallback(IAsyncResult ar)
@@ -75,8 +78,7 @@ namespace Server
                 HttpListenerContext context;
                 lock (queueLock)
                 {
-                    if (contextQueue.Count > 0)
-                        context = contextQueue.Dequeue();
+                    if (contextQueue.Count > 0) context = contextQueue.Dequeue();
                     else
                     {
                         queueReady.Reset();
@@ -113,8 +115,7 @@ namespace Server
                     using (StreamWriter wtr = new StreamWriter(context.Response.OutputStream))
                         wtr.Write("<h1>Bad request</h1>");
                 }
-                else
-                    handler.HandleRequest(context);
+                else handler.HandleRequest(context);
             }
             catch (Exception e)
             {

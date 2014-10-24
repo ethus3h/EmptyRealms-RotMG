@@ -27,10 +27,7 @@ namespace Server.picture
                 int iqs = currurl.IndexOf('?');
                 if (iqs >= 0)
                 {
-                    query =
-                        HttpUtility.ParseQueryString((iqs < currurl.Length - 1)
-                            ? currurl.Substring(iqs + 1)
-                            : string.Empty);
+                    query = HttpUtility.ParseQueryString((iqs < currurl.Length - 1) ? currurl.Substring(iqs + 1) : string.Empty);
                 }
             }
 
@@ -42,17 +39,20 @@ namespace Server.picture
                         PicName = "Dark Fire",
                         PictureId = "dark_fire",
                         DataType = 2,
-                        Tags = new List<string>() {
+                        Tags = new List < string > () {
                             "test",
-                            "test2",
-                            "dark",
-                            "fire"
+                                "test2",
+                                "dark",
+                                "fire"
                         }
                     }
                 }
             };
 
-            XmlSerializer serializer = new XmlSerializer(pics.GetType(), new XmlRootAttribute(pics.GetType().Name) { Namespace = "" });
+            XmlSerializer serializer = new XmlSerializer(pics.GetType(), new XmlRootAttribute(pics.GetType().Name)
+            {
+                Namespace = ""
+            });
 
             XmlWriterSettings xws = new XmlWriterSettings();
             xws.Indent = true;

@@ -6,11 +6,9 @@ using System;
 using System.IO;
 using System.Text;
 
-namespace wServer
-{
-    public class RSA
-    {
-        public static readonly RSA Instance = new RSA(@"
+namespace wServer {
+	public class RSA {
+		public static readonly RSA Instance = new RSA(@"
 -----BEGIN RSA PRIVATE KEY-----
 MIICXQIBAAKBgQCqccYHTj4QATbK1m4UVgcTeEYtDZwZxwdayVTFs1jAwKWzoDt/
 CXhYUX2cEJnA93T4h6a4ysTfUrgBFZ3Nsb4W3/4Crc2TxjOWQOoWQnhzblZEiTcA
@@ -27,30 +25,27 @@ ACJPZbKTSE6gk18DhXUCQQCoPIr7Vf7pGmGtkNYAhQPa3ISkjlm/5DTSpTvABiYq
 Ndk0XNr+U+9HLLxxEbQgUcfftRv/7kojO01LtmE743DJ
 -----END RSA PRIVATE KEY-----");
 
-        RsaEngine engine;
-        AsymmetricKeyParameter key;
-        private RSA(string privPem)
-        {
-            key = (new PemReader(new StringReader(privPem.Trim())).ReadObject() as AsymmetricCipherKeyPair).Private;
-            engine = new RsaEngine();
-            engine.Init(true, key);
-        }
+		RsaEngine engine;
+		AsymmetricKeyParameter key;
+		private RSA(string privPem) {
+			key = (new PemReader(new StringReader(privPem.Trim())).ReadObject() as AsymmetricCipherKeyPair).Private;
+			engine = new RsaEngine();
+			engine.Init(true, key);
+		}
 
-        public string Decrypt(string str)
-        {
-            if (string.IsNullOrEmpty(str)) return "";
-            byte[] dat = Convert.FromBase64String(str);
-            var encoding = new Pkcs1Encoding(engine);
-            encoding.Init(false, key);
-            return Encoding.UTF8.GetString(encoding.ProcessBlock(dat, 0, dat.Length));
-        }
-        public string Encrypt(string str)
-        {
-            if (string.IsNullOrEmpty(str)) return "";
-            byte[] dat = Encoding.UTF8.GetBytes(str);
-            var encoding = new Pkcs1Encoding(engine);
-            encoding.Init(true, key);
-            return Convert.ToBase64String(encoding.ProcessBlock(dat, 0, dat.Length));
-        }
-    }
+		public string Decrypt(string str) {
+			if (string.IsNullOrEmpty(str)) return "";
+			byte[] dat = Convert.FromBase64String(str);
+			var encoding = new Pkcs1Encoding(engine);
+			encoding.Init(false, key);
+			return Encoding.UTF8.GetString(encoding.ProcessBlock(dat, 0, dat.Length));
+		}
+		public string Encrypt(string str) {
+			if (string.IsNullOrEmpty(str)) return "";
+			byte[] dat = Encoding.UTF8.GetBytes(str);
+			var encoding = new Pkcs1Encoding(engine);
+			encoding.Init(true, key);
+			return Convert.ToBase64String(encoding.ProcessBlock(dat, 0, dat.Length));
+		}
+	}
 }

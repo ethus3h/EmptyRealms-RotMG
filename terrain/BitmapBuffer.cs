@@ -31,8 +31,14 @@ namespace terrain
 
         public uint this[int x, int y]
         {
-            get { return *(uint*)(ptr + x * 4 + y * s); }
-            set { *(uint*)(ptr + x * 4 + y * s) = value; }
+            get
+            {
+                return *(uint*)(ptr + x * 4 + y * s);
+            }
+            set
+            {
+                *(uint*)(ptr + x * 4 + y * s) = value;
+            }
         }
     }
 }

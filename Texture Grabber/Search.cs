@@ -32,8 +32,7 @@ namespace Texture_Grabber
 
         private void Search_Shown(object sender, EventArgs e)
         {
-            if (!main.HasItems())
-                button1.Enabled = false;
+            if (!main.HasItems()) button1.Enabled = false;
         }
 
         private void Search_FormClosing(object sender, FormClosingEventArgs e)

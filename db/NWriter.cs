@@ -52,8 +52,7 @@ public class NWriter : BinaryWriter
 
     public void WriteUTF(string str)
     {
-        if (str == null)
-            Write((short)0);
+        if (str == null) Write((short)0);
         else
         {
             Write((short)str.Length);

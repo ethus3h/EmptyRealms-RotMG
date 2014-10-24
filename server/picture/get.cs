@@ -22,10 +22,7 @@ namespace Server.picture
                 int iqs = currurl.IndexOf('?');
                 if (iqs >= 0)
                 {
-                    query =
-                        HttpUtility.ParseQueryString((iqs < currurl.Length - 1)
-                            ? currurl.Substring(iqs + 1)
-                            : string.Empty);
+                    query = HttpUtility.ParseQueryString((iqs < currurl.Length - 1) ? currurl.Substring(iqs + 1) : string.Empty);
                 }
             }
 

@@ -3,15 +3,11 @@ using System.Net;
 using System.Text;
 using System.Web;
 
-namespace Server.credits
-{
-    class add : IRequestHandler
-    {
-        public void HandleRequest(HttpListenerContext context)
-        {
+namespace Server.credits {
+    class add: IRequestHandler {
+        public void HandleRequest(HttpListenerContext context) {
             string status;
-            using (var db = new Database())
-            {
+            using(var db = new Database()) {
                 var query = HttpUtility.ParseQueryString(context.Request.Url.Query);
 
                 var cmd = db.CreateQuery();
@@ -19,25 +15,19 @@ namespace Server.credits
                 cmd.Parameters.AddWithValue("@uuid", query["guid"]);
                 object id = cmd.ExecuteScalar();
 
-                if (id != null)
-                {
+                if (id != null) {
                     int amount = int.Parse(query["jwt"]);
                     cmd = db.CreateQuery();
                     cmd.CommandText = "UPDATE stats SET credits = credits + @amount WHERE accId=@accId";
-                    cmd.Parameters.AddWithValue("@accId", (int)id);
+                    cmd.Parameters.AddWithValue("@accId", (int) id);
                     cmd.Parameters.AddWithValue("@amount", amount);
-                    int result = (int)cmd.ExecuteNonQuery();
-                    if (result > 0)
-                        status = "Ya done...";
-                    else
-                        status = "Internal error :(";
-                }
-                else
-                    status = "Account not exists :(";
+                    int result = (int) cmd.ExecuteNonQuery();
+                    if (result > 0) status = "Ya done...";
+                    else status = "Internal error :(";
+                } else status = "Account not exists :(";
             }
 
-            var res = Encoding.UTF8.GetBytes(
-@"<html>
+            var res = Encoding.UTF8.GetBytes(@"<html>
     <head>
         <title>Ya...</title>
     </head>

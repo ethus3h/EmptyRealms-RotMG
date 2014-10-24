@@ -22,10 +22,7 @@ namespace Server.account
                 int iqs = currurl.IndexOf('?');
                 if (iqs >= 0)
                 {
-                    query =
-                        HttpUtility.ParseQueryString((iqs < currurl.Length - 1)
-                            ? currurl.Substring(iqs + 1)
-                            : string.Empty);
+                    query = HttpUtility.ParseQueryString((iqs < currurl.Length - 1) ? currurl.Substring(iqs + 1) : string.Empty);
                 }
             }
 
@@ -43,10 +40,8 @@ namespace Server.account
                     cmd.CommandText = "UPDATE accounts SET password=SHA1(@password) WHERE id=@accId;";
                     cmd.Parameters.AddWithValue("@accId", acc.AccountId);
                     cmd.Parameters.AddWithValue("@password", query["newPassword"]);
-                    if (cmd.ExecuteNonQuery() > 0)
-                        status = Encoding.UTF8.GetBytes("<Success />");
-                    else
-                        status = Encoding.UTF8.GetBytes("<Error>Internal error</Error>");
+                    if (cmd.ExecuteNonQuery() > 0) status = Encoding.UTF8.GetBytes("<Success />");
+                    else status = Encoding.UTF8.GetBytes("<Error>Internal error</Error>");
                 }
                 context.Response.OutputStream.Write(status, 0, status.Length);
             }

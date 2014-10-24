@@ -11,7 +11,17 @@ namespace wServer
             this.seed = seed;
         }
 
-        public uint CurrentSeed { get { return seed; } set { seed = value; } }
+        public uint CurrentSeed
+        {
+            get
+            {
+                return seed;
+            }
+            set
+            {
+                seed = value;
+            }
+        }
 
         public int Next(int min, int max)
         {

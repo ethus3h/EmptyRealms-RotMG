@@ -23,10 +23,7 @@ namespace Server.guild
                 int iqs = currurl.IndexOf('?');
                 if (iqs >= 0)
                 {
-                    query =
-                        HttpUtility.ParseQueryString((iqs < currurl.Length - 1)
-                            ? currurl.Substring(iqs + 1)
-                            : string.Empty);
+                    query = HttpUtility.ParseQueryString((iqs < currurl.Length - 1) ? currurl.Substring(iqs + 1) : string.Empty);
                 }
             }
 
@@ -34,8 +31,7 @@ namespace Server.guild
             {
                 var acc = db.Verify(query["guid"], query["password"]);
                 byte[] status;
-                if (acc == null)
-                    status = Encoding.UTF8.GetBytes("<Error>Bad login</Error>");
+                if (acc == null) status = Encoding.UTF8.GetBytes("<Error>Bad login</Error>");
                 else
                 {
                     try

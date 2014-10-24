@@ -175,7 +175,7 @@ namespace wServer.realm.entities
 
             stats[StatsType.Size] = Size;
 
-            if(Owner != null && Owner.Name == "Ocean Trench")
+            if (Owner != null && Owner.Name == "Ocean Trench")
                 stats[StatsType.OxygenBar] = OxygenBar;
         }
         public void SaveToCharacter()
@@ -226,7 +226,8 @@ namespace wServer.realm.entities
         }
 
         StatsManager statsMgr;
-        public Player(ClientProcessor psr) : base((short)psr.Character.ObjectType, psr.Random)
+        public Player(ClientProcessor psr)
+            : base((short)psr.Character.ObjectType, psr.Random)
         {
             this.psr = psr;
             statsMgr = new StatsManager(this);
@@ -309,7 +310,9 @@ namespace wServer.realm.entities
                         Level = 20;
                         Experience = 19999;
 
-                    } else {
+                    }
+                    else
+                    {
                         Level = Level;
                         Experience = Experience;
                     }
@@ -343,7 +346,7 @@ namespace wServer.realm.entities
                 base.Init(owner);
             else
                 psr.Disconnect();
-            if(psr.Character.Pet >= 0)
+            if (psr.Character.Pet >= 0)
                 GivePet((short)psr.Character.Pet);
             try { SendAccountList(Locked, LOCKED_LIST_ID); }
             catch { }
@@ -557,7 +560,7 @@ namespace wServer.realm.entities
                                 break;
                         }
                     }
-                    if(setWorldInstance)
+                    if (setWorldInstance)
                         p.WorldInstance = world;
                 }
                 else
@@ -565,7 +568,7 @@ namespace wServer.realm.entities
                     switch (entity.ObjectType)
                     {
                         case 0x072f:
-                            world =  RealmManager.GuildHallWorld(Guild);
+                            world = RealmManager.GuildHallWorld(Guild);
                             break;
                         default: psr.SendPacket(new TextPacket
                         {
@@ -573,8 +576,8 @@ namespace wServer.realm.entities
                             Stars = -1,
                             Name = "",
                             Text = "Semi-Portal Not Implemented!"
-                        }); 
-                        break;
+                        });
+                            break;
                     }
                 }
             }
@@ -669,13 +672,13 @@ namespace wServer.realm.entities
             if (enemy != null)
             {
                 string enName = enemy.Name == "" ? null : enemy.Name;
-                killer = enName ?? 
+                killer = enName ??
                         enemy.ObjectDesc.DisplayId ??
                         enemy.ObjectDesc.ObjectId;
                 Projectile proj = (enemy as IProjectileOwner).Projectiles[pkt.BulletId];
                 if (proj != null)
                 {
-                    if(!HasConditionEffect(ConditionEffects.Invincible))
+                    if (!HasConditionEffect(ConditionEffects.Invincible))
                         ceffects = proj.ConditionEffects;
                     ApplyConditionEffect(proj.Descriptor.Effects);
                 }
@@ -751,7 +754,7 @@ namespace wServer.realm.entities
                 HP = Stats[0] + Stats[0];
                 MP = Stats[1] + Stats[1];
                 Inventory[i] = null;
-                Owner.BroadcastPacket(new TextPacket() 
+                Owner.BroadcastPacket(new TextPacket()
                 {
                     BubbleTime = 0,
                     Stars = -1,

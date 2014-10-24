@@ -24,10 +24,7 @@ namespace Server.account
                 int iqs = currurl.IndexOf('?');
                 if (iqs >= 0)
                 {
-                    query =
-                        HttpUtility.ParseQueryString((iqs < currurl.Length - 1)
-                            ? currurl.Substring(iqs + 1)
-                            : string.Empty);
+                    query = HttpUtility.ParseQueryString((iqs < currurl.Length - 1) ? currurl.Substring(iqs + 1) : string.Empty);
                 }
             }
 
@@ -41,7 +38,10 @@ namespace Server.account
                 }
                 else
                 {
-                    XmlSerializer serializer = new XmlSerializer(acc.GetType(), new XmlRootAttribute(acc.GetType().Name) { Namespace = "" });
+                    XmlSerializer serializer = new XmlSerializer(acc.GetType(), new XmlRootAttribute(acc.GetType().Name)
+                    {
+                        Namespace = ""
+                    });
 
                     XmlWriterSettings xws = new XmlWriterSettings();
                     xws.Indent = true;

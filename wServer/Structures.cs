@@ -19,7 +19,8 @@ namespace wServer
     {
         public IntPoint(int x, int y)
         {
-            X = x; Y = y;
+            X = x;
+            Y = y;
         }
         public int X;
         public int Y;
@@ -55,17 +56,17 @@ namespace wServer
         Teleport = 2,
         Stream = 3,
         Throw = 4,
-        AreaBlast = 5,      //radius=pos1.x
+        AreaBlast = 5, //radius=pos1.x
         Dead = 6,
         Trail = 7,
-        Diffuse = 8,        //radius=dist(pos1,pos2)
+        Diffuse = 8, //radius=dist(pos1,pos2)
         Flow = 9,
-        Trap = 10,          //radius=pos1.x
-        Lightning = 11,     //particleSize=pos2.x
-        Concentrate = 12,   //radius=dist(pos1,pos2)
-        BlastWave = 13,     //origin=pos1, radius = pos2.x
+        Trap = 10, //radius=pos1.x
+        Lightning = 11, //particleSize=pos2.x
+        Concentrate = 12, //radius=dist(pos1,pos2)
+        BlastWave = 13, //origin=pos1, radius = pos2.x
         Earthquake = 14,
-        Flashing = 15,      //period=pos1.x, numCycles=pos1.y
+        Flashing = 15, //period=pos1.x, numCycles=pos1.y
         BeachBall = 16
     }
 
@@ -202,10 +203,8 @@ namespace wServer
             for (var i = 0; i < ret.Stats.Length; i++)
             {
                 StatsType type = (StatsType)rdr.ReadByte();
-                if (type == StatsType.Guild || type == StatsType.Name)
-                    ret.Stats[i] = new KeyValuePair<StatsType, object>(type, rdr.ReadUTF());
-                else
-                    ret.Stats[i] = new KeyValuePair<StatsType, object>(type, rdr.ReadInt32());
+                if (type == StatsType.Guild || type == StatsType.Name) ret.Stats[i] = new KeyValuePair<StatsType, object>(type, rdr.ReadUTF());
+                else ret.Stats[i] = new KeyValuePair<StatsType, object>(type, rdr.ReadInt32());
             }
 
             return ret;

@@ -34,10 +34,8 @@ namespace terrain
             {
                 Dock = DockStyle.Fill,
                 AutoScroll = true,
-                Controls =
-                {
-                    (pic = new PictureBox()
-                    {
+                Controls = {
+                    (pic = new PictureBox() {
                         Image = bmp = RenderColorBmp(tiles),
                         SizeMode = PictureBoxSizeMode.AutoSize,
                     })
@@ -72,54 +70,44 @@ namespace terrain
             pic2.Invalidate();
         }
 
-        void pic_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (mode == Mode.Erase && (Control.MouseButtons & MouseButtons.Left) != 0)
-            {
+        void pic_MouseMove(object sender, MouseEventArgs e) {
+            if (mode == Mode.Erase && (Control.MouseButtons & MouseButtons.Left) != 0) {
                 var center = e.Location;
                 for (var y = -10; y <= 10; y++)
-                    for (var x = -10; x <= 10; x++)
-                    {
-                        if (x * x + y * y <= 10 * 10)
-                        {
-                            tiles[center.X + x, center.Y + y].Terrain = TerrainType.None;
-                            tiles[center.X + x, center.Y + y].Elevation = 0;
-                            tiles[center.X + x, center.Y + y].Biome = "ocean";
-                            tiles[center.X + x, center.Y + y].TileObj = "";
-                            tiles[center.X + x, center.Y + y].TileId = TileTypes.DeepWater;
-                            tiles[center.X + x, center.Y + y].Region = TileRegion.None;
-                            tiles[center.X + x, center.Y + y].Name = "";
-                            bmp.SetPixel(center.X + x, center.Y + y, Color.FromArgb(
-                                (int)GetColor(tiles[center.X + x, center.Y + y])));
-                        }
+                for (var x = -10; x <= 10; x++) {
+                    if (x * x + y * y <= 10 * 10) {
+                        tiles[center.X + x, center.Y + y].Terrain = TerrainType.None;
+                        tiles[center.X + x, center.Y + y].Elevation = 0;
+                        tiles[center.X + x, center.Y + y].Biome = "ocean";
+                        tiles[center.X + x, center.Y + y].TileObj = "";
+                        tiles[center.X + x, center.Y + y].TileId = TileTypes.DeepWater;
+                        tiles[center.X + x, center.Y + y].Region = TileRegion.None;
+                        tiles[center.X + x, center.Y + y].Name = "";
+                        bmp.SetPixel(center.X + x, center.Y + y, Color.FromArgb(
+                        (int) GetColor(tiles[center.X + x, center.Y + y])));
                     }
+                }
                 pic.Invalidate();
                 pic2.Invalidate();
-            }
-            else if (mode == Mode.Average && (Control.MouseButtons & MouseButtons.Left) != 0)
-            {
+            } else if (mode == Mode.Average && (Control.MouseButtons & MouseButtons.Left) != 0) {
                 var center = e.Location;
-                Dictionary<TerrainTile, int> dict = new Dictionary<TerrainTile, int>();
+                Dictionary < TerrainTile, int > dict = new Dictionary < TerrainTile, int > ();
                 for (var y = -10; y <= 10; y++)
-                    for (var x = -10; x <= 10; x++)
-                        if (x * x + y * y <= 10 * 10)
-                        {
-                            var t = tiles[center.X + x, center.Y + y];
-                            if (dict.ContainsKey(t))
-                                dict[t]++;
-                            else
-                                dict[t] = 0;
-                        }
+                for (var x = -10; x <= 10; x++)
+                if (x * x + y * y <= 10 * 10) {
+                    var t = tiles[center.X + x, center.Y + y];
+                    if (dict.ContainsKey(t)) dict[t]++;
+                    else dict[t] = 0;
+                }
                 var maxOccurance = dict.Values.Max();
                 var targetTile = dict.First(t => t.Value == maxOccurance).Key;
                 for (var y = -10; y <= 10; y++)
-                    for (var x = -10; x <= 10; x++)
-                        if (x * x + y * y <= 10 * 10)
-                        {
-                            tiles[center.X + x, center.Y + y] = targetTile;
-                            bmp.SetPixel(center.X + x, center.Y + y, Color.FromArgb(
-                                (int)GetColor(tiles[center.X + x, center.Y + y])));
-                        }
+                for (var x = -10; x <= 10; x++)
+                if (x * x + y * y <= 10 * 10) {
+                    tiles[center.X + x, center.Y + y] = targetTile;
+                    bmp.SetPixel(center.X + x, center.Y + y, Color.FromArgb(
+                    (int) GetColor(tiles[center.X + x, center.Y + y])));
+                }
                 pic.Invalidate();
                 pic2.Invalidate();
             }
@@ -127,8 +115,7 @@ namespace terrain
 
         static uint GetColor(TerrainTile tile)
         {
-            if (tile.Region == TileRegion.Spawn)
-                return 0xffff0000;
+            if (tile.Region == TileRegion.Spawn) return 0xffff0000;
             return TileTypes.color[tile.TileId];
         }
         static Bitmap RenderColorBmp(TerrainTile[,] tiles)
@@ -157,8 +144,7 @@ namespace terrain
             {
                 SaveFileDialog sfd = new SaveFileDialog();
                 sfd.Filter = "WMap files (*.wmap)|*.wmap|All Files (*.*)|*.*";
-                if (sfd.ShowDialog() != DialogResult.Cancel)
-                    WorldMapExporter.Export(tiles, sfd.FileName);
+                if (sfd.ShowDialog() != DialogResult.Cancel) WorldMapExporter.Export(tiles, sfd.FileName);
             }
             else if (e.KeyCode == Keys.R)
             {

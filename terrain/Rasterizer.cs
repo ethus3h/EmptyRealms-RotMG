@@ -7,7 +7,11 @@ namespace terrain
         int w;
         int h;
 
-        public T[,] Buffer { get; private set; }
+        public T[,] Buffer
+        {
+            get;
+            private set;
+        }
         public Rasterizer(int w, int h)
         {
             this.w = w;
@@ -17,11 +21,29 @@ namespace terrain
 
         public T this[int x, int y]
         {
-            get { return Buffer[x, y]; }
-            set { Buffer[x, y] = value; }
+            get
+            {
+                return Buffer[x, y];
+            }
+            set
+            {
+                Buffer[x, y] = value;
+            }
         }
-        public int Height { get { return this.h; } }
-        public int Width { get { return this.w; } }
+        public int Height
+        {
+            get
+            {
+                return this.h;
+            }
+        }
+        public int Width
+        {
+            get
+            {
+                return this.w;
+            }
+        }
 
         public void Plot(double x, double y, T val)
         {
@@ -36,14 +58,17 @@ namespace terrain
         {
             switch (w)
             {
-                case 0: return;
+                case 0:
+                    return;
                 case 1:
-                    Buffer[(int)x, (int)y] = val; break;
+                    Buffer[(int)x, (int)y] = val;
+                    break;
                 case 2:
                     Buffer[(int)x, (int)y] = val;
                     Buffer[(int)x + 1, (int)y] = val;
                     Buffer[(int)x, (int)y + 1] = val;
-                    Buffer[(int)x + 1, (int)y + 1] = val; break;
+                    Buffer[(int)x + 1, (int)y + 1] = val;
+                    break;
                 default:
                     for (int _x = 0; _x < w; _x++)
                         for (int _y = 0; _y < w; _y++)
@@ -57,14 +82,17 @@ namespace terrain
         {
             switch (w)
             {
-                case 0: return;
+                case 0:
+                    return;
                 case 1:
-                    Buffer[(int)x, (int)y] = transform(Buffer[(int)x, (int)y]); break;
+                    Buffer[(int)x, (int)y] = transform(Buffer[(int)x, (int)y]);
+                    break;
                 case 2:
                     Buffer[(int)x, (int)y] = transform(Buffer[(int)x, (int)y]);
                     Buffer[(int)x + 1, (int)y] = transform(Buffer[(int)x + 1, (int)y]);
                     Buffer[(int)x, (int)y + 1] = transform(Buffer[(int)x, (int)y + 1]);
-                    Buffer[(int)x + 1, (int)y + 1] = transform(Buffer[(int)x + 1, (int)y + 1]); break;
+                    Buffer[(int)x + 1, (int)y + 1] = transform(Buffer[(int)x + 1, (int)y + 1]);
+                    break;
                 default:
                     for (int _x = 0; _x < w; _x++)
                         for (int _y = 0; _y < w; _y++)
@@ -122,8 +150,7 @@ namespace terrain
                     double vyj = points[i + 1];
 
                     // Is the scanline between the two points
-                    if (vyi < y && vyj >= y
-                     || vyj < y && vyi >= y)
+                    if (vyi < y && vyj >= y || vyj < y && vyi >= y)
                     {
                         // Compute the intersection of the scanline with the edge (line between two points)
                         intersectionsX[intersectionCount++] = vxi + (y - vyi) / (vyj - vyi) * (vxj - vxi);
@@ -168,8 +195,7 @@ namespace terrain
             }
         }
 
-        public void DrawLineBresenham(double x1, double y1, double x2, double y2, T val, int width)
-        {
+        public void DrawLineBresenham(double x1, double y1, double x2, double y2, T val, int width) {
             DrawLineBresenham(x1, y1, x2, y2, t => val, width);
         }
         public void DrawLineBresenham(double x1, double y1, double x2, double y2, Func<T, T> transform, int width)
@@ -294,17 +320,16 @@ namespace terrain
         private const float StepFactor = 2f;
 
         void DrawCurveSegment(
-            double x1, double y1, double x2, double y2,
-            double x3, double y3, double x4, double y4,
-            double tension, T val, int width)
-        {
+        double x1, double y1, double x2, double y2,
+        double x3, double y3, double x4, double y4,
+        double tension, T val, int width) {
             DrawCurveSegment(x1, y1, x2, y2, x3, y3, x4, y4, tension, t => val, width);
         }
 
         void DrawCurveSegment(
-            double x1, double y1, double x2, double y2,
-            double x3, double y3, double x4, double y4,
-            double tension, Func<T, T> transform, int width)
+        double x1, double y1, double x2, double y2,
+        double x3, double y3, double x4, double y4,
+        double tension, Func<T, T> transform, int width)
         {
             // Determine distances between controls points (bounding rect) to find the optimal stepsize
             var minX = Math.Min(x1, Math.Min(x2, Math.Min(x3, x4)));
@@ -359,12 +384,10 @@ namespace terrain
         }
 
 
-        public void DrawCurve(double[] points, double tension, T val, int width)
-        {
+        public void DrawCurve(double[] points, double tension, T val, int width) {
             DrawCurve(points, tension, t => val, width);
         }
-        public void DrawClosedCurve(double[] points, double tension, T val, int width)
-        {
+        public void DrawClosedCurve(double[] points, double tension, T val, int width) {
             DrawClosedCurve(points, tension, t => val, width);
         }
         public void DrawCurve(double[] points, double tension, Func<T, T> transform, int width)

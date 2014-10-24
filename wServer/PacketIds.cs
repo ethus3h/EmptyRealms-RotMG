@@ -77,7 +77,7 @@
         UpdateAck = 11,
         Reconnect = 39,
         Failure = 0,
-        InvitedToGuild =77 ,
+        InvitedToGuild = 77,
         CreateGuildResult = 58,
         Damage = 47,
         GroundDamage = 64,

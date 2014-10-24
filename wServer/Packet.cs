@@ -16,11 +16,13 @@ namespace wServer
                 if (typeof(Packet).IsAssignableFrom(i) && !i.IsAbstract)
                 {
                     Packet pkt = (Packet)Activator.CreateInstance(i);
-                    if (!(pkt is ServerPacket))
-                        Packets.Add(pkt.ID, pkt);
+                    if (!(pkt is ServerPacket)) Packets.Add(pkt.ID, pkt);
                 }
         }
-        public abstract PacketID ID { get; }
+        public abstract PacketID ID
+        {
+            get;
+        }
         public abstract Packet CreateInstance();
 
         public abstract byte[] Crypt(ClientProcessor psr, byte[] dat, int len);
@@ -62,9 +64,21 @@ namespace wServer
 
     public class NopPacket : Packet
     {
-        public override PacketID ID { get { return PacketID.UpdateAck; } }
-        public override Packet CreateInstance() { return new NopPacket(); }
-        public override byte[] Crypt(ClientProcessor psr, byte[] dat, int len) { return dat; }
+        public override PacketID ID
+        {
+            get
+            {
+                return PacketID.UpdateAck;
+            }
+        }
+        public override Packet CreateInstance()
+        {
+            return new NopPacket();
+        }
+        public override byte[] Crypt(ClientProcessor psr, byte[] dat, int len)
+        {
+            return dat;
+        }
         protected override void Read(ClientProcessor psr, NReader rdr) { }
         protected override void Write(ClientProcessor psr, NWriter wtr) { }
     }

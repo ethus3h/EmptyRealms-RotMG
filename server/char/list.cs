@@ -25,10 +25,7 @@ namespace Server.@char
                 int iqs = currurl.IndexOf('?');
                 if (iqs >= 0)
                 {
-                    query =
-                        HttpUtility.ParseQueryString((iqs < currurl.Length - 1)
-                            ? currurl.Substring(iqs + 1)
-                            : string.Empty);
+                    query = HttpUtility.ParseQueryString((iqs < currurl.Length - 1) ? currurl.Substring(iqs + 1) : string.Empty);
                 }
             }
 
@@ -76,7 +73,10 @@ namespace Server.@char
                 }
 
                 MemoryStream ms = new MemoryStream();
-                XmlSerializer serializer = new XmlSerializer(chrs.GetType(), new XmlRootAttribute(chrs.GetType().Name) { Namespace = "" });
+                XmlSerializer serializer = new XmlSerializer(chrs.GetType(), new XmlRootAttribute(chrs.GetType().Name)
+                {
+                    Namespace = ""
+                });
 
                 XmlWriterSettings xws = new XmlWriterSettings();
                 xws.Indent = true;
@@ -94,8 +94,7 @@ namespace Server.@char
             List<ServerItem> removedServers = new List<ServerItem>();
 
             foreach (var i in slist)
-                if (i.RankRequired > r)
-                    removedServers.Add(i);
+                if (i.RankRequired > r) removedServers.Add(i);
 
             foreach (var i in removedServers)
                 slist.Remove(i);
@@ -105,36 +104,32 @@ namespace Server.@char
 
         public static List<ServerItem> GetServers()
         {
-            List<ServerItem> Servers = new List<ServerItem>()
-                {
-                    new ServerItem()
-                        {
-                            Name = "Empty Realms",
-                            Lat = 0.0,
-                            Long = 0.0,
-                            DNS = "127.0.0.1",
-                            Usage = 0.0,
-                            AdminOnly = false,
-                            RankRequired = 0
-                        }                   
-                };
+            List<ServerItem> Servers = new List<ServerItem>() {
+                new ServerItem() {
+                    Name = "Empty Realms",
+                    Lat = 0.0,
+                    Long = 0.0,
+                    DNS = "127.0.0.1",
+                    Usage = 0.0,
+                    AdminOnly = false,
+                    RankRequired = 0
+                }
+            };
             return Servers;
         }
 
         public static List<ServerItem> YoureBanned()
         {
-            List<ServerItem> Servers = new List<ServerItem>()
-                {
-                    new ServerItem()
-                        {
-                            Name = "You're Banned!",
-                            Lat = 57.282,
-                            Long = 43.1076,
-                            DNS = "",
-                            Usage = 0.2,
-                            AdminOnly = false
-                        }
-                };
+            List<ServerItem> Servers = new List<ServerItem>() {
+                new ServerItem() {
+                    Name = "You're Banned!",
+                    Lat = 57.282,
+                    Long = 43.1076,
+                    DNS = "",
+                    Usage = 0.2,
+                    AdminOnly = false
+                }
+            };
             return Servers;
         }
     }

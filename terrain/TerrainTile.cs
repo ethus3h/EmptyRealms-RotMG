@@ -59,11 +59,7 @@ namespace terrain
         public bool Equals(TerrainTile other)
         {
             return
-                this.TileId  == other.TileId &&
-                this.TileObj == other.TileObj &&
-                this.Name == other.Name &&
-                this.Terrain == other.Terrain &&
-                this.Region == other.Region;
+            this.TileId == other.TileId && this.TileObj == other.TileObj && this.Name == other.Name && this.Terrain == other.Terrain && this.Region == other.Region;
         }
     }
 }

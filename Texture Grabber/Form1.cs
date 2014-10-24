@@ -54,8 +54,7 @@ namespace Texture_Grabber
             string result = wc.DownloadString("http://" + PictureUrl + ".appspot.com/picture/list?num=" + viewLimit + "&tags=" + textBoxSearchTag.Text);
             XDocument xd = XDocument.Parse(result);
             List<Picture> pics = new List<Picture>();
-            if (xd.Root.HasElements)
-                foreach (XElement x in xd.Root.Elements("Pic"))
+            if (xd.Root.HasElements) foreach (XElement x in xd.Root.Elements("Pic"))
                     pics.Add(Picture.FromXElement(x));
             foreach (var p in pics)
                 listViewTags.Items.Add(new ListViewItem()
@@ -74,9 +73,7 @@ namespace Texture_Grabber
                 textBoxStringTag.Text = listViewTags.SelectedItems[0].Tag.ToString();
                 saveFileDialog1.FileName = listViewTags.SelectedItems[0].Text.ToString() + " - " + listViewTags.SelectedItems[0].Tag.ToString() + ".png";
             }
-            catch
-            {
-            }
+            catch { }
         }
 
         private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -103,14 +100,12 @@ namespace Texture_Grabber
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButtonProduction.Checked)
-                PictureUrl = "realmofthemadgod";
+            if (radioButtonProduction.Checked) PictureUrl = "realmofthemadgod";
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton2.Checked)
-                PictureUrl = "rotmgtesting";
+            if (radioButton2.Checked) PictureUrl = "rotmgtesting";
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -150,10 +145,8 @@ namespace Texture_Grabber
 
         public string GetPicUrl()
         {
-            if (Testing)
-                return "rotmgtesting";
-            else
-                return "realmofthemadgod";
+            if (Testing) return "rotmgtesting";
+            else return "realmofthemadgod";
         }
     }
 }

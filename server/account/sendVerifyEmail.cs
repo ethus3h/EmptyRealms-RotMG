@@ -21,14 +21,11 @@ namespace Server.account
                 int iqs = currurl.IndexOf('?');
                 if (iqs >= 0)
                 {
-                    query =
-                        HttpUtility.ParseQueryString((iqs < currurl.Length - 1)
-                            ? currurl.Substring(iqs + 1)
-                            : string.Empty);
+                    query = HttpUtility.ParseQueryString((iqs < currurl.Length - 1) ? currurl.Substring(iqs + 1) : string.Empty);
                 }
             }
 
-            byte[] status= Encoding.UTF8.GetBytes("<Error>This function is not yet implemented.</Error>");
+            byte[] status = Encoding.UTF8.GetBytes("<Error>Soon!</Error>");
             context.Response.OutputStream.Write(status, 0, status.Length);
         }
     }

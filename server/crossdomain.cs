@@ -1,12 +1,9 @@
 ﻿using System.Net;
 using System.Text;
 
-namespace Server
-{
-    class crossdomain : IRequestHandler
-    {
-        public void HandleRequest(HttpListenerContext context)
-        {
+namespace Server {
+    class crossdomain: IRequestHandler {
+        public void HandleRequest(HttpListenerContext context) {
             byte[] status = Encoding.UTF8.GetBytes(@"
             <cross-domain-policy>
                 <allow-access-from domain=""*""/>

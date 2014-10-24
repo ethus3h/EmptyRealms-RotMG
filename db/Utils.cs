@@ -32,20 +32,21 @@ public static class Utils
         List<int> ret = new List<int>();
         foreach (var i in strList)
         {
-            try { ret.Add(Convert.ToInt32(i)); }
+            try
+            {
+                ret.Add(Convert.ToInt32(i));
+            }
             catch { }
         }
         return ret;
     }
 
-    public static int[] FromCommaSepString32(string x)
-    {
+    public static int[] FromCommaSepString32(string x) {
         return x.Split(',').Select(_ => FromString(_.Trim())).ToArray();
     }
 
-    public static short[] FromCommaSepString16(string x)
-    {
-        return x.Split(',').Select(_ => (short)FromString(_.Trim())).ToArray();
+    public static short[] FromCommaSepString16(string x) {
+        return x.Split(',').Select(_ => (short) FromString(_.Trim())).ToArray();
     }
 
     public static void Shuffle<T>(this IList<T> list)

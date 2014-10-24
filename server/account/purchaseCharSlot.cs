@@ -22,10 +22,7 @@ namespace Server.account
                 int iqs = currurl.IndexOf('?');
                 if (iqs >= 0)
                 {
-                    query =
-                        HttpUtility.ParseQueryString((iqs < currurl.Length - 1)
-                            ? currurl.Substring(iqs + 1)
-                            : string.Empty);
+                    query = HttpUtility.ParseQueryString((iqs < currurl.Length - 1) ? currurl.Substring(iqs + 1) : string.Empty);
                 }
             }
 
@@ -42,8 +39,7 @@ namespace Server.account
                     var cmd = db.CreateQuery();
                     cmd.CommandText = "SELECT fame FROM stats WHERE accId=@accId;";
                     cmd.Parameters.AddWithValue("@accId", acc.AccountId);
-                    if ((int)cmd.ExecuteScalar() < 0)
-                        status = Encoding.UTF8.GetBytes("<Error>Not enough fame</Error>");
+                    if ((int)cmd.ExecuteScalar() < 0) status = Encoding.UTF8.GetBytes("<Error>Not enough fame</Error>");
                     else
                     {
                         cmd = db.CreateQuery();
@@ -54,13 +50,10 @@ namespace Server.account
                             cmd = db.CreateQuery();
                             cmd.CommandText = "UPDATE accounts SET maxCharSlot = maxCharSlot + 1 WHERE id=@accId";
                             cmd.Parameters.AddWithValue("@accId", acc.AccountId);
-                            if ((int)cmd.ExecuteNonQuery() > 0)
-                                status = Encoding.UTF8.GetBytes("<Success/>");
-                            else
-                                status = Encoding.UTF8.GetBytes("<Error>Internal Error</Error>");
+                            if ((int)cmd.ExecuteNonQuery() > 0) status = Encoding.UTF8.GetBytes("<Success/>");
+                            else status = Encoding.UTF8.GetBytes("<Error>Internal Error</Error>");
                         }
-                        else
-                            status = Encoding.UTF8.GetBytes("<Error>Internal Error</Error>");
+                        else status = Encoding.UTF8.GetBytes("<Error>Internal Error</Error>");
                     }
                 }
                 context.Response.OutputStream.Write(status, 0, status.Length);
