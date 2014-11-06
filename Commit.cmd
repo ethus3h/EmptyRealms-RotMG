@@ -1,7 +1,3 @@
-git init
-git add --all --force
-git commit -m "Automatic Commit by BlackRayquaza"
-git remote add https://BlackRayquaza@bitbucket.org/BlackRayquaza/emptyrealms-rotmg.git
-git push -u origin master
+git commit -m "Auto Commit"
 pause
 REM Cute :3
